@@ -149,14 +149,46 @@
   <!-- Title -->
 
 	<draw_ops name="title_all">
-		<title x="11" y="(((height - title_height) / 2) `max` 0)+3" color="CTitleFocusedHilight"/>
-		<title x="11" y="(((height - title_height) / 2) `max` 0)+2" color="CTitleFocused"/>
+		<title version="< 3.1"
+                       x="(0 `max` ((width - title_width) / 2)) + 3"
+                       y="(0 `max` ((height - title_height) / 2)) + 3"
+                       color="CTitleFocusedHilight"/>
+		<title version="< 3.1"
+                       x="(0 `max` ((width - title_width) / 2)) + 2"
+                       y="(0 `max` ((height - title_height) / 2)) + 2"
+                       color="CTitleFocused"/>
+		<title version=">= 3.1"
+                       x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width))) + 3"
+                       y="(0 `max` ((height - title_height) / 2)) + 3"
+                       ellipsize_width="width"
+                       color="CTitleFocusedHilight"/>
+		<title version=">= 3.1"
+                       x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width))) + 2"
+                       y="(0 `max` ((height - title_height) / 2)) + 2"
+                       ellipsize_width="width"
+                       color="CTitleFocused"/>
 		<tint color="blend/#ffffff/gtk:bg[NORMAL]/0.9" alpha="0.4" x="width" y="0" width="2" height="height-2" />
 	</draw_ops>
 
 	<draw_ops name="title_all_unfocused">
-		<title x="11" y="(((height - title_height) / 2) `max` 0)+3" color="CTitleUnfocusedHilight"/>
-		<title x="11" y="(((height - title_height) / 2) `max` 0)+2" color="CTitleUnfocused"/>
+		<title version="< 3.1"
+                       x="(0 `max` ((width - title_width) / 2)) + 3"
+                       y="(0 `max` ((height - title_height) / 2)) + 3"
+                       color="CTitleUnfocusedHilight"/>
+		<title version="< 3.1"
+                       x="(0 `max` ((width - title_width) / 2)) + 2"
+                       y="(0 `max` ((height - title_height) / 2)) + 2"
+                       color="CTitleUnfocused"/>
+		<title version=">= 3.1"
+                       x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width))) + 3"
+                       y="(0 `max` ((height - title_height) / 2)) + 3"
+                       ellipsize_width="width"
+                       color="CTitleUnfocusedHilight"/>
+		<title version=">= 3.1"
+                       x="(0 `max` ((frame_x_center - title_width/2) `min` (width - title_width))) + 2"
+                       y="(0 `max` ((height - title_height) / 2)) + 2"
+                       ellipsize_width="width"
+                       color="CTitleUnfocused"/>
 	</draw_ops>
 
   <!-- Normal, focused window -->
