@@ -7,29 +7,7 @@
     <date>2010</date>
     <description>Default GNOME 3 window theme</description>
   </info>
-
-	<!--
-		2010-08-27. Lapo Calamandrei <calamandrei@gmail.com>
-			- Fix unfocused state and max'd state.
-			- More constants.
-		2010-08-26. Lapo Calamandrei <calamandrei@gmail.com>
-			- Initial conversion to format version 2 and rounded corner tweaks.
-			- Fixed a positioning issue with unfocused close button.
-			- Moved unfocused button icons 1px down.
-			- Tweaked focused window button separators.
-			- Darkened title and added hilight.
-			- Increased button and title borders.
-			- More evident titlebar gradient.
-		2010-08-25. Lapo Calamandrei <calamandrei@gmail.com>
-			- Darker button shadow.
-			- Rounded corners on button bg via clipping mask.
-			- Lot of other tweaks.
-		2010-08-24. Lapo Calamandrei <calamandrei@gmail.com>
-			- New math for button icons.
-			- Lot of minor details.
-	-->
-
-<!-- constants -->
+	<!-- constants -->
 	<!--
 		nomenclature:
 		C* -> color
@@ -64,7 +42,7 @@
 		<distance name="left_titlebar_edge" value="0"/>
 		<distance name="right_titlebar_edge" value="0"/>
 		<distance name="title_vertical_pad" value="10"/>
-		<border name="title_border" left="0" right="0" top="0" bottom="3"/>
+		<border name="title_border" left="10" right="10" top="0" bottom="3"/>
 		<border name="button_border" left="0" right="0" top="0" bottom="2"/>
 		<aspect_ratio name="button" value="1"/>
 	</frame_geometry>
