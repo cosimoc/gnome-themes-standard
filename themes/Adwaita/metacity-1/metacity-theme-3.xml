@@ -62,7 +62,7 @@
   <frame_geometry name="dialog" title_scale="medium" parent="normal" hide_buttons="true">
   </frame_geometry>
 
-  <frame_geometry name="border" has_title="false" parent="normal">
+  <frame_geometry name="border" has_title="false" parent="normal" rounded_top_left="false" rounded_top_right="false">
   </frame_geometry>
 
 
