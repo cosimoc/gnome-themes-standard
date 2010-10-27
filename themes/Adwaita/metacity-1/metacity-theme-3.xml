@@ -349,7 +349,7 @@
 	</draw_ops>
 
 	<draw_ops name="button_bg_focused_clipped">
-		<clip x="2" y="0" width="width-2" height="height-6" />
+		<clip x="2" y="0" width="width-2" height="height-2" />
 		<include name="button_bg_focused" />
 		<clip x="3" y="height-6" width="width-3" height="1" />
 		<include name="button_bg_focused" />
@@ -360,7 +360,7 @@
 	</draw_ops>
 
 	<draw_ops name="button_bg_prelight_clipped">
-		<clip x="2" y="0" width="width-2" height="height-6" />
+		<clip x="2" y="0" width="width-2" height="height-2" />
 		<include name="button_bg_prelight" />
 		<clip x="3" y="height-6" width="width-3" height="1" />
 		<include name="button_bg_prelight" />
@@ -371,7 +371,7 @@
 	</draw_ops>
 
 	<draw_ops name="button_bg_pressed_clipped">
-		<clip x="2" y="0" width="width-2" height="height-6" />
+		<clip x="2" y="0" width="width-2" height="height-2" />
 		<include name="button_bg_pressed" />
 		<clip x="3" y="height-6" width="width-3" height="1" />
 		<include name="button_bg_pressed" />
@@ -382,7 +382,7 @@
 	</draw_ops>
 
 	<draw_ops name="button_bg_focused_clipped_max">
-		<clip x="2" y="0" width="width-2" height="height-6" />
+		<clip x="2" y="0" width="width-2" height="height-2" />
 		<include name="button_bg_focused_max" />
 		<clip x="3" y="height-6" width="width-3" height="1" />
 		<include name="button_bg_focused_max" />
@@ -393,7 +393,7 @@
 	</draw_ops>
 
 	<draw_ops name="button_bg_prelight_clipped_max">
-		<clip x="2" y="0" width="width-2" height="height-6" />
+		<clip x="2" y="0" width="width-2" height="height-2" />
 		<include name="button_bg_prelight_max" />
 		<clip x="3" y="height-6" width="width-3" height="1" />
 		<include name="button_bg_prelight_max" />
@@ -404,7 +404,7 @@
 	</draw_ops>
 
 	<draw_ops name="button_bg_pressed_clipped_max">
-		<clip x="2" y="0" width="width-2" height="height-6" />
+		<clip x="2" y="0" width="width-2" height="height-2" />
 		<include name="button_bg_pressed_max" />
 		<clip x="3" y="height-6" width="width-3" height="1" />
 		<include name="button_bg_pressed_max" />
