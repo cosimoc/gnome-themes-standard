@@ -1,4 +1,4 @@
-SUBDIRS = gtk-3.0 metacity-1
+SUBDIRS = backgrounds gtk-3.0 metacity-1
 
 THEME_NAME=Adwaita
 THEME_IN_FILES=index.theme.in

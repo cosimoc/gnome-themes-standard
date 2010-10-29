@@ -7,6 +7,7 @@ AC_INIT([gnome-themes-standard], [2.91.0],
 AM_INIT_AUTOMAKE([1.9 tar-ustar foreign dist-bzip2 no-dist-gzip])
 
 PKG_PROG_PKG_CONFIG([0.19])
+AC_PROG_SED
 IT_PROG_INTLTOOL([0.35.0])
 
 # Workaround to make aclocal get the right flags
@@ -16,6 +17,7 @@ AC_CONFIG_FILES([
 Makefile
 themes/Makefile
 themes/Adwaita/Makefile
+themes/Adwaita/backgrounds/Makefile
 themes/Adwaita/gtk-3.0/Makefile
 themes/Adwaita/metacity-1/Makefile
 po/Makefile.in
