@@ -1,4 +1,4 @@
-SUBDIRS = themes
+SUBDIRS = themes po
 
 MAINTAINERCLEANFILES =			\
 	Makefile.in			\
