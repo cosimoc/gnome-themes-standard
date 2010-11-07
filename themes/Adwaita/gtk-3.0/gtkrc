@@ -390,6 +390,18 @@ style "toolbar" {
 	}
 }
 
+style "toolbarbutton" = "button" {
+	engine "clearlooks" {
+		vertical_gradient {
+			stop 0.0 shade (0.75, @bg_color)
+			stop 0.3 shade (0.9, @bg_color)
+			stop 0.6 shade (0.9, @bg_color)
+			stop 1.0 shade (0.85, @bg_color)
+		}
+	}
+}
+widget_class "*.GtkToolbar.*Button" style "toolbarbutton"
+
 style "separator" = "wide" {
         GtkSeparator::shadow-type = GTK_SHADOW_NONE
 }
