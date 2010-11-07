@@ -141,6 +141,7 @@ style "entry" {
         xthickness = 2
         ythickness = 2
 
+        base[ACTIVE] = @base_color
         bg[SELECTED] = @selected_bg_color
         fg[SELECTED] = @selected_fg_color
 
