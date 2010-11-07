@@ -237,7 +237,7 @@ style "dialogbutton" = "button" {
         bg[ACTIVE]        = "blue"
         fg[NORMAL]        = @selected_fg_color
 }
-widget "GtkDialog.*Box*.GtkHButtonBox.*Button*" style "dialogbutton"
+widget "GtkDialog.*Box*.GtkButtonBox.*Button*" style "dialogbutton"
 
 # The color is changed by the notebook_bg style, this style
 # changes the x/ythickness
