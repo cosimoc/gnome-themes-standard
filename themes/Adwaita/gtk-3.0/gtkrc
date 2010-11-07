@@ -274,8 +274,13 @@ style "menubar" {
         xthickness = 0
         bg [NORMAL] = "#E0E0DC"
         bg [ACTIVE] = "#c7ccc1" # second gradient color
+	GtkWidget::window-dragging = 1
         engine "clearlooks" {
                 hint = "menubar"
+		vertical_gradient {
+			stop 0.0 shade (0.94, @bg_color)
+			stop 1.0 @bg_color
+		}
         }
 }
 
@@ -370,8 +375,19 @@ style "tooltips" {
 }
 
 style "toolbar" {
-        bg [NORMAL] = "#c7ccc1"
-        bg [ACTIVE] = "#8a9580"
+	engine "clearlooks" {
+		vertical_gradient {
+			stop 0.0 shade (0.6, @bg_color)
+			stop 0.02 shade (0.6, @bg_color)
+			stop 0.03 shade (0.7, @bg_color)
+			stop 0.2 shade (0.75, @bg_color)
+			stop 0.8 shade (0.8, @bg_color)
+			stop 0.96 shade (0.95, @bg_color)
+			stop 0.97 shade (0.8, @bg_color)
+			stop 0.98 shade (1.2, @bg_color)
+			stop 1.0 shade (1.2, @bg_color)
+		}
+	}
 }
 
 style "separator" = "wide" {
