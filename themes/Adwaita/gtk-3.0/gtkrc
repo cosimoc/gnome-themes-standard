@@ -23,9 +23,6 @@ style "default" {
         GtkButton::image-spacing = 4
         GtkToolButton::icon-spacing = 4
 
-        GtkWidget::cursor-color = shade(1.07, @selected_bg_color)
-        GtkWidget::secondary-cursor-color = @selected_bg_color
-
         GtkCheckButton::indicator-size = 14
 
         GtkTextView::error-underline-color = "#cc0000"
@@ -144,10 +141,6 @@ style "entry" {
         base[ACTIVE] = @base_color
         bg[SELECTED] = @selected_bg_color
         fg[SELECTED] = @selected_fg_color
-
-        engine "clearlooks" {
-                focus_color = shade (0.65, @selected_bg_color)
-        }
 }
 
 style "spinbutton" {
