@@ -222,6 +222,13 @@ style "button" {
 #       bg[NORMAL]        = shade (1.04, @bg_color)
 #       bg[PRELIGHT]      = shade (1.06, @bg_color)
 #       bg[ACTIVE]        = shade (0.85, @bg_color)
+
+        engine "clearlooks" {
+                focus_color = shade (0.6, @selected_bg_color)
+		focus_fill_color = @selected_bg_color
+		focus_fill_alpha = 0.1
+        }
+
 }
 
 # The color is changed by the notebook_bg style, this style
@@ -392,6 +399,7 @@ style "toolbarbutton" = "button" {
 			stop 0.6 shade (0.9, @bg_color)
 			stop 1.0 shade (0.85, @bg_color)
 		}
+		focus_color = shade (0.9, @bg_color)
 	}
 }
 widget_class "*.GtkToolbar.*Button" style "toolbarbutton"
