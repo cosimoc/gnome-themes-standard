@@ -224,9 +224,9 @@ style "button" {
 #       bg[ACTIVE]        = shade (0.85, @bg_color)
 
         engine "clearlooks" {
-                focus_color = shade (0.6, @selected_bg_color)
+                focus_color =  mix (0.5 , @bg_color, @selected_bg_color)
 		focus_fill_color = @selected_bg_color
-		focus_fill_alpha = 0.1
+		focus_fill_alpha = 0.05
         }
 
 }
