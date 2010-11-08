@@ -326,6 +326,7 @@ style "separator_tool_item" {
         GtkWidget::wide-separators = 1
         GtkWidget::separator-width = 7
         GtkWidget::separator-height = 1
+	bg[NORMAL] = shade (0.8, @bg_color)
 }
 
 style "frame_title" {
