@@ -403,7 +403,6 @@ style "toolbarbutton" = "button" {
 		focus_color = shade (0.9, @bg_color)
 	}
 }
-widget_class "*.GtkToolbar.*Button" style "toolbarbutton"
 
 style "separator" = "wide" {
         GtkSeparator::shadow-type = GTK_SHADOW_NONE
@@ -538,6 +537,7 @@ widget_class "*<GtkNotebook>*<GtkViewport>" style "notebook_bg"
 widget_class "*<GtkNotebook>*<GtkScrolledWindow>" style "notebook_bg"
 
 widget_class "*<GtkButton>" style "button"
+widget_class "*<GtkToolbar>.*.<GtkButton>" style "toolbarbutton"
 widget_class "*<GtkNotebook>" style "notebook"
 widget_class "*<GtkStatusbar>*" style "statusbar"
 
