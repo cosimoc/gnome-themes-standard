@@ -393,6 +393,7 @@ style "toolbar" {
 
 style "toolbarbutton" = "button" {
 	bg[ACTIVE] = shade (0.7, @bg_color)
+	bg[INSENSITIVE] = shade (0.75, @bg_color)
 	engine "clearlooks" {
 		vertical_gradient {
 			stop 0.0 shade (0.75, @bg_color)
