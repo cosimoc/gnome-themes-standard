@@ -23,6 +23,7 @@ Makefile
 themes/Makefile
 themes/Adwaita/Makefile
 themes/Adwaita/backgrounds/Makefile
+themes/Adwaita/gtk-2.0/Makefile
 themes/Adwaita/gtk-3.0/Makefile
 themes/Adwaita/metacity-1/Makefile
 po/Makefile.in
