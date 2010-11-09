@@ -1,3 +1,4 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
+themes/Adwaita/backgrounds/adwaita.xml.in.in
 themes/Adwaita/index.theme.in
