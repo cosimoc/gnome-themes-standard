@@ -6,3 +6,5 @@ Encoding=UTF-8
 GtkTheme=Adwaita
 MetacityTheme=Adwaita
 IconTheme=gnome
+CursorTheme=Adwaita
+CursorSize=24
