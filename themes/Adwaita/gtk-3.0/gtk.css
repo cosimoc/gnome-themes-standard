@@ -114,7 +114,6 @@
 .entry {
     padding: 2;
     background-color: @base_color;
-    color: shade (@selected_bg_color, 1.2);
 }
 
 .entry:selected {
