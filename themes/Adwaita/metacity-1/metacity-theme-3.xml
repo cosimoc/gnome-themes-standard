@@ -17,15 +17,15 @@
 	<constant name="CBorderUnfocused" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
 	<constant name="CButtonBorder" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
 	<constant name="CButtonHilight" value="blend/#ffffff/gtk:bg[NORMAL]/0.6" />
-	<constant name="CTitlebarUnfocused" value="blend/gtk:bg[NORMAL]/#000000/0.06" />
+	<constant name="CTitlebarUnfocused" value="blend/gtk:bg[NORMAL]/#ffffff/0.7" />
 	<constant name="CTitleFocused" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.1" />
-	<constant name="CTitleFocusedHilight" value="blend/#ffffff/gtk:bg[NORMAL]/0.8" />
+	<constant name="CTitleFocusedHilight" value="blend/#ffffff/gtk:bg[NORMAL]/0.4" />
 	<constant name="CTitleUnfocused" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.8" />
 	<constant name="CTitleUnfocusedHilight" value="blend/#ffffff/gtk:bg[NORMAL]/0.9" />
 	<constant name="CIconFocused_normal" value="blend/#ffffff/gtk:bg[NORMAL]/0.3" />
 	<constant name="CIconFocused_prelight" value="CIconFocused_normal" />
 	<constant name="CIconFocused_pressed" value="CIconFocused_normal" />
-	<constant name="CIconUnfocused_normal" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.8" />
+	<constant name="CIconUnfocused_normal" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.9" />
 	<constant name="CIconUnfocused_prelight" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.85" />
 	<constant name="CIconUnfocused_pressed" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.75" />
 	<constant name="DIconFocused_h" value="0" />
@@ -42,8 +42,8 @@
 		<distance name="left_titlebar_edge" value="0"/>
 		<distance name="right_titlebar_edge" value="0"/>
 		<distance name="title_vertical_pad" value="10"/>
-		<border name="title_border" left="10" right="10" top="0" bottom="3"/>
-		<border name="button_border" left="0" right="0" top="0" bottom="2"/>
+		<border name="title_border" left="10" right="10" top="0" bottom="4"/>
+		<border name="button_border" left="0" right="0" top="1" bottom="4"/>
 		<aspect_ratio name="button" value="1"/>
 	</frame_geometry>
 
@@ -52,8 +52,8 @@
 		<distance name="right_width" value="0"/>
 		<distance name="bottom_height" value="0"/>
 		<distance name="title_vertical_pad" value="10"/>
-		<border name="title_border" left="0" right="0" top="0" bottom="3"/>
-		<border name="button_border" left="0" right="0" top="0" bottom="2"/>
+		<border name="title_border" left="0" right="0" top="0" bottom="4"/>
+		<border name="button_border" left="0" right="0" top="0" bottom="5"/>
 	</frame_geometry>
 
   <frame_geometry name="utility" title_scale="medium" parent="normal">
@@ -72,44 +72,36 @@
   <!-- Titlebar Background -->
 	<draw_ops name="bg_titlebar_maximized">
 		<gradient type="vertical" x="1" y="1" width="width-2" height="height-1">
-			<color value="blend/gtk:bg[NORMAL]/#ffffff/0.1" />
+			<color value="blend/gtk:bg[NORMAL]/#ffffff/0.3" />
 			<color value="gtk:bg[NORMAL]"/>
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.03" />
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.06" />
 		</gradient>
-		<!-- top -->
-		<!-- <tint color="blend/#ffffff/gtk:bg[NORMAL]/0.8" x="1" y="1" width="width-1" height="1" alpha="0.8" /> -->
-
 	</draw_ops>
 	<draw_ops name="bg_titlebar_unfocused_maximized">
 		<rectangle color="CTitlebarUnfocused" x="1" y="1" width="width-2" height="height-1" filled="true"/>
 	</draw_ops>
 	<draw_ops name="bg_titlebar_unfocused">
 		<include name="bg_titlebar_unfocused_maximized" />
-		<!-- left upper rounded corner -->
-		<line color="CBorderUnfocused" x1="2" y1="1" x2="3" y2="1" />
-		<line color="CBorderUnfocused" x1="1" y1="2" x2="1" y2="3" />
-		<!-- right upper rounder corner -->
-		<line color="CBorderUnfocused" x1="width-4" y1="1" x2="width-2" y2="1" />
-		<line color="CBorderUnfocused" x1="width-2" y1="2" x2="width-2" y2="3" />
+		<arc x="0" y="0" width="10" height="10" start_angle="0" extent_angle="-90" color="CBorderUnfocused" />
+		<arc x="width-11" y="0" width="10" height="10" start_angle="0" extent_angle="90" color="CBorderUnfocused" />
 	</draw_ops>
 
 	<draw_ops name="bg_titlebar">
 		<include name="bg_titlebar_maximized"/>
-		<!-- corner hilight -->
-		<!-- <line color="blend/#ffffff/gtk:bg[NORMAL]/0.8" x1="3" y1="2" x2="4" y2="2" />
-		<line color="blend/#ffffff/gtk:bg[NORMAL]/0.8" x1="2" y1="3" x2="2" y2="4" />
-		<gradient type="vertical" x="1" y="5" width="1" height="height-5">
-			<color value="blend/#ffffff/gtk:bg[NORMAL]/0.8"/>
+		<arc x="0" y="0" width="10" height="10" start_angle="0" extent_angle="-90" color="CBorderFocused" />
+		<arc x="width-11" y="0" width="10" height="10" start_angle="0" extent_angle="90" color="CBorderFocused" />
+		<line color="CTitleFocusedHilight" x1="5" y1="1" x2="width-5" y2="1" />
+		<arc x="1" y="1" width="8" height="8" start_angle="0" extent_angle="-90" color="CTitleFocusedHilight" />
+		<arc x="width-10" y="1" width="8" height="8" start_angle="0" extent_angle="90" color="CTitleFocusedHilight" />
+		<gradient type="vertical" x="1" y="5" width="1" height="height-5">		
+			<color value="CTitleFocusedHilight"/>
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.06"/>
-		</gradient> -->
-
-		<!-- left upper rounded corner -->
-		<line color="CBorderFocused" x1="2" y1="1" x2="3" y2="1" />
-		<line color="CBorderFocused" x1="1" y1="2" x2="1" y2="3" />
-		<!-- right upper rounder corner -->
-		<line color="CBorderFocused" x1="width-4" y1="1" x2="width-3" y2="1" />
-		<line color="CBorderFocused" x1="width-2" y1="2" x2="width-2" y2="3" />
+		</gradient>
+		<gradient type="vertical" x="width-2" y="5" width="1" height="height-5">		
+			<color value="CTitleFocusedHilight"/>
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.06"/>
+		</gradient>
 	</draw_ops>
 
 
@@ -150,18 +142,9 @@
 
 	<draw_ops name="title_all_unfocused">
 		<title version="< 3.1"
-                       x="(0 `max` ((width - title_width) / 2)) + 3"
-                       y="(0 `max` ((height - title_height) / 2)) + 3"
-                       color="CTitleUnfocusedHilight"/>
-		<title version="< 3.1"
                        x="(0 `max` ((width - title_width) / 2)) + 2"
                        y="(0 `max` ((height - title_height) / 2)) + 2"
                        color="CTitleUnfocused"/>
-		<title version=">= 3.1"
-                       x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width))) + 3"
-                       y="(0 `max` ((height - title_height) / 2)) + 3"
-                       ellipsize_width="width"
-                       color="CTitleUnfocusedHilight"/>
 		<title version=">= 3.1"
                        x="(0 `max` ((frame_x_center - title_width/2) `min` (width - title_width))) + 2"
                        y="(0 `max` ((height - title_height) / 2)) + 2"
@@ -220,16 +203,16 @@
 	<draw_ops name="button_bottom_hilight">
 		<!-- horziontal highlight on the bottom -->
 		<tint color="CButtonBorder" x="0" y="height - 4" width="width" height="1" alpha="1"/>
-		<tint color="CButtonHilight" x="0" y="height - 3" width="width" height="1" alpha="0.9"/>
+		<tint color="CButtonHilight" x="0" y="height - 3" width="width" height="1" alpha="1"/>
 	</draw_ops>
 
 	<draw_ops name="button_separator">
 		<!-- vertical separator stripes -->
-		<gradient type="vertical" x="1" y="1" width="1" height="height - 5">
+		<gradient type="vertical" x="0" y="0" width="1" height="height - 4">
 			<color value="blend/gtk:bg[NORMAL]/#ffffff/0.1"/>
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.07"/>
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.1"/>
 		</gradient>
-		<gradient type="vertical" x="0" y="1" width="1" height="height - 5">
+		<gradient type="vertical" x="width-1" y="0" width="1" height="height - 4">
 			<color value="CBorderFocused"/>
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.1"/>
 		</gradient>
@@ -237,36 +220,15 @@
 
 	<draw_ops name="button_separator_pressed">
 		<!-- vertical separator stripes for pressed state -->
-		<tint color="blend/#ffffff/gtk:bg[NORMAL]/0.5" x="0" y="1" width="1" height="height - 5" alpha="0.05"/>
-		<gradient type="vertical" x="0" y="1" width="1" height="height - 5">
-			<color value="CBorderFocused"/>
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.1"/>
-		</gradient>
-	</draw_ops>
-
-	<draw_ops name="button_separator_max">
-		<!-- vertical separator stripes -->
-		<gradient type="vertical" x="1" y="0" width="1" height="height - 4">
-			<color value="blend/gtk:bg[NORMAL]/#ffffff/0.1"/>
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.07"/>
-		</gradient>
-		<gradient type="vertical" x="0" y="0" width="1" height="height - 4">
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.5"/>
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.05"/>
-		</gradient>
-	</draw_ops>
-
-	<draw_ops name="button_separator_pressed_max">
-		<!-- vertical separator stripes for pressed state -->
-		<tint color="blend/#ffffff/gtk:bg[NORMAL]/0.5" x="0" y="0" width="1" height="height - 4" alpha="0.05"/>
+		<tint color="blend/#ffffff/gtk:bg[NORMAL]/0.5" x="0" y="0" width="1" height="height - 4" alpha="0.2"/>
 		<gradient type="vertical" x="0" y="0" width="1" height="height - 4">
 			<color value="CBorderFocused"/>
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.1"/>
 		</gradient>
 	</draw_ops>
 
-	<draw_ops name="button_bg_focused">
-		<gradient type="vertical" x="0" y="1" width="width" height="height - 3">
+	<draw_ops name="button_bg_focused_max">
+		<gradient type="vertical" x="0" y="0" width="width" height="height - 3">
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.1"/>
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.14"/>
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.17"/>
@@ -276,8 +238,13 @@
 		<include name="button_bottom_hilight" />
 	</draw_ops>
 
-	<draw_ops name="button_bg_prelight">
-		<gradient type="vertical" x="0" y="1" width="width" height="height - 3">
+	<draw_ops name="button_bg_focused">
+		<include name="button_bg_focused_max" />
+		<line x1="0" y1="0" x2="width-2" y2="0" color="blend/gtk:bg[NORMAL]/#ffffff/0.1"/>
+	</draw_ops>
+
+	<draw_ops name="button_bg_prelight_max">
+		<gradient type="vertical" x="0" y="0" width="width" height="height - 3">
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.05"/>
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.10"/>
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.12"/>
@@ -287,8 +254,13 @@
 		<include name="button_bottom_hilight" />
 	</draw_ops>
 
+	<draw_ops name="button_bg_prelight">
+		<include name="button_bg_prelight_max" />
+		<line x1="0" y1="0" x2="width-2" y2="0" color="blend/gtk:bg[NORMAL]/#ffffff/0.2"/>
+	</draw_ops>
+
 	<draw_ops name="button_bg_pressed">
-		<gradient type="vertical" x="0" y="1" width="width" height="height - 3">
+		<gradient type="vertical" x="0" y="0" width="width" height="height - 3">
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.4"/>
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.05"/>
 		</gradient>
@@ -296,51 +268,38 @@
 		<include name="button_bottom_hilight" />
 	</draw_ops>
 
-	<draw_ops name="button_bg_focused_max">
-		<gradient type="vertical" x="0" y="0" width="width" height="height - 2">
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.1"/>
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.14"/>
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.17"/>
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.06"/>
-		</gradient>
-		<include name="button_separator_max"/>
-		<include name="button_bottom_hilight" />
-	</draw_ops>
-
-	<draw_ops name="button_bg_prelight_max">
-		<gradient type="vertical" x="0" y="0" width="width" height="height - 2">
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.05"/>
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.10"/>
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.12"/>
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.03"/>
-		</gradient>
-		<include name="button_separator_max" />
-		<include name="button_bottom_hilight" />
-	</draw_ops>
-
 	<draw_ops name="button_bg_pressed_max">
-		<gradient type="vertical" x="0" y="0" width="width" height="height - 2">
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.4"/>
-			<color value="blend/gtk:bg[NORMAL]/#000000/0.05"/>
-		</gradient>
-		<include name="button_bottom_hilight" />
-		<include name="button_separator_pressed_max" />
+		<include name="button_bg_pressed" />
 	</draw_ops>
 
 	<draw_ops name="rounded_outer_border_right">
-		<line color="CBorderFocused" x1="width-4" y1="1" x2="width-3" y2="1"/>
-		<line color="CBorderFocused" x1="width-2" y1="2" x2="width-2" y2="3"/>
-		<line color="CBorderFocused" x1="width-1" y1="4" x2="width-1" y2="height"/>
+		<line color="CBorderFocused" x1="width-4" y1="0" x2="width-3" y2="0"/>
+		<line color="CBorderFocused" x1="width-2" y1="1" x2="width-2" y2="2"/>
+		<line color="CBorderFocused" x1="width-1" y1="3" x2="width-1" y2="height"/>
 	</draw_ops>
 
 	<draw_ops name="button_bg_focused_outer_right">
 		<include name="button_bg_focused" />
 		<include name="rounded_outer_border_right" />
+		<arc x="width-10" y="0" width="8" height="8" start_angle="0" extent_angle="90" color="blend/gtk:bg[NORMAL]/#ffffff/0.1" />
+		<gradient type="vertical" x="width-2" y="4" width="1" height="height-9">		
+			<color value="blend/gtk:bg[NORMAL]/#ffffff/0.1"/>
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.15"/>
+		</gradient>
+		<gradient type="horizontal" x="0" y="height-3" width="width-1" height="1">		
+			<color value="CButtonHilight" />
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.03"/>
+		</gradient>
 	</draw_ops>
 
 	<draw_ops name="button_bg_prelight_outer_right">
 		<include name="button_bg_prelight" />
 		<include name="rounded_outer_border_right" />
+		<arc x="width-10" y="0" width="8" height="8" start_angle="0" extent_angle="90" color="blend/gtk:bg[NORMAL]/#ffffff/0.2" />
+		<gradient type="vertical" x="width-2" y="4" width="1" height="height-9">		
+			<color value="blend/gtk:bg[NORMAL]/#ffffff/0.2"/>
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.15"/>
+		</gradient>
 	</draw_ops>
 
 	<draw_ops name="button_bg_pressed_outer_right">
@@ -348,144 +307,92 @@
 		<include name="rounded_outer_border_right" />
 	</draw_ops>
 
+
+	<draw_ops name="button_bg_focused_clipped1">
+		<clip x="4" y="height-6" width="width-4" height="6" />
+		<include name="button_bg_focused_max" />	
+	</draw_ops>
+	<draw_ops name="button_bg_focused_clipped2">
+		<clip x="1" y="0" width="width-1" height="height-6" />
+		<include name="button_bg_focused_max" />
+	</draw_ops>
 	<draw_ops name="button_bg_focused_clipped">
-		<clip x="2" y="0" width="width-2" height="height-2" />
-		<include name="button_bg_focused" />
-		<clip x="3" y="height-6" width="width-3" height="1" />
-		<include name="button_bg_focused" />
-		<clip x="4" y="height-5" width="width-4" height="1" />
-		<include name="button_bg_focused" />
-		<clip x="5" y="height-4" width="width-5" height="2" />
-		<include name="button_bg_focused" />
+		<include name="button_bg_focused_clipped1" />
+		<include name="button_bg_focused_clipped2" />
+		<clip x="2" y="height-6" width="2" height="2" />
+		<include name="button_bg_focused_max" />
 	</draw_ops>
 
+	<draw_ops name="button_bg_prelight_clipped1">
+		<clip x="4" y="height-6" width="width-4" height="6" />
+		<include name="button_bg_prelight_max" />	
+	</draw_ops>
+	<draw_ops name="button_bg_prelight_clipped2">
+		<clip x="1" y="0" width="width-1" height="height-6" />
+		<include name="button_bg_prelight_max" />
+	</draw_ops>
 	<draw_ops name="button_bg_prelight_clipped">
-		<clip x="2" y="0" width="width-2" height="height-2" />
-		<include name="button_bg_prelight" />
-		<clip x="3" y="height-6" width="width-3" height="1" />
-		<include name="button_bg_prelight" />
-		<clip x="4" y="height-5" width="width-4" height="1" />
-		<include name="button_bg_prelight" />
-		<clip x="5" y="height-4" width="width-5" height="2" />
-		<include name="button_bg_prelight" />
+		<include name="button_bg_prelight_clipped1" />
+		<include name="button_bg_prelight_clipped2" />
+		<clip x="2" y="height-6" width="2" height="2" />
+		<include name="button_bg_prelight_max" />
 	</draw_ops>
 
+	<draw_ops name="button_bg_pressed_clipped1">
+		<clip x="4" y="height-6" width="width-4" height="6" />
+		<include name="button_bg_pressed" />	
+	</draw_ops>
+	<draw_ops name="button_bg_pressed_clipped2">
+		<clip x="1" y="0" width="width-1" height="height-6" />
+		<include name="button_bg_pressed" />
+	</draw_ops>
 	<draw_ops name="button_bg_pressed_clipped">
-		<clip x="2" y="0" width="width-2" height="height-2" />
+		<include name="button_bg_pressed_clipped1" />
+		<include name="button_bg_pressed_clipped2" />
+		<clip x="2" y="height-6" width="2" height="2" />
 		<include name="button_bg_pressed" />
-		<clip x="3" y="height-6" width="width-3" height="1" />
-		<include name="button_bg_pressed" />
-		<clip x="4" y="height-5" width="width-4" height="1" />
-		<include name="button_bg_pressed" />
-		<clip x="5" y="height-4" width="width-5" height="2" />
-		<include name="button_bg_pressed" />
-	</draw_ops>
-
-	<draw_ops name="button_bg_focused_clipped_max">
-		<clip x="2" y="0" width="width-2" height="height-2" />
-		<include name="button_bg_focused_max" />
-		<clip x="3" y="height-6" width="width-3" height="1" />
-		<include name="button_bg_focused_max" />
-		<clip x="4" y="height-5" width="width-4" height="1" />
-		<include name="button_bg_focused_max" />
-		<clip x="5" y="height-4" width="width-5" height="2" />
-		<include name="button_bg_focused_max" />
-	</draw_ops>
-
-	<draw_ops name="button_bg_prelight_clipped_max">
-		<clip x="2" y="0" width="width-2" height="height-2" />
-		<include name="button_bg_prelight_max" />
-		<clip x="3" y="height-6" width="width-3" height="1" />
-		<include name="button_bg_prelight_max" />
-		<clip x="4" y="height-5" width="width-4" height="1" />
-		<include name="button_bg_prelight_max" />
-		<clip x="5" y="height-4" width="width-5" height="2" />
-		<include name="button_bg_prelight_max" />
-	</draw_ops>
-
-	<draw_ops name="button_bg_pressed_clipped_max">
-		<clip x="2" y="0" width="width-2" height="height-2" />
-		<include name="button_bg_pressed_max" />
-		<clip x="3" y="height-6" width="width-3" height="1" />
-		<include name="button_bg_pressed_max" />
-		<clip x="4" y="height-5" width="width-4" height="1" />
-		<include name="button_bg_pressed_max" />
-		<clip x="5" y="height-4" width="width-5" height="2" />
-		<include name="button_bg_pressed_max" />
 	</draw_ops>
 
 	<draw_ops name="right_left_button_rounded_corner">
-		<!--hilight -->
-		<tint color="CButtonHilight" alpha="0.7" x="4" y="height-3" width="1" height="1"/>
-		<tint color="CButtonHilight" alpha="0.25" x="5" y="height-4" width="1" height="1"/>
-		<tint color="CButtonHilight" alpha="0.25" x="3" y="height-3" width="1" height="1"/>
-		<tint color="CButtonHilight" alpha="0.8" x="3" y="height-4" width="1" height="1"/>
-		<tint color="CButtonHilight" alpha="0.5" x="2" y="height-4" width="1" height="1"/>
-		<tint color="CButtonHilight" alpha="0.8" x="2" y="height-5" width="1" height="1"/>
-		<tint color="CButtonHilight" alpha="0.7" x="1" y="height-6" width="1" height="1"/>
-		<tint color="CButtonHilight" alpha="0.25" x="1" y="height-5" width="1" height="1"/>
-		<tint color="CButtonHilight" alpha="0.25" x="2" y="height-6" width="1" height="1"/>
-		<tint color="CButtonHilight" alpha="1" x="1" y="1" width="1" height="height-7"/>
-
-		<!-- shadow -->
-		<tint color="#000000" alpha="0.025" x="5" y="height-5" width="1" height="1"/>
-		<tint color="#000000" alpha="0.08" x="4" y="height-5" width="1" height="1"/>
-		<tint color="#000000" alpha="0.05" x="3" y="height-5" width="1" height="1"/>
-		<tint color="#000000" alpha="0.08" x="3" y="height-6" width="1" height="1"/>
-		<tint color="#000000" alpha="0.07" x="2" y="height-7" width="1" height="1"/>
-		<tint color="#000000" alpha="0.025" x="2" y="height-6" width="1" height="1"/>
-		<tint color="#000000" alpha="0.025" x="3" y="height-7" width="1" height="1"/>
-		<tint color="#000000" alpha="0.08" x="2" y="0" width="1" height="height-7"/>
-
-		<!-- corner AA -->
-		<tint color="CButtonBorder" alpha="0.7" x="4" y="height-4" width="1" height="1"/>
-		<tint color="CButtonBorder" alpha="0.25" x="4" y="height-5" width="1" height="1"/>
-		<tint color="CButtonBorder" alpha="0.25" x="3" y="height-4" width="1" height="1"/>
-		<tint color="CButtonBorder" alpha="0.8" x="3" y="height-5" width="1" height="1"/>
-		<tint color="CButtonBorder" alpha="0.5" x="2" y="height-5" width="1" height="1"/>
-		<tint color="CButtonBorder" alpha="0.8" x="2" y="height-6" width="1" height="1"/>
-		<tint color="CButtonBorder" alpha="0.7" x="1" y="height-7" width="1" height="1"/>
-		<tint color="CButtonBorder" alpha="0.25" x="1" y="height-6" width="1" height="1"/>
-		<tint color="CButtonBorder" alpha="0.25" x="2" y="height-7" width="1" height="1"/>
+		<line x1="0" y1="0" x2="0" y2="height-7" color="CButtonHilight" />
+		<arc x="0" y="height-13" width="10" height="10" start_angle="180" extent_angle="90" color="CButtonHilight"/>
 		<gradient type="vertical" x="1" y="0" width="1" height="height-7">
-			<color value="CBorderFocused" />
-			<color value="CButtonBorder" />
+			<color value="CBorderFocused"/>
+			<color value="CButtonBorder"/>
 		</gradient>
-<!--		<tint color="CButtonBorder" alpha="1" x="0" y="0" width="1" height="height-5"/> -->
+		<arc x="1" y="height-12" width="8" height="8" start_angle="180" extent_angle="90" color="CButtonBorder"/>
 	</draw_ops>
 
-	<draw_ops name="button_bg_focused_inner_right">
+	<draw_ops name="button_bg_focused_inner_right_max">
 		<include name="button_bg_focused_clipped" />
 		<include name="right_left_button_rounded_corner" />
 	</draw_ops>
 
-	<draw_ops name="button_bg_prelight_inner_right">
+	<draw_ops name="button_bg_focused_inner_right">
+		<include name="button_bg_focused_inner_right_max" />
+		<line x1="2" y1="0" x2="width-3" y2="0" color="blend/gtk:bg[NORMAL]/#ffffff/0.1"/>
+	</draw_ops>
+
+	<draw_ops name="button_bg_prelight_inner_right_max">
 		<include name="button_bg_prelight_clipped" />
 		<include name="right_left_button_rounded_corner" />
 	</draw_ops>
 
-	<draw_ops name="button_bg_pressed_inner_right">
+	<draw_ops name="button_bg_prelight_inner_right">
+		<include name="button_bg_prelight_inner_right_max" />
+		<line x1="2" y1="0" x2="width-3" y2="0" color="blend/gtk:bg[NORMAL]/#ffffff/0.2"/>
+	</draw_ops>
+
+
+	<draw_ops name="button_bg_pressed_inner_right_max">
 		<include name="button_bg_pressed_clipped" />
 		<include name="right_left_button_rounded_corner" />
 	</draw_ops>
 
-	<draw_ops name="button_bg_focused_inner_right_max">
-		<include name="button_bg_focused_clipped_max" />
-		<include name="right_left_button_rounded_corner" />
-		<!-- <tint color="blend/#000000/gtk:bg[NORMAL]/0.7" alpha="1" x="0" y="0" width="1" height="1" /> -->
+	<draw_ops name="button_bg_pressed_inner_right">
+		<include name="button_bg_pressed_inner_right_max" />
 	</draw_ops>
 
-	<draw_ops name="button_bg_prelight_inner_right_max">
-		<include name="button_bg_prelight_clipped_max" />
-		<include name="right_left_button_rounded_corner" />
-		<!-- <tint color="blend/#000000/gtk:bg[NORMAL]/0.7" alpha="1" x="0" y="0" width="1" height="1" /> -->
-	</draw_ops>
-
-	<draw_ops name="button_bg_pressed_inner_right_max">
-		<include name="button_bg_pressed_clipped_max" />
-		<include name="right_left_button_rounded_corner" />
-		<!-- <tint color="blend/#000000/gtk:bg[NORMAL]/0.7" alpha="1" x="0" y="0" width="1" height="1" /> -->
-	</draw_ops>
 
 	<draw_ops name="button_bg_focused_single_right">
 		<include name="button_bg_focused_clipped" />
@@ -548,14 +455,6 @@
 
 
   <draw_ops name="button_close_unfocused">
-		<!-- hilight -->
-		<line color="CTitleUnfocusedHilight" x1="(width-(width)%3)/3" y1="(height-height%3)/3+2" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)" />
-		<line color="CTitleUnfocusedHilight" x1="(width-(width)%3)/3+1" y1="(height-height%3)/3+2" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)-1" />
-		<line color="CTitleUnfocusedHilight" x1="(width-(width)%3)/3" y1="(height-height%3)/3+3" x2="width-((width-(width)%3)/3)-3" y2="height-((height-height%3)/3)" />
-		<line color="CTitleUnfocusedHilight" x1="width-((width-(width)%3)/3)-2" y1="(height-height%3)/3+2" x2="(width-(width)%3)/3" y2="height-((height-height%3)/3)" />
-		<line color="CTitleUnfocusedHilight" x1="width-((width-(width)%3)/3)-3" y1="(height-height%3)/3+2" x2="(width-(width)%3)/3" y2="height-((height-height%3)/3)-1" />
-		<line color="CTitleUnfocusedHilight" x1="width-((width-(width)%3)/3)-2" y1="(height-height%3)/3+3" x2="(width-(width)%3)/3+1" y2="height-((height-height%3)/3)" />
-
 		<!-- glyph -->
 		<line color="CIconUnfocused_normal" x1="(width-(width)%3)/3" y1="(height-height%3)/3+1" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)-1" />
 		<line color="CIconUnfocused_normal" x1="(width-(width)%3)/3+1" y1="(height-height%3)/3+1" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)-2" />
@@ -566,14 +465,6 @@
   </draw_ops>
 
   <draw_ops name="button_close_unfocused_prelight">
-		<!-- hilight -->
-		<line color="CTitleUnfocusedHilight" x1="(width-(width)%3)/3" y1="(height-height%3)/3+2" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)" />
-		<line color="CTitleUnfocusedHilight" x1="(width-(width)%3)/3+1" y1="(height-height%3)/3+2" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)-1" />
-		<line color="CTitleUnfocusedHilight" x1="(width-(width)%3)/3" y1="(height-height%3)/3+3" x2="width-((width-(width)%3)/3)-3" y2="height-((height-height%3)/3)" />
-		<line color="CTitleUnfocusedHilight" x1="width-((width-(width)%3)/3)-2" y1="(height-height%3)/3+2" x2="(width-(width)%3)/3" y2="height-((height-height%3)/3)" />
-		<line color="CTitleUnfocusedHilight" x1="width-((width-(width)%3)/3)-3" y1="(height-height%3)/3+2" x2="(width-(width)%3)/3" y2="height-((height-height%3)/3)-1" />
-		<line color="CTitleUnfocusedHilight" x1="width-((width-(width)%3)/3)-2" y1="(height-height%3)/3+3" x2="(width-(width)%3)/3+1" y2="height-((height-height%3)/3)" />
-
 		<!-- glyph -->
 		<line color="CIconUnfocused_prelight" x1="(width-(width)%3)/3" y1="(height-height%3)/3+1" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)-1" />
 		<line color="CIconUnfocused_prelight" x1="(width-(width)%3)/3+1" y1="(height-height%3)/3+1" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)-2" />
@@ -584,14 +475,6 @@
   </draw_ops>
 
   <draw_ops name="button_close_unfocused_pressed">
-		<!-- hilight -->
-		<line color="CTitleUnfocusedHilight" x1="(width-(width)%3)/3" y1="(height-height%3)/3+2" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)" />
-		<line color="CTitleUnfocusedHilight" x1="(width-(width)%3)/3+1" y1="(height-height%3)/3+2" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)-1" />
-		<line color="CTitleUnfocusedHilight" x1="(width-(width)%3)/3" y1="(height-height%3)/3+3" x2="width-((width-(width)%3)/3)-3" y2="height-((height-height%3)/3)" />
-		<line color="CTitleUnfocusedHilight" x1="width-((width-(width)%3)/3)-2" y1="(height-height%3)/3+2" x2="(width-(width)%3)/3" y2="height-((height-height%3)/3)" />
-		<line color="CTitleUnfocusedHilight" x1="width-((width-(width)%3)/3)-3" y1="(height-height%3)/3+2" x2="(width-(width)%3)/3" y2="height-((height-height%3)/3)-1" />
-		<line color="CTitleUnfocusedHilight" x1="width-((width-(width)%3)/3)-2" y1="(height-height%3)/3+3" x2="(width-(width)%3)/3+1" y2="height-((height-height%3)/3)" />
-
 		<!-- glyph -->
 		<line color="CIconUnfocused_pressed" x1="(width-(width)%3)/3" y1="(height-height%3)/3+1" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)-1" />
 		<line color="CIconUnfocused_pressed" x1="(width-(width)%3)/3+1" y1="(height-height%3)/3+1" x2="width-((width-(width)%3)/3)-2" y2="height-((height-height%3)/3)-2" />
@@ -611,38 +494,29 @@
 		-->
 
 		<!-- shadow -->
-		<rectangle color="blend/gtk:bg[NORMAL]/#000000/0.4" x="(width-width%3)/3+2" y="(height-height%3)/3+1" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
-		<rectangle color="blend/gtk:bg[NORMAL]/#000000/0.4" x="(width-width%3)/3+3" y="(height-height%3)/3+2" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
+		<rectangle color="blend/gtk:bg[NORMAL]/#000000/0.4" x="(width-width%3)/3+1" y="(height-height%3)/3+1" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
+		<rectangle color="blend/gtk:bg[NORMAL]/#000000/0.4" x="(width-width%3)/3+2" y="(height-height%3)/3+2" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
 		<!-- glyph -->
-		<rectangle color="CIconFocused_normal" x="(width-width%3)/3+2" y="(height-height%3)/3" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
-		<rectangle color="CIconFocused_normal" x="(width-width%3)/3+3" y="(height-height%3)/3+1" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
+		<rectangle color="CIconFocused_normal" x="(width-width%3)/3+1" y="(height-height%3)/3" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
+		<rectangle color="CIconFocused_normal" x="(width-width%3)/3+2" y="(height-height%3)/3+1" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
 	</draw_ops>
 
   <draw_ops name="button_maximize_unfocused">
-		<!-- hilight -->
-		<rectangle color="CTitleUnfocusedHilight" x="(width-width%3)/3+1+1" y="(height-height%3)/3+2" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
-		<rectangle color="CTitleUnfocusedHilight" x="(width-width%3)/3+2+1" y="(height-height%3)/3+3" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
 		<!-- glyph -->
-		<rectangle color="CIconUnfocused_normal" x="(width-width%3)/3+1+1" y="(height-height%3)/3+1" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
-		<rectangle color="CIconUnfocused_normal" x="(width-width%3)/3+2+1" y="(height-height%3)/3+2" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
+		<rectangle color="CIconUnfocused_normal" x="(width-width%3)/3+1" y="(height-height%3)/3+1" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
+		<rectangle color="CIconUnfocused_normal" x="(width-width%3)/3+2" y="(height-height%3)/3+2" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
   </draw_ops>
 
   <draw_ops name="button_maximize_unfocused_prelight">
-		<!-- hilight -->
-		<rectangle color="CTitleUnfocusedHilight" x="(width-width%3)/3+1+1" y="(height-height%3)/3+2" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
-		<rectangle color="CTitleUnfocusedHilight" x="(width-width%3)/3+2+1" y="(height-height%3)/3+3" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
 		<!-- glyph -->
-		<rectangle color="CIconUnfocused_prelight" x="(width-width%3)/3+1+1" y="(height-height%3)/3+1" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
-		<rectangle color="CIconUnfocused_prelight" x="(width-width%3)/3+2+1" y="(height-height%3)/3+2" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
+		<rectangle color="CIconUnfocused_prelight" x="(width-width%3)/3+1" y="(height-height%3)/3+1" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
+		<rectangle color="CIconUnfocused_prelight" x="(width-width%3)/3+2" y="(height-height%3)/3+2" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
   </draw_ops>
 
   <draw_ops name="button_maximize_unfocused_pressed">
-		<!-- hilight -->
-		<rectangle color="CTitleUnfocusedHilight" x="(width-width%3)/3+1+1" y="(height-height%3)/3+2" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
-		<rectangle color="CTitleUnfocusedHilight" x="(width-width%3)/3+2+1" y="(height-height%3)/3+3" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
 		<!-- glyph -->
-		<rectangle color="CIconUnfocused_pressed" x="(width-width%3)/3+1+1" y="(height-height%3)/3+1" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
-		<rectangle color="CIconUnfocused_pressed" x="(width-width%3)/3+2+1" y="(height-height%3)/3+2" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
+		<rectangle color="CIconUnfocused_pressed" x="(width-width%3)/3+1" y="(height-height%3)/3+1" width="width-2*((width-width%3)/3)-3" height="height-2*((height-height%3)/3)-3"/>
+		<rectangle color="CIconUnfocused_pressed" x="(width-width%3)/3+2" y="(height-height%3)/3+2" width="width-2*((width-width%3)/3)-5" height="height-2*((height-height%3)/3)-5"/>
   </draw_ops>
 
 
@@ -655,22 +529,16 @@
   </draw_ops>
 
   <draw_ops name="button_minimize_unfocused">
-		<!-- hilight -->
-		<rectangle color="CTitleUnfocusedHilight" x="(width-width%3)/3+3" y="height-((height-height%3)/3+2)+1" width="width-2*((width-width%3)/3)-5" height="1"/>
 		<!-- glyph -->
 		<rectangle color="CIconUnfocused_normal" x="(width-width%3)/3+3" y="height-((height-height%3)/3+2)" width="width-2*((width-width%3)/3)-5" height="1"/>
   </draw_ops>
 
   <draw_ops name="button_minimize_unfocused_prelight">
-		<!-- hilight -->
-		<rectangle color="CTitleUnfocusedHilight" x="(width-width%3)/3+3" y="height-((height-height%3)/3+2)+1" width="width-2*((width-width%3)/3)-5" height="1"/>
 		<!-- glyph -->
 		<rectangle color="CIconUnfocused_prelight" x="(width-width%3)/3+3" y="height-((height-height%3)/3+2)" width="width-2*((width-width%3)/3)-5" height="1"/>
   </draw_ops>
 
   <draw_ops name="button_minimize_unfocused_pressed">
-		<!-- hilight -->
-		<rectangle color="CTitleUnfocusedHilight" x="(width-width%3)/3+3" y="height-((height-height%3)/3+2)+1" width="width-2*((width-width%3)/3)-5" height="1"/>
 		<!-- glyph -->
 		<rectangle color="CIconUnfocused_pressed" x="(width-width%3)/3+3" y="height-((height-height%3)/3+2)" width="width-2*((width-width%3)/3)-5" height="1"/>
   </draw_ops>
@@ -682,7 +550,6 @@
      <piece position="titlebar" draw_ops="titlebar_normal_focused"/>
      <piece position="title" draw_ops="title_all"/>
 
-<!--     <button function="left_middle_background" state="normal" draw_ops="background_button"/> -->
 	<button function="right_middle_background" state="normal" draw_ops="button_bg_focused"/>
 	<button function="right_middle_background" state="prelight" draw_ops="button_bg_prelight"/>
 	<button function="right_middle_background" state="pressed" draw_ops="button_bg_pressed"/>
