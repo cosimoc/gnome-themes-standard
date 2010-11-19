@@ -58,7 +58,9 @@
 		<border name="button_border" left="0" right="0" top="0" bottom="2"/>
 	</frame_geometry>
 
-  <frame_geometry name="utility" title_scale="medium" parent="normal">
+  <frame_geometry name="utility" title_scale="small" parent="normal" rounded_top_left="false" rounded_top_right="false">
+		<border name="title_border" left="10" right="10" top="0" bottom="4"/>
+		<border name="button_border" left="0" right="0" top="1" bottom="0"/>
   </frame_geometry>
 
   <frame_geometry name="dialog" title_scale="medium" parent="normal" hide_buttons="true">
@@ -104,6 +106,19 @@
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.06"/>
 		</gradient>
 		<gradient type="vertical" x="width-2" y="5" width="1" height="height-5">		
+			<color value="CTitleFocusedHilight"/>
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.06"/>
+		</gradient>
+	</draw_ops>
+
+	<draw_ops name="bg_titlebar_utility_focused">
+		<include name="bg_titlebar_maximized"/>
+		<line color="CTitleFocusedHilight" x1="1" y1="1" x2="width-2" y2="1" />
+		<gradient type="vertical" x="1" y="1" width="1" height="height-1">		
+			<color value="CTitleFocusedHilight"/>
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.06"/>
+		</gradient>
+		<gradient type="vertical" x="width-2" y="1" width="1" height="height-1">		
 			<color value="CTitleFocusedHilight"/>
 			<color value="blend/gtk:bg[NORMAL]/#000000/0.06"/>
 		</gradient>
@@ -202,14 +217,29 @@
      <include name="lines_border_unfocused"/>
   </draw_ops>
 
+  <!--utility focused windows-->
+  <draw_ops name="titlebar_utility_focused">
+     <include name="bg_titlebar_utility_focused"/>
+  </draw_ops>
+
+  <!--utility unfocused windows-->
+  <draw_ops name="titlebar_utility_unfocused">
+     <include name="bg_titlebar_unfocused_maximized"/>
+     <include name="lines_border_unfocused"/>
+  </draw_ops>
+
+  <!--attached modal dialog focused window-->
   <draw_ops name="attached_focused">
+     <rectangle color="blend/gtk:bg[NORMAL]/#ffffff/0.5" x="0" y="0" width="width" height="height" filled="true"/>
      <gradient type="vertical" x="0" y="0" width="width" height="14">
 	<color value="blend/gtk:bg[NORMAL]/#ffffff/0.8"/>
 	<color value="blend/gtk:bg[NORMAL]/#ffffff/0.5" />
      </gradient>
-	<rectangle color="CBorderFocused" x="0" y="0" width="width-1" height="height-1" filled="false"/>
+     <rectangle color="CBorderFocused" x="0" y="0" width="width-1" height="height-1" filled="false"/>
   </draw_ops>
 
+
+  <!--attached modal dialog unfocused window-->
   <draw_ops name="attached_unfocused">
     <rectangle color="blend/gtk:bg[NORMAL]/#ffffff/0.5" x="0" y="0" width="width" height="height" filled="true"/>
     <rectangle color="CBorderUnfocused" x="0" y="0" width="width-1" height="height-1" filled="false"/>
@@ -431,6 +461,45 @@
 		<include name="rounded_outer_border_right" />
 	</draw_ops>
 
+	<draw_ops name="button_bg_focused_single_right_utility">
+		<include name="button_bg_focused_clipped" />
+		<include name="right_left_button_rounded_corner" />
+		<line x1="width-1" y1="0" x2="width-1" y2="height" color="CBorderFocused" />
+		<line x1="2" y1="0" x2="width-3" y2="0" color="blend/gtk:bg[NORMAL]/#ffffff/0.1"/>
+		<gradient type="vertical" x="width-2" y="1" width="1" height="height-6">		
+			<color value="blend/gtk:bg[NORMAL]/#ffffff/0.1"/>
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.15"/>
+		</gradient>
+		<gradient type="horizontal" x="4" y="height-3" width="width-5" height="1">		
+			<color value="CButtonHilight" />
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.03"/>
+		</gradient>
+	</draw_ops>
+
+	<draw_ops name="button_bg_prelight_single_right_utility">
+		<include name="button_bg_prelight_clipped" />
+		<include name="right_left_button_rounded_corner" />
+		<line x1="width-1" y1="0" x2="width-1" y2="height" color="CBorderFocused" />
+		<line x1="2" y1="0" x2="width-3" y2="0" color="blend/gtk:bg[NORMAL]/#ffffff/0.2"/>
+		<gradient type="vertical" x="width-2" y="1" width="1" height="height-6">		
+			<color value="blend/gtk:bg[NORMAL]/#ffffff/0.2"/>
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.15"/>
+		</gradient>
+		<gradient type="horizontal" x="4" y="height-3" width="width-5" height="1">		
+			<color value="CButtonHilight" />
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.03"/>
+		</gradient>
+	</draw_ops>
+
+	<draw_ops name="button_bg_pressed_single_right_utility">
+		<include name="button_bg_pressed_clipped" />
+		<include name="right_left_button_rounded_corner" />
+		<line x1="width-1" y1="0" x2="width-1" y2="height" color="CBorderFocused" />
+		<gradient type="horizontal" x="4" y="height-3" width="width-5" height="1">		
+			<color value="CButtonHilight" />
+			<color value="blend/gtk:bg[NORMAL]/#000000/0.03"/>
+		</gradient>
+	</draw_ops>
 
   <!-- on unfocused window -->
 
@@ -829,18 +898,20 @@
 </frame_style>
 
 <frame_style name="utility_focused" geometry="utility" parent="normal_focused">
-	<button function="right_right_background" state="normal" draw_ops="button_bg_focused_single_right"/>
-	<button function="right_right_background" state="prelight" draw_ops="button_bg_prelight_single_right"/>
-	<button function="right_right_background" state="pressed" draw_ops="button_bg_pressed_single_right"/>
-	<button function="right_middle_background" state="normal" draw_ops="button_bg_focused_single_right"/>
-	<button function="right_middle_background" state="prelight" draw_ops="button_bg_prelight_single_right"/>
-	<button function="right_middle_background" state="pressed" draw_ops="button_bg_pressed_single_right"/>
+     <piece position="titlebar" draw_ops="titlebar_utility_focused"/>
+	<button function="right_right_background" state="normal" draw_ops="button_bg_focused_single_right_utility"/>
+	<button function="right_right_background" state="prelight" draw_ops="button_bg_prelight_single_right_utility"/>
+	<button function="right_right_background" state="pressed" draw_ops="button_bg_pressed_single_right_utility"/>
+	<button function="right_middle_background" state="normal" draw_ops="button_bg_focused_single_right_utility"/>
+	<button function="right_middle_background" state="prelight" draw_ops="button_bg_prelight_single_right_utility"/>
+	<button function="right_middle_background" state="pressed" draw_ops="button_bg_pressed_single_right_utility"/>
 	<button function="close" state="normal" draw_ops="icon_close_single"/>
 	<button function="close" state="prelight" draw_ops="icon_close_single"/>
 	<button function="close" state="pressed" draw_ops="icon_close_single"/>
 </frame_style>
 
 <frame_style name="utility_unfocused" geometry="utility" parent="normal_unfocused">
+     <piece position="titlebar" draw_ops="titlebar_utility_unfocused"/>
 	<button function="close" state="normal" draw_ops="button_close_unfocused"/>
 	<button function="close" state="prelight" draw_ops="button_close_unfocused_prelight"/>
 	<button function="close" state="pressed" draw_ops="button_close_unfocused_pressed"/>
