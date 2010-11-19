@@ -9,9 +9,11 @@
   </info>
 	<!-- constants -->
 	<!--
+
 		nomenclature:
 		C* -> color
 		D* -> distances
+
 	-->
 	<constant name="CBorderFocused" value="blend/#000000/gtk:bg[NORMAL]/0.6" />
 	<constant name="CBorderUnfocused" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
@@ -43,7 +45,7 @@
 		<distance name="right_titlebar_edge" value="0"/>
 		<distance name="title_vertical_pad" value="10"/>
 		<border name="title_border" left="10" right="10" top="0" bottom="4"/>
-		<border name="button_border" left="0" right="0" top="1" bottom="4"/>
+		<border name="button_border" left="0" right="0" top="1" bottom="1"/>
 		<aspect_ratio name="button" value="1"/>
 	</frame_geometry>
 
@@ -53,7 +55,7 @@
 		<distance name="bottom_height" value="0"/>
 		<distance name="title_vertical_pad" value="10"/>
 		<border name="title_border" left="0" right="0" top="0" bottom="4"/>
-		<border name="button_border" left="0" right="0" top="0" bottom="5"/>
+		<border name="button_border" left="0" right="0" top="0" bottom="2"/>
 	</frame_geometry>
 
   <frame_geometry name="utility" title_scale="medium" parent="normal">
@@ -63,6 +65,9 @@
   </frame_geometry>
 
   <frame_geometry name="border" has_title="false" parent="normal" rounded_top_left="false" rounded_top_right="false">
+  </frame_geometry>
+
+  <frame_geometry name="attached" has_title="false" parent="normal" rounded_top_left="false" rounded_top_right="false">
   </frame_geometry>
 
 
@@ -104,7 +109,6 @@
 		</gradient>
 	</draw_ops>
 
-
   <!-- Window Borders -->
 
   <draw_ops name="lines_border_focused">
@@ -114,7 +118,6 @@
   <draw_ops name="lines_border_unfocused">
     <rectangle color="CBorderUnfocused" x="0" y="0" width="width-1" height="height-1" filled="false"/>
   </draw_ops>
-
 
   <!-- Title -->
 
@@ -193,10 +196,26 @@
      <include name="lines_border_focused"/>
   </draw_ops>
 
+
   <!--border unfocused window-->
   <draw_ops name="border_unfocused">
      <include name="lines_border_unfocused"/>
   </draw_ops>
+
+  <draw_ops name="attached_focused">
+     <gradient type="vertical" x="0" y="0" width="width" height="14">
+	<color value="blend/gtk:bg[NORMAL]/#ffffff/0.8"/>
+	<color value="blend/gtk:bg[NORMAL]/#ffffff/0.5" />
+     </gradient>
+	<rectangle color="CBorderFocused" x="0" y="0" width="width-1" height="height-1" filled="false"/>
+  </draw_ops>
+
+  <draw_ops name="attached_unfocused">
+    <rectangle color="blend/gtk:bg[NORMAL]/#ffffff/0.5" x="0" y="0" width="width" height="height" filled="true"/>
+    <rectangle color="CBorderUnfocused" x="0" y="0" width="width-1" height="height-1" filled="false"/>
+  </draw_ops>
+
+
 
   <!-- button backgounds -->
 
@@ -711,6 +730,59 @@
      <button function="unstick" state="normal"><draw_ops /></button><button function="unstick" state="pressed"><draw_ops /></button>
 </frame_style>
 
+  <frame_style name="attached_focused" geometry="attached">
+     <piece position="entire_background" draw_ops="attached_focused"/>
+
+	<button function="right_middle_background" state="normal" draw_ops="button_bg_focused"/>
+	<button function="right_middle_background" state="prelight" draw_ops="button_bg_prelight"/>
+	<button function="right_middle_background" state="pressed" draw_ops="button_bg_pressed"/>
+	<button function="right_right_background" state="normal" draw_ops="button_bg_focused_outer_right"/>
+	<button function="right_right_background" state="prelight" draw_ops="button_bg_prelight_outer_right"/>
+	<button function="right_right_background" state="pressed" draw_ops="button_bg_pressed_outer_right"/>
+	<button function="right_left_background" state="normal" draw_ops="button_bg_focused_inner_right"/>
+	<button function="right_left_background" state="prelight" draw_ops="button_bg_prelight_inner_right"/>
+	<button function="right_left_background" state="pressed" draw_ops="button_bg_pressed_inner_right"/>
+
+     <button function="close" state="normal" draw_ops="icon_close"/>
+     <button function="close" state="prelight" draw_ops="icon_close"/>
+     <button function="close" state="pressed" draw_ops="icon_close"/>
+     <button function="maximize" state="normal" draw_ops="icon_maximize"/>
+     <button function="maximize" state="prelight" draw_ops="icon_maximize"/>
+     <button function="maximize" state="pressed" draw_ops="icon_maximize"/>
+     <button function="minimize" state="normal" draw_ops="icon_minimize"/>
+     <button function="minimize" state="prelight" draw_ops="icon_minimize"/>
+     <button function="minimize" state="pressed" draw_ops="icon_minimize"/>
+     <button function="menu" state="normal"><draw_ops /></button><button function="menu" state="pressed"><draw_ops /></button>
+     <button function="shade" state="normal"><draw_ops /></button><button function="shade" state="pressed"><draw_ops /></button>
+     <button function="unshade" state="normal"><draw_ops /></button><button function="unshade" state="pressed"><draw_ops /></button>
+     <button function="above" state="normal"><draw_ops /></button><button function="above" state="pressed"><draw_ops /></button>
+     <button function="unabove" state="normal"><draw_ops /></button><button function="unabove" state="pressed"><draw_ops /></button>
+     <button function="stick" state="normal"><draw_ops /></button><button function="stick" state="pressed"><draw_ops /></button>
+     <button function="unstick" state="normal"><draw_ops /></button><button function="unstick" state="pressed"><draw_ops /></button>
+
+  </frame_style>
+
+  <frame_style name="attached_unfocused" geometry="attached">
+     <piece position="entire_background" draw_ops="attached_unfocused"/>
+
+     <button function="close" state="normal" draw_ops="button_close_unfocused"/>
+     <button function="close" state="prelight" draw_ops="button_close_unfocused_prelight"/>
+     <button function="close" state="pressed" draw_ops="button_close_unfocused_pressed"/>
+     <button function="maximize" state="normal" draw_ops="button_maximize_unfocused"/>
+     <button function="maximize" state="prelight" draw_ops="button_maximize_unfocused_prelight"/>
+     <button function="maximize" state="pressed" draw_ops="button_maximize_unfocused_pressed"/>
+     <button function="minimize" state="normal" draw_ops="button_minimize_unfocused"/>
+     <button function="minimize" state="prelight" draw_ops="button_minimize_unfocused_prelight"/>
+     <button function="minimize" state="pressed" draw_ops="button_minimize_unfocused_pressed"/>
+     <button function="menu" state="normal"><draw_ops /></button><button function="menu" state="pressed"><draw_ops /></button>
+     <button function="shade" state="normal"><draw_ops /></button><button function="shade" state="pressed"><draw_ops /></button>
+     <button function="unshade" state="normal"><draw_ops /></button><button function="unshade" state="pressed"><draw_ops /></button>
+     <button function="above" state="normal"><draw_ops /></button><button function="above" state="pressed"><draw_ops /></button>
+     <button function="unabove" state="normal"><draw_ops /></button><button function="unabove" state="pressed"><draw_ops /></button>
+     <button function="stick" state="normal"><draw_ops /></button><button function="stick" state="pressed"><draw_ops /></button>
+     <button function="unstick" state="normal"><draw_ops /></button><button function="unstick" state="pressed"><draw_ops /></button>
+</frame_style>
+
 <frame_style name="utility_focused" geometry="utility" parent="normal_focused">
 	<button function="right_right_background" state="normal" draw_ops="button_bg_focused_single_right"/>
 	<button function="right_right_background" state="prelight" draw_ops="button_bg_prelight_single_right"/>
@@ -825,6 +897,25 @@
 
   </frame_style_set>
 
+  <frame_style_set name="attached">
+     <frame state="normal" resize="none" focus="no" style="attached_unfocused"/>
+     <frame state="normal" resize="none" focus="yes" style="attached_focused"/>
+     <frame state="normal" resize="both" focus="no" style="attached_unfocused"/>
+     <frame state="normal" resize="both" focus="yes" style="attached_focused"/>
+
+     <frame state="shaded" focus="no" style="attached_unfocused"/>
+     <frame state="shaded" focus="yes" style="attached_focused"/>
+
+     <frame state="maximized" focus="no" style="attached_unfocused"/>
+     <frame state="maximized" focus="yes" style="attached_focused"/>
+
+     <frame state="maximized_and_shaded" focus="no" style="attached_unfocused"/>
+     <frame state="maximized_and_shaded" focus="yes" style="attached_focused"/>
+
+  </frame_style_set>
+
+
+
   <!-- window types -->
 
   <window type="normal" style_set="normal"/>
@@ -833,6 +924,7 @@
   <window type="menu" style_set="utility"/>
   <window type="utility" style_set="utility"/>
   <window type="border" style_set="border"/>
+  <window version=">= 3.2" type="attached" style_set="attached"/>
 
   <!-- menu icons -->
 
