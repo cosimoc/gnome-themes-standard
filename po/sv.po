@@ -1,0 +1,30 @@
+# Swedish translation for gnome-themes-standard.
+# Copyright (C) 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-themes-standard package.
+# Daniel Nylander <po@danielnylander.se>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-themes-standard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-21 13:51+0100\n"
+"PO-Revision-Date: 2010-11-21 13:52+0100\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
+msgid "Default Background"
+msgstr "Standardbakgrund"
+
+#: ../themes/Adwaita/index.theme.in.h:1
+msgid "Adwaita"
+msgstr "Adwaita"
+
+#: ../themes/Adwaita/index.theme.in.h:2
+msgid "There is only one"
+msgstr "Det finns bara ett"
+
