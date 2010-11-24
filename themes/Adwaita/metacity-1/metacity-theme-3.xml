@@ -119,16 +119,6 @@
                color="C_title_unfocused"/>
 </draw_ops>
 
-<!--
-<draw_ops name="title_focused">
-	<title color="C_title_focused" x="0" y="(((height - title_height) / 2) `max` 0) +1" />
-</draw_ops>
-
-<draw_ops name="title_unfocused">
-	<title color="C_title_unfocused" x="0" y="(((height - title_height) / 2) `max` 0)" />
-</draw_ops>
--->
-
 	<!-- window decorations -->
 
 <draw_ops name="entire_background_focused">
@@ -518,10 +508,10 @@
 
 <draw_ops name="button_fill"> <!-- button background gradient -->
 	<gradient type="vertical" x="0" y="0" width="width" height="height-2">
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.1" />
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.14" />
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.17" />
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.06" />
+		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.15" />
+		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.21" />
+		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.27" />
+		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.12" />
 	</gradient>
 </draw_ops>
 
@@ -543,10 +533,10 @@
 
 <draw_ops name="button_fill_prelight"> <!-- button background gradient for prelight status -->
 	<gradient type="vertical" x="0" y="0" width="width" height="height-2">
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.05" />
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.07" />
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.09" />
 		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.03" />
+		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.1" />
+		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.2" />
+		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.04" />
 	</gradient>
 </draw_ops>
 
