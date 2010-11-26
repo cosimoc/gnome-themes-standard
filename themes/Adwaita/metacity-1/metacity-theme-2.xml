@@ -79,8 +79,8 @@
 	<distance name="title_vertical_pad" value="1" />
 </frame_geometry>
 
-<frame_geometry name="attached" has_title="false" parent="borderless">
-	<distance name="title_vertical_pad" value="10" />
+<frame_geometry name="modal" title_scale="small" hide_buttons="true" rounded_top_left="false" rounded_top_right="false" parent="small">
+	<distance name="title_vertical_pad" value="5"/>
 </frame_geometry>
 
 <!-- drawing operations -->
@@ -127,6 +127,14 @@
 	</gradient>
 </draw_ops>
 
+<draw_ops name="titlebar_fill_focused_alt2"> <!-- gradient for attached and modal dialogs titlebar-->
+	<gradient type="vertical" x="0" y="0" width="width" height="title_height">
+		<color value="gtk:bg[NORMAL]"/>
+		<color value="blend/gtk:bg[NORMAL]/#ffffff/0.4" />
+		<color value="gtk:bg[NORMAL]" />
+	</gradient>
+</draw_ops>
+
 <draw_ops name="titlebar_fill_unfocused">
 	<rectangle color="C_titlebar_unfocused" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
@@ -157,6 +165,10 @@
 <draw_ops name="titlebar_focused">
 	<include name="titlebar_fill_focused_alt" />
 	<include name="hilight" />
+</draw_ops>
+
+<draw_ops name="titlebar_focused_alt"> <!-- titlebar for attached and modal dialogs -->
+	<include name="titlebar_fill_focused_alt2" />
 </draw_ops>
 
 <draw_ops name="rounded_titlebar_focused">
@@ -1077,11 +1089,11 @@
 	<button function="unstick" state="pressed"><draw_ops></draw_ops></button>
 </frame_style>
 
-<frame_style name="modal_dialog_focused" geometry="nobuttons">
+<frame_style name="modal_dialog_focused" geometry="modal">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="rounded_titlebar_focused_alt" />
+	<piece position="titlebar" draw_ops="titlebar_focused_alt" />
 	<piece position="title" draw_ops="title_focused" />
-	<piece position="overlay" draw_ops="rounded_border_focused" />
+	<piece position="overlay" draw_ops="border_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
 	<button function="maximize" state="normal" draw_ops="maximize_focused" />
@@ -1118,11 +1130,11 @@
 	<button function="unstick" state="normal"><draw_ops></draw_ops></button><button function="unstick" state="pressed"><draw_ops></draw_ops></button>
 </frame_style>
 
-<frame_style name="modal_dialog_unfocused" geometry="nobuttons">
+<frame_style name="modal_dialog_unfocused" geometry="modal">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
 	<piece position="titlebar" draw_ops="titlebar_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />
-	<piece position="overlay" draw_ops="rounded_border_unfocused" />
+	<piece position="overlay" draw_ops="border_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight"/>
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed"/>
@@ -1148,7 +1160,6 @@
 	<button function="unstick" state="normal"><draw_ops></draw_ops></button>
 	<button function="unstick" state="pressed"><draw_ops></draw_ops></button>
 </frame_style>
-
 
 <frame_style name="utility_focused" geometry="small">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
