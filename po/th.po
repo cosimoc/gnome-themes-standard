@@ -1,0 +1,29 @@
+# Thai translation for gnome-themes-standard.
+# Copyright (C) 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-themes-standard package.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-themes-standard master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"themes-standard&component=general\n"
+"POT-Creation-Date: 2010-11-27 13:18+0000\n"
+"PO-Revision-Date: 2010-11-28 17:25+0000\n"
+"Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
+msgid "Default Background"
+msgstr "ภาพพื้นหลังปริยาย"
+
+#: ../themes/Adwaita/index.theme.in.h:1
+msgid "Adwaita"
+msgstr "อัทไวตะ"
+
+#: ../themes/Adwaita/index.theme.in.h:2
+msgid "There is only one"
+msgstr "หนึ่งเดียวเท่านั้น"
