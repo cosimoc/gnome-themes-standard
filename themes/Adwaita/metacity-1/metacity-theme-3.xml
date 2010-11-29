@@ -218,11 +218,11 @@
 <draw_ops name="border_attached_focused">
 	<rectangle color="C_border_focused" x="0" y="0" width="width-1" height="height-1" filled="false" />
 	<line x1="0" y1="0" x2="width" y2="0" color="C_border_attached_focused" />
-	<gradient type="vertical" x="0" y="1" width="1" height="40">
+	<gradient type="vertical" x="0" y="1" width="1" height="7">
 		<color value="C_border_attached_focused" />
 		<color value="C_border_focused" />
 	</gradient>
-	<gradient type="vertical" x="width-1" y="1" width="1" height="40">
+	<gradient type="vertical" x="width-1" y="1" width="1" height="7">
 		<color value="C_border_attached_focused" />
 		<color value="C_border_focused" />
 	</gradient>
