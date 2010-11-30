@@ -171,8 +171,31 @@ GtkScrollbar {
 .button {
     padding: 3;
     -clearlooks-focus-color: mix (@bg_color, @selected_bg_color, 0.5);
-    -clearlooks-focus-fill-color: @selected_bg_color;
-    -clearlooks-focus-fill-alpha: 0.05;
+    -clearlooks-focus-fill-color: alpha (@selected_bg_color, 0.05);
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (shade (@bg_color, 1.06)),
+				     to (shade (@bg_color, 0.95)));
+    border-radius: 3;
+}
+
+.button:prelight:active {
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (shade (@bg_color, 0.86)),
+				     to (shade (@bg_color, 1.09)));
+}
+
+.button:prelight {
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (shade (@bg_color, 1.12)),
+				     to (shade (@bg_color, 1.03)));
+}
+
+.button:insensitive {
+    background-image: none;
+    background-color: @bg_color;
 }
 
 GtkStatusbar {
