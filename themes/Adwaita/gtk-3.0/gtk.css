@@ -147,9 +147,19 @@ GtkScale {
     background-color: @selected_bg_color;
 }
 
+GtkNotebook,
 .notebook {
     background-color: shade (@bg_color, 1.12);
     padding: 3;
+    border-style: solid;
+}
+
+GtkNotebook tab {
+    padding: 0;
+}
+
+GtkNotebook tab:active {
+    background-color: @selected_bg_color;
 }
 
 GtkScrollbar {
