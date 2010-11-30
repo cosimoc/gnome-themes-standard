@@ -334,8 +334,32 @@ GtkSeparator {
     -GtkSeparator-shadow-type: none;
 }
 
-GtkInfobar {
-    background-color: #ffffff;
+GtkViewport,
+GtkTreeView,
+GtkIconView {
+    border-radius: 0;
+}
+
+GtkScrolledWindow {
+    border-style: solid;
+    border-color: darker (@bg_color);
+    border-width: 1;
+    border-radius: 0;
+    padding: 1;
+}
+
+GtkScrollbar {
+    border-radius: 3;
+}
+
+.trough:active,
+.slider:prelight,
+.slider {
+    background-color: lighter (@bg_color);
+}
+
+.cell {
+    border-width: 0;
 }
 
 /* Custom colors for some applications' widgets */
