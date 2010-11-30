@@ -84,7 +84,7 @@
 
     /* Style */
     background-color: @bg_color;
-    foreground-color: @fg_color;
+    color: @fg_color;
     border-radius: 3;
 
     /* Engine settings */
@@ -138,7 +138,7 @@ GtkScale {
 
 .cell {
     background-color: @base_color;
-    foreground-color: @text_color;
+    color: @text_color;
 }
 
 .cell:selected {
