@@ -75,6 +75,7 @@
     -NautilusIconContainer-selection-highlight-alpha: 0x00;
 
     -GtkEntry-inner-border: 3;
+    -GtkButton-inner-border: 3;
     -GtkEntry-progress-border: 0;
 
     -GtkNotebook-tab-overlay: 10;
@@ -88,6 +89,7 @@
     border-radius: 3;
 
     /* Engine settings */
+    -clearlooks-focus-color: mix (@bg_color, @selected_bg_color, 0.5);
     -clearlooks-colorize-scrollbar: false;
     -clearlooks-style: gnome3;
     -clearlooks-accel-label-shade: 0.5;
