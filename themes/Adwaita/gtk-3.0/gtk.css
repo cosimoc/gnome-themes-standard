@@ -97,6 +97,7 @@
 
 *:hover {
     background-color: shade (@bg_color, 1.02);
+    color: @fg_color;
 }
 
 *:selected {
@@ -116,6 +117,7 @@
 .entry {
     padding: 2;
     background-color: @base_color;
+    color: @text_color;
 }
 
 .entry:selected {
@@ -280,7 +282,7 @@ GtkRadioButton:selected {
 
 .progressbar {
     padding: 0;
-    radius: 3;
+    border-radius: 3;
 }
 
 column-header {
@@ -307,6 +309,8 @@ column-header {
 				     color-stop (0.98, shade (@bg_color, 1.2)),
 				     to (shade (@bg_color, 1.2)));
     border-radius: 0;
+    border-style: none;
+    padding: 4;
 }
 
 GtkToolbar .button {
