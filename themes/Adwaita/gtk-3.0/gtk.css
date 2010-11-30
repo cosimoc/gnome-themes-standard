@@ -204,16 +204,21 @@ GtkStatusbar {
     -GtkStatusbar-shadow-type: none;
 }
 
-GtkStatusbar * {
-    padding: 50;
-}
-
 .menubar {
-    padding: 0;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (shade (@bg_color, 0.94)),
 				     to (@bg_color));
+    border-style: none;
+    padding: 4;
+
+    -GtkWidget-window-dragging: true;
+}
+
+.menubar *:prelight {
+    background-image: none;
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
 }
 
 .menu {
@@ -222,14 +227,34 @@ GtkStatusbar * {
     border-radius: 0;
     -GtkMenu-vertical-offset: 0;
     -GtkMenu-horizontal-offset: -1;
-}
-
-.menuitem {
     -GtkMenuItem-arrow-scaling: 0.4;
 }
 
-.menuitem:hover {
-    background-color: @selected_fg_color;
+.menu:active,
+.menu:prelight {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+.check,
+.radio,
+.check:active,
+.radio:active,
+.menu .check,
+.menu .radio,
+.menu .check:hover,
+.menu .radio:hover,
+.menu .check:active,
+.menu .radio:active {
+    background-color: @base_color;
+    color: @text_color;
+}
+
+GtkCheckButton:prelight,
+GtkRadioButton:prelight,
+GtkCheckButton:selected,
+GtkRadioButton:selected {
+    background-color: shade (@bg_color, 1.1);
 }
 
 .menu.separator {
