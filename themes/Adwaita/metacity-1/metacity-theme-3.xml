@@ -944,9 +944,11 @@
 	<button function="right_left_background" state="normal" draw_ops="button_inner_right"/>
 	<button function="right_left_background" state="prelight" draw_ops="button_inner_right_prelight"/>
 	<button function="right_left_background" state="pressed" draw_ops="button_inner_right_pressed"/>
-	
+
+	<button version=">= 3.3" function="left_single_background" state="normal" draw_ops="button_inner_left"/>	
 	<button version=">= 3.3" function="left_single_background" state="prelight" draw_ops="button_inner_left_prelight"/>
 	<button version=">= 3.3" function="left_single_background" state="pressed" draw_ops="button_inner_left_pressed"/>
+	<button version=">= 3.3" function="right_single_background" state="normal" draw_ops="button_inner_right"/>
 	<button version=">= 3.3" function="right_single_background" state="prelight" draw_ops="button_inner_right_prelight"/>
 	<button version=">= 3.3" function="right_single_background" state="pressed" draw_ops="button_inner_right_pressed"/>
 
