@@ -13,19 +13,19 @@
 <constant name="C_border_focused" value="blend/#000000/gtk:bg[NORMAL]/0.6" />
 <constant name="C_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
 <constant name="C_border_attached_focused" value="blend/#000000/gtk:bg[NORMAL]/0.2" />
-<constant name="C_titlebar_focused_hilight" value="gtk:text[SELECTED]" />
-<constant name="C_titlebar_unfocused" value="blend/#ffffff/gtk:bg[NORMAL]/0.4" />
+<constant name="C_titlebar_focused_hilight" value="gtk:base[NORMAL]" />
+<constant name="C_titlebar_unfocused" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.4" />
 <constant name="C_title_focused" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.1" />
-<constant name="C_title_focused_hilight" value="gtk:text[SELECTED]" />
+<constant name="C_title_focused_hilight" value="gtk:base[NORMAL]" />
 <constant name="C_title_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.9" />
 <!-- color of the button icons -->
 <constant name="C_icons_focused" value="gtk:text[SELECTED]" />
-<constant name="C_icons_focused_pressed" value="gtk:text[SELECTED]" />
+<constant name="C_icons_focused_pressed" value="#ffffff" />
 <constant name="C_icons_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.9" />
 <constant name="C_icons_unfocused_prelight" value="gtk:bg[NORMAL]" />
 <constant name="C_icons_unfocused_pressed" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
 <constant name="D_icons_unfocused_offset" value="2" /> <!-- offset of the unfocused icons -->
-<constant name="D_icons_shrink" value="0" /> <!-- increasing this value makes the icons in buttons smaller -->
+<constant name="D_icons_shrink" value="1" /> <!-- increasing this value makes the icons in buttons smaller -->
 <constant name="D_icons_grow" value="0" /> <!-- increasing this value makes the icons in buttons bigger -->
 <!-- geometries -->
 
@@ -35,13 +35,13 @@
 	<distance name="bottom_height" value="2" />
 	<distance name="left_titlebar_edge" value="0"/>
 	<distance name="right_titlebar_edge" value="0"/>
-	<distance name="title_vertical_pad" value="11"/>
+	<distance name="title_vertical_pad" value="13"/>
 	<border name="title_border" left="10" right="10" top="1" bottom="1"/>
 	<border name="button_border" left="0" right="0" top="1" bottom="3"/>
 	<aspect_ratio name="button" value="1"/>
 </frame_geometry>
 
-<frame_geometry name="normal_unfocused" title_scale="medium" parent="normal">
+<frame_geometry name="normal_unfocused" title_scale="medium" rounded_top_left="4" rounded_top_right="4" parent="normal">
 	<distance name="left_titlebar_edge" value="1"/>
 	<distance name="right_titlebar_edge" value="1"/>
 </frame_geometry>
@@ -51,7 +51,7 @@
 	<distance name="right_width" value="0" />
 	<distance name="left_titlebar_edge" value="0"/>
 	<distance name="right_titlebar_edge" value="0"/>
-	<distance name="title_vertical_pad" value="10"/>
+	<distance name="title_vertical_pad" value="12"/>
 	<border name="title_border" left="10" right="10" top="1" bottom="1"/>
 	<border name="button_border" left="0" right="0" top="0" bottom="3"/>
 	<distance name="bottom_height" value="0" />
@@ -137,7 +137,7 @@
 
 <draw_ops name="titlebar_fill_focused">
 	<gradient type="vertical" x="0" y="0" width="width" height="height">
-		<color value="blend/gtk:bg[NORMAL]/#ffffff/0.4" />
+		<color value="blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.4" />
 		<color value="gtk:bg[NORMAL]"/>
 		<color value="blend/gtk:bg[NORMAL]/#000000/0.03" />
 		<color value="blend/gtk:bg[NORMAL]/#000000/0.06" />
@@ -146,7 +146,7 @@
 
 <draw_ops name="titlebar_fill_focused_alt">
 	<gradient type="vertical" x="0" y="0" width="width" height="height">
-		<color value="blend/gtk:bg[NORMAL]/#ffffff/0.4" />
+		<color value="blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.4" />
 		<color value="gtk:bg[NORMAL]"/>
 		<color value="blend/gtk:bg[NORMAL]/#000000/0.03" />
 		<color value="gtk:bg[NORMAL]"/>
@@ -156,7 +156,7 @@
 <draw_ops name="titlebar_fill_focused_alt2"> <!-- gradient for attached and modal dialogs titlebar-->
 	<gradient type="vertical" x="0" y="0" width="width" height="title_height">
 		<color value="gtk:bg[NORMAL]"/>
-		<color value="blend/gtk:bg[NORMAL]/#ffffff/0.4" />
+		<color value="blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.4" />
 		<color value="gtk:bg[NORMAL]" />
 	</gradient>
 </draw_ops>
@@ -189,11 +189,16 @@
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
+	<include name="titlebar_fill_focused" />
+	<include name="hilight" />
+</draw_ops>
+
+<draw_ops name="titlebar_focused_alt">
 	<include name="titlebar_fill_focused_alt" />
 	<include name="hilight" />
 </draw_ops>
 
-<draw_ops name="titlebar_focused_alt"> <!-- titlebar for attached and modal dialogs -->
+<draw_ops name="titlebar_focused_alt2"> <!-- titlebar for attached and modal dialogs -->
 	<include name="titlebar_fill_focused_alt2" />
 </draw_ops>
 
@@ -649,7 +654,7 @@
 	<!-- button backgrounds -->
 
 <constant name="C_button_border" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
-<constant name="C_button_hilight" value="blend/#ffffff/gtk:bg[NORMAL]/0.6" />
+<constant name="C_button_hilight" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.6" />
 
 <draw_ops name="button_fill"> <!-- button background gradient -->
 	<gradient type="vertical" x="0" y="0" width="width" height="height-2">
@@ -667,7 +672,7 @@
 
 <draw_ops name="button_bevel">
 	<gradient type="vertical" x="0" y="0" width="1" height="height-2">
-		<color value="blend/gtk:bg[NORMAL]/#ffffff/0.1"/>
+		<color value="blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.1"/>
 		<color value="blend/gtk:bg[NORMAL]/#000000/0.1"/>
 	</gradient>
 	<gradient type="vertical" x="width-1" y="0" width="1" height="height-2">
@@ -1157,7 +1162,7 @@
 
 <frame_style name="modal_dialog_focused" geometry="modal">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_focused_alt" />
+	<piece position="titlebar" draw_ops="titlebar_focused_alt2" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="border_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -1236,7 +1241,7 @@
 
 <frame_style name="utility_focused" geometry="small">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_focused" />
+	<piece position="titlebar" draw_ops="titlebar_focused_alt" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="border_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -1368,7 +1373,7 @@
 
 <frame_style name="attached_focused" geometry="attached">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_focused_alt" />
+	<piece position="titlebar" draw_ops="titlebar_focused_alt2" />
 	<piece position="overlay" draw_ops="border_attached_focused" />
 	<button function="close" state="normal"><draw_ops></draw_ops></button>
 	<button function="close" state="pressed"><draw_ops></draw_ops></button>
@@ -1457,8 +1462,8 @@
 <frame_style_set name="dialog_style_set">
 	<frame focus="yes" state="normal" resize="both" style="dialog_focused"/>
 	<frame focus="no" state="normal" resize="both" style="dialog_unfocused"/>
-	<frame focus="yes" state="maximized" style="normal_max_focused"/>
-	<frame focus="no" state="maximized" style="normal_max_unfocused"/>
+	<frame focus="yes" state="maximized" style="blank"/>
+	<frame focus="no" state="maximized" style="blank"/>
 	<frame focus="yes" state="shaded" style="blank"/>
 	<frame focus="no" state="shaded" style="blank"/>
 	<frame focus="yes" state="maximized_and_shaded" style="blank"/>
@@ -1468,8 +1473,8 @@
 <frame_style_set name="modal_dialog_style_set">
 	<frame focus="yes" state="normal" resize="both" style="modal_dialog_focused"/>
 	<frame focus="no" state="normal" resize="both" style="modal_dialog_unfocused"/>
-	<frame focus="yes" state="maximized" style="normal_max_focused"/>
-	<frame focus="no" state="maximized" style="normal_max_unfocused"/>
+	<frame focus="yes" state="maximized" style="blank"/>
+	<frame focus="no" state="maximized" style="blank"/>
 	<frame focus="yes" state="shaded" style="blank"/>
 	<frame focus="no" state="shaded" style="blank"/>
 	<frame focus="yes" state="maximized_and_shaded" style="blank"/>
@@ -1479,8 +1484,8 @@
 <frame_style_set name="utility_style_set">
 	<frame focus="yes" state="normal" resize="both" style="utility_focused"/>
 	<frame focus="no" state="normal" resize="both" style="utility_unfocused"/>
-	<frame focus="yes" state="maximized" style="normal_max_focused"/>
-	<frame focus="no" state="maximized" style="normal_max_unfocused"/>
+	<frame focus="yes" state="maximized" style="blank"/>
+	<frame focus="no" state="maximized" style="blank"/>
 	<frame focus="yes" state="shaded" style="blank"/>
 	<frame focus="no" state="shaded" style="blank"/>
 	<frame focus="yes" state="maximized_and_shaded" style="blank"/>
@@ -1490,8 +1495,8 @@
 <frame_style_set name="border_style_set">
 	<frame focus="yes" state="normal" resize="both" style="border_focused"/>
 	<frame focus="no" state="normal" resize="both" style="border_unfocused"/>
-	<frame focus="yes" state="maximized" style="normal_max_focused"/>
-	<frame focus="no" state="maximized" style="normal_max_unfocused"/>
+	<frame focus="yes" state="maximized" style="blank"/>
+	<frame focus="no" state="maximized" style="blank"/>
 	<frame focus="yes" state="shaded" style="blank"/>
 	<frame focus="no" state="shaded" style="blank"/>
 	<frame focus="yes" state="maximized_and_shaded" style="blank"/>
