@@ -182,24 +182,31 @@ GtkNotebook tab:active {
 }
 
 GtkScrollbar {
-    padding: 2;
+    padding: 2; /* doesn't seem to do much */
 }
-	GtkScrollbar .trough { 
-		background-color: red;
-		color: orange;
+	GtkScrollbar.trough:active {  /* having to use active is a bug */
+		background-color: darker (@bg_color);
 	}
 
-	GtkScrollbar .slider { 
-		background-color: green;
-		color: orange;
+	GtkScrollbar.slider { 
+		background-color: lighter (@bg_color);
+		border-width: 1;
+		border-color: @frame_color;
+		border-radius: 3;
+		margin: 1 0; /* this is sadly just a wet dream 
+				- avoid bumping into the buttons on top and bottom 
+				- granted, this would have to be applien on verticals only */
 	}
 
-		GtkScrollbar .slider:prelight {
-			background-color: red;
-			color: green;
+		GtkScrollbar.slider:prelight {
+			background-color: lighter (@bg_color);
+			border-color: darker (@frame_color);
+		}
+		GtkScrollbar.slider:active { /* no workie */
+			border-color: @selected_bg_color;
 		}
 /*
-	--FUTURE:
+	-- No controls over the arrow buttons
 	GtkScrollbar:vertical button:first-child {} //top button styling 
 */
 
