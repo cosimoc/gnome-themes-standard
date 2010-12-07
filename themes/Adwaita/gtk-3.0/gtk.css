@@ -93,6 +93,7 @@
     -clearlooks-colorize-scrollbar: false;
     -clearlooks-style: gnome3;
     -clearlooks-accel-label-shade: 0.5;
+
 }
 
 *:hover {
@@ -112,6 +113,18 @@
 
 *:active {
     background-color: shade (@bg_color, 0.915);
+}
+
+.background {
+    /* I like this huge gradient, but probably it would be better
+    to have a fixed height gradient, not sure.*/
+    /*background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (shade (@bg_color, 0.94)),
+				     to (@bg_color)); */
+    border-style: none;
+    border-width: 0;
+    border-radius: 0;
 }
 
 .entry {
@@ -154,10 +167,12 @@ GtkNotebook,
     background-color: shade (@bg_color, 1.12);
     padding: 3;
     border-style: solid;
+    border-radius: 0;
 }
 
 GtkNotebook tab {
     padding: 0;
+    border-radius: 2;
 }
 
 GtkNotebook tab:active {
@@ -209,10 +224,12 @@ GtkStatusbar {
 .menubar {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
-				     from (shade (@bg_color, 0.94)),
-				     to (@bg_color));
+				     from (@bg_color),
+				     color-stop (0.45, shade (@bg_color, 0.97)),
+				     to (shade (@bg_color, 0,99));
     border-style: none;
     padding: 4;
+    border-width: 0;
 
     -GtkWidget-window-dragging: true;
 }
@@ -311,6 +328,7 @@ column-header {
     border-radius: 0;
     border-style: none;
     padding: 4;
+    border-width: 0;
 }
 
 GtkToolbar .button {
@@ -323,9 +341,14 @@ GtkToolbar .button {
 				     color-stop (0.3, alpha (shade (@bg_color, 0.9), 0.0)),
 				     color-stop (0.6, alpha (shade (@bg_color, 0.9), 0.0)),
 				     to (alpha (shade (@bg_color, 0.85), 0.0)));
+    -GtkWidget-focus-line-width: 0;
 }
 
-GtkToolbar .button:hover {
+/* GtkToolbar .button:focused {
+    background-color: red;
+} this pseudo-class doesn't work */ 
+
+GtkToolbar .button:hover { /* needs correct colors */
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (shade (@bg_color, 0.75)),
@@ -333,6 +356,18 @@ GtkToolbar .button:hover {
 				     color-stop (0.6, shade (@bg_color, 0.9)),
 				     to (shade (@bg_color, 0.85)));
 }
+
+GtkToolbar .button:active, GtkToolbar .button:active:prelight { /* needs correct colors */
+    border-style: none;
+    border-width: 0;
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (shade (@bg_color, 0.75)),
+				     color-stop (0.3, shade (@bg_color, 0.9)),
+				     color-stop (0.6, shade (@bg_color, 0.9)),
+				     to (shade (@bg_color, 0.85)));
+}
+
 
 GtkSeparator {
     -GtkSeparator-shadow-type: none;
