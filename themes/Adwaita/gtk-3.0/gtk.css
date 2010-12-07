@@ -15,8 +15,10 @@
 @define-color success_color #4e9a06;
 
 * {
-    font: Droid Sans;
-    engine: clearlooks;
+    font: Cantarell;
+    /* engine: clearlooks; -- let's only resort to clearlooks for special types of 
+       sophisticated widgets like checkboxes, tabs etc.
+       and do the basic gradient drawing and strokes in here. */
     padding: 1;
 
     /* Style properties */
@@ -181,9 +183,25 @@ GtkNotebook tab:active {
 
 GtkScrollbar {
     padding: 2;
-    background-color: @base_color;
-    color: mix (@bg_color, @fg_color, 0.6);
 }
+	GtkScrollbar .trough { 
+		background-color: red;
+		color: orange;
+	}
+
+	GtkScrollbar .slider { 
+		background-color: green;
+		color: orange;
+	}
+
+		GtkScrollbar .slider:prelight {
+			background-color: red;
+			color: green;
+		}
+/*
+	--FUTURE:
+	GtkScrollbar:vertical button:first-child {} //top button styling 
+*/
 
 .button {
     padding: 3;
@@ -385,16 +403,6 @@ GtkScrolledWindow {
     border-width: 1;
     border-radius: 0;
     padding: 1;
-}
-
-GtkScrollbar {
-    border-radius: 3;
-}
-
-.trough:active,
-.slider:prelight,
-.slider {
-    background-color: lighter (@bg_color);
 }
 
 .cell {
