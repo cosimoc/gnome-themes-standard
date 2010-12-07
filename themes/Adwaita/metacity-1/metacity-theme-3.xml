@@ -146,9 +146,9 @@
 
 <draw_ops name="titlebar_fill_focused_alt">
 	<gradient type="vertical" x="0" y="0" width="width" height="height">
-		<color value="blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.4" />
-		<color value="gtk:bg[NORMAL]"/>
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.03" />
+		<color value="blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.6" />
+		<!-- <color value="gtk:bg[NORMAL]"/> -->
+		<!-- <color value="blend/gtk:bg[NORMAL]/#000000/0.03" /> -->
 		<color value="gtk:bg[NORMAL]"/>
 	</gradient>
 </draw_ops>
@@ -189,7 +189,7 @@
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
-	<include name="titlebar_fill_focused" />
+	<include name="titlebar_fill_focused_alt" />
 	<include name="hilight" />
 </draw_ops>
 
@@ -203,7 +203,7 @@
 </draw_ops>
 
 <draw_ops name="rounded_titlebar_focused">
-	<include name="titlebar_fill_focused" />
+	<include name="titlebar_fill_focused_alt" />
 	<include name="rounded_hilight" />
 </draw_ops>
 
