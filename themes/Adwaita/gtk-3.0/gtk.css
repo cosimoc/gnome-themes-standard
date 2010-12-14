@@ -157,16 +157,12 @@ GtkScale {
     border-style: none;
     border-width: 0;
   }
-    .frame .header { /* not at all working */
-      color: red;
-    }  
 
-/* ??? 
-    .frame GtlLabel.header {
+    .frame GtkLabel.header {
         color: lighter (@fg_color);
         font-weight: bold;
     }
-*/
+
   .cell {
       background-color: @base_color;
       color: @text_color;
