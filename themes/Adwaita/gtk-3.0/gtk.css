@@ -170,11 +170,12 @@ GtkNotebook,
     padding: 3;
     border-style: solid;
     border-radius: 0;
+    /* engine: clearlooks; currently breaks */
 }
 
 GtkNotebook tab {
     padding: 0;
-    border-radius: 2;
+    border-radius: 2;  
 }
 
 GtkNotebook tab:active {
@@ -211,6 +212,7 @@ GtkScrollbar {
 */
 
 .button {
+    engine: clearlooks; /* for focus rings */
     padding: 3;
     -clearlooks-focus-color: mix (@bg_color, @selected_bg_color, 0.5);
     -clearlooks-focus-fill-color: alpha (@selected_bg_color, 0.05);
@@ -221,24 +223,24 @@ GtkScrollbar {
     border-radius: 3;
 }
 
-.button:prelight:active {
-    background-image: -gtk-gradient (linear,
-				     left top, left bottom,
-				     from (shade (@bg_color, 0.86)),
-				     to (shade (@bg_color, 1.09)));
-}
+  .button:prelight:active {
+      background-image: -gtk-gradient (linear,
+				       left top, left bottom,
+				       from (shade (@bg_color, 0.86)),
+				       to (shade (@bg_color, 1.09)));
+  }
 
-.button:prelight {
-    background-image: -gtk-gradient (linear,
-				     left top, left bottom,
-				     from (shade (@bg_color, 1.12)),
-				     to (shade (@bg_color, 1.03)));
-}
+  .button:prelight {
+      background-image: -gtk-gradient (linear,
+				       left top, left bottom,
+				       from (shade (@bg_color, 1.12)),
+				       to (shade (@bg_color, 1.03)));
+  }
 
-.button:insensitive {
-    background-image: none;
-    background-color: @bg_color;
-}
+  .button:insensitive {
+      background-image: none;
+      background-color: @bg_color;
+  }
 
 GtkStatusbar {
     padding: 5;
