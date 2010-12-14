@@ -208,7 +208,12 @@ GtkScrollbar {
   -GtkScrollbar-min-slider-length: 30; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 }
 	GtkScrollbar.trough {  /* having to use active is a bug */
-		background-color: darker (@bg_color);
+		background-color: shade (@bg_color, 0.9);
+		border-width: 0;
+    /* non uniform borders don't work
+    border: 1px solid @frame_color;
+    border-left: 1px solid shade (@bg_color, 0.9);
+    */
 	}
 
 	GtkScrollbar.slider, GtkScrollbar.button { 
@@ -225,8 +230,6 @@ GtkScrollbar {
 		GtkScrollbar.slider:active { /* no workie */
 			border-color: @selected_bg_color;
 		}
-		
-		GtkScrollbar.button { color: blue; background-color: red; }
 		
 /* Buttons */
 
@@ -278,7 +281,7 @@ GtkStatusbar {
     padding: 4;
     border-width: 0;
 
-    -GtkWidget-window-dragging: true;
+    -GtkWidget-window-dragging: true; /* doesn't work */
 }
 
 .menubar *:prelight {
