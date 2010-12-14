@@ -77,9 +77,6 @@
     -GtkButton-inner-border: 3;
     -GtkEntry-progress-border: 0;
 
-    -GtkNotebook-tab-overlay: 10;
-    -GtkNotebook-tab-curvature: 5;
-
     -GtkSeparatorToolItem-shadow-type: none;
 
     /* Style */
@@ -126,40 +123,46 @@
     border-radius: 0;
 }
 
+/* Text Entries */
 .entry {
     padding: 2;
     background-color: @base_color;
     color: @text_color;
 }
 
-.entry:selected {
-    background-color: @selected_bg_color;
-    color: @selected_fg_color;
-}
+  .entry:selected {
+      background-color: @selected_bg_color;
+      color: @selected_fg_color;
+  }
 
-.entry:prelight {
-    background-color: shade (@bg_color, 0.95);
-}
+  .entry:prelight {
+      background-color: shade (@bg_color, 0.95);
+  }
 
-.entry:insensitive {
-    background-color: shade (@bg_color, 1.07);
-    color: shade (@bg_color, 0.75);
-}
+  .entry:insensitive {
+      background-color: shade (@bg_color, 1.07);
+      color: shade (@bg_color, 0.75);
+  }
 
 GtkFrame,
 GtkCalendar,
 GtkScale {
     padding: 2;
 }
+  GtkFrame { /* I hate boxes */
+    border: none;
+  }
 
-.cell {
-    background-color: @base_color;
-    color: @text_color;
-}
+  .cell {
+      background-color: @base_color;
+      color: @text_color;
+  }
 
-.cell:selected {
-    background-color: @selected_bg_color;
-}
+  .cell:selected {
+      background-color: @selected_bg_color;
+  }
+
+/* Notebooks/Tabs */
 
 GtkNotebook,
 .notebook {
@@ -167,17 +170,20 @@ GtkNotebook,
     padding: 3;
     border-style: solid;
     border-radius: 0;
-    /* engine: clearlooks; currently breaks */
+    -GtkNotebook-tab-overlay: 10;
+    -GtkNotebook-tab-curvature: 5;
 }
 
-GtkNotebook tab {
-    padding: 0;
-    border-radius: 2;  
-}
+  GtkNotebook tab {
+      padding: 0;
+      border-radius: 2;  
+  }
 
-GtkNotebook tab:active {
-    background-color: @selected_bg_color;
-}
+  GtkNotebook tab:active {
+      background-color: @selected_bg_color;
+  }
+
+/* Scrollbars */
 
 GtkScrollbar {
   padding: 2; /* ??? */
@@ -191,14 +197,11 @@ GtkScrollbar {
 		background-color: darker (@bg_color);
 	}
 
-	GtkScrollbar.slider { 
+	GtkScrollbar.slider, GtkScrollbar.button { 
 		background-color: lighter (@bg_color);
 		border-width: 1;
 		border-color: @frame_color;
 		border-radius: 3;
-		margin: 1 0; /* this is sadly just a wet dream 
-				- avoid bumping into the buttons on top and bottom 
-				- granted, this would have to be applien on verticals only */
 	}
 
 		GtkScrollbar.slider:prelight {
@@ -208,12 +211,13 @@ GtkScrollbar {
 		GtkScrollbar.slider:active { /* no workie */
 			border-color: @selected_bg_color;
 		}
-
-	GtkScrollbar.stepper { /* FIXME: This doesn't really exist, bug #636730 */
-	} 
+		
+		GtkScrollbar.button { color: blue; background-color: red; }
+		
+/* Buttons */
 
 .button {
-    engine: clearlooks; /* for focus rings :( */
+    /* engine: clearlooks; broken */
     padding: 3;
     -clearlooks-focus-color: mix (@bg_color, @selected_bg_color, 0.5);
     -clearlooks-focus-fill-color: alpha (@selected_bg_color, 0.05);
