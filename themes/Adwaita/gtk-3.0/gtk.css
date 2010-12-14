@@ -39,24 +39,21 @@
      * slider. The stepper button is larger in both directions, the slider
      * only in the width
      */
-    -GtkRange-stepper-position-details: 1;
-    -GtkRange-trough-border: 0;
-    -GtkRange-slider-width: 20;
-    -GtkRange-stepper-size: 20;
 
-    -GtkScale-slider-length: 15;
-    -GtkScale-slider-width: 21;
-    -GtkScale-trough-side-details: 1;
+    -GtkScrolledWindow-scrollbar-spacing: 0;
+    -GtkScrolledWindow-scrollbars-within-bevel: 1;
 
-    -GtkScrollbar-min-slider-length: 30;
+
     -GtkMenuBar-internal-padding: 0;
     -GtkExpander-expander-size: 16;      /* ??? */
     -GtkToolbar-internal-padding: 4;     /* ??? */
     -GtkTreeView-expander-size: 14;      /* ??? */
     -GtkTreeView-vertical-separator: 0;  /* ??? */
 
-    -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;
+    -GtkScale-slider-length: 15; /* ??? */
+    -GtkScale-slider-width: 21; /* ??? */
+    -GtkScale-trough-side-details: 1; /* ??? */
+
 
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
@@ -183,9 +180,14 @@ GtkNotebook tab:active {
 }
 
 GtkScrollbar {
-    padding: 2; /* doesn't seem to do much */
+  padding: 2; /* ??? */
+  -GtkRange-stepper-position-details: 1; /* no idea what this does */
+  -GtkRange-trough-border: 2; /* adds some padding rather than border for the trough of the slider */
+  -GtkRange-slider-width: 20; /* seems affect the whole width of the scrollbar */
+  -GtkRange-stepper-size: 20; /* height on vertical and width on horizontal siders */
+  -GtkScrollbar-min-slider-length: 30; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 }
-	GtkScrollbar.trough:active {  /* having to use active is a bug */
+	GtkScrollbar.trough {  /* having to use active is a bug */
 		background-color: darker (@bg_color);
 	}
 
@@ -206,13 +208,12 @@ GtkScrollbar {
 		GtkScrollbar.slider:active { /* no workie */
 			border-color: @selected_bg_color;
 		}
-/*
-	-- No controls over the arrow buttons
-	GtkScrollbar:vertical button:first-child {} //top button styling 
-*/
+
+	GtkScrollbar.stepper { /* FIXME: This doesn't really exist, bug #636730 */
+	} 
 
 .button {
-    engine: clearlooks; /* for focus rings */
+    engine: clearlooks; /* for focus rings :( */
     padding: 3;
     -clearlooks-focus-color: mix (@bg_color, @selected_bg_color, 0.5);
     -clearlooks-focus-fill-color: alpha (@selected_bg_color, 0.05);
@@ -231,7 +232,8 @@ GtkScrollbar {
   }
 
   .button:prelight {
-      background-image: -gtk-gradient (linear,
+    /* transition: 200ms ease-in; */
+    background-image: -gtk-gradient (linear,
 				       left top, left bottom,
 				       from (shade (@bg_color, 1.12)),
 				       to (shade (@bg_color, 1.03)));
