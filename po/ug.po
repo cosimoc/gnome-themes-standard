@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard&component=general\n"
-"POT-Creation-Date: 2010-11-13 23:08+0000\n"
+"POT-Creation-Date: 2010-11-21 12:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Gheyret Kenji<gheyret@yahoo.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
 msgid "Default Background"
-msgstr "ئىجرا بولماسلىق ئارقا كۆرۈنۈشى"
+msgstr "كۆڭۈلدىكى تەگلىك"
 
 #: ../themes/Adwaita/index.theme.in.h:1
 msgid "Adwaita"
