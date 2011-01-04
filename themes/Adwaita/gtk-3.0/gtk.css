@@ -176,6 +176,7 @@ GtkScale {
 
 GtkNotebook,
 .notebook {
+		engine: clearlooks;
     background-color: shade (@bg_color, 1.12);
     padding: 3;
     border-style: solid;
@@ -190,13 +191,14 @@ GtkNotebook,
   }
 
   GtkNotebook tab:active {
-      background-color: @selected_bg_color;
+      background-color: @base_color;
   }
 
 /* Scrollbars */
 
 GtkScrollbar {
   padding: 2; /* ??? */
+  engine: default; /* this doesn't seem to work, we still get clearlooks */
   -GtkRange-stepper-position-details: 1; /* no idea what this does */
   -GtkRange-trough-border: 2; /* adds some padding rather than border for the trough of the slider */
   -GtkRange-slider-width: 20; /* seems affect the whole width of the scrollbar */
@@ -230,7 +232,7 @@ GtkScrollbar {
 /* Buttons */
 
 .button {
-    /* engine: clearlooks; broken */
+    engine: clearlooks;
     padding: 3;
     -clearlooks-focus-color: mix (@bg_color, @selected_bg_color, 0.5);
     -clearlooks-focus-fill-color: alpha (@selected_bg_color, 0.05);
