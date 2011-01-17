@@ -122,24 +122,27 @@
 
 /* Text Entries */
 .entry {
-    padding: 2;
-    background-color: @base_color;
-    color: @text_color;
+    background-color: #fff;
+    border-color: #579eea;
+    border-radius: 3;
+    border-width: 1;
+    border-style: solid;
 }
 
-  .entry:selected {
-      background-color: @selected_bg_color;
-      color: @selected_fg_color;
-  }
+.entry:insensitive {
+    background-color: #f4f4f2;
+    border-color: #bcbfb7;
+}
 
-  .entry:prelight {
-      background-color: shade (@bg_color, 0.95);
-  }
-
-  .entry:insensitive {
-      background-color: shade (@bg_color, 1.07);
-      color: shade (@bg_color, 0.75);
-  }
+GtkSpinButton.button,
+GtkSpinButton.button:insensitive,
+GtkSpinButton.button:prelight,
+GtkSpinButton.button:active {
+    background-image: none;
+    background-color: #fff;
+    border-width: 0;
+    border-style: none;
+}
 
 GtkFrame,
 GtkCalendar,
