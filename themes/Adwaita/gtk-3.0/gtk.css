@@ -149,28 +149,22 @@ GtkCalendar,
 GtkScale {
     padding: 2;
 }
-  .frame { /* FIXME:
-    I would like to have no border around the widget group 'frame'
-    Instead the label on the freame should be left aligned, bold weight and slightly lighter than normal fg
-    
-    */
+
+.frame {
+    font: bold;
+    color: lighter (@fg_color);
     border-style: none;
     border-width: 0;
-  }
+}
 
-    .frame GtkLabel.header {
-        color: lighter (@fg_color);
-        font-weight: bold;
-    }
+.cell {
+    background-color: @base_color;
+    color: @text_color;
+}
 
-  .cell {
-      background-color: @base_color;
-      color: @text_color;
-  }
-
-  .cell:selected {
-      background-color: @selected_bg_color;
-  }
+.cell:selected {
+    background-color: @selected_bg_color;
+}
 
 /* Notebooks/Tabs */
 
@@ -473,12 +467,12 @@ GtkIconView {
     border-radius: 0;
 }
 
-GtkScrolledWindow {
+GtkScrolledWindow.frame {
     border-style: solid;
     border-color: darker (@bg_color);
     border-width: 1;
     border-radius: 0;
-    padding: 1;
+    padding: 0;
 }
 
 .cell {
