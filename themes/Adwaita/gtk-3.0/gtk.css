@@ -16,9 +16,7 @@
 
 * {
     font: Cantarell;
-    /* engine: clearlooks; -- let's only resort to clearlooks for special types of 
-       sophisticated widgets like checkboxes, tabs etc.
-       and do the basic gradient drawing and strokes in here. */
+    engine: adwaita;
     padding: 1;
 
     /* Style properties */
@@ -26,7 +24,9 @@
     -GtkButton-child-displacement-y: 1;
     -GtkButton-default-border: 0;
     -GtkButton-image-spacing: 4;
+    -GtkButton-interior-focus: true;
     -GtkToolButton-icon-spacing: 4;
+    -GtkWidget-focus-padding: 2;
 
     -GtkCheckButton-indicator-size: 14;
 
@@ -85,11 +85,8 @@
     border-radius: 3;
 
     /* Engine settings */
-    -clearlooks-focus-color: mix (@bg_color, @selected_bg_color, 0.5);
-    -clearlooks-colorize-scrollbar: false;
-    -clearlooks-style: gnome3;
-    -clearlooks-accel-label-shade: 0.5;
-
+    -adwaita-focus-fill-color: alpha (#71acea, 0.165);
+    -adwaita-focus-border-color: #71acea;
 }
 
 *:hover {
@@ -176,7 +173,6 @@ GtkScale {
 
 GtkNotebook,
 .notebook {
-		engine: clearlooks;
     background-color: shade (@bg_color, 1.12);
     padding: 3;
     border-style: solid;
@@ -197,71 +193,98 @@ GtkNotebook,
 /* Scrollbars */
 
 GtkScrollbar {
-  padding: 2; /* ??? */
-  engine: default; /* this doesn't seem to work, we still get clearlooks */
-  -GtkRange-stepper-position-details: 1; /* no idea what this does */
-  -GtkRange-trough-border: 2; /* adds some padding rather than border for the trough of the slider */
-  -GtkRange-slider-width: 20; /* seems affect the whole width of the scrollbar */
-  -GtkRange-stepper-size: 20; /* height on vertical and width on horizontal siders */
-  -GtkScrollbar-min-slider-length: 30; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
+    padding: 1; /* ??? */
+    background-image: none;
+    -GtkRange-arrow-scaling: 0.6;
+    -GtkRange-slider-width: 18; /* seems affect the whole width of the scrollbar */
+    -GtkRange-stepper-size: 20; /* height on vertical and width on horizontal siders */
+    -GtkScrollbar-min-slider-length: 30; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 }
-	GtkScrollbar.trough {  /* having to use active is a bug */
-		background-color: shade (@bg_color, 0.9);
-		border-width: 0;
+
+GtkScrollbar.trough {
+    background-color: shade (@bg_color, 0.9);
+    border-width: 0;
+    border-radius: 0;
     /* non uniform borders don't work
     border: 1px solid @frame_color;
     border-left: 1px solid shade (@bg_color, 0.9);
     */
-	}
+}
 
-	GtkScrollbar.slider, GtkScrollbar.button { 
-		background-color: lighter (@bg_color);
-		border-width: 1;
-		border-color: @frame_color;
-		border-radius: 3;
-	}
+GtkScrollbar.slider, GtkScrollbar.button {
+    background-image: none;
+    background-color: lighter (@bg_color);
+    border-color: #a7aba7;
+    border-width: 1;
+    border-radius: 3;
+    padding: 0;
+}
 
-		GtkScrollbar.slider:prelight {
-			background-color: lighter (@bg_color);
-			border-color: darker (@frame_color);
-		}
-		GtkScrollbar.slider:active { /* no workie */
-			border-color: @selected_bg_color;
-		}
-		
+GtkScrollbar.slider:prelight,
+GtkScrollbar.button:prelight {
+    background-image: none;
+    background-color: lighter (@bg_color);
+    border-color: @frame_color;
+}
+
+GtkScrollbar.slider:prelight:active,
+GtkScrollbar.button:prelight:active {
+    background-image: none;
+    border-color: @selected_bg_color;
+}
+
 /* Buttons */
-
 .button {
-    engine: clearlooks;
     padding: 3;
-    -clearlooks-focus-color: mix (@bg_color, @selected_bg_color, 0.5);
-    -clearlooks-focus-fill-color: alpha (@selected_bg_color, 0.05);
+
+    border-radius: 3;
+    border-width: 1;
+    border-color: #a7aba7;
+    border-style: solid;
+
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (shade (@bg_color, 1.06)),
 				     to (shade (@bg_color, 0.95)));
-    border-radius: 3;
 }
 
-  .button:prelight:active {
-      background-image: -gtk-gradient (linear,
-				       left top, left bottom,
-				       from (shade (@bg_color, 0.86)),
-				       to (shade (@bg_color, 1.09)));
-  }
-
-  .button:prelight {
-    /* transition: 200ms ease-in; */
+.button:hover {
+    border-color: #a7aba7;
     background-image: -gtk-gradient (linear,
-				       left top, left bottom,
-				       from (shade (@bg_color, 1.12)),
-				       to (shade (@bg_color, 1.03)));
-  }
+				     left top, left bottom,
+				     from (#fff),
+				     to (#e5e7e5));
+}
 
-  .button:insensitive {
-      background-image: none;
-      background-color: @bg_color;
-  }
+.button:hover:active,
+.toolbar .button:hover:active {
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (#a2a9a2),
+				     to (alpha (#878f87, 0.125)));
+    border-color: #8a8f8a;
+}
+
+.button:insensitive {
+    background-image: none;
+    background-color: #f4f4f2;
+    color: #a7aba7;
+}
+
+.toolbar .button:prelight {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (#f4f6f4),
+                                     to (#d7dad7));
+    border-style: solid;
+    border-radius: 3;
+    border-width: 1;
+    border-color: #a7aba7;
+}
+
+.button.default {
+    border-width: 2;
+}
 
 GtkStatusbar {
     padding: 5;
