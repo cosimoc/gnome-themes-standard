@@ -176,6 +176,7 @@ GtkScale {
 
 GtkNotebook,
 .notebook {
+    -adwaita-selected-tab-color: #8dc0f3;
     background-color: shade (@bg_color, 1.12);
     padding: 3;
     border-style: solid;
@@ -184,10 +185,10 @@ GtkNotebook,
     -GtkNotebook-tab-curvature: 5;
 }
 
-  GtkNotebook tab {
-      padding: 0;
-      border-radius: 2;  
-  }
+GtkNotebook tab {
+    padding: 2;
+    border-radius: 2;
+}
 
   GtkNotebook tab:active {
       background-color: @base_color;
