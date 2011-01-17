@@ -101,7 +101,7 @@
 
 *:insensitive {
     background-color: shade (@bg_color, 1.07);
-    color: darker (@bg_color);
+    color: #a7aba7;
 }
 
 *:active {
@@ -300,7 +300,7 @@ GtkStatusbar {
     padding: 4;
     border-width: 0;
 
-    -GtkWidget-window-dragging: true; /* doesn't work */
+    -GtkWidget-window-dragging: true;
 }
 
 .menubar *:prelight {
