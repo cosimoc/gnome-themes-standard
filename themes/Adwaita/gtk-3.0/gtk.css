@@ -123,6 +123,7 @@
 /* Text Entries */
 .entry {
     background-color: #fff;
+    background-image: none;
     border-color: #579eea;
     border-radius: 3;
     border-width: 1;
