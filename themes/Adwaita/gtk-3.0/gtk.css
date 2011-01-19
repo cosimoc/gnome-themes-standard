@@ -474,10 +474,76 @@ GtkSeparator {
     -GtkSeparator-shadow-type: none;
 }
 
+GtkScrolledWindow.frame {
+    border-style: solid;
+    border-color: darker (@bg_color);
+    border-width: 1;
+    border-radius: 3;
+    padding: 1;
+}
+
 GtkViewport,
 GtkTreeView,
 GtkIconView {
+    border-radius: 3;
+    padding: 0;
+}
+
+GtkTreeView * {
     border-radius: 0;
+    border-width: 0;
+}
+
+.view {
+    background-color: @base_color;
+    color: @fg_color;
+    border-radius: 0;
+}
+
+row:selected:focused {
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+                                     from (#1f72c6),
+                                     color-stop (0.05, #1f72c6),
+                                     color-stop (0.05, #76b0ec),
+                                     to (#1f72c6));
+}
+
+row:selected {
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+                                     from (mix (#1f72c6, @bg_color, 0.8)),
+                                     color-stop (0.05, mix (#1f72c6, @bg_color, 0.8)),
+                                     color-stop (0.05, mix (#76b0ec, @bg_color, 0.8)),
+                                     to (mix (#1f72c6, @bg_color, 0.8)));
+}
+
+
+GtkTreeView GtkButton, /* FIXME: Remove this selector when treeview patches get in */
+column-header .button {
+    border-width: 0;
+    border-radius: 0;
+    border-color: #babdb6;
+    background-image: -gtk-gradient (linear,
+                                     left top,
+                                     left bottom,
+                                     from (#f7f7f7),
+                                     to (#d3d3d3));
+}
+
+.expander,
+.expander:active {
+    border-color: #797b76;
+    background-color: #f5f5f4;
+    color: #4e93da;
+}
+
+.expander:prelight {
+    border-color: #555753;
+    background-color: #888a85;
+    color: #fff;
 }
 
 /* Calendars */
