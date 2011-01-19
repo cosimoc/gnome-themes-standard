@@ -194,6 +194,7 @@ GtkScale {
 GtkScrollbar {
     padding: 1; /* ??? */
     background-image: none;
+    border-style: solid;
     -GtkRange-arrow-scaling: 0.6;
     -GtkRange-slider-width: 18; /* seems affect the whole width of the scrollbar */
     -GtkRange-stepper-size: 20; /* height on vertical and width on horizontal siders */
