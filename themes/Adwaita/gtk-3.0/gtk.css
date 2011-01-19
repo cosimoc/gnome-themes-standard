@@ -305,15 +305,6 @@ GtkStatusbar {
     -GtkWidget-window-dragging: true;
 }
 
-.menubar *:prelight {
-    background-image: none;
-    background-color: shade (@bg_color, 1.12);
-    border-style: solid;
-    border-width: 1;
-    /* border-radius: 4; */
-    border-color: shade (@bg_color, 0.7);
-}
-
 .menu {
     padding: -1;
     background-color: shade (@bg_color, 1.12);
@@ -324,8 +315,13 @@ GtkStatusbar {
     -GtkMenuItem-arrow-scaling: 0.4;
 }
 
+.menu * {
+    padding: 2;
+}
+
 .menu *:active,
-.menu *:prelight {
+.menu *:prelight,
+.menubar *:prelight {
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
@@ -339,7 +335,6 @@ GtkStatusbar {
     border-width: 1;
     border-radius: 0;
     border-color: darker (@selected_bg_color);
-    padding: 0;
 }
 
 .menu.separator {
@@ -350,18 +345,8 @@ GtkStatusbar {
     -GtkWidget-separator-height: 7;
 }
 
-.check,
-.radio,
-.check:active,
-.radio:active,
-.menu .check,
-.menu .radio,
-.menu .check:hover,
-.menu .radio:hover,
-.menu .check:active,
-.menu .radio:active {
-    background-color: @base_color;
-    color: @text_color;
+GtkCheckButton, GtkRadioButton {
+    background-color: @bg_color;
 }
 
 GtkCheckButton:prelight,
@@ -371,7 +356,23 @@ GtkRadioButton:selected {
     background-color: shade (@bg_color, 1.1);
 }
 
+.check, .radio,
+.check:active, .radio:active,
+.check:hover, .radio:hover,
+.menu .check, .menu .radio,
+.menu .check:active, .menu .radio:active,
+.menu .check:hover, .menu .radio:hover {
+    border-color: #8f9985;
+    color: #2e87e3;
+    background-color: mix (#bcbfb8, #fff, 0.9);
+}
 
+.check:insensitive,
+.radio:insensitive {
+    border-color: #d3d7cf;
+    background-color: #bcbfb8;
+    color: shade (#d3d7cf, 0.9);
+}
 
 
 .progressbar {
