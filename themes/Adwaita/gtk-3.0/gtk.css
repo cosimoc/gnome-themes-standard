@@ -480,15 +480,38 @@ GtkIconView {
     border-radius: 0;
 }
 
-GtkScrolledWindow.frame {
+/* Calendars */
+GtkCalendar.view {
+    border-radius: 3;
     border-style: solid;
-    border-color: darker (@bg_color);
     border-width: 1;
-    border-radius: 0;
-    padding: 0;
+    padding: 2;
 }
 
-.cell {
+GtkCalendar.header {
+    border-radius: 0;
+    background-image: -gtk-gradient (linear,
+                                     left top,
+                                     left bottom,
+                                     from (#f7f7f7),
+                                     to (#d3d3d3));
+    border-width: 0;
+}
+
+GtkCalendar.button {
+    background-image: -gtk-gradient (linear,
+                                     left top,
+                                     left bottom,
+                                     from (rgba (0, 0, 0, 0)),
+                                     to (rgba (0, 0, 0, 0)));
+}
+
+.highlight,
+GtkCalendar.highlight {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+    border-radius: 0;
+    padding: 0;
     border-width: 0;
 }
 
