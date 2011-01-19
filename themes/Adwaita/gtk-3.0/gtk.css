@@ -374,10 +374,23 @@ GtkRadioButton:selected {
     color: shade (#d3d7cf, 0.9);
 }
 
+.trough {
+    border-width: 1;
+    border-style: solid;
+    border-color: #b8beb1;
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (#ccccc7),
+                                     to (#e4e4e1));
+}
 
 .progressbar {
     padding: 0;
     border-radius: 3;
+    background-color: @selected_bg_color;
+    border-style: solid;
+    border-color: darker (@selected_bg_color);
+    color: @selected_fg_color;
 }
 
 column-header {
