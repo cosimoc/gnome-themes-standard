@@ -35,6 +35,9 @@ PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 2.91.6,,
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
 
+GTK_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-3.0`
+AC_SUBST(GTK_VERSION)
+
 # Workaround to make aclocal get the right flags
 AC_SUBST(ACLOCAL_AMFLAGS, "\${ACLOCAL_FLAGS}")
 
