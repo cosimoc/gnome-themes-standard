@@ -45,14 +45,15 @@
 
 
     -GtkMenuBar-internal-padding: 0;
-    -GtkExpander-expander-size: 16;      /* ??? */
+    -GtkTreeView-expander-size: 10;
+    -GtkToolItemGroup-expander-size: 12;
+    -GtkExpander-expander-size: 12;
     -GtkToolbar-internal-padding: 4;     /* ??? */
-    -GtkTreeView-expander-size: 14;      /* ??? */
     -GtkTreeView-vertical-separator: 0;  /* ??? */
 
-    -GtkScale-slider-length: 15; /* ??? */
-    -GtkScale-slider-width: 21; /* ??? */
-    -GtkScale-trough-side-details: 1; /* ??? */
+    /* GtkScale slider size */
+    -GtkScale-slider-length: 14;
+    -GtkRange-slider-width: 20;
 
 
     -GtkMenu-horizontal-padding: 0;
@@ -73,8 +74,8 @@
     -NautilusIconContainer-selection-box-alpha: 0x40;
     -NautilusIconContainer-selection-highlight-alpha: 0x00;
 
-    -GtkEntry-inner-border: 3;
-    -GtkButton-inner-border: 3;
+    -GtkEntry-inner-border: 2;
+    -GtkButton-inner-border: 2;
     -GtkEntry-progress-border: 0;
 
     -GtkSeparatorToolItem-shadow-type: none;
@@ -94,7 +95,7 @@
     color: @fg_color;
 }
 
-*:selected {
+*:selected:focused {
     background-color: @selected_bg_color;
     color: @selected_fg_color;
 }
