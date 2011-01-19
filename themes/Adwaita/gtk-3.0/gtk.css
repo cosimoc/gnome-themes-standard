@@ -546,6 +546,46 @@ column-header .button {
     color: #fff;
 }
 
+GtkSwitch.trough {
+    border-radius: 3;
+    border-width: 1;
+    border-style: solid;
+    border-color: #a9afa0;
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (#e4e4e1),
+                                     to (#ccccc7));
+}
+
+GtkSwitch.trough:active {
+    border-color: #3687db;
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (#84b8ee),
+                                     to (#509ae7));
+}
+
+GtkSwitch.trough:insensitive {
+    background-image: none;
+    background-color: shade (@bg_color, 0.9);
+    border-color: #a9afa0;
+}
+
+GtkSwitch.slider,
+GtkScale.slider {
+    border-width: 1;
+    border-radius: 2;
+    border-color: #b5bcae;
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (#eeeeec),
+                                     to (#fff));
+}
+
+GtkScale.trough {
+    border-radius: 3;
+}
+
 /* Calendars */
 GtkCalendar.view {
     border-radius: 3;
