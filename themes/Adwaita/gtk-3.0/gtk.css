@@ -141,8 +141,9 @@ GtkSpinButton.button:prelight,
 GtkSpinButton.button:active {
     background-image: none;
     background-color: #fff;
-    border-width: 0;
+    border-width: 1;
     border-style: none;
+    padding: 0;
 }
 
 GtkFrame,
