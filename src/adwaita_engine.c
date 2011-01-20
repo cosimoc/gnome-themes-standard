@@ -523,7 +523,7 @@ adwaita_engine_render_expander (GtkThemingEngine *engine,
 	cairo_move_to (cr, x + 2, y + side / 2 + 0.5);
 	cairo_line_to (cr, x + side - 1, y + side / 2 + 0.5);
 
-	if (state & GTK_STATE_FLAG_ACTIVE)
+	if ((state & GTK_STATE_FLAG_ACTIVE) == 0)
 	{
 		cairo_move_to (cr, x + side / 2 + 0.5, y + 2);
 		cairo_line_to (cr, x + side / 2 + 0.5, y + side - 1);
