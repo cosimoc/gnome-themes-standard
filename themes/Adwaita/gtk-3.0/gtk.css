@@ -75,14 +75,6 @@
 
     -WnckTasklist-fade-overlay-rect: 0;
 
-    -NautilusIconContainer-selection-box-color: @selected_bg_color;
-    -NautilusIconContainer-dark-info-color: shade (@selected_bg_color, 0.6);
-    -NautilusIconContainer-light-info-color: shade (@selected_fg_color, 0.6);
-    -NautilusIconContainer-prelight-icon-color: #ffffff;
-    -NautilusIconContainer-prelight-icon-brightness: 255;
-    -NautilusIconContainer-selection-box-alpha: 0x40;
-    -NautilusIconContainer-selection-highlight-alpha: 0x00;
-
     -GtkEntry-inner-border: 2;
     -GtkButton-inner-border: 2;
     -GtkEntry-progress-border: 0;
