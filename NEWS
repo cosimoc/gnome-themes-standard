@@ -1,3 +1,11 @@
+2.91.7
+======
+
+Improved resize grip rendering
+Fix gnome-terminal text colors
+Fix expander rendering +/- confusion
+Fix install location of the engine
+
 2.91.6
 ======
 
