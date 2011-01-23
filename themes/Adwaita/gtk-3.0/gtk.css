@@ -664,8 +664,8 @@ CheeseThumbView /* Cheese */
 
 /* gnome-terminal */
 TerminalScreen {
-    background-color: #1e1a17;
-    color: #ffffff;
+    background-color: @bg_color;
+    color: #000;
     -TerminalScreen-background-darkness: 0.95;
 }
 
