@@ -650,6 +650,102 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 }
 
 static void
+adwaita_engine_render_handle (GtkThemingEngine *engine,
+			      cairo_t          *cr,
+			      gdouble           x,
+			      gdouble           y,
+			      gdouble           width,
+			      gdouble           height)
+{
+	if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_GRIP))
+	{
+		GdkRGBA dark, highlight, bg;
+		GtkSymbolicColor *sym, *shade;
+		GtkJunctionSides sides;
+		GtkStateFlags state;
+		int lx, ly;
+		int x_down;
+		int y_down;
+		int dots;
+
+		state = gtk_theming_engine_get_state (engine);
+		gtk_theming_engine_get_background_color (engine, state, &bg);
+
+		sym = gtk_symbolic_color_new_literal (&bg);
+
+		shade = gtk_symbolic_color_new_shade (sym, 0.7);
+		gtk_symbolic_color_resolve (shade, NULL, &dark);
+		gtk_symbolic_color_unref (shade);
+
+		shade = gtk_symbolic_color_new_shade (sym, 1.3);
+		gtk_symbolic_color_resolve (shade, NULL, &highlight);
+		gtk_symbolic_color_unref (shade);
+
+		gtk_symbolic_color_unref (sym);
+
+		/* The number of dots fitting into the area. Just hardcoded to 4 right now. */
+		/* dots = MIN (width - 2, height - 2) / 3; */
+		dots = 4;
+
+		cairo_save (cr);
+
+		sides = gtk_theming_engine_get_junction_sides (engine);
+
+		switch (sides)
+		{
+		case GTK_JUNCTION_CORNER_TOPRIGHT:
+			x_down = 0;
+			y_down = 0;
+			cairo_translate (cr, x + width - 3*dots + 2, y + 1);
+			break;
+		case GTK_JUNCTION_CORNER_BOTTOMRIGHT:
+			x_down = 0;
+			y_down = 1;
+			cairo_translate (cr, x + width - 3*dots + 2, y + height - 3*dots + 2);
+			break;
+		case GTK_JUNCTION_CORNER_BOTTOMLEFT:
+			x_down = 1;
+			y_down = 1;
+			cairo_translate (cr, x + 1, y + height - 3*dots + 2);
+			break;
+		case GTK_JUNCTION_CORNER_TOPLEFT:
+			x_down = 1;
+			y_down = 0;
+			cairo_translate (cr, x + 1, y + 1);
+			break;
+		default:
+			/* Not implemented. */
+			return;
+		}
+
+		for (lx = 0; lx < dots; lx++) /* horizontally */
+		{
+			for (ly = 0; ly <= lx; ly++) /* vertically */
+			{
+				int mx, my;
+				mx = x_down * dots + (1 - x_down * 2) * lx - x_down;
+				my = y_down * dots + (1 - y_down * 2) * ly - y_down;
+
+				gdk_cairo_set_source_rgba (cr, &highlight);
+				cairo_rectangle (cr, mx*3-1, my*3-1, 2, 2);
+				cairo_fill (cr);
+
+				gdk_cairo_set_source_rgba (cr, &dark);
+				cairo_rectangle (cr, mx*3-1, my*3-1, 1, 1);
+				cairo_fill (cr);
+			}
+		}
+
+		cairo_restore (cr);
+	}
+	else
+	{
+		GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_handle (engine, cr,
+										       x, y, width, height);
+	}
+}
+
+static void
 adwaita_engine_class_init (AdwaitaEngineClass *klass)
 {
 	GtkThemingEngineClass *engine_class = GTK_THEMING_ENGINE_CLASS (klass);
@@ -664,6 +760,7 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 	engine_class->render_expander = adwaita_engine_render_expander;
 	engine_class->render_activity = adwaita_engine_render_activity;
 	engine_class->render_slider = adwaita_engine_render_slider;
+	engine_class->render_handle = adwaita_engine_render_handle;
 
 	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
 					      g_param_spec_boxed ("focus-border-color",
