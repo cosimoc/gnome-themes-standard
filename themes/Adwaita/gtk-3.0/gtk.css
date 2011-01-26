@@ -412,7 +412,9 @@ column-header {
 
 /* Toolbars */
 
-.toolbar {
+GtkWindow > GtkTable > .toolbar, /* nautilus */
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > .toolbar, /* eog etc */
+GtkWindow > GtkVBox > .toolbar {
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
@@ -431,7 +433,8 @@ column-header {
     border-width: 0;
 }
 
-  GtkToolbar .button {
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button,
+GtkWindow > GtkVBox > GtkToolbar .button {
       border-style: none;
       border-width: 0;
 
@@ -448,7 +451,8 @@ column-header {
       background-color: red;
   } this pseudo-class doesn't work */ 
 
-  GtkToolbar .button:hover { /* needs correct colors */
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:hover,
+GtkWindow > GtkVBox > GtkToolbar .button:hover { /* needs correct colors */
       background-image: -gtk-gradient (linear,
 				       left top, left bottom,
 				       from (shade (@bg_color, 0.75)),
@@ -457,7 +461,8 @@ column-header {
 				       to (shade (@bg_color, 0.85)));
   }
 
-  GtkToolbar .button:active, GtkToolbar .button:active:prelight { /* needs correct colors */
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active, GtkToolbar .button:active:prelight,
+GtkWindow > GtkVBox > GtkToolbar .button:active, GtkToolbar .button:active:prelight { /* needs correct colors */
       border-style: none;
       border-width: 0;
       background-image: -gtk-gradient (linear,
@@ -468,7 +473,8 @@ column-header {
 				       to (shade (@bg_color, 0.85)));
   }
 
-  .toolbar.separator {
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > .toolbar.separator,
+GtkWindow > GtkVBox > .toolbar.separator {
       padding: 1 0;
       background-color: shade (@bg_color, 0.8);
       -GtkVSeparator-vertical-padding: 0;
