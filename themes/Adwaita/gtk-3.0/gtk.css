@@ -659,7 +659,6 @@ GtkCalendar.highlight {
     background-color: mix (shade (@bg_color, 1.05), @selected_bg_color, 0.60);
 }
 
-EvView, /* Evince */
 ApDocView, /* Abiword */
 EogScrollView, /* Eog */
 CheeseThumbView /* Cheese */
