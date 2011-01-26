@@ -417,7 +417,15 @@ column-header {
 }
 
 /* Toolbars */
+.toolbar {
+    border-style: solid;
+    border-color: darker (@bg_color);
+    border-width: 1;
+    border-radius: 3;
+    padding: 1;
+}
 
+/* Top of window toolbars */
 GtkWindow > GtkTable > .toolbar, /* nautilus */
 GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > .toolbar, /* eog etc */
 GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > .toolbar, /* epiphany */
