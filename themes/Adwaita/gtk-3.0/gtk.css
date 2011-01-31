@@ -128,7 +128,7 @@
 }
 
 /* Text Entries */
-.entry {
+.entry, .toolbar .entry {
     background-color: #fff;
     background-image: none;
     border-color: #579eea;
