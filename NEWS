@@ -1,3 +1,10 @@
+2.91.8
+======
+
+Don't set background for evince background
+Remove gtkrc file for GTK+ 3.0
+Plain style for 'internal' toolbars
+
 2.91.7
 ======
 
