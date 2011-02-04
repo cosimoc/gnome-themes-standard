@@ -263,6 +263,13 @@ GtkScrollbar.button:prelight:active {
 				     to (#e5e7e5));
 }
 
+.button:active {
+    background-image: -gtk-gradient (linear,
+    				     left top, left bottom,
+				     from (shade (@bg_color, 0.86)),
+				     to (shade (@bg_color, 1.09)));
+}
+
 .button:hover:active,
 .toolbar .button:hover:active {
     background-image: -gtk-gradient (linear,
