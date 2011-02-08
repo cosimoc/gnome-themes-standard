@@ -421,6 +421,7 @@ column-header {
 
 GtkWindow > GtkTable > .toolbar, /* nautilus */
 GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > .toolbar, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > .toolbar, /* epiphany */
 GtkWindow > GtkVBox > .toolbar {
     background-image: -gtk-gradient (linear,
 				     left top,
