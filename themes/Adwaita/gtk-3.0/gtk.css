@@ -24,7 +24,6 @@
 @define-color error_bg_color rgb (237, 54, 54);
 
 * {
-    font: Cantarell;
     engine: adwaita;
     padding: 1;
 
