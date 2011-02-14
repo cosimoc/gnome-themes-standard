@@ -542,7 +542,26 @@ adwaita_engine_render_activity (GtkThemingEngine *engine,
 				gdouble           width,
 				gdouble           height)
 {
+	const GtkWidgetPath *path;
+
 	cairo_save (cr);
+	path = gtk_theming_engine_get_path (engine);
+
+	if (gtk_widget_path_is_type (path, GTK_TYPE_SCALE) &&
+	    gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PROGRESSBAR))
+	{
+		/* Render GtkScale fill level thinner */
+		if (!gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_VERTICAL))
+		{
+			y += height / 2 - 3;
+			height = 6;
+		}
+		else
+		{
+			x += width / 2 - 3;
+			width = 6;
+		}
+	}
 
 	GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_activity (engine, cr,
 										 x, y, width, height);
