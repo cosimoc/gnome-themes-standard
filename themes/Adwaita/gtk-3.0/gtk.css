@@ -475,7 +475,11 @@ GtkWindow > GtkVBox > GtkToolbar .button:hover { /* needs correct colors */
 				     color-stop (0.3, shade (@bg_color, 0.9)),
 				     color-stop (0.6, shade (@bg_color, 0.9)),
 				     to (shade (@bg_color, 0.85)));
-  }
+}
+
+.toolbar *:insensitive {
+    color: alpha (@fg_color, 0.6);
+}
 
 GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active, GtkToolbar .button:active:prelight,
 GtkWindow > GtkVBox > GtkToolbar .button:active, GtkToolbar .button:active:prelight { /* needs correct colors */
