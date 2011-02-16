@@ -670,6 +670,10 @@ GtkCalendar.highlight {
     color: @error_fg_color;
 }
 
+GtkTreeView.GtkFileChooserDefaultSidebar {
+    background-color: #f6f6f4;
+}
+
 /* Custom colors for some applications' widgets */
 #nautilus-extra-view-widget {
     background-color: mix (shade (@bg_color, 1.05), @selected_bg_color, 0.60);
@@ -695,7 +699,40 @@ PanelWidget,
 PanelApplet,
 PanelMenuBar.menubar,
 PanelToplevel {
-    background-color: #1e1a17;
+    background-color: black;
     background-image: none;
+    color: #fff;
+}
+
+/* panel buttons (clock etc) */
+PanelApplet GtkToggleButton {
+    background-color: black;
+    background-image: none;
+    border-color: #333333;
+    border-width: 0;
+    color: #fff;
+}
+
+PanelApplet GtkToggleButton:active {
+    background-color: #666666;
+    background-image: none;
+    border-color: #333333;
+    border-width: 0;
+    color: #fff;
+}
+
+PanelApplet GtkToggleButton:hover {
+    background-color: #333333;
+    background-image: none;
+    border-color: #333333;
+    border-width: 0;
+    color: #fff;
+}
+
+PanelApplet GtkToggleButton:hover:active {
+    background-color: #666666;
+    background-image: none;
+    border-color: #333333;
+    border-width: 0;
     color: #fff;
 }
