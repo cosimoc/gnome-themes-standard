@@ -23,6 +23,29 @@
 @define-color error_fg_color rgb (166, 38, 38);
 @define-color error_bg_color rgb (237, 54, 54);
 
+@define-color keyboard_focus_color #71acea;
+
+@define-color chrome_bg_color #1e1a17;
+@define-color chrome_fg_color #fff;
+
+@define-color focused_entry_border #579eea;
+@define-color button_border #a7aba7;
+
+@define-color insensitive_bg_color #f4f4f2;
+@define-color insensitive_fg_color #a7aba7;
+
+@define-color trough_bg_color_a #ccccc7;
+@define-color trough_bg_color_b #e4e4e1;
+
+@define-color active_trough_bg_color_a shade (@selected_bg_color, 1.29);
+@define-color active_trough_bg_color_b shade (@selected_bg_color, 1.05);
+
+@define-color selected_row_bg_color_a #1f72c6;
+@define-color selected_row_bg_color_b shade (@selected_bg_color, 1.22);
+
+@define-color highlighted_border #8a8f8a;
+@define-color menu_fg_color #2e87e3;
+
 * {
     engine: adwaita;
     padding: 1;
@@ -38,7 +61,7 @@
 
     -GtkCheckButton-indicator-size: 14;
 
-    -GtkTextView-error-underline-color: #cc0000;
+    -GtkTextView-error-underline-color: @error_color;
 
     -GtkPaned-handle-size: 6;
 
@@ -86,8 +109,8 @@
     border-radius: 3;
 
     /* Engine settings */
-    -adwaita-focus-fill-color: alpha (#71acea, 0.165);
-    -adwaita-focus-border-color: #71acea;
+    -adwaita-focus-fill-color: alpha (@keyboard_focus_color, 0.165);
+    -adwaita-focus-border-color: @keyboard_focus_color;
 }
 
 *:hover {
@@ -106,8 +129,8 @@
 }
 
 *:insensitive {
-    background-color: shade (@bg_color, 1.07);
-    color: #a7aba7;
+    background-color: @insensitive_bg_color;
+    color: @insensitive_fg_color;
 }
 
 *:active {
@@ -128,17 +151,17 @@
 
 /* Text Entries */
 .entry, .toolbar .entry {
-    background-color: #fff;
+    background-color: @base_color;
     background-image: none;
-    border-color: #579eea;
+    border-color: @focused_entry_border;
     border-radius: 3;
     border-width: 1;
     border-style: solid;
 }
 
 .entry:insensitive {
-    background-color: #f4f4f2;
-    border-color: #bcbfb7;
+    background-color: @insensitive_bg_color;
+    border-color: shade (@inactive_frame_color, 0.945);
 }
 
 GtkSpinButton.button,
@@ -146,7 +169,7 @@ GtkSpinButton.button:insensitive,
 GtkSpinButton.button:prelight,
 GtkSpinButton.button:active {
     background-image: none;
-    background-color: #fff;
+    background-color: @base_color;
     border-width: 1;
     border-style: none;
     padding: 0;
@@ -177,7 +200,7 @@ GtkScale {
 /* Notebooks/Tabs */
 
 .notebook {
-    -adwaita-selected-tab-color: #8dc0f3;
+    -adwaita-selected-tab-color: shade (@selected_bg_color, 1.33);
     background-color: shade (@bg_color, 1.12);
     padding: 2;
     border-style: solid;
@@ -220,7 +243,7 @@ GtkScrollbar.trough {
 GtkScrollbar.slider, GtkScrollbar.button {
     background-image: none;
     background-color: lighter (@bg_color);
-    border-color: #a7aba7;
+    border-color: @button_border;
     border-width: 1;
     border-radius: 3;
     padding: 0;
@@ -245,7 +268,7 @@ GtkScrollbar.button:prelight:active {
 
     border-radius: 3;
     border-width: 1;
-    border-color: #a7aba7;
+    border-color: @button_border;
     border-style: solid;
 
     background-image: -gtk-gradient (linear,
@@ -255,11 +278,11 @@ GtkScrollbar.button:prelight:active {
 }
 
 .button:hover {
-    border-color: #a7aba7;
+    border-color: @button_border;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
-				     from (#fff),
-				     to (#e5e7e5));
+				     from (@base_color),
+				     to (shade (@bg_color, 0.97)));
 }
 
 .button:active {
@@ -273,26 +296,26 @@ GtkScrollbar.button:prelight:active {
 .toolbar .button:hover:active {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
-				     from (#a2a9a2),
-				     to (alpha (#878f87, 0.125)));
-    border-color: #8a8f8a;
+				     from (shade (@highlighted_border, 1.175)),
+				     to (alpha (shade (@highlighted_border, 0.95), 0.125)));
+    border-color: @highlighted_border;
 }
 
 .button:insensitive {
     background-image: none;
-    background-color: #f4f4f2;
-    color: #a7aba7;
+    background-color: @insensitive_bg_color;
+    color: @insensitive_fg_color;
 }
 
 .toolbar .button:prelight {
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
-                                     from (#f4f6f4),
-                                     to (#d7dad7));
+                                     from (shade (@bg_color, 1.035)),
+                                     to (shade (@inactive_frame_color, 1.09)));
     border-style: solid;
     border-radius: 3;
     border-width: 1;
-    border-color: #a7aba7;
+    border-color: @button_border;
 }
 
 .button.default {
@@ -375,26 +398,26 @@ GtkRadioButton:selected {
 .menu .check, .menu .radio,
 .menu .check:active, .menu .radio:active,
 .menu .check:hover, .menu .radio:hover {
-    border-color: #8f9985;
-    color: #2e87e3;
-    background-color: mix (#bcbfb8, #fff, 0.9);
+    border-color: shade (@frame_color, 1.035);
+    color: @menu_fg_color;
+    background-color: mix (shade (@highlighted_border, 1.345), @bg_color, 0.9);
 }
 
 .check:insensitive,
 .radio:insensitive {
-    border-color: #d3d7cf;
-    background-color: #bcbfb8;
+    border-color: shade (@inactive_frame_color, 1.06);
+    background-color: shade (@highlighted_border, 1.345);
     color: shade (#d3d7cf, 0.9);
 }
 
 .trough {
     border-width: 1;
     border-style: solid;
-    border-color: #b8beb1;
+    border-color: shade (@inactive_frame_color, 0.925);
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
-                                     from (#ccccc7),
-                                     to (#e4e4e1));
+                                     from (@trough_bg_color_a),
+                                     to (@trough_bg_color_b));
 }
 
 .progressbar {
@@ -537,20 +560,20 @@ row:selected:focused {
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
-                                     from (#1f72c6),
-                                     color-stop (0.05, #1f72c6),
-                                     color-stop (0.05, #76b0ec),
-                                     to (#1f72c6));
+                                     from (@selected_row_bg_color_a),
+                                     color-stop (0.05, @selected_row_bg_color_a),
+                                     color-stop (0.05, @selected_row_bg_color_b),
+                                     to (@selected_row_bg_color_a));
 }
 
 row:selected {
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
-                                     from (mix (#1f72c6, @bg_color, 0.8)),
-                                     color-stop (0.05, mix (#1f72c6, @bg_color, 0.8)),
-                                     color-stop (0.05, mix (#76b0ec, @bg_color, 0.8)),
-                                     to (mix (#1f72c6, @bg_color, 0.8)));
+                                     from (mix (@selected_row_bg_color_a, @bg_color, 0.8)),
+                                     color-stop (0.05, mix (@selected_row_bg_color_a, @bg_color, 0.8)),
+                                     color-stop (0.05, mix (@selected_row_bg_color_b, @bg_color, 0.8)),
+                                     to (mix (@selected_row_bg_color_a, @bg_color, 0.8)));
 }
 
 
@@ -558,61 +581,61 @@ GtkTreeView GtkButton, /* FIXME: Remove this selector when treeview patches get 
 column-header .button {
     border-width: 0;
     border-radius: 0;
-    border-color: #babdb6;
+    border-color: shade (@inactive_frame_color, 0.935);
     background-image: -gtk-gradient (linear,
                                      left top,
                                      left bottom,
-                                     from (#f7f7f7),
-                                     to (#d3d3d3));
+                                     from (shade (@bg_color, 1.04)),
+                                     to (shade (@bg_color, 0.89)));
 }
 
 .expander,
 .expander:active {
     border-color: #797b76;
-    background-color: #f5f5f4;
-    color: #4e93da;
+    background-color: shade (@bg_color, 1.035);
+    color: shade (@selected_bg_color, 1.02);
 }
 
 .expander:prelight {
-    border-color: #555753;
+    border-color: shade (@inactive_frame_color, 0.425);
     background-color: #888a85;
-    color: #fff;
+    color: lighter (@bg_color);
 }
 
 GtkSwitch.trough {
     border-radius: 3;
     border-width: 1;
     border-style: solid;
-    border-color: #a9afa0;
+    border-color: shade (@frame_color, 1.22);
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
-                                     from (#e4e4e1),
-                                     to (#ccccc7));
+                                     from (@trough_bg_color_b),
+                                     to (@trough_bg_color_a));
 }
 
 GtkSwitch.trough:active {
-    border-color: #3687db;
+    border-color: shade (@selected_bg_color, 0.935);
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
-                                     from (#84b8ee),
-                                     to (#509ae7));
+                                     from (@active_trough_bg_color_a),
+                                     to (@active_trough_bg_color_b));
 }
 
 GtkSwitch.trough:insensitive {
     background-image: none;
     background-color: shade (@bg_color, 0.9);
-    border-color: #a9afa0;
+    border-color: shade (@inactive_frame_color, 0.845);
 }
 
 GtkSwitch.slider,
 GtkScale.slider {
     border-width: 1;
     border-radius: 2;
-    border-color: #b5bcae;
+    border-color: shade (@frame_color, 1.31);
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
-                                     from (#eeeeec),
-                                     to (#fff));
+                                     from (shade (@frame_color, 1.72)),
+                                     to (@base_color));
 }
 
 GtkScale.trough {
@@ -632,8 +655,8 @@ GtkCalendar.header {
     background-image: -gtk-gradient (linear,
                                      left top,
                                      left bottom,
-                                     from (#f7f7f7),
-                                     to (#d3d3d3));
+                                     from (shade (@bg_color, 1.04)),
+                                     to (shade (@bg_color, 0.89)));
     border-width: 0;
 }
 
@@ -687,14 +710,14 @@ ApDocView, /* Abiword */
 EogScrollView, /* Eog */
 CheeseThumbView /* Cheese */
 {
-    background-color: #1e1a17;
+    background-color: @chrome_bg_color;
     -EogScrollView-shadow-type: none;
 }
 
 /* gnome-terminal */
 TerminalScreen {
     background-color: @bg_color;
-    color: #000;
+    color: @fg_color;
     -TerminalScreen-background-darkness: 0.95;
 }
 
@@ -703,40 +726,40 @@ PanelWidget,
 PanelApplet,
 PanelMenuBar.menubar,
 PanelToplevel {
-    background-color: black;
+    background-color: @chrome_bg_color;
     background-image: none;
-    color: #fff;
+    color: @chrome_fg_color;
 }
 
 /* panel buttons (clock etc) */
 PanelApplet GtkToggleButton {
-    background-color: black;
+    background-color: @chrome_bg_color;
     background-image: none;
-    border-color: #333333;
+    border-color: shade (@bg_color, 0.215);
     border-width: 0;
-    color: #fff;
+    color: @chrome_fg_color;
 }
 
 PanelApplet GtkToggleButton:active {
-    background-color: #666666;
+    background-color: shade (@bg_color, 0.43);
     background-image: none;
-    border-color: #333333;
+    border-color: shade (@bg_color, 0.215);
     border-width: 0;
-    color: #fff;
+    color: @chrome_fg_color;
 }
 
 PanelApplet GtkToggleButton:hover {
-    background-color: #333333;
+    background-color: shade (@bg_color, 0.215);
     background-image: none;
-    border-color: #333333;
+    border-color: shade (@bg_color, 0.215);
     border-width: 0;
-    color: #fff;
+    color: @chrome_fg_color;
 }
 
 PanelApplet GtkToggleButton:hover:active {
-    background-color: #666666;
+    background-color: shade (@bg_color, 0.43);
     background-image: none;
-    border-color: #333333;
+    border-color: shade (@bg_color, 0.215);
     border-width: 0;
-    color: #fff;
+    color: @chrome_fg_color;
 }
