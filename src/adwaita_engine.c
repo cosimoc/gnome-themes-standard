@@ -391,16 +391,9 @@ adwaita_engine_render_frame (GtkThemingEngine *engine,
 	len = gtk_widget_path_length (path);
 	cairo_save (cr);
 
-#if 0
-	/* FIXME: Replace by this other check when
-	 * the treeview exposes all style info
-	 */
 	if (gtk_widget_path_iter_has_region (path, len - 2,
 					     GTK_STYLE_REGION_COLUMN_HEADER,
 					     &flags))
-#endif
-	if (gtk_widget_path_is_type (path, GTK_TYPE_BUTTON) &&
-	    gtk_widget_path_has_parent (path, GTK_TYPE_TREE_VIEW))
 	{
 		GtkStateFlags state;
 		GdkRGBA color;

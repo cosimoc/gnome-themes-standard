@@ -588,8 +588,6 @@ row:selected {
                                      to (mix (@selected_row_bg_color_a, @theme_bg_color, 0.8)));
 }
 
-
-GtkTreeView GtkButton, /* FIXME: Remove this selector when treeview patches get in */
 column-header .button {
     border-width: 0;
     border-radius: 0;
