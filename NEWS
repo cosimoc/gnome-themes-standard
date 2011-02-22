@@ -1,3 +1,11 @@
+2.91.90
+=======
+
+Don't hardcode Cantarell in the CSS file
+Miscellaneous rendering fixes
+Separate theme colors from the CSS
+Add a settings.ini file
+
 2.91.8
 ======
 
