@@ -412,7 +412,7 @@ GtkRadioButton:selected {
 .menu .check:hover, .menu .radio:hover {
     border-color: shade (@frame_color, 1.035);
     color: @menu_fg_color;
-    background-color: mix (shade (@highlighted_border, 1.345), @theme_bg_color, 0.9);
+    background-color: mix (shade (@highlighted_border, 1.345), @theme_base_color, 0.9);
 }
 
 .check:insensitive,
