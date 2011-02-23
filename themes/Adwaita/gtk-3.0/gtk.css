@@ -734,6 +734,7 @@ TerminalScreen {
 /* For old gnome-panel */
 PanelWidget,
 PanelApplet,
+PanelAppletFrame,
 PanelMenuBar.menubar,
 PanelToplevel {
     background-color: @chrome_bg_color;
