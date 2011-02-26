@@ -1,0 +1,35 @@
+# Korean translation for gnome-themes-standard.
+# This file is distributed under the same license as the gnome-themes-standard package.
+#
+# Changwoo Ryu <cwryu@debian.org>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-themes-standard master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard&component=general\n"
+"POT-Creation-Date: 2011-02-25 18:00+0000\n"
+"PO-Revision-Date: 2011-02-27 03:07+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: Korean <gnome-kr@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
+msgid "Default Background"
+msgstr "기본 배경"
+
+# 가장 오래 생존했던 동물로 알려진 거북이
+#
+# http://en.wikipedia.org/wiki/Adwaita
+#
+# 산스크리트어로 "오직 하나" (one and only)
+#
+#: ../themes/Adwaita/index.theme.in.h:1
+msgid "Adwaita"
+msgstr "애드와이타"
+
+#: ../themes/Adwaita/index.theme.in.h:2
+msgid "There is only one"
+msgstr "오직 하나 뿐!"
