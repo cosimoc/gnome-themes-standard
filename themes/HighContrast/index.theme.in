@@ -1,0 +1,10 @@
+[X-GNOME-Metatheme]
+_Name=High Contrast
+Type=X-GNOME-Metatheme
+_Comment=High contrast theme
+Encoding=UTF-8
+GtkTheme=HighContrast
+MetacityTheme=Adwaita
+IconTheme=gnome
+CursorTheme=Adwaita
+CursorSize=24
