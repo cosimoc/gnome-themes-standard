@@ -54,6 +54,8 @@ themes/AdwaitaLowContrast/Makefile
 themes/AdwaitaLowContrast/gtk-3.0/Makefile
 themes/HighContrast/Makefile
 themes/HighContrast/gtk-3.0/Makefile
+themes/HighContrastInverse/Makefile
+themes/HighContrastInverse/gtk-3.0/Makefile
 src/Makefile
 po/Makefile.in
 ])
