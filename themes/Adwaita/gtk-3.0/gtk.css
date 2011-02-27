@@ -58,6 +58,8 @@
 @define-color highlighted_border #8a8f8a;
 @define-color menu_fg_color #2e87e3;
 
+@define-color notebook_border #918e8a;
+
 * {
     engine: adwaita;
     padding: 1;
@@ -214,6 +216,7 @@ GtkScale {
 .notebook {
     -adwaita-selected-tab-color: shade (@theme_selected_bg_color, 1.33);
     background-color: shade (@theme_bg_color, 1.12);
+    border-color: @notebook_border;
     padding: 2;
     border-style: solid;
     border-radius: 0;
