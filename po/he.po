@@ -4,18 +4,21 @@
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: gnome-themes-standard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-11 07:18+0200\n"
-"PO-Revision-Date: 2010-11-11 07:19+0300\n"
+"POT-Creation-Date: 2011-02-27 23:08+0200\n"
+"PO-Revision-Date: 2011-02-27 23:10+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Gezer (Hebrew)\n"
-"Language: he\n"
+"Language-Team: Gezer (Hebrew) <sh.yaron@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: he\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Virtaal 0.6.1\n"
+"X-Poedit-Language: Hebrew\n"
+"X-Poedit-Country: ISRAEL\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
 msgid "Default Background"
@@ -28,3 +31,27 @@ msgstr "Adwaita"
 #: ../themes/Adwaita/index.theme.in.h:2
 msgid "There is only one"
 msgstr "האחד והיחיד"
+
+#: ../themes/AdwaitaLowContrast/index.theme.in.h:1
+msgid "Adwaita Low Contrast"
+msgstr "Adwaita בניגודיות נמוכה"
+
+#: ../themes/AdwaitaLowContrast/index.theme.in.h:2
+msgid "Low contrast variant of Adwaita"
+msgstr "הגוון בניגודיות נמוכה של Adwaita"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "ניגודיות גבוהה"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "ערכת נושא בניגודיות גבוהה"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "ניגודיות גבוהה הפוכה"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "ערכת נושא הפוכה עם ניגודיות גבוהה"
