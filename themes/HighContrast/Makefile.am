@@ -1,6 +1,6 @@
 SUBDIRS = gtk-3.0
 
-THEME_NAME=AdwaitaHighContrast
+THEME_NAME=HighContrast
 THEME_IN_FILES=index.theme.in
 
 %.theme:   %.theme.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; $(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
