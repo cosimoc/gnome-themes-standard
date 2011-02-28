@@ -298,11 +298,9 @@ adwaita_engine_render_option (GtkThemingEngine *engine,
 	GtkSymbolicColor *sym, *shade;
 	gboolean inconsistent;
 	gboolean draw_bullet;
-	gdouble w, h, cx, cy, radius;
+	gdouble cx, cy, radius;
 	GtkStateFlags state;
 
-	w = (gdouble) width;
-	h = (gdouble) height;
 	cx = width / 2.0;
 	cy = height / 2.0;
 	radius = MIN (width, height) / 2.0;
