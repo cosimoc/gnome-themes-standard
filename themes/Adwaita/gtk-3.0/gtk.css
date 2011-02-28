@@ -239,42 +239,52 @@ GtkScrollbar {
     padding: 1; /* ??? */
     background-image: none;
     border-style: solid;
-    -GtkRange-arrow-scaling: 0.6;
+    -GtkRange-trough-border: 2;
+    -GtkRange-arrow-scaling: 0.444;
     -GtkRange-slider-width: 18; /* seems affect the whole width of the scrollbar */
-    -GtkRange-stepper-size: 20; /* height on vertical and width on horizontal siders */
+    -GtkRange-stepper-size: 18; /* height on vertical and width on horizontal siders */
     -GtkScrollbar-min-slider-length: 30; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 }
 
 GtkScrollbar.trough {
-    background-color: shade (@theme_bg_color, 0.9);
+    background-image: none;
+    background-color: shade (@theme_bg_color, 0.882);
     border-width: 0;
     border-radius: 0;
-    /* non uniform borders don't work
-    border: 1px solid @frame_color;
-    border-left: 1px solid shade (@theme_bg_color, 0.9);
-    */
 }
 
 GtkScrollbar.slider, GtkScrollbar.button {
     background-image: none;
     background-color: lighter (@theme_bg_color);
     border-color: @button_border;
-    border-width: 1;
     border-radius: 3;
-    padding: 0;
+    border-width: 1;
 }
 
-GtkScrollbar.slider:prelight,
+GtkScrollbar.slider:prelight {
+    background-image: none;
+    background-color: lighter (@theme_bg_color);
+    border-color: shade (@highlighted_border, 0.964);
+}
+
+GtkScrollbar.slider:prelight:active {
+    background-image: none;
+    border-color: @theme_selected_bg_color;
+}
+
+
 GtkScrollbar.button:prelight {
     background-image: none;
     background-color: lighter (@theme_bg_color);
-    border-color: @frame_color;
 }
 
-GtkScrollbar.slider:prelight:active,
+
 GtkScrollbar.button:prelight:active {
     background-image: none;
-    border-color: @theme_selected_bg_color;
+}
+
+GtkScrollbar.button:insensitive {
+    background-color: lighter (@theme_bg_color);
 }
 
 /* Buttons */
