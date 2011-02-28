@@ -479,10 +479,10 @@ column-header {
 }
 
 /* Top of window toolbars */
-NautilusToolbar > .toolbar,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > .toolbar, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > .toolbar, /* epiphany */
-GtkWindow > GtkVBox > .toolbar {
+NautilusToolbar > GtkToolbar,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar {
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
@@ -504,7 +504,7 @@ GtkWindow > GtkVBox > .toolbar {
 }
 
 NautilusToolbar > GtkToolbar .button,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button,
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button,
 GtkWindow > GtkVBox > GtkToolbar .button {
     border-style: none;
     border-width: 0;
@@ -514,7 +514,7 @@ GtkWindow > GtkVBox > GtkToolbar .button {
 }
 
 NautilusToolbar > GtkToolbar .button:hover,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:hover,
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:hover,
 GtkWindow > GtkVBox > GtkToolbar .button:hover {
     border-style: none;
     border-width: 0;
@@ -525,12 +525,12 @@ GtkWindow > GtkVBox > GtkToolbar .button:hover {
 			             to (alpha (@theme_base_color, 0.0)));
 }
 
-.toolbar *:insensitive {
+GtkToolbar *:insensitive {
     color: alpha (@theme_fg_color, 0.6);
 }
 
 NautilusToolbar > GtkToolbar .button:active,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active,
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active,
 GtkWindow > GtkVBox > GtkToolbar .button:active {
     border-style: none;
     border-width: 0;
@@ -542,7 +542,7 @@ GtkWindow > GtkVBox > GtkToolbar .button:active {
 }
 
 NautilusToolbar > GtkToolbar .button:active:prelight,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active:prelight,
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active:prelight,
 GtkWindow > GtkVBox > GtkToolbar .button:active:prelight {
     border-style: none;
     border-width: 0;
@@ -552,7 +552,7 @@ GtkWindow > GtkVBox > GtkToolbar .button:active:prelight {
 			             to (alpha (shade (@toolbar_gradient_base, 1.14), 0.0)));    
 }
 
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar > GtkSeparatorToolItem,
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar > GtkSeparatorToolItem,
 GtkWindow > GtkVBox > GtkToolbar > GtkSeparatorToolItem {
     background-color: shade (@theme_bg_color, 0.56);
     background-image: none;
