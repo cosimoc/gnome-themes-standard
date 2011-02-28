@@ -1,9 +1,9 @@
 [X-GNOME-Metatheme]
-_Name=Adwaita Low Contrast
+_Name=Low Contrast
 Type=X-GNOME-Metatheme
-_Comment=Low contrast variant of Adwaita
+_Comment=Low contrast theme
 Encoding=UTF-8
-GtkTheme=AdwaitaLowContrast
+GtkTheme=LowContrast
 MetacityTheme=Adwaita
 IconTheme=gnome
 CursorTheme=Adwaita
