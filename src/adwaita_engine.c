@@ -94,38 +94,35 @@ adwaita_engine_render_arrow (GtkThemingEngine *engine,
 			     gdouble	       y,
 			     gdouble	       size)
 {
-	double arrow_width;
-	double arrow_height;
-	double line_width_2;
+	double line_width;
 	GtkStateFlags state;
 	GdkRGBA color;
 
 	cairo_save (cr);
 
-	arrow_width = MIN (size * 2.0 + MAX (1.0, ceil (size * 2.0 / 6.0 * 2.0) / 2.0) / 2.0, size);
-	line_width_2 = MAX (1.0, ceil (arrow_width / 6.0 * 2.0) / 2.0) / 2.0;
-	arrow_height = arrow_width / 2.0 + line_width_2;
+        line_width = size / 3.0 / sqrt (2);
+        cairo_set_line_width (cr, line_width);
+        cairo_set_line_join (cr, CAIRO_LINE_JOIN_ROUND);
+        cairo_set_line_cap (cr, CAIRO_LINE_CAP_ROUND);
 
-	cairo_translate (cr, x + size / 2, y + size / 2);
-	cairo_rotate (cr, angle - G_PI);
+        cairo_translate (cr, x + size / 2.0, y + size / 2.0);
+        cairo_rotate (cr, angle - G_PI_2);
+        cairo_translate (cr, size / 4.0, 0);
+ 
+        cairo_scale (cr,
+                     (size / (size + line_width)),
+                     (size / (size + line_width)));
 
-	cairo_translate (cr, 0, - arrow_height / 2);
+        cairo_move_to (cr, -size / 2.0, -size / 2.0);
+        cairo_rel_line_to (cr, size / 2.0, size / 2.0);
+        cairo_rel_line_to (cr, - size / 2.0, size / 2.0);
 
-	cairo_move_to (cr, -arrow_width / 2.0, line_width_2);
-	cairo_line_to (cr, -arrow_width / 2.0 + line_width_2, 0);
-	/* cairo_line_to (cr, 0, arrow_height - line_width_2); */
-	cairo_arc_negative (cr, 0, arrow_height - 2*line_width_2 - 2*line_width_2 * sqrt(2), 2*line_width_2, G_PI_2 + G_PI_4, G_PI_4);
-	cairo_line_to (cr, arrow_width / 2.0 - line_width_2, 0);
-	cairo_line_to (cr, arrow_width / 2.0, line_width_2);
-	cairo_line_to (cr, 0, arrow_height);
-	cairo_close_path (cr);
-
-	state = gtk_theming_engine_get_state (engine);
+        state = gtk_theming_engine_get_state (engine);
 	gtk_theming_engine_get_color (engine, state, &color);
 	gdk_cairo_set_source_rgba (cr, &color);
-	cairo_fill (cr);
-
-	cairo_restore (cr);
+	cairo_stroke (cr);
+        
+        cairo_restore (cr);
 }
 
 static void
