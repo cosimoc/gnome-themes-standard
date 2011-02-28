@@ -233,6 +233,60 @@ adwaita_engine_render_check (GtkThemingEngine *engine,
 }
 
 static void
+adwaita_engine_render_line (GtkThemingEngine *engine,
+                            cairo_t *cr,
+                            gdouble x0,
+                            gdouble y0,
+                            gdouble x1,
+                            gdouble y1)
+{
+  GdkRGBA bg_color;
+  gdouble angle;
+  const GtkWidgetPath *path;
+  GtkStateFlags flags;
+  gint len;
+
+  path = gtk_theming_engine_get_path (engine);
+  flags = gtk_theming_engine_get_state (engine);
+
+  if (!(gtk_widget_path_is_type (path, GTK_TYPE_SEPARATOR_TOOL_ITEM) &&
+        gtk_widget_path_has_parent (path, GTK_TYPE_TOOLBAR)))
+    {
+      GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_line (engine,
+                                                                           cr,
+                                                                           x0, y0,
+                                                                           x1, y1);
+      return;
+    }
+
+  gtk_theming_engine_get_background_color (engine, flags, &bg_color);
+
+  cairo_save (cr);
+
+  angle = atan2 (x1 - x0, y1 - y0);
+  angle = (2 * G_PI) - angle;
+  angle += G_PI / 2;
+
+  cairo_set_line_cap (cr, CAIRO_LINE_CAP_SQUARE);
+  cairo_set_line_width (cr, 1.0);
+
+  cairo_translate (cr, x0, y0);
+  cairo_rotate (cr, angle);
+  
+  x1 -= x0;
+  y1 -= y0;
+
+  len = (gint) sqrt ((x1 * x1) + (y1 * y1));
+
+  gdk_cairo_set_source_rgba (cr, &bg_color);
+  cairo_move_to (cr, 0, -0.5);
+  cairo_line_to (cr, len, -0.5);
+  cairo_stroke (cr);
+
+  cairo_restore (cr);
+}
+
+static void
 adwaita_engine_render_option (GtkThemingEngine *engine,
 			      cairo_t	       *cr,
 			      gdouble		x,
@@ -762,6 +816,7 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 	engine_class->render_arrow = adwaita_engine_render_arrow;
 	engine_class->render_focus = adwaita_engine_render_focus;
 	engine_class->render_check = adwaita_engine_render_check;
+        engine_class->render_line = adwaita_engine_render_line;
 	engine_class->render_option = adwaita_engine_render_option;
 	engine_class->render_extension = adwaita_engine_render_extension;
 	engine_class->render_frame = adwaita_engine_render_frame;
