@@ -49,8 +49,11 @@
 @define-color trough_bg_color_a #ccccc7;
 @define-color trough_bg_color_b #e4e4e1;
 
-@define-color active_trough_bg_color_a shade (@theme_selected_bg_color, 1.29);
-@define-color active_trough_bg_color_b shade (@theme_selected_bg_color, 1.05);
+@define-color active_switch_bg_color_a #509ae7;
+@define-color active_switch_bg_color_b #84b8ee;
+
+@define-color switch_slider_color #eeeeec;
+@define-color switch_slider_border #2a79cb;
 
 @define-color selected_row_bg_color_a #1f72c6;
 @define-color selected_row_bg_color_b shade (@theme_selected_bg_color, 1.22);
@@ -635,7 +638,8 @@ column-header .button {
 }
 
 GtkSwitch.trough {
-    border-radius: 3;
+    color: #888a85;
+    border-radius: 1;
     border-width: 1;
     border-style: solid;
     border-color: shade (@frame_color, 1.22);
@@ -646,11 +650,12 @@ GtkSwitch.trough {
 }
 
 GtkSwitch.trough:active {
-    border-color: shade (@theme_selected_bg_color, 0.935);
+    color: @theme_base_color;
+    border-color: shade (@theme_selected_bg_color, 0.66);
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
-                                     from (@active_trough_bg_color_a),
-                                     to (@active_trough_bg_color_b));
+                                     from (@active_switch_bg_color_a),
+                                     to (@active_switch_bg_color_b));
 }
 
 GtkSwitch.trough:insensitive {
@@ -659,7 +664,32 @@ GtkSwitch.trough:insensitive {
     border-color: shade (@inactive_frame_color, 0.845);
 }
 
-GtkSwitch.slider,
+GtkSwitch.slider {
+    border-width: 1;
+    border-radius: 1;
+    border-color: shade (@frame_color, 1.31);
+    border-style: solid;
+    padding: 2;
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@switch_slider_color),
+                                     color-stop (0.02, @switch_slider_color),
+                                     color-stop (0.03, @theme_base_color),
+                                     color-stop (0.85, @switch_slider_color),
+                                     color-stop (0.86, shade (@switch_slider_color, 1.03)),
+                                     to (shade (@switch_slider_color, 1.03)));
+}
+
+GtkSwitch.slider:active {
+    border-color: @switch_slider_border;
+}
+
+GtkSwitch.slider:insensitive {
+    border-style: none;
+    background-image: none;
+    background-color: @insensitive_bg_color;
+}
+
 GtkScale.slider {
     border-width: 1;
     border-radius: 2;
