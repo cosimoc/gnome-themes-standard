@@ -81,11 +81,10 @@
     -GtkToolButton-icon-spacing: 4;
     -GtkWidget-focus-padding: 2;
 
-    -GtkCheckButton-indicator-size: 14;
-
     -GtkTextView-error-underline-color: @error_color;
 
     -GtkPaned-handle-size: 6;
+    -GtkCheckButton-indicator-size: 16;
 
     /* The size for scrollbars. The slider is 2px smaller, but we keep it
      * up so that the whole area is sensitive to button presses for the
@@ -426,6 +425,7 @@ GtkCheckButton:prelight,
 GtkRadioButton:prelight,
 GtkCheckButton:selected,
 GtkRadioButton:selected {
+    color: shade (@theme_selected_bg_color, 0.84);
     background-color: shade (@theme_bg_color, 1.1);
 }
 
@@ -435,6 +435,7 @@ GtkRadioButton:selected {
 .menu .check, .menu .radio,
 .menu .check:active, .menu .radio:active,
 .menu .check:hover, .menu .radio:hover {
+    color: shade (@theme_selected_bg_color, 0.84);
     border-color: shade (@frame_color, 1.035);
     color: @menu_fg_color;
     background-color: mix (shade (@highlighted_border, 1.345), @theme_base_color, 0.9);

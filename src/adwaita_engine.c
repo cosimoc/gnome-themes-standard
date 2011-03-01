@@ -31,6 +31,8 @@ typedef struct _AdwaitaEngineClass AdwaitaEngineClass;
 struct _AdwaitaEngine
 {
   GtkThemingEngine parent_object;
+
+  GHashTable *assets;
 };
 
 struct _AdwaitaEngineClass
@@ -48,19 +50,75 @@ struct _AdwaitaEngineClass
 GType adwaita_engine_get_type	    (void) G_GNUC_CONST;
 void  adwaita_engine_register_types (GTypeModule *module);
 
-
 G_DEFINE_DYNAMIC_TYPE (AdwaitaEngine, adwaita_engine, GTK_TYPE_THEMING_ENGINE)
 
+typedef struct {
+	gchar *data;
+	gsize length;
+} AssetData;
+
+static void
+asset_data_free (gpointer user_data)
+{
+	AssetData *data = user_data;
+
+	g_free (data->data);
+	g_slice_free (AssetData, data);
+}
+
+static const AssetData *
+cache_asset_data (AdwaitaEngine *self,
+		  const gchar *asset_name)
+{
+	gchar *path, *name;
+	gboolean res;
+	GError *error = NULL;
+	AssetData *asset;
+
+	name = g_strconcat (asset_name, ".svg", NULL);
+	path = g_build_filename (ASSETS_DIR, name, NULL);
+
+	asset = g_slice_new0 (AssetData);
+	res = g_file_get_contents (path, &asset->data, &asset->length, &error);
+
+	if (res) {
+		g_hash_table_insert (self->assets, g_strdup (asset_name), asset);
+	}
+
+	g_free (name);
+	g_free (path);
+
+	return asset;
+}
+
+static const AssetData *
+lookup_asset_data (AdwaitaEngine *self,
+		   const gchar *asset_name)
+{
+	const AssetData *retval;
+
+	retval = g_hash_table_lookup (self->assets, asset_name);
+
+	if (retval != NULL) {
+		return retval;
+	}
+
+	retval = cache_asset_data (self, asset_name);
+
+	return retval;
+}
 
 void
 adwaita_engine_register_types (GTypeModule *module)
 {
-  adwaita_engine_register_type (module);
+	adwaita_engine_register_type (module);
 }
 
 static void
-adwaita_engine_init (AdwaitaEngine *clearlooks_engine)
+adwaita_engine_init (AdwaitaEngine *self)
 {
+	self->assets = g_hash_table_new_full (g_str_hash, g_str_equal,
+					      g_free, asset_data_free);
 }
 
 static void
@@ -159,6 +217,129 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 	gdk_rgba_free (border_color);
 }
 
+static gchar *
+option_asset_name_from_state (GtkStateFlags state)
+{
+	GString *string;
+
+	string = g_string_new ("radio-");
+
+	if (state & GTK_STATE_FLAG_ACTIVE) {
+		g_string_append (string, "selected");
+	} else {
+		g_string_append (string, "unselected");
+	}
+
+	if (state & GTK_STATE_FLAG_INSENSITIVE) {
+		g_string_append (string, "-insensitive");
+	}
+
+	return g_string_free (string, FALSE);
+}
+
+static gchar *
+check_asset_name_from_state (GtkStateFlags state)
+{
+	GString *string;
+
+	string = g_string_new ("checkbox-");
+
+	if (state & GTK_STATE_FLAG_ACTIVE) {
+		g_string_append (string, "checked");
+	} else {
+		g_string_append (string, "unchecked");
+	}
+
+	if (state & GTK_STATE_FLAG_INSENSITIVE) {
+		g_string_append (string, "-insensitive");
+	}
+
+	return g_string_free (string, FALSE);
+}
+
+static gboolean
+render_from_assets_common (GtkThemingEngine *engine,
+			   cairo_t *cr,
+			   const gchar *asset_name,
+			   gdouble x,
+			   gdouble y,
+			   gdouble width,
+			   gdouble height)
+{
+	GdkPixbuf *asset;
+	GInputStream *stream;
+	const AssetData *asset_data;
+	gboolean retval = FALSE;
+
+	asset_data = lookup_asset_data (ADWAITA_ENGINE (engine), asset_name);
+
+	if (asset_data == NULL) {
+		goto out;
+	}
+
+	stream = g_memory_input_stream_new_from_data (asset_data->data, asset_data->length,
+						      NULL);
+	asset = gdk_pixbuf_new_from_stream_at_scale (stream, width, height, TRUE,
+						     NULL, NULL);
+
+	if (asset != NULL) {		      
+		cairo_save (cr);
+
+		cairo_translate (cr, x, y);
+		gdk_cairo_set_source_pixbuf (cr, asset, 0, 0);
+		cairo_rectangle (cr, 0, 0, width, height);
+
+		cairo_fill (cr);
+
+		cairo_restore (cr);
+
+		g_object_unref (asset);
+
+		retval = TRUE;
+	}
+
+	g_object_unref (stream);
+	
+ out:
+	return retval;
+}
+
+static gboolean
+render_check_from_assets (GtkThemingEngine *engine,
+			  cairo_t *cr,
+			  gdouble x,
+			  gdouble y,
+			  gdouble width,
+			  gdouble height)
+{
+	gchar *asset_name;
+	gboolean retval;
+
+	asset_name = check_asset_name_from_state (gtk_theming_engine_get_state (engine));
+	retval = render_from_assets_common (engine, cr, asset_name,
+					    x, y, width, height);
+
+	return retval;
+}
+
+static gboolean
+render_option_from_assets (GtkThemingEngine *engine,
+			   cairo_t *cr,
+			   gdouble x,
+			   gdouble y,
+			   gdouble width,
+			   gdouble height)
+{
+	gchar *asset_name;
+	gboolean retval;
+
+	asset_name = option_asset_name_from_state (gtk_theming_engine_get_state (engine));
+	retval = render_from_assets_common (engine, cr, asset_name,
+					    x, y, width, height);
+
+	return retval;
+}
+
 static void
 adwaita_engine_render_check (GtkThemingEngine *engine,
 			     cairo_t	      *cr,
@@ -172,6 +353,17 @@ adwaita_engine_render_check (GtkThemingEngine *engine,
 	gboolean draw_bullet;
 	GtkStateFlags state;
 	gint radius;
+
+	if (!gtk_theming_engine_has_class (engine,
+					   GTK_STYLE_CLASS_MENUITEM) &&
+	    !gtk_theming_engine_has_class (engine,
+					   GTK_STYLE_CLASS_CELL) &&
+	    render_check_from_assets (engine, cr,
+				      x, y, width, height)) {
+		return;
+	}
+
+	cairo_save (cr);
 
 	state = gtk_theming_engine_get_state (engine);
 	inconsistent = (state & GTK_STATE_FLAG_INCONSISTENT) != 0;
@@ -301,6 +493,15 @@ adwaita_engine_render_option (GtkThemingEngine *engine,
 	gdouble cx, cy, radius;
 	GtkStateFlags state;
 
+	if (!gtk_theming_engine_has_class (engine,
+					   GTK_STYLE_CLASS_MENUITEM) &&
+	    !gtk_theming_engine_has_class (engine,
+					   GTK_STYLE_CLASS_CELL) &&
+	    render_option_from_assets (engine, cr,
+				       x, y, width, height)) {
+		return;
+	}
+	
 	cx = width / 2.0;
 	cy = height / 2.0;
 	radius = MIN (width, height) / 2.0;
