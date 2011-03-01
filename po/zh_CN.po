@@ -1,16 +1,17 @@
 # Chinese (China) translation for gnome-themes-standard.
 # Copyright (C) 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-themes-standard package.
-# Aron Xu <aronxu@gnome.org>, 2010.
+# Aron Xu <aronxu@gnome.org>, 2010, 2011.
+# liuzhen <liuzhen1191@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "themes-standard&component=general\n"
-"POT-Creation-Date: 2010-11-13 23:08+0000\n"
-"PO-Revision-Date: 2010-11-14 13:13+0800\n"
-"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
+"POT-Creation-Date: 2011-02-28 15:48+0000\n"
+"PO-Revision-Date: 2011-03-01 20:21+0800\n"
+"Last-Translator: liuzhen <liuzhen1191@gmail.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,3 +28,27 @@ msgstr "Adwaita"
 #: ../themes/Adwaita/index.theme.in.h:2
 msgid "There is only one"
 msgstr "只有一个"
+
+#: ../themes/AdwaitaLowContrast/index.theme.in.h:1
+msgid "Adwaita Low Contrast"
+msgstr "低对比度 Adwaita"
+
+#: ../themes/AdwaitaLowContrast/index.theme.in.h:2
+msgid "Low contrast variant of Adwaita"
+msgstr ""
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "高对比度"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "高清主题"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr ""
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr ""
