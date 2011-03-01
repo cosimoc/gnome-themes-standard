@@ -50,8 +50,8 @@ themes/Adwaita/cursors/Makefile
 themes/Adwaita/gtk-2.0/Makefile
 themes/Adwaita/gtk-3.0/Makefile
 themes/Adwaita/metacity-1/Makefile
-themes/AdwaitaLowContrast/Makefile
-themes/AdwaitaLowContrast/gtk-3.0/Makefile
+themes/LowContrast/Makefile
+themes/LowContrast/gtk-3.0/Makefile
 themes/HighContrast/Makefile
 themes/HighContrast/gtk-3.0/Makefile
 themes/HighContrastInverse/Makefile
