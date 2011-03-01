@@ -197,6 +197,10 @@ GtkSpinButton.button:active {
     padding: 0;
 }
 
+GtkComboBox {
+    -GtkComboBox-arrow-scaling: 0.5;
+}
+
 GtkFrame,
 GtkCalendar,
 GtkScale {
