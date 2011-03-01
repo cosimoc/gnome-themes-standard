@@ -2,15 +2,16 @@
 # Copyright (C) 2010 gnome-themes-standard's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-themes-standard package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2010.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "themes-standard&component=general\n"
-"POT-Creation-Date: 2010-11-11 07:17+0000\n"
-"PO-Revision-Date: 2010-11-11 17:11+0100\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"POT-Creation-Date: 2011-02-27 19:35+0000\n"
+"PO-Revision-Date: 2011-02-27 22:32+0100\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,3 +29,27 @@ msgstr "Adwaita"
 #: ../themes/Adwaita/index.theme.in.h:2
 msgid "There is only one"
 msgstr "Solo existe uno"
+
+#: ../themes/AdwaitaLowContrast/index.theme.in.h:1
+msgid "Adwaita Low Contrast"
+msgstr "Adwaita de bajo contraste"
+
+#: ../themes/AdwaitaLowContrast/index.theme.in.h:2
+msgid "Low contrast variant of Adwaita"
+msgstr "Variante de Adwaita de bajo contraste"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "Alto contraste"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "Tema de alto contraste"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "Alto contraste invertido"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "Tema del alto contraste invertido"
