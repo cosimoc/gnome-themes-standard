@@ -2,6 +2,6 @@
 # Please keep this file sorted alphabetically.
 themes/Adwaita/backgrounds/adwaita.xml.in.in
 themes/Adwaita/index.theme.in
-themes/AdwaitaLowContrast/index.theme.in
 themes/HighContrast/index.theme.in
 themes/HighContrastInverse/index.theme.in
+themes/LowContrast/index.theme.in
