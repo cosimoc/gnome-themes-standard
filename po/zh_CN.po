@@ -10,8 +10,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "themes-standard&component=general\n"
 "POT-Creation-Date: 2011-02-28 15:48+0000\n"
-"PO-Revision-Date: 2011-03-01 20:21+0800\n"
-"Last-Translator: liuzhen <liuzhen1191@gmail.com>\n"
+"PO-Revision-Date: 2011-03-01 20:24+0800\n"
+"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgstr "低对比度 Adwaita"
 
 #: ../themes/AdwaitaLowContrast/index.theme.in.h:2
 msgid "Low contrast variant of Adwaita"
-msgstr ""
+msgstr "Adwaita 主题的低对比度衍生版"
 
 #: ../themes/HighContrast/index.theme.in.h:1
 msgid "High Contrast"
