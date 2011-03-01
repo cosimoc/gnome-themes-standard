@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "themes-standard&component=general\n"
-"POT-Creation-Date: 2011-02-27 19:35+0000\n"
-"PO-Revision-Date: 2011-02-27 22:32+0100\n"
+"POT-Creation-Date: 2011-03-01 21:19+0000\n"
+"PO-Revision-Date: 2011-03-01 22:22+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -30,14 +30,6 @@ msgstr "Adwaita"
 msgid "There is only one"
 msgstr "Solo existe uno"
 
-#: ../themes/AdwaitaLowContrast/index.theme.in.h:1
-msgid "Adwaita Low Contrast"
-msgstr "Adwaita de bajo contraste"
-
-#: ../themes/AdwaitaLowContrast/index.theme.in.h:2
-msgid "Low contrast variant of Adwaita"
-msgstr "Variante de Adwaita de bajo contraste"
-
 #: ../themes/HighContrast/index.theme.in.h:1
 msgid "High Contrast"
 msgstr "Alto contraste"
@@ -53,3 +45,16 @@ msgstr "Alto contraste invertido"
 #: ../themes/HighContrastInverse/index.theme.in.h:2
 msgid "High contrast inverse theme"
 msgstr "Tema del alto contraste invertido"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+#| msgid "Adwaita Low Contrast"
+msgid "Low Contrast"
+msgstr "Bajo contraste"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+#| msgid "High contrast theme"
+msgid "Low contrast theme"
+msgstr "Tema de bajo contraste"
+
+#~ msgid "Low contrast variant of Adwaita"
+#~ msgstr "Variante de Adwaita de bajo contraste"
