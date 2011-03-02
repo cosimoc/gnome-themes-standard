@@ -63,9 +63,10 @@
 @define-color selected_row_bg_color_a #1f72c6;
 @define-color selected_row_bg_color_b shade (@theme_selected_bg_color, 1.22);
 
-@define-color highlighted_border #8a8f8a;
 @define-color menu_fg_color #2e87e3;
 @define-color menu_items_color #555753;
+@define-color highlighted_border #8a8f8a;
+@define-color internal_element_color #888a85;
 
 @define-color notebook_border #918e8a;
 
@@ -206,10 +207,6 @@ GtkSpinButton.button:active {
     padding: 0;
 }
 
-GtkComboBox {
-    -GtkComboBox-arrow-scaling: 0.5;
-}
-
 GtkFrame,
 GtkCalendar,
 GtkScale {
@@ -254,16 +251,30 @@ GtkScale {
     background-color: @theme_base_color;
 }
 
-/* Scrollbars */
+/**************
+ * ComboBoxes *
+ **************/
+
+GtkComboBox {
+    -GtkComboBox-arrow-scaling: 0.5;
+    -GtkComboBox-shadow-type: 2;
+}
+
+GtkComboBox .button {
+    color: @internal_element_color;
+}
+
+/**************
+ * Scrollbars *
+ **************/
 
 GtkScrollbar {
-    padding: 1; /* ??? */
     background-image: none;
     border-style: solid;
     -GtkRange-trough-border: 2;
     -GtkRange-arrow-scaling: 0.444;
-    -GtkRange-slider-width: 18; /* seems affect the whole width of the scrollbar */
-    -GtkRange-stepper-size: 18; /* height on vertical and width on horizontal siders */
+    -GtkRange-slider-width: 18;
+    -GtkRange-stepper-size: 18;
     -GtkScrollbar-min-slider-length: 30; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 }
 
@@ -361,11 +372,9 @@ GtkScrollbar.button:insensitive {
     border-color: shade (@button_border, 1.10);
 }
 
-GtkStatusbar {
-    padding: 5;
-    color: @theme_fg_color;
-    -GtkStatusbar-shadow-type: none;
-}
+/*********
+ * Menus *
+ *********/
 
 .menubar {
     background-image: -gtk-gradient (linear,
@@ -420,6 +429,11 @@ GtkStatusbar {
     -GtkWidget-separator-height: 7;
 }
 
+/*************************
+ * Check and Radio items *
+ *************************/
+
+/* draw regular check and radio items using our SVG assets */
 .check {
     background-image: url ("assets/checkbox-unchecked.svg");
 }
@@ -464,6 +478,7 @@ GtkStatusbar {
     background-color: mix (shade (@highlighted_border, 1.345), @theme_base_color, 0.9);
 }
 
+/* menu radio and check items are drawn differently */
 .menu .check:active {
     color: @menu_items_color;
 }
@@ -478,6 +493,12 @@ GtkStatusbar {
 
 .menu .radio:prelight {
     color: @selected_fg_color;
+}
+
+GtkStatusbar {
+    padding: 5;
+    color: @theme_fg_color;
+    -GtkStatusbar-shadow-type: none;
 }
 
 .trough {
@@ -670,12 +691,12 @@ column-header .button {
 
 .expander:prelight {
     border-color: shade (@inactive_frame_color, 0.425);
-    background-color: #888a85;
+    background-color: @internal_element_color;
     color: lighter (@theme_bg_color);
 }
 
 GtkSwitch.trough {
-    color: #888a85;
+    color: @internal_element_color;
     border-radius: 1;
     border-width: 1;
     border-style: solid;
