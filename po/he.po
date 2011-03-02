@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-27 23:08+0200\n"
-"PO-Revision-Date: 2011-02-27 23:10+0200\n"
+"POT-Creation-Date: 2011-03-02 20:03+0200\n"
+"PO-Revision-Date: 2011-03-02 20:03+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Gezer (Hebrew) <sh.yaron@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -32,14 +32,6 @@ msgstr "Adwaita"
 msgid "There is only one"
 msgstr "האחד והיחיד"
 
-#: ../themes/AdwaitaLowContrast/index.theme.in.h:1
-msgid "Adwaita Low Contrast"
-msgstr "Adwaita בניגודיות נמוכה"
-
-#: ../themes/AdwaitaLowContrast/index.theme.in.h:2
-msgid "Low contrast variant of Adwaita"
-msgstr "הגוון בניגודיות נמוכה של Adwaita"
-
 #: ../themes/HighContrast/index.theme.in.h:1
 msgid "High Contrast"
 msgstr "ניגודיות גבוהה"
@@ -55,3 +47,14 @@ msgstr "ניגודיות גבוהה הפוכה"
 #: ../themes/HighContrastInverse/index.theme.in.h:2
 msgid "High contrast inverse theme"
 msgstr "ערכת נושא הפוכה עם ניגודיות גבוהה"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "ניגודיות נמוכה"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "ערכת נושא בניגודיות נמוכה"
+
+#~ msgid "Low contrast variant of Adwaita"
+#~ msgstr "הגוון בניגודיות נמוכה של Adwaita"
