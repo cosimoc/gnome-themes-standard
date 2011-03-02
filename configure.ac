@@ -91,6 +91,7 @@ themes/HighContrast/icons/scalable/mimetypes-extra/Makefile
 themes/HighContrast/icons/scalable/places-extra/Makefile
 themes/HighContrast/icons/scalable/status-extra/Makefile
 themes/HighContrastInverse/Makefile
+themes/HighContrastInverse/gtk-2.0/Makefile
 themes/HighContrastInverse/gtk-3.0/Makefile
 src/Makefile
 po/Makefile.in
