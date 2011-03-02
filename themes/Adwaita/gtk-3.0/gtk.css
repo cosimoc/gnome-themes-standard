@@ -42,7 +42,11 @@
 @define-color chrome_fg_color #fff;
 
 @define-color focused_entry_border #579eea;
+
+@define-color button_gradient_color_a #f4f6f4;
+@define-color button_gradient_color_b #d7dad7;
 @define-color button_border #a7aba7;
+@define-color button_active_gradient_color #a2a9a2;
 
 @define-color insensitive_bg_color #f4f4f2;
 @define-color insensitive_fg_color #a7aba7;
@@ -304,7 +308,9 @@ GtkScrollbar.button:insensitive {
     background-color: lighter (@theme_bg_color);
 }
 
-/* Buttons */
+/***********
+ * Buttons *
+ ***********/
 .button {
     padding: 3;
 
@@ -320,31 +326,27 @@ GtkScrollbar.button:insensitive {
 
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
-				     from (shade (@theme_bg_color, 1.06)),
-				     to (shade (@theme_bg_color, 0.95)));
+                                     from (@button_gradient_color_a),
+                                     to (@button_gradient_color_b));
 }
 
-.button:hover {
+.button:hover,
+.toolbar .button:hover {
     border-color: @button_border;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (@theme_base_color),
-				     to (shade (@theme_bg_color, 0.97)));
+				     to (shade (@button_gradient_color_a, 0.94)));
 }
 
-.button:active {
-    background-image: -gtk-gradient (linear,
-    				     left top, left bottom,
-				     from (shade (@theme_bg_color, 0.86)),
-				     to (shade (@theme_bg_color, 1.09)));
-}
-
+.button:active,
+.toolbar .button:active,
 .button:hover:active,
 .toolbar .button:hover:active {
     background-image: -gtk-gradient (linear,
-				     left top, left bottom,
-				     from (shade (@highlighted_border, 1.175)),
-				     to (alpha (shade (@highlighted_border, 0.95), 0.125)));
+    				     left top, left bottom,
+                                     from (@button_active_gradient_color),
+				     to (alpha (shade (@button_active_gradient_color, 0.83), 0.13)));
     border-color: @highlighted_border;
 }
 
@@ -354,19 +356,9 @@ GtkScrollbar.button:insensitive {
     color: @insensitive_fg_color;
 }
 
-.toolbar .button:prelight {
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (shade (@theme_bg_color, 1.035)),
-                                     to (shade (@inactive_frame_color, 1.09)));
-    border-style: solid;
-    border-radius: 3;
-    border-width: 1;
-    border-color: @button_border;
-}
-
 .button.default {
     border-width: 2;
+    border-color: shade (@button_border, 1.10);
 }
 
 GtkStatusbar {
