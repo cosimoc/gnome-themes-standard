@@ -70,20 +70,17 @@ icon_DATA = \
 	image-missing.png \
 	list-add.png \
 	list-remove.png \
-	media-backward.png \
 	media-eject.png \
 	media-floppy.png \
-	media-forward.png \
-	media-next.png \
 	media-optical.png \
-	media-pause.png \
-	media-play.png \
-	media-prev.png \
+	media-playback-pause.png \
+	media-playback-start.png \
+	media-playback-stop.png \
 	media-record.png \
-	media-stop.png \
-	metacity-delete.png \
-	metacity-maximize.png \
-	metacity-minimize.png \
+	media-seek-backward.png \
+	media-seek-forward.png \
+	media-skip-backward.png \
+	media-skip-forward.png \
 	process-stop.png \
 	system-lock-screen.png \
 	system-log-out.png \
