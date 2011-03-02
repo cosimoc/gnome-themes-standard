@@ -1,4 +1,4 @@
-SUBDIRS = gtk-3.0
+SUBDIRS = gtk-3.0 gtk-2.0 icons
 
 THEME_NAME=HighContrast
 THEME_IN_FILES=index.theme.in

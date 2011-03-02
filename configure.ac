@@ -38,6 +38,14 @@ AC_SUBST(GTK_LIBS)
 GTK_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-3.0`
 AC_SUBST(GTK_VERSION)
 
+# Configure option to force placeholders
+AC_ARG_ENABLE([placeholders],
+              AC_HELP_STRING([--enable-placeholders],
+                             [Enable placeholder icons [default=no]]),
+              enable_placeholders=$enableval,
+              enable_placeholders=no)
+AM_CONDITIONAL(PLACEHOLDERS, test "x$enable_placeholders" != "xno")
+
 # Workaround to make aclocal get the right flags
 AC_SUBST(ACLOCAL_AMFLAGS, "\${ACLOCAL_FLAGS}")
 
@@ -54,6 +62,30 @@ themes/LowContrast/Makefile
 themes/LowContrast/gtk-3.0/Makefile
 themes/HighContrast/Makefile
 themes/HighContrast/gtk-3.0/Makefile
+themes/HighContrast/gtk-2.0/Makefile
+themes/HighContrast/icons/Makefile
+themes/HighContrast/icons/48x48/Makefile
+themes/HighContrast/icons/48x48/animations/Makefile
+themes/HighContrast/icons/48x48/stock/Makefile
+themes/HighContrast/icons/scalable/Makefile
+themes/HighContrast/icons/scalable/actions/Makefile
+themes/HighContrast/icons/scalable/apps/Makefile
+themes/HighContrast/icons/scalable/categories/Makefile
+themes/HighContrast/icons/scalable/devices/Makefile
+themes/HighContrast/icons/scalable/emblems/Makefile
+themes/HighContrast/icons/scalable/emotes/Makefile
+themes/HighContrast/icons/scalable/mimetypes/Makefile
+themes/HighContrast/icons/scalable/places/Makefile
+themes/HighContrast/icons/scalable/status/Makefile
+themes/HighContrast/icons/scalable/actions-extra/Makefile
+themes/HighContrast/icons/scalable/apps-extra/Makefile
+themes/HighContrast/icons/scalable/categories-extra/Makefile
+themes/HighContrast/icons/scalable/devices-extra/Makefile
+themes/HighContrast/icons/scalable/emblems-extra/Makefile
+themes/HighContrast/icons/scalable/emotes-extra/Makefile
+themes/HighContrast/icons/scalable/mimetypes-extra/Makefile
+themes/HighContrast/icons/scalable/places-extra/Makefile
+themes/HighContrast/icons/scalable/status-extra/Makefile
 themes/HighContrastInverse/Makefile
 themes/HighContrastInverse/gtk-3.0/Makefile
 src/Makefile
