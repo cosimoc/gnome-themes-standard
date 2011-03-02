@@ -132,30 +132,89 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 			     gdouble	       width,
 			     gdouble	       height)
 {
-	GdkRGBA *fill_color, *border_color;
+	GdkRGBA *fill_color, *border_color = NULL;
+	GdkRGBA *border_gradient_a = NULL, *border_gradient_b = NULL;
+	cairo_matrix_t matrix;
+	cairo_pattern_t *pattern = NULL;
 	GtkStateFlags state;
+	gint line_width, radius;
 
 	state = gtk_theming_engine_get_state (engine);
 	gtk_theming_engine_get (engine, state,
-				"-adwaita-focus-fill-color", &fill_color,
 				"-adwaita-focus-border-color", &border_color,
+				"-adwaita-focus-fill-color", &fill_color,
+				"-adwaita-focus-border-gradient-a", &border_gradient_a,
+				"-adwaita-focus-border-gradient-b", &border_gradient_b,
 				NULL);
 
+	gtk_theming_engine_get_style (engine,
+				      "focus-line-width", &line_width,
+				      NULL);
+
 	cairo_save (cr);
-	cairo_set_line_width (cr, 1);
+	cairo_set_line_width (cr, line_width);
 
-	_cairo_round_rectangle (cr, x + 0.5, y + 0.5, width - 1, height - 1, 3);
+	if (line_width > 1) {
+		_cairo_round_rectangle (cr, x, y,
+					width, height, 1);
+	} else {
+		_cairo_round_rectangle (cr, x + 0.5, y + 0.5,
+					width - 1, height - 1, 2);
+	}
 
-	gdk_cairo_set_source_rgba (cr, fill_color);
-	cairo_fill_preserve (cr);
+	/* if we have a fill color, draw the fill */
+	if (fill_color != NULL) {
+		gdk_cairo_set_source_rgba (cr, fill_color);
+		cairo_fill_preserve (cr);
+	}
 
-	gdk_cairo_set_source_rgba (cr, border_color);
-	cairo_stroke (cr);
+	/* if we have a gradient, draw the gradient, otherwise
+	 * draw the line if we have a color for it.
+	 */
+	if (border_gradient_a != NULL &&
+	    border_gradient_b != NULL) {
+		pattern = cairo_pattern_create_linear (x, y, x, y + height);
+
+		cairo_pattern_add_color_stop_rgba (pattern,
+						   0.0,
+						   border_gradient_a->red,
+						   border_gradient_a->green,
+						   border_gradient_a->blue,
+						   border_gradient_a->alpha);
+
+		cairo_pattern_add_color_stop_rgba (pattern,
+						   1.0,
+						   border_gradient_b->red,
+						   border_gradient_b->green,
+						   border_gradient_b->blue,
+						   border_gradient_b->alpha);
+
+		cairo_set_source (cr, pattern);
+		cairo_stroke (cr);
+
+		cairo_pattern_destroy (pattern);
+	} else if (border_color != NULL) {
+		gdk_cairo_set_source_rgba (cr, border_color);
+		cairo_stroke (cr);
+	}
 
 	cairo_restore (cr);
 
-	gdk_rgba_free (fill_color);
-	gdk_rgba_free (border_color);
+	if (border_gradient_a != NULL) {
+		gdk_rgba_free (border_gradient_a);
+	}
+
+	if (border_gradient_b != NULL) {
+		gdk_rgba_free (border_gradient_b);
+	}
+
+	if (border_color != NULL) {
+		gdk_rgba_free (border_color);
+	}
+
+	if (fill_color != NULL) {
+		gdk_rgba_free (fill_color);
+	}
 }
 
 static gboolean
@@ -973,6 +1032,16 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 					      g_param_spec_boxed ("focus-border-color",
 								  "Focus border color",
 								  "Focus border color",
+								  GDK_TYPE_RGBA, 0));
+	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
+					      g_param_spec_boxed ("focus-border-gradient-a",
+								  "Focus border gradient A",
+								  "Focus border gradient A",
+								  GDK_TYPE_RGBA, 0));
+	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
+					      g_param_spec_boxed ("focus-border-gradient-b",
+								  "Focus border gradient B",
+								  "Focus border gradient B",
 								  GDK_TYPE_RGBA, 0));
 	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
 					      g_param_spec_boxed ("focus-fill-color",

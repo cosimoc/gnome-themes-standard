@@ -35,7 +35,8 @@
 @define-color error_fg_color rgb (166, 38, 38);
 @define-color error_bg_color rgb (237, 54, 54);
 
-@define-color keyboard_focus_color #71acea;
+@define-color keyboard_focus_border_a #a2c9f1;
+@define-color keyboard_focus_border_b #6794cf;
 
 @define-color chrome_bg_color #1e1a17;
 @define-color chrome_fg_color #fff;
@@ -132,9 +133,11 @@
     color: @theme_fg_color;
     border-radius: 3;
 
-    /* Engine settings */
-    -adwaita-focus-fill-color: alpha (@keyboard_focus_color, 0.165);
-    -adwaita-focus-border-color: @keyboard_focus_color;
+    -GtkWidget-focus-line-width: 1;
+    -adwaita-focus-border-color: @keyboard_focus_border_a;
+    -adwaita-focus-fill-color: none;
+    -adwaita-focus-border-gradient-a: none;
+    -adwaita-focus-border-gradient-b: none;
 }
 
 *:hover {
@@ -305,7 +308,12 @@ GtkScrollbar.button:insensitive {
 .button {
     padding: 3;
 
-    border-radius: 3;
+    -adwaita-focus-fill-color: alpha (@theme_base_color, 0.35);
+    -adwaita-focus-border-gradient-a: alpha (@keyboard_focus_border_a, 0.62);
+    -adwaita-focus-border-gradient-b: alpha (@keyboard_focus_border_b, 0.62);
+    -GtkWidget-focus-line-width: 2;
+
+    border-radius: 2;
     border-width: 1;
     border-color: @button_border;
     border-style: solid;
