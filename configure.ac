@@ -59,10 +59,14 @@ themes/Adwaita/gtk-2.0/Makefile
 themes/Adwaita/gtk-3.0/Makefile
 themes/Adwaita/metacity-1/Makefile
 themes/LowContrast/Makefile
+themes/LowContrast/gtk-2.0/Makefile
 themes/LowContrast/gtk-3.0/Makefile
+themes/LowContrast/icons/Makefile
+themes/LowContrast/icons/48x48/Makefile
+themes/LowContrast/icons/48x48/stock/Makefile
 themes/HighContrast/Makefile
-themes/HighContrast/gtk-3.0/Makefile
 themes/HighContrast/gtk-2.0/Makefile
+themes/HighContrast/gtk-3.0/Makefile
 themes/HighContrast/icons/Makefile
 themes/HighContrast/icons/48x48/Makefile
 themes/HighContrast/icons/48x48/animations/Makefile

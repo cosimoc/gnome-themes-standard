@@ -1,4 +1,4 @@
-SUBDIRS = gtk-3.0
+SUBDIRS = gtk-3.0 gtk-2.0 icons
 
 THEME_NAME=LowContrast
 THEME_IN_FILES=index.theme.in
@@ -13,4 +13,3 @@ DISTCLEANFILES = index.theme
 EXTRA_DIST = index.theme.in index.theme
 
 -include $(top_srcdir)/git.mk
-
