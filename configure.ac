@@ -93,6 +93,9 @@ themes/HighContrast/icons/scalable/status-extra/Makefile
 themes/HighContrastInverse/Makefile
 themes/HighContrastInverse/gtk-2.0/Makefile
 themes/HighContrastInverse/gtk-3.0/Makefile
+themes/HighContrastInverse/icons/Makefile
+themes/HighContrastInverse/icons/48x48/Makefile
+themes/HighContrastInverse/icons/48x48/stock/Makefile
 src/Makefile
 po/Makefile.in
 ])
