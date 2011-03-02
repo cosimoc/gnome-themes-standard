@@ -60,6 +60,7 @@
 
 @define-color highlighted_border #8a8f8a;
 @define-color menu_fg_color #2e87e3;
+@define-color menu_items_color #555753;
 
 @define-color notebook_border #918e8a;
 
@@ -84,7 +85,9 @@
     -GtkTextView-error-underline-color: @error_color;
 
     -GtkPaned-handle-size: 6;
+
     -GtkCheckButton-indicator-size: 16;
+    -GtkCheckMenuItem-indicator-size: 12;
 
     /* The size for scrollbars. The slider is 2px smaller, but we keep it
      * up so that the whole area is sensitive to button presses for the
@@ -417,35 +420,64 @@ GtkStatusbar {
     -GtkWidget-separator-height: 7;
 }
 
-GtkCheckButton, GtkRadioButton {
-    background-color: @theme_bg_color;
+.check {
+    background-image: url ("assets/checkbox-unchecked.svg");
 }
 
-GtkCheckButton:prelight,
-GtkRadioButton:prelight,
-GtkCheckButton:selected,
-GtkRadioButton:selected {
-    color: shade (@theme_selected_bg_color, 0.84);
-    background-color: shade (@theme_bg_color, 1.1);
+.check:insensitive {
+    background-image: url ("assets/checkbox-unchecked-insensitive.svg");
 }
 
-.check, .radio,
-.check:active, .radio:active,
-.check:hover, .radio:hover,
-.menu .check, .menu .radio,
-.menu .check:active, .menu .radio:active,
-.menu .check:hover, .menu .radio:hover {
+.check:active {
+    background-image: url ("assets/checkbox-checked.svg");
+}
+
+.check:active:insensitive {
+    background-image: url ("assets/checkbox-checked-insensitive.svg");
+}
+
+.check:inconsistent {
+    background-image: url ("assets/checkbox-mixed.svg");
+}
+
+.radio {
+    background-image: url ("assets/radio-unselected.svg");
+}
+
+.radio:insensitive {
+    background-image: url ("assets/radio-unselected-insensitive.svg");
+}
+
+.radio:active {
+    background-image: url ("assets/radio-selected.svg");
+}
+
+.radio:active:insensitive {
+    background-image: url ("assets/radio-selected-insensitive.svg");
+}
+
+.radio:inconsistent {
+    /* FIXME: need an asset for this */
+    background-image: none;
     color: shade (@theme_selected_bg_color, 0.84);
     border-color: shade (@frame_color, 1.035);
-    color: @menu_fg_color;
     background-color: mix (shade (@highlighted_border, 1.345), @theme_base_color, 0.9);
 }
 
-.check:insensitive,
-.radio:insensitive {
-    border-color: shade (@inactive_frame_color, 1.06);
-    background-color: shade (@highlighted_border, 1.345);
-    color: shade (#d3d7cf, 0.9);
+.menu .check:active {
+    color: @menu_items_color;
+}
+
+.menu .radio:active {
+    color: @menu_items_color;
+}
+
+.menu .check:prelight {
+    color: @selected_fg_color;
+}
+
+.menu .radio:prelight {
+    color: @selected_fg_color;
 }
 
 .trough {

@@ -1,3 +1,4 @@
+/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*- */
 /* Adwaita - a GTK+ engine
  *
  * Copyright (C) 2011 Carlos Garnacho <carlosg@gnome.org>
@@ -31,8 +32,6 @@ typedef struct _AdwaitaEngineClass AdwaitaEngineClass;
 struct _AdwaitaEngine
 {
   GtkThemingEngine parent_object;
-
-  GHashTable *assets;
 };
 
 struct _AdwaitaEngineClass
@@ -52,62 +51,6 @@ void  adwaita_engine_register_types (GTypeModule *module);
 
 G_DEFINE_DYNAMIC_TYPE (AdwaitaEngine, adwaita_engine, GTK_TYPE_THEMING_ENGINE)
 
-typedef struct {
-	gchar *data;
-	gsize length;
-} AssetData;
-
-static void
-asset_data_free (gpointer user_data)
-{
-	AssetData *data = user_data;
-
-	g_free (data->data);
-	g_slice_free (AssetData, data);
-}
-
-static const AssetData *
-cache_asset_data (AdwaitaEngine *self,
-		  const gchar *asset_name)
-{
-	gchar *path, *name;
-	gboolean res;
-	GError *error = NULL;
-	AssetData *asset;
-
-	name = g_strconcat (asset_name, ".svg", NULL);
-	path = g_build_filename (ASSETS_DIR, name, NULL);
-
-	asset = g_slice_new0 (AssetData);
-	res = g_file_get_contents (path, &asset->data, &asset->length, &error);
-
-	if (res) {
-		g_hash_table_insert (self->assets, g_strdup (asset_name), asset);
-	}
-
-	g_free (name);
-	g_free (path);
-
-	return asset;
-}
-
-static const AssetData *
-lookup_asset_data (AdwaitaEngine *self,
-		   const gchar *asset_name)
-{
-	const AssetData *retval;
-
-	retval = g_hash_table_lookup (self->assets, asset_name);
-
-	if (retval != NULL) {
-		return retval;
-	}
-
-	retval = cache_asset_data (self, asset_name);
-
-	return retval;
-}
-
 void
 adwaita_engine_register_types (GTypeModule *module)
 {
@@ -117,8 +60,6 @@ adwaita_engine_register_types (GTypeModule *module)
 static void
 adwaita_engine_init (AdwaitaEngine *self)
 {
-	self->assets = g_hash_table_new_full (g_str_hash, g_str_equal,
-					      g_free, asset_data_free);
 }
 
 static void
@@ -217,127 +158,87 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 	gdk_rgba_free (border_color);
 }
 
-static gchar *
-option_asset_name_from_state (GtkStateFlags state)
-{
-	GString *string;
-
-	string = g_string_new ("radio-");
-
-	if (state & GTK_STATE_FLAG_ACTIVE) {
-		g_string_append (string, "selected");
-	} else {
-		g_string_append (string, "unselected");
-	}
-
-	if (state & GTK_STATE_FLAG_INSENSITIVE) {
-		g_string_append (string, "-insensitive");
-	}
-
-	return g_string_free (string, FALSE);
-}
-
-static gchar *
-check_asset_name_from_state (GtkStateFlags state)
-{
-	GString *string;
-
-	string = g_string_new ("checkbox-");
-
-	if (state & GTK_STATE_FLAG_ACTIVE) {
-		g_string_append (string, "checked");
-	} else {
-		g_string_append (string, "unchecked");
-	}
-
-	if (state & GTK_STATE_FLAG_INSENSITIVE) {
-		g_string_append (string, "-insensitive");
-	}
-
-	return g_string_free (string, FALSE);
-}
-
 static gboolean
 render_from_assets_common (GtkThemingEngine *engine,
 			   cairo_t *cr,
-			   const gchar *asset_name,
 			   gdouble x,
 			   gdouble y,
 			   gdouble width,
 			   gdouble height)
 {
-	GdkPixbuf *asset;
-	GInputStream *stream;
-	const AssetData *asset_data;
 	gboolean retval = FALSE;
+	GtkStateFlags state;
+	GValue value = { 0, };
+	cairo_pattern_t *asset = NULL;
+	cairo_surface_t *surface = NULL;
 
-	asset_data = lookup_asset_data (ADWAITA_ENGINE (engine), asset_name);
+	state = gtk_theming_engine_get_state (engine);
+	gtk_theming_engine_get_property (engine,
+					 "background-image",
+					 state,
+					 &value);
 
-	if (asset_data == NULL) {
-		goto out;
+	asset = g_value_dup_boxed (&value);
+	g_value_unset (&value);
+
+	if (asset != NULL) {
+		cairo_pattern_get_surface (asset, &surface);
 	}
 
-	stream = g_memory_input_stream_new_from_data (asset_data->data, asset_data->length,
-						      NULL);
-	asset = gdk_pixbuf_new_from_stream_at_scale (stream, width, height, TRUE,
-						     NULL, NULL);
-
-	if (asset != NULL) {		      
+	if (surface != NULL) {
 		cairo_save (cr);
 
-		cairo_translate (cr, x, y);
-		gdk_cairo_set_source_pixbuf (cr, asset, 0, 0);
-		cairo_rectangle (cr, 0, 0, width, height);
+		cairo_set_source_surface (cr, surface, x, y);
+		cairo_scale (cr,
+			     width / cairo_image_surface_get_width (surface),
+			     height / cairo_image_surface_get_height (surface));
 
-		cairo_fill (cr);
+		cairo_paint (cr);
 
 		cairo_restore (cr);
-
-		g_object_unref (asset);
-
 		retval = TRUE;
 	}
 
-	g_object_unref (stream);
-	
- out:
-	return retval;
-}
-
-static gboolean
-render_check_from_assets (GtkThemingEngine *engine,
-			  cairo_t *cr,
-			  gdouble x,
-			  gdouble y,
-			  gdouble width,
-			  gdouble height)
-{
-	gchar *asset_name;
-	gboolean retval;
-
-	asset_name = check_asset_name_from_state (gtk_theming_engine_get_state (engine));
-	retval = render_from_assets_common (engine, cr, asset_name,
-					    x, y, width, height);
+	if (asset != NULL) {
+		cairo_pattern_destroy (asset);
+	}
 
 	return retval;
 }
 
-static gboolean
-render_option_from_assets (GtkThemingEngine *engine,
-			   cairo_t *cr,
-			   gdouble x,
-			   gdouble y,
-			   gdouble width,
-			   gdouble height)
+static void
+render_check_menuitem (GtkThemingEngine *engine,
+		       cairo_t *cr,
+		       gdouble x,
+		       gdouble y,
+		       gdouble width,
+		       gdouble height)
 {
-	gchar *asset_name;
-	gboolean retval;
+	GdkRGBA color;
+	GtkStateFlags state;
 
-	asset_name = option_asset_name_from_state (gtk_theming_engine_get_state (engine));
-	retval = render_from_assets_common (engine, cr, asset_name,
-					    x, y, width, height);
+	state = gtk_theming_engine_get_state (engine);
+	gtk_theming_engine_get_color (engine, state, &color);
 
-	return retval;
+	if (!(state & GTK_STATE_FLAG_ACTIVE))
+		return;
+
+	cairo_save (cr);
+
+	cairo_translate (cr, x, y);
+
+	cairo_set_line_width (cr, 2.0);
+	cairo_set_line_cap (cr, CAIRO_LINE_CAP_ROUND);
+	cairo_set_line_join (cr, CAIRO_LINE_JOIN_ROUND);
+
+	cairo_move_to (cr, 0.5 + (width * 0.08), (height * 0.67));
+	cairo_line_to (cr, 0.5 + (width * 0.32), (height * 0.90));
+	cairo_line_to (cr, 0.5 + (width * 0.80), (height * 0.33));
+
+	gdk_cairo_set_source_rgba (cr, &color);
+	cairo_stroke (cr);
+
+	cairo_restore (cr);
 }
 
 static void
@@ -354,17 +255,21 @@ adwaita_engine_render_check (GtkThemingEngine *engine,
 	GtkStateFlags state;
 	gint radius;
 
-	if (!gtk_theming_engine_has_class (engine,
-					   GTK_STYLE_CLASS_MENUITEM) &&
-	    !gtk_theming_engine_has_class (engine,
-					   GTK_STYLE_CLASS_CELL) &&
-	    render_check_from_assets (engine, cr,
-				      x, y, width, height)) {
+	if (gtk_theming_engine_has_class (engine,
+					  GTK_STYLE_CLASS_MENUITEM))
+	{
+		render_check_menuitem (engine, cr,
+				       x, y, width, height);
+
 		return;
 	}
 
-	cairo_save (cr);
+	if (render_from_assets_common (engine, cr,
+				       x, y, width, height)) {
+		return;
+	}
 
+	/* fallback to old code path */
 	state = gtk_theming_engine_get_state (engine);
 	inconsistent = (state & GTK_STATE_FLAG_INCONSISTENT) != 0;
 	draw_bullet = (state & GTK_STATE_FLAG_ACTIVE);
@@ -479,6 +384,41 @@ adwaita_engine_render_line (GtkThemingEngine *engine,
 }
 
 static void
+render_radio_menuitem (GtkThemingEngine *engine,
+		       cairo_t *cr,
+		       gdouble x,
+		       gdouble y,
+		       gdouble width,
+		       gdouble height)
+{
+	GdkRGBA color;
+	GtkStateFlags state;
+	double radius;
+
+	state = gtk_theming_engine_get_state (engine);
+
+	if (!(state & GTK_STATE_FLAG_ACTIVE))
+		return;
+
+	gtk_theming_engine_get_color (engine, state, &color);
+
+	radius = MAX (height / 2.0, width / 2.0) * 0.58;
+
+	cairo_save (cr);
+
+	cairo_translate (cr, x + width / 2.0, y + height * 0.67);
+	cairo_arc (cr,
+		   0, 0,
+		   radius,
+		   0, 4 * G_PI);
+
+	gdk_cairo_set_source_rgba (cr, &color);
+	cairo_fill (cr);
+
+	cairo_restore (cr);
+}
+
+static void
 adwaita_engine_render_option (GtkThemingEngine *engine,
 			      cairo_t	       *cr,
 			      gdouble		x,
@@ -493,15 +433,19 @@ adwaita_engine_render_option (GtkThemingEngine *engine,
 	gdouble cx, cy, radius;
 	GtkStateFlags state;
 
-	if (!gtk_theming_engine_has_class (engine,
-					   GTK_STYLE_CLASS_MENUITEM) &&
-	    !gtk_theming_engine_has_class (engine,
-					   GTK_STYLE_CLASS_CELL) &&
-	    render_option_from_assets (engine, cr,
+	if (gtk_theming_engine_has_class (engine,
+					  GTK_STYLE_CLASS_MENUITEM))
+	{
+		render_radio_menuitem (engine, cr, x, y, width, height);
+		return;
+	}
+
+	if (render_from_assets_common (engine, cr,
 				       x, y, width, height)) {
 		return;
 	}
-	
+
+	/* fallback to old code path */
 	cx = width / 2.0;
 	cy = height / 2.0;
 	radius = MIN (width, height) / 2.0;
