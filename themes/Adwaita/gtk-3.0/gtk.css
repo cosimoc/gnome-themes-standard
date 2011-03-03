@@ -116,11 +116,6 @@
     -GtkToolbar-internal-padding: 4;     /* ??? */
     -GtkTreeView-vertical-separator: 0;  /* ??? */
 
-    /* GtkScale slider size */
-    -GtkScale-slider-length: 14;
-    -GtkRange-slider-width: 20;
-
-
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
 
@@ -241,9 +236,48 @@ GtkProgressBar.trough {
     border-color: shade (@inactive_frame_color, 0.925);
 }
 
-GtkFrame,
-GtkCalendar,
+/************
+ * GtkScale *
+ ************/
 GtkScale {
+    -GtkScale-slider-length: 16;
+    -GtkRange-slider-width: 20;
+}
+
+GtkScale.slider {
+    border-width: 1;
+    border-radius: 2;
+    border-color: shade (@internal_element_color, 0.90);
+
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@theme_base_color),
+                                     to (@switch_slider_color));
+}
+
+GtkScale.trough {
+    border-width: 1;
+    border-radius: 2;
+    border-style: solid;
+    border-color: @internal_element_color;
+}
+
+GtkScale.trough.horizontal {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@trough_bg_color_a),
+                                     to (shade (@trough_bg_color_b, 1.20)));
+}
+
+GtkScale.trough.vertical {
+    background-image: -gtk-gradient (linear,
+                                     left top, right top,
+                                     from (@trough_bg_color_a),
+                                     to (shade (@trough_bg_color_b, 1.20)));
+}
+
+GtkFrame,
+GtkCalendar {
     padding: 2;
 }
 
@@ -821,20 +855,6 @@ GtkSwitch.slider:insensitive {
     border-style: none;
     background-image: none;
     background-color: @insensitive_bg_color;
-}
-
-GtkScale.slider {
-    border-width: 1;
-    border-radius: 2;
-    border-color: shade (@frame_color, 1.31);
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (shade (@frame_color, 1.72)),
-                                     to (@theme_base_color));
-}
-
-GtkScale.trough {
-    border-radius: 3;
 }
 
 /* Calendars */
