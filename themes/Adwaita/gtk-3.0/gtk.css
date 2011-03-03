@@ -524,11 +524,7 @@ GtkScrollbar.button:insensitive {
 .radio:inconsistent,
 .radio row:selected:inconsistent,
 .radio row:selected:focused:inconsistent {
-    /* FIXME: need an asset for this */
-    background-image: none;
-    color: shade (@theme_selected_bg_color, 0.84);
-    border-color: shade (@frame_color, 1.035);
-    background-color: mix (shade (@highlighted_border, 1.345), @theme_base_color, 0.9);
+    background-image: url ("assets/radio-mixed.svg");
 }
 
 GtkStatusbar {

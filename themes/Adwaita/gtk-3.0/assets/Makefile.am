@@ -8,6 +8,7 @@ assets_DATA = 		\
 	radio-selected.svg \
 	radio-selected-insensitive.svg \
 	radio-unselected.svg \
-	radio-unselected-insensitive.svg
+	radio-unselected-insensitive.svg \
+	radio-mixed.svg
 
 EXTRA_DIST = $(assets_DATA)
