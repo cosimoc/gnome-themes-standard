@@ -276,7 +276,7 @@ GtkComboBox .button {
  * Scrollbars *
  **************/
 
-GtkScrollbar {
+.scrollbar {
     background-image: none;
     border-style: solid;
     -GtkRange-trough-border: 2;
@@ -286,45 +286,53 @@ GtkScrollbar {
     -GtkScrollbar-min-slider-length: 30; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 }
 
-GtkScrollbar.trough {
+.scrollbar.trough {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.882);
     border-width: 0;
     border-radius: 0;
 }
 
-GtkScrollbar.slider, GtkScrollbar.button {
+.scrollbar.slider,
+.scrollbar.button {
     background-image: none;
-    background-color: lighter (@theme_bg_color);
+    background-color: @theme_base_color;
     border-color: @button_border;
     border-radius: 3;
     border-width: 1;
 }
 
-GtkScrollbar.slider:prelight {
+.scrollbar.slider:prelight {
     background-image: none;
-    background-color: lighter (@theme_bg_color);
+    background-color: @theme_base_color;
     border-color: shade (@highlighted_border, 0.964);
 }
 
-GtkScrollbar.slider:prelight:active {
+.scrollbar.slider:prelight:active {
     background-image: none;
+    background-color: @theme_base_color;
     border-color: @theme_selected_bg_color;
 }
 
-
-GtkScrollbar.button:prelight {
-    background-image: none;
-    background-color: lighter (@theme_bg_color);
+.scrollbar.button {
+    color: @internal_element_color;
 }
 
-
-GtkScrollbar.button:prelight:active {
+.scrollbar.button:prelight {
     background-image: none;
+    background-color: @theme_base_color;
+    border-color: shade (@highlighted_border, 0.964)
 }
 
-GtkScrollbar.button:insensitive {
-    background-color: lighter (@theme_bg_color);
+.scrollbar.button:prelight:active {
+    background-image: none;
+    background-color: @theme_base_color;
+    border-color: shade (@highlighted_border, 0.964)
+}
+
+.scrollbar.button:insensitive {
+    color: lighter (@internal_element_color);
+    background-color: @theme_base_color;
 }
 
 /***********
