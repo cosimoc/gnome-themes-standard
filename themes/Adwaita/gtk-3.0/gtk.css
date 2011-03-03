@@ -576,7 +576,7 @@ column-header {
     border-style: solid;
     border-color: darker (@theme_bg_color);
     border-width: 1;
-    border-radius: 3;
+    border-radius: 0;
     padding: 1;
 }
 
@@ -587,6 +587,14 @@ column-header {
 /********************
  * Primary Toolbars *
  ********************/
+
+/* special case EggEditableToolbar, so to disable its border */
+EggEditableToolbar .toolbar {
+    border-style: none;
+    border-width: 0;
+    border-radius: 0;
+}
+
 .primary-toolbar {
     background-image: -gtk-gradient (linear,
 				     left top,
@@ -612,6 +620,10 @@ column-header {
 .primary-toolbar:insensitive {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.97);
+
+    border-style: solid;
+    border-width: 1;
+    border-color: shade (@theme_bg_color, 0.91);
 }
 
 .primary-toolbar .button {
@@ -619,12 +631,19 @@ column-header {
     border-width: 0;
     background-image: none;
     background-color: alpha (@theme_base_color, 0.0);
+
     -GtkWidget-focus-line-width: 0;
+    -adwaita-focus-fill-color: none;
+    -adwaita-focus-border-gradient-a: none;
+    -adwaita-focus-border-gradient-b: none;
 }
 
 .primary-toolbar .button:insensitive {
+    border-style: none;
+    border-width: 0;
     background-image: none;
-    background-color: shade (@theme_bg_color, 0.97);
+    background-color: alpha (@theme_base_color, 0.0);
+    -GtkWidget-focus-line-width: 0;
 }
 
 .primary-toolbar .button:hover {
