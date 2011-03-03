@@ -70,7 +70,8 @@
 @define-color highlighted_border #8a8f8a;
 @define-color internal_element_color #888a85;
 
-@define-color notebook_border #918e8a;
+@define-color notebook_border #a6a6a6;
+@define-color notebook_active_tab_border #1372d3;
 
 @define-color toolbar_gradient_base #aaaa9e;
 @define-color toolbar_gradient_step1 #bcbcb4;
@@ -230,26 +231,33 @@ GtkScale {
     background-color: @theme_selected_bg_color;
 }
 
-/* Notebooks/Tabs */
-
+/*****************
+ * Notebooks and *
+ * tabs          *
+ *****************/
 .notebook {
-    -adwaita-selected-tab-color: shade (@theme_selected_bg_color, 1.33);
     background-color: shade (@theme_bg_color, 1.12);
     border-color: @notebook_border;
     padding: 2;
     border-style: solid;
     border-radius: 0;
-    -GtkNotebook-tab-overlay: 10;
-    -GtkNotebook-tab-curvature: 5;
+    -GtkNotebook-tab-overlap: 6;
+    -GtkNotebook-tab-curvature: 6;
 }
 
 .notebook tab {
-    padding: 3;
-    border-radius: 2;
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@theme_base_color),
+                                     to (@switch_slider_color));
 }
 
 .notebook tab:active {
+    -adwaita-selected-tab-color: #8dc0f3;
+    -adwaita-notebook-border-color: @notebook_border;
+    border-color: @notebook_active_tab_border;
     background-color: @theme_base_color;
+    background-image: none;
 }
 
 /**************
