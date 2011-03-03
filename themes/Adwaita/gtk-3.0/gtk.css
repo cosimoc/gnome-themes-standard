@@ -64,7 +64,6 @@
 @define-color selected_row_bg_color_b shade (@theme_selected_bg_color, 1.22);
 
 @define-color menu_fg_color #2e87e3;
-@define-color menu_bg_color #729fcf;
 @define-color menu_controls_color #555753;
 
 @define-color highlighted_border #8a8f8a;
@@ -428,12 +427,12 @@ GtkScrollbar.button:insensitive {
 
 .menuitem:active,
 .menuitem:prelight {
-    background-color: @menu_bg_color;
+    background-color: @selected_bg_color;
     color: @theme_selected_fg_color;
     border-style: solid;
     border-width: 1;
     border-radius: 1;
-    border-color: darker (@menu_bg_color);
+    border-color: darker (@selected_bg_color);
 }
 
 .menu .separator {
