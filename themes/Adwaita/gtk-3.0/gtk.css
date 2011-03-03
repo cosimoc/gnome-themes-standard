@@ -146,6 +146,9 @@
     -adwaita-focus-border-gradient-b: none;
 }
 
+/***************
+ * Base States *
+ ***************/
 *:hover {
     background-color: shade (@theme_bg_color, 1.02);
     color: @theme_fg_color;
@@ -171,21 +174,18 @@
 }
 
 .background {
-    /* I like this huge gradient, but probably it would be better
-    to have a fixed height gradient, not sure.*/
-    /*background-image: -gtk-gradient (linear,
-				     left top, left bottom,
-				     from (shade (@theme_bg_color, 0.94)),
-				     to (@theme_bg_color)); */
     border-style: none;
     border-width: 0;
     border-radius: 0;
 }
 
-/* Text Entries */
+/****************
+ * Text Entries *
+ ****************/
 .entry, .toolbar .entry {
     background-color: @theme_base_color;
     background-image: none;
+
     border-color: @focused_entry_border;
     border-radius: 3;
     border-width: 1;
