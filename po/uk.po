@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-16 09:43+0200\n"
-"PO-Revision-Date: 2011-02-16 09:45+0300\n"
+"POT-Creation-Date: 2011-03-03 10:48+0200\n"
+"PO-Revision-Date: 2011-03-03 10:51+0300\n"
 "Last-Translator: Korostil Daniel <ted.korostiled@gmail.com>\n"
 "Language-Team: translation@linux.org.ua\n"
 "Language: uk\n"
@@ -29,3 +29,27 @@ msgstr "Адвайта"
 #: ../themes/Adwaita/index.theme.in.h:2
 msgid "There is only one"
 msgstr "Існує лише одна"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "Висока контрастність"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "Теми високої контрастності"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "Обернена висока контрастність"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "Тема оберненої високої контрастності"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "Низька контрастність"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "Тема низької контрастності"
