@@ -178,6 +178,12 @@
     border-radius: 0;
 }
 
+.tooltip {
+    padding: 4 4;
+    background-color: @theme_tooltip_bg_color;
+    color: @theme_tooltip_fg_color;
+}
+
 /****************
  * Text Entries *
  ****************/
@@ -611,22 +617,6 @@ GtkComboBox .button {
     background-image: url ("assets/radio-mixed.svg");
 }
 
-GtkStatusbar {
-    padding: 5;
-    color: @theme_fg_color;
-    -GtkStatusbar-shadow-type: none;
-}
-
-column-header {
-    padding: 1 2;
-}
-
-.tooltips {
-    padding: 4 4;
-    background-color: @theme_tooltip_bg_color;
-    color: @theme_tooltip_fg_color;
-}
-
 /************
  * Toolbars *
  ************/
@@ -744,76 +734,9 @@ EggEditableToolbar .toolbar {
     -GtkWidget-separator-width: 1;
 }
 
-GtkScrolledWindow.frame {
-    border-style: solid;
-    border-color: darker (@theme_bg_color);
-    border-width: 1;
-    border-radius: 3;
-    padding: 1;
-}
-
-GtkViewport,
-GtkTreeView,
-GtkIconView {
-    border-radius: 3;
-    padding: 0;
-}
-
-GtkTreeView * {
-    border-radius: 0;
-    border-width: 0;
-}
-
-.view {
-    background-color: @theme_base_color;
-    color: @theme_fg_color;
-    border-radius: 0;
-}
-
-row:selected:focused {
-    background-image: -gtk-gradient (linear,
-				     left top,
-				     left bottom,
-                                     from (@selected_row_bg_color_a),
-                                     color-stop (0.05, @selected_row_bg_color_a),
-                                     color-stop (0.05, @selected_row_bg_color_b),
-                                     to (@selected_row_bg_color_a));
-}
-
-row:selected {
-    background-image: -gtk-gradient (linear,
-				     left top,
-				     left bottom,
-                                     from (mix (@selected_row_bg_color_a, @theme_bg_color, 0.8)),
-                                     color-stop (0.05, mix (@selected_row_bg_color_a, @theme_bg_color, 0.8)),
-                                     color-stop (0.05, mix (@selected_row_bg_color_b, @theme_bg_color, 0.8)),
-                                     to (mix (@selected_row_bg_color_a, @theme_bg_color, 0.8)));
-}
-
-column-header .button {
-    border-width: 0;
-    border-radius: 0;
-    border-color: shade (@inactive_frame_color, 0.935);
-    background-image: -gtk-gradient (linear,
-                                     left top,
-                                     left bottom,
-                                     from (shade (@theme_bg_color, 1.04)),
-                                     to (shade (@theme_bg_color, 0.89)));
-}
-
-.expander,
-.expander:active {
-    border-color: #797b76;
-    background-color: shade (@theme_bg_color, 1.035);
-    color: shade (@theme_selected_bg_color, 1.02);
-}
-
-.expander:prelight {
-    border-color: shade (@inactive_frame_color, 0.425);
-    background-color: @internal_element_color;
-    color: lighter (@theme_bg_color);
-}
-
+/*************
+ * GtkSwitch *
+ *************/
 GtkSwitch.trough {
     color: @internal_element_color;
     border-radius: 1;
@@ -865,6 +788,85 @@ GtkSwitch.slider:insensitive {
     border-style: none;
     background-image: none;
     background-color: @insensitive_bg_color;
+}
+
+GtkStatusbar {
+    padding: 5;
+    color: @theme_fg_color;
+    -GtkStatusbar-shadow-type: none;
+}
+
+GtkScrolledWindow.frame {
+    border-style: solid;
+    border-color: darker (@theme_bg_color);
+    border-width: 1;
+    border-radius: 3;
+    padding: 1;
+}
+
+GtkViewport,
+GtkIconView {
+    border-radius: 3;
+    padding: 0;
+}
+
+.view {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+    border-radius: 0;
+}
+
+GtkTreeView {
+    border-radius: 3;
+    border-width: 0;
+}
+
+column-header {
+    padding: 1 2;
+}
+
+row:selected:focused {
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+                                     from (@selected_row_bg_color_a),
+                                     color-stop (0.05, @selected_row_bg_color_a),
+                                     color-stop (0.05, @selected_row_bg_color_b),
+                                     to (@selected_row_bg_color_a));
+}
+
+row:selected {
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+                                     from (mix (@selected_row_bg_color_a, @theme_bg_color, 0.8)),
+                                     color-stop (0.05, mix (@selected_row_bg_color_a, @theme_bg_color, 0.8)),
+                                     color-stop (0.05, mix (@selected_row_bg_color_b, @theme_bg_color, 0.8)),
+                                     to (mix (@selected_row_bg_color_a, @theme_bg_color, 0.8)));
+}
+
+column-header .button {
+    border-width: 0;
+    border-radius: 0;
+    border-color: shade (@inactive_frame_color, 0.935);
+    background-image: -gtk-gradient (linear,
+                                     left top,
+                                     left bottom,
+                                     from (shade (@theme_bg_color, 1.04)),
+                                     to (shade (@theme_bg_color, 0.89)));
+}
+
+.expander,
+.expander:active {
+    border-color: #797b76;
+    background-color: shade (@theme_bg_color, 1.035);
+    color: shade (@theme_selected_bg_color, 1.02);
+}
+
+.expander:prelight {
+    border-color: shade (@inactive_frame_color, 0.425);
+    background-color: @internal_element_color;
+    color: lighter (@theme_bg_color);
 }
 
 /* Calendars */
