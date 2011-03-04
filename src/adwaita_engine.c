@@ -821,7 +821,7 @@ adwaita_engine_render_frame (GtkThemingEngine *engine,
 		GdkRGBA color;
 
 		if ((flags & GTK_REGION_LAST) != 0)
-			return;
+                        goto out;
 
 		/* Column header */
 		if (gtk_theming_engine_get_direction (engine) == GTK_TEXT_DIR_RTL)
@@ -886,6 +886,7 @@ adwaita_engine_render_frame (GtkThemingEngine *engine,
 										      width, height);
 	}
 
+out:
 	cairo_restore (cr);
 }
 
