@@ -2,6 +2,7 @@
 /* Adwaita - a GTK+ engine
  *
  * Copyright (C) 2011 Carlos Garnacho <carlosg@gnome.org>
+ * Copyright (C) 2011 Red Hat, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,6 +17,9 @@
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ *
+ * Authors: Carlos Garnacho <carlosg@gnome.org>
+ *          Cosimo Cecchi <cosimoc@gnome.org>
  *
  * Project contact: <gnome-themes-list@gnome.org>
  */
