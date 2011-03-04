@@ -1104,8 +1104,8 @@ draw_round_slider (cairo_t *cr,
 		   gdouble  width,
 		   gdouble  height)
 {
-	cairo_arc (cr, (width)/ 2.0, (height)/ 2.0,
-		   MIN (height / 2.0, width / 2.0),
+	cairo_arc (cr, (width) / 2.0, (height) / 2.0,
+		   MIN (height / 2.0, width / 2.0) - 0.5,
 		   0, 2 * G_PI);
 	cairo_close_path (cr);	
 }
@@ -1121,18 +1121,18 @@ draw_mark_slider (cairo_t *cr,
 
 	if (marks_below) {
 		if (orientation == GTK_ORIENTATION_HORIZONTAL) {
-			cairo_move_to (cr, 0, height / 2.0);
-			cairo_arc (cr, 2.5, 2.5,
+			cairo_move_to (cr, 0, height / 2.0 + 3.0);
+			cairo_arc (cr, 2.5, 3.5,
 				   2.0,
 				   G_PI, G_PI + G_PI_2);
 			
-			cairo_arc (cr, width - 2.5, 2.5,
+			cairo_arc (cr, width - 2.5, 3.5,
 				   2.0,
 				   G_PI + G_PI_2, 2 * G_PI);
 
-			cairo_line_to (cr, width, height / 2.0);
+			cairo_line_to (cr, width, height / 2.0 + 3.0);
 			cairo_line_to (cr, width / 2.0, height);
-			cairo_line_to (cr, 0, height / 2.0);
+			cairo_line_to (cr, 0, height / 2.0 + 3.0);
 
 			cairo_close_path (cr);
 		} else {
@@ -1153,18 +1153,18 @@ draw_mark_slider (cairo_t *cr,
 		}
 	} else {
 		if (orientation == GTK_ORIENTATION_HORIZONTAL) {
-			cairo_move_to (cr, width, height / 2.0);
-			cairo_arc (cr, width - 2.5, height - 2.5,
+			cairo_move_to (cr, width, height / 2.0 - 3.0);
+			cairo_arc (cr, width - 2.5, height - 3.5,
 				   2.0,
 				   0, G_PI_2);
 
-			cairo_arc (cr, 2.5, height - 2.5,
+			cairo_arc (cr, 2.5, height - 3.5,
 				   2.0,
 				   G_PI_2, G_PI);
 
-			cairo_line_to (cr, 0, height / 2.0);
+			cairo_line_to (cr, 0, height / 2.0 - 3.0);
 			cairo_line_to (cr, width / 2.0, 0);
-			cairo_line_to (cr, width, height / 2.0);
+			cairo_line_to (cr, width, height / 2.0 - 3.0);
 
 			cairo_close_path (cr);
 		} else {
@@ -1238,17 +1238,24 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 		cairo_fill_preserve (cr);
 
 		gtk_theming_engine_get_border_color (engine, state, &color);
-		border_pattern = cairo_pattern_create_linear (0, 0, 0, height);
+
+		if (orientation == GTK_ORIENTATION_HORIZONTAL) {
+			border_pattern = cairo_pattern_create_linear (0, 0, 0, height);
+		} else {
+			border_pattern = cairo_pattern_create_linear (width, 0, 0, 0);
+		}
+
 		cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
+
 		cairo_pattern_add_color_stop_rgba (border_pattern,
-						   0.0,
+						   marks_above ? 0.0 : 1.0,
 						   color.red / shade_factor,
 						   color.green / shade_factor,
 						   color.blue / shade_factor,
 						   color.alpha);
 
 		cairo_pattern_add_color_stop_rgba (border_pattern,
-						   1.0,
+						   marks_above ? 1.0 : 0.0,
 						   color.red,
 						   color.green,
 						   color.blue,
