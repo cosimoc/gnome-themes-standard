@@ -315,7 +315,7 @@ GtkCalendar {
     border-width: 1;
     border-radius: 0;
 
-    padding: 1;
+    padding: 2;
 
     -GtkNotebook-tab-overlap: 6;
     -GtkNotebook-tab-curvature: 6;
@@ -831,9 +831,8 @@ GtkStatusbar {
 GtkScrolledWindow.frame {
     border-style: solid;
     border-color: darker (@theme_bg_color);
-    border-width: 0;
+    border-width: 1;
     border-radius: 3;
-    padding: 1;
 }
 
 GtkViewport,
