@@ -186,6 +186,7 @@
 
 .tooltip {
     padding: 4 4;
+    border-style: none;
     background-color: @theme_tooltip_bg_color;
     color: @theme_tooltip_fg_color;
 }
