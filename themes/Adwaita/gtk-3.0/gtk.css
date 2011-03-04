@@ -124,6 +124,9 @@
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkHTML-link-color: @link_color;
 
+    -GtkWidget-wide-separators: 1;
+    -GtkWidget-separator-height: 1;
+
     -WnckTasklist-fade-overlay-rect: 0;
 
     -GtkEntry-inner-border: 2;
@@ -535,8 +538,6 @@ GtkComboBox .button {
     border-color: @inactive_frame_color;
 
     -GtkSeparatorMenuItem-horizontal-padding: 0;
-    -GtkWidget-wide-separators: 1;
-    -GtkWidget-separator-height: 1;
 }
 
 /* menu radio and check items are drawn differently */
@@ -761,9 +762,6 @@ GtkWindow > GtkVBox > GtkToolbar .separator {
     border-width: 1;
 
     background-image: none;
-
-    -GtkWidget-wide-separators: 1;
-    -GtkWidget-separator-width: 1;
 }
 
 /*************
