@@ -67,6 +67,9 @@
 @define-color progressbar_background_b #76b0ec;
 @define-color progressbar_border #3277bf;
 
+@define-color scale_fill_a #2c85e2;
+@define-color scale_fill_b #b8d6f5;
+
 @define-color menu_fg_color #2e87e3;
 @define-color menu_controls_color #555753;
 
@@ -251,11 +254,12 @@ GtkProgressBar.trough {
 GtkScale {
     -GtkScale-slider-length: 16;
     -GtkRange-slider-width: 20;
+    -GtkRange-trough-border: 0;
 }
 
 GtkScale.slider {
     border-width: 1;
-    border-radius: 2;
+    border-radius: 3;
     border-color: shade (@internal_element_color, 0.90);
 
     background-image: -gtk-gradient (linear,
@@ -283,6 +287,18 @@ GtkScale.trough.vertical {
                                      left top, right top,
                                      from (@trough_bg_color_a),
                                      to (shade (@trough_bg_color_b, 1.20)));
+}
+
+GtkScale.progressbar {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@scale_fill_a),
+                                     to (@scale_fill_b));
+
+    border-color: #1864b2;
+    border-width: 1;
+    border-radius: 3;
+    border-style: solid;
 }
 
 GtkFrame,

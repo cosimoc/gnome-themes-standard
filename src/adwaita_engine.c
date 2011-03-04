@@ -1077,7 +1077,8 @@ adwaita_engine_render_activity (GtkThemingEngine *engine,
 	GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_activity (engine, cr,
 										 x, y, width, height);
 
-	if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PROGRESSBAR))
+	if (gtk_widget_path_is_type (path, GTK_TYPE_PROGRESS_BAR) &&
+	    gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PROGRESSBAR))
 	{
 		cairo_pattern_t *pattern;
 
