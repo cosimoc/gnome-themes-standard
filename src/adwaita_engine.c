@@ -855,6 +855,29 @@ adwaita_engine_render_frame (GtkThemingEngine *engine,
 			}
 		}
 
+		if (gtk_widget_path_is_type (path, GTK_TYPE_PROGRESS_BAR) &&
+		    gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_TROUGH)) {
+			GtkBorder *border_width;
+			gint border_line;
+
+			/* draw the border inside the trough itself, so it will
+			 * be overdrawn by the fill.
+			 */
+			gtk_theming_engine_get (engine, state,
+						"border-width", &border_width,
+						NULL);
+
+			border_line = MIN (MIN (border_width->top, border_width->bottom),
+					   MIN (border_width->left, border_width->right));
+
+			y += border_line;
+			x += border_line;
+			width -= 2 * border_line;
+			height -= 2 * border_line;
+
+			gtk_border_free (border_width);
+		}
+
 		GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame (engine, cr, x, y,
 										      width, height);
 	}
@@ -939,6 +962,29 @@ adwaita_engine_render_background (GtkThemingEngine *engine,
 			x += width / 2 - 3;
 			width = 6;
 		}
+	}
+
+	if (gtk_widget_path_is_type (path, GTK_TYPE_PROGRESS_BAR) &&
+	    gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_TROUGH)) {
+		GtkBorder *border_width;
+		gint border_line;
+
+		/* draw the border inside the trough itself, so it will
+		 * be overdrawn by the fill.
+		 */
+		gtk_theming_engine_get (engine, state,
+					"border-width", &border_width,
+					NULL);
+
+		border_line = MIN (MIN (border_width->top, border_width->bottom),
+				   MIN (border_width->left, border_width->right));
+
+		y += border_line;
+		x += border_line;
+		width -= 2 * border_line;
+		height -= 2 * border_line;
+
+		gtk_border_free (border_width);
 	}
 
 	GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background (engine, cr, x, y,
@@ -1033,9 +1079,9 @@ adwaita_engine_render_activity (GtkThemingEngine *engine,
 
 		pattern = cairo_pattern_create_linear (0, 0, 20, 20);
 		cairo_pattern_add_color_stop_rgba (pattern, 0, 0, 0, 0, 0);
-		cairo_pattern_add_color_stop_rgba (pattern, 0.5, 0, 0, 0, 0);
+		cairo_pattern_add_color_stop_rgba (pattern, 0.49, 0, 0, 0, 0);
 		cairo_pattern_add_color_stop_rgba (pattern, 0.5, 0, 0, 0, 0.1);
-		cairo_pattern_add_color_stop_rgba (pattern, 1, 0, 0, 0, 0.1);
+		cairo_pattern_add_color_stop_rgba (pattern, 0.99, 0, 0, 0, 0.1);
 
 		cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
 		cairo_rectangle (cr, x, y, width, height);

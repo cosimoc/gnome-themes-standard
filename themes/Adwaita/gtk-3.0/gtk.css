@@ -63,6 +63,10 @@
 @define-color selected_row_bg_color_a #1f72c6;
 @define-color selected_row_bg_color_b shade (@theme_selected_bg_color, 1.22);
 
+@define-color progressbar_background_a @selected_row_bg_color_a;
+@define-color progressbar_background_b #76b0ec;
+@define-color progressbar_border #3277bf;
+
 @define-color menu_fg_color #2e87e3;
 @define-color menu_controls_color #555753;
 
@@ -197,6 +201,9 @@
     border-color: shade (@inactive_frame_color, 0.945);
 }
 
+/*****************
+ * GtkSpinButton *
+ *****************/
 GtkSpinButton.button,
 GtkSpinButton.button:insensitive,
 GtkSpinButton.button:prelight,
@@ -206,6 +213,32 @@ GtkSpinButton.button:active {
     border-width: 1;
     border-style: none;
     padding: 0;
+}
+
+/****************
+ * Progress bar *
+ ****************/
+GtkProgressBar.progressbar {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@progressbar_background_a),
+                                     to (@progressbar_background_b));
+
+    border-radius: 3;
+    border-style: solid;
+    border-color: @progressbar_border;
+}
+
+GtkProgressBar.trough {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@trough_bg_color_a),
+                                     to (@trough_bg_color_b));
+
+    border-width: 1;
+    border-style: solid;
+    border-radius: 3;
+    border-color: shade (@inactive_frame_color, 0.925);
 }
 
 GtkFrame,
@@ -538,25 +571,6 @@ GtkStatusbar {
     padding: 5;
     color: @theme_fg_color;
     -GtkStatusbar-shadow-type: none;
-}
-
-.trough {
-    border-width: 1;
-    border-style: solid;
-    border-color: shade (@inactive_frame_color, 0.925);
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@trough_bg_color_a),
-                                     to (@trough_bg_color_b));
-}
-
-.progressbar {
-    padding: 0;
-    border-radius: 3;
-    background-color: @theme_selected_bg_color;
-    border-style: solid;
-    border-color: darker (@theme_selected_bg_color);
-    color: @theme_selected_fg_color;
 }
 
 column-header {
