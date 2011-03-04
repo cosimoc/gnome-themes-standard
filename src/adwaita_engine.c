@@ -134,10 +134,9 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 {
 	GdkRGBA *fill_color, *border_color = NULL;
 	GdkRGBA *border_gradient_a = NULL, *border_gradient_b = NULL;
-	cairo_matrix_t matrix;
 	cairo_pattern_t *pattern = NULL;
 	GtkStateFlags state;
-	gint line_width, radius;
+	gint line_width;
 
 	state = gtk_theming_engine_get_state (engine);
 	gtk_theming_engine_get (engine, state,
@@ -936,7 +935,6 @@ adwaita_engine_render_background (GtkThemingEngine *engine,
 {
 	const GtkWidgetPath *path;
 	GtkStateFlags state;
-	GSList *classes, *l;
 
 	path = gtk_theming_engine_get_path (engine);
 	state = gtk_theming_engine_get_state (engine);
@@ -1201,7 +1199,6 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 		cairo_matrix_t matrix;
 		GtkStateFlags state;
 		GdkRGBA color;
-		gint radius;
 		gdouble shade_factor = 2.0 / 3.0;
 		gboolean marks_above = FALSE, marks_below = FALSE;
 
