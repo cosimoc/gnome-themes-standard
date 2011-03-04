@@ -636,6 +636,10 @@ GtkComboBox .button {
  * Primary Toolbars *
  ********************/
 
+/* FIXME: remove the special types as soon as all applications get patched
+ *        to set the primary toolbar class.
+ */
+
 /* special case EggEditableToolbar, so to disable its border */
 EggEditableToolbar .toolbar {
     border-style: none;
@@ -643,7 +647,10 @@ EggEditableToolbar .toolbar {
     border-radius: 0;
 }
 
-.primary-toolbar {
+.primary-toolbar,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar {
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
@@ -665,7 +672,10 @@ EggEditableToolbar .toolbar {
     -GtkWidget-window-dragging: true;
 }
 
-.primary-toolbar:insensitive {
+.primary-toolbar:insensitive,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar:insensitive, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar:insensitive, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar:insensitive {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.97);
 
@@ -674,7 +684,10 @@ EggEditableToolbar .toolbar {
     border-color: shade (@theme_bg_color, 0.91);
 }
 
-.primary-toolbar .button {
+.primary-toolbar.button,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar .button {
     border-style: none;
     border-width: 0;
     background-image: none;
@@ -686,7 +699,10 @@ EggEditableToolbar .toolbar {
     -adwaita-focus-border-gradient-b: none;
 }
 
-.primary-toolbar .button:insensitive {
+.primary-toolbar .button:insensitive,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:insensitive, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:insensitive, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar .button:insensitive {
     border-style: none;
     border-width: 0;
     background-image: none;
@@ -694,7 +710,10 @@ EggEditableToolbar .toolbar {
     -GtkWidget-focus-line-width: 0;
 }
 
-.primary-toolbar .button:hover {
+.primary-toolbar .button:hover,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:hover, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:hover, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar .button:hover {
     border-style: none;
     border-width: 0;
     background-image: -gtk-gradient (linear,
@@ -704,7 +723,10 @@ EggEditableToolbar .toolbar {
 			             to (alpha (@theme_base_color, 0.0)));
 }
 
-.primary-toolbar .button:active {
+.primary-toolbar .button:active,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar .button:active {
     border-style: none;
     border-width: 0;
     background-image: -gtk-gradient (linear,
@@ -714,7 +736,10 @@ EggEditableToolbar .toolbar {
 			             to (alpha (@theme_base_color, 0.0)));
 }
 
-.primary-toolbar .button:active:prelight {
+.primary-toolbar .button:active:prelight,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active:prelight, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active:prelight, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar .button:active:prelight {
     border-style: none;
     border-width: 0;
     background-image: -gtk-gradient (linear,
@@ -723,7 +748,10 @@ EggEditableToolbar .toolbar {
 			             to (alpha (shade (@toolbar_gradient_base, 1.14), 0.0)));    
 }
 
-.primary-toolbar .separator {
+.primary-toolbar .separator,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .separator, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .separator, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar .separator {
     border-style: solid;
     border-color: shade (@theme_bg_color, 0.56);
     border-width: 1;
