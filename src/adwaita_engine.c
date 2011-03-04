@@ -1095,6 +1095,93 @@ adwaita_engine_render_activity (GtkThemingEngine *engine,
 }
 
 static void
+draw_round_slider (cairo_t *cr,
+		   gdouble  width,
+		   gdouble  height)
+{
+	cairo_arc (cr, (width)/ 2.0, (height)/ 2.0,
+		   MIN (height / 2.0, width / 2.0),
+		   0, 2 * G_PI);
+	cairo_close_path (cr);	
+}
+
+static void
+draw_mark_slider (cairo_t *cr,
+		  gdouble  width,
+		  gdouble  height,
+		  gboolean marks_below,
+		  GtkOrientation orientation)
+{
+	cairo_set_line_join (cr, CAIRO_LINE_JOIN_ROUND);
+
+	if (marks_below) {
+		if (orientation == GTK_ORIENTATION_HORIZONTAL) {
+			cairo_move_to (cr, 0, height / 2.0);
+			cairo_arc (cr, 2.5, 2.5,
+				   2.0,
+				   G_PI, G_PI + G_PI_2);
+			
+			cairo_arc (cr, width - 2.5, 2.5,
+				   2.0,
+				   G_PI + G_PI_2, 2 * G_PI);
+
+			cairo_line_to (cr, width, height / 2.0);
+			cairo_line_to (cr, width / 2.0, height);
+			cairo_line_to (cr, 0, height / 2.0);
+
+			cairo_close_path (cr);
+		} else {
+			cairo_move_to (cr, width / 2.0, 0);
+			cairo_arc (cr, width - 2.5, 2.5,
+				   2.0,
+				   G_PI + G_PI_2, 2 * G_PI);
+
+			cairo_arc (cr, width - 2.5, height - 2.5,
+				   2.0,
+				   0, G_PI_2);
+
+			cairo_line_to (cr, width / 2.0, height);
+			cairo_line_to (cr, 0, height / 2.0);
+			cairo_line_to (cr, width / 2.0, 0);
+
+			cairo_close_path (cr);
+		}
+	} else {
+		if (orientation == GTK_ORIENTATION_HORIZONTAL) {
+			cairo_move_to (cr, width, height / 2.0);
+			cairo_arc (cr, width - 2.5, height - 2.5,
+				   2.0,
+				   0, G_PI_2);
+
+			cairo_arc (cr, 2.5, height - 2.5,
+				   2.0,
+				   G_PI_2, G_PI);
+
+			cairo_line_to (cr, 0, height / 2.0);
+			cairo_line_to (cr, width / 2.0, 0);
+			cairo_line_to (cr, width, height / 2.0);
+
+			cairo_close_path (cr);
+		} else {
+			cairo_move_to (cr, width / 2.0, height);
+			cairo_arc (cr, 2.5, height - 2.5,
+				   2.0,
+				   G_PI_2, G_PI);
+
+			cairo_arc (cr, 2.5, 2.5,
+				   2.0,
+				   G_PI, G_PI + G_PI_2);
+
+			cairo_line_to (cr, width / 2.0, 0);
+			cairo_line_to (cr, width, height / 2.0);
+			cairo_line_to (cr, width / 2.0, height);
+
+			cairo_close_path (cr);
+		}
+	}
+}
+
+static void
 adwaita_engine_render_slider (GtkThemingEngine *engine,
 			      cairo_t          *cr,
 			      gdouble           x,
@@ -1116,15 +1203,23 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 		GdkRGBA color;
 		gint radius;
 		gdouble shade_factor = 2.0 / 3.0;
+		gboolean marks_above = FALSE, marks_below = FALSE;
 
-		state = gtk_theming_engine_get_state (engine);
+		if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_SCALE_HAS_MARKS_ABOVE)) {
+			marks_above = TRUE;
+		} else if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_SCALE_HAS_MARKS_BELOW)) {
+			marks_below = TRUE;
+		}
 
 		cairo_translate (cr, x, y);
-		cairo_arc (cr, (width)/ 2.0, (height)/ 2.0,
-			   MIN (height / 2.0, width / 2.0),
-			   0, 2 * G_PI);
-		cairo_close_path (cr);
 
+		if ((marks_above && marks_below) || (!marks_above && !marks_below)) {
+			draw_round_slider (cr, width, height);
+		} else {
+			draw_mark_slider (cr, width, height, marks_below, orientation);
+		}
+
+		state = gtk_theming_engine_get_state (engine);
 		cairo_set_line_width (cr, 1.0);
 
 		gtk_theming_engine_get (engine, state,
