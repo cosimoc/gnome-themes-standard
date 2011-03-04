@@ -854,7 +854,12 @@ column-header {
     padding: 1 2;
 }
 
+row:hover {
+     border-width: 0;
+}
+
 row:selected:focused {
+    border-width: 0;
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
@@ -865,6 +870,7 @@ row:selected:focused {
 }
 
 row:selected {
+    border-width: 0;
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
