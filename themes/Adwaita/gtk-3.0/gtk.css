@@ -346,7 +346,7 @@ GtkCalendar {
 }
 
 .notebook tab {
-    padding: 4 8 1;
+    padding: 3 8 0;
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@theme_base_color),
@@ -354,7 +354,7 @@ GtkCalendar {
 }
 
 .notebook tab:active {
-    padding: 4 8 1;
+    padding: 3 8 0;
     -adwaita-selected-tab-color: #8dc0f3;
     -adwaita-notebook-border-color: @notebook_border;
     border-color: @notebook_active_tab_border;
