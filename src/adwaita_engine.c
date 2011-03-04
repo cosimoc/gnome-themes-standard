@@ -538,12 +538,12 @@ draw_tab_arcs (cairo_t *cr,
 	       gdouble height)
 {
 	cairo_arc (cr, 
-		   curve_width, 5.0,
+		   curve_width, 6.0,
 		   2.5,
 		   G_PI, G_PI + G_PI_2);
 
 	cairo_arc (cr,
-		   width - curve_width, 5.0,
+		   width - curve_width, 6.0,
 		   2.5,
 		   G_PI + G_PI_2, 2 * G_PI);
 }
@@ -618,7 +618,7 @@ render_notebook_extension (GtkThemingEngine *engine,
 	cairo_fill (cr);
 
 	if (state & GTK_STATE_FLAG_ACTIVE) {
-		draw_tab_shape_active (cr, tab_curvature, 0, 0, width, 5.0);
+		draw_tab_shape_active (cr, tab_curvature, 0, 0, width, 6.0);
 		gdk_cairo_set_source_rgba (cr, color);
 		cairo_fill (cr);
 	}
