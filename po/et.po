@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-themes-standard MASTER\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "themes-standard&component=general\n"
-"POT-Creation-Date: 2010-12-14 21:08+0000\n"
-"PO-Revision-Date: 2011-01-09 17:44+0200\n"
+"POT-Creation-Date: 2011-03-01 17:06+0000\n"
+"PO-Revision-Date: 2011-03-05 15:13+0200\n"
 "Last-Translator: Ivar Smolin <okul@linux.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -30,3 +30,21 @@ msgstr "Adwaita"
 
 msgid "There is only one"
 msgstr "Ainult üks ongi"
+
+msgid "High Contrast"
+msgstr "Kõrgkontrastne"
+
+msgid "High contrast theme"
+msgstr "Kõrgkontrastne teema"
+
+msgid "High Contrast Inverse"
+msgstr "Pööratud kõrgkontrastne"
+
+msgid "High contrast inverse theme"
+msgstr "Pööratud kõrgkontrastne teema"
+
+msgid "Low Contrast"
+msgstr "Madalkontrastne"
+
+msgid "Low contrast theme"
+msgstr "Madalkontrastne teema"
