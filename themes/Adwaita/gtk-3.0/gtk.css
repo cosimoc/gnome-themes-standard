@@ -447,6 +447,14 @@ GtkComboBox .button {
     background-color: @theme_base_color;
 }
 
+.scrollbar.slider:insensitive {
+    background-color: @theme_base_color;
+}
+
+.scrollbar.trough:insensitive {
+    background-color: shade (@theme_bg_color, 0.882);
+}
+
 /***********
  * Buttons *
  ***********/
