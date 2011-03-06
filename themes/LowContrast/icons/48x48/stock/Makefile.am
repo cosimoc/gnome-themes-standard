@@ -13,6 +13,7 @@ icon_DATA = \
 	audio-volume-muted.png \
 	dialog-error.png \
 	dialog-information.png \
+	dialog-password.png \
 	dialog-question.png \
 	dialog-warning.png \
 	document-new.png \
