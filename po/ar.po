@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-12 11:49+0200\n"
-"PO-Revision-Date: 2011-01-12 11:48+0300\n"
+"POT-Creation-Date: 2011-03-06 16:28+0200\n"
+"PO-Revision-Date: 2011-03-06 16:28+0300\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
@@ -29,3 +29,27 @@ msgstr "أدوايتا"
 #: ../themes/Adwaita/index.theme.in.h:2
 msgid "There is only one"
 msgstr "هناك واحدة فقط"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "تباين عال"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "سمة التباين العالي"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "تباين عال معكوس"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "سمة التباين العالي المعكوس"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "تباين منخفض"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "سمة التباين المنخفض"
