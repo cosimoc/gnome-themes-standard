@@ -16,6 +16,7 @@ icon_DATA = \
 	gtk-edit.png \
 	gtk-index.png \
 	gtk-no.png \
+	gtk-ok.png \
 	gtk-preferences.png \
 	gtk-select-color.png \
 	gtk-select-font.png \
