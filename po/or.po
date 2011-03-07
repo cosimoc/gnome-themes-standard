@@ -1,0 +1,55 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Manoj Kumar Giri <mgiri@redhat.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=gnome-themes-standard&component=general\n"
+"POT-Creation-Date: 2011-02-28 15:48+0000\n"
+"PO-Revision-Date: 2011-03-07 16:23+0530\n"
+"Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
+"Language-Team: Oriya <oriya-it@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
+msgid "Default Background"
+msgstr "ପୂର୍ବନିର୍ଦ୍ଧାରିତ ପୃଷ୍ଠଭୂମି"
+
+#: ../themes/Adwaita/index.theme.in.h:1
+msgid "Adwaita"
+msgstr "Adwaita"
+
+#: ../themes/Adwaita/index.theme.in.h:2
+msgid "There is only one"
+msgstr "ସେଠାରେ କେବଳ ଗୋଟିଏ ଅଛି"
+
+#: ../themes/AdwaitaLowContrast/index.theme.in.h:1
+msgid "Adwaita Low Contrast"
+msgstr "Adwaita ସ୍ୱଳ୍ପ ସ୍ପଷ୍ଟତା"
+
+#: ../themes/AdwaitaLowContrast/index.theme.in.h:2
+msgid "Low contrast variant of Adwaita"
+msgstr "Adwaita ର ସ୍ୱଳ୍ପ ସ୍ପଷ୍ଟତା ପ୍ରକାର"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "ଅଧିକ ସ୍ପଷ୍ଟତା"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "ଅଧିକ ସ୍ପଷ୍ଟତା ପ୍ରସଙ୍ଗ"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "ଅଧିକ ସ୍ପଷ୍ଟତା ପ୍ରତିକୂଳ"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "ଅଧିକ ସ୍ପଷ୍ଟତା ପ୍ରତିକୂଳ ପ୍ରସଙ୍ଗ"
+
