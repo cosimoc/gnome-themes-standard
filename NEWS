@@ -1,3 +1,21 @@
+2.91.91
+=======
+
+Big revamp of the Adwaita engine to match 3.0 designs.
+
+Update include:
+- checkboxes/radiobuttons
+- notebook tabs shape
+- expanders
+- arrows
+- range sliders
+- progressbar
+- scrollbars
+- insensitive icons
+- new color palette
+
+and probably even more.
+
 2.91.90.1
 =========
 
