@@ -876,7 +876,6 @@ GtkTreeView {
     -GtkTreeView-expander-size: 8;
 
     -GtkWidget-focus-line-width: 1;
-    -adwaita-focus-border-color: @progressbar_border;
     -adwaita-focus-border-radius: 0;
 }
 
@@ -890,7 +889,7 @@ column-header .button {
 }
 
 row:hover {
-     border-width: 0;
+    border-width: 0;
 }
 
 row:insensitive {
@@ -921,7 +920,7 @@ row:selected {
 .cell {
     color: @theme_text_color;
     padding: 2;
-    border-width: 2;
+    border-width: 0;
 }
 
 .cell:selected {
@@ -929,21 +928,24 @@ row:selected {
 }
 
 .expander {
-    border-color: @internal_element_color;
     color: @internal_element_color;
+    border-color: @internal_element_color;
+
     background-color: @theme_base_color;
 }
 
 .expander:active {
-    border-color: @internal_element_color;
-    background-color: @theme_base_color;
     color: @internal_element_color;
+    border-color: @internal_element_color;
+
+    background-color: @theme_base_color;
 }
 
 .expander:prelight {
-    background-color: shade (@theme_bg_color, 1.02);
     color: @internal_element_color;
     border-color: @internal_element_color;
+
+    background-color: shade (@theme_bg_color, 1.02);
 }
 
 .expander row:selected,
