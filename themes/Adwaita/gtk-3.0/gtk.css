@@ -902,7 +902,12 @@ GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focused {
     background-color: @selected_bg_color;
     border-radius: 4;
-    -adwaita-focus-border-color: @selected_bg_color;
+
+    /* FIXME: this probably needs to be better;
+     * see https://bugzilla.gnome.org/show_bug.cgi?id=644157
+     */
+    -adwaita-focus-border-color: @progressbar_border;
+    -adwaita-focus-border-radius: 3;
 }
 
 .view {
