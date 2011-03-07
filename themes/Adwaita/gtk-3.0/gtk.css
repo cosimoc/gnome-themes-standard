@@ -197,7 +197,12 @@
 /****************
  * Text Entries *
  ****************/
-.entry, .toolbar .entry {
+.entry,
+.toolbar .entry,
+.primary-toolbar .entry,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar .entry {
     background-color: @theme_base_color;
     background-image: none;
 
