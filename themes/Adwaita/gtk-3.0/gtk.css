@@ -146,6 +146,7 @@
 
     -GtkWidget-focus-line-width: 1;
     -adwaita-focus-border-color: @keyboard_focus_border_a;
+    -adwaita-focus-border-radius: 2;
     -adwaita-focus-fill-color: none;
     -adwaita-focus-border-gradient-a: none;
     -adwaita-focus-border-gradient-b: none;
@@ -464,6 +465,7 @@ GtkComboBox .button {
     -adwaita-focus-fill-color: alpha (@theme_base_color, 0.35);
     -adwaita-focus-border-gradient-a: alpha (@keyboard_focus_border_a, 0.62);
     -adwaita-focus-border-gradient-b: alpha (@keyboard_focus_border_b, 0.62);
+    -adwaita-focus-border-radius: 1;
     -GtkWidget-focus-line-width: 2;
 
     border-radius: 2;

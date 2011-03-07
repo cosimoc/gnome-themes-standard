@@ -141,11 +141,13 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 	cairo_pattern_t *pattern = NULL;
 	GtkStateFlags state;
 	gint line_width;
+	gint border_radius;
 
 	state = gtk_theming_engine_get_state (engine);
 	gtk_theming_engine_get (engine, state,
 				"-adwaita-focus-border-color", &border_color,
 				"-adwaita-focus-fill-color", &fill_color,
+				"-adwaita-focus-border-radius", &border_radius,
 				"-adwaita-focus-border-gradient-a", &border_gradient_a,
 				"-adwaita-focus-border-gradient-b", &border_gradient_b,
 				NULL);
@@ -159,10 +161,10 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 
 	if (line_width > 1) {
 		_cairo_round_rectangle (cr, x, y,
-					width, height, 1);
+					width, height, border_radius);
 	} else {
 		_cairo_round_rectangle (cr, x + 0.5, y + 0.5,
-					width - 1, height - 1, 2);
+					width - 1, height - 1, border_radius);
 	}
 
 	/* if we have a fill color, draw the fill */
@@ -1537,6 +1539,12 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 								  "Focus border color",
 								  "Focus border color",
 								  GDK_TYPE_RGBA, 0));
+	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
+					      g_param_spec_int ("focus-border-radius",
+								"Focus border radius",
+								"Focus border radius",
+								0, G_MAXINT, 0,
+								0));
 	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
 					      g_param_spec_boxed ("focus-border-gradient-a",
 								  "Focus border gradient A",
