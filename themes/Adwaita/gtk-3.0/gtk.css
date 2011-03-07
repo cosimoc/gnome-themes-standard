@@ -113,11 +113,9 @@
     -GtkScrolledWindow-scrollbar-spacing: 0;
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
 
-    -GtkTreeView-expander-size: 10;
     -GtkToolItemGroup-expander-size: 12;
     -GtkExpander-expander-size: 12;
     -GtkToolbar-internal-padding: 4;     /* ??? */
-    -GtkTreeView-vertical-separator: 0;  /* ??? */
 
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
@@ -317,15 +315,6 @@ GtkCalendar {
     color: lighter (@theme_fg_color);
     border-style: none;
     border-width: 0;
-}
-
-.cell {
-    background-color: @theme_base_color;
-    color: @theme_text_color;
-}
-
-.cell:selected {
-    background-color: @theme_selected_bg_color;
 }
 
 /*****************
@@ -874,15 +863,25 @@ GtkIconView {
     background-color: @theme_base_color;
     color: @theme_fg_color;
     border-radius: 0;
+    border-width: 3;
 }
 
 GtkTreeView {
-    border-radius: 3;
-    border-width: 0;
+    -GtkTreeView-vertical-separator: 0;
+    -GtkTreeView-expander-size: 8;
+
+    -GtkWidget-focus-line-width: 1;
+    -adwaita-focus-border-color: @progressbar_border;
+    -adwaita-focus-border-radius: 0;
 }
 
 column-header {
     padding: 1 2;
+}
+
+column-header .button {
+    border-width: 0;
+    border-radius: 0;
 }
 
 row:hover {
@@ -896,47 +895,57 @@ row:insensitive {
 row:selected:focused {
     border-width: 0;
     background-image: -gtk-gradient (linear,
-				     left top,
-				     left bottom,
-                                     from (@selected_row_bg_color_a),
-                                     color-stop (0.05, @selected_row_bg_color_a),
-                                     color-stop (0.05, @selected_row_bg_color_b),
-                                     to (@selected_row_bg_color_a));
+                                     left top, left bottom,
+                                     from (@progressbar_border),
+                                     color-stop (0.03, @progressbar_border),
+                                     color-stop (0.04, @theme_selected_bg_color),
+                                     color-stop (0.97, @theme_selected_bg_color),
+                                     color-stop (0.98, @progressbar_border),
+                                     to (@progressbar_border));
+    background-color: @theme_selected_bg_color;
 }
 
 row:selected {
     border-width: 0;
     background-image: -gtk-gradient (linear,
-				     left top,
-				     left bottom,
-                                     from (mix (@selected_row_bg_color_a, @theme_bg_color, 0.8)),
-                                     color-stop (0.05, mix (@selected_row_bg_color_a, @theme_bg_color, 0.8)),
-                                     color-stop (0.05, mix (@selected_row_bg_color_b, @theme_bg_color, 0.8)),
-                                     to (mix (@selected_row_bg_color_a, @theme_bg_color, 0.8)));
+                                     left top, left bottom,
+                                     from (@theme_selected_bg_color),
+                                     to (@theme_selected_bg_color));
 }
 
-column-header .button {
-    border-width: 0;
-    border-radius: 0;
-    border-color: shade (@inactive_frame_color, 0.935);
-    background-image: -gtk-gradient (linear,
-                                     left top,
-                                     left bottom,
-                                     from (shade (@theme_bg_color, 1.04)),
-                                     to (shade (@theme_bg_color, 0.89)));
+.cell {
+    color: @theme_text_color;
+    padding: 2;
+    border-width: 2;
 }
 
-.expander,
+.cell:selected {
+    background-color: @theme_selected_bg_color;
+}
+
+.expander {
+    border-color: @internal_element_color;
+    color: @internal_element_color;
+    background-color: @theme_base_color;
+}
+
 .expander:active {
-    border-color: #797b76;
-    background-color: shade (@theme_bg_color, 1.035);
-    color: shade (@theme_selected_bg_color, 1.02);
+    border-color: @internal_element_color;
+    background-color: @theme_base_color;
+    color: @internal_element_color;
 }
 
 .expander:prelight {
-    border-color: shade (@inactive_frame_color, 0.425);
-    background-color: @internal_element_color;
-    color: lighter (@theme_bg_color);
+    background-color: shade (@theme_bg_color, 1.02);
+    color: @internal_element_color;
+    border-color: @internal_element_color;
+}
+
+.expander row:selected,
+.expander row:selected:focused {
+    border-color: #acccee;
+    color: #acccee;
+    background-color: @theme_selected_bg_color;
 }
 
 /* Calendars */

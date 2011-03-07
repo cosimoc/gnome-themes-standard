@@ -1015,6 +1015,7 @@ adwaita_engine_render_expander (GtkThemingEngine *engine,
 	y += ((int) height / 2) - (side / 2);
 
 	state = gtk_theming_engine_get_state (engine);
+
 	gtk_theming_engine_get_border_color (engine, state, &border);
 	gtk_theming_engine_get_background_color (engine, state, &bg);
 	gtk_theming_engine_get_color (engine, state, &fg);
@@ -1023,23 +1024,24 @@ adwaita_engine_render_expander (GtkThemingEngine *engine,
 
 	cairo_set_line_width (cr, 1);
 
-	_cairo_round_rectangle (cr, x + 0.5, y + 0.5, side, side, 3);
+	_cairo_round_rectangle (cr, x + 0.5, y + 0.5, side, side, 2);
 	gdk_cairo_set_source_rgba (cr, &bg);
 	cairo_fill_preserve (cr);
 
 	gdk_cairo_set_source_rgba (cr, &border);
 	cairo_stroke (cr);
 
-	cairo_set_line_width (cr, 3);
+	cairo_set_line_width (cr, 1);
+	cairo_set_line_cap (cr, CAIRO_LINE_CAP_ROUND);
 	gdk_cairo_set_source_rgba (cr, &fg);
 
-	cairo_move_to (cr, x + 2, y + side / 2 + 0.5);
-	cairo_line_to (cr, x + side - 1, y + side / 2 + 0.5);
+	cairo_move_to (cr, x + 3, y + side / 2 + 0.5);
+	cairo_line_to (cr, x + side - 2, y + side / 2 + 0.5);
 
 	if ((state & GTK_STATE_FLAG_ACTIVE) == 0)
 	{
-		cairo_move_to (cr, x + side / 2 + 0.5, y + 2);
-		cairo_line_to (cr, x + side / 2 + 0.5, y + side - 1);
+		cairo_move_to (cr, x + side / 2 + 0.5, y + 3);
+		cairo_line_to (cr, x + side / 2 + 0.5, y + side - 2);
 	}
 
 	cairo_stroke (cr);
