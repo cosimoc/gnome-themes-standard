@@ -332,16 +332,16 @@ GtkCalendar {
  * tabs          *
  *****************/
 .notebook {
-    background-color: shade (@theme_bg_color, 1.12);
+    padding: 2;
 
     border-color: @notebook_border;
     border-style: solid;
     border-width: 1;
     border-radius: 0;
 
-    padding: 2;
+    background-color: @theme_base_color;
 
-    -GtkNotebook-tab-overlap: 6;
+    -GtkNotebook-tab-overlap: 8;
     -GtkNotebook-tab-curvature: 6;
 }
 
@@ -354,11 +354,11 @@ GtkCalendar {
 }
 
 .notebook tab:active {
-    padding: 3 8 0;
-    -adwaita-selected-tab-color: #8dc0f3;
-    -adwaita-notebook-border-color: @notebook_border;
     border-color: @notebook_active_tab_border;
     border-width: 1;
+
+    -adwaita-selected-tab-color: #8dc0f3;
+    -adwaita-notebook-border-color: @notebook_border;
     background-color: @theme_base_color;
     background-image: none;
 }
