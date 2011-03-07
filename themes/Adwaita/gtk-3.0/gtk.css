@@ -60,10 +60,7 @@
 @define-color switch_slider_color #eeeeec;
 @define-color switch_slider_border #2a79cb;
 
-@define-color selected_row_bg_color_a #1f72c6;
-@define-color selected_row_bg_color_b shade (@theme_selected_bg_color, 1.22);
-
-@define-color progressbar_background_a @selected_row_bg_color_a;
+@define-color progressbar_background_a #1f72c6;
 @define-color progressbar_background_b #76b0ec;
 @define-color progressbar_border #3277bf;
 
@@ -206,15 +203,52 @@ GtkWindow > GtkVBox > GtkToolbar .entry {
     background-color: @theme_base_color;
     background-image: none;
 
-    border-color: @focused_entry_border;
-    border-radius: 3;
+    border-radius: 2;
     border-width: 1;
     border-style: solid;
+    border-color: @button_border;
+
+    padding: 2;
+}
+
+.entry:focused,
+.toolbar .entry:focused,
+.primary-toolbar .entry:focused,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry:focused, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry:focused, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar .entry:focused {
+    border-color: @focused_entry_border;    
 }
 
 .entry:insensitive {
     background-color: @insensitive_bg_color;
     border-color: shade (@inactive_frame_color, 0.945);
+}
+
+.entry.progressbar,
+.toolbar .entry.progressbar {
+    /* FIXME: need correct colors/gradient */
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+
+    border-width: 1;
+    border-radius: 1;
+    border-color: @progressbar_border;
+}
+
+.primary-toolbar .entry.progressbar,
+GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry.progressbar, /* eog etc */
+GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry.progressbar, /* epiphany */
+GtkWindow > GtkVBox > GtkToolbar .entry.progressbar {
+    /* FIXME: need correct colors/gradient */
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@trough_bg_color_a),
+                                     to (@trough_bg_color_b));
+
+    border-width: 0;
+    border-radius: 2;
+    border-color: shade (@inactive_frame_color, 0.925);
 }
 
 /*****************
