@@ -767,7 +767,8 @@ GtkComboBox.button {
 
 
 /* primary toolbar raised buttons */
-.primary-toolbar.toolbar.raised.button {
+.primary-toolbar.toolbar.raised.button,
+.primary-toolbar.toolbar.raised.button:insensitive {
     border-radius: 2;
     border-width: 1;
     border-color: @button_border;
