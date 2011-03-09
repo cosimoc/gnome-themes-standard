@@ -823,6 +823,58 @@ GtkWindow > GtkVBox > GtkToolbar .separator {
     background-image: none;
 }
 
+
+/* primary toolbar raised buttons */
+.primary-toolbar.toolbar.raised.button {
+    border-radius: 2;
+    border-width: 1;
+    border-color: @button_border;
+    border-style: solid;
+
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+                                     from (@button_gradient_color_a),
+                                     to (@button_gradient_color_b));
+
+    -GtkWidget-focus-line-width: 2;
+}
+
+.primary-toolbar.toolbar.raised.button:hover {
+    border-color: @button_border;
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (@theme_base_color),
+				     to (shade (@button_gradient_color_a, 0.94)));
+    border-width: 1;
+    border-style: solid;
+}
+
+.primary-toolbar.toolbar.raised.button:hover:active,
+.primary-toolbar.toolbar.raised.button:active {
+    background-image: -gtk-gradient (linear,
+    				     left top, left bottom,
+                                     from (@button_active_gradient_color),
+				     to (alpha (shade (@button_active_gradient_color, 0.83), 0.13)));
+    background-color: @theme_base_color;
+
+    border-color: @highlighted_border;
+    border-width: 1;
+    border-style: solid;
+}
+
+/* progressbar entry on primary toolbar */
+.primary-toolbar.toolbar.entry.progressbar {
+    /* FIXME: need correct colors/gradient */
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@trough_bg_color_a),
+                                     to (@trough_bg_color_b));
+
+    border-width: 0;
+    border-radius: 2;
+    border-color: shade (@inactive_frame_color, 0.925);
+}
+
 /*************
  * GtkSwitch *
  *************/
