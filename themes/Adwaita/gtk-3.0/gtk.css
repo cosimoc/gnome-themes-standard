@@ -195,11 +195,7 @@
  * Text Entries *
  ****************/
 .entry,
-.toolbar .entry,
-.primary-toolbar .entry,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry, /* epiphany */
-GtkWindow > GtkVBox > GtkToolbar .entry {
+.toolbar.entry {
     background-color: @theme_base_color;
     background-image: none;
 
@@ -211,12 +207,7 @@ GtkWindow > GtkVBox > GtkToolbar .entry {
     padding: 2;
 }
 
-.entry:focused,
-.toolbar .entry:focused,
-.primary-toolbar .entry:focused,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry:focused, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry:focused, /* epiphany */
-GtkWindow > GtkVBox > GtkToolbar .entry:focused {
+.entry:focused {
     border-color: @focused_entry_border;    
 }
 
@@ -225,8 +216,7 @@ GtkWindow > GtkVBox > GtkToolbar .entry:focused {
     border-color: shade (@inactive_frame_color, 0.945);
 }
 
-.entry.progressbar,
-.toolbar .entry.progressbar {
+.entry.progressbar {
     /* FIXME: need correct colors/gradient */
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
@@ -234,21 +224,6 @@ GtkWindow > GtkVBox > GtkToolbar .entry:focused {
     border-width: 1;
     border-radius: 1;
     border-color: @progressbar_border;
-}
-
-.primary-toolbar .entry.progressbar,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry.progressbar, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .entry.progressbar, /* epiphany */
-GtkWindow > GtkVBox > GtkToolbar .entry.progressbar {
-    /* FIXME: need correct colors/gradient */
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@trough_bg_color_a),
-                                     to (@trough_bg_color_b));
-
-    border-width: 0;
-    border-radius: 2;
-    border-color: shade (@inactive_frame_color, 0.925);
 }
 
 /*****************
@@ -409,7 +384,7 @@ GtkComboBox {
     -GtkComboBox-shadow-type: 2;
 }
 
-GtkComboBox .button {
+GtkComboBox.button {
     color: @internal_element_color;
 }
 
@@ -508,7 +483,7 @@ GtkComboBox .button {
 }
 
 .button:hover,
-.toolbar .button:hover {
+.toolbar.button:hover {
     border-color: @button_border;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -519,7 +494,7 @@ GtkComboBox .button {
 .button:active,
 .toolbar .button:active,
 .button:hover:active,
-.toolbar .button:hover:active {
+.toolbar.button:hover:active {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
                                      from (@button_active_gradient_color),
@@ -548,7 +523,7 @@ GtkComboBox .button {
 				     left top, left bottom,
 				     from (@theme_bg_color),
 				     color-stop (0.45, shade (@theme_bg_color, 0.97)),
-				     to (shade (@theme_bg_color, 0.99));
+				     to (shade (@theme_bg_color, 0.99)));
     border-width: 0;
     border-style: none;
     padding: 4;
@@ -558,7 +533,7 @@ GtkComboBox .button {
 }
 
 /* remove the image from the prelight areas */
-.menubar .menuitem:prelight {
+.menubar.menuitem:prelight {
     background-image: none;
     background-color: @theme_base_color;
     color: @theme_text_color;
@@ -593,26 +568,26 @@ GtkComboBox .button {
     border-color: darker (@selected_bg_color);
 }
 
-.menu .separator {
+.menu.separator {
     border-color: @inactive_frame_color;
 
     -GtkSeparatorMenuItem-horizontal-padding: 0;
 }
 
 /* menu radio and check items are drawn differently */
-.menu .check:active {
+.menu.check:active {
     color: @menu_controls_color;
 }
 
-.menu .radio:active {
+.menu.radio:active {
     color: @menu_controls_color;
 }
 
-.menu .check:prelight {
+.menu.check:prelight {
     color: @selected_fg_color;
 }
 
-.menu .radio:prelight {
+.menu.radio:prelight {
     color: @selected_fg_color;
 }
 
@@ -701,21 +676,7 @@ GtkComboBox .button {
  * Primary Toolbars *
  ********************/
 
-/* FIXME: remove the special types as soon as all applications get patched
- *        to set the primary toolbar class.
- */
-
-/* special case EggEditableToolbar, so to disable its border */
-EggEditableToolbar .toolbar {
-    border-style: none;
-    border-width: 0;
-    border-radius: 0;
-}
-
-.primary-toolbar,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar, /* epiphany */
-GtkWindow > GtkVBox > GtkToolbar {
+.primary-toolbar.toolbar {
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
@@ -734,12 +695,10 @@ GtkWindow > GtkVBox > GtkToolbar {
     padding: 4;
 
     -GtkWidget-window-dragging: true;
+    -GtkToolbar-button-relief: 0;
 }
 
-.primary-toolbar:insensitive,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar:insensitive, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar:insensitive, /* epiphany */
-GtkWindow > GtkVBox > GtkToolbar:insensitive {
+.primary-toolbar.toolbar:insensitive {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.97);
 
@@ -748,10 +707,8 @@ GtkWindow > GtkVBox > GtkToolbar:insensitive {
     border-color: shade (@theme_bg_color, 0.91);
 }
 
-.primary-toolbar.button,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button, /* epiphany */
-GtkWindow > GtkVBox > GtkToolbar .button {
+/* primary toolbar buttons */
+.primary-toolbar.toolbar.button {
     border-style: none;
     border-width: 0;
     background-image: none;
@@ -763,10 +720,7 @@ GtkWindow > GtkVBox > GtkToolbar .button {
     -adwaita-focus-border-gradient-b: none;
 }
 
-.primary-toolbar .button:insensitive,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:insensitive, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:insensitive, /* epiphany */
-GtkWindow > GtkVBox > GtkToolbar .button:insensitive {
+.primary-toolbar.toolbar.button:insensitive {
     border-style: none;
     border-width: 0;
     background-image: none;
@@ -774,10 +728,7 @@ GtkWindow > GtkVBox > GtkToolbar .button:insensitive {
     -GtkWidget-focus-line-width: 0;
 }
 
-.primary-toolbar .button:hover,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:hover, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:hover, /* epiphany */
-GtkWindow > GtkVBox > GtkToolbar .button:hover {
+.primary-toolbar.toolbar.button:hover {
     border-style: none;
     border-width: 0;
     background-image: -gtk-gradient (linear,
@@ -787,10 +738,7 @@ GtkWindow > GtkVBox > GtkToolbar .button:hover {
 			             to (alpha (@theme_base_color, 0.0)));
 }
 
-.primary-toolbar .button:active,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active, /* epiphany */
-GtkWindow > GtkVBox > GtkToolbar .button:active {
+.primary-toolbar.toolbar.button:active {
     border-style: none;
     border-width: 0;
     background-image: -gtk-gradient (linear,
@@ -800,10 +748,7 @@ GtkWindow > GtkVBox > GtkToolbar .button:active {
 			             to (alpha (@theme_base_color, 0.0)));
 }
 
-.primary-toolbar .button:active:prelight,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active:prelight, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .button:active:prelight, /* epiphany */
-GtkWindow > GtkVBox > GtkToolbar .button:active:prelight {
+.primary-toolbar.toolbar.button:active:prelight {
     border-style: none;
     border-width: 0;
     background-image: -gtk-gradient (linear,
@@ -812,10 +757,7 @@ GtkWindow > GtkVBox > GtkToolbar .button:active:prelight {
 			             to (alpha (shade (@toolbar_gradient_base, 1.14), 0.0)));    
 }
 
-.primary-toolbar .separator,
-GtkWindow > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .separator, /* eog etc */
-GtkWindow > GtkVBox > GtkVBox > EggEditableToolbar > GtkHBox > GtkToolbar .separator, /* epiphany */
-GtkWindow > GtkVBox > GtkToolbar .separator {
+.primary-toolbar.toolbar.separator {
     border-style: solid;
     border-color: shade (@theme_bg_color, 0.56);
     border-width: 1;
@@ -862,7 +804,7 @@ GtkWindow > GtkVBox > GtkToolbar .separator {
     border-style: solid;
 }
 
-/* progressbar entry on primary toolbar */
+/* progressbars on primary toolbar entries are special */
 .primary-toolbar.toolbar.entry.progressbar {
     /* FIXME: need correct colors/gradient */
     background-image: -gtk-gradient (linear,
@@ -1144,7 +1086,7 @@ PanelToplevel {
 }
 
 /* panel buttons (clock etc) */
-PanelApplet GtkToggleButton {
+PanelApplet.GtkToggleButton {
     background-color: @chrome_bg_color;
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
@@ -1152,7 +1094,7 @@ PanelApplet GtkToggleButton {
     color: @chrome_fg_color;
 }
 
-PanelApplet GtkToggleButton:active {
+PanelApplet.GtkToggleButton:active {
     background-color: shade (@theme_bg_color, 0.43);
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
@@ -1160,7 +1102,7 @@ PanelApplet GtkToggleButton:active {
     color: @chrome_fg_color;
 }
 
-PanelApplet GtkToggleButton:hover {
+PanelApplet.GtkToggleButton:hover {
     background-color: shade (@theme_bg_color, 0.215);
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
@@ -1168,7 +1110,7 @@ PanelApplet GtkToggleButton:hover {
     color: @chrome_fg_color;
 }
 
-PanelApplet GtkToggleButton:hover:active {
+PanelApplet.GtkToggleButton:hover:active {
     background-color: shade (@theme_bg_color, 0.43);
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
