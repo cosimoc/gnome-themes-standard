@@ -601,7 +601,12 @@ render_notebook_extension (GtkThemingEngine *engine,
 		cairo_translate (cr, width, height);
 	}
 
-	cairo_translate (cr, x + 0.5, y);
+	if (state & GTK_STATE_FLAG_ACTIVE) {
+		cairo_translate (cr, x + 0.5, y + 1.0);
+	} else {
+		cairo_translate (cr, x + 0.5, y);
+	}
+
 	cairo_rotate (cr, angle);
 
 	width -= 1.0;
