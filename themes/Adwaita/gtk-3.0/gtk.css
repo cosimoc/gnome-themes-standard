@@ -544,6 +544,11 @@ GtkComboBox.button {
     border-color: @inactive_frame_color;
 }
 
+.menubar.menuitem {
+    border-width: 1;
+    border-style: none;
+}
+
 .menu {
     padding: 2;
 
