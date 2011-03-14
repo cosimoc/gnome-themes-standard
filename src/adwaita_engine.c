@@ -601,10 +601,16 @@ render_notebook_extension (GtkThemingEngine *engine,
 		cairo_translate (cr, width, height);
 	}
 
-	if (state & GTK_STATE_FLAG_ACTIVE) {
-		cairo_translate (cr, x + 0.5, y + 1.0);
-	} else {
-		cairo_translate (cr, x + 0.5, y);
+	if (gap_side == GTK_POS_BOTTOM) {
+		cairo_translate (cr,
+				 x + 0.5,
+				 (state & GTK_STATE_FLAG_ACTIVE) ?
+				 y + 1.0 : y);
+	} else if (gap_side == GTK_POS_TOP) {
+		cairo_translate (cr,
+				 x - 0.5,
+				 (state & GTK_STATE_FLAG_ACTIVE) ?
+				 y - 1.0 : y);
 	}
 
 	cairo_rotate (cr, angle);
