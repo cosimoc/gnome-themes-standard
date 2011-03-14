@@ -168,6 +168,8 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 	GtkStateFlags state;
 	gint line_width;
 	gint border_radius;
+	gboolean use_dashes;
+	double dashes[2] = { 2.0, 0.2 };
 
 	state = gtk_theming_engine_get_state (engine);
 	gtk_theming_engine_get (engine, state,
@@ -175,6 +177,7 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 				"-adwaita-focus-fill-color", &fill_color,
 				"-adwaita-focus-border-radius", &border_radius,
 				"-adwaita-focus-border-gradient", &pattern,
+				"-adwaita-focus-border-dashes", &use_dashes,
 				NULL);
 
 	gtk_theming_engine_get_style (engine,
@@ -196,6 +199,10 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 	if (fill_color != NULL) {
 		gdk_cairo_set_source_rgba (cr, fill_color);
 		cairo_fill_preserve (cr);
+	}
+
+	if (use_dashes) {
+		cairo_set_dash (cr, dashes, 1, 0.0);
 	}
 
 	/* if we have a gradient, draw the gradient, otherwise
@@ -1678,6 +1685,11 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 								  "Border gradient",
 								  "Border gradient",
 								  CAIRO_GOBJECT_TYPE_PATTERN, 0));
+	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
+					      g_param_spec_boolean ("focus-border-dashes",
+								    "Focus border uses dashes",
+								    "Focus border uses dashes",
+								    FALSE, 0));
 }
 
 static void

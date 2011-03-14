@@ -136,10 +136,11 @@
     border-radius: 3;
 
     -GtkWidget-focus-line-width: 1;
-    -adwaita-focus-border-color: @keyboard_focus_border_a;
+    -adwaita-focus-border-color: alpha (@theme_text_color, 0.4);
     -adwaita-focus-border-radius: 2;
     -adwaita-focus-fill-color: none;
     -adwaita-focus-border-gradient: none;
+    -adwaita-focus-border-dashes: 1;
 }
 
 /***************
@@ -477,6 +478,7 @@ GtkComboBox.button {
                                                    from (alpha (@keyboard_focus_border_a, 0.62)),
                                                    to (alpha (@keyboard_focus_border_b, 0.62)));
     -adwaita-focus-border-radius: 1;
+    -adwaita-focus-border-dashes: 0;
     -GtkWidget-focus-line-width: 2;
 
     border-radius: 2;
@@ -928,6 +930,7 @@ GtkIconView.view.cell:selected:focused {
      */
     -adwaita-focus-border-color: @progressbar_border;
     -adwaita-focus-border-radius: 3;
+    -adwaita-focus-border-dashes: 0;
 }
 
 .view {
@@ -943,6 +946,7 @@ GtkTreeView {
 
     -GtkWidget-focus-line-width: 1;
     -adwaita-focus-border-radius: 0;
+    -adwaita-focus-border-dashes: 0;
 }
 
 column-header {
