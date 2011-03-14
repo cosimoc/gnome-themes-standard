@@ -1,3 +1,13 @@
+2.91.91.1
+=======
+
+Add raised toolbar buttons
+Make focus ring match latest mockups
+Make active toolbar buttons match latest mockups
+Fix pane separators
+Properly align check/radio buttons
+Fix a typo to work correctly with GTK+ 3.0.3
+
 2.91.91
 =======
 
