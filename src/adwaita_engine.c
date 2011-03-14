@@ -349,7 +349,7 @@ adwaita_engine_render_check (GtkThemingEngine *engine,
 	}
 
 	if (render_from_assets_common (engine, cr,
-				       x, y, width, height)) {
+				       x, y + 2.0, width, height)) {
 		return;
 	}
 
@@ -471,7 +471,7 @@ adwaita_engine_render_option (GtkThemingEngine *engine,
 	}
 
 	if (render_from_assets_common (engine, cr,
-				       x, y, width, height)) {
+				       x, y + 2.0, width, height)) {
 		return;
 	}
 
