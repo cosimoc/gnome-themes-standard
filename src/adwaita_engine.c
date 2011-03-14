@@ -164,7 +164,6 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 			     gdouble	       height)
 {
 	GdkRGBA *fill_color, *border_color = NULL;
-	GdkRGBA *border_gradient_a = NULL, *border_gradient_b = NULL;
 	cairo_pattern_t *pattern = NULL;
 	GtkStateFlags state;
 	gint line_width;
@@ -175,8 +174,7 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 				"-adwaita-focus-border-color", &border_color,
 				"-adwaita-focus-fill-color", &fill_color,
 				"-adwaita-focus-border-radius", &border_radius,
-				"-adwaita-focus-border-gradient-a", &border_gradient_a,
-				"-adwaita-focus-border-gradient-b", &border_gradient_b,
+				"-adwaita-focus-border-gradient", &pattern,
 				NULL);
 
 	gtk_theming_engine_get_style (engine,
@@ -203,41 +201,19 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 	/* if we have a gradient, draw the gradient, otherwise
 	 * draw the line if we have a color for it.
 	 */
-	if (border_gradient_a != NULL &&
-	    border_gradient_b != NULL) {
-		pattern = cairo_pattern_create_linear (x, y, x, y + height);
-
-		cairo_pattern_add_color_stop_rgba (pattern,
-						   0.0,
-						   border_gradient_a->red,
-						   border_gradient_a->green,
-						   border_gradient_a->blue,
-						   border_gradient_a->alpha);
-
-		cairo_pattern_add_color_stop_rgba (pattern,
-						   1.0,
-						   border_gradient_b->red,
-						   border_gradient_b->green,
-						   border_gradient_b->blue,
-						   border_gradient_b->alpha);
+	if (pattern != NULL) {
+		style_pattern_set_matrix (pattern, width, height);
 
 		cairo_set_source (cr, pattern);
-		cairo_stroke (cr);
-
-		cairo_pattern_destroy (pattern);
 	} else if (border_color != NULL) {
 		gdk_cairo_set_source_rgba (cr, border_color);
-		cairo_stroke (cr);
 	}
 
+	cairo_stroke (cr);
 	cairo_restore (cr);
 
-	if (border_gradient_a != NULL) {
-		gdk_rgba_free (border_gradient_a);
-	}
-
-	if (border_gradient_b != NULL) {
-		gdk_rgba_free (border_gradient_b);
+	if (pattern != NULL) {
+		cairo_pattern_destroy (pattern);
 	}
 
 	if (border_color != NULL) {
@@ -1678,15 +1654,10 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 								0, G_MAXINT, 0,
 								0));
 	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-					      g_param_spec_boxed ("focus-border-gradient-a",
-								  "Focus border gradient A",
-								  "Focus border gradient A",
-								  GDK_TYPE_RGBA, 0));
-	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-					      g_param_spec_boxed ("focus-border-gradient-b",
-								  "Focus border gradient B",
-								  "Focus border gradient B",
-								  GDK_TYPE_RGBA, 0));
+					      g_param_spec_boxed ("focus-border-gradient",
+								  "Focus border gradient",
+								  "Focus border gradient",
+								  CAIRO_GOBJECT_TYPE_PATTERN, 0));
 	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
 					      g_param_spec_boxed ("focus-fill-color",
 								  "Focus fill color",
