@@ -1,20 +1,20 @@
 # Italian translation for gnome-themes-standard.
-# Copyright (C) 2010, 2011 gnome-themes-standard's Free Software Foundation, Inc.
+# Copyright (C) 2010 Free Software Foundation, Inc
 # This file is distributed under the same license as the gnome-themes-standard package.
 # Luca Ferretti <lferrett@gnome.org>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-01 21:35+0100\n"
-"PO-Revision-Date: 2011-03-01 21:36+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-03-12 13:05+0000\n"
+"PO-Revision-Date: 2011-03-14 21:03+0100\n"
 "Last-Translator: Luca Ferretti <lferrett@gnome.org>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8 bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
