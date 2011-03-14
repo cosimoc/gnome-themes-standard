@@ -166,7 +166,7 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 	GdkRGBA *fill_color, *border_color = NULL;
 	cairo_pattern_t *pattern = NULL;
 	GtkStateFlags state;
-	gint line_width;
+	gint line_width, focus_pad;
 	gint border_radius;
 	gboolean use_dashes;
 	double dashes[2] = { 2.0, 0.2 };
@@ -182,7 +182,17 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 
 	gtk_theming_engine_get_style (engine,
 				      "focus-line-width", &line_width,
+				      "focus-padding", &focus_pad,
 				      NULL);
+
+	if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_NOTEBOOK) &&
+	    gtk_theming_engine_has_region (engine, GTK_STYLE_REGION_TAB, NULL)) {
+		/* as we render the tab smaller than the whole allocation, we need
+		 * to recenter and resize the focus on the tab.
+		 */
+		y += 3.0;
+		height -= 3.0;
+	}
 
 	cairo_save (cr);
 	cairo_set_line_width (cr, line_width);

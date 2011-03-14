@@ -92,7 +92,6 @@
     -GtkButton-image-spacing: 4;
     -GtkButton-interior-focus: true;
     -GtkToolButton-icon-spacing: 4;
-    -GtkWidget-focus-padding: 2;
 
     -GtkTextView-error-underline-color: @error_color;
 
@@ -135,6 +134,7 @@
     color: @theme_fg_color;
     border-radius: 3;
 
+    -GtkWidget-focus-padding: 2;
     -GtkWidget-focus-line-width: 1;
     -adwaita-focus-border-color: alpha (@theme_text_color, 0.4);
     -adwaita-focus-border-radius: 2;
@@ -362,6 +362,8 @@ GtkCalendar {
                                      left top, left bottom,
                                      from (@theme_base_color),
                                      to (@switch_slider_color));
+
+    -adwaita-focus-border-radius: 2;
 }
 
 .notebook tab:active {
