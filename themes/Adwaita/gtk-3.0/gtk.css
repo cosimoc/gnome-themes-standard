@@ -726,7 +726,7 @@ GtkComboBox.button {
 /* primary toolbar buttons */
 .primary-toolbar.toolbar.button {
     border-style: none;
-    border-width: 0;
+    border-width: 1;
     background-image: none;
     background-color: alpha (@theme_base_color, 0.0);
 
@@ -738,7 +738,6 @@ GtkComboBox.button {
 
 .primary-toolbar.toolbar.button:insensitive {
     border-style: none;
-    border-width: 0;
     background-image: none;
     background-color: alpha (@theme_base_color, 0.0);
     -GtkWidget-focus-line-width: 0;
@@ -746,7 +745,6 @@ GtkComboBox.button {
 
 .primary-toolbar.toolbar.button:hover {
     border-style: none;
-    border-width: 0;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (alpha (@theme_base_color, 0.0)),
@@ -755,28 +753,42 @@ GtkComboBox.button {
 }
 
 .primary-toolbar.toolbar.button:active {
-    border-style: none;
-    border-width: 0;
+    border-style: solid;
+    border-radius: 4;
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (@toolbar_active_button_color),
+                                             to (shade (@toolbar_active_button_color, 1.83)));
+
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
-				     from (alpha (@theme_base_color, 0.0)),
-				     color-stop (0.54, alpha (shade (@theme_base_color, 0.92), 0.85)),
-			             to (alpha (@theme_base_color, 0.0)));
+				     from (shade (@toolbar_gradient_base, 0.85)),
+			             to (alpha (shade (@toolbar_gradient_base, 0.85), 0.0)));
+
+    color: @theme_base_color;
 }
 
 .primary-toolbar.toolbar.button:active:prelight {
-    border-style: none;
-    border-width: 0;
+    border-style: solid;
+    border-radius: 3;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (alpha (shade (@toolbar_gradient_base, 0.76), 0.7)),
-			             to (alpha (shade (@toolbar_gradient_base, 1.14), 0.0)));    
+			             to (alpha (shade (@toolbar_gradient_base, 1.14), 0.0)));
+
+    color: @theme_base_color;
+}
+
+.primary-toolbar.toolbar.button:active:insensitive {
+    border-style: solid;
+    border-radius: 3;
+    border-color: @inactive_frame_color;
+    -adwaita-border-gradient: none;
 }
 
 .primary-toolbar.toolbar.separator {
     border-style: solid;
     border-color: shade (@theme_bg_color, 0.56);
-    border-width: 1;
 
     background-image: none;
 }

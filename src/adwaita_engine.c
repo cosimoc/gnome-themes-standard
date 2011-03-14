@@ -27,6 +27,7 @@
 #include <gtk/gtk.h>
 #include <gmodule.h>
 #include <math.h>
+#include <cairo-gobject.h>
 
 #define ADWAITA_NAMESPACE "adwaita"
 
@@ -87,6 +88,32 @@ _cairo_round_rectangle (cairo_t *cr,
 	cairo_arc (cr, x+w-radius, y+h-radius, radius, 0, G_PI * 0.5);
 	cairo_arc (cr, x+radius,   y+h-radius, radius, G_PI * 0.5, G_PI);
 	cairo_arc (cr, x+radius,   y+radius,   radius, G_PI, G_PI * 1.5);
+}
+
+/* Set the appropriate matrix for
+ * patterns coming from the style context
+ */
+static void
+style_pattern_set_matrix (cairo_pattern_t *pattern,
+                          gdouble          width,
+                          gdouble          height)
+{
+  cairo_matrix_t matrix;
+  gint w, h;
+
+  if (cairo_pattern_get_type (pattern) == CAIRO_PATTERN_TYPE_SURFACE)
+    {
+      cairo_surface_t *surface;
+
+      cairo_pattern_get_surface (pattern, &surface);
+      w = cairo_image_surface_get_width (surface);
+      h = cairo_image_surface_get_height (surface);
+    }
+  else
+    w = h = 1;
+
+  cairo_matrix_init_scale (&matrix, (gdouble) w / width, (gdouble) h / height);
+  cairo_pattern_set_matrix (pattern, &matrix);
 }
 
 static void
@@ -801,6 +828,63 @@ render_menubar_active_frame (GtkThemingEngine *engine,
 }
 
 static void
+render_frame_default (GtkThemingEngine *engine,
+		      cairo_t *cr,
+		      gdouble x,
+		      gdouble y,
+		      gdouble width,
+		      gdouble height)
+{
+	cairo_pattern_t *pattern = NULL;
+	GtkStateFlags state;
+	GtkBorder *border;
+	gint line_width, border_radius;
+	GtkBorderStyle border_style;
+
+	state = gtk_theming_engine_get_state (engine);
+
+	gtk_theming_engine_get (engine, state,
+				"-adwaita-border-gradient", &pattern,
+				"border-style", &border_style,
+				NULL);
+
+	if (pattern == NULL || border_style == GTK_BORDER_STYLE_NONE) {
+		GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame
+			(engine, cr,
+			 x, y, width, height);
+
+		return;
+	}
+
+	cairo_save (cr);
+
+	gtk_theming_engine_get (engine, state,
+				"border-radius", &border_radius,
+				"border-width", &border,
+				NULL);
+
+	line_width = MIN (MIN (border->top, border->bottom),
+			  MIN (border->left, border->right));
+	style_pattern_set_matrix (pattern, width, height);
+
+	cairo_set_line_width (cr, line_width);
+	_cairo_round_rectangle (cr,
+				x + line_width / 2.0,
+				y + line_width / 2.0,
+				width - line_width,
+				height - line_width,
+				border_radius);
+	cairo_set_source (cr, pattern);
+
+	cairo_stroke (cr);
+
+	cairo_restore (cr);
+
+	cairo_pattern_destroy (pattern);
+	gtk_border_free (border);
+}
+
+static void
 adwaita_engine_render_frame (GtkThemingEngine *engine,
 			     cairo_t          *cr,
 			     gdouble           x,
@@ -895,8 +979,7 @@ adwaita_engine_render_frame (GtkThemingEngine *engine,
 			gtk_border_free (border_width);
 		}
 
-		GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame (engine, cr, x, y,
-										      width, height);
+		render_frame_default (engine, cr, x, y, width, height);
 	}
 
 out:
@@ -1619,6 +1702,11 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 								  "Notebook border color",
 								  "Notebook border color",
 								  GDK_TYPE_RGBA, 0));
+	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
+					      g_param_spec_boxed ("border-gradient",
+								  "Border gradient",
+								  "Border gradient",
+								  CAIRO_GOBJECT_TYPE_PATTERN, 0));
 }
 
 static void
