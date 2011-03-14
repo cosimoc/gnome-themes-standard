@@ -81,6 +81,8 @@
 @define-color toolbar_gradient_step2 #d9d9d7;
 @define-color toolbar_gradient_final #e5e5e2;
 
+@define-color toolbar_active_button_color #909081;
+
 * {
     engine: adwaita;
     padding: 1;
