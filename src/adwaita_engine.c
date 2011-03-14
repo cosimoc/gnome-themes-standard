@@ -595,7 +595,7 @@ render_notebook_extension (GtkThemingEngine *engine,
 			   GtkPositionType   gap_side)
 {
 	gint tab_curvature;
-	GdkRGBA *color, *notebook_border_color, border_color, background_color;
+	GdkRGBA *color, border_color, background_color;
 	GtkStateFlags state;
 	gdouble angle = 0;
 	cairo_pattern_t *pattern = NULL, *background_pattern = NULL;
@@ -609,7 +609,7 @@ render_notebook_extension (GtkThemingEngine *engine,
 	gtk_theming_engine_get_border_color (engine, state, &border_color);
 	gtk_theming_engine_get (engine, state,
 				"-adwaita-selected-tab-color", &color,
-				"-adwaita-notebook-border-color", &notebook_border_color,
+				"-adwaita-border-gradient", &pattern,
 				"background-image", &background_pattern,
 				NULL);
 
@@ -659,20 +659,7 @@ render_notebook_extension (GtkThemingEngine *engine,
 	draw_tab_shape_active (cr, tab_curvature, 0, 0, width, height);
 
 	if (state & GTK_STATE_FLAG_ACTIVE) {
-		pattern = cairo_pattern_create_linear (0, height, 0, 0);
-		cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
-		cairo_pattern_add_color_stop_rgba (pattern, 0.0,
-						   notebook_border_color->red,
-						   notebook_border_color->green,
-						   notebook_border_color->blue,
-						   notebook_border_color->alpha);
-
-		cairo_pattern_add_color_stop_rgba (pattern, 1.0,
-						   border_color.red,
-						   border_color.green,
-						   border_color.blue,
-						   border_color.alpha);
-
+		style_pattern_set_matrix (pattern, width, height - 6.0);
 		cairo_set_source (cr, pattern);
 	} else {
 		gdk_cairo_set_source_rgba (cr, &border_color);
@@ -681,7 +668,6 @@ render_notebook_extension (GtkThemingEngine *engine,
 	cairo_stroke (cr);
 
 	gdk_rgba_free (color);
-	gdk_rgba_free (notebook_border_color);
 
 	if (pattern != NULL) {
 		cairo_pattern_destroy (pattern);
@@ -1684,11 +1670,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 					      g_param_spec_boxed ("selected-tab-color",
 								  "Selected tab color",
 								  "Selected tab color",
-								  GDK_TYPE_RGBA, 0));
-	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-					      g_param_spec_boxed ("notebook-border-color",
-								  "Notebook border color",
-								  "Notebook border color",
 								  GDK_TYPE_RGBA, 0));
 	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
 					      g_param_spec_boxed ("border-gradient",

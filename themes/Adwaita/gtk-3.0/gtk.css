@@ -369,11 +369,14 @@ GtkCalendar {
 }
 
 .notebook tab:active {
-    border-color: @notebook_active_tab_border;
     border-width: 1;
 
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (@notebook_active_tab_border),
+                                             to (@notebook_border));
+
     -adwaita-selected-tab-color: #8dc0f3;
-    -adwaita-notebook-border-color: @notebook_border;
     background-color: @theme_base_color;
     background-image: none;
 }
