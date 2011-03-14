@@ -2,15 +2,15 @@
 # Copyright (C) 2010 gnome-themes-standard's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-themes-standard package.
 #
-# Marek Černocký <marek@manet.cz>, 2010.
+# Marek Černocký <marek@manet.cz>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "themes-standard&component=general\n"
-"POT-Creation-Date: 2010-12-26 08:27+0000\n"
-"PO-Revision-Date: 2010-12-27 12:30+0100\n"
+"POT-Creation-Date: 2011-03-01 17:06+0000\n"
+"PO-Revision-Date: 2011-03-14 23:15+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -31,3 +31,26 @@ msgstr "Adwaita"
 msgid "There is only one"
 msgstr "Je jen jedna"
 
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "Vysoký kontrast"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "Motiv s vysokým kontrastem"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "Vysoký kontrast inverzně"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "Motiv s vysokým kontrastem a inverzí"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "Nízký kontrast"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "Motiv s nízkým kontrastem"
