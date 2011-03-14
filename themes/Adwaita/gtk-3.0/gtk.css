@@ -96,7 +96,7 @@
 
     -GtkTextView-error-underline-color: @error_color;
 
-    -GtkPaned-handle-size: 6;
+    -GtkPaned-handle-size: 5;
 
     -GtkCheckButton-indicator-size: 16;
     -GtkCheckMenuItem-indicator-size: 12;
@@ -189,6 +189,17 @@
 
 .grip {
     background-color: shade (@inactive_frame_color, 0.93);
+}
+
+.pane-separator {
+    background-color: @theme_bg_color;
+    color: shade (@inactive_frame_color, 0.80);
+}
+
+.pane-separator:prelight,
+.pane-separator:selected {
+    background-color: @theme_bg_color;
+    border-color: shade (@highlighted_border, 0.964);
 }
 
 /****************
