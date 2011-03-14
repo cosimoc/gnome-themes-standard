@@ -949,6 +949,7 @@ GtkTreeView {
     -GtkWidget-focus-line-width: 1;
     -adwaita-focus-border-radius: 0;
     -adwaita-focus-border-dashes: 0;
+    -adwaita-focus-border-color: @keyboard_focus_border_a;
 }
 
 column-header {
