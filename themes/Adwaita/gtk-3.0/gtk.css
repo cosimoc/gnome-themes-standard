@@ -1096,11 +1096,6 @@ GtkTreeView.GtkFileChooserDefaultSidebar {
     background-color: #f6f6f4;
 }
 
-/* Custom colors for some applications' widgets */
-#nautilus-extra-view-widget {
-    background-color: mix (shade (@theme_bg_color, 1.05), @theme_selected_bg_color, 0.60);
-}
-
 ApDocView, /* Abiword */
 EogScrollView, /* Eog */
 CheeseThumbView /* Cheese */
