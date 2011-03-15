@@ -328,6 +328,10 @@ GtkScale.progressbar {
     border-style: solid;
 }
 
+GtkScale.mark {
+    background-color: shade (@theme_bg_color, 0.56);
+}
+
 GtkFrame,
 GtkCalendar {
     padding: 2;
