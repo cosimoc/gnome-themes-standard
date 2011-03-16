@@ -883,8 +883,8 @@ GtkSwitch.trough {
     border-color: shade (@frame_color, 1.22);
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
-                                     from (@trough_bg_color_b),
-                                     to (@trough_bg_color_a));
+                                     from (@trough_bg_color_a),
+                                     to (@trough_bg_color_b));
 }
 
 GtkSwitch.trough:active {
