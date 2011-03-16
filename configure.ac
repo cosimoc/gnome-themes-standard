@@ -64,6 +64,10 @@ themes/LowContrast/gtk-2.0/Makefile
 themes/LowContrast/gtk-3.0/Makefile
 themes/LowContrast/icons/Makefile
 themes/LowContrast/icons/48x48/Makefile
+themes/LowContrast/icons/48x48/actions/Makefile
+themes/LowContrast/icons/48x48/apps/Makefile
+themes/LowContrast/icons/48x48/categories/Makefile
+themes/LowContrast/icons/48x48/devices/Makefile
 themes/LowContrast/icons/48x48/stock/Makefile
 themes/HighContrast/Makefile
 themes/HighContrast/gtk-2.0/Makefile

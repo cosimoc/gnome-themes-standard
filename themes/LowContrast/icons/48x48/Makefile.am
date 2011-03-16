@@ -1,4 +1,4 @@
 
 themedir = $(datadir)/icons/LowContrast/48x48
 
-SUBDIRS = stock
+SUBDIRS = actions apps categories devices stock
