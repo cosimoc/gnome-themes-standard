@@ -1280,6 +1280,52 @@ draw_mark_slider (cairo_t *cr,
 }
 
 static void
+render_switch_lines (GtkThemingEngine *engine,
+		     cairo_t *cr,
+		     gdouble x,
+		     gdouble y,
+		     gdouble width,
+		     gdouble height,
+		     GtkOrientation orientation)
+{
+	GtkStateFlags state;
+	GdkRGBA *lines_color;
+
+	state = gtk_theming_engine_get_state (engine);
+
+	if (state & GTK_STATE_FLAG_INSENSITIVE) {
+		return;
+	}
+
+	gtk_theming_engine_get (engine, state,
+				"-adwaita-switch-grip-color", &lines_color,
+				NULL);
+
+	cairo_save (cr);
+
+	cairo_translate (cr,
+			 x + width / 2.0 - 4.0,
+			 y + height / 2.0 - 3.0);
+
+	cairo_move_to (cr, 0.0, 0.0);
+	cairo_set_line_width (cr, 2.0);
+	cairo_set_line_cap (cr, CAIRO_LINE_CAP_ROUND);
+
+	cairo_line_to (cr, 0.0, 6.0);
+	cairo_move_to (cr, 4.0, 0.0);
+	cairo_line_to (cr, 4.0, 6.0);
+	cairo_move_to (cr, 8.0, 0.0);
+	cairo_line_to (cr, 8.0, 6.0);
+
+	gdk_cairo_set_source_rgba (cr, lines_color);
+	cairo_stroke (cr);
+
+	cairo_restore (cr);
+
+	gdk_rgba_free (lines_color);
+}
+
+static void
 adwaita_engine_render_slider (GtkThemingEngine *engine,
 			      cairo_t          *cr,
 			      gdouble           x,
@@ -1365,6 +1411,10 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 		GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_slider (engine, cr,
 										       x, y, width, height,
 										       orientation);
+
+		if (gtk_widget_path_is_type (path, GTK_TYPE_SWITCH)) {
+			render_switch_lines (engine, cr, x, y, width, height, orientation);
+		}
 	}
 
 	cairo_restore (cr);
@@ -1740,6 +1790,11 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 					      g_param_spec_boxed ("menuitem-arrow-color",
 								  "Menuitem arrow color",
 								  "Menuitem arrow color",
+								  GDK_TYPE_RGBA, 0));
+	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
+					      g_param_spec_boxed ("switch-grip-color",
+								  "Switch grip color",
+								  "Switch grip color",
 								  GDK_TYPE_RGBA, 0));
 }
 

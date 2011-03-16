@@ -916,6 +916,8 @@ GtkSwitch.slider {
                                      color-stop (0.85, @switch_slider_color),
                                      color-stop (0.86, shade (@switch_slider_color, 1.03)),
                                      to (shade (@switch_slider_color, 1.03)));
+
+    -adwaita-switch-grip-color: shade (@switch_slider_color, 0.97);
 }
 
 GtkSwitch.slider:active {
