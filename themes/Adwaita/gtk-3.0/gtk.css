@@ -418,6 +418,9 @@ GtkComboBox.button {
     -GtkRange-slider-width: 18;
     -GtkRange-stepper-size: 18;
     -GtkScrollbar-min-slider-length: 30; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
+
+    -GtkRange-stepper-spacing: 1;
+    -GtkRange-trough-under-steppers: 1;
 }
 
 .scrollbar.trough {
