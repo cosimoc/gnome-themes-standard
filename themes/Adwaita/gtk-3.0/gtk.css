@@ -587,6 +587,10 @@ GtkComboBox.button {
 
 }
 
+.menuitem {
+    -adwaita-menuitem-arrow-color: @menu_controls_color;
+}
+
 .menuitem:active,
 .menuitem:prelight {
     background-color: @selected_bg_color;
