@@ -875,6 +875,11 @@ GtkComboBox.button {
 /*************
  * GtkSwitch *
  *************/
+
+GtkSwitch {
+    font: bold condensed 10;
+}
+
 GtkSwitch.trough {
     color: @internal_element_color;
     border-radius: 1;
