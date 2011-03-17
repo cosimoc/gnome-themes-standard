@@ -1705,8 +1705,10 @@ adwaita_engine_render_line (GtkThemingEngine *engine,
 
 	path = gtk_theming_engine_get_path (engine);
 
-	if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MARK) &&
-	    gtk_widget_path_is_type (path, GTK_TYPE_SCALE)) {
+	if ((gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MARK) &&
+	     gtk_widget_path_is_type (path, GTK_TYPE_SCALE)) ||
+	    (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_SEPARATOR) &&
+	     gtk_widget_path_is_type (path, GTK_TYPE_TREE_VIEW))) {
 		GtkStateFlags state;
 		GdkRGBA bg;
 

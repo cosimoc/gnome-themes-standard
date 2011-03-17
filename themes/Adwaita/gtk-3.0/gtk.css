@@ -1003,6 +1003,10 @@ GtkTreeView {
     -adwaita-focus-border-color: @keyboard_focus_border_a;
 }
 
+GtkTreeView.separator {
+    background-color: darker (@theme_bg_color);
+}
+
 column-header {
     padding: 1 2;
 }
