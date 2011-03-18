@@ -950,7 +950,10 @@ GtkSwitch.trough {
 
 GtkSwitch.trough:active {
     color: @theme_base_color;
-    border-color: shade (@theme_selected_bg_color, 0.66);
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (shade (@selected_bg_color, 0.70)),
+                                             to (shade (@selected_bg_color, 0.94)));
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@active_switch_bg_color_a),
@@ -961,6 +964,7 @@ GtkSwitch.trough:insensitive {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.9);
     border-color: shade (@inactive_frame_color, 0.845);
+    -adwaita-border-gradient: none;
 }
 
 GtkSwitch.slider {
