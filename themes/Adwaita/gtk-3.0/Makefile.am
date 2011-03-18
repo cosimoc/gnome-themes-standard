@@ -3,6 +3,8 @@ SUBDIRS = assets
 themedir = $(datadir)/themes/Adwaita/gtk-3.0
 theme_DATA = 		\
 	gtk.css 	\
+	gtk-dark.css	\
+	gtk-widgets.css \
 	settings.ini
 
 EXTRA_DIST = $(theme_DATA)
