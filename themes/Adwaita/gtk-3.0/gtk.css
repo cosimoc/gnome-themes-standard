@@ -304,6 +304,11 @@ GtkScale.slider {
                                              to (shade (@internal_element_color, 1.35)));
 }
 
+GtkScale.slider:insensitive {
+    background-image: none;
+    -adwaita-border-gradient: none;
+}
+
 GtkScale.scale-has-marks-below.slider.horizontal {
     -adwaita-border-gradient: -gtk-gradient (linear,
                                              left top, left bottom,
@@ -337,6 +342,11 @@ GtkScale.trough {
     border-radius: 2;
     border-style: solid;
     border-color: @internal_element_color;
+}
+
+GtkScale.trough:insensitive {
+    background-color: shade (@theme_bg_color, 1.20);
+    border-color: shade (@inactive_frame_color, 0.845);
 }
 
 GtkScale.trough.horizontal {

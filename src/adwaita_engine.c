@@ -1368,8 +1368,13 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 					"background-image", &pattern,
 					NULL);
 
-		style_pattern_set_matrix (pattern, width, height);
-		cairo_set_source (cr, pattern);
+		if (pattern != NULL) {
+			style_pattern_set_matrix (pattern, width, height);
+			cairo_set_source (cr, pattern);
+		} else {
+			gtk_theming_engine_get_background_color (engine, state, &color);
+			gdk_cairo_set_source_rgba (cr, &color);
+		}
 
 		cairo_fill_preserve (cr);
 
@@ -1387,7 +1392,9 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 
 		cairo_stroke (cr);
 
-		cairo_pattern_destroy (pattern);
+		if (pattern != NULL) {
+			cairo_pattern_destroy (pattern);
+		}
 
 		if (border_pattern != NULL) {
 			cairo_pattern_destroy (border_pattern);
