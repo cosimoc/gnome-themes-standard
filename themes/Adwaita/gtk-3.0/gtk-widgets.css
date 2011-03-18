@@ -564,12 +564,12 @@ GtkComboBox.button {
 
 .menuitem:active,
 .menuitem:prelight {
-    background-color: @selected_bg_color;
+    background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
     border-style: solid;
     border-width: 1;
     border-radius: 1;
-    border-color: darker (@selected_bg_color);
+    border-color: darker (@theme_selected_bg_color);
 }
 
 .menu.separator {
