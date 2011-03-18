@@ -211,18 +211,23 @@
     border-radius: 2;
     border-width: 1;
     border-style: solid;
-    border-color: @button_border;
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (shade (@internal_element_color, 1.14)),
+                                             to (shade (@internal_element_color, 1.37)));
 
     padding: 2;
 }
 
 .entry:focused {
-    border-color: @focused_entry_border;    
+    border-color: @focused_entry_border;
+    -adwaita-border-gradient: none;
 }
 
 .entry:insensitive {
     background-color: @insensitive_bg_color;
     border-color: shade (@inactive_frame_color, 0.945);
+    -adwaita-border-gradient: none;
 }
 
 .entry.progressbar {
