@@ -287,12 +287,44 @@ GtkScale {
 GtkScale.slider {
     border-width: 1;
     border-radius: 3;
-    border-color: shade (@internal_element_color, 0.90);
 
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@theme_base_color),
                                      to (@switch_slider_color));
+
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (shade (@internal_element_color, 0.90)),
+                                             to (shade (@internal_element_color, 1.35)));
+}
+
+GtkScale.scale-has-marks-below.slider.horizontal {
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (shade (@internal_element_color, 0.90)),
+                                             to (shade (@internal_element_color, 1.35)));
+}
+
+GtkScale.scale-has-marks-below.slider.vertical {
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, right top,
+                                             from (shade (@internal_element_color, 0.90)),
+                                             to (shade (@internal_element_color, 1.35)));
+}
+
+GtkScale.scale-has-marks-above.slider.horizontal {
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left bottom, left top,
+                                             from (shade (@internal_element_color, 0.90)),
+                                             to (shade (@internal_element_color, 1.35)));
+}
+
+GtkScale.scale-has-marks-above.slider.vertical {
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             right top, left top,
+                                             from (shade (@internal_element_color, 0.90)),
+                                             to (shade (@internal_element_color, 1.35)));
 }
 
 GtkScale.trough {

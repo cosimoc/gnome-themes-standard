@@ -1345,7 +1345,6 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 		cairo_matrix_t matrix;
 		GtkStateFlags state;
 		GdkRGBA color;
-		gdouble shade_factor = 2.0 / 3.0;
 		gboolean marks_above = FALSE, marks_below = FALSE;
 
 		if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_SCALE_HAS_MARKS_ABOVE)) {
@@ -1369,42 +1368,30 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 					"background-image", &pattern,
 					NULL);
 
-		cairo_matrix_init_scale (&matrix, 1 / width, 1 / height);
-		cairo_pattern_set_matrix (pattern, &matrix);
-		cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
-
+		style_pattern_set_matrix (pattern, width, height);
 		cairo_set_source (cr, pattern);
+
 		cairo_fill_preserve (cr);
 
-		gtk_theming_engine_get_border_color (engine, state, &color);
+		gtk_theming_engine_get (engine, state,
+					"-adwaita-border-gradient", &border_pattern,
+					NULL);
 
-		if (orientation == GTK_ORIENTATION_HORIZONTAL) {
-			border_pattern = cairo_pattern_create_linear (0, 0, 0, height);
+		if (border_pattern != NULL) {
+			style_pattern_set_matrix (border_pattern, width, height);
+			cairo_set_source (cr, border_pattern);
 		} else {
-			border_pattern = cairo_pattern_create_linear (width, 0, 0, 0);
+			gtk_theming_engine_get_border_color (engine, state, &color);
+			gdk_cairo_set_source_rgba (cr, &color);
 		}
 
-		cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
-
-		cairo_pattern_add_color_stop_rgba (border_pattern,
-						   marks_above ? 0.0 : 1.0,
-						   color.red / shade_factor,
-						   color.green / shade_factor,
-						   color.blue / shade_factor,
-						   color.alpha);
-
-		cairo_pattern_add_color_stop_rgba (border_pattern,
-						   marks_above ? 1.0 : 0.0,
-						   color.red,
-						   color.green,
-						   color.blue,
-						   color.alpha);
-
-		cairo_set_source (cr, border_pattern);
 		cairo_stroke (cr);
 
 		cairo_pattern_destroy (pattern);
-		cairo_pattern_destroy (border_pattern);
+
+		if (border_pattern != NULL) {
+			cairo_pattern_destroy (border_pattern);
+		}
 	}
 	else
 	{
