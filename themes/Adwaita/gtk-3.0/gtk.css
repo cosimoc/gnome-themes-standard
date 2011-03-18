@@ -805,9 +805,12 @@ GtkComboBox.button {
     background-image: none;
     background-color: alpha (@theme_base_color, 0.0);
 
-    -GtkWidget-focus-line-width: 0;
-    -adwaita-focus-fill-color: none;
-    -adwaita-focus-border-gradient: none;
+    -adwaita-focus-border-radius: 2;
+    -adwaita-focus-fill-color: alpha (@theme_base_color, 0.20);
+    -adwaita-focus-border-gradient: -gtk-gradient (linear,
+                                                   left top, left bottom,
+                                                   from (alpha (shade (@toolbar_active_button_color, 1.25), 0.90)),
+                                                   to (alpha (@toolbar_active_button_color, 0.62)));
 }
 
 .primary-toolbar.toolbar.button:insensitive {
