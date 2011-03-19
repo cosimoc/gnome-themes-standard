@@ -1183,3 +1183,9 @@ PanelApplet.GtkToggleButton:hover:active {
 NaTrayApplet {
     -NaTrayApplet-icon-padding: 6;
 }
+
+WnckPager, WnckTasklist {
+    background-color: @chrome_bg_color;
+    background-image: none;
+    color: @chrome_fg_color;
+}
