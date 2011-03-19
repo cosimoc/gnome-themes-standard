@@ -1159,7 +1159,8 @@ PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
 PanelApplet GtkToggleButton {
     background-color: @os_chrome_bg_color;
     background-image: none;
-    border-width: 0;
+    border-color: @os_chrome_bg_color;
+    border-width: 1;
     color: @os_chrome_fg_color;
 }
 
@@ -1175,7 +1176,8 @@ PanelApplet GtkToggleButton:active {
 PanelApplet GtkToggleButton:prelight {
     background-color: @os_chrome_bg_color;
     background-image: none;
-    border-width: 0;
+    border-color: @os_chrome_bg_color;
+    border-width: 1;
     color: @os_chrome_selected_fg_color;
 }
 
