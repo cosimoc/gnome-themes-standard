@@ -1152,7 +1152,7 @@ PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
 .gnome-panel-menu-bar.menuitem:prelight {
     background-color: @os_chrome_selected_bg_color;
     color: @os_chrome_selected_fg_color;
-    border-color: @os_chrome_bg_color;
+    border-color: lighter (@os_chrome_selected_bg_color);
 }
 
 /* panel buttons (clock, tasklist etc) */
@@ -1163,22 +1163,17 @@ PanelApplet GtkToggleButton {
     color: @os_chrome_fg_color;
 }
 
+PanelApplet GtkToggleButton:prelight:active,
 PanelApplet GtkToggleButton:active {
     background-color: @os_chrome_selected_bg_color;
     background-image: none;
-    border-width: 0;
+    border-color: lighter (@os_chrome_selected_bg_color);
+    border-width: 1;
     color: @os_chrome_selected_fg_color;
 }
 
 PanelApplet GtkToggleButton:prelight {
     background-color: @os_chrome_bg_color;
-    background-image: none;
-    border-width: 0;
-    color: @os_chrome_selected_fg_color;
-}
-
-PanelApplet GtkToggleButton:prelight:active {
-    background-color: @os_chrome_selected_bg_color;
     background-image: none;
     border-width: 0;
     color: @os_chrome_selected_fg_color;
