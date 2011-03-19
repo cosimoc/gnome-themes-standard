@@ -1132,7 +1132,10 @@ TerminalScreen {
     -TerminalScreen-background-darkness: 0.95;
 }
 
-/* For old gnome-panel */
+/**********************
+ * Fallback Mode Panel
+ **********************/
+
 PanelWidget,
 PanelApplet,
 PanelAppletFrame,
@@ -1174,4 +1177,8 @@ PanelApplet.GtkToggleButton:hover:active {
     border-color: shade (@theme_bg_color, 0.215);
     border-width: 0;
     color: @chrome_fg_color;
+}
+
+NaTrayApplet {
+    -NaTrayApplet-icon-padding: 6;
 }
