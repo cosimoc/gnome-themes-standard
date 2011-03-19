@@ -1147,6 +1147,16 @@ PanelToplevel {
     color: @os_chrome_fg_color;
 }
 
+.gnome-panel-menu-bar.menuitem:prelight {
+    background-color: @os_chrome_bg_color;
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@os_chrome_bg_color),
+                                     to (@os_chrome_fg_color));
+    color: @os_chrome_selected_fg_color;
+    border-color: @os_chrome_bg_color;
+}
+
 /* panel buttons (clock etc) */
 PanelApplet.GtkToggleButton {
     background-color: black;
