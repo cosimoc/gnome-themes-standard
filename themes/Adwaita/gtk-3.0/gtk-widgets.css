@@ -1138,6 +1138,7 @@ TerminalScreen {
 
 PanelWidget,
 PanelApplet,
+PanelApplet > GtkMenuBar.menubar,
 PanelAppletFrame,
 PanelMenuBar.menubar,
 PanelToplevel {
