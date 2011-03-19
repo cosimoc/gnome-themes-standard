@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-08 18:46+0100\n"
-"PO-Revision-Date: 2011-01-08 18:47+0100\n"
+"POT-Creation-Date: 2011-03-19 01:23+0100\n"
+"PO-Revision-Date: 2011-03-19 01:23+0100\n"
 "Last-Translator: Wouter Bolsterlee <wbolster@gnome.org>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "Language: nl\n"
@@ -29,3 +29,27 @@ msgstr "Adwaita"
 #: ../themes/Adwaita/index.theme.in.h:2
 msgid "There is only one"
 msgstr "Er is er maar één"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "Hoog contrast"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "Thema met hoog contrast"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "Omgekeerd hoog contrast"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "Thema met omgekeerd hoog contrast"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "Laag contrast"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "Thema met laag contrast"
