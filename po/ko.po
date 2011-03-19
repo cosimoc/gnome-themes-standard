@@ -6,9 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard&component=general\n"
-"POT-Creation-Date: 2011-02-25 18:00+0000\n"
-"PO-Revision-Date: 2011-02-27 03:07+0900\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"themes-standard&component=general\n"
+"POT-Creation-Date: 2011-03-01 17:06+0000\n"
+"PO-Revision-Date: 2011-03-19 23:27+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -33,3 +34,27 @@ msgstr "애드와이타"
 #: ../themes/Adwaita/index.theme.in.h:2
 msgid "There is only one"
 msgstr "오직 하나 뿐!"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "고대비"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "고대비 테마"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "고대비 반전"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "고대비 반전 테마"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "저대비"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "저대비 테마"
