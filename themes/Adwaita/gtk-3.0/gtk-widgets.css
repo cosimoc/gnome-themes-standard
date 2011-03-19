@@ -1138,14 +1138,14 @@ PanelApplet,
 PanelAppletFrame,
 PanelMenuBar.menubar,
 PanelToplevel {
-    background-color: @chrome_bg_color;
+    background-color: black;
     background-image: none;
     color: @chrome_fg_color;
 }
 
 /* panel buttons (clock etc) */
 PanelApplet.GtkToggleButton {
-    background-color: @chrome_bg_color;
+    background-color: black;
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
     border-width: 0;
