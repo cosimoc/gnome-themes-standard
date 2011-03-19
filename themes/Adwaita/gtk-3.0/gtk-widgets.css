@@ -1155,37 +1155,33 @@ PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
     border-color: @os_chrome_bg_color;
 }
 
-/* panel buttons (clock etc) */
+/* panel buttons (clock, tasklist etc) */
 PanelApplet GtkToggleButton {
-    background-color: black;
+    background-color: @os_chrome_bg_color;
     background-image: none;
-    border-color: shade (@theme_bg_color, 0.215);
     border-width: 0;
     color: @os_chrome_fg_color;
 }
 
 PanelApplet GtkToggleButton:active {
-    background-color: shade (@theme_bg_color, 0.43);
+    background-color: @os_chrome_selected_bg_color;
     background-image: none;
-    border-color: shade (@theme_bg_color, 0.215);
     border-width: 0;
-    color: @os_chrome_fg_color;
+    color: @os_chrome_selected_fg_color;
 }
 
-PanelApplet GtkToggleButton:hover {
-    background-color: shade (@theme_bg_color, 0.215);
+PanelApplet GtkToggleButton:prelight {
+    background-color: @os_chrome_bg_color;
     background-image: none;
-    border-color: shade (@theme_bg_color, 0.215);
     border-width: 0;
-    color: @chrome_fg_color;
+    color: @os_chrome_selected_fg_color;
 }
 
-PanelApplet GtkToggleButton:hover:active {
-    background-color: shade (@theme_bg_color, 0.43);
+PanelApplet GtkToggleButton:prelight:active {
+    background-color: @os_chrome_selected_bg_color;
     background-image: none;
-    border-color: shade (@theme_bg_color, 0.215);
     border-width: 0;
-    color: @os_chrome_fg_color;
+    color: @os_chrome_selected_fg_color;
 }
 
 NaTrayApplet {
