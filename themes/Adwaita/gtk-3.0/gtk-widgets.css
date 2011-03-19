@@ -1156,7 +1156,7 @@ PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
 }
 
 /* panel buttons (clock etc) */
-PanelApplet.GtkToggleButton {
+PanelApplet GtkToggleButton {
     background-color: black;
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
@@ -1164,7 +1164,7 @@ PanelApplet.GtkToggleButton {
     color: @os_chrome_fg_color;
 }
 
-PanelApplet.GtkToggleButton:active {
+PanelApplet GtkToggleButton:active {
     background-color: shade (@theme_bg_color, 0.43);
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
@@ -1172,7 +1172,7 @@ PanelApplet.GtkToggleButton:active {
     color: @os_chrome_fg_color;
 }
 
-PanelApplet.GtkToggleButton:hover {
+PanelApplet GtkToggleButton:hover {
     background-color: shade (@theme_bg_color, 0.215);
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
@@ -1180,7 +1180,7 @@ PanelApplet.GtkToggleButton:hover {
     color: @chrome_fg_color;
 }
 
-PanelApplet.GtkToggleButton:hover:active {
+PanelApplet GtkToggleButton:hover:active {
     background-color: shade (@theme_bg_color, 0.43);
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
