@@ -1139,6 +1139,7 @@ TerminalScreen {
 PanelWidget,
 PanelApplet,
 PanelApplet > GtkMenuBar.menubar,
+.gnome-panel-menu-bar,
 PanelAppletFrame,
 PanelMenuBar.menubar,
 PanelToplevel {
@@ -1147,12 +1148,9 @@ PanelToplevel {
     color: @os_chrome_fg_color;
 }
 
+PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
 .gnome-panel-menu-bar.menuitem:prelight {
-    background-color: @os_chrome_bg_color;
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@os_chrome_bg_color),
-                                     to (@os_chrome_fg_color));
+    background-color: @os_chrome_selected_bg_color;
     color: @os_chrome_selected_fg_color;
     border-color: @os_chrome_bg_color;
 }
@@ -1195,7 +1193,7 @@ NaTrayApplet {
 }
 
 WnckPager, WnckTasklist {
-    background-color: @chrome_bg_color;
+    background-color: @os_chrome_selected_bg_color;
     background-image: none;
-    color: @chrome_fg_color;
+    color: @os_chrome_fg_color;
 }
