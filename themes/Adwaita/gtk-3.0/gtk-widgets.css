@@ -1142,9 +1142,9 @@ PanelApplet > GtkMenuBar.menubar,
 PanelAppletFrame,
 PanelMenuBar.menubar,
 PanelToplevel {
-    background-color: black;
+    background-color: @os_chrome_bg_color;
     background-image: none;
-    color: @chrome_fg_color;
+    color: @os_chrome_fg_color;
 }
 
 /* panel buttons (clock etc) */
@@ -1153,7 +1153,7 @@ PanelApplet.GtkToggleButton {
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
     border-width: 0;
-    color: @chrome_fg_color;
+    color: @os_chrome_fg_color;
 }
 
 PanelApplet.GtkToggleButton:active {
@@ -1161,7 +1161,7 @@ PanelApplet.GtkToggleButton:active {
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
     border-width: 0;
-    color: @chrome_fg_color;
+    color: @os_chrome_fg_color;
 }
 
 PanelApplet.GtkToggleButton:hover {
@@ -1177,7 +1177,7 @@ PanelApplet.GtkToggleButton:hover:active {
     background-image: none;
     border-color: shade (@theme_bg_color, 0.215);
     border-width: 0;
-    color: @chrome_fg_color;
+    color: @os_chrome_fg_color;
 }
 
 NaTrayApplet {

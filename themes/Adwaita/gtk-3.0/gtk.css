@@ -37,6 +37,9 @@
 @define-color keyboard_focus_border_a #a2c9f1;
 @define-color keyboard_focus_border_b #6794cf;
 
+@define-color os_chrome_bg_color black;
+@define-color os_chrome_fg_color #ccc;
+
 @define-color chrome_bg_color #1e1a17;
 @define-color chrome_fg_color #fff;
 
