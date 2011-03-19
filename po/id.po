@@ -1,19 +1,24 @@
 # Indonesian translation for gnome-themes-standard.
 # Copyright (C) 2011 gnome-themes-standard's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-themes-standard package.
-# Andika Triwidada <andika@gmail.com>, 2011.
 #
+# Andika Triwidada <andika@gmail.com>, 2011.
+# Dirgita <dirgitadevina@yahoo.co.id>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard&component=general\n"
-"POT-Creation-Date: 2011-01-09 18:39+0000\n"
-"PO-Revision-Date: 2011-01-10 18:22+0700\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
-"Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-03-12 13:05+0000\n"
+"PO-Revision-Date: 2011-03-05 22:25+0700\n"
+"Last-Translator: Dirgita <dirgitadevina@yahoo.co.id>\n"
+"Language-Team: GNOME Indonesian Translation Team <gnome@i15n.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
 msgid "Default Background"
@@ -27,3 +32,26 @@ msgstr "Adwaita"
 msgid "There is only one"
 msgstr "Hanya ada satu"
 
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "Kontras Tinggi"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "Tema dengan kontras tinggi"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "Kontras Tinggi Terbalik"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "Tema dengan kontras tinggi terbalik"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "Kontras Rendah"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "Tema dengan kontras rendah"
