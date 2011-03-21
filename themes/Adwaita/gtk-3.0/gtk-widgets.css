@@ -327,8 +327,8 @@ GtkCalendar {
     padding: 3 8 0;
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
-                                     from (@theme_base_color),
-                                     to (@switch_slider_color));
+                                     from (@notebook_tab_gradient_a),
+                                     to (@notebook_tab_gradient_b));
 
     -adwaita-focus-border-radius: 2;
 }
@@ -589,11 +589,11 @@ GtkComboBox.button {
 }
 
 .menu.check:prelight {
-    color: @selected_fg_color;
+    color: @theme_selected_fg_color;
 }
 
 .menu.radio:prelight {
-    color: @selected_fg_color;
+    color: @theme_selected_fg_color;
 }
 
 /*************************
@@ -881,8 +881,8 @@ GtkSwitch.trough:active {
     color: @theme_base_color;
     -adwaita-border-gradient: -gtk-gradient (linear,
                                              left top, left bottom,
-                                             from (shade (@selected_bg_color, 0.70)),
-                                             to (shade (@selected_bg_color, 0.94)));
+                                             from (shade (@theme_selected_bg_color, 0.70)),
+                                             to (shade (@theme_selected_bg_color, 0.94)));
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@active_switch_bg_color_a),
@@ -945,7 +945,7 @@ GtkIconView {
 
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focused {
-    background-color: @selected_bg_color;
+    background-color: @theme_selected_bg_color;
     border-radius: 4;
 
     /* FIXME: this probably needs to be better;
@@ -999,8 +999,8 @@ row:selected:focused {
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@progressbar_border),
-                                     color-stop (0.03, @progressbar_border),
-                                     color-stop (0.04, @theme_selected_bg_color),
+                                     color-stop (0.02, @progressbar_border),
+                                     color-stop (0.03, @theme_selected_bg_color),
                                      color-stop (0.97, @theme_selected_bg_color),
                                      color-stop (0.98, @progressbar_border),
                                      to (@progressbar_border));
@@ -1048,8 +1048,8 @@ row:selected {
 
 .expander row:selected,
 .expander row:selected:focused {
-    border-color: #acccee;
-    color: #acccee;
+    border-color: @expander_row_selected_color;
+    color: @expander_row_selected_color;
     background-color: @theme_selected_bg_color;
 }
 

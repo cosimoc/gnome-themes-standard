@@ -85,11 +85,16 @@
 @define-color notebook_active_tab_border #1372d3;
 @define-color notebook_selected_tab_color #8dc0f3;
 
+@define-color notebook_tab_gradient_a @theme_base_color;
+@define-color notebook_tab_gradient_b @switch_slider_color;
+
 @define-color toolbar_gradient_base #aaaa9e;
 @define-color toolbar_gradient_step1 #bcbcb4;
 @define-color toolbar_gradient_step2 #d9d9d7;
 @define-color toolbar_gradient_final #e5e5e2;
 
 @define-color toolbar_active_button_color #909081;
+
+@define-color expander_row_selected_color #acccee;
 
 @import url("gtk-widgets.css");

@@ -5,7 +5,7 @@
 @define-color theme_text_color #d1cbc9;
 @define-color theme_bg_color #121212;
 @define-color theme_fg_color #d1cbc9;
-@define-color theme_selected_bg_color #c8d6e6;
+@define-color theme_selected_bg_color alpha (@theme_fg_color, 0.70);
 @define-color theme_selected_fg_color #000000;
 
 @define-color theme_tooltip_bg_color #cbcbcb;
@@ -13,7 +13,7 @@
 
 @define-color button_gradient_color_a #282528;
 @define-color button_gradient_color_b #0d0b0d;
-@define-color button_border #585458;
+@define-color button_border #383438;
 
 @define-color button_active_gradient_color_a shade (@button_active_gradient_color_b, 0.83);
 @define-color button_active_gradient_color_b #5d565d;
@@ -26,9 +26,12 @@
 
 @define-color inactive_frame_color shade (@theme_bg_color, 1.19);
 
-@define-color notebook_border #595959;
-@define-color notebook_active_tab_border #b0c0d1;
-@define-color notebook_selected_tab_color #b5bfc9;
+@define-color notebook_border #393939;
+@define-color notebook_active_tab_border alpha (@theme_base_color, 0.50);
+@define-color notebook_selected_tab_color alpha (@theme_fg_color, 0.75);
+
+@define-color notebook_tab_gradient_a @switch_slider_color;
+@define-color notebook_tab_gradient_b @theme_base_color;
 
 @define-color switch_slider_color #111113;
 @define-color switch_slider_border #a5b8cc;
@@ -36,11 +39,11 @@
 @define-color highlighted_border #757075;
 @define-color internal_element_color #77757a;
 
-@define-color progressbar_background_a #abbac9;
-@define-color progressbar_background_b #76b0ec;
-@define-color progressbar_border #8ca5bf;
+@define-color progressbar_background_a alpha (@theme_fg_color, 0.70);
+@define-color progressbar_background_b alpha (@theme_fg_color, 0.45);
+@define-color progressbar_border alpha (@theme_fg_color, 0.60);
 
-@define-color focused_entry_border #cadaeb;
+@define-color focused_entry_border alpha (@theme_fg_color, 0.95);
 
 @define-color toolbar_gradient_base #1a1a1d;
 @define-color toolbar_gradient_step1 #262628;
@@ -49,13 +52,15 @@
 
 @define-color toolbar_active_button_color #6f6f7e;
 
+@define-color expander_row_selected_color alpha (@theme_base_color, 0.60);
+
 @define-color menu_controls_color #aaa8ac;
 
-@define-color keyboard_focus_border_a #d5e2f0;
-@define-color keyboard_focus_border_b #aebdd1;
+@define-color keyboard_focus_border_a alpha (@theme_fg_color, 0.80);
+@define-color keyboard_focus_border_b alpha (@theme_fg_color, 0.60);
 
-@define-color trough_bg_color_a #333338;
-@define-color trough_bg_color_b #1b1b1e;
+@define-color trough_bg_color_a #1b1b1e;
+@define-color trough_bg_color_b #333338;
 
 @define-color frame_color #756a7f;
 
