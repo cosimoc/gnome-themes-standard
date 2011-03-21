@@ -1195,3 +1195,10 @@ WnckPager, WnckTasklist {
     background-image: none;
     color: @os_chrome_fg_color;
 }
+
+GsmFailWhaleDialog,
+GsmFailWhaleDialog * {
+    background-color: @os_chrome_bg_color;
+    background-image: none;
+    color: @os_chrome_fg_color;
+}
