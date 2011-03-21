@@ -1,3 +1,9 @@
+2.91.92.1
+=========
+
+Revert GTK2 color changes, they don't blend in properly
+Theme fail whale dialog
+
 2.91.92
 =======
 
