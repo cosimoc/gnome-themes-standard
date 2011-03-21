@@ -1,3 +1,19 @@
+2.91.92
+=======
+
+Add a dark Adwaita variant
+Add an inline toolbar style class
+Add a sidebar style class
+Fixes for insensitive state
+Fix focus ring on primary toolbars
+Tweak GTK2 theme colors
+Theme GtkScale marks
+Add an 1px spacing between scrollbar sliders and steppers
+Theme menu arrows
+Theme menu accelerators
+Tweak GtkSwitch theming
+Lots of tweaks for Fallback mode panel/applets
+
 2.91.91.1
 =======
 
