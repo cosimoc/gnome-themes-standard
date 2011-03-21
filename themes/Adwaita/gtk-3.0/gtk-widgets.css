@@ -472,8 +472,8 @@ GtkComboBox.button {
     border-color: @button_border;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
-				     from (@theme_base_color),
-				     to (shade (@button_gradient_color_a, 0.94)));
+				     from (@button_hover_gradient_color_a),
+				     to (@button_hover_gradient_color_b));
 }
 
 .button:active,
@@ -482,8 +482,8 @@ GtkComboBox.button {
 .toolbar.button:hover:active {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
-                                     from (@button_active_gradient_color),
-				     to (alpha (shade (@button_active_gradient_color, 0.83), 0.13)));
+                                     from (@button_active_gradient_color_a),
+				     to (alpha (@button_active_gradient_color_b, 0.13)));
     border-color: @highlighted_border;
 }
 
