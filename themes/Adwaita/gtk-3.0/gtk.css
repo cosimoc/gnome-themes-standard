@@ -97,4 +97,5 @@
 
 @define-color expander_row_selected_color #acccee;
 
+@import url("gtk-widgets-assets.css");
 @import url("gtk-widgets.css");

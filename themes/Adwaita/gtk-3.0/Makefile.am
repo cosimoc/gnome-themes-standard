@@ -5,6 +5,8 @@ theme_DATA = 		\
 	gtk.css 	\
 	gtk-dark.css	\
 	gtk-widgets.css \
+	gtk-widgets-assets.css \
+	gtk-widgets-assets-dark.css \
 	settings.ini
 
 EXTRA_DIST = $(theme_DATA)
