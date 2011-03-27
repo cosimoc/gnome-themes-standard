@@ -9,9 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"themes-standard&component=general\n"
-"POT-Creation-Date: 2011-02-08 20:59+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard&component=general\n"
+"POT-Creation-Date: 2011-03-01 17:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Temkin <temkin119@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -30,3 +29,27 @@ msgstr "Adwaita"
 #: ../themes/Adwaita/index.theme.in.h:2
 msgid "There is only one"
 msgstr "پەقەت بىرىلا بار"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "يۇقىرى ئاق-قارىلىقى"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "يۇقىرى ئاق-قارىلىقتىكى تېما"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "تەتۈر يۇقىرى ئاق-قارىلىقى"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "تەتۈر يۇقىرى ئاق-قارىلىقتىكى تېما"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "تۆۋەن ئاق-قارىلىقى"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr " تۆۋەن ئاق-قارىلىقتىكى تېما"
