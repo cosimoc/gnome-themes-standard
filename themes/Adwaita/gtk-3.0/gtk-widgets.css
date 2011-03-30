@@ -635,8 +635,6 @@ GtkComboBox.button {
 
     -GtkWidget-window-dragging: true;
     -GtkToolbar-button-relief: 0;
-    -GtkWidget-separator-width: 1;
-    -GtkWidget-wide-separators: 1;
 }
 
 .primary-toolbar.toolbar:insensitive {
@@ -713,7 +711,10 @@ GtkComboBox.button {
     -adwaita-border-gradient: none;
 }
 
-.primary-toolbar.toolbar.separator {
+.primary-toolbar.toolbar GtkSeparatorToolItem {
+    -GtkWidget-wide-separators: 1;
+    -GtkWidget-separator-width: 1;
+
     border-style: solid;
     border-width: 1;
     border-color: shade (@theme_bg_color, 0.56);
