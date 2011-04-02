@@ -1,7 +1,7 @@
 # Vietnamese translation for gnome-themes-standard.
 # Copyright (C) 2010 gnome-themes-standard's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-themes-standard package.
-# Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2010.
+# Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2010-2011.
 #
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "themes-standard&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2011-03-28 14:25+0000\n"
-"PO-Revision-Date: 2010-12-26 15:25+0700\n"
+"PO-Revision-Date: 2011-04-02 11:19+0700\n"
 "Last-Translator: Nguyễn Thái Ngọc Duy <pclouds@gmail.com>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -31,24 +31,24 @@ msgstr "Chỉ có một"
 
 #: ../themes/HighContrast/index.theme.in.h:1
 msgid "High Contrast"
-msgstr ""
+msgstr "Tương phản cao"
 
 #: ../themes/HighContrast/index.theme.in.h:2
 msgid "High contrast theme"
-msgstr ""
+msgstr "Sắc thái tương phản cao"
 
 #: ../themes/HighContrastInverse/index.theme.in.h:1
 msgid "High Contrast Inverse"
-msgstr ""
+msgstr "Đảo tương phản"
 
 #: ../themes/HighContrastInverse/index.theme.in.h:2
 msgid "High contrast inverse theme"
-msgstr ""
+msgstr "Sắc thái đảo tương phản"
 
 #: ../themes/LowContrast/index.theme.in.h:1
 msgid "Low Contrast"
-msgstr ""
+msgstr "Tương phản thấp"
 
 #: ../themes/LowContrast/index.theme.in.h:2
 msgid "Low contrast theme"
-msgstr ""
+msgstr "Sắc thái tương phản thấp"
