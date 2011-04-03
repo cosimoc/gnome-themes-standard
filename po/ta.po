@@ -1,0 +1,56 @@
+# Tamil translation for gnome-themes-standard.
+# Copyright (C) 2011 gnome-themes-standard's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-themes-standard package.
+#
+# Dr.T.Vasudevan <agnihot3@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-themes-standard gnome-3-0\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=gnome-themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-04-02 04:22+0000\n"
+"PO-Revision-Date: 2011-04-02 19:31+0530\n"
+"Last-Translator: Dr.T.Vasudevan <agnihot3@gmail.com>\n"
+"Language-Team: Tamil <ta@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
+msgid "Default Background"
+msgstr "முன்னிருப்பு பின்னணி"
+
+#: ../themes/Adwaita/index.theme.in.h:1
+msgid "Adwaita"
+msgstr "அத்வைதா"
+
+#: ../themes/Adwaita/index.theme.in.h:2
+msgid "There is only one"
+msgstr "ஒன்றே ஒன்றூ உள்ளது"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "அதிக வேறுபாடு"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "அதிக வேறுபாடு கருத்து"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "அதிக வேறுபாடு தலைகீழ்"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "அதிக வேறுபாடு தலைகீழ் கருத்து"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "குறைந்த வேறுபாடு "
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "குறைந்த வேறுபாடு கருத்து"
+
