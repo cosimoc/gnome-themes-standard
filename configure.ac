@@ -29,7 +29,7 @@ AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
 AM_GLIB_GNU_GETTEXT
 
 # Don't forget to update the README when changing this.
-PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 3.0.2,,
+PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 3.0.8,,
                   AC_MSG_ERROR([GTK+-3.0 is required to compile gnome-themes-standard]))
 
 AC_SUBST(GTK_CFLAGS)
