@@ -3,11 +3,6 @@
     padding: 1;
 
     /* Style properties */
-    -GtkButton-child-displacement-x: 1;
-    -GtkButton-child-displacement-y: 1;
-    -GtkButton-default-border: 0;
-    -GtkButton-image-spacing: 4;
-    -GtkButton-interior-focus: true;
     -GtkToolButton-icon-spacing: 4;
 
     -GtkTextView-error-underline-color: @error_color;
@@ -43,7 +38,6 @@
     -WnckTasklist-fade-overlay-rect: 0;
 
     -GtkEntry-inner-border: 2;
-    -GtkButton-inner-border: 2;
     -GtkEntry-progress-border: 0;
 
     /* Style */
@@ -131,7 +125,7 @@
                                              from (shade (@internal_element_color, 1.14)),
                                              to (shade (@internal_element_color, 1.37)));
 
-    padding: 2;
+    padding: 3;
 }
 
 .entry:focused {
@@ -158,15 +152,18 @@
 /*****************
  * GtkSpinButton *
  *****************/
-GtkSpinButton.button,
-GtkSpinButton.button:insensitive,
-GtkSpinButton.button:prelight,
-GtkSpinButton.button:active {
+.spinbutton.button,
+.spinbutton.button:insensitive,
+.spinbutton.button:prelight,
+.spinbutton.button:active {
     background-image: none;
     background-color: @theme_base_color;
     border-width: 1;
     border-style: none;
-    padding: 0;
+}
+
+.spinbutton {
+    padding: 3 2;
 }
 
 /****************
@@ -359,12 +356,21 @@ GtkCalendar {
  **************/
 
 GtkComboBox {
+    padding: 1 2;
+
+    -GtkWidget-focus-padding: 0;
+    -GtkWidget-focus-line-width: 0;
+
     -GtkComboBox-arrow-scaling: 0.5;
     -GtkComboBox-shadow-type: 2;
 }
 
-GtkComboBox.button {
+GtkComboBox .button {
     color: @internal_element_color;
+}
+
+GtkComboBox .button:prelight {
+    color: shade (@internal_element_color, 0.66);
 }
 
 /**************
@@ -445,7 +451,7 @@ GtkComboBox.button {
  * Buttons *
  ***********/
 .button {
-    padding: 3;
+    padding: 1 4;
 
     -adwaita-focus-fill-color: alpha (@theme_base_color, 0.35);
     -adwaita-focus-border-gradient: -gtk-gradient (linear,
@@ -455,6 +461,13 @@ GtkComboBox.button {
     -adwaita-focus-border-radius: 1;
     -adwaita-focus-border-dashes: 0;
     -GtkWidget-focus-line-width: 2;
+
+    -GtkButton-child-displacement-x: 1;
+    -GtkButton-child-displacement-y: 1;
+    -GtkButton-image-spacing: 4;
+    -GtkButton-interior-focus: true;
+    -GtkButton-default-border: 0;
+    -GtkButton-inner-border: 0;
 
     border-radius: 2;
     border-width: 1;
@@ -547,7 +560,6 @@ GtkComboBox.button {
     border-color: @inactive_frame_color;
 
     -GtkMenuItem-arrow-scaling: 0.4;
-
 }
 
 .menuitem:insensitive {
