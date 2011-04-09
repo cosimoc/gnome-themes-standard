@@ -689,23 +689,22 @@ GtkComboBox.button {
     border-radius: 4;
     -adwaita-border-gradient: -gtk-gradient (linear,
                                              left top, left bottom,
-                                             from (@toolbar_active_button_color),
-                                             to (shade (@toolbar_active_button_color, 1.83)));
+                                             from (shade (@toolbar_active_button_color, 0.8)),
+                                             to (shade (@toolbar_active_button_color, 1.4)));
 
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
-				     from (shade (@toolbar_gradient_base, 0.85)),
+				     from (shade (@toolbar_gradient_base, 0.95)),
 			             to (alpha (shade (@toolbar_gradient_base, 0.85), 0.0)));
-
-    color: @theme_base_color;
+    
+    color: @theme_fg_color;
 }
 
 .primary-toolbar.toolbar.button:active:prelight {
     border-style: solid;
-    border-radius: 3;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
-				     from (alpha (shade (@toolbar_gradient_base, 0.76), 0.7)),
+				     from (alpha (shade (@toolbar_gradient_base, 0.96), 0.7)),
 			             to (alpha (shade (@toolbar_gradient_base, 1.14), 0.0)));
 
     color: @theme_base_color;
