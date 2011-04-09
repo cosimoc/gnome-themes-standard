@@ -521,27 +521,28 @@ GtkComboBox.button {
 /* remove the image from the prelight areas */
 .menubar.menuitem:prelight {
     background-image: none;
-    background-color: @theme_base_color;
-    color: @theme_text_color;
+    background-color: @menu_bg_color;
+    color: @menu_fg_color;
 
     border-style: solid;
-    border-radius: 3;
-    border-width: 1;
+    border-radius: 5;
+    border-width: 0;
     border-color: @inactive_frame_color;
 }
 
 .menubar.menuitem {
-    border-width: 1;
+    border-width: 0;
     border-style: none;
+    padding: 3 5;
 }
 
 .menu {
-    padding: 2;
+    padding: 0;
 
-    background-color: @theme_base_color;
-
+    background-color: @menu_bg_color;
+    color: @menu_fg_color;
     border-style: solid;
-    border-width: 1;
+    border-width: 0;
     border-radius: 0;
     border-color: @inactive_frame_color;
 
@@ -549,8 +550,14 @@ GtkComboBox.button {
 
 }
 
+.menuitem:insensitive {
+    /* there is some weird alpha precomposing issues with this - ghosts on dark background */
+    color: mix (@menu_fg_color, @menu_bg_color, 0.8);
+}
+
 .menuitem {
     -adwaita-menuitem-arrow-color: @menu_controls_color;
+    padding: 4;
 }
 
 .menuitem.accelerator {
@@ -567,8 +574,8 @@ GtkComboBox.button {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
     border-style: solid;
-    border-width: 1;
-    border-radius: 1;
+    border-width: 0;
+    border-radius: 0;
     border-color: darker (@theme_selected_bg_color);
 }
 
