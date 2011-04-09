@@ -25,7 +25,7 @@
 <constant name="C_icons_unfocused_prelight" value="gtk:bg[NORMAL]" />
 <constant name="C_icons_unfocused_pressed" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
 <constant name="D_icons_unfocused_offset" value="2" /> <!-- offset of the unfocused icons -->
-<constant name="D_icons_shrink" value="1" /> <!-- increasing this value makes the icons in buttons smaller -->
+<constant name="D_icons_shrink" value="0" /> <!-- increasing this value makes the icons in buttons smaller -->
 <constant name="D_icons_grow" value="0" /> <!-- increasing this value makes the icons in buttons bigger -->
 <!-- geometries -->
 
@@ -37,7 +37,7 @@
 	<distance name="right_titlebar_edge" value="0"/>
 	<distance name="title_vertical_pad" value="10"/>
 	<border name="title_border" left="10" right="10" top="1" bottom="0"/>
-	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
+	<border name="button_border" left="0" right="0" top="0" bottom="2"/>
 	<aspect_ratio name="button" value="1"/>
 </frame_geometry>
 
@@ -53,7 +53,7 @@
 	<distance name="right_titlebar_edge" value="0"/>
 	<distance name="title_vertical_pad" value="10"/>
 	<border name="title_border" left="10" right="10" top="1" bottom="0"/>
-	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
+	<border name="button_border" left="0" right="0" top="0" bottom="2"/>
 	<distance name="bottom_height" value="0" />
 </frame_geometry>
 
