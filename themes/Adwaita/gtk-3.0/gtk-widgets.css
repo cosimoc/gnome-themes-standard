@@ -561,12 +561,12 @@ GtkComboBox.button {
 }
 
 .menuitem.accelerator {
-    color: alpha (@theme_text_color, 0.66);
+    color: alpha (@menu_fg_color, 0.4);
 }
 
 .menuitem.accelerator:prelight,
 .menuitem.accelerator:active {
-    color: alpha (@theme_base_color, 0.49);
+    color: alpha (@menu_fg_color, 0.3);
 }
 
 .menuitem:active,
