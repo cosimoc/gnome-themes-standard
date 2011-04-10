@@ -10,9 +10,9 @@
 
 <!-- meaningfull constants -->
 
-<constant name="C_border_focused" value="blend/#000000/gtk:bg[NORMAL]/0.6" />
+<constant name="C_border_focused" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
 <constant name="C_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
-<constant name="C_border_attached_focused" value="blend/#000000/gtk:bg[NORMAL]/0.4" />
+<constant name="C_border_attached_focused" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
 <constant name="C_titlebar_focused_hilight" value="gtk:base[NORMAL]" />
 <constant name="C_titlebar_unfocused" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.4" />
 <constant name="C_title_focused" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.1" />
@@ -232,17 +232,19 @@
 	<rectangle color="C_border_focused" x="0" y="0" width="width-1" height="height-1" filled="false" />
 	<line x1="0" y1="0" x2="width" y2="0" color="C_border_attached_focused" />
 	<gradient type="vertical" x="0" y="0" width="1" height="top_height">
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.4" />
+		<color value="blend/gtk:bg[NORMAL]/#000000/0.3" />
+		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />		
 		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />
 		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.3" />
+		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
 		<color value="C_border_focused" />
 	</gradient>
 	<gradient type="vertical" x="width-1" y="0" width="1" height="top_height">
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.4" />
+		<color value="blend/gtk:bg[NORMAL]/#000000/0.3" />
+		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />
 		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />
 		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.3" />
+		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
 		<color value="C_border_focused" />
 	</gradient>
 </draw_ops>
