@@ -36,7 +36,7 @@
 	<distance name="left_titlebar_edge" value="0"/>
 	<distance name="right_titlebar_edge" value="0"/>
 	<distance name="title_vertical_pad" value="10"/>
-	<border name="title_border" left="10" right="10" top="1" bottom="0"/>
+	<border name="title_border" left="10" right="10" top="0" bottom="2"/>
 	<border name="button_border" left="0" right="0" top="0" bottom="2"/>
 	<aspect_ratio name="button" value="1"/>
 </frame_geometry>
@@ -52,7 +52,7 @@
 	<distance name="left_titlebar_edge" value="0"/>
 	<distance name="right_titlebar_edge" value="0"/>
 	<distance name="title_vertical_pad" value="10"/>
-	<border name="title_border" left="10" right="10" top="1" bottom="0"/>
+	<border name="title_border" left="10" right="10" top="0" bottom="2"/>
 	<border name="button_border" left="0" right="0" top="0" bottom="2"/>
 	<distance name="bottom_height" value="0" />
 </frame_geometry>
