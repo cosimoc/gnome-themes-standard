@@ -651,7 +651,7 @@ GtkComboBox .button:prelight {
     border-radius: 0;
     border-style: none;
 
-    padding: 4;
+    padding: 0;
 
     -GtkWidget-window-dragging: true;
     -GtkToolbar-button-relief: 0;
@@ -911,7 +911,7 @@ GtkIconView.view.cell:selected:focused {
 }
 
 .view {
-    background-color: @theme_base_color;
+    background-color: #eaeaea;
     color: @theme_fg_color;
     border-radius: 0;
     border-width: 3;
