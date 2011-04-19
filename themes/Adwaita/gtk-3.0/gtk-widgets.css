@@ -367,6 +367,7 @@ GtkComboBox {
 
 GtkComboBox .button {
     color: @internal_element_color;
+    padding: 1;
 }
 
 GtkComboBox .button:prelight {
