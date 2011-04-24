@@ -1,15 +1,15 @@
 # Thai translation for gnome-themes-standard.
-# Copyright (C) 2010 Free Software Foundation, Inc.
+# Copyright (C) 2010-2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-themes-standard package.
-# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2010.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2010-2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"themes-standard&component=general\n"
-"POT-Creation-Date: 2010-11-27 13:18+0000\n"
-"PO-Revision-Date: 2010-11-28 17:25+0000\n"
+"themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-03-28 14:25+0000\n"
+"PO-Revision-Date: 2011-04-24 17:29+0000\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -27,3 +27,27 @@ msgstr "อัทไวตะ"
 #: ../themes/Adwaita/index.theme.in.h:2
 msgid "There is only one"
 msgstr "หนึ่งเดียวเท่านั้น"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "สีตัดกัน"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "ชุดตกแต่งสีตัดกัน"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "สีตัดกันกลับสี"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "ชุดตกแต่งสีตัดกันกลับสี"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "สีกลืนกัน"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "ชุดตกแต่งสีกลืนกัน"
