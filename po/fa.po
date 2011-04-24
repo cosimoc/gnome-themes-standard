@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the gnome-themes-standard package.
 # Mostafa Dehghanzadeh <dehghanzade.mostafa1@gmail.com>, 2010.
 # Arash Mousavi <mousavi.arash@gmail.com>, 2011.
+# Mehdi Moshtaghi <mehdi.mm@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"themes-standard&component=general\n"
-"POT-Creation-Date: 2011-01-04 16:37+0000\n"
-"PO-Revision-Date: 2011-01-06 01:47+0330\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard&component=general\n"
+"POT-Creation-Date: 2011-03-01 17:06+0000\n"
+"PO-Revision-Date: 2011-03-24 13:23+0330\n"
 "Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
 "Language-Team: Persian <translate@ifsug.org>\n"
 "MIME-Version: 1.0\n"
@@ -28,8 +28,33 @@ msgstr "پس‌زمینه پیش‌فرض"
 
 #: ../themes/Adwaita/index.theme.in.h:1
 msgid "Adwaita"
-msgstr "Adwaita"
+msgstr "آدوایتا"
 
 #: ../themes/Adwaita/index.theme.in.h:2
 msgid "There is only one"
 msgstr "فقط یکی وجود دارد"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "کنتراست بالا"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "قالب با کنتراست بالا"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "کنتراست بالای وارونه"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "قالب با کنتراست بالای وارونه"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "کنتراست پایین"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "قالب با کنتراست پایین"
+
