@@ -1491,25 +1491,19 @@ adwaita_engine_render_handle (GtkThemingEngine *engine,
 
 		cairo_restore (cr);
 	} else if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PANE_SEPARATOR)) {
-		GdkRGBA bg, fg;
+		GdkRGBA fg;
 		GtkStateFlags state;
 		gdouble xx, yy;
 
 		state = gtk_theming_engine_get_state (engine);
-		gtk_theming_engine_get_background_color (engine, state, &bg);
 		gtk_theming_engine_get_color (engine, state, &fg);
 
+		GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background (engine, cr, x, y, width, height);
+		GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame (engine, cr, x, y, width, height);
+
 		cairo_save (cr);
-
-		cairo_rectangle (cr, x, y,
-				 width, height);
-		gdk_cairo_set_source_rgba (cr, &bg);
-		cairo_fill (cr);
-
-		gdk_cairo_set_source_rgba (cr, &fg);
 		cairo_set_line_width (cr, 2.0);
-		cairo_line_to (cr, x + width, y + height);
-		cairo_stroke (cr);
+		gdk_cairo_set_source_rgba (cr, &fg);
 
 		if (width > height) {
 			for (xx = x + width / 2 - 12; xx <= x + width / 2 + 12; xx += 6) {
