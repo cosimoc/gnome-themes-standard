@@ -43,7 +43,6 @@
     /* Style */
     background-color: @theme_bg_color;
     color: @theme_fg_color;
-    border-radius: 3;
 
     -GtkWidget-focus-padding: 2;
     -GtkWidget-focus-line-width: 1;
