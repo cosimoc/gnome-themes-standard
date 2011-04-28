@@ -67,27 +67,131 @@ adwaita_engine_init (AdwaitaEngine *self)
 {
 }
 
+enum {
+  SIDE_LEFT   = 1,
+  SIDE_BOTTOM = 1 << 1,
+  SIDE_RIGHT  = 1 << 2,
+  SIDE_TOP    = 1 << 3,
+  SIDE_ALL    = 0xF
+};
+
 static void
-_cairo_round_rectangle (cairo_t *cr,
-			gdouble	  x,
-			gdouble	  y,
-			gdouble	  w,
-			gdouble	  h,
-			gdouble	  radius)
+_cairo_round_rectangle_sides (cairo_t          *cr,
+                              gdouble           radius,
+                              gdouble           x,
+                              gdouble           y,
+                              gdouble           width,
+                              gdouble           height,
+                              guint             sides,
+                              GtkJunctionSides  junction)
 {
-	g_return_if_fail (cr != NULL);
+  radius = CLAMP (radius, 0, MIN (width / 2, height / 2));
 
-	if (radius < 0.0001)
-	{
-		cairo_rectangle (cr, x, y, w, h);
-		return;
-	}
+  if (sides & SIDE_RIGHT)
+    {
+      if (radius == 0 ||
+          (junction & GTK_JUNCTION_CORNER_TOPRIGHT))
+        cairo_move_to (cr, x + width, y);
+      else
+        {
+          cairo_new_sub_path (cr);
+          cairo_arc (cr, x + width - radius, y + radius, radius, - G_PI / 4, 0);
+        }
 
-	cairo_move_to (cr, x+radius, y);
-	cairo_arc (cr, x+w-radius, y+radius, radius, G_PI * 1.5, G_PI * 2);
-	cairo_arc (cr, x+w-radius, y+h-radius, radius, 0, G_PI * 0.5);
-	cairo_arc (cr, x+radius,   y+h-radius, radius, G_PI * 0.5, G_PI);
-	cairo_arc (cr, x+radius,   y+radius,   radius, G_PI, G_PI * 1.5);
+      if (radius == 0 ||
+          (junction & GTK_JUNCTION_CORNER_BOTTOMRIGHT))
+        cairo_line_to (cr, x + width, y + height);
+      else
+        cairo_arc (cr, x + width - radius, y + height - radius, radius, 0, G_PI / 4);
+    }
+
+  if (sides & SIDE_BOTTOM)
+    {
+      if (radius != 0 &&
+          ! (junction & GTK_JUNCTION_CORNER_BOTTOMRIGHT))
+        {
+          if ((sides & SIDE_RIGHT) == 0)
+            cairo_new_sub_path (cr);
+
+          cairo_arc (cr, x + width - radius, y + height - radius, radius, G_PI / 4, G_PI / 2);
+        }
+      else if ((sides & SIDE_RIGHT) == 0)
+        cairo_move_to (cr, x + width, y + height);
+
+      if (radius == 0 ||
+          (junction & GTK_JUNCTION_CORNER_BOTTOMLEFT))
+        cairo_line_to (cr, x, y + height);
+      else
+        cairo_arc (cr, x + radius, y + height - radius, radius, G_PI / 2, 3 * (G_PI / 4));
+    }
+  else
+    cairo_move_to (cr, x, y + height);
+
+  if (sides & SIDE_LEFT)
+    {
+      if (radius != 0 &&
+          ! (junction & GTK_JUNCTION_CORNER_BOTTOMLEFT))
+        {
+          if ((sides & SIDE_BOTTOM) == 0)
+            cairo_new_sub_path (cr);
+
+          cairo_arc (cr, x + radius, y + height - radius, radius, 3 * (G_PI / 4), G_PI);
+        }
+      else if ((sides & SIDE_BOTTOM) == 0)
+        cairo_move_to (cr, x, y + height);
+
+      if (radius == 0 ||
+          (junction & GTK_JUNCTION_CORNER_TOPLEFT))
+        cairo_line_to (cr, x, y);
+      else
+        cairo_arc (cr, x + radius, y + radius, radius, G_PI, G_PI + G_PI / 4);
+    }
+
+  if (sides & SIDE_TOP)
+    {
+      if (radius != 0 &&
+          ! (junction & GTK_JUNCTION_CORNER_TOPLEFT))
+        {
+          if ((sides & SIDE_LEFT) == 0)
+            cairo_new_sub_path (cr);
+
+          cairo_arc (cr, x + radius, y + radius, radius, 5 * (G_PI / 4), 3 * (G_PI / 2));
+        }
+      else if ((sides & SIDE_LEFT) == 0)
+        cairo_move_to (cr, x, y);
+
+      if (radius == 0 ||
+          (junction & GTK_JUNCTION_CORNER_TOPRIGHT))
+        cairo_line_to (cr, x + width, y);
+      else
+        cairo_arc (cr, x + width - radius, y + radius, radius, 3 * (G_PI / 2), - G_PI / 4);
+    }
+}
+
+static void
+_cairo_uneven_frame (cairo_t          *cr,
+                     gdouble           radius,
+                     gdouble           x,
+                     gdouble           y,
+                     gdouble           width,
+                     gdouble           height,
+                     GtkBorder        *border,
+                     GtkJunctionSides  junction)
+{
+  cairo_set_fill_rule (cr, CAIRO_FILL_RULE_EVEN_ODD);
+  cairo_set_line_width (cr, 1);
+
+  _cairo_round_rectangle_sides (cr, (gdouble) radius,
+                                x, y,
+                                width, height,
+                                SIDE_ALL, junction);
+
+  _cairo_round_rectangle_sides (cr, (gdouble) radius,
+                                x + border->left,
+                                y + border->top,
+                                width - border->left - border->right,
+                                height - border->top - border->bottom,
+                                SIDE_ALL, junction);
 }
 
 /* Set the appropriate matrix for
@@ -214,11 +318,14 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 	cairo_set_line_width (cr, line_width);
 
 	if (line_width > 1) {
-		_cairo_round_rectangle (cr, x, y,
-					width, height, border_radius);
+		_cairo_round_rectangle_sides (cr, border_radius,
+					      x, y, width, height,
+					      SIDE_ALL, GTK_JUNCTION_NONE);
 	} else {
-		_cairo_round_rectangle (cr, x + 0.5, y + 0.5,
-					width - 1, height - 1, border_radius);
+		_cairo_round_rectangle_sides (cr, border_radius,
+					      x + 0.5, y + 0.5,
+					      width - 1, height - 1,
+					      SIDE_ALL, GTK_JUNCTION_NONE);
 	}
 
 	/* if we have a fill color, draw the fill */
@@ -984,7 +1091,10 @@ adwaita_engine_render_expander (GtkThemingEngine *engine,
 
 	cairo_set_line_width (cr, 1);
 
-	_cairo_round_rectangle (cr, x + 0.5, y + 0.5, side, side, 2);
+	_cairo_round_rectangle_sides (cr, 2,
+				      x + 0.5, y + 0.5,
+				      side, side,
+				      SIDE_ALL, GTK_JUNCTION_NONE);
 	gdk_cairo_set_source_rgba (cr, &bg);
 	cairo_fill_preserve (cr);
 
