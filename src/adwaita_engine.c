@@ -594,16 +594,24 @@ adwaita_engine_render_extension (GtkThemingEngine *engine,
 		switch (gap_side)
 		{
 		case GTK_POS_BOTTOM:
-			_cairo_round_rectangle (cr, x + 1, y + 1, width - 2, 3, 0);
+			cairo_rectangle (cr,
+					 x + 1, y + 1,
+					 width - 2, 3);
 			break;
 		case GTK_POS_TOP:
-			_cairo_round_rectangle (cr, x + 1, y + height - 4, width - 2, 3, 0);
+			cairo_rectangle (cr,
+					 x + 1, y + height - 4,
+					 width - 2, 3);
 			break;
 		case GTK_POS_RIGHT:
-			_cairo_round_rectangle (cr, x + 1, y + 1, 3, height - 2, 0);
+			cairo_rectangle (cr,
+					 x + 1, y + 1,
+					 3, height - 2);
 			break;
 		case GTK_POS_LEFT:
-			_cairo_round_rectangle (cr, x + width - 4, y + 1, 3, height - 2, 0);
+			cairo_rectangle (cr,
+					 x + width - 4, y + 1,
+					 3, height - 2);
 			break;
 		}
 
