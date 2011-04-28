@@ -1213,7 +1213,6 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 	if (gtk_widget_path_is_type (path, GTK_TYPE_SCALE))
 	{
 		cairo_pattern_t *pattern, *border_pattern;
-		cairo_matrix_t matrix;
 		GtkStateFlags state;
 		GdkRGBA color;
 		gboolean marks_above = FALSE, marks_below = FALSE;
