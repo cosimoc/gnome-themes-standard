@@ -648,16 +648,17 @@ GtkComboBox .button:prelight {
 				     left top,
 				     left bottom,
 				     from (@toolbar_gradient_base),
-                                     color-stop (0.01, shade (@theme_bg_color, 0.56)),
-                                     color-stop (0.02, @toolbar_gradient_base),
 				     color-stop (0.16, @toolbar_gradient_step1),
 				     color-stop (0.90, @toolbar_gradient_step2),
-				     color-stop (0.98, @toolbar_gradient_final),
-                                     color-stop (0.99, shade (@theme_bg_color, 0.83)),
-				     to (shade (@theme_bg_color, 0.83)));
-    border-width: 0;
+				     to (@toolbar_gradient_final));
+    border-width: 1 0 1 0;
     border-radius: 0;
-    border-style: none;
+    border-style: solid;
+
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (shade (@theme_bg_color, 0.56)),
+                                             to (shade (@theme_bg_color, 0.83)));
 
     padding: 2;
 
