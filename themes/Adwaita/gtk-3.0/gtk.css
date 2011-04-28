@@ -73,8 +73,8 @@
 @define-color switch_slider_color #eeeeec;
 @define-color switch_slider_border #2a79cb;
 
-@define-color progressbar_background_a #1f72c6;
-@define-color progressbar_background_b #76b0ec;
+@define-color progressbar_background_a #76b0ec;
+@define-color progressbar_background_b #1f72c6;
 @define-color progressbar_border #3277bf;
 
 @define-color scale_fill_a #2c85e2;
