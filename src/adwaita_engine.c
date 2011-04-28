@@ -811,8 +811,9 @@ render_frame_default (GtkThemingEngine *engine,
 	cairo_pattern_t *pattern = NULL;
 	GtkStateFlags state;
 	GtkBorder *border;
-	gint line_width, border_radius;
+	gint border_radius;
 	GtkBorderStyle border_style;
+	GtkJunctionSides junctions;
 
 	state = gtk_theming_engine_get_state (engine);
 
@@ -835,21 +836,16 @@ render_frame_default (GtkThemingEngine *engine,
 				"border-radius", &border_radius,
 				"border-width", &border,
 				NULL);
+	junctions = gtk_theming_engine_get_junction_sides (engine);
 
-	line_width = MIN (MIN (border->top, border->bottom),
-			  MIN (border->left, border->right));
 	style_pattern_set_matrix (pattern, width, height);
 
-	cairo_set_line_width (cr, line_width);
-	_cairo_round_rectangle (cr,
-				x + line_width / 2.0,
-				y + line_width / 2.0,
-				width - line_width,
-				height - line_width,
-				border_radius);
+	_cairo_uneven_frame (cr, border_radius,
+			     x, y, width, height,
+			     border, junctions);
 	cairo_set_source (cr, pattern);
 
-	cairo_stroke (cr);
+	cairo_fill (cr);
 
 	cairo_restore (cr);
 
