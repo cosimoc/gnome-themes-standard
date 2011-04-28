@@ -820,7 +820,7 @@ GtkSwitch {
 }
 
 GtkSwitch.trough {
-    color: @internal_element_color;
+    color: shade (@internal_element_color, 0.60);
     border-radius: 1;
     border-width: 1;
     border-style: solid;
