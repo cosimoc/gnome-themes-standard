@@ -1,0 +1,54 @@
+# Turkish gnome-themes-standard translation.
+# Copyright (C) 2011 the Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-themes-standard package
+# Muhammed EKEN <gnome@m-eken.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-themes-standard\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-04-29 14:32+0000\n"
+"PO-Revision-Date: 2011-03-29 23:22+0300\n"
+"Last-Translator: Muhammed EKEN <gnome@m-eken.com>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
+msgid "Default Background"
+msgstr "Öntanımlı Ardalan"
+
+#: ../themes/Adwaita/index.theme.in.h:1
+msgid "Adwaita"
+msgstr "Sadece bir tane"
+
+#: ../themes/Adwaita/index.theme.in.h:2
+msgid "There is only one"
+msgstr "Sadece bir tane var"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "Yüksek Zıtlık"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "Yüksek karşıtlıklı tema"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "Ters Çevrilmiş Yüksek Karşıtlık"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "Ters çevrilmiş yüksek karşıtlıklı tema"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "Düşük Karşıtlık"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "Düşük karşıtlıklı tema"
