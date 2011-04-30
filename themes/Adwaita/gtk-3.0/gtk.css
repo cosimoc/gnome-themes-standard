@@ -64,6 +64,7 @@
 
 @define-color insensitive_bg_color #f4f4f2;
 @define-color insensitive_fg_color #a7aba7;
+@define-color insensitive_border_color shade (@internal_element_color, 1.37);
 
 @define-color trough_bg_color_a #ccccc7;
 @define-color trough_bg_color_b #e4e4e1;
@@ -78,11 +79,16 @@
 @define-color progressbar_background_b #1f72c6;
 @define-color progressbar_border #3277bf;
 
-@define-color scale_fill #2c85e2;
-@define-color scale_border #1864b2;
+@define-color internal_element_color #888a85;
+
+@define-color scale_fill @insensitive_border_color;
+@define-color scale_border_a @internal_element_color;
+@define-color scale_border_b shade (@internal_element_color, 1.25);
+@define-color scale_progress_fill #2c85e2;
+@define-color scale_progress_border_a #1864b2;
+@define-color scale_progress_border_b #3e90e5;
 
 @define-color highlighted_border #8a8f8a;
-@define-color internal_element_color #888a85;
 
 @define-color notebook_border #a6a6a6;
 @define-color notebook_active_tab_border #1372d3;
