@@ -51,6 +51,11 @@
     -adwaita-focus-fill-color: none;
     -adwaita-focus-border-gradient: none;
     -adwaita-focus-border-dashes: 1;
+
+    -adwaita-inset-left: none;
+    -adwaita-inset-right: none;
+    -adwaita-inset-top: none;
+    -adwaita-inset-bottom: none;
 }
 
 /***************
@@ -133,17 +138,22 @@
                                              to (shade (@internal_element_color, 1.37)));
 
     padding: 3;
+
+    -adwaita-inset-top: alpha (@switch_slider_color, 0.50);
 }
 
 .entry:focused {
     border-color: @focused_entry_border;
     -adwaita-border-gradient: none;
+
+    -adwaita-inset-top: @focused_entry_inset;
 }
 
 .entry:insensitive {
     background-color: @insensitive_bg_color;
-    border-color: shade (@inactive_frame_color, 0.945);
     -adwaita-border-gradient: none;
+
+    -adwaita-inset-top: none;
 }
 
 .entry.progressbar {
@@ -185,6 +195,8 @@ GtkProgressBar.progressbar {
     border-radius: 3;
     border-style: solid;
     border-color: @progressbar_border;
+
+    -adwaita-inset-top: alpha (@theme_base_color, 0.20);
 }
 
 GtkProgressBar.trough {
@@ -260,38 +272,41 @@ GtkScale.trough {
     border-width: 1;
     border-radius: 2;
     border-style: solid;
-    border-color: @internal_element_color;
-}
 
-GtkScale.trough:insensitive {
-    background-color: shade (@theme_bg_color, 1.20);
-    border-color: shade (@inactive_frame_color, 0.845);
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (@internal_element_color),
+                                             to (shade (@internal_element_color, 1.25)));
+    background-color: shade (@internal_element_color, 1.37);
 }
 
 GtkScale.trough.horizontal {
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@trough_bg_color_a),
-                                     to (shade (@trough_bg_color_b, 1.20)));
+    -adwaita-inset-bottom: alpha (@theme_base_color, 0.50);
 }
 
 GtkScale.trough.vertical {
-    background-image: -gtk-gradient (linear,
-                                     left top, right top,
-                                     from (@trough_bg_color_a),
-                                     to (shade (@trough_bg_color_b, 1.20)));
+    -adwaita-inset-right: alpha (@theme_base_color, 0.50);
+}
+
+GtkScale.trough:insensitive {
+    background-color: @insensitive_bg_color;
+    background-image: none;
+
+    -adwaita-border-gradient: none;
+    -adwaita-inset-bottom: none;
 }
 
 GtkScale.progressbar {
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@scale_fill_a),
-                                     to (@scale_fill_b));
+    background-color: @scale_fill;
 
-    border-color: #1864b2;
     border-width: 1;
     border-radius: 3;
     border-style: solid;
+
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (@scale_border_a),
+                                             to (@scale_border_b));    
 }
 
 GtkScale.mark {
@@ -838,25 +853,29 @@ GtkSwitch.trough {
                                      left top, left bottom,
                                      from (@trough_bg_color_a),
                                      to (@trough_bg_color_b));
+
+    -adwaita-inset-bottom: alpha (@theme_base_color, 0.24);
 }
 
 GtkSwitch.trough:active {
     color: @theme_base_color;
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, left bottom,
-                                             from (shade (@theme_selected_bg_color, 0.70)),
-                                             to (shade (@theme_selected_bg_color, 0.94)));
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@active_switch_bg_color_a),
                                      to (@active_switch_bg_color_b));
+
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (shade (@theme_selected_bg_color, 0.70)),
+                                             to (shade (@theme_selected_bg_color, 0.94)));
 }
 
 GtkSwitch.trough:insensitive {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.9);
-    border-color: shade (@inactive_frame_color, 0.845);
     -adwaita-border-gradient: none;
+
+    -adwaita-inset-bottom: none;
 }
 
 GtkSwitch.slider {
@@ -867,14 +886,13 @@ GtkSwitch.slider {
     padding: 2;
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
-                                     from (@switch_slider_color),
-                                     color-stop (0.02, @switch_slider_color),
-                                     color-stop (0.03, @theme_base_color),
-                                     color-stop (0.85, @switch_slider_color),
-                                     color-stop (0.86, shade (@switch_slider_color, 1.03)),
-                                     to (shade (@switch_slider_color, 1.03)));
+                                     from (@theme_base_color),
+                                     to (@switch_slider_color));
 
     -adwaita-switch-grip-color: shade (@switch_slider_color, 0.97);
+
+    -adwaita-inset-top: @switch_slider_color;
+    -adwaita-inset-bottom: alpha (@theme_base_color, 0.50);
 }
 
 GtkSwitch.slider:active {
@@ -885,6 +903,9 @@ GtkSwitch.slider:insensitive {
     border-style: none;
     background-image: none;
     background-color: @insensitive_bg_color;
+
+    -adwaita-inset-top: none;
+    -adwaita-inset-bottom: none;
 }
 
 GtkStatusbar {
