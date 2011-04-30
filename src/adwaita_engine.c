@@ -200,7 +200,8 @@ _cairo_uneven_frame (cairo_t          *cr,
 static void
 style_pattern_set_matrix (cairo_pattern_t *pattern,
                           gdouble          width,
-                          gdouble          height)
+                          gdouble          height,
+			  gboolean         repeat)
 {
   cairo_matrix_t matrix;
   gint w, h;
@@ -218,6 +219,9 @@ style_pattern_set_matrix (cairo_pattern_t *pattern,
 
   cairo_matrix_init_scale (&matrix, (gdouble) w / width, (gdouble) h / height);
   cairo_pattern_set_matrix (pattern, &matrix);
+
+  if (repeat)
+	  cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
 }
 
 static void
@@ -342,7 +346,7 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 	 * draw the line if we have a color for it.
 	 */
 	if (pattern != NULL) {
-		style_pattern_set_matrix (pattern, width, height);
+		style_pattern_set_matrix (pattern, width, height, FALSE);
 
 		cairo_set_source (cr, pattern);
 	} else if (border_color != NULL) {
@@ -645,7 +649,7 @@ render_notebook_extension (GtkThemingEngine *engine,
 	draw_tab_shape_active (cr, tab_curvature, 0, 0, width, height);
 
 	if (state & GTK_STATE_FLAG_ACTIVE) {
-		style_pattern_set_matrix (pattern, width, height - 6.0);
+		style_pattern_set_matrix (pattern, width, height - 6.0, FALSE);
 		cairo_set_source (cr, pattern);
 	} else {
 		gdk_cairo_set_source_rgba (cr, &border_color);
@@ -838,7 +842,7 @@ render_frame_default (GtkThemingEngine *engine,
 				NULL);
 	junctions = gtk_theming_engine_get_junction_sides (engine);
 
-	style_pattern_set_matrix (pattern, width, height);
+	style_pattern_set_matrix (pattern, width, height, TRUE);
 
 	_cairo_uneven_frame (cr, border_radius,
 			     x, y, width, height,
@@ -1433,7 +1437,7 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 					NULL);
 
 		if (pattern != NULL) {
-			style_pattern_set_matrix (pattern, width, height);
+			style_pattern_set_matrix (pattern, width, height, FALSE);
 			cairo_set_source (cr, pattern);
 		} else {
 			gtk_theming_engine_get_background_color (engine, state, &color);
@@ -1447,7 +1451,7 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 					NULL);
 
 		if (border_pattern != NULL) {
-			style_pattern_set_matrix (border_pattern, width, height);
+			style_pattern_set_matrix (border_pattern, width, height, FALSE);
 			cairo_set_source (cr, border_pattern);
 		} else {
 			gtk_theming_engine_get_border_color (engine, state, &color);
