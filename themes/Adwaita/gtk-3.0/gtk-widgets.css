@@ -170,8 +170,11 @@
 /*****************
  * GtkSpinButton *
  *****************/
-.spinbutton {
+.spinbutton,
+.spinbutton:focused {
     padding: 3 2;
+
+    -adwaita-inset-top: none;
 }
 
 .spinbutton.button,
