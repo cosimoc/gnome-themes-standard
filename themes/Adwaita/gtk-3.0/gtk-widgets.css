@@ -687,7 +687,8 @@ GtkComboBox .button:prelight {
     background-color: shade (@theme_bg_color, 0.97);
 
     border-style: solid;
-    border-width: 1;
+    border-width: 1 0 1 0;
+    -adwaita-border-gradient: none;
     border-color: shade (@theme_bg_color, 0.91);
 }
 
@@ -695,10 +696,11 @@ GtkComboBox .button:prelight {
 .primary-toolbar.toolbar.button {
     border-style: none;
     border-width: 1;
+    border-radius: 4;
     background-image: none;
     background-color: alpha (@theme_base_color, 0.0);
 
-    -adwaita-focus-border-radius: 2;
+    -adwaita-focus-border-radius: 3;
     -adwaita-focus-fill-color: alpha (@theme_base_color, 0.20);
     -adwaita-focus-border-gradient: -gtk-gradient (linear,
                                                    left top, left bottom,
@@ -708,6 +710,10 @@ GtkComboBox .button:prelight {
 
 .primary-toolbar.toolbar.button:insensitive {
     border-style: none;
+    border-width: 0;
+
+    color: @insensitive_fg_color;
+
     background-image: none;
     background-color: alpha (@theme_base_color, 0.0);
     -GtkWidget-focus-line-width: 0;
@@ -724,7 +730,6 @@ GtkComboBox .button:prelight {
 
 .primary-toolbar.toolbar.button:active {
     border-style: solid;
-    border-radius: 4;
     -adwaita-border-gradient: -gtk-gradient (linear,
                                              left top, left bottom,
                                              from (shade (@toolbar_active_button_color, 0.8)),
@@ -738,7 +743,7 @@ GtkComboBox .button:prelight {
     color: @theme_fg_color;
 }
 
-.primary-toolbar.toolbar.button:active:prelight {
+.primary-toolbar.toolbar.button:active:hover {
     border-style: solid;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -749,10 +754,10 @@ GtkComboBox .button:prelight {
 }
 
 .primary-toolbar.toolbar.button:active:insensitive {
-    border-style: solid;
-    border-radius: 3;
-    border-color: @inactive_frame_color;
+    border-color: @insensitive_border_color;
+
     -adwaita-border-gradient: none;
+    background-image: none;
 }
 
 .primary-toolbar.toolbar GtkSeparatorToolItem {
@@ -762,14 +767,12 @@ GtkComboBox .button:prelight {
     border-style: solid;
     border-width: 1;
     border-color: shade (@theme_bg_color, 0.56);
+    -adwaita-border-gradient: none;
 }
 
 /* primary toolbar raised buttons */
-.primary-toolbar.toolbar.raised.button,
-.primary-toolbar.toolbar.raised.button:insensitive {
-    border-radius: 2;
+.primary-toolbar.toolbar.raised.button {
     border-width: 1;
-    border-color: @button_border;
     border-style: solid;
 
     background-image: -gtk-gradient (linear,
@@ -778,6 +781,10 @@ GtkComboBox .button:prelight {
                                      to (@button_gradient_color_b));
 
     -GtkWidget-focus-line-width: 2;
+}
+
+.primary-toolbar.toolbar.raised.button:insensitive {
+    background-image: none;
 }
 
 .primary-toolbar.toolbar.raised.button:hover {
@@ -801,6 +808,12 @@ GtkComboBox .button:prelight {
     border-color: @highlighted_border;
     border-width: 1;
     border-style: solid;
+}
+
+.primary-toolbar.toolbar.raised.button:insensitive:active {
+    border-style: solid;
+    border-width: 1;
+    background-image: none;
 }
 
 /* progressbars on primary toolbar entries are special */
