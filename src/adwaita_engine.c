@@ -1011,9 +1011,11 @@ adwaita_engine_render_activity (GtkThemingEngine *engine,
 				gdouble           height)
 {
 	const GtkWidgetPath *path;
+	GtkStateFlags state;
 
 	cairo_save (cr);
 	path = gtk_theming_engine_get_path (engine);
+	state = gtk_theming_engine_get_state (engine);
 
 	if (gtk_widget_path_is_type (path, GTK_TYPE_SCALE) &&
 	    gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PROGRESSBAR))
@@ -1034,23 +1036,22 @@ adwaita_engine_render_activity (GtkThemingEngine *engine,
 	GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_activity (engine, cr,
 										 x, y, width, height);
 
-	if (gtk_widget_path_is_type (path, GTK_TYPE_PROGRESS_BAR) &&
-	    gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PROGRESSBAR))
+	if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PROGRESSBAR))
 	{
-		cairo_pattern_t *pattern;
+		cairo_pattern_t *pattern = NULL;
 
-		pattern = cairo_pattern_create_linear (0, 0, 20, 20);
-		cairo_pattern_add_color_stop_rgba (pattern, 0, 0, 0, 0, 0);
-		cairo_pattern_add_color_stop_rgba (pattern, 0.49, 0, 0, 0, 0);
-		cairo_pattern_add_color_stop_rgba (pattern, 0.5, 0, 0, 0, 0.1);
-		cairo_pattern_add_color_stop_rgba (pattern, 0.99, 0, 0, 0, 0.1);
+		gtk_theming_engine_get (engine, state,
+					"-adwaita-progressbar-pattern", &pattern,
+					NULL);
 
-		cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
-		cairo_rectangle (cr, x, y, width, height);
-		cairo_set_source (cr, pattern);
-		cairo_fill (cr);
+		if (pattern != NULL) {
+			style_pattern_set_matrix (pattern, 20, 20, TRUE);
+			cairo_rectangle (cr, x, y, width, height);
+			cairo_set_source (cr, pattern);
+			cairo_fill (cr);
 
-		cairo_pattern_destroy (pattern);
+			cairo_pattern_destroy (pattern);
+		}
 	}
 
 	cairo_restore (cr);
@@ -1672,7 +1673,12 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 					      g_param_spec_boxed ("inset-bottom",
 								  "Inset line bottom",
 								  "Inset line bottom",
-								  GDK_TYPE_RGBA, 0));	
+								  GDK_TYPE_RGBA, 0));
+	gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
+					      g_param_spec_boxed ("progressbar-pattern",
+								  "Progressbar pattern",
+								  "Progressbar pattern",
+								  CAIRO_GOBJECT_TYPE_PATTERN, 0));
 }
 
 static void
