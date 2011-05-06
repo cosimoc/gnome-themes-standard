@@ -841,6 +841,8 @@ GtkComboBox .button:prelight {
     border-radius: 2;
     border-color: shade (@inactive_frame_color, 0.925);
 
+    color: @theme_text_color;
+
     -adwaita-progressbar-pattern: none;
 }
 
