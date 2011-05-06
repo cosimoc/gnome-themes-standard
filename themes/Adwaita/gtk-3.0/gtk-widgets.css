@@ -238,6 +238,11 @@ GtkProgressBar.trough,
                                      to (mix (@trough_bg_color_b, @theme_selected_bg_color, 0.25)));
 }
 
+GtkProgressBar,
+.trough row {
+    padding: 0;
+}
+
 /************
  * GtkScale *
  ************/
