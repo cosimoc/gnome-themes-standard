@@ -192,7 +192,11 @@
 /****************
  * Progress bar *
  ****************/
-GtkProgressBar.progressbar {
+.progressbar,
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focused {
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@progressbar_background_a),
@@ -212,7 +216,9 @@ GtkProgressBar.progressbar {
                                                  to (alpha (@progressbar_pattern, 0.10)));
 }
 
-GtkProgressBar.trough {
+GtkProgressBar.trough,
+.trough row,
+.trough row:hover {
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@trough_bg_color_a),
@@ -222,6 +228,14 @@ GtkProgressBar.trough {
     border-style: solid;
     border-radius: 3;
     border-color: shade (@inactive_frame_color, 0.925);
+}
+
+.trough row:selected,
+.trough row:selected:focused {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (mix (@trough_bg_color_a, @theme_selected_bg_color, 0.25)),
+                                     to (mix (@trough_bg_color_b, @theme_selected_bg_color, 0.25)));
 }
 
 /************
