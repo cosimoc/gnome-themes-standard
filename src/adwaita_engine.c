@@ -862,10 +862,8 @@ adwaita_engine_render_background (GtkThemingEngine *engine,
 				  gdouble           height)
 {
 	const GtkWidgetPath *path;
-	GtkStateFlags state;
 
 	path = gtk_theming_engine_get_path (engine);
-	state = gtk_theming_engine_get_state (engine);
 
 	if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MENUITEM) &&
 	    gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MENUBAR)) {
