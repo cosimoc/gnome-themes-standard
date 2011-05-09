@@ -564,17 +564,17 @@ render_menubar_active_frame (GtkThemingEngine *engine,
 	GtkStateFlags state;
 	GdkRGBA color;
 	gint radius, border_width;
-	GtkBorder *border;
+	GtkBorder border;
 
 	state = gtk_theming_engine_get_state (engine);
 	gtk_theming_engine_get_border_color (engine, state, &color);
+	gtk_theming_engine_get_border (engine, state, &border);
 	gtk_theming_engine_get (engine, state,
 				"border-radius", &radius,
-				"border-width", &border,
 				NULL);
 
-	border_width = MIN (MIN (border->top, border->bottom),
-			    MIN (border->left, border->right));
+	border_width = MIN (MIN (border.top, border.bottom),
+			    MIN (border.left, border.right));
 
 	if (border_width > 1) {
 		x += (gdouble) border_width / 2;
@@ -597,8 +597,6 @@ render_menubar_active_frame (GtkThemingEngine *engine,
 	cairo_stroke (cr);
 
 	cairo_restore (cr);
-
-	gtk_border_free (border);
 }
 
 static void
@@ -611,7 +609,7 @@ render_frame_default (GtkThemingEngine *engine,
 {
 	cairo_pattern_t *pattern = NULL;
 	GtkStateFlags state;
-	GtkBorder *border;
+	GtkBorder border;
 	gint border_radius;
 	GtkBorderStyle border_style;
 	GtkJunctionSides junctions;
@@ -635,15 +633,15 @@ render_frame_default (GtkThemingEngine *engine,
 
 	gtk_theming_engine_get (engine, state,
 				"border-radius", &border_radius,
-				"border-width", &border,
 				NULL);
+	gtk_theming_engine_get_border (engine, state, &border);
 	junctions = gtk_theming_engine_get_junction_sides (engine);
 
 	style_pattern_set_matrix (pattern, width, height, TRUE);
 
 	_cairo_uneven_frame (cr, border_radius,
 			     x, y, width, height,
-			     border, junctions);
+			     &border, junctions);
 	cairo_set_source (cr, pattern);
 
 	cairo_fill (cr);
@@ -651,7 +649,6 @@ render_frame_default (GtkThemingEngine *engine,
 	cairo_restore (cr);
 
 	cairo_pattern_destroy (pattern);
-	gtk_border_free (border);
 }
 
 static void
@@ -744,22 +741,22 @@ render_menubar_active_background (GtkThemingEngine *engine,
 	GtkStateFlags state;
 	GdkRGBA color;
 	gint radius;
-	GtkBorder *border;
+	GtkBorder border;
 
 	state = gtk_theming_engine_get_state (engine);
 	gtk_theming_engine_get_border_color (engine, state, &color);
+	gtk_theming_engine_get_border (engine, state, &border);
 	gtk_theming_engine_get (engine, state,
 				"border-radius", &radius,
-				"border-width", &border,
 				NULL);
 
 	gtk_theming_engine_get_background_color (engine, state, &color);
 
 	/* omit all the border but the bottom line */
-	x += border->left;
-	y += border->top;
-	w -= border->left + border->right;
-	h -= border->top;
+	x += border.left;
+	y += border.top;
+	w -= border.left + border.right;
+	h -= border.top;
 
 	cairo_save (cr);
 	cairo_translate (cr, x, y);
@@ -770,8 +767,6 @@ render_menubar_active_background (GtkThemingEngine *engine,
 	cairo_fill (cr);
 
 	cairo_restore (cr);
-
-	gtk_border_free (border);
 }
 
 static void
