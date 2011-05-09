@@ -1,3 +1,30 @@
+3.1.1
+=====
+
+Reintroduce the dark theme variant
+Add inset shades on various elements
+Render the menus fill in dark
+Tweak GtkSwitch inactive label color
+Fix progressbar gradients and GtkCellRendererProgress
+Improve the maximized windows titlebar height
+
+3.0.1
+=====
+
+Reduce vertical padding for most of the common widgets, requires GTK+ 3.0.9
+
+3.0.0
+=====
+
+Don't propagate an 1px separator width to the whole toolbar
+Add icon-size property for NaTrayApplet
+
+2.91.93
+=======
+
+Remove the dark theme variant for 3.0
+Fix gnome-terminal background
+
 2.91.92.1
 =========
 
