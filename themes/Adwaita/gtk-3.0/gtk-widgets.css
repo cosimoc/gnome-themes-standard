@@ -119,7 +119,7 @@
 
 .pane-separator:prelight,
 .pane-separator:selected {
-    color: shade (@inactive_frame_color, 0.60);
+    color: @theme_text_color;
 }
 
 /****************

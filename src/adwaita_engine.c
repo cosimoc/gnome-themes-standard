@@ -1331,8 +1331,8 @@ adwaita_engine_render_handle (GtkThemingEngine *engine,
 
 		if (width > height) {
 			for (xx = x + width / 2 - 12; xx <= x + width / 2 + 12; xx += 6) {
-				cairo_arc (cr, xx, y + height / 2 - 1,
-					   1.5,
+				cairo_arc (cr, xx, y + height / 2.0,
+					   1.0,
 					   0, G_PI * 2.0);
 				cairo_fill (cr);
 			}
