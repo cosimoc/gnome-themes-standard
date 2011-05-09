@@ -999,7 +999,7 @@ GtkIconView.view.cell:selected:focused {
 
 GtkTreeView {
     -GtkTreeView-vertical-separator: 0;
-    -GtkTreeView-expander-size: 8;
+    -GtkTreeView-expander-size: 9;
 
     -GtkWidget-focus-line-width: 1;
     -adwaita-focus-border-radius: 0;
@@ -1060,13 +1060,19 @@ row:selected {
 }
 
 .expander {
-    color: @internal_element_color;
+    border-style: solid;
+    border-width: 1;
+    border-radius: 2;
     border-color: @internal_element_color;
 
+    color: @internal_element_color;
     background-color: @theme_base_color;
 }
 
 .expander:active {
+    border-style: solid;
+    border-width: 1;
+
     color: @internal_element_color;
     border-color: @internal_element_color;
 
@@ -1074,6 +1080,9 @@ row:selected {
 }
 
 .expander:prelight {
+    border-style: solid;
+    border-width: 1;
+
     color: @internal_element_color;
     border-color: @internal_element_color;
 
@@ -1082,6 +1091,9 @@ row:selected {
 
 .expander row:selected,
 .expander row:selected:focused {
+    border-style: solid;
+    border-width: 1;
+
     border-color: @expander_row_selected_color;
     color: @expander_row_selected_color;
     background-color: @theme_selected_bg_color;

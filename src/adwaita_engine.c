@@ -909,46 +909,55 @@ adwaita_engine_render_expander (GtkThemingEngine *engine,
 				gdouble           width,
 				gdouble           height)
 {
-	GdkRGBA border, bg, fg;
+	GdkRGBA fg;
 	GtkStateFlags state;
-	gint side;
+	gdouble side, offset;
+	gint line_width;
+	GtkBorder border;
 
-	side = MIN (width, height);
+	side = floor (MIN (width, height));
 
-	x += ((int) width / 2) - (side / 2);
-	y += ((int) height / 2) - (side / 2);
+	/* make sure the side length is always odd */
+	if (((gint) side % 2) == 0) {
+		side -= 1.0;
+	}
+
+	x += width / 2 - side / 2;
+	y += height / 2 - side / 2;
+
+	GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
+		(engine, cr, x, y, side, side);
+	GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame
+		(engine, cr, x, y, side, side);
 
 	state = gtk_theming_engine_get_state (engine);
-
-	gtk_theming_engine_get_border_color (engine, state, &border);
-	gtk_theming_engine_get_background_color (engine, state, &bg);
 	gtk_theming_engine_get_color (engine, state, &fg);
+	gtk_theming_engine_get_border (engine, state, &border);
+
+	line_width = 1;
+	offset = (1 + line_width / 2.0);
 
 	cairo_save (cr);
 
-	cairo_set_line_width (cr, 1);
-
-	_cairo_round_rectangle_sides (cr, 2,
-				      x + 0.5, y + 0.5,
-				      side, side,
-				      SIDE_ALL, GTK_JUNCTION_NONE);
-	gdk_cairo_set_source_rgba (cr, &bg);
-	cairo_fill_preserve (cr);
-
-	gdk_cairo_set_source_rgba (cr, &border);
-	cairo_stroke (cr);
-
-	cairo_set_line_width (cr, 1);
+	cairo_set_line_width (cr, line_width);
 	cairo_set_line_cap (cr, CAIRO_LINE_CAP_ROUND);
 	gdk_cairo_set_source_rgba (cr, &fg);
 
-	cairo_move_to (cr, x + 3, y + side / 2 + 0.5);
-	cairo_line_to (cr, x + side - 2, y + side / 2 + 0.5);
+	cairo_move_to (cr,
+		       x + border.left + offset,
+		       y + side / 2);
+	cairo_line_to (cr,
+		       x + side - (border.right + offset),
+		       y + side / 2);
 
 	if ((state & GTK_STATE_FLAG_ACTIVE) == 0)
 	{
-		cairo_move_to (cr, x + side / 2 + 0.5, y + 3);
-		cairo_line_to (cr, x + side / 2 + 0.5, y + side - 2);
+		cairo_move_to (cr,
+			       x + side / 2,
+			       y + border.top + offset);
+		cairo_line_to (cr,
+			       x + side / 2,
+			       y + side - (border.bottom + offset));
 	}
 
 	cairo_stroke (cr);
