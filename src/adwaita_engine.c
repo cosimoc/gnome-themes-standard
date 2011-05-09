@@ -707,22 +707,9 @@ adwaita_engine_render_frame (GtkThemingEngine *engine,
 	}
 	else
 	{
-		if (gtk_widget_path_is_type (path, GTK_TYPE_SCALE) &&
-		    gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_TROUGH))
-		{
-			/* Render GtkScale trough thinner */
-			if (!gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_VERTICAL))
-			{
-				y += height / 2.0 - 2.0;
-				height = 4;
-			}
-			else
-			{
-				x += width / 2.0 - 2.0;
-				width = 4;
-			}
-		}
-
+		adwaita_trim_allocation_for_scale (engine,
+						   &x, &y,
+						   &width, &height);
 		render_frame_default (engine, cr, x, y, width, height);
 	}
 
@@ -861,10 +848,6 @@ adwaita_engine_render_background (GtkThemingEngine *engine,
 				  gdouble           width,
 				  gdouble           height)
 {
-	const GtkWidgetPath *path;
-
-	path = gtk_theming_engine_get_path (engine);
-
 	if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MENUITEM) &&
 	    gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MENUBAR)) {
 		render_menubar_active_background (engine, cr, x, y, width, height);
@@ -872,21 +855,9 @@ adwaita_engine_render_background (GtkThemingEngine *engine,
 		return;
 	}
 
-	if (gtk_widget_path_is_type (path, GTK_TYPE_SCALE) &&
-	    gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_TROUGH))
-	{
-		/* Render GtkScale trough thinner */
-		if (!gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_VERTICAL))
-		{
-			y += height / 2 - 2;
-			height = 4;
-		}
-		else
-		{
-			x += width / 2 - 2;
-			width = 4;
-		}
-	}
+	adwaita_trim_allocation_for_scale (engine,
+					   &x, &y,
+					   &width, &height);
 
 	GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background (engine, cr, x, y,
 										   width, height);
@@ -966,28 +937,14 @@ adwaita_engine_render_activity (GtkThemingEngine *engine,
 				gdouble           width,
 				gdouble           height)
 {
-	const GtkWidgetPath *path;
 	GtkStateFlags state;
 
 	cairo_save (cr);
-	path = gtk_theming_engine_get_path (engine);
 	state = gtk_theming_engine_get_state (engine);
 
-	if (gtk_widget_path_is_type (path, GTK_TYPE_SCALE) &&
-	    gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PROGRESSBAR))
-	{
-		/* Render GtkScale fill level thinner */
-		if (!gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_VERTICAL))
-		{
-			y += height / 2.0 - 2.0;
-			height = 4;
-		}
-		else
-		{
-			x += width / 2.0 - 2.0;
-			width = 4;
-		}
-	}
+	adwaita_trim_allocation_for_scale (engine,
+					   &x, &y,
+					   &width, &height);
 
 	GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_activity (engine, cr,
 										 x, y, width, height);

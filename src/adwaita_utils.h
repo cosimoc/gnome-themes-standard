@@ -45,7 +45,14 @@ adwaita_render_from_assets_common (GtkThemingEngine *engine,
                                    gdouble width,
                                    gdouble height);
 
-  void
+void
+adwaita_trim_allocation_for_scale (GtkThemingEngine *engine,
+                                   gdouble *x,
+                                   gdouble *y,
+                                   gdouble *width,
+                                   gdouble *height);
+
+void
 style_pattern_set_matrix (cairo_pattern_t *pattern,
                           gdouble          width,
                           gdouble          height,
