@@ -571,6 +571,20 @@ GtkComboBox .button:prelight {
  * Menus *
  *********/
 
+* .menu {
+    background-color: @menu_bg_color;
+    color: @menu_fg_color;
+}
+
+.menu {
+    border-style: solid;
+    border-width: 0;
+    border-radius: 0;
+    border-color: @inactive_frame_color;
+
+    -GtkMenuItem-arrow-scaling: 0.4;
+}
+
 /* this controls the general appearance of the menubar */
 .menubar {
     background-image: -gtk-gradient (linear,
@@ -587,6 +601,12 @@ GtkComboBox .button:prelight {
     -GtkMenuBar-internal-padding: 0;
 }
 
+.menubar.menuitem {
+    border-width: 0;
+    border-style: none;
+    padding: 3 5;
+}
+
 /* remove the image from the prelight areas */
 .menubar.menuitem:prelight {
     background-image: none;
@@ -597,25 +617,6 @@ GtkComboBox .button:prelight {
     border-radius: 5;
     border-width: 0;
     border-color: @inactive_frame_color;
-}
-
-.menubar.menuitem {
-    border-width: 0;
-    border-style: none;
-    padding: 3 5;
-}
-
-.menu {
-    padding: 0;
-
-    background-color: @menu_bg_color;
-    color: @menu_fg_color;
-    border-style: solid;
-    border-width: 0;
-    border-radius: 0;
-    border-color: @inactive_frame_color;
-
-    -GtkMenuItem-arrow-scaling: 0.4;
 }
 
 .menuitem:insensitive {
