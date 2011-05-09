@@ -1,4 +1,3 @@
-/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*- */
 /* Adwaita - a GTK+ engine
  *
  * Copyright (C) 2011 Carlos Garnacho <carlosg@gnome.org>
@@ -201,7 +200,7 @@ style_pattern_set_matrix (cairo_pattern_t *pattern,
   cairo_pattern_set_matrix (pattern, &matrix);
 
   if (repeat)
-	  cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
+    cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
 }
 
 gboolean
@@ -212,37 +211,36 @@ adwaita_render_from_assets_common (GtkThemingEngine *engine,
                                    gdouble width,
                                    gdouble height)
 {
-	gboolean retval = FALSE;
-	GtkStateFlags state;
-	cairo_pattern_t *asset = NULL;
-	cairo_surface_t *surface = NULL;
+  gboolean retval = FALSE;
+  GtkStateFlags state;
+  cairo_pattern_t *asset = NULL;
+  cairo_surface_t *surface = NULL;
 
-	state = gtk_theming_engine_get_state (engine);
-	gtk_theming_engine_get (engine, state, 
-				"background-image", &asset,
-				NULL);
+  state = gtk_theming_engine_get_state (engine);
+  gtk_theming_engine_get (engine, state, 
+                          "background-image", &asset,
+                          NULL);
 
-	if (asset != NULL) {
-		cairo_pattern_get_surface (asset, &surface);
-        }
+  if (asset != NULL)
+    cairo_pattern_get_surface (asset, &surface);
 
-        if (surface != NULL) {
-		cairo_save (cr);
+  if (surface != NULL)
+    {
+      cairo_save (cr);
 
-                cairo_set_source_surface (cr, surface, x, y);
-                cairo_scale (cr,
-                             width / cairo_image_surface_get_width (surface),
-                             height / cairo_image_surface_get_height (surface));
+      cairo_set_source_surface (cr, surface, x, y);
+      cairo_scale (cr,
+                   width / cairo_image_surface_get_width (surface),
+                   height / cairo_image_surface_get_height (surface));
 
-		cairo_paint (cr);
+      cairo_paint (cr);
 
-		cairo_restore (cr);
-		retval = TRUE;
-	}
+      cairo_restore (cr);
+      retval = TRUE;
+    }
 
-	if (asset != NULL) {
-		cairo_pattern_destroy (asset);
-	}
+  if (asset != NULL)
+    cairo_pattern_destroy (asset);
 
-	return retval;
+  return retval;
 }

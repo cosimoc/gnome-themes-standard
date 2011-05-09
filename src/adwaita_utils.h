@@ -1,4 +1,3 @@
-/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*- */
 /* Adwaita - a GTK+ engine
  *
  * Copyright (C) 2011 Carlos Garnacho <carlosg@gnome.org>
