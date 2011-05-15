@@ -655,7 +655,7 @@ GtkComboBox .button:prelight {
     border-color: darker (@theme_selected_bg_color);
 }
 
-.menu .separator {
+.menuitem.separator {
     border-color: @inactive_frame_color;
 
     -GtkSeparatorMenuItem-horizontal-padding: 0;
@@ -663,19 +663,19 @@ GtkComboBox .button:prelight {
 }
 
 /* menu radio and check items are drawn differently */
-.menu.check:active {
+.menuitem.check:active {
     color: @menu_controls_color;
 }
 
-.menu.radio:active {
+.menuitem.radio:active {
     color: @menu_controls_color;
 }
 
-.menu.check:prelight {
+.menuitem.check:prelight {
     color: @theme_selected_fg_color;
 }
 
-.menu.radio:prelight {
+.menuitem.radio:prelight {
     color: @theme_selected_fg_color;
 }
 
