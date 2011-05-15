@@ -454,7 +454,7 @@ GtkComboBox .button:prelight {
 }
 
 .scrollbar.slider,
-.scrollbar.button {
+.scrollbar .button {
     background-image: none;
     background-color: @theme_base_color;
     border-color: @button_border;
@@ -474,23 +474,23 @@ GtkComboBox .button:prelight {
     border-color: @theme_selected_bg_color;
 }
 
-.scrollbar.button {
+.scrollbar .button {
     color: @internal_element_color;
 }
 
-.scrollbar.button:prelight {
+.scrollbar .button:prelight {
     background-image: none;
     background-color: @theme_base_color;
     border-color: shade (@highlighted_border, 0.964)
 }
 
-.scrollbar.button:prelight:active {
+.scrollbar .button:prelight:active {
     background-image: none;
     background-color: @theme_base_color;
     border-color: shade (@highlighted_border, 0.964)
 }
 
-.scrollbar.button:insensitive {
+.scrollbar .button:insensitive {
     color: lighter (@internal_element_color);
     background-color: @theme_base_color;
 }
@@ -537,7 +537,7 @@ GtkComboBox .button:prelight {
 }
 
 .button:hover,
-.toolbar.button:hover {
+.toolbar .button:hover {
     border-color: @button_border;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -548,7 +548,7 @@ GtkComboBox .button:prelight {
 .button:active,
 .toolbar .button:active,
 .button:hover:active,
-.toolbar.button:hover:active {
+.toolbar .button:hover:active {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
                                      from (@button_active_gradient_color_a),
@@ -732,7 +732,7 @@ GtkComboBox .button:prelight {
 }
 
 /* primary toolbar buttons */
-.primary-toolbar.toolbar.button {
+.primary-toolbar.toolbar .button {
     border-style: none;
     border-width: 1;
     border-radius: 4;
@@ -747,7 +747,7 @@ GtkComboBox .button:prelight {
                                                    to (alpha (@toolbar_active_button_color, 0.62)));
 }
 
-.primary-toolbar.toolbar.button:insensitive {
+.primary-toolbar.toolbar .button:insensitive {
     border-style: none;
     border-width: 0;
 
@@ -758,7 +758,7 @@ GtkComboBox .button:prelight {
     -GtkWidget-focus-line-width: 0;
 }
 
-.primary-toolbar.toolbar.button:hover {
+.primary-toolbar.toolbar .button:hover {
     border-style: none;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -767,7 +767,7 @@ GtkComboBox .button:prelight {
 			             to (alpha (@theme_base_color, 0.0)));
 }
 
-.primary-toolbar.toolbar.button:active {
+.primary-toolbar.toolbar .button:active {
     border-style: solid;
     -adwaita-border-gradient: -gtk-gradient (linear,
                                              left top, left bottom,
@@ -782,7 +782,7 @@ GtkComboBox .button:prelight {
     color: @theme_fg_color;
 }
 
-.primary-toolbar.toolbar.button:active:hover {
+.primary-toolbar.toolbar .button:active:hover {
     border-style: solid;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -792,7 +792,7 @@ GtkComboBox .button:prelight {
     color: @theme_base_color;
 }
 
-.primary-toolbar.toolbar.button:active:insensitive {
+.primary-toolbar.toolbar .button:active:insensitive {
     border-color: @insensitive_border_color;
 
     -adwaita-border-gradient: none;
@@ -810,7 +810,7 @@ GtkComboBox .button:prelight {
 }
 
 /* primary toolbar raised buttons */
-.primary-toolbar.toolbar.raised.button {
+.primary-toolbar.toolbar .raised.button {
     border-width: 1;
     border-style: solid;
 
@@ -822,11 +822,11 @@ GtkComboBox .button:prelight {
     -GtkWidget-focus-line-width: 2;
 }
 
-.primary-toolbar.toolbar.raised.button:insensitive {
+.primary-toolbar.toolbar .raised.button:insensitive {
     background-image: none;
 }
 
-.primary-toolbar.toolbar.raised.button:hover {
+.primary-toolbar.toolbar .raised.button:hover {
     border-color: @button_border;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -849,7 +849,7 @@ GtkComboBox .button:prelight {
     border-style: solid;
 }
 
-.primary-toolbar.toolbar.raised.button:insensitive:active {
+.primary-toolbar.toolbar .raised.button:insensitive:active {
     border-style: solid;
     border-width: 1;
     background-image: none;
