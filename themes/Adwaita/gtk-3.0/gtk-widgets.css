@@ -619,6 +619,11 @@ GtkComboBox .button:prelight {
     border-color: @inactive_frame_color;
 }
 
+/* XXX: Needs fixage in GTK to inherit properly */
+.menubar .menuitem *:prelight {
+    color: @menu_fg_color;
+}
+
 .menuitem:insensitive {
     /* there is some weird alpha precomposing issues with this - ghosts on dark background */
     color: mix (@menu_fg_color, @menu_bg_color, 0.8);
