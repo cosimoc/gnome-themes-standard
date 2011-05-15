@@ -571,12 +571,13 @@ GtkComboBox .button:prelight {
  * Menus *
  *********/
 
-* .menu {
+.menu * {
     background-color: @menu_bg_color;
     color: @menu_fg_color;
 }
 
 .menu {
+    background-color: @menu_bg_color;
     border-style: solid;
     border-width: 0;
     border-radius: 0;
