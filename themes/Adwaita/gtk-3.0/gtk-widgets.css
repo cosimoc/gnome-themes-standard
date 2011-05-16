@@ -810,7 +810,7 @@ GtkComboBox .button:prelight {
 }
 
 /* primary toolbar raised buttons */
-.primary-toolbar.toolbar .raised.button {
+.primary-toolbar.toolbar .raised .button {
     border-width: 1;
     border-style: solid;
 
@@ -822,11 +822,11 @@ GtkComboBox .button:prelight {
     -GtkWidget-focus-line-width: 2;
 }
 
-.primary-toolbar.toolbar .raised.button:insensitive {
+.primary-toolbar.toolbar .raised .button:insensitive {
     background-image: none;
 }
 
-.primary-toolbar.toolbar .raised.button:hover {
+.primary-toolbar.toolbar .raised .button:hover {
     border-color: @button_border;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -836,8 +836,8 @@ GtkComboBox .button:prelight {
     border-style: solid;
 }
 
-.primary-toolbar.toolbar.raised.button:hover:active,
-.primary-toolbar.toolbar.raised.button:active {
+.primary-toolbar.toolbar .raised .button:hover:active,
+.primary-toolbar.toolbar .raised .button:active {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
                                      from (@button_active_gradient_color_a),
@@ -849,7 +849,7 @@ GtkComboBox .button:prelight {
     border-style: solid;
 }
 
-.primary-toolbar.toolbar .raised.button:insensitive:active {
+.primary-toolbar.toolbar .raised .button:insensitive:active {
     border-style: solid;
     border-width: 1;
     background-image: none;
