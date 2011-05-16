@@ -454,7 +454,7 @@ GtkComboBox .button:prelight {
 }
 
 .scrollbar.slider,
-.scrollbar .button {
+.scrollbar.button {
     background-image: none;
     background-color: @theme_base_color;
     border-color: @button_border;
@@ -474,23 +474,23 @@ GtkComboBox .button:prelight {
     border-color: @theme_selected_bg_color;
 }
 
-.scrollbar .button {
+.scrollbar.button {
     color: @internal_element_color;
 }
 
-.scrollbar .button:prelight {
+.scrollbar.button:prelight {
     background-image: none;
     background-color: @theme_base_color;
     border-color: shade (@highlighted_border, 0.964)
 }
 
-.scrollbar .button:prelight:active {
+.scrollbar.button:prelight:active {
     background-image: none;
     background-color: @theme_base_color;
     border-color: shade (@highlighted_border, 0.964)
 }
 
-.scrollbar .button:insensitive {
+.scrollbar.button:insensitive {
     color: lighter (@internal_element_color);
     background-color: @theme_base_color;
 }
