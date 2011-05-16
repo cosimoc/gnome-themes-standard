@@ -39,10 +39,6 @@
     -GtkEntry-inner-border: 2;
     -GtkEntry-progress-border: 0;
 
-    /* Style */
-    background-color: @theme_bg_color;
-    color: @theme_fg_color;
-
     -GtkWidget-focus-padding: 2;
     -GtkWidget-focus-line-width: 1;
     -adwaita-focus-border-color: alpha (@theme_text_color, 0.4);
@@ -55,6 +51,12 @@
     -adwaita-inset-right: none;
     -adwaita-inset-top: none;
     -adwaita-inset-bottom: none;
+}
+
+GtkWindow {
+    /* Style */
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
 }
 
 /***************
