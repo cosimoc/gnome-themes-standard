@@ -417,7 +417,7 @@ GtkComboBox {
     -GtkWidget-focus-line-width: 0;
 
     -GtkComboBox-arrow-scaling: 0.5;
-    -GtkComboBox-shadow-type: 2;
+    -GtkComboBox-shadow-type: out;
 }
 
 GtkComboBox .button {
@@ -718,7 +718,7 @@ GtkComboBox .button:prelight {
     padding: 2;
 
     -GtkWidget-window-dragging: true;
-    -GtkToolbar-button-relief: 0;
+    -GtkToolbar-button-relief: normal;
 }
 
 .primary-toolbar.toolbar:insensitive {
