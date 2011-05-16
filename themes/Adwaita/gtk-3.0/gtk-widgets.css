@@ -856,7 +856,7 @@ GtkComboBox .button:prelight {
 }
 
 /* progressbars on primary toolbar entries are special */
-.primary-toolbar.toolbar.entry.progressbar {
+.primary-toolbar.toolbar .entry.progressbar {
     /* FIXME: need correct colors/gradient */
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
