@@ -916,6 +916,25 @@ GtkTreeMenu .menuitem * {
 				     to (shade (@theme_bg_color, 0.83)));
 }
 
+
+/***********
+ * Sidebar *
+ ***********/
+.sidebar,
+.sidebar .view {
+    background-color: shade (@theme_bg_color, 1.02);
+}
+
+.sidebar .scrollbar.trough {
+    background-color: shade (@theme_bg_color, 1.02);
+}
+
+.sidebar .highlight
+{
+    color: @theme_fg_color;
+    font: bold;
+}
+
 /*************
  * GtkSwitch *
  *************/
@@ -1008,8 +1027,7 @@ GtkIconView.view.cell:selected:focused {
     -adwaita-focus-border-dashes: 0;
 }
 
-.view,
-.view * {
+.view {
     background-color: @theme_base_color;
     color: @theme_fg_color;
     border-radius: 0;
@@ -1183,17 +1201,6 @@ GtkCalendar.highlight {
 
 .dim-label {
     color: mix (@theme_fg_color, @theme_bg_color, 0.50);
-}
-
-.sidebar,
-.sidebar.view {
-    background-color: shade (@theme_bg_color, 0.99);
-}
-
-.sidebar .highlight
-{
-    color: @theme_fg_color;
-    font: bold;
 }
 
 ApDocView, /* Abiword */
