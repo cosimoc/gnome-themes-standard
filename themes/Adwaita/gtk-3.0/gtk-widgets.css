@@ -582,8 +582,6 @@ GtkComboBox .button:prelight {
     border-width: 0;
     border-radius: 0;
     border-color: @inactive_frame_color;
-
-    -GtkMenuItem-arrow-scaling: 0.4;
 }
 
 /* this controls the general appearance of the menubar */
@@ -620,28 +618,29 @@ GtkComboBox .button:prelight {
     border-color: @inactive_frame_color;
 }
 
+.menuitem {
+    -GtkMenuItem-arrow-scaling: 0.4;
+    -adwaita-menuitem-arrow-color: @menu_controls_color;
+    padding: 4;
+}
+
 /* XXX: Needs fixage in GTK to inherit properly */
-.menubar .menuitem *:prelight {
+.menuitem *:prelight {
     color: @menu_fg_color;
 }
 
-.menuitem:insensitive {
+.menuitem *:insensitive {
     /* there is some weird alpha precomposing issues with this - ghosts on dark background */
     color: mix (@menu_fg_color, @menu_bg_color, 0.8);
     background-color: shade (@menu_bg_color, 1.10);
 }
 
-.menuitem {
-    -adwaita-menuitem-arrow-color: @menu_controls_color;
-    padding: 4;
-}
-
-.menuitem.accelerator {
+.menuitem .accelerator {
     color: alpha (@menu_fg_color, 0.4);
 }
 
-.menuitem.accelerator:prelight,
-.menuitem.accelerator:active {
+.menuitem .accelerator:prelight,
+.menuitem .accelerator:active {
     color: alpha (@menu_fg_color, 0.3);
 }
 
