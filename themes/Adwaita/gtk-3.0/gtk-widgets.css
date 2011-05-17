@@ -576,18 +576,45 @@ GtkComboBox .button *:prelight {
 /*********
  * Menus *
  *********/
+/* combobox menus */
+GtkTreeMenu.menu {
+    background-color: @theme_base_color;
+}
 
-.menu * {
-    background-color: @menu_bg_color;
-    color: @menu_fg_color;
+GtkTreeMenu.menu.button {
+    background-image: none;
+    background-color: @theme_base_color;
+    color: @internal_element_color;
+}
+
+GtkTreeMenu.menu.button:hover {
+    background-image: none;
+    background-color: @theme_base_color;
+    color: @theme_text_color;
+}
+
+GtkTreeMenu.menu.button:insensitive {
+    background-color: @theme_base_color;
+    color: lighter(@internal_element_color);
+}
+
+GtkTreeMenu .menuitem {
+    padding: 2;
+
+    border-style: solid;
+    border-width: 1 0;
+    border-color: @progressbar_border;
+}
+
+GtkTreeMenu .menuitem * {
+    color: @theme_text_color;
 }
 
 .menu {
     background-color: @menu_bg_color;
-    border-style: solid;
-    border-width: 0;
-    border-radius: 0;
-    border-color: @inactive_frame_color;
+    color: @menu_fg_color;
+
+    border-style: none;
 }
 
 /* this controls the general appearance of the menubar */
