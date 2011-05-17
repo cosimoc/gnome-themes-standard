@@ -697,6 +697,10 @@ GtkComboBox .button *:prelight {
     padding: 1;
 }
 
+.toolbar .button {
+    padding: 2;
+}
+
 .toolbar:insensitive {
     color: alpha (@theme_fg_color, 0.6);
 }
@@ -713,6 +717,9 @@ GtkComboBox .button *:prelight {
 				     color-stop (0.16, @toolbar_gradient_step1),
 				     color-stop (0.90, @toolbar_gradient_step2),
 				     to (@toolbar_gradient_final));
+
+    padding: 6;
+
     border-width: 1 0 1 0;
     border-radius: 0;
     border-style: solid;
@@ -720,8 +727,6 @@ GtkComboBox .button *:prelight {
                                              left top, left bottom,
                                              from (shade (@theme_bg_color, 0.56)),
                                              to (shade (@theme_bg_color, 0.83)));
-
-    padding: 2;
 
     -GtkWidget-window-dragging: true;
     -GtkToolbar-button-relief: normal;
@@ -742,8 +747,6 @@ GtkComboBox .button *:prelight {
 
     background-image: none;
     background-color: alpha (@theme_base_color, 0.0);
-
-    padding: 2;
 
     -adwaita-focus-border-radius: 3;
     -adwaita-focus-fill-color: alpha (@theme_base_color, 0.20);
@@ -878,6 +881,8 @@ GtkComboBox .button *:prelight {
     border-width: 1;
     border-radius: 3;
     border-style: solid;
+
+    padding: 4;
 
     background-image: -gtk-gradient (linear,
 				     left top,
