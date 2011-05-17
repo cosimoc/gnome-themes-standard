@@ -781,21 +781,25 @@ GtkComboBox .button *:prelight {
                                              from (shade (@toolbar_active_button_color, 0.8)),
                                              to (shade (@toolbar_active_button_color, 1.4)));
 
-    color: @theme_fg_color;
-
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (shade (@toolbar_gradient_base, 0.95)),
 			             to (alpha (shade (@toolbar_gradient_base, 0.85), 0.0)));
 }
 
-.primary-toolbar.toolbar .button:active:hover {
-    color: @theme_base_color;
+.primary-toolbar.toolbar .button *:active {
+    color: @theme_fg_color;
+}
 
+.primary-toolbar.toolbar .button:active:hover {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (alpha (shade (@toolbar_gradient_base, 0.96), 0.7)),
 			             to (alpha (shade (@toolbar_gradient_base, 1.14), 0.0)));
+}
+
+.primary-toolbar.toolbar .button *:active:hover {
+    color: @theme_base_color;
 }
 
 .primary-toolbar.toolbar .button:active:insensitive {
@@ -987,7 +991,8 @@ GtkIconView.view.cell:selected:focused {
     -adwaita-focus-border-dashes: 0;
 }
 
-.view {
+.view,
+.view * {
     background-color: @theme_base_color;
     color: @theme_fg_color;
     border-radius: 0;
