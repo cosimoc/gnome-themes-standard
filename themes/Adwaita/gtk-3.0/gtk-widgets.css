@@ -1000,7 +1000,7 @@ GtkIconView.view.cell:selected:focused {
 
 GtkTreeView {
     -GtkTreeView-vertical-separator: 0;
-    -GtkTreeView-expander-size: 9;
+    -GtkTreeView-expander-size: 11;
 
     -GtkWidget-focus-line-width: 1;
     -adwaita-focus-border-radius: 0;
@@ -1017,8 +1017,18 @@ column-header {
 }
 
 column-header .button {
-    border-width: 0;
+    border-width: 0 1 1 0;
     border-radius: 0;
+    border-style: solid;
+
+    -adwaita-border-gradient: -gtk-gradient(linear,
+                                            left top, left bottom,
+                                            from(@button_border),
+                                            to(shade (@button_border, 1.23)));
+}
+
+column-header:nth-child(last) .button {
+    border-width: 0 0 1 0;
 }
 
 row:hover {
@@ -1030,16 +1040,10 @@ row:insensitive {
 }
 
 row:selected:focused {
-    border-width: 0;
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@progressbar_border),
-                                     color-stop (0.02, @progressbar_border),
-                                     color-stop (0.03, @theme_selected_bg_color),
-                                     color-stop (0.97, @theme_selected_bg_color),
-                                     color-stop (0.98, @progressbar_border),
-                                     to (@progressbar_border));
+    border-width: 1 0;
+    border-color: @progressbar_border;
     background-color: @theme_selected_bg_color;
+    border-style: solid;
 }
 
 row:selected {

@@ -664,62 +664,17 @@ adwaita_engine_render_frame (GtkThemingEngine *engine,
                              gdouble           width,
                              gdouble           height)
 {
-  const GtkWidgetPath *path;
-  GtkRegionFlags flags = 0;
-  gint len;
-  GtkStateFlags state;        
-
-  state = gtk_theming_engine_get_state (engine);
-
   if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MENUITEM) &&
       gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MENUBAR))
     {
       render_menubar_active_frame (engine, cr, x, y, width, height);
       return;
     }
-        
-  path = gtk_theming_engine_get_path (engine);
-  len = gtk_widget_path_length (path);
 
-  cairo_save (cr);
-
-  if (gtk_widget_path_iter_has_region (path, len - 2,
-                                       GTK_STYLE_REGION_COLUMN_HEADER,
-                                       &flags))
-    {
-      GdkRGBA color;
-
-      if ((flags & GTK_REGION_LAST) != 0)
-        goto out;
-
-      /* Column header */
-      if (gtk_theming_engine_get_direction (engine) == GTK_TEXT_DIR_RTL)
-        {
-          cairo_move_to (cr, x + 0.5, y + 2);
-          cairo_line_to (cr, x + 0.5, y + height - 4);
-        }
-      else
-        {
-          cairo_move_to (cr, x + width - 0.5, y + 2);
-          cairo_line_to (cr, x + width - 0.5, y + height - 4);
-        }
-
-      gtk_theming_engine_get_border_color (engine, state, &color);
-
-      cairo_set_line_width (cr, 1);
-      gdk_cairo_set_source_rgba (cr, &color);
-      cairo_stroke (cr);
-    }
-  else
-    {
-      adwaita_trim_allocation_for_scale (engine,
-                                         &x, &y,
-                                         &width, &height);
-      render_frame_default (engine, cr, x, y, width, height);
-    }
-
-out:
-  cairo_restore (cr);
+  adwaita_trim_allocation_for_scale (engine,
+                                     &x, &y,
+                                     &width, &height);
+  render_frame_default (engine, cr, x, y, width, height);
 }
 
 static void
