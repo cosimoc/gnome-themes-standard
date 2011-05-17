@@ -1164,6 +1164,12 @@ GtkCalendar.highlight {
     background-color: shade (@theme_bg_color, 0.99);
 }
 
+.sidebar .highlight
+{
+    color: @theme_fg_color;
+    font: bold;
+}
+
 ApDocView, /* Abiword */
 EogScrollView, /* Eog */
 CheeseThumbView /* Cheese */
