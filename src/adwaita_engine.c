@@ -846,12 +846,12 @@ adwaita_engine_render_expander (GtkThemingEngine *engine,
 
   side = floor (MIN (width, height));
 
-  /* make sure the side length is always odd */
-  if (((gint) side % 2) == 0)
-    side -= 1.0;
-
   x += width / 2 - side / 2;
   y += height / 2 - side / 2;
+
+  /* make sure the rendered side length is always odd */
+  if (((gint) side % 2) == 0)
+    side -= 1.0;
 
   GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
     (engine, cr, x, y, side, side);
