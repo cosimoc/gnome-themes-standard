@@ -1,5 +1,5 @@
 /* Import adwaita theme... */
-@import url ('../../Adwaita/gtk-3.0/gtk.css');
+@import url('../../Adwaita/gtk-3.0/gtk.css');
 
 /* ... and override its colors */
 @define-color theme_base_color #9a9a9a;
