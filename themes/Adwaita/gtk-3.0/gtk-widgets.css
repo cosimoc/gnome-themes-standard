@@ -355,6 +355,7 @@ GtkScale.mark {
  **********/
 .frame {
     padding: 2;
+    border-width: 0;
 }
 
 /* only render frames in a GtkScrolledWindow */
