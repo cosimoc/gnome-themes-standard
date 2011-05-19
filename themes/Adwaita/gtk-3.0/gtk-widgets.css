@@ -1090,6 +1090,10 @@ column-header .button {
                                             to(shade (@button_border, 1.23)));
 }
 
+column-header .button GtkArrow {
+    color: @internal_element_color;
+}
+
 column-header:nth-child(last) .button {
     border-width: 0 0 1 0;
 }
