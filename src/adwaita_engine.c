@@ -1227,6 +1227,7 @@ adwaita_engine_render_handle (GtkThemingEngine *engine,
           break;
         default:
           /* Not implemented. */
+          cairo_restore (cr);
           return;
         }
 
