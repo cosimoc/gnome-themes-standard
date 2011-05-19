@@ -727,6 +727,10 @@ GtkTreeMenu .menuitem * {
  * Primary Toolbars *
  ********************/
 
+/* applications using EggEditableToolbar usually set the primary-toolbar
+ * hint on the containing vbox, so we need to handle both these cases here.
+ */
+.primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
     background-image: -gtk-gradient (linear,
 				     left top,
@@ -750,6 +754,7 @@ GtkTreeMenu .menuitem * {
     -GtkToolbar-button-relief: normal;
 }
 
+.primary-toolbar .toolbar:insensitive,
 .primary-toolbar.toolbar:insensitive {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.97);
@@ -759,6 +764,7 @@ GtkTreeMenu .menuitem * {
 }
 
 /* primary toolbar buttons */
+.primary-toolbar .toolbar .button,
 .primary-toolbar.toolbar .button {
     border-style: none;
     border-radius: 4;
@@ -774,6 +780,7 @@ GtkTreeMenu .menuitem * {
                                                    to (alpha (@toolbar_active_button_color, 0.62)));
 }
 
+.primary-toolbar .toolbar .button:insensitive,
 .primary-toolbar.toolbar .button:insensitive {
     border-style: none;
 
@@ -784,6 +791,7 @@ GtkTreeMenu .menuitem * {
     -GtkWidget-focus-line-width: 0;
 }
 
+.primary-toolbar .toolbar .button:hover,
 .primary-toolbar.toolbar .button:hover {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -792,6 +800,7 @@ GtkTreeMenu .menuitem * {
 			             to (alpha (@theme_base_color, 0.0)));
 }
 
+.primary-toolbar .toolbar .button:active,
 .primary-toolbar.toolbar .button:active {
     border-style: solid;
     -adwaita-border-gradient: -gtk-gradient (linear,
@@ -805,10 +814,12 @@ GtkTreeMenu .menuitem * {
 			             to (alpha (shade (@toolbar_gradient_base, 0.85), 0.0)));
 }
 
+.primary-toolbar .toolbar .button *:active,
 .primary-toolbar.toolbar .button *:active {
     color: @theme_fg_color;
 }
 
+.primary-toolbar .toolbar .button:active:hover,
 .primary-toolbar.toolbar .button:active:hover {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -816,10 +827,12 @@ GtkTreeMenu .menuitem * {
 			             to (alpha (shade (@toolbar_gradient_base, 1.14), 0.0)));
 }
 
+.primary-toolbar .toolbar .button *:active:hover,
 .primary-toolbar.toolbar .button *:active:hover {
     color: @theme_base_color;
 }
 
+.primary-toolbar .toolbar .button:active:insensitive,
 .primary-toolbar.toolbar .button:active:insensitive {
     border-color: @insensitive_border_color;
     -adwaita-border-gradient: none;
@@ -827,6 +840,7 @@ GtkTreeMenu .menuitem * {
     background-image: none;
 }
 
+.primary-toolbar .toolbar GtkSeparatorToolItem,
 .primary-toolbar.toolbar GtkSeparatorToolItem {
     -GtkWidget-wide-separators: 1;
     -GtkWidget-separator-width: 1;
@@ -838,6 +852,7 @@ GtkTreeMenu .menuitem * {
 }
 
 /* primary toolbar raised buttons */
+.primary-toolbar .toolbar .raised .button,
 .primary-toolbar.toolbar .raised .button {
     border-width: 1;
     border-style: solid;
@@ -850,10 +865,12 @@ GtkTreeMenu .menuitem * {
     -GtkWidget-focus-line-width: 2;
 }
 
+.primary-toolbar .toolbar .raised .button:insensitive,
 .primary-toolbar.toolbar .raised .button:insensitive {
     background-image: none;
 }
 
+.primary-toolbar .toolbar .raised .button:hover,
 .primary-toolbar.toolbar .raised .button:hover {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -861,6 +878,8 @@ GtkTreeMenu .menuitem * {
 				     to (@button_hover_gradient_color_b));
 }
 
+.primary-toolbar .toolbar .raised .button:active,
+.primary-toolbar .toolbar .raised .button:hover:active,
 .primary-toolbar.toolbar .raised .button:hover:active,
 .primary-toolbar.toolbar .raised .button:active {
     background-image: -gtk-gradient (linear,
@@ -874,12 +893,14 @@ GtkTreeMenu .menuitem * {
     border-style: solid;
 }
 
+.primary-toolbar .toolbar .raised .button:insensitive:active,
 .primary-toolbar.toolbar .raised .button:insensitive:active {
     border-style: solid;
     border-width: 1;
 }
 
 /* progressbars on primary toolbar entries are special */
+.primary-toolbar .toolbar .entry.progressbar,
 .primary-toolbar.toolbar .entry.progressbar {
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
