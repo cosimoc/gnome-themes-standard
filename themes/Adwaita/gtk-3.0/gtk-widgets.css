@@ -53,15 +53,17 @@
     -adwaita-inset-bottom: none;
 }
 
-GtkWindow {
-    /* Style */
-    background-color: @theme_bg_color;
-    color: @theme_fg_color;
-}
-
 /***************
  * Base States *
  ***************/
+GtkWindow {
+    color: @theme_fg_color;
+}
+
+* {
+    background-color: @theme_bg_color;
+}
+
 *:hover {
     background-color: shade (@theme_bg_color, 1.02);
     color: @theme_fg_color;
