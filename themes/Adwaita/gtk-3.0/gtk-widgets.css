@@ -488,7 +488,7 @@ GtkComboBox {
     -GtkWidget-focus-line-width: 0;
 
     -GtkComboBox-arrow-scaling: 0.5;
-    -GtkComboBox-shadow-type: out;
+    -GtkComboBox-shadow-type: none;
 }
 
 GtkComboBox .button {
