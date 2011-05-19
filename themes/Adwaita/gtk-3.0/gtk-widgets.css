@@ -363,7 +363,9 @@ GtkScrolledWindow.frame {
     border-style: solid;
     border-color: darker (@theme_bg_color);
     border-width: 1;
-    border-radius: 3;
+    border-radius: 2;
+
+    padding: 0;
 }
 
 /***********
