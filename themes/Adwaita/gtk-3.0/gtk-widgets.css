@@ -608,7 +608,7 @@ GtkTreeMenu .menuitem {
 
     border-style: solid;
     border-width: 1 0;
-    border-color: @progressbar_border;
+    border-color: @menu_combobox_border;
 }
 
 GtkTreeMenu .menuitem * {
