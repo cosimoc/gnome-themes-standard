@@ -929,7 +929,7 @@ GtkTreeMenu .menuitem * {
 
 .inline-toolbar.toolbar {
     border-width: 1;
-    border-radius: 3;
+    border-radius: 0;
     border-style: solid;
 
     padding: 4;
@@ -945,6 +945,10 @@ GtkTreeMenu .menuitem * {
 				     to (shade (@theme_bg_color, 0.83)));
 }
 
+.inline-toolbar.toolbar:nth-child(last) {
+    border-width: 0 1 1 1;
+    border-radius: 0 0 3 3;
+}
 
 /***********
  * Sidebar *
