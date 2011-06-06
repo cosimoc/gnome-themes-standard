@@ -906,6 +906,19 @@ GtkTreeMenu .menuitem * {
     border-width: 1;
 }
 
+/* setup shadows */
+.primary-toolbar.toolbar .raised .button,
+.primary-toolbar .toolbar .raised .button {
+    icon-shadow: 0 1 @theme_base_color;
+}
+
+.primary-toolbar.toolbar .raised .button *:active,
+.primary-toolbar .toolbar .raised .button *:active,
+.primary-toolbar.toolbar .raised .button *:insensitive,
+.primary-toolbar .toolbar .raised .button *:insensitive {
+    icon-shadow: none;
+}
+
 /* progressbars on primary toolbar entries are special */
 .primary-toolbar .toolbar .entry.progressbar,
 .primary-toolbar.toolbar .entry.progressbar {
@@ -948,6 +961,16 @@ GtkTreeMenu .menuitem * {
 .inline-toolbar.toolbar:nth-child(last) {
     border-width: 0 1 1 1;
     border-radius: 0 0 3 3;
+}
+
+/* setup shadows */
+.inline-toolbar.toolbar .button {
+    icon-shadow: 0 1 red;
+}
+
+.inline-toolbar.toolbar .button *:active,
+.inline-toolbar.toolbar .button *:insensitive {
+    icon-shadow: none;
 }
 
 /***********
