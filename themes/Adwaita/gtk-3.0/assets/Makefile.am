@@ -10,6 +10,12 @@ assets_DATA = 		\
 	checkbox-unchecked-insensitive-dark.svg \
 	checkbox-mixed.svg \
 	checkbox-mixed-dark.svg \
+	entry-border-focused.svg \
+	entry-border-focused-dark.svg \
+	entry-border-normal.svg \
+	entry-border-normal-dark.svg \
+	primary-toolbar-button-active-border.svg \
+	progressbar-border.svg \
 	radio-selected.svg \
 	radio-selected-dark.svg \
 	radio-selected-insensitive.svg \
@@ -19,6 +25,16 @@ assets_DATA = 		\
 	radio-unselected-insensitive.svg \
 	radio-unselected-insensitive-dark.svg \
 	radio-mixed.svg \
-	radio-mixed-dark.svg
+	radio-mixed-dark.svg \
+	switch-slider-border.svg \
+	switch-slider-active-border.svg \
+	trough-border-horizontal.svg \
+	trough-border-horizontal-dark.svg \
+	trough-border-vertical.svg \
+	trough-border-vertical-dark.svg \
+	trough-active-border-horizontal.svg \
+	trough-active-border-horizontal-dark.svg \
+	trough-active-border-vertical.svg \
+	trough-active-border-vertical-dark.svg
 
 EXTRA_DIST = $(assets_DATA)

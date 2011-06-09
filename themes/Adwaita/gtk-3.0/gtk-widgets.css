@@ -46,11 +46,6 @@
     -adwaita-focus-fill-color: none;
     -adwaita-focus-border-gradient: none;
     -adwaita-focus-border-dashes: 1;
-
-    -adwaita-inset-left: none;
-    -adwaita-inset-right: none;
-    -adwaita-inset-top: none;
-    -adwaita-inset-bottom: none;
 }
 
 /***************
@@ -132,29 +127,18 @@ GtkStatusbar {
 
     padding: 3;
 
-    border-radius: 2;
+    border-style: none;
     border-width: 1;
-    border-style: solid;
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, left bottom,
-                                             from (shade (@internal_element_color, 1.14)),
-                                             to (shade (@internal_element_color, 1.37)));
+    border-radius: 2;
 
-    -adwaita-inset-top: alpha (@switch_slider_color, 0.50);
-}
-
-.entry:focused {
-    border-color: @focused_entry_border;
-    -adwaita-border-gradient: none;
-
-    -adwaita-inset-top: @focused_entry_inset;
+    /* border-image defined in the -assets variants */
 }
 
 .entry:insensitive {
     background-color: @insensitive_bg_color;
-    -adwaita-border-gradient: none;
 
-    -adwaita-inset-top: none;
+    border-image: none;
+    border-style: solid;
 }
 
 .entry.progressbar {
@@ -162,8 +146,8 @@ GtkStatusbar {
     color: @theme_selected_fg_color;
 
     border-width: 1;
-    border-radius: 1;
-    border-color: @progressbar_border;
+    border-radius: 2;
+    /* border-image defined in -assets variant */
 
     -adwaita-progressbar-pattern: none;
 }
@@ -173,23 +157,24 @@ GtkStatusbar {
  *****************/
 .spinbutton {
     padding: 3 2;
-
-    -adwaita-inset-top: none;
-}
-
-.spinbutton:focused {
-    -adwaita-inset-top: none;
 }
 
 .spinbutton.button,
 .spinbutton.button:prelight,
-.spinbutton.button:active {
+.spinbutton.button:active,
+.spinbutton.button:focused,
+.spinbutton.button:insensitive {
     color: @internal_element_color;
 
     background-image: none;
-    background-color: @theme_base_color;
+    background-color: alpha(@theme_base_color, 0.0);
 
     border-style: none;
+    border-image: none;
+}
+
+.spinbutton.button:insensitive {
+    color: @insensitive_border_color;
 }
 
 /****************
@@ -208,11 +193,10 @@ GtkStatusbar {
                                      to (@progressbar_background_b));
 
     border-radius: 3;
-    border-style: solid;
     border-width: 1;
-    border-color: @progressbar_border;
+    border-style: none;
+    /* border-image defined in the -assets variant */
 
-    -adwaita-inset-top: alpha (@theme_base_color, 0.20);
     -adwaita-progressbar-pattern: -gtk-gradient (linear,
                                                  left top, right bottom,
                                                  from (alpha (@progressbar_pattern, 0.00)),
@@ -309,42 +293,29 @@ GtkScale.scale-has-marks-above.slider.vertical {
 GtkScale.trough {
     border-width: 1;
     border-radius: 2;
-    border-style: solid;
+    border-style: none;
 
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, left bottom,
-                                             from (@scale_border_a),
-                                             to (@scale_border_b));
     background-color: @scale_fill;
-}
 
-GtkScale.trough.horizontal {
-    -adwaita-inset-bottom: alpha (@theme_base_color, 0.50);
-}
-
-GtkScale.trough.vertical {
-    -adwaita-inset-right: alpha (@theme_base_color, 0.50);
+    /* border-image defined in the -assets variants */
 }
 
 GtkScale.trough:insensitive {
     background-color: @insensitive_bg_color;
     background-image: none;
 
-    -adwaita-border-gradient: none;
-    -adwaita-inset-bottom: none;
+    border-image: none;
+    border-style: solid;
 }
 
 GtkScale.progressbar {
     background-color: @scale_progress_fill;
 
     border-width: 1;
-    border-radius: 3;
-    border-style: solid;
+    border-radius: 2;
+    border-style: none;
+    /* border-image defined in the -assets variants */
 
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, left bottom,
-                                             from (@scale_progress_border_a),
-                                             to (@scale_progress_border_b));
     -adwaita-progressbar-pattern: none;
 }
 
@@ -748,11 +719,11 @@ GtkTreeMenu .menuitem * {
 
     border-width: 1 0 1 0;
     border-radius: 0;
-    border-style: solid;
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, left bottom,
-                                             from (shade (@theme_bg_color, 0.56)),
-                                             to (shade (@theme_bg_color, 0.83)));
+    border-style: none;
+    border-image: -gtk-gradient (linear,
+                                 left top, left bottom,
+                                 from (shade (@theme_bg_color, 0.56)),
+                                 to (shade (@theme_bg_color, 0.83))) 1 stretch;
 
     -GtkWidget-window-dragging: true;
     -GtkToolbar-button-relief: normal;
@@ -763,7 +734,8 @@ GtkTreeMenu .menuitem * {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.97);
 
-    -adwaita-border-gradient: none;
+    border-image: none;
+    border-style: solid;
     border-color: shade (@theme_bg_color, 0.91);
 }
 
@@ -809,11 +781,9 @@ GtkTreeMenu .menuitem * {
 
 .primary-toolbar .toolbar .button:active,
 .primary-toolbar.toolbar .button:active {
-    border-style: solid;
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, left bottom,
-                                             from (shade (@toolbar_active_button_color, 0.8)),
-                                             to (shade (@toolbar_active_button_color, 1.4)));
+    border-style: none;
+    border-width: 1;
+    /* border-image defined in the -assets variant */
 
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -842,7 +812,9 @@ GtkTreeMenu .menuitem * {
 .primary-toolbar .toolbar .button:active:insensitive,
 .primary-toolbar.toolbar .button:active:insensitive {
     border-color: @insensitive_border_color;
-    -adwaita-border-gradient: none;
+
+    border-image: none;
+    border-style: solid;
 
     background-image: none;
 }
@@ -855,7 +827,6 @@ GtkTreeMenu .menuitem * {
     border-style: solid;
     border-width: 1;
     border-color: shade (@theme_bg_color, 0.56);
-    -adwaita-border-gradient: none;
 }
 
 /* primary toolbar raised buttons */
@@ -1018,16 +989,16 @@ GtkSwitch {
 
 GtkSwitch.trough {
     color: shade (@internal_element_color, 0.60);
+
     border-radius: 1;
     border-width: 1;
-    border-style: solid;
-    border-color: shade (@frame_color, 1.22);
+    border-style: none;
+    /* border-image defined in the -assets variant */
+
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@trough_bg_color_a),
                                      to (@trough_bg_color_b));
-
-    -adwaita-inset-bottom: alpha (@theme_base_color, 0.24);
 }
 
 GtkSwitch.trough:active {
@@ -1036,36 +1007,30 @@ GtkSwitch.trough:active {
                                      left top, left bottom,
                                      from (@active_switch_bg_color_a),
                                      to (@active_switch_bg_color_b));
-
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, left bottom,
-                                             from (shade (@theme_selected_bg_color, 0.70)),
-                                             to (shade (@theme_selected_bg_color, 0.94)));
 }
 
 GtkSwitch.trough:insensitive {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.9);
-    -adwaita-border-gradient: none;
 
-    -adwaita-inset-bottom: none;
+    border-image: none;
+    border-style: solid;
 }
 
 GtkSwitch.slider {
     border-width: 1;
     border-radius: 1;
-    border-color: shade (@frame_color, 1.31);
-    border-style: solid;
+    border-style: none;
+    /* border-image defined in -assets variant */
+
     padding: 2;
+
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@theme_base_color),
                                      to (@switch_slider_color));
 
     -adwaita-switch-grip-color: shade (@switch_slider_color, 0.97);
-
-    -adwaita-inset-top: @switch_slider_color;
-    -adwaita-inset-bottom: alpha (@theme_base_color, 0.50);
 }
 
 GtkSwitch.slider:active {
@@ -1073,12 +1038,10 @@ GtkSwitch.slider:active {
 }
 
 GtkSwitch.slider:insensitive {
-    border-style: none;
+    border-image: none;
+
     background-image: none;
     background-color: @insensitive_bg_color;
-
-    -adwaita-inset-top: none;
-    -adwaita-inset-bottom: none;
 }
 
 GtkViewport,

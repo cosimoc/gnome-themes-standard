@@ -64,3 +64,50 @@
     background-image: url("assets/radio-mixed-dark.svg");
 }
 
+.entry {
+    border-image: url("assets/entry-border-normal-dark.svg") 2 / 2 stretch;
+}
+
+.entry:focused {
+    border-image: url("assets/entry-border-focused-dark.svg") 2 / 2 stretch;
+}
+
+GtkSwitch.trough,
+GtkScale.trough.horizontal {
+    border-image: url("assets/trough-border-horizontal-dark.svg") 2 / 2 stretch;
+}
+
+GtkScale.trough.vertical {
+    border-image: url("assets/trough-border-vertical-dark.svg") 2 / 2 stretch;
+}
+
+GtkSwitch.trough:active,
+GtkScale.progressbar.horizontal {
+    border-image: url("assets/trough-active-border-horizontal-dark.svg") 2 / 2 stretch;
+}
+
+GtkScale.progressbar.vertical {
+    border-image: url("assets/trough-active-border-vertical-dark.svg") 2 / 2 stretch;
+}
+
+/* TODO: need dark versions */
+.primary-toolbar .toolbar .button:active,
+.primary-toolbar.toolbar .button:active {
+    border-image: url("assets/primary-toolbar-button-active-border.svg") 4 / 4 stretch;
+}
+
+GtkSwitch.slider {
+    border-image: url("assets/switch-slider-border.svg") 2 / 2 stretch;
+}
+
+GtkSwitch.slider:active {
+    border-image: url("assets/switch-slider-active-border.svg") 2 / 2 stretch;
+}
+
+.progressbar,
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focused {
+    border-image: url("assets/progressbar-border.svg") 2 / 2 stretch;
+}
