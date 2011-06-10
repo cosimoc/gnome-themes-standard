@@ -330,8 +330,8 @@ GtkScrolledWindow.frame {
 
     border-radius: 2;
     border-width: 1;
-    border-color: @button_border;
-    border-style: solid;
+    border-style: none;
+    /* border-image in -assets variant */
 
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -355,18 +355,19 @@ GtkScrolledWindow.frame {
     				     left top, left bottom,
                                      from (@button_active_gradient_color_a),
 				     to (alpha (@button_active_gradient_color_b, 0.13)));
-    border-color: @highlighted_border;
 }
 
 .button:insensitive {
     background-image: none;
     background-color: @insensitive_bg_color;
     color: @insensitive_fg_color;
+
+    border-image: none;
+    border-style: solid;
 }
 
 .button.default {
     border-width: 2;
-    border-color: shade (@button_border, 1.10);
 }
 
 /*****************
