@@ -90,13 +90,6 @@ GtkScale.progressbar.vertical {
     border-image: url("assets/trough-active-border-vertical.svg") 2 / 2 stretch;
 }
 
-.primary-toolbar .toolbar .button:active,
-.primary-toolbar.toolbar .button:active,
-.primary-toolbar .toolbar .button:active:hover,
-.primary-toolbar.toolbar .button:active:hover {
-    border-image: url("assets/primary-toolbar-button-active-border.svg") 4 / 4 stretch;
-}
-
 GtkSwitch.slider {
     border-image: url("assets/switch-slider-border.svg") 2 / 2 stretch;
 }
@@ -175,4 +168,16 @@ GtkScale.scale-has-marks-below.slider.vertical:insensitive {
 
 .button.default {
     border-image: url("assets/button-default-border.svg") 4 / 4 stretch;
+}
+
+.primary-toolbar .toolbar .button:active,
+.primary-toolbar.toolbar .button:active,
+.primary-toolbar .toolbar .button:active:hover,
+.primary-toolbar.toolbar .button:active:hover {
+    border-image: url("assets/primary-toolbar-button-active-border.svg") 4 / 4 stretch;
+}
+
+.primary-toolbar .toolbar .raised .button,
+.primary-toolbar.toolbar .raised .button {
+    border-image: url("assets/primary-toolbar-raised-button-border.svg") 4 / 4 stretch;
 }

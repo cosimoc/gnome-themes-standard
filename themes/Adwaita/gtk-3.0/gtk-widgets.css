@@ -726,6 +726,7 @@ GtkTreeMenu .menuitem * {
 .primary-toolbar .toolbar .button,
 .primary-toolbar.toolbar .button {
     border-style: none;
+    border-image: none;
     border-radius: 4;
 
     background-image: none;
@@ -816,7 +817,7 @@ GtkTreeMenu .menuitem * {
 .primary-toolbar .toolbar .raised .button,
 .primary-toolbar.toolbar .raised .button {
     border-width: 1;
-    border-style: solid;
+    border-style: none;
 
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -848,10 +849,6 @@ GtkTreeMenu .menuitem * {
                                      from (@button_active_gradient_color_a),
 				     to (alpha (@button_active_gradient_color_b, 0.13)));
     background-color: @theme_base_color;
-
-    border-color: @highlighted_border;
-    border-width: 1;
-    border-style: solid;
 }
 
 .primary-toolbar .toolbar .raised .button:insensitive:active,
@@ -1075,10 +1072,10 @@ column-header .button {
     border-radius: 0;
     border-style: solid;
 
-    -adwaita-border-gradient: -gtk-gradient(linear,
-                                            left top, left bottom,
-                                            from(@button_border),
-                                            to(shade (@button_border, 1.23)));
+    border-image: -gtk-gradient(linear,
+                                left top, left bottom,
+                                from(@button_border),
+                                to(shade (@button_border, 1.23))) 1 stretch;
 }
 
 column-header .button GtkArrow {
