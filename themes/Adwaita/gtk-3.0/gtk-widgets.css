@@ -680,6 +680,19 @@ GtkTreeMenu .menuitem * {
     color: @theme_selected_fg_color;
 }
 
+/****************
+ * Radiobuttons *
+ ****************/
+
+.radio,
+.check {
+    background-color: alpha(@theme_base_color, 0.0);
+    border-width: 0;
+    border-style: none;
+
+    /* background-image defined in -assets variant */
+}
+
 /************
  * Toolbars *
  ************/

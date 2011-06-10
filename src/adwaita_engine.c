@@ -266,12 +266,8 @@ adwaita_engine_render_check (GtkThemingEngine *engine,
       return;
     }
 
-  res = adwaita_render_from_assets_common (engine, cr,
-                                           x, y + 2.0, width, height);
-
-  if (!res)
-    GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_check
-      (engine, cr, x, y, width, height);
+  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
+    (engine, cr, x, y, width, height);
 }
 
 static void
@@ -326,11 +322,7 @@ adwaita_engine_render_option (GtkThemingEngine *engine,
       return;
     }
 
-  res = adwaita_render_from_assets_common (engine, cr,
-                                           x, y + 2.0, width, height);
-
-  if (!res)
-    GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_option
+  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
       (engine, cr, x, y, width, height);
 }
 
