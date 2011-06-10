@@ -36,14 +36,6 @@ enum {
   SIDE_ALL    = 0xF
 };
 
-gboolean
-adwaita_render_from_assets_common (GtkThemingEngine *engine,
-                                   cairo_t *cr,
-                                   gdouble x,
-                                   gdouble y,
-                                   gdouble width,
-                                   gdouble height);
-
 void
 adwaita_trim_allocation_for_scale (GtkThemingEngine *engine,
                                    gdouble *x,
