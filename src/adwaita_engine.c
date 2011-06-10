@@ -717,94 +717,6 @@ render_menubar_active_background (GtkThemingEngine *engine,
 }
 
 static void
-render_inset_lines (GtkThemingEngine *engine,
-                    cairo_t *cr,
-                    gdouble x,
-                    gdouble y,
-                    gdouble width,
-                    gdouble height)
-{
-  GtkStateFlags state;
-  GtkBorder border;
-  GdkRGBA *inset_left, *inset_right, *inset_top, *inset_bottom;
-
-  state = gtk_theming_engine_get_state (engine);
-  gtk_theming_engine_get_border (engine, state, &border);
-
-  gtk_theming_engine_get (engine, state,
-                          "-adwaita-inset-left", &inset_left,
-                          "-adwaita-inset-right", &inset_right,
-                          "-adwaita-inset-top", &inset_top,
-                          "-adwaita-inset-bottom", &inset_bottom,
-                          NULL);
-
-  cairo_save (cr);
-  cairo_set_line_width (cr, 1.0);
-
-  if (inset_left != NULL)
-    {
-      cairo_move_to (cr,
-                     x + border.left + 0.5,
-                     y + border.top + 1.0);
-      cairo_line_to (cr,
-                     x + border.left + 1,
-                     y + height - border.bottom - 1.0);
-
-      gdk_cairo_set_source_rgba (cr, inset_left);
-      cairo_stroke (cr);
-
-      gdk_rgba_free (inset_left);
-    }
-
-  if (inset_right != NULL)
-    {
-      cairo_move_to (cr,
-                     x + width - border.right - 0.5,
-                     y + border.top + 1.0);
-      cairo_line_to (cr,
-                     x + width - border.right - 0.5,
-                     y + height - border.bottom - 1.0);
-
-      gdk_cairo_set_source_rgba (cr, inset_right);
-      cairo_stroke (cr);
-
-      gdk_rgba_free (inset_right);
-    }
-
-  if (inset_top != NULL)
-    {
-      cairo_move_to (cr,
-                     x + border.left + 1.0,
-                     y + border.top + 0.5);
-      cairo_line_to (cr,
-                     x + width - border.right - 1.0,
-                     y + border.top + 0.5);
-
-      gdk_cairo_set_source_rgba (cr, inset_top);
-      cairo_stroke (cr);
-
-      gdk_rgba_free (inset_top);
-    }
-
-  if (inset_bottom != NULL)
-    {
-      cairo_move_to (cr,
-                     x + border.left + 1.0,
-                     y + height - border.bottom - 0.5);
-      cairo_line_to (cr,
-                     x + width - border.right - 1.0,
-                     y + height - border.bottom - 0.5);
-
-      gdk_cairo_set_source_rgba (cr, inset_bottom);
-      cairo_stroke (cr);
-
-      gdk_rgba_free (inset_bottom);
-    }
-
-  cairo_restore (cr);
-}
-
-static void
 adwaita_engine_render_background (GtkThemingEngine *engine,
                                   cairo_t          *cr,
                                   gdouble           x,
@@ -826,8 +738,6 @@ adwaita_engine_render_background (GtkThemingEngine *engine,
   GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
     (engine, cr, x, y,
      width, height);
-
-  render_inset_lines (engine, cr, x, y, width, height);
 }
 
 static void
@@ -934,8 +844,6 @@ adwaita_engine_render_activity (GtkThemingEngine *engine,
     }
 
   cairo_restore (cr);
-
-  render_inset_lines (engine, cr, x, y, width, height);
 }
 
 static void
@@ -1164,8 +1072,6 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
         (engine, cr,
          x, y, width, height,
          orientation);
-
-      render_inset_lines (engine, cr, x, y, width, height);
 
       if (gtk_widget_path_is_type (path, GTK_TYPE_SWITCH))
         render_switch_lines (engine, cr, x, y, width, height, orientation);
@@ -1408,26 +1314,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
                                         g_param_spec_boxed ("switch-grip-color",
                                                             "Switch grip color",
                                                             "Switch grip color",
-                                                            GDK_TYPE_RGBA, 0));
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_boxed ("inset-left",
-                                                            "Inset line left",
-                                                            "Inset line left",
-                                                            GDK_TYPE_RGBA, 0));
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_boxed ("inset-right",
-                                                            "Inset line right",
-                                                            "Inset line right",
-                                                            GDK_TYPE_RGBA, 0));
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_boxed ("inset-top",
-                                                            "Inset line top",
-                                                            "Inset line top",
-                                                            GDK_TYPE_RGBA, 0));
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_boxed ("inset-bottom",
-                                                            "Inset line bottom",
-                                                            "Inset line bottom",
                                                             GDK_TYPE_RGBA, 0));
   gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
                                         g_param_spec_boxed ("progressbar-pattern",
