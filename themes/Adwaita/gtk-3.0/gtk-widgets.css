@@ -910,6 +910,7 @@ GtkTreeMenu .menuitem * {
 .primary-toolbar.toolbar .raised .button,
 .primary-toolbar .toolbar .raised .button {
     icon-shadow: 0 1 @theme_base_color;
+    text-shadow: 0 1 @theme_base_color;
 }
 
 .primary-toolbar.toolbar .raised .button *:active,
@@ -917,6 +918,7 @@ GtkTreeMenu .menuitem * {
 .primary-toolbar.toolbar .raised .button *:insensitive,
 .primary-toolbar .toolbar .raised .button *:insensitive {
     icon-shadow: none;
+    text-shadow: none;
 }
 
 /* progressbars on primary toolbar entries are special */
@@ -965,7 +967,7 @@ GtkTreeMenu .menuitem * {
 
 /* setup shadows */
 .inline-toolbar.toolbar .button {
-    icon-shadow: 0 1 red;
+    icon-shadow: 0 1 @theme_base_color;
 }
 
 .inline-toolbar.toolbar .button *:active,
