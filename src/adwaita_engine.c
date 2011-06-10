@@ -525,77 +525,6 @@ adwaita_engine_render_extension (GtkThemingEngine *engine,
 }
 
 static void
-draw_menu_bar_item_shape (cairo_t *cr,
-                          gdouble radius,
-                          gdouble x,
-                          gdouble y,
-                          gdouble w,
-                          gdouble h,
-                          gboolean for_fill)
-{
-  /* draw a round rectangle without the bottom side */
-  cairo_move_to (cr, x+radius, y);
-  cairo_arc (cr, x+w-radius, y+radius, radius, G_PI * 1.5, G_PI * 2);
-  cairo_line_to (cr, x+w, y+h);
-
-  if (for_fill)
-    cairo_line_to (cr, x, y+h);
-  else
-    cairo_move_to (cr, x, y+h);
-
-  cairo_arc (cr, x+radius, y+radius, radius, G_PI, G_PI * 1.5);
-}
-
-static void
-render_menubar_active_frame (GtkThemingEngine *engine,
-                             cairo_t          *cr,
-                             gdouble           x,
-                             gdouble           y,
-                             gdouble           w,
-                             gdouble           h)
-{
-  GtkStateFlags state;
-  GdkRGBA color;
-  gint radius, border_width;
-  GtkBorder border;
-
-  state = gtk_theming_engine_get_state (engine);
-  gtk_theming_engine_get_border_color (engine, state, &color);
-  gtk_theming_engine_get_border (engine, state, &border);
-  gtk_theming_engine_get (engine, state,
-                          "border-radius", &radius,
-                          NULL);
-
-  border_width = MIN (MIN (border.top, border.bottom),
-                      MIN (border.left, border.right));
-
-  if (border_width > 1)
-    {
-      x += (gdouble) border_width / 2;
-      y += (gdouble) border_width / 2;
-      w -= border_width;
-      h -= border_width;
-    }
-  else if (border_width == 1)
-    {
-      x += 0.5;
-      y += 0.5;
-      w -= 1;
-      h -= 1;
-    }
-
-  cairo_save (cr);
-
-  cairo_set_line_width (cr, border_width);
-  draw_menu_bar_item_shape (cr, radius, x, y, w, h, FALSE);
-
-  gdk_cairo_set_source_rgba (cr, &color);
-  cairo_stroke (cr);
-
-  cairo_restore (cr);
-}
-
-static void
 adwaita_engine_render_frame (GtkThemingEngine *engine,
                              cairo_t          *cr,
                              gdouble           x,
@@ -603,13 +532,6 @@ adwaita_engine_render_frame (GtkThemingEngine *engine,
                              gdouble           width,
                              gdouble           height)
 {
-  if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MENUITEM) &&
-      gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MENUBAR))
-    {
-      render_menubar_active_frame (engine, cr, x, y, width, height);
-      return;
-    }
-
   adwaita_trim_allocation_for_scale (engine,
                                      &x, &y,
                                      &width, &height);
@@ -620,45 +542,6 @@ adwaita_engine_render_frame (GtkThemingEngine *engine,
 }
 
 static void
-render_menubar_active_background (GtkThemingEngine *engine,
-                                  cairo_t          *cr,
-                                  gdouble           x,
-                                  gdouble           y,
-                                  gdouble           w,
-                                  gdouble           h)
-{
-  GtkStateFlags state;
-  GdkRGBA color;
-  gint radius;
-  GtkBorder border;
-
-  state = gtk_theming_engine_get_state (engine);
-  gtk_theming_engine_get_border_color (engine, state, &color);
-  gtk_theming_engine_get_border (engine, state, &border);
-  gtk_theming_engine_get (engine, state,
-                          "border-radius", &radius,
-                          NULL);
-
-  gtk_theming_engine_get_background_color (engine, state, &color);
-
-  /* omit all the border but the bottom line */
-  x += border.left;
-  y += border.top;
-  w -= border.left + border.right;
-  h -= border.top;
-
-  cairo_save (cr);
-  cairo_translate (cr, x, y);
-
-  draw_menu_bar_item_shape (cr, radius, 0, 0, w, h, TRUE);
-
-  gdk_cairo_set_source_rgba (cr, &color);
-  cairo_fill (cr);
-
-  cairo_restore (cr);
-}
-
-static void
 adwaita_engine_render_background (GtkThemingEngine *engine,
                                   cairo_t          *cr,
                                   gdouble           x,
@@ -666,13 +549,6 @@ adwaita_engine_render_background (GtkThemingEngine *engine,
                                   gdouble           width,
                                   gdouble           height)
 {
-  if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MENUITEM) &&
-      gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MENUBAR))
-    {
-      render_menubar_active_background (engine, cr, x, y, width, height);
-      return;
-    }
-
   adwaita_trim_allocation_for_scale (engine,
                                      &x, &y,
                                      &width, &height);
