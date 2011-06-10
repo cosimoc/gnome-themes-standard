@@ -213,41 +213,6 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 }
 
 static void
-render_check_menuitem (GtkThemingEngine *engine,
-                       cairo_t *cr,
-                       gdouble x,
-                       gdouble y,
-                       gdouble width,
-                       gdouble height)
-{
-  GdkRGBA color;
-  GtkStateFlags state;
-
-  state = gtk_theming_engine_get_state (engine);
-  gtk_theming_engine_get_color (engine, state, &color);
-
-  if (!(state & GTK_STATE_FLAG_ACTIVE))
-    return;
-
-  cairo_save (cr);
-
-  cairo_translate (cr, x, y);
-
-  cairo_set_line_width (cr, 2.0);
-  cairo_set_line_cap (cr, CAIRO_LINE_CAP_ROUND);
-  cairo_set_line_join (cr, CAIRO_LINE_JOIN_ROUND);
-
-  cairo_move_to (cr, 0.5 + (width * 0.08), (height * 0.67));
-  cairo_line_to (cr, 0.5 + (width * 0.32), (height * 0.90));
-  cairo_line_to (cr, 0.5 + (width * 0.80), (height * 0.33));
-
-  gdk_cairo_set_source_rgba (cr, &color);
-  cairo_stroke (cr);
-
-  cairo_restore (cr);
-}
-
-static void
 adwaita_engine_render_check (GtkThemingEngine *engine,
                              cairo_t          *cr,
                              gdouble           x,
@@ -255,54 +220,8 @@ adwaita_engine_render_check (GtkThemingEngine *engine,
                              gdouble           width,
                              gdouble           height)
 {
-  gboolean res;
-
-  if (gtk_theming_engine_has_class (engine,
-                                    GTK_STYLE_CLASS_MENUITEM))
-    {
-      render_check_menuitem (engine, cr,
-                             x, y, width, height);
-
-      return;
-    }
-
   GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
     (engine, cr, x, y, width, height);
-}
-
-static void
-render_radio_menuitem (GtkThemingEngine *engine,
-                       cairo_t *cr,
-                       gdouble x,
-                       gdouble y,
-                       gdouble width,
-                       gdouble height)
-{
-  GdkRGBA color;
-  GtkStateFlags state;
-  double radius;
-
-  state = gtk_theming_engine_get_state (engine);
-
-  if (!(state & GTK_STATE_FLAG_ACTIVE))
-    return;
-
-  gtk_theming_engine_get_color (engine, state, &color);
-
-  radius = MAX (height / 2.0, width / 2.0) * 0.58;
-
-  cairo_save (cr);
-
-  cairo_translate (cr, x + width / 2.0, y + height * 0.67);
-  cairo_arc (cr,
-             0, 0,
-             radius,
-             0, 4 * G_PI);
-
-  gdk_cairo_set_source_rgba (cr, &color);
-  cairo_fill (cr);
-
-  cairo_restore (cr);
 }
 
 static void
@@ -313,15 +232,6 @@ adwaita_engine_render_option (GtkThemingEngine *engine,
                               gdouble           width,
                               gdouble           height)
 {
-  gboolean res;
-
-  if (gtk_theming_engine_has_class (engine,
-                                    GTK_STYLE_CLASS_MENUITEM))
-    {
-      render_radio_menuitem (engine, cr, x, y, width, height);
-      return;
-    }
-
   GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
       (engine, cr, x, y, width, height);
 }

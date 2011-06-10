@@ -628,21 +628,25 @@ GtkTreeMenu .menuitem * {
     -GtkWidget-separator-height: 1;
 }
 
-/* menu radio and check items are drawn differently */
+.menuitem.check,
+.menuitem.radio {
+    background-image: none;
+}
+
 .menuitem.check:active {
-    color: @menu_controls_color;
+    background-image: url("assets/checkbox-menuitem-checked.svg");
+}
+
+.menuitem.check:active:prelight {
+    background-image: url("assets/checkbox-menuitem-checked-selected.svg");
 }
 
 .menuitem.radio:active {
-    color: @menu_controls_color;
+    background-image: url("assets/radio-menuitem-checked.svg");
 }
 
-.menuitem.check:prelight {
-    color: @theme_selected_fg_color;
-}
-
-.menuitem.radio:prelight {
-    color: @theme_selected_fg_color;
+.menuitem.radio:active:prelight {
+    background-image: url("assets/radio-menuitem-checked-selected.svg");
 }
 
 /****************

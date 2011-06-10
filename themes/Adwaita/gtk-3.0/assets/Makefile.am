@@ -10,6 +10,8 @@ assets_DATA = 		\
 	checkbox-unchecked-insensitive-dark.svg \
 	checkbox-mixed.svg \
 	checkbox-mixed-dark.svg \
+	checkbox-menuitem-checked.svg \
+	checkbox-menuitem-checked-selected.svg \
 	entry-border-focused.svg \
 	entry-border-focused-dark.svg \
 	entry-border-normal.svg \
@@ -27,6 +29,8 @@ assets_DATA = 		\
 	radio-unselected-insensitive-dark.svg \
 	radio-mixed.svg \
 	radio-mixed-dark.svg \
+	radio-menuitem-checked.svg \
+	radio-menuitem-checked-selected.svg \
 	scale-slider-horizontal.svg \
 	scale-slider-horizontal-dark.svg \
 	scale-slider-horizontal-insensitive.svg \
