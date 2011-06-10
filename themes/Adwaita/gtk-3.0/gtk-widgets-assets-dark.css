@@ -90,12 +90,60 @@ GtkScale.progressbar.vertical {
     border-image: url("assets/trough-active-border-vertical-dark.svg") 2 / 2 stretch;
 }
 
-/* TODO: need dark versions */
-.primary-toolbar .toolbar .button:active,
-.primary-toolbar.toolbar .button:active {
-    border-image: url("assets/primary-toolbar-button-active-border.svg") 4 / 4 stretch;
+GtkScale.slider.horizontal {
+    background-image: url("assets/scale-slider-horizontal-dark.svg");
 }
 
+GtkScale.slider.horizontal:insensitive {
+    background-image: url("assets/scale-slider-horizontal-insensitive-dark.svg");
+}
+
+GtkScale.slider.vertical {
+    background-image: url("assets/scale-slider-vertical-dark.svg");
+}
+
+GtkScale.slider.vertical:insensitive {
+    background-image: url("assets/scale-slider-vertical-insensitive-dark.svg");
+}
+
+GtkScale.scale-has-marks-above.slider.horizontal {
+    background-image: url("assets/scale-slider-marks-above-horizontal-dark.svg");
+}
+
+GtkScale.scale-has-marks-above.slider.horizontal:insensitive {
+    background-image: url("assets/scale-slider-marks-above-horizontal-insensitive-dark.svg");
+}
+
+GtkScale.scale-has-marks-above.slider.vertical {
+    background-image: url("assets/scale-slider-marks-above-vertical-dark.svg");
+}
+
+GtkScale.scale-has-marks-above.slider.vertical:insensitive {
+    background-image: url("assets/scale-slider-marks-above-vertical-insensitive-dark.svg");
+}
+
+GtkScale.scale-has-marks-below.slider.horizontal {
+    background-image: url("assets/scale-slider-marks-below-horizontal-dark.svg");
+}
+
+GtkScale.scale-has-marks-below.slider.horizontal:insensitive {
+    background-image: url("assets/scale-slider-marks-below-horizontal-insensitive-dark.svg");
+}
+
+GtkScale.scale-has-marks-below.slider.vertical {
+    background-image: url("assets/scale-slider-marks-below-vertical-dark.svg");
+}
+
+GtkScale.scale-has-marks-below.slider.vertical:insensitive {
+    background-image: url("assets/scale-slider-marks-below-vertical-insensitive-dark.svg");
+}
+
+.primary-toolbar .toolbar .button:active,
+.primary-toolbar.toolbar .button:active {
+    border-image: url("assets/primary-toolbar-button-active-border-dark.svg") 4 / 4 stretch;
+}
+
+/* TODO: need dark versions */
 GtkSwitch.slider {
     border-image: url("assets/switch-slider-border.svg") 2 / 2 stretch;
 }
@@ -113,50 +161,3 @@ GtkSwitch.slider:active {
     border-image: url("assets/progressbar-border.svg") 2 / 2 stretch;
 }
 
-GtkScale.slider.horizontal {
-    background-image: url("assets/scale-slider-horizontal.svg");
-}
-
-GtkScale.slider.horizontal:insensitive {
-    background-image: url("assets/scale-slider-horizontal-insensitive.svg");
-}
-
-GtkScale.slider.vertical {
-    background-image: url("assets/scale-slider-vertical.svg");
-}
-
-GtkScale.slider.vertical:insensitive {
-    background-image: url("assets/scale-slider-vertical-insensitive.svg");
-}
-
-GtkScale.scale-has-marks-above.slider.horizontal {
-    background-image: url("assets/scale-slider-marks-above-horizontal.svg");
-}
-
-GtkScale.scale-has-marks-above.slider.horizontal:insensitive {
-    background-image: url("assets/scale-slider-marks-above-horizontal-insensitive.svg");
-}
-
-GtkScale.scale-has-marks-above.slider.vertical {
-    background-image: url("assets/scale-slider-marks-above-vertical.svg");
-}
-
-GtkScale.scale-has-marks-above.slider.vertical:insensitive {
-    background-image: url("assets/scale-slider-marks-above-vertical-insensitive.svg");
-}
-
-GtkScale.scale-has-marks-below.slider.horizontal {
-    background-image: url("assets/scale-slider-marks-below-horizontal.svg");
-}
-
-GtkScale.scale-has-marks-below.slider.horizontal:insensitive {
-    background-image: url("assets/scale-slider-marks-below-horizontal-insensitive.svg");
-}
-
-GtkScale.scale-has-marks-below.slider.vertical {
-    background-image: url("assets/scale-slider-marks-below-vertical.svg");
-}
-
-GtkScale.scale-has-marks-below.slider.vertical:insensitive {
-    background-image: url("assets/scale-slider-marks-below-vertical-insensitive.svg");
-}

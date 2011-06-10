@@ -15,6 +15,7 @@ assets_DATA = 		\
 	entry-border-normal.svg \
 	entry-border-normal-dark.svg \
 	primary-toolbar-button-active-border.svg \
+	primary-toolbar-button-active-border-dark.svg \
 	progressbar-border.svg \
 	radio-selected.svg \
 	radio-selected-dark.svg \
@@ -27,17 +28,29 @@ assets_DATA = 		\
 	radio-mixed.svg \
 	radio-mixed-dark.svg \
 	scale-slider-horizontal.svg \
+	scale-slider-horizontal-dark.svg \
 	scale-slider-horizontal-insensitive.svg \
+	scale-slider-horizontal-insensitive-dark.svg \
 	scale-slider-vertical.svg \
+	scale-slider-vertical-dark.svg \
 	scale-slider-vertical-insensitive.svg \
+	scale-slider-vertical-insensitive-dark.svg \
 	scale-slider-marks-above-horizontal.svg \
+	scale-slider-marks-above-horizontal-dark.svg \
 	scale-slider-marks-above-horizontal-insensitive.svg \
+	scale-slider-marks-above-horizontal-insensitive-dark.svg \
 	scale-slider-marks-above-vertical.svg \
+	scale-slider-marks-above-vertical-dark.svg \
 	scale-slider-marks-above-vertical-insensitive.svg \
+	scale-slider-marks-above-vertical-insensitive-dark.svg \
 	scale-slider-marks-below-horizontal.svg \
+	scale-slider-marks-below-horizontal-dark.svg \
 	scale-slider-marks-below-horizontal-insensitive.svg \
+	scale-slider-marks-below-horizontal-insensitive-dark.svg \
 	scale-slider-marks-below-vertical.svg \
+	scale-slider-marks-below-vertical-dark.svg \
 	scale-slider-marks-below-vertical-insensitive.svg \
+	scale-slider-marks-below-vertical-insensitive-dark.svg \
 	switch-slider-border.svg \
 	switch-slider-active-border.svg \
 	trough-border-horizontal.svg \
