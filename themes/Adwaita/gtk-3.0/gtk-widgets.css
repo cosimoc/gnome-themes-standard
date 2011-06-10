@@ -238,56 +238,20 @@ GtkProgressBar.trough,
  ************/
 GtkScale {
     -GtkScale-slider-length: 16;
-    -GtkRange-slider-width: 22;
+    -GtkRange-slider-width: 20;
     -GtkRange-trough-border: 0;
 }
 
-GtkScale.slider {
-    border-width: 1;
-    border-radius: 3;
-
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@theme_base_color),
-                                     to (@switch_slider_color));
-
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, left bottom,
-                                             from (shade (@internal_element_color, 0.90)),
-                                             to (shade (@internal_element_color, 1.35)));
-}
-
+GtkScale.slider,
+GtkScale.slider:hover,
 GtkScale.slider:insensitive {
-    background-image: none;
-    -adwaita-border-gradient: none;
-}
+    border-width: 0;
+    border-radius: 0;
+    border-style: none;
 
-GtkScale.scale-has-marks-below.slider.horizontal {
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, left bottom,
-                                             from (shade (@internal_element_color, 0.90)),
-                                             to (shade (@internal_element_color, 1.35)));
-}
+    background-color: alpha(@theme_base_color, 0.0);
 
-GtkScale.scale-has-marks-below.slider.vertical {
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, right top,
-                                             from (shade (@internal_element_color, 0.90)),
-                                             to (shade (@internal_element_color, 1.35)));
-}
-
-GtkScale.scale-has-marks-above.slider.horizontal {
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left bottom, left top,
-                                             from (shade (@internal_element_color, 0.90)),
-                                             to (shade (@internal_element_color, 1.35)));
-}
-
-GtkScale.scale-has-marks-above.slider.vertical {
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             right top, left top,
-                                             from (shade (@internal_element_color, 0.90)),
-                                             to (shade (@internal_element_color, 1.35)));
+    /* background-image in -assets variant */
 }
 
 GtkScale.trough {
@@ -306,6 +270,7 @@ GtkScale.trough:insensitive {
 
     border-image: none;
     border-style: solid;
+    border-color: @insensitive_border_color;
 }
 
 GtkScale.progressbar {

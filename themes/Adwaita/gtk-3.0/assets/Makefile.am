@@ -26,6 +26,18 @@ assets_DATA = 		\
 	radio-unselected-insensitive-dark.svg \
 	radio-mixed.svg \
 	radio-mixed-dark.svg \
+	scale-slider-horizontal.svg \
+	scale-slider-horizontal-insensitive.svg \
+	scale-slider-vertical.svg \
+	scale-slider-vertical-insensitive.svg \
+	scale-slider-marks-above-horizontal.svg \
+	scale-slider-marks-above-horizontal-insensitive.svg \
+	scale-slider-marks-above-vertical.svg \
+	scale-slider-marks-above-vertical-insensitive.svg \
+	scale-slider-marks-below-horizontal.svg \
+	scale-slider-marks-below-horizontal-insensitive.svg \
+	scale-slider-marks-below-vertical.svg \
+	scale-slider-marks-below-vertical-insensitive.svg \
 	switch-slider-border.svg \
 	switch-slider-active-border.svg \
 	trough-border-horizontal.svg \

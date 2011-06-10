@@ -940,86 +940,15 @@ adwaita_engine_render_slider (GtkThemingEngine *engine,
 {
   const GtkWidgetPath *path;
 
+  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_slider
+    (engine, cr,
+     x, y, width, height,
+     orientation);
+
   path = gtk_theming_engine_get_path (engine);
-  cairo_save (cr);
 
-  if (gtk_widget_path_is_type (path, GTK_TYPE_SCALE))
-    {
-      cairo_pattern_t *pattern, *border_pattern;
-      GtkStateFlags state;
-      GdkRGBA color;
-      gboolean marks_above = FALSE, marks_below = FALSE;
-
-      if (gtk_theming_engine_has_class
-          (engine, GTK_STYLE_CLASS_SCALE_HAS_MARKS_ABOVE))
-        marks_above = TRUE;
-      else if (gtk_theming_engine_has_class
-               (engine, GTK_STYLE_CLASS_SCALE_HAS_MARKS_BELOW))
-        marks_below = TRUE;
-
-      cairo_translate (cr, x, y);
-
-      if ((marks_above && marks_below) ||
-          (!marks_above && !marks_below))
-        draw_round_slider (cr, width, height);
-      else
-        draw_mark_slider (cr, width, height, marks_below, orientation);
-
-      state = gtk_theming_engine_get_state (engine);
-      cairo_set_line_width (cr, 1.0);
-
-      gtk_theming_engine_get (engine, state,
-                              "background-image", &pattern,
-                              NULL);
-
-      if (pattern != NULL)
-        {
-          style_pattern_set_matrix (pattern, width, height, FALSE);
-          cairo_set_source (cr, pattern);
-        }
-      else
-        {
-          gtk_theming_engine_get_background_color (engine, state, &color);
-          gdk_cairo_set_source_rgba (cr, &color);
-        }
-
-      cairo_fill_preserve (cr);
-
-      gtk_theming_engine_get (engine, state,
-                              "-adwaita-border-gradient", &border_pattern,
-                              NULL);
-
-      if (border_pattern != NULL)
-        {
-          style_pattern_set_matrix (border_pattern, width, height, FALSE);
-          cairo_set_source (cr, border_pattern);
-        }
-      else
-        {
-          gtk_theming_engine_get_border_color (engine, state, &color);
-          gdk_cairo_set_source_rgba (cr, &color);
-        }
-
-      cairo_stroke (cr);
-
-      if (pattern != NULL)
-        cairo_pattern_destroy (pattern);
-
-      if (border_pattern != NULL)
-        cairo_pattern_destroy (border_pattern);
-    }
-  else
-    {
-      GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_slider
-        (engine, cr,
-         x, y, width, height,
-         orientation);
-
-      if (gtk_widget_path_is_type (path, GTK_TYPE_SWITCH))
-        render_switch_lines (engine, cr, x, y, width, height, orientation);
-    }
-
-  cairo_restore (cr);
+  if (gtk_widget_path_is_type (path, GTK_TYPE_SWITCH))
+    render_switch_lines (engine, cr, x, y, width, height, orientation);
 }
 
 static void
