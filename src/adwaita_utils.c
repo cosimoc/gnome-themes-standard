@@ -147,32 +147,6 @@ _cairo_round_rectangle_sides (cairo_t          *cr,
     }
 }
 
-void
-_cairo_uneven_frame (cairo_t          *cr,
-                     gdouble           radius,
-                     gdouble           x,
-                     gdouble           y,
-                     gdouble           width,
-                     gdouble           height,
-                     GtkBorder        *border,
-                     GtkJunctionSides  junction)
-{
-  cairo_set_fill_rule (cr, CAIRO_FILL_RULE_EVEN_ODD);
-  cairo_set_line_width (cr, 1);
-
-  _cairo_round_rectangle_sides (cr, (gdouble) radius,
-                                x, y,
-                                width, height,
-                                SIDE_ALL, junction);
-
-  _cairo_round_rectangle_sides (cr, (gdouble) radius,
-                                x + border->left,
-                                y + border->top,
-                                width - border->left - border->right,
-                                height - border->top - border->bottom,
-                                SIDE_ALL, junction);
-}
-
 /* Set the appropriate matrix for
  * patterns coming from the style context
  */

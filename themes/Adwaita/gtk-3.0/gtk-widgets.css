@@ -1067,7 +1067,6 @@ GtkIconView.view.cell:selected:focused {
     background-color: @theme_base_color;
     color: @theme_fg_color;
     border-radius: 0;
-    border-width: 3;
 }
 
 GtkTreeView {

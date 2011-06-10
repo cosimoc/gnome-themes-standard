@@ -58,16 +58,6 @@ style_pattern_set_matrix (cairo_pattern_t *pattern,
 			  gboolean         repeat);
 
 void
-_cairo_uneven_frame (cairo_t          *cr,
-                     gdouble           radius,
-                     gdouble           x,
-                     gdouble           y,
-                     gdouble           width,
-                     gdouble           height,
-                     GtkBorder        *border,
-                     GtkJunctionSides  junction);
-
-void
 _cairo_round_rectangle_sides (cairo_t          *cr,
                               gdouble           radius,
                               gdouble           x,
