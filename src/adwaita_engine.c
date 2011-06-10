@@ -604,59 +604,6 @@ render_menubar_active_frame (GtkThemingEngine *engine,
 }
 
 static void
-render_frame_default (GtkThemingEngine *engine,
-                      cairo_t *cr,
-                      gdouble x,
-                      gdouble y,
-                      gdouble width,
-                      gdouble height)
-{
-  cairo_pattern_t *pattern = NULL;
-  GtkStateFlags state;
-  GtkBorder border;
-  gint border_radius;
-  GtkBorderStyle border_style;
-  GtkJunctionSides junctions;
-
-  state = gtk_theming_engine_get_state (engine);
-
-  gtk_theming_engine_get (engine, state,
-                          "-adwaita-border-gradient", &pattern,
-                          "border-style", &border_style,
-                          NULL);
-
-  if (pattern == NULL || border_style == GTK_BORDER_STYLE_NONE)
-    {
-      GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame
-        (engine, cr,
-         x, y, width, height);
-
-      return;
-    }
-
-  cairo_save (cr);
-
-  gtk_theming_engine_get (engine, state,
-                          "border-radius", &border_radius,
-                          NULL);
-  gtk_theming_engine_get_border (engine, state, &border);
-  junctions = gtk_theming_engine_get_junction_sides (engine);
-
-  style_pattern_set_matrix (pattern, width, height, TRUE);
-
-  _cairo_uneven_frame (cr, border_radius,
-                       x, y, width, height,
-                       &border, junctions);
-  cairo_set_source (cr, pattern);
-
-  cairo_fill (cr);
-
-  cairo_restore (cr);
-
-  cairo_pattern_destroy (pattern);
-}
-
-static void
 adwaita_engine_render_frame (GtkThemingEngine *engine,
                              cairo_t          *cr,
                              gdouble           x,
@@ -674,7 +621,10 @@ adwaita_engine_render_frame (GtkThemingEngine *engine,
   adwaita_trim_allocation_for_scale (engine,
                                      &x, &y,
                                      &width, &height);
-  render_frame_default (engine, cr, x, y, width, height);
+
+  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame
+    (engine, cr, x, y,
+     width, height);
 }
 
 static void
