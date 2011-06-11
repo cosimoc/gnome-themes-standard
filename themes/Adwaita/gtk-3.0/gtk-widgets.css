@@ -472,6 +472,8 @@ GtkComboBox .button *:prelight {
     border-color: @button_border;
     border-radius: 3;
     border-width: 1;
+
+    border-image: none;
 }
 
 .scrollbar.slider:prelight {
