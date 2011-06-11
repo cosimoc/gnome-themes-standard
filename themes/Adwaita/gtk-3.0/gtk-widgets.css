@@ -38,9 +38,9 @@
 
     -GtkWidget-focus-padding: 2;
     -GtkWidget-focus-line-width: 1;
-    -adwaita-focus-border-color: alpha (@theme_text_color, 0.4);
+    -adwaita-focus-border-color: alpha(@theme_text_color, 0.4);
     -adwaita-focus-border-radius: 2;
-    -adwaita-focus-fill-color: none;
+    -adwaita-focus-fill-color: alpha(@theme_base_color, 0.0);
     -adwaita-focus-border-gradient: none;
     -adwaita-focus-border-dashes: 1;
 }
