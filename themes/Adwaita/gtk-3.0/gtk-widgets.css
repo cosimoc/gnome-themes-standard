@@ -416,6 +416,7 @@ GtkScrolledWindow.frame {
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
     border-style: none;
+    border-image: none;
     background-color: alpha (@theme_bg_color, 0.0);
     background-image: none;
 }
