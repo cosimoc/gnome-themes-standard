@@ -633,8 +633,11 @@ GtkTreeMenu .menuitem * {
 }
 
 .menuitem.check,
-.menuitem.radio {
+.menuitem.radio,
+.menuitem.check:insensitive,
+.menuitem.radio:insensitive {
     background-image: none;
+    background-color: alpha(@theme_base_color, 0.0);
 }
 
 .menuitem.check:active {
