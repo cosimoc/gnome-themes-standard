@@ -36,9 +36,6 @@
 
     -WnckTasklist-fade-overlay-rect: 0;
 
-    -GtkEntry-inner-border: 2;
-    -GtkEntry-progress-border: 0;
-
     -GtkWidget-focus-padding: 2;
     -GtkWidget-focus-line-width: 1;
     -adwaita-focus-border-color: alpha (@theme_text_color, 0.4);
@@ -125,11 +122,16 @@ GtkStatusbar {
 .entry {
     background-color: @theme_base_color;
 
-    padding: 3;
-
     border-style: none;
     border-width: 1;
     border-radius: 2;
+
+    /* we use inner-border instead of padding because padding
+     * also applies to the progressbar.
+     */
+    padding: 0;
+    -GtkEntry-inner-border: 5;
+    -GtkEntry-progress-border: 0;
 
     /* border-image defined in the -assets variants */
 }
@@ -882,9 +884,11 @@ GtkTreeMenu .menuitem * {
                                      from (@trough_bg_color_a),
                                      to (@trough_bg_color_b));
 
-    border-width: 0;
+    border-width: 1;
     border-radius: 2;
-    border-color: shade (@inactive_frame_color, 0.925);
+    border-style: solid;
+    border-color: shade(@internal_element_color, 1.10);
+    border-image: none;
 
     color: @theme_text_color;
 
