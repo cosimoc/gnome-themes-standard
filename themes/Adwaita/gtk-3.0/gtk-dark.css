@@ -44,8 +44,8 @@
 @define-color highlighted_border @button_border;
 @define-color internal_element_color #77757a;
 
-@define-color progressbar_background_a alpha (@theme_fg_color, 0.70);
-@define-color progressbar_background_b alpha (@theme_fg_color, 0.45);
+@define-color progressbar_background_a shade(#e06a00, 1.30);
+@define-color progressbar_background_b shade(#e06a00, 1.10);
 @define-color progressbar_border alpha (@theme_fg_color, 0.60);
 @define-color progressbar_pattern #000000;
 

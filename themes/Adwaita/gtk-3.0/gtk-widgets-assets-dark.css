@@ -165,6 +165,15 @@ GtkScale.scale-has-marks-below.slider.vertical:insensitive {
     border-image: url("assets/primary-toolbar-raised-button-border-dark.svg") 4 / 4 stretch;
 }
 
+.progressbar,
+.entry.progressbar,
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focused {
+    border-image: url("assets/progressbar-border-dark.svg") 3 / 3 stretch;
+}
+
 /* TODO: need dark versions */
 GtkSwitch.slider {
     border-image: url("assets/switch-slider-border.svg") 2 / 2 stretch;
@@ -172,13 +181,4 @@ GtkSwitch.slider {
 
 GtkSwitch.slider:active {
     border-image: url("assets/switch-slider-active-border.svg") 2 / 2 stretch;
-}
-
-.progressbar,
-.entry.progressbar,
-.progressbar row,
-.progressbar row:hover,
-.progressbar row:selected,
-.progressbar row:selected:focused {
-    border-image: url("assets/progressbar-border.svg") 2 / 2 stretch;
 }

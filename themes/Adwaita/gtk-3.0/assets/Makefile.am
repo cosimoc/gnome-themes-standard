@@ -27,6 +27,7 @@ assets_DATA = 		\
 	primary-toolbar-raised-button-border.svg \
 	primary-toolbar-raised-button-border-dark.svg \
 	progressbar-border.svg \
+	progressbar-border-dark.svg \
 	radio-selected.svg \
 	radio-selected-dark.svg \
 	radio-selected-insensitive.svg \
