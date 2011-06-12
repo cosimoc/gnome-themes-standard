@@ -627,6 +627,8 @@ GtkTreeMenu .menuitem * {
 
 .menuitem.separator {
     border-color: @inactive_frame_color;
+    border-style: solid;
+    border-width: 1;
 
     -GtkSeparatorMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
