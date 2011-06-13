@@ -510,6 +510,7 @@ GtkComboBox .button *:prelight {
 .scrollbar.button:insensitive {
     color: lighter (@internal_element_color);
     background-color: @theme_base_color;
+    border-color: @button_border;
 }
 
 .scrollbar.slider:insensitive {
