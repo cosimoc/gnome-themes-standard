@@ -129,7 +129,7 @@ GtkStatusbar {
     /* we use inner-border instead of padding because padding
      * also applies to the progressbar.
      */
-    padding: 0;
+    padding: 0 2;
     -GtkEntry-inner-border: 5;
     -GtkEntry-progress-border: 0;
 
@@ -157,10 +157,6 @@ GtkStatusbar {
 /*****************
  * GtkSpinButton *
  *****************/
-.spinbutton {
-    padding: 3 2;
-}
-
 .spinbutton.button,
 .spinbutton.button:prelight,
 .spinbutton.button:active,
