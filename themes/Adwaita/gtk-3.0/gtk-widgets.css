@@ -629,7 +629,7 @@ GtkTreeMenu .menuitem * {
 }
 
 .menuitem.separator {
-    border-color: @inactive_frame_color;
+    border-color: mix (@menu_fg_color, @menu_bg_color, 0.8);
     border-style: solid;
     border-width: 1;
 
