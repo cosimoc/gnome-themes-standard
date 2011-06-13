@@ -1,3 +1,16 @@
+3.1.2
+=====
+
+** GTK+ 3.1.6 or newer is required to use this theme **
+
+Use SVG assets to render border image gradients
+Use SVG assets to render scale sliders
+Remove custom inset style properties
+Render shadows for toolbar buttons
+Improve GtkAssistant theming
+Improve GtkTreeView column headers
+Improve GtkProgressbar, sliders and GtkEntry for the dark theme
+
 3.1.1
 =====
 
