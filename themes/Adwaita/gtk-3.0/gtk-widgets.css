@@ -129,7 +129,7 @@ GtkStatusbar {
     /* we use inner-border instead of padding because padding
      * also applies to the progressbar.
      */
-    padding: 0 2;
+    padding: 0;
     -GtkEntry-inner-border: 5;
     -GtkEntry-progress-border: 0;
 
@@ -148,7 +148,7 @@ GtkStatusbar {
     color: @theme_selected_fg_color;
 
     border-width: 1;
-    border-radius: 2;
+    border-radius: 3;
     /* border-image defined in -assets variant */
 
     -adwaita-progressbar-pattern: none;
