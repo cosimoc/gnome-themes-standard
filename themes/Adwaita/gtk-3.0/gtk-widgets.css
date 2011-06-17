@@ -175,6 +175,10 @@ GtkStatusbar {
     color: @insensitive_border_color;
 }
 
+.spinbutton.entry {
+    padding: 0 3 0 1;
+}
+
 /****************
  * Progress bar *
  ****************/
