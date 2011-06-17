@@ -453,6 +453,12 @@ GtkComboBox {
     -GtkComboBox-shadow-type: none;
 }
 
+GtkComboBox .entry {
+    border-width: 1 0 1 1;
+    border-radius: 3 0 0 3;
+    border-image-width: 2 0 2 2;
+}
+
 GtkComboBox .button {
     padding: 2 1;
     color: @internal_element_color;
