@@ -203,10 +203,26 @@ GtkStatusbar {
                                                  to (alpha (@progressbar_pattern, 0.10)));
 }
 
+.progressbar.vertical {
+    background-image: -gtk-gradient (linear,
+                                     left top, right top,
+                                     from (@progressbar_background_a),
+                                     to (@progressbar_background_b));
+
+    -adwaita-progressbar-pattern: -gtk-gradient (linear,
+                                                 left bottom, right top,
+                                                 from (alpha (@progressbar_pattern, 0.00)),
+                                                 color-stop (0.49, alpha (@progressbar_pattern, 0.00)),
+                                                 color-stop (0.50, alpha (@progressbar_pattern, 0.10)),
+                                                 to (alpha (@progressbar_pattern, 0.10)));
+}
+
 /* through component */
 GtkProgressBar,
 .trough row {
     padding: 0;
+    -GtkProgressBar-xspacing: 22;
+    -GtkProgressBar-yspacing: 22;
 }
 
 GtkProgressBar.trough,

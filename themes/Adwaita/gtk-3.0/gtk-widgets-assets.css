@@ -72,6 +72,7 @@
     border-image: url("assets/entry-border-focused.svg") 2 / 2 stretch;
 }
 
+GtkScale.trough,
 GtkSwitch.trough,
 GtkScale.trough.horizontal {
     border-image: url("assets/trough-border-horizontal.svg") 2 / 2 stretch;
@@ -107,10 +108,16 @@ GtkSwitch.slider:active {
     border-image: url("assets/progressbar-border.svg") 3 / 3 stretch;
 }
 
+.progressbar.vertical {
+    border-image: url("assets/progressbar-border-vertical.svg") 3 / 3 stretch;
+}
+
+GtkScale.slider,
 GtkScale.slider.horizontal {
     background-image: url("assets/scale-slider-horizontal.svg");
 }
 
+GtkScale.slider:insensitive,
 GtkScale.slider.horizontal:insensitive {
     background-image: url("assets/scale-slider-horizontal-insensitive.svg");
 }
