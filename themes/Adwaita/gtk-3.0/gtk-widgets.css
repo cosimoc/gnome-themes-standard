@@ -704,8 +704,8 @@ GtkTreeMenu .menuitem * {
 .toolbar {
     border-style: solid;
     border-color: darker (@theme_bg_color);
-    border-width: 1;
-    padding: 1;
+    border-width: 1 0 1 0;
+    padding: 4;
 }
 
 .toolbar .button {
@@ -732,8 +732,6 @@ GtkTreeMenu .menuitem * {
 				     color-stop (0.16, @toolbar_gradient_step1),
 				     color-stop (0.90, @toolbar_gradient_step2),
 				     to (@toolbar_gradient_final));
-
-    padding: 6;
 
     border-width: 1 0 1 0;
     border-radius: 0;
@@ -853,6 +851,7 @@ GtkTreeMenu .menuitem * {
 .primary-toolbar.toolbar .raised .button {
     border-width: 1;
     border-style: none;
+    padding: 3;
 
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -955,6 +954,7 @@ GtkTreeMenu .menuitem * {
 
 /* setup shadows */
 .inline-toolbar.toolbar .button {
+    padding: 1;
     icon-shadow: 0 1 @theme_base_color;
 }
 
