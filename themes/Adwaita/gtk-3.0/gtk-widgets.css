@@ -124,7 +124,7 @@ GtkStatusbar {
 
     border-style: none;
     border-width: 1;
-    border-radius: 2;
+    border-radius: 3;
 
     /* we use inner-border instead of padding because padding
      * also applies to the progressbar.
@@ -342,7 +342,7 @@ GtkScrolledWindow.frame {
     -GtkButton-default-border: 0;
     -GtkButton-inner-border: 0;
 
-    border-radius: 2;
+    border-radius: 3;
     border-width: 1;
     border-style: none;
     /* border-image in -assets variant */
