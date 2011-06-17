@@ -424,8 +424,10 @@ GtkScrolledWindow.frame {
                                              to (@notebook_border));
 
     -adwaita-selected-tab-color: @notebook_selected_tab_color;
-    background-color: @theme_base_color;
-    background-image: none;
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (shade (@theme_base_color, 0.98)),
+                                     to (@theme_base_color));
 }
 
 .notebook tab .button,
