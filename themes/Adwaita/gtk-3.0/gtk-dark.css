@@ -74,6 +74,8 @@
 @define-color active_switch_bg_color_a shade (@theme_selected_bg_color, 0.85);
 @define-color active_switch_bg_color_b @theme_selected_bg_color;
 
+@define-color treeview_focus_border shade (@theme_selected_bg_color, 1.20);
+
 @define-color scale_fill shade (@insensitive_border_color, 0.90);
 @define-color scale_border_a shade (@internal_element_color, 0.90);
 @define-color scale_border_b shade (@internal_element_color, 0.65);

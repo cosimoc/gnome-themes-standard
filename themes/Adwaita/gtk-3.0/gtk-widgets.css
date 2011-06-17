@@ -1133,7 +1133,7 @@ row:insensitive {
 
 row:selected:focused {
     border-width: 1 0;
-    border-color: @progressbar_border;
+    border-color: @treeview_focus_border;
     background-color: @theme_selected_bg_color;
     border-style: solid;
 }

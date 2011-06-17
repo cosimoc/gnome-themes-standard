@@ -106,6 +106,8 @@
 
 @define-color toolbar_active_button_color #909081;
 
+@define-color treeview_focus_border @progressbar_border;
+
 @define-color expander_row_selected_color #acccee;
 
 @import url("gtk-widgets.css");
