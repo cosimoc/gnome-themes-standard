@@ -442,7 +442,7 @@ GtkScrolledWindow.frame {
  **************/
 
 GtkComboBox {
-    padding: 1 2;
+    padding: 0;
 
     -GtkWidget-focus-padding: 0;
     -GtkWidget-focus-line-width: 0;
@@ -452,7 +452,7 @@ GtkComboBox {
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 2 1;
     color: @internal_element_color;
 }
 
