@@ -1,3 +1,12 @@
+3.1.3
+=====
+
+Fix borders and background for vertical progressbars
+Fix horizontal padding for progressbars in GtkEntry
+Add a subtle gradient to the active notebook tab
+Improve styling for GtkComboBox with entries
+Improve insensitive style for the dark theme
+
 3.1.2.1
 =======
 
