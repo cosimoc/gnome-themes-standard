@@ -65,6 +65,7 @@
 
 @define-color button_raised_gradient_color_a @button_gradient_color_a;
 @define-color button_raised_gradient_color_b @button_gradient_color_b;
+@define-color button_raised_linked_shadow alpha(@theme_base_color, 0.70);
 
 @define-color button_raised_active_gradient_color_a @button_active_gradient_color_a;
 @define-color button_raised_active_gradient_color_b alpha(@button_active_gradient_color_b, 0.13);

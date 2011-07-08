@@ -27,6 +27,7 @@
 
 @define-color button_raised_gradient_color_a #373e37;
 @define-color button_raised_gradient_color_b #1c1e1c;
+@define-color button_raised_linked_shadow alpha(#000000, 0.14);
 
 @define-color button_raised_active_gradient_color_a @button_raised_gradient_color_b;
 @define-color button_raised_active_gradient_color_b @button_raised_gradient_color_a;

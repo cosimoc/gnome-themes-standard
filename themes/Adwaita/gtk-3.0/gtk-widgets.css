@@ -904,6 +904,33 @@ GtkTreeMenu .menuitem * {
     text-shadow: none;
 }
 
+/* nth-child for linked regions */
+.primary-toolbar.toolbar .raised.linked .button,
+.primary-toolbar.toolbar .raised.linked .button:active,
+.primary-toolbar.toolbar .raised.linked.button,
+.primary-toolbar.toolbar .raised.linked.button:active {
+    border-width: 1 0;
+    border-radius: 0;
+
+    box-shadow: inset 1 0 @button_raised_linked_shadow;
+}
+
+.primary-toolbar.toolbar .raised.linked.button:nth-child(first),
+.primary-toolbar.toolbar .raised.linked.button:active:nth-child(first),
+.primary-toolbar.toolbar .raised.linked:nth-child(first) .button,
+.primary-toolbar.toolbar .raised.linked:nth-child(first) .button:active {
+    border-width: 1 0 1 1;
+
+    box-shadow: none;
+}
+
+.primary-toolbar.toolbar .raised.linked.button:nth-child(last),
+.primary-toolbar.toolbar .raised.linked.button:active:nth-child(last),
+.primary-toolbar.toolbar .raised.linked:nth-child(last) .button,
+.primary-toolbar.toolbar .raised.linked:nth-child(last) .button:active {
+    border-width: 1 1 1 0;
+}
+
 .primary-toolbar.toolbar .entry {
     background-color: @primary_toolbar_entry_bg;
     color: @primary_toolbar_entry_fg;

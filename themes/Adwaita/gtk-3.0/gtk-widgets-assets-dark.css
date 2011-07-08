@@ -170,6 +170,35 @@ GtkScale.scale-has-marks-below.slider.vertical:insensitive {
     border-image: url("assets/primary-toolbar-raised-button-border-dark.svg") 4 / 4 stretch;
 }
 
+
+/* nth-child for linked areas */
+.primary-toolbar.toolbar .raised.linked.button,
+.primary-toolbar.toolbar .raised.linked.button:active,
+.primary-toolbar.toolbar .raised.linked.button:active:hover,
+.primary-toolbar.toolbar .raised.linked .button,
+.primary-toolbar.toolbar .raised.linked .button:active,
+.primary-toolbar.toolbar .raised.linked .button:active:hover {
+    border-image: url("assets/primary-toolbar-raised-button-border-dark.svg") 4 / 4 0 stretch;
+}
+
+.primary-toolbar.toolbar .raised.linked.button:nth-child(first) ,
+.primary-toolbar.toolbar .raised.linked.button:active:nth-child(first),
+.primary-toolbar.toolbar .raised.linked.button:active:hover:nth-child(first),
+.primary-toolbar.toolbar .raised.linked:nth-child(first) .button,
+.primary-toolbar.toolbar .raised.linked:nth-child(first) .button:active,
+.primary-toolbar.toolbar .raised.linked:nth-child(first) .button:active:hover {
+    border-image: url("assets/primary-toolbar-raised-button-border-dark.svg") 4 / 4 0 4 4 stretch;
+}
+
+.primary-toolbar.toolbar .raised.linked.button:nth-child(last),
+.primary-toolbar.toolbar .raised.linked.button:active:nth-child(last),
+.primary-toolbar.toolbar .raised.linked.button:active:hover:nth-child(last),
+.primary-toolbar.toolbar .raised.linked:nth-child(last) .button,
+.primary-toolbar.toolbar .raised.linked:nth-child(last) .button:active,
+.primary-toolbar.toolbar .raised.linked:nth-child(last) .button:active:hover {
+    border-image: url("assets/primary-toolbar-raised-button-border-dark.svg") 4 / 4 4 4 0 stretch;
+}
+
 .primary-toolbar.toolbar .entry {
     border-image: url("assets/primary-toolbar-entry-border-normal-dark.svg") 2 / 2 stretch;
 }
