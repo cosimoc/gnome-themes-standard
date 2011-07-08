@@ -115,6 +115,9 @@
 
 @define-color toolbar_active_button_color #909081;
 
+@define-color primary_toolbar_entry_bg @theme_base_color;
+@define-color primary_toolbar_entry_fg @theme_text_color;
+
 @define-color treeview_focus_border @progressbar_border;
 
 @define-color expander_row_selected_color #acccee;

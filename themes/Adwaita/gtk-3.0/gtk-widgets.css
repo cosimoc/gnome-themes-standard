@@ -904,6 +904,11 @@ GtkTreeMenu .menuitem * {
     text-shadow: none;
 }
 
+.primary-toolbar.toolbar .entry {
+    background-color: @primary_toolbar_entry_bg;
+    color: @primary_toolbar_entry_fg;
+}
+
 /* progressbars on primary toolbar entries are special */
 .primary-toolbar .toolbar .entry.progressbar,
 .primary-toolbar.toolbar .entry.progressbar {
