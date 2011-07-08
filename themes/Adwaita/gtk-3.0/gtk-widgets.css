@@ -1333,6 +1333,12 @@ GtkCalendar.highlight {
     color: mix (@theme_fg_color, @theme_bg_color, 0.50);
 }
 
+.dim-label:focused,
+.dim-label:selected,
+.dim-label:selected:focused {
+    color: mix (@theme_selected_fg_color, @theme_base_color, 0.50);
+}
+
 ApDocView, /* Abiword */
 EogScrollView, /* Eog */
 CheeseThumbView /* Cheese */
