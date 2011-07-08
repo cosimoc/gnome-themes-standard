@@ -853,8 +853,8 @@ GtkTreeMenu .menuitem * {
 
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
-                                     from (@button_gradient_color_a),
-                                     to (@button_gradient_color_b));
+                                     from (@button_raised_gradient_color_a),
+                                     to (@button_raised_gradient_color_b));
 
     -GtkWidget-focus-line-width: 2;
 }
@@ -878,8 +878,8 @@ GtkTreeMenu .menuitem * {
 .primary-toolbar.toolbar .raised .button:active {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
-                                     from (@button_active_gradient_color_a),
-				     to (alpha (@button_active_gradient_color_b, 0.13)));
+                                     from (@button_raised_active_gradient_color_a),
+				     to (@button_raised_active_gradient_color_b));
     background-color: @theme_base_color;
 }
 

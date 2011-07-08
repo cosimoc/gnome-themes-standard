@@ -25,6 +25,12 @@
 @define-color button_hover_gradient_color_a shade (@button_gradient_color_a, 1.07);
 @define-color button_hover_gradient_color_b @theme_base_color;
 
+@define-color button_raised_gradient_color_a #373e37;
+@define-color button_raised_gradient_color_b #1c1e1c;
+
+@define-color button_raised_active_gradient_color_a @button_raised_gradient_color_b;
+@define-color button_raised_active_gradient_color_b @button_raised_gradient_color_a;
+
 @define-color insensitive_bg_color alpha(#0b0b0d, 0.0);
 @define-color insensitive_fg_color alpha(#717171, 0.50);
 @define-color insensitive_border_color alpha(#717171, 0.50);
