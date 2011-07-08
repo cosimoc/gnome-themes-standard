@@ -170,6 +170,10 @@ GtkScale.scale-has-marks-below.slider.vertical:insensitive {
     border-image: url("assets/primary-toolbar-raised-button-border-dark.svg") 4 / 4 stretch;
 }
 
+.primary-toolbar.toolbar .entry {
+    border-image: url("assets/primary-toolbar-entry-border-normal-dark.svg") 2 / 2 stretch;
+}
+
 .progressbar,
 .entry.progressbar,
 .progressbar row,
