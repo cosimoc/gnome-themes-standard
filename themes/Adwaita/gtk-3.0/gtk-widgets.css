@@ -846,7 +846,9 @@ GtkTreeMenu .menuitem * {
 
 /* primary toolbar raised buttons */
 .primary-toolbar .toolbar .raised .button,
-.primary-toolbar.toolbar .raised .button {
+.primary-toolbar.toolbar .raised .button,
+.primary-toolbar .toolbar .raised.button,
+.primary-toolbar.toolbar .raised.button {
     border-width: 1;
     border-style: none;
     padding: 3;
@@ -860,12 +862,16 @@ GtkTreeMenu .menuitem * {
 }
 
 .primary-toolbar .toolbar .raised .button:insensitive,
-.primary-toolbar.toolbar .raised .button:insensitive {
+.primary-toolbar.toolbar .raised .button:insensitive,
+.primary-toolbar .toolbar .raised.button:insensitive,
+.primary-toolbar.toolbar .raised.button:insensitive {
     background-image: none;
 }
 
 .primary-toolbar .toolbar .raised .button:hover,
-.primary-toolbar.toolbar .raised .button:hover {
+.primary-toolbar.toolbar .raised .button:hover,
+.primary-toolbar .toolbar .raised.button:hover,
+.primary-toolbar.toolbar .raised.button:hover {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (@button_hover_gradient_color_a),
@@ -875,7 +881,11 @@ GtkTreeMenu .menuitem * {
 .primary-toolbar .toolbar .raised .button:active,
 .primary-toolbar .toolbar .raised .button:hover:active,
 .primary-toolbar.toolbar .raised .button:hover:active,
-.primary-toolbar.toolbar .raised .button:active {
+.primary-toolbar.toolbar .raised .button:active,
+.primary-toolbar .toolbar .raised.button:active,
+.primary-toolbar .toolbar .raised.button:hover:active,
+.primary-toolbar.toolbar .raised.button:hover:active,
+.primary-toolbar.toolbar .raised.button:active {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
                                      from (@button_raised_active_gradient_color_a),
@@ -884,14 +894,18 @@ GtkTreeMenu .menuitem * {
 }
 
 .primary-toolbar .toolbar .raised .button:insensitive:active,
-.primary-toolbar.toolbar .raised .button:insensitive:active {
+.primary-toolbar.toolbar .raised .button:insensitive:active,
+.primary-toolbar .toolbar .raised.button:insensitive:active,
+.primary-toolbar.toolbar .raised.button:insensitive:active {
     border-style: solid;
     border-width: 1;
 }
 
 /* setup shadows */
 .primary-toolbar.toolbar .raised .button,
-.primary-toolbar .toolbar .raised .button {
+.primary-toolbar .toolbar .raised .button,
+.primary-toolbar.toolbar .raised.button,
+.primary-toolbar .toolbar .raised.button {
     icon-shadow: 0 1 @theme_base_color;
     text-shadow: 0 1 @theme_base_color;
 }
@@ -899,7 +913,11 @@ GtkTreeMenu .menuitem * {
 .primary-toolbar.toolbar .raised .button *:active,
 .primary-toolbar .toolbar .raised .button *:active,
 .primary-toolbar.toolbar .raised .button *:insensitive,
-.primary-toolbar .toolbar .raised .button *:insensitive {
+.primary-toolbar .toolbar .raised .button *:insensitive
+.primary-toolbar.toolbar .raised.button *:active,
+.primary-toolbar .toolbar .raised.button *:active,
+.primary-toolbar.toolbar .raised.button *:insensitive,
+.primary-toolbar .toolbar .raised.button *:insensitive {
     icon-shadow: none;
     text-shadow: none;
 }

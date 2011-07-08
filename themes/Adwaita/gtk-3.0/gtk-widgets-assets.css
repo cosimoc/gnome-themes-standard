@@ -185,7 +185,9 @@ GtkScale.scale-has-marks-below.slider.vertical:insensitive {
 }
 
 .primary-toolbar .toolbar .raised .button,
-.primary-toolbar.toolbar .raised .button {
+.primary-toolbar.toolbar .raised .button,
+.primary-toolbar .toolbar .raised.button,
+.primary-toolbar.toolbar .raised.button {
     border-image: url("assets/primary-toolbar-raised-button-border.svg") 4 / 4 stretch;
 }
 
