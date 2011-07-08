@@ -58,6 +58,8 @@
 @define-color toolbar_gradient_final #151515;
 
 @define-color toolbar_active_button_color #222222;
+@define-color toolbar_border_top #2e3436;
+@define-color toolbar_border_bottom #72756f;
 
 @define-color expander_row_selected_color alpha (@theme_base_color, 0.60);
 

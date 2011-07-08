@@ -735,11 +735,9 @@ GtkTreeMenu .menuitem * {
 
     border-width: 1 0 1 0;
     border-radius: 0;
-    border-style: none;
-    border-image: -gtk-gradient (linear,
-                                 left top, left bottom,
-                                 from (shade (@theme_bg_color, 0.56)),
-                                 to (shade (@theme_bg_color, 0.83))) 1 stretch;
+    border-style: solid;
+    border-top-color: @toolbar_border_top;
+    border-bottom-color: @toolbar_border_bottom;
 
     -GtkWidget-window-dragging: true;
     -GtkToolbar-button-relief: normal;
