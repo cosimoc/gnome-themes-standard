@@ -15,7 +15,7 @@
    id="svg814"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="radio-unselected-dark.svg">
+   sodipodi:docname="radio-selected-dark.svg">
   <defs
      id="defs816">
     <linearGradient
@@ -308,14 +308,13 @@
        x2="658.5564"
        y2="247.62109" />
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient3859-5-9">
       <stop
-         style="stop-color:#282828;stop-opacity:1;"
+         style="stop-color:#373e37;stop-opacity:1;"
          offset="0"
          id="stop3861-2-2" />
       <stop
-         style="stop-color:#151515;stop-opacity:1"
+         style="stop-color:#1e1c1e;stop-opacity:1;"
          offset="1"
          id="stop3863-6-6" />
     </linearGradient>
@@ -329,14 +328,13 @@
        y2="262.36063"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient4655">
       <stop
-         style="stop-color:#ce5c00;stop-opacity:1;"
+         style="stop-color:#3465a4;stop-opacity:1;"
          offset="0"
          id="stop4657" />
       <stop
-         style="stop-color:#914100;stop-opacity:1"
+         style="stop-color:#243d84;stop-opacity:1;"
          offset="1"
          id="stop4659" />
     </linearGradient>
@@ -372,7 +370,6 @@
        xlink:href="#linearGradient12405-7-3"
        inkscape:collect="always" />
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient12405-7-3">
       <stop
          style="stop-color:#000000;stop-opacity:1;"
@@ -426,7 +423,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="32"
-     inkscape:cx="11.495914"
+     inkscape:cx="5.839664"
      inkscape:cy="7.2986073"
      inkscape:document-units="px"
      inkscape:current-layer="g6305"
@@ -434,9 +431,9 @@
      borderlayer="true"
      inkscape:showpageshadow="false"
      inkscape:window-width="1180"
-     inkscape:window-height="950"
-     inkscape:window-x="1600"
-     inkscape:window-y="166"
+     inkscape:window-height="739"
+     inkscape:window-x="98"
+     inkscape:window-y="26"
      inkscape:window-maximized="0"
      inkscape:snap-nodes="false"
      inkscape:snap-bbox="true">
@@ -456,7 +453,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -491,11 +488,11 @@
            sodipodi:cy="255.0668"
            sodipodi:cx="660.96808"
            id="path6307"
-           style="color:#000000;fill:url(#linearGradient3977-7);fill-opacity:1;fill-rule:nonzero;stroke:#131516;stroke-width:0.88215655;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:url(#linearGradient3977-7);fill-opacity:1;fill-rule:nonzero;stroke:#24282a;stroke-width:0.88215655000000004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            sodipodi:type="arc" />
         <path
            sodipodi:type="arc"
-           style="color:#000000;fill:#f57900;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient4661);stroke-width:1.27423298;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:144.44521581;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#3465a4;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient4661);stroke-width:1.27423298000000007;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:144.44521581000000765;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="path6309"
            sodipodi:cx="660.96808"
            sodipodi:cy="255.0668"

@@ -19,6 +19,17 @@
   <defs
      id="defs33224">
     <linearGradient
+       id="linearGradient7928">
+      <stop
+         style="stop-color:#16191a;stop-opacity:1;"
+         offset="0"
+         id="stop7930" />
+      <stop
+         style="stop-color:#232729;stop-opacity:1;"
+         offset="1"
+         id="stop7932" />
+    </linearGradient>
+    <linearGradient
        id="linearGradient4410-4-9-7-9">
       <stop
          style="stop-color:#535156;stop-opacity:1;"
@@ -60,6 +71,16 @@
        x2="7.9695358"
        y2="14.937024"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7928"
+       id="linearGradient7934"
+       x1="2.9802322e-08"
+       y1="8"
+       x2="16"
+       y2="8"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-16,0)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -69,14 +90,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="31.357231"
-     inkscape:cx="7.284836"
+     inkscape:cx="1.5126427"
      inkscape:cy="8.7791051"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:window-width="1280"
-     inkscape:window-height="743"
+     inkscape:window-height="741"
      inkscape:window-x="0"
      inkscape:window-y="26"
      inkscape:window-maximized="1" />
@@ -100,19 +121,11 @@
        ry="2.5000005"
        rx="2.5000005"
        y="0.5"
-       x="0.5"
+       x="-15.5"
        height="15"
        width="15"
        id="rect17861"
-       style="color:#000000;fill:none;stroke:#111111;stroke-width:0.99999994000000003;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <rect
-       style="fill:none;stroke:url(#linearGradient34952);stroke-width:0.99999981999999998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;enable-background:new"
-       id="rect17867"
-       width="13"
-       height="13"
-       x="1.4999999"
-       y="1.5000001"
-       rx="1.5042735"
-       ry="1.5042735" />
+       style="color:#000000;fill:none;stroke:url(#linearGradient7934);stroke-width:0.99999994;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       transform="matrix(0,-1,1,0,0,0)" />
   </g>
 </svg>

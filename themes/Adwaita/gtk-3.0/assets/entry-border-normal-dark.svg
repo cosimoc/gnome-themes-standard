@@ -58,7 +58,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="26.24"
-     inkscape:cx="-4.0928037"
+     inkscape:cx="-10.99067"
      inkscape:cy="7.542469"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -94,18 +94,7 @@
        height="15"
        width="15.000001"
        id="rect5760"
-       style="fill:none;fill-opacity:0;stroke:#77757a;stroke-width:0.99999987999999995;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
-       inkscape:export-filename="/home/cosimoc/Sources/Checkouts/gnome-themes-standard/themes/Adwaita/gtk-3.0/assets/entry-normal-border.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <rect
-       y="-14"
-       x="1"
-       height="12"
-       width="1"
-       id="rect6040"
-       style="opacity:1;fill:#282828;fill-opacity:0.50196081;stroke:none;display:inline;enable-background:new"
-       transform="matrix(0,1,-1,0,0,0)"
+       style="fill:none;fill-opacity:0;stroke:#233436;stroke-width:0.99999987999999995;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
        inkscape:export-filename="/home/cosimoc/Sources/Checkouts/gnome-themes-standard/themes/Adwaita/gtk-3.0/assets/entry-normal-border.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />

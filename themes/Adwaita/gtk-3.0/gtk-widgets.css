@@ -1151,7 +1151,7 @@ GtkIconView.view.cell:selected:focused {
     /* FIXME: this probably needs to be better;
      * see https://bugzilla.gnome.org/show_bug.cgi?id=644157
      */
-    -adwaita-focus-border-color: @progressbar_border;
+    -adwaita-focus-border-color: @treeview_focus_border;
     -adwaita-focus-border-radius: 3;
     -adwaita-focus-border-dashes: 0;
 }

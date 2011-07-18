@@ -52,11 +52,11 @@
     <linearGradient
        id="linearGradient4741">
       <stop
-         style="stop-color:#111113;stop-opacity:1;"
+         style="stop-color:#24282f;stop-opacity:0.94117647;"
          offset="0"
          id="stop4743" />
       <stop
-         style="stop-color:#3e3e3e;stop-opacity:1;"
+         style="stop-color:#676b67;stop-opacity:1;"
          offset="1"
          id="stop4745" />
     </linearGradient>
@@ -78,15 +78,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.197802"
-     inkscape:cx="-8.3079209"
+     inkscape:zoom="33.8125"
+     inkscape:cx="8"
      inkscape:cy="8"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:window-width="1195"
-     inkscape:window-height="740"
+     inkscape:window-height="739"
      inkscape:window-x="0"
      inkscape:window-y="26"
      inkscape:window-maximized="0" />

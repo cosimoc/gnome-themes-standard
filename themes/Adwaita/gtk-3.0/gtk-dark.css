@@ -1,32 +1,32 @@
 /* dark colormap */
 
-@define-color theme_base_color #333333;
-@define-color theme_text_color #ddddde;
-@define-color theme_bg_color #222222;
+@define-color theme_base_color #4f524f;
+@define-color theme_text_color #eeeeec;
+@define-color theme_bg_color #363b3b;
 @define-color theme_fg_color @theme_text_color;
-@define-color theme_selected_bg_color #f57900;
-@define-color theme_selected_fg_color #ffffff;
+@define-color theme_selected_bg_color #3465a4;
+@define-color theme_selected_fg_color @theme_text_color;
 
-@define-color menu_bg_color shade (@theme_bg_color, 0.4);
-@define-color menu_fg_color #ffffff;
+@define-color menu_bg_color #555753;
+@define-color menu_fg_color @theme_text_color;
 
 @define-color menu_combobox_border darker (@theme_selected_bg_color);
 
 @define-color theme_tooltip_bg_color #000000;
 @define-color theme_tooltip_fg_color #eeeeee;
 
-@define-color button_gradient_color_a #363636;
-@define-color button_gradient_color_b #222222;
-@define-color button_border #111111;
+@define-color button_gradient_color_a #373e37;
+@define-color button_gradient_color_b #1e1c1c;
+@define-color button_border #24282a;
 
-@define-color button_active_gradient_color_a #000000;
-@define-color button_active_gradient_color_b shade (@button_active_gradient_color_a, 0.93);
+@define-color button_active_gradient_color_a @button_gradient_color_b;
+@define-color button_active_gradient_color_b @button_gradient_color_a;
 
-@define-color button_hover_gradient_color_a shade (@button_gradient_color_a, 1.07);
-@define-color button_hover_gradient_color_b @theme_base_color;
+@define-color button_hover_gradient_color_a shade (@button_gradient_color_a, 1.10);
+@define-color button_hover_gradient_color_b shade (@button_gradient_color_b, 1.02);
 
-@define-color button_raised_gradient_color_a #373e37;
-@define-color button_raised_gradient_color_b #1c1e1c;
+@define-color button_raised_gradient_color_a @button_gradient_color_a;
+@define-color button_raised_gradient_color_b @button_gradient_color_b;
 @define-color button_raised_linked_shadow alpha(#000000, 0.14);
 
 @define-color button_raised_active_gradient_color_a @button_raised_gradient_color_b;
@@ -38,22 +38,21 @@
 
 @define-color inactive_frame_color shade (@theme_bg_color, 1.19);
 
-@define-color notebook_border #111111;
+@define-color notebook_border @button_border;
 @define-color notebook_active_tab_border alpha (@theme_selected_bg_color, 1.0);
 @define-color notebook_selected_tab_color alpha (@theme_selected_bg_color, 0.75);
 
-@define-color notebook_tab_gradient_a shade (@button_gradient_color_a, 0.8);
-@define-color notebook_tab_gradient_b shade (@button_gradient_color_b, 0.8);
+@define-color notebook_tab_gradient_a @button_gradient_color_a;
+@define-color notebook_tab_gradient_b @button_gradient_color_b;
 
 @define-color switch_slider_color #111113;
 @define-color switch_slider_border #a5b8cc;
 
 @define-color highlighted_border @button_border;
-@define-color internal_element_color #77757a;
+@define-color internal_element_color #888a85;
 
-@define-color progressbar_background_a shade(#e06a00, 1.30);
-@define-color progressbar_background_b shade(#e06a00, 1.10);
-@define-color progressbar_border alpha (@theme_fg_color, 0.60);
+@define-color progressbar_background_a #5893df;
+@define-color progressbar_background_b #2465ba;
 @define-color progressbar_pattern #000000;
 
 @define-color focused_entry_border @theme_selected_bg_color;
