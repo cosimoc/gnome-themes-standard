@@ -1,0 +1,53 @@
+# Belarusian translation for gnome-themes-standard.
+# Copyright (C) 2011 gnome-themes-standard's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-themes-standard package.
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-themes-standard.master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-07-16 02:02+0000\n"
+"PO-Revision-Date: 2011-07-21 02:05+0300\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
+"Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
+msgid "Default Background"
+msgstr "Прадвызначаны фон"
+
+#: ../themes/Adwaita/index.theme.in.h:1
+msgid "Adwaita"
+msgstr "Adwaita"
+
+#: ../themes/Adwaita/index.theme.in.h:2
+msgid "There is only one"
+msgstr "Адзіны і непаўторны"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "Высокая кантраснасць"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "Матыў з высокай кантраснасцю"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "Інверсійная высокая кантраснасць"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "Матыў з інверсійнай высокай кантраснасцю"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "Нізкая кантраснасць"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "Матыў з нізкай кантраснасцю"
