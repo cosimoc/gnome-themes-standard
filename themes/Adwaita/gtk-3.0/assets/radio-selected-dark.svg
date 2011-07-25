@@ -334,7 +334,7 @@
          offset="0"
          id="stop4657" />
       <stop
-         style="stop-color:#243d84;stop-opacity:1;"
+         style="stop-color:#16254f;stop-opacity:1"
          offset="1"
          id="stop4659" />
     </linearGradient>
@@ -422,12 +422,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="32"
-     inkscape:cx="5.839664"
-     inkscape:cy="7.2986073"
+     inkscape:zoom="1"
+     inkscape:cx="4.0719992"
+     inkscape:cy="3.1233473"
      inkscape:document-units="px"
      inkscape:current-layer="g6305"
-     showgrid="true"
+     showgrid="false"
      borderlayer="true"
      inkscape:showpageshadow="false"
      inkscape:window-width="1180"
@@ -502,7 +502,7 @@
            transform="matrix(0.99826332,0,0,0.61696032,379.17979,116.6339)" />
         <path
            sodipodi:type="arc"
-           style="opacity:0.55465585;fill:none;stroke:url(#linearGradient8366-2);stroke-width:1.63832664;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:100"
+           style="opacity:0.18930041;fill:none;stroke:url(#linearGradient8366-2);stroke-width:1.63832664000000006;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:100"
            id="path6311"
            sodipodi:cx="660.96808"
            sodipodi:cy="255.0668"

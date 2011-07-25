@@ -15,9 +15,20 @@
    id="svg814"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="radio-unselected-dark.svg">
+   sodipodi:docname="radio-mixed-dark.svg">
   <defs
      id="defs816">
+    <linearGradient
+       id="linearGradient5170">
+      <stop
+         id="stop5172"
+         offset="0"
+         style="stop-color:#3465a4;stop-opacity:1;" />
+      <stop
+         id="stop5174"
+         offset="1"
+         style="stop-color:#121f43;stop-opacity:1" />
+    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient10354-2"
@@ -443,7 +454,7 @@
        gradientTransform="translate(1033.0318,266.02372)"
        gradientUnits="userSpaceOnUse"
        id="linearGradient15258"
-       xlink:href="#linearGradient4655-7"
+       xlink:href="#linearGradient5170"
        inkscape:collect="always" />
   </defs>
   <sodipodi:namedview
@@ -453,12 +464,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="10"
-     inkscape:cx="7.0317383"
-     inkscape:cy="8.9611106"
+     inkscape:zoom="1"
+     inkscape:cx="1.2093848"
+     inkscape:cy="7.169419"
      inkscape:document-units="px"
      inkscape:current-layer="g6305"
-     showgrid="true"
+     showgrid="false"
      borderlayer="true"
      inkscape:showpageshadow="false"
      inkscape:window-width="1180"
@@ -484,7 +495,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

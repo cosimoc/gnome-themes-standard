@@ -15,9 +15,20 @@
    id="svg814"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="checkbox-unchecked-dark.svg">
+   sodipodi:docname="checkbox-mixed-dark.svg">
   <defs
      id="defs816">
+    <linearGradient
+       id="linearGradient4529">
+      <stop
+         id="stop4531"
+         offset="0"
+         style="stop-color:#3465a4;stop-opacity:1;" />
+      <stop
+         id="stop4533"
+         offset="1"
+         style="stop-color:#172754;stop-opacity:1" />
+    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient24133"
@@ -173,7 +184,7 @@
        x1="6.8551636"
        gradientUnits="userSpaceOnUse"
        id="linearGradient14037"
-       xlink:href="#linearGradient4655-7"
+       xlink:href="#linearGradient4529"
        inkscape:collect="always" />
   </defs>
   <sodipodi:namedview
@@ -183,18 +194,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="28.12"
-     inkscape:cx="0.6742439"
-     inkscape:cy="5.9002268"
+     inkscape:zoom="1"
+     inkscape:cx="17.297983"
+     inkscape:cy="3.171033"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
+     showgrid="false"
      borderlayer="true"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="741"
+     inkscape:window-width="1600"
+     inkscape:window-height="1169"
      inkscape:window-x="0"
-     inkscape:window-y="26"
+     inkscape:window-y="0"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -212,7 +223,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
