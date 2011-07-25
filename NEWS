@@ -1,3 +1,11 @@
+3.1.4
+=====
+
+Update the dark theme with a blue selection color
+Use the raised style for buttons in inline-toolbars
+Revert to light colors for the menus now that the mutter shadows are fixed
+Build fixes
+
 3.1.3
 =====
 
