@@ -229,7 +229,7 @@ GtkProgressBar,
     -GtkProgressBar-yspacing: 22;
 }
 
-GtkProgressBar.trough,
+.trough,
 .trough row,
 .trough row:hover {
     background-image: -gtk-gradient (linear,
