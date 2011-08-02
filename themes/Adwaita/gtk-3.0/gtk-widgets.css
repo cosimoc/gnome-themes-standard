@@ -1137,6 +1137,13 @@ GtkTreeMenu .menuitem * {
     background-color: shade (@theme_bg_color, 1.02);
 }
 
+.sidebar .radio,
+.sidebar .radio:focused,
+.sidebar .radio:selected {
+    background-image: none;
+    background-color: alpha(@theme_base_color, 0.0);
+}
+
 /****************
  * GtkAssistant *
  ****************/

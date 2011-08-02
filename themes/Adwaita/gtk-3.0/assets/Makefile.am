@@ -67,6 +67,12 @@ assets_DATA = 		\
 	scale-slider-marks-below-vertical-dark.svg \
 	scale-slider-marks-below-vertical-insensitive.svg \
 	scale-slider-marks-below-vertical-insensitive-dark.svg \
+	sidebar-radio-checked.svg \
+	sidebar-radio-checked-dark.svg \
+	sidebar-radio-prelight.svg \
+	sidebar-radio-selected.svg \
+	sidebar-radio-selected-dark.svg \
+	sidebar-radio-selected-prelight.svg \
 	switch-slider-border.svg \
 	switch-slider-active-border.svg \
 	trough-border-horizontal.svg \
