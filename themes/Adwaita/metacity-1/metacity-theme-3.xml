@@ -13,10 +13,10 @@
 <constant name="C_border_focused" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
 <constant name="C_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
 <constant name="C_border_attached_focused" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
-<constant name="C_titlebar_focused_hilight" value="gtk:base[NORMAL]" />
+<constant name="C_titlebar_focused_hilight" value="gtk:custom(wm_highlight,gtk:base[NORMAL])" />
 <constant name="C_titlebar_unfocused" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.4" />
 <constant name="C_title_focused" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.1" />
-<constant name="C_title_focused_hilight" value="gtk:base[NORMAL]" />
+<constant name="C_title_focused_hilight" value="gtk:custom(wm_title_highlight,gtk:base[NORMAL])" />
 <constant name="C_title_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.9" />
 <!-- color of the button icons -->
 <constant name="C_icons_focused" value="gtk:text[SELECTED]" />
@@ -148,21 +148,11 @@
 
 <draw_ops name="titlebar_fill_focused">
 	<gradient type="vertical" x="0" y="0" width="width" height="height">
-		<color value="blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.4" />
-		<color value="gtk:bg[NORMAL]"/>
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.03" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.06" />
+		<color value="gtk:custom(wm_bg_a,blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.4)" />
+		<color value="gtk:custom(wm_bg_b,gtk:bg[NORMAL])" />
 	</gradient>
 </draw_ops>
 
-<draw_ops name="titlebar_fill_focused_alt">
-	<gradient type="vertical" x="0" y="0" width="width" height="height">
-		<color value="blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.6" />
-		<!-- <color value="gtk:bg[NORMAL]"/> -->
-		<!-- <color value="blend/gtk:bg[NORMAL]/#000000/0.03" /> -->
-		<color value="gtk:bg[NORMAL]"/>
-	</gradient>
-</draw_ops>
 
 <draw_ops name="titlebar_fill_focused_alt2"> <!-- gradient for attached and modal dialogs titlebar-->
 	<gradient type="vertical" x="0" y="0" width="width" height="title_height">
@@ -200,12 +190,12 @@
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
-	<include name="titlebar_fill_focused_alt" />
+	<include name="titlebar_fill_focused" />
 	<include name="hilight" />
 </draw_ops>
 
 <draw_ops name="titlebar_focused_alt">
-	<include name="titlebar_fill_focused_alt" />
+	<include name="titlebar_fill_focused" />
 	<include name="hilight" />
 </draw_ops>
 
@@ -214,12 +204,12 @@
 </draw_ops>
 
 <draw_ops name="rounded_titlebar_focused">
-	<include name="titlebar_fill_focused_alt" />
+	<include name="titlebar_fill_focused" />
 	<include name="rounded_hilight" />
 </draw_ops>
 
 <draw_ops name="rounded_titlebar_focused_alt">
-	<include name="titlebar_fill_focused_alt" />
+	<include name="titlebar_fill_focused" />
 	<include name="rounded_hilight" />
 </draw_ops>
 
@@ -810,14 +800,14 @@
 	<!-- button backgrounds -->
 
 <constant name="C_button_border" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
-<constant name="C_button_hilight" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.6" />
+<constant name="C_button_hilight" value="gtk:custom(wm_highlight,blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.6)" />
 
 <draw_ops name="button_fill"> <!-- button background gradient -->
 	<gradient type="vertical" x="0" y="0" width="width" height="height-2">
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.15" />
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.21" />
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.27" />
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.12" />
+		<color value="gtk:custom(wm_button_bg_a,blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.15)" />
+		<color value="gtk:custom(wm_button_bg_b,blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.21)" />
+		<color value="gtk:custom(wm_button_bg_c,blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.27)" />
+		<color value="gtk:custom(wm_button_bg_d,blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.12)" />
 	</gradient>
 </draw_ops>
 
@@ -839,18 +829,18 @@
 
 <draw_ops name="button_fill_prelight"> <!-- button background gradient for prelight status -->
 	<gradient type="vertical" x="0" y="0" width="width" height="height-2">
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.03" />
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.1" />
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.2" />
-		<color value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.04" />
+		<color value="gtk:custom(wm_button_bg_hover_a,blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.03)" />
+		<color value="gtk:custom(wm_button_bg_hover_b,blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.1)" />
+		<color value="gtk:custom(wm_button_bg_hover_c,blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.2)" />
+		<color value="gtk:custom(wm_button_bg_hover_d,blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.04)" />
 	</gradient>
 </draw_ops>
 
 <draw_ops name="button_fill_pressed"> <!-- button background gradient for pressed status -->
 	<gradient type="vertical" x="0" y="0" width="width" height="height-2">
-		<color value="C_border_focused" />
-		<color value="blend/#000000/gtk:bg[NORMAL]/0.75" />
-		<color value="blend/#000000/gtk:bg[NORMAL]/0.8" />
+		<color value="gtk:custom(wm_button_bg_active_a,blend/#000000/gtk:bg[NORMAL]/0.7)" />
+		<color value="gtk:custom(wm_button_bg_active_b,blend/#000000/gtk:bg[NORMAL]/0.75)" />
+		<color value="gtk:custom(wm_button_bg_active_c,blend/#000000/gtk:bg[NORMAL]/0.8)" />
 	</gradient>
 </draw_ops>
 
@@ -1162,7 +1152,7 @@
 
 <frame_style name="normal_max_focused" geometry="max">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_focused_alt" />
+	<piece position="titlebar" draw_ops="titlebar_fill_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
@@ -1242,7 +1232,7 @@
 
 <frame_style name="normal_max_shaded_focused" geometry="max">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_focused_alt" />
+	<piece position="titlebar" draw_ops="titlebar_fill_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay"><draw_ops><line x1="0" y1="height-1" x2="width" y2="height-1" color="C_border_focused" /></draw_ops></piece>
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -1324,7 +1314,7 @@
 
 <frame_style name="dialog_focused" geometry="nobuttons">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="rounded_titlebar_focused_alt" />
+	<piece position="titlebar" draw_ops="rounded_titlebar_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="rounded_border_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -1485,7 +1475,7 @@
 
 <frame_style name="utility_focused" geometry="small">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_focused_alt" />
+	<piece position="titlebar" draw_ops="titlebar_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="border_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -1670,7 +1660,7 @@
 
 <frame_style name="tiled_left_focused" geometry="tiled_left">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_focused_alt" />
+	<piece position="titlebar" draw_ops="titlebar_fill_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="border_right_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -1752,7 +1742,7 @@
 
 <frame_style name="tiled_right_focused" geometry="tiled_right">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_focused_alt" />
+	<piece position="titlebar" draw_ops="titlebar_fill_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="border_left_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
