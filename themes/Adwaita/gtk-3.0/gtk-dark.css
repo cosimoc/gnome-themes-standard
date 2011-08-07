@@ -118,6 +118,26 @@
 @define-color scale_progress_border #1864b2;
 @define-color scale_progress_border_b #3e90e5;
 
+@define-color wm_highlight shade (@theme_bg_color, 1.4);
+@define-color wm_title_highlight #111111;
+
+@define-color wm_bg_a shade (@theme_bg_color, 1.3);
+@define-color wm_bg_b @theme_bg_color;
+
+@define-color wm_button_bg_a shade (@theme_bg_color, 1.0);
+@define-color wm_button_bg_b shade (@theme_bg_color, 0.85);
+@define-color wm_button_bg_c shade (@theme_bg_color, 0.8);
+@define-color wm_button_bg_d shade (@theme_bg_color, 0.9);
+
+@define-color wm_button_bg_hover_a shade (@wm_button_bg_a, 1.2);
+@define-color wm_button_bg_hover_b shade (@wm_button_bg_b, 1.2);
+@define-color wm_button_bg_hover_c shade (@wm_button_bg_c, 1.2);
+@define-color wm_button_bg_hover_d shade (@wm_button_bg_d, 1.2);
+
+@define-color wm_button_bg_active_a shade (@theme_bg_color, 0.8);
+@define-color wm_button_bg_active_b shade (wm_button_bg_active_a, 0.2);
+@define-color wm_button_bg_active_c shade (wm_button_bg_active_a, 0.2);
+
 @import url("gtk-widgets-assets-dark.css");
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-dark-overrides.css");
