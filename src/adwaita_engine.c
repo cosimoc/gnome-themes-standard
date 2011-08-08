@@ -487,6 +487,9 @@ adwaita_engine_render_expander (GtkThemingEngine *engine,
   x += width / 2 - side / 2;
   y += height / 2 - side / 2;
 
+  x = floor (x);
+  y = floor (y);
+
   /* make sure the rendered side length is always odd */
   if (((gint) side % 2) == 0)
     side -= 1.0;
