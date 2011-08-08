@@ -439,6 +439,8 @@ GtkScrolledWindow.frame {
     background-image: none;
 }
 
+/* FIXME: background behind tabs -- slight gradient continuing from menubar */
+
 /**************
  * ComboBoxes *
  **************/
@@ -595,7 +597,7 @@ GtkTreeMenu .menuitem * {
 				     left top, left bottom,
 				     from (@theme_bg_color),
 				     color-stop (0.45, shade (@theme_bg_color, 0.97)),
-				     to (shade (@theme_bg_color, 0.99)));
+				     to (@theme_bg_color));
     border-width: 0;
     border-style: none;
     padding: 4;
@@ -653,7 +655,7 @@ GtkTreeMenu .menuitem * {
 }
 
 .menuitem.separator {
-    border-color: mix (@menu_fg_color, @menu_bg_color, 0.8);
+    border-color: @menu_separator;
     border-style: solid;
     border-width: 1;
 

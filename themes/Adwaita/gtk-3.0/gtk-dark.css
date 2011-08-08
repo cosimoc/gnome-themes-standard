@@ -11,6 +11,7 @@
 @define-color menu_fg_color @theme_text_color;
 
 @define-color menu_combobox_border darker (@theme_selected_bg_color);
+@define-color menu_separator mix (@menu_fg_color, @menu_bg_color, 0.95);
 
 @define-color theme_tooltip_bg_color #000000;
 @define-color theme_tooltip_fg_color #eeeeee;
