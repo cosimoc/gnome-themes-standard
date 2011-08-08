@@ -64,8 +64,6 @@
     background-image: url("assets/radio-mixed-dark.svg");
 }
 
-GtkProgressBar.trough,
-.trough row,
 .entry {
     border-image: url("assets/entry-border-normal-dark.svg") 2 / 2 stretch;
 }

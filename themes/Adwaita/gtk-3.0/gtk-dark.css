@@ -37,7 +37,7 @@
 @define-color insensitive_fg_color alpha(#717171, 0.50);
 @define-color insensitive_border_color alpha(#717171, 0.50);
 
-@define-color inactive_frame_color shade (@theme_bg_color, 1.19);
+@define-color inactive_frame_color shade (@theme_bg_color, 0.8);
 
 @define-color notebook_border @button_border;
 @define-color notebook_active_tab_border alpha (@theme_selected_bg_color, 1.0);
@@ -78,8 +78,8 @@
 @define-color keyboard_focus_border_a alpha (@theme_fg_color, 0.30);
 @define-color keyboard_focus_border_b alpha (@theme_fg_color, 0.10);
 
-@define-color trough_bg_color_a #000000;
-@define-color trough_bg_color_b #111111;
+@define-color trough_bg_color_a #30312f;
+@define-color trough_bg_color_b #41433f;
 
 @define-color frame_color #756a7f;
 
