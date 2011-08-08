@@ -134,9 +134,9 @@
 @define-color wm_button_bg_hover_c shade (@wm_button_bg_c, 1.2);
 @define-color wm_button_bg_hover_d shade (@wm_button_bg_d, 1.2);
 
-@define-color wm_button_bg_active_a shade (@theme_bg_color, 0.8);
-@define-color wm_button_bg_active_b shade (wm_button_bg_active_a, 0.2);
-@define-color wm_button_bg_active_c shade (wm_button_bg_active_a, 0.2);
+@define-color wm_button_bg_active_a shade (@theme_bg_color, 0.5);
+@define-color wm_button_bg_active_b shade (@theme_bg_color, 0.7);
+@define-color wm_button_bg_active_c shade (@theme_bg_color, 0.7);
 
 @import url("gtk-widgets-assets-dark.css");
 @import url("gtk-widgets.css");

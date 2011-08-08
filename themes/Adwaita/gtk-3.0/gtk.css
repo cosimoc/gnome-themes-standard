@@ -138,6 +138,9 @@
 @define-color wm_button_bg_hover_c shade (@wm_button_bg_c, 1.1);
 @define-color wm_button_bg_hover_d shade (@wm_button_bg_d, 1.1);
 
+@define-color wm_button_bg_active_a shade (@bg_color, 0.7);
+@define-color wm_button_bg_active_b shade (@bg_color, 0.9);
+@define-color wm_button_bg_active_c shade (@bg_color, 0.9);
 
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets.css");

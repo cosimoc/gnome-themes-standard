@@ -35,7 +35,7 @@
 	<distance name="bottom_height" value="2" />
 	<distance name="left_titlebar_edge" value="0"/>
 	<distance name="right_titlebar_edge" value="0"/>
-	<distance name="title_vertical_pad" value="10"/>
+	<distance name="title_vertical_pad" value="9"/>
 	<border name="title_border" left="10" right="10" top="0" bottom="2"/>
 	<border name="button_border" left="0" right="0" top="0" bottom="2"/>
 	<aspect_ratio name="button" value="1"/>
@@ -51,7 +51,7 @@
 	<distance name="right_width" value="0" />
 	<distance name="left_titlebar_edge" value="0"/>
 	<distance name="right_titlebar_edge" value="0"/>
-	<distance name="title_vertical_pad" value="9"/> <!-- 
+	<distance name="title_vertical_pad" value="8"/> <!-- 
 							This needs to be 1 less then the
 							title_vertical_pad on normal state
 							or you'll have bigger buttons 								-->
@@ -262,10 +262,12 @@
 	<line color="C_border_unfocused" x1="width-1" y1="4" x2="width-1" y2="height-2" />
 	<arc color="C_border_unfocused" x="0" y="0" width="9" height="9"  start_angle="270" extent_angle="90" />
 	<arc color="C_border_unfocused" x="width-10" y="0" width="9" height="9"  start_angle="0" extent_angle="90" />
+
 	<!-- double arcs for darker borders -->
 	<arc color="C_border_unfocused" x="0" y="0" width="9" height="9"  start_angle="270" extent_angle="90" />
 	<arc color="C_border_unfocused" x="width-10" y="0" width="9" height="9"  start_angle="0" extent_angle="90" />
 </draw_ops>
+
 
 <draw_ops name="border_right_focused">
 	<line
