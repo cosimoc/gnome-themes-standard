@@ -594,7 +594,7 @@ GtkTreeMenu .menuitem * {
 .menu {
     background-color: @menu_bg_color;
     color: @menu_fg_color;
-
+    padding: 0;
     border-style: none;
 }
 
