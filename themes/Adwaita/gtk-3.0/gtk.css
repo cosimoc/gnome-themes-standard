@@ -75,8 +75,8 @@
 @define-color insensitive_fg_color #a7aba7;
 @define-color insensitive_border_color shade (@internal_element_color, 1.37);
 
-@define-color trough_bg_color_a #ccccc7;
-@define-color trough_bg_color_b #e4e4e1;
+@define-color trough_bg_color_a #bcbcb7;
+@define-color trough_bg_color_b #e0e0dd;
 
 @define-color active_switch_bg_color_a #509ae7;
 @define-color active_switch_bg_color_b #84b8ee;

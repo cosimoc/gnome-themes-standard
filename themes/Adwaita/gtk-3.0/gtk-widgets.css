@@ -240,7 +240,14 @@ GtkProgressBar,
     border-width: 1;
     border-style: solid;
     border-radius: 3;
-    border-color: shade (@inactive_frame_color, 0.925);
+    border-color: shade (@inactive_frame_color, 0.8);
+}
+
+.trough.vertical {
+    background-image: -gtk-gradient (linear,
+                                     left top, right top,
+                                     from (@trough_bg_color_a),
+                                     to (@trough_bg_color_b));
 }
 
 .trough row:selected,
