@@ -89,6 +89,7 @@
 @define-color progressbar_pattern #000000;
 
 @define-color internal_element_color #888a85;
+@define-color internal_element_insensitive shade (@internal_element_color, 1.6);
 
 @define-color scale_fill @insensitive_border_color;
 @define-color scale_border_a @internal_element_color;

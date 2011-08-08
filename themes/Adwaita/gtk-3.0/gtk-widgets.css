@@ -454,7 +454,6 @@ GtkScrolledWindow.frame {
 
 GtkComboBox {
     padding: 0;
-
     -GtkWidget-focus-padding: 0;
     -GtkWidget-focus-line-width: 0;
 
@@ -469,12 +468,12 @@ GtkComboBox .entry {
 }
 
 GtkComboBox .button {
-    padding: 2 1;
     color: @internal_element_color;
+    padding: 2 3 2 1;
 }
 
 GtkComboBox .button *:prelight {
-    color: shade (@internal_element_color, 0.66);
+    color: @theme_text_color;
 }
 
 /**************
@@ -541,7 +540,7 @@ GtkComboBox .button *:prelight {
 }
 
 .scrollbar.button:insensitive {
-    color: lighter (@internal_element_color);
+    color: @internal_element_insensitive;
     background-color: @theme_base_color;
     border-color: @button_border;
 }

@@ -19,6 +19,18 @@
   <defs
      id="defs33224">
     <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3888">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3890" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3892" />
+    </linearGradient>
+    <linearGradient
        id="linearGradient7928">
       <stop
          style="stop-color:#16191a;stop-opacity:1;"
@@ -81,26 +93,48 @@
        y2="8"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-16,0)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3888"
+       id="linearGradient3894"
+       x1="-15"
+       y1="8"
+       x2="2.0614948"
+       y2="7.9043283"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(16,0)" />
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#494949"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="31.357231"
-     inkscape:cx="1.5126427"
-     inkscape:cy="8.7791051"
+     inkscape:zoom="1"
+     inkscape:cx="5.0524961"
+     inkscape:cy="9.0728671"
      inkscape:current-layer="layer1"
-     showgrid="true"
+     showgrid="false"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:window-width="1280"
-     inkscape:window-height="741"
+     inkscape:window-height="742"
      inkscape:window-x="0"
      inkscape:window-y="26"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:snap-nodes="false"
+     inkscape:snap-bbox="true"
+     inkscape:showpageshadow="false"
+     showborder="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3116"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
   <metadata
      id="metadata33227">
     <rdf:RDF>
@@ -109,7 +143,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -127,5 +161,15 @@
        id="rect17861"
        style="color:#000000;fill:none;stroke:url(#linearGradient7934);stroke-width:0.99999994;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        transform="matrix(0,-1,1,0,0,0)" />
+    <rect
+       transform="matrix(0,1,1,0,0,0)"
+       style="opacity:0.07;color:#000000;fill:none;stroke:url(#linearGradient3894);stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3114"
+       width="13"
+       height="13"
+       x="1.5"
+       y="1.5"
+       rx="1.4012935"
+       ry="1.4331841" />
   </g>
 </svg>

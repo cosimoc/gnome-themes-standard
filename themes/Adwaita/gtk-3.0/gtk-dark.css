@@ -16,8 +16,8 @@
 @define-color theme_tooltip_bg_color #000000;
 @define-color theme_tooltip_fg_color #eeeeee;
 
-@define-color button_gradient_color_a #373e37;
-@define-color button_gradient_color_b #1e1c1c;
+@define-color button_gradient_color_a shade (@theme_bg_color, 1.1);
+@define-color button_gradient_color_b shade (@theme_bg_color, 0.9);
 @define-color button_border #24282a;
 
 @define-color button_active_gradient_color_a @button_gradient_color_b;
@@ -51,6 +51,8 @@
 
 @define-color highlighted_border @button_border;
 @define-color internal_element_color #888a85;
+@define-color internal_element_insensitive shade (@internal_element_color, 0.75);
+
 
 @define-color progressbar_background_a #5893df;
 @define-color progressbar_background_b #2465ba;
