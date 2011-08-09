@@ -1176,9 +1176,10 @@ GtkTreeView {
     -GtkTreeView-expander-size: 11;
 
     -GtkWidget-focus-line-width: 1;
-    -adwaita-focus-border-radius: 0;
-    -adwaita-focus-border-dashes: 0;
-    -adwaita-focus-border-color: @keyboard_focus_border_a;
+    -GtkWidget-focus-padding: 1;
+    -adwaita-focus-border-radius: 2;
+    -adwaita-focus-border-dashes: 1;
+    -adwaita-focus-border-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
 }
 
 GtkTreeView.separator {

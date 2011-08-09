@@ -138,7 +138,9 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
   gint border_radius;
   gboolean use_dashes;
   double dashes[2] = { 2.0, 0.2 };
+  const GtkWidgetPath *path;
 
+  path = gtk_theming_engine_get_path (engine);
   state = gtk_theming_engine_get_state (engine);
   gtk_theming_engine_get (engine, state,
                           "-adwaita-focus-border-color", &border_color,
@@ -153,14 +155,25 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
                                 "focus-padding", &focus_pad,
                                 NULL);
 
+  /* as we render the tab smaller than the whole allocation, we need
+   * to recenter and resize the focus on the tab.
+   */
   if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_NOTEBOOK) &&
       gtk_theming_engine_has_region (engine, GTK_STYLE_REGION_TAB, NULL))
     {
-      /* as we render the tab smaller than the whole allocation, we need
-       * to recenter and resize the focus on the tab.
-       */
       y += 3.0;
       height -= 3.0;
+    }
+
+  /* the treeview rows don't change allocation when modifying focus-padding,
+   * so we have to move the focus ring inside the allocated area manually.
+   */
+  if (gtk_widget_path_is_type (path, GTK_TYPE_TREE_VIEW))
+    {
+      x += focus_pad;
+      y += focus_pad;
+      width -= 2 * focus_pad;
+      height -= 2 * focus_pad;
     }
 
   cairo_save (cr);
