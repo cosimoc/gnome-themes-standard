@@ -18,6 +18,7 @@ assets_DATA = 		\
 	checkbox-mixed-dark.svg \
 	checkbox-menuitem-checked.svg \
 	checkbox-menuitem-checked-selected.svg \
+	combobox-entry-border-active.svg \
 	entry-border-focused.svg \
 	entry-border-focused-dark.svg \
 	entry-border-normal.svg \

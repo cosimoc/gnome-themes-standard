@@ -72,6 +72,12 @@
     border-image: url("assets/entry-border-focused-dark.svg") 2 / 2 stretch;
 }
 
+GtkComboBox.combobox-entry .button:active,
+GtkComboBox.combobox-entry .button:hover:active,
+GtkComboBox.combobox-entry .button {
+    border-image: url("assets/entry-border-normal-dark.svg") 2 / 2 2 2 0 stretch;
+}
+
 GtkScale.trough,
 GtkSwitch.trough,
 GtkScale.trough.horizontal {

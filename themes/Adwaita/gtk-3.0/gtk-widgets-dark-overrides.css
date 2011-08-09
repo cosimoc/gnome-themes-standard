@@ -16,11 +16,6 @@ GtkIconView.view.cell:selected:focused {
 }
 
 .entry {
-    background-image: -gtk-gradient (linear, 
-                                     left top,
-                                     left bottom,
-                                     from(@theme_text_color),
-                                     to(#ffffff));
     color: #000000;
 }
 

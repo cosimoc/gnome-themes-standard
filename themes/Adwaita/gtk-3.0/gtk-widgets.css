@@ -136,8 +136,20 @@ GtkStatusbar {
     /* border-image defined in the -assets variants */
 }
 
+.entry,
+GtkComboBox.combobox-entry .button,
+GtkComboBox.combobox-entry .button:prelight {
+    background-image: -gtk-gradient(linear,
+                                    left top, left bottom,
+                                    from(@entry_background_a),
+                                    color-stop(0.30, @entry_background_b),
+                                    color-stop(0.85, @entry_background_c),
+                                    to(@entry_background_d));
+}
+
 .entry:insensitive {
     background-color: @insensitive_bg_color;
+    background-image: none;
 
     border-image: none;
     border-style: solid;
@@ -473,6 +485,25 @@ GtkComboBox .button {
 
 GtkComboBox .button *:prelight {
     color: @theme_text_color;
+}
+
+GtkComboBox.combobox-entry .button {
+    border-width: 1 1 1 0;
+    border-radius: 0 3 3 0;
+
+    padding: 2 3;
+}
+
+GtkComboBox.combobox-entry .button:active,
+GtkComboBox.combobox-entry .button:hover:active {
+    background-image: -gtk-gradient(linear,
+                                    left top, left bottom,
+                                    from(shade(@entry_background_a, 0.95)),
+                                    color-stop(0.30, shade(@entry_background_b, 0.95)),
+                                    color-stop(0.85, shade(@entry_background_c, 0.95)),
+                                    to(shade(@entry_background_d, 0.95)));
+
+    box-shadow: 1 0 inset shade(@frame_color, 1.50), 2 0 inset shade(@frame_color, 1.60);
 }
 
 /**************
