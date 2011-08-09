@@ -1173,7 +1173,7 @@ GtkIconView.view.cell:selected:focused {
 
 GtkTreeView {
     -GtkTreeView-vertical-separator: 0;
-    -GtkTreeView-expander-size: 11;
+    -GtkTreeView-expander-size: 17;
 
     -GtkWidget-focus-line-width: 1;
     -GtkWidget-focus-padding: 1;
@@ -1218,10 +1218,8 @@ row:insensitive {
 }
 
 row:selected:focused {
-    border-width: 1 0;
-    border-color: @treeview_focus_border;
+    border-width: 0;
     background-color: @theme_selected_bg_color;
-    border-style: solid;
 }
 
 row:selected {
@@ -1246,7 +1244,7 @@ row:selected {
     border-style: solid;
     border-width: 1;
     border-radius: 2;
-    border-color: @internal_element_color;
+    border-color: shade (@internal_element_color, 1.40);
 
     color: @internal_element_color;
     background-color: @theme_base_color;
@@ -1257,7 +1255,7 @@ row:selected {
     border-width: 1;
 
     color: @internal_element_color;
-    border-color: @internal_element_color;
+    border-color: shade (@internal_element_color, 1.40);
 
     background-color: @theme_base_color;
 }
@@ -1267,7 +1265,7 @@ row:selected {
     border-width: 1;
 
     color: @internal_element_color;
-    border-color: @internal_element_color;
+    border-color: shade (@internal_element_color, 1.40);
 
     background-color: shade (@theme_bg_color, 1.02);
 }

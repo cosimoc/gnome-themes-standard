@@ -495,6 +495,15 @@ adwaita_engine_render_expander (GtkThemingEngine *engine,
   gint line_width;
   GtkBorder border;
 
+  /* draw the expander as if it was 11px instead of the allocated 17px,
+   * so that we can have a bit of padding between the view edge and the
+   * expander itself.
+   */
+  x += 3;
+  y += 3;
+  width -= 6;
+  height -= 6;
+
   side = floor (MIN (width, height));
 
   x += width / 2 - side / 2;
