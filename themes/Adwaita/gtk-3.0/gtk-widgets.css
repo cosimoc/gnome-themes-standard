@@ -1028,6 +1028,9 @@ GtkTreeMenu .menuitem * {
 .inline-toolbar.toolbar .button:insensitive {
     border-color: shade(@button_border, 0.95);
     box-shadow: none;
+
+    background-color: alpha(@theme_base_color, 0.0);
+    background-image: none;
 }
 
 .inline-toolbar.toolbar .button *:active,
