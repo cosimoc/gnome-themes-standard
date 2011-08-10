@@ -15,10 +15,6 @@ GtkIconView.view.cell:selected:focused {
     -adwaita-focus-border-dashes: true;
 }
 
-.entry {
-    color: #000000;
-}
-
 .entry:insensitive {
     background-image: none;
 }
