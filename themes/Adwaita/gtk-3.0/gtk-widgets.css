@@ -168,6 +168,14 @@ GtkComboBox.combobox-entry .button:prelight {
     -adwaita-progressbar-pattern: none;
 }
 
+.entry.image {
+    color: @internal_element_color;
+}
+
+.entry.image:prelight {
+    color: @internal_element_prelight;
+}
+
 /*****************
  * GtkSpinButton *
  *****************/
