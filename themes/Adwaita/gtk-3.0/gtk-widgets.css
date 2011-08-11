@@ -184,13 +184,20 @@ GtkComboBox.combobox-entry .button:prelight {
 .spinbutton.button:active,
 .spinbutton.button:focused,
 .spinbutton.button:insensitive {
-    color: @internal_element_color;
-
     background-image: none;
     background-color: alpha(@theme_base_color, 0.0);
 
     border-style: none;
     border-image: none;
+}
+
+.spinbutton.button {
+    color: @internal_element_color;
+}
+
+.spinbutton.button:prelight,
+.spinbutton.button:active {
+    color: @internal_element_prelight;
 }
 
 .spinbutton.button:insensitive {
