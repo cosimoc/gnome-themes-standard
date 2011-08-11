@@ -28,7 +28,7 @@ AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
 AM_GLIB_GNU_GETTEXT
 
-PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 3.1.6 librsvg-2.0,,
+PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 3.1.11 librsvg-2.0,,
                   AC_MSG_ERROR([GTK+-3.0 is required to compile gnome-themes-standard]))
 
 AC_SUBST(GTK_CFLAGS)
