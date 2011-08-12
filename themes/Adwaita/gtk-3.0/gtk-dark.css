@@ -20,8 +20,8 @@
 @define-color button_gradient_color_b shade (@theme_bg_color, 0.9);
 @define-color button_border #24282a;
 
-@define-color button_active_gradient_color_a @button_gradient_color_b;
-@define-color button_active_gradient_color_b @button_gradient_color_a;
+@define-color button_active_gradient_color_a shade (@button_gradient_color_b, 0.7);
+@define-color button_active_gradient_color_b shade (@button_gradient_color_a, 0.7);
 
 @define-color button_hover_gradient_color_a shade (@button_gradient_color_a, 1.10);
 @define-color button_hover_gradient_color_b shade (@button_gradient_color_b, 1.02);
