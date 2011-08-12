@@ -21,8 +21,8 @@
     -GtkScrolledWindow-scrollbar-spacing: 0;
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
 
-    -GtkToolItemGroup-expander-size: 17;
-    -GtkExpander-expander-size: 17;
+    -GtkToolItemGroup-expander-size: 11;
+    -GtkExpander-expander-size: 11;
 
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;

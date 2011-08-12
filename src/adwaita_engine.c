@@ -494,17 +494,23 @@ adwaita_engine_render_expander (GtkThemingEngine *engine,
   gdouble side, offset;
   gint line_width;
   GtkBorder border;
-
-  /* draw the expander as if it was 11px instead of the allocated 17px,
-   * so that we can have a bit of padding between the view edge and the
-   * expander itself.
-   */
-  x += 3;
-  y += 3;
-  width -= 6;
-  height -= 6;
+  const GtkWidgetPath *path = gtk_theming_engine_get_path (engine);
 
   side = floor (MIN (width, height));
+
+  if (gtk_widget_path_is_type (path, GTK_TYPE_TREE_VIEW) &&
+      (side == 17))
+    {
+      /* HACK: draw the expander as if it was 11px instead of the allocated 17px,
+       * so that we can have a bit of padding between the view edge and the
+       * expander itself.
+       */
+      x += 3;
+      y += 3;
+      width -= 6;
+      height -= 6;
+      side -= 6;
+    }
 
   x += width / 2 - side / 2;
   y += height / 2 - side / 2;
