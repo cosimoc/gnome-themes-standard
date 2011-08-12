@@ -110,21 +110,21 @@
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#4c4c4c"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="15.069135"
-     inkscape:cx="-13.09217"
-     inkscape:cy="8.5342841"
+     inkscape:cx="0.51179599"
+     inkscape:cy="10.591469"
      inkscape:document-units="px"
      inkscape:current-layer="g6305"
      showgrid="true"
      borderlayer="true"
      inkscape:showpageshadow="false"
      inkscape:window-width="1280"
-     inkscape:window-height="741"
+     inkscape:window-height="742"
      inkscape:window-x="0"
      inkscape:window-y="26"
      inkscape:window-maximized="1"
@@ -160,12 +160,12 @@
        id="g6305"
        style="display:inline;enable-background:new">
       <g
-         style="opacity:1;display:inline;enable-background:new"
+         style="opacity:1;display:inline;enable-background:new;fill:#363b3b;fill-opacity:1"
          id="g16917"
          transform="matrix(1.153842,0,0,1.1538439,-159.84182,-44.153221)">
         <path
            sodipodi:type="arc"
-           style="color:#000000;fill:#222222;stroke:#4a4a4a;stroke-width:0.76453793000000003;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:100;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new;fill-opacity:1"
+           style="color:#000000;fill:#363b3b;stroke:#5f5f5f;stroke-width:0.76453793000000003;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:100;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new;fill-opacity:1"
            id="path16919"
            sodipodi:cx="660.96808"
            sodipodi:cy="255.0668"
