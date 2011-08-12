@@ -653,11 +653,7 @@ GtkTreeMenu .menuitem * {
 
 /* this controls the general appearance of the menubar */
 .menubar {
-    background-image: -gtk-gradient (linear,
-				     left top, left bottom,
-				     from (@theme_bg_color),
-				     color-stop (0.45, shade (@theme_bg_color, 0.97)),
-				     to (@theme_bg_color));
+    border-color: @theme_bg_color;
     border-width: 0;
     border-style: none;
     padding: 4;
