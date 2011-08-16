@@ -1,3 +1,15 @@
+3.1.5
+=====
+
+Improve WM theme for titlebars and buttons
+Improve buttons, scales, sliders, progressbars for the dark theme
+Use a new style for GtkComboBox widgets with entries
+Fix combobox left/right padding
+Improve GtkTreeView expander styling
+Prelight the spinbutton arrows
+Use the new gtk-focus-visible Gtk setting
+Fix trough style class matching for custom widgets
+
 3.1.4
 =====
 
