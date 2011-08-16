@@ -72,10 +72,13 @@
     border-image: url("assets/entry-border-focused.svg") 2 / 2 stretch;
 }
 
+.primary-toolbar GtkComboBox.combobox-entry .button,
 GtkComboBox.combobox-entry .button {
     border-image: url("assets/entry-border-normal.svg") 2 / 2 2 2 0 stretch;
 }
 
+.primary-toolbar GtkComboBox.combobox-entry .button:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:active,
 GtkComboBox.combobox-entry .button:active,
 GtkComboBox.combobox-entry .button:hover:active {
     border-image: url("assets/combobox-entry-border-active.svg") 2 / 2 2 2 0 stretch;

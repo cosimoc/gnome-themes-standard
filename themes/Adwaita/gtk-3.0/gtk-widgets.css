@@ -140,7 +140,9 @@ GtkStatusbar {
 
 .entry,
 GtkComboBox.combobox-entry .button,
-GtkComboBox.combobox-entry .button:prelight {
+GtkComboBox.combobox-entry .button:prelight,
+.primary-toolbar GtkComboBox.combobox-entry .button,
+.primary-toolbar GtkComboBox.combobox-entry .button:prelight {
     background-image: -gtk-gradient(linear,
                                     left top, left bottom,
                                     from(@entry_background_a),
@@ -505,6 +507,7 @@ GtkComboBox .button *:prelight {
     color: @theme_text_color;
 }
 
+.primary-toolbar GtkComboBox.combobox-entry .button,
 GtkComboBox.combobox-entry .button {
     border-width: 1 1 1 0;
     border-radius: 0 3 3 0;
@@ -513,11 +516,15 @@ GtkComboBox.combobox-entry .button {
     -adwaita-focus-fill-color: alpha (@theme_base_color, 0.0);
 }
 
+.primary-toolbar GtkComboBox.combobox-entry .button *:active,
+.primary-toolbar GtkComboBox.combobox-entry .button *:prelight,
 GtkComboBox.combobox-entry .button *:active,
 GtkComboBox.combobox-entry .button *:prelight {
     color: @internal_element_prelight;
 }
 
+.primary-toolbar GtkComboBox.combobox-entry .button:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:active,
 GtkComboBox.combobox-entry .button:active,
 GtkComboBox.combobox-entry .button:hover:active {
     background-image: -gtk-gradient(linear,

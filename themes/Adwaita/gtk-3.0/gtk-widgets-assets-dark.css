@@ -72,6 +72,9 @@
     border-image: url("assets/entry-border-focused-dark.svg") 2 / 2 stretch;
 }
 
+.primary-toolbar GtkComboBox.combobox-entry .button:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:active,
+.primary-toolbar GtkComboBox.combobox-entry .button,
 GtkComboBox.combobox-entry .button:active,
 GtkComboBox.combobox-entry .button:hover:active,
 GtkComboBox.combobox-entry .button {
