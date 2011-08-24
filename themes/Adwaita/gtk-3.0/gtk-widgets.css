@@ -369,9 +369,12 @@ GtkScrolledWindow.frame {
 /***********
  * Buttons *
  ***********/
-.button {
+.button,
+.button.menuitem.menubar {
     padding: 1 4;
+}
 
+.button {
     -adwaita-focus-fill-color: alpha (@theme_base_color, 0.35);
     -adwaita-focus-border-gradient: -gtk-gradient (linear,
                                                    left top, left bottom,
@@ -752,6 +755,22 @@ GtkTreeMenu .menuitem * {
 
 .menuitem.radio:active:prelight {
     background-image: url("assets/radio-menuitem-checked-selected.svg");
+}
+
+/***************
+ * Menu Button *
+ ***************/
+.button.menuitem.menubar:active,
+.button.menuitem.menubar *:active {
+    color: @theme_text_color;
+    background-image: none;
+    background-color: @menu_bg_color;
+
+    border-radius: 5 5 0 0;
+    border-image: none;
+    border-width: 1 1 0 1;
+    border-color: shade(@button_border, 1.30);
+    border-style: solid;
 }
 
 /****************
