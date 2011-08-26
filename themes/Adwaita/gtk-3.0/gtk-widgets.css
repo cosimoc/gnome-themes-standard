@@ -391,6 +391,8 @@ GtkScrolledWindow.frame {
     -GtkButton-default-border: 0;
     -GtkButton-inner-border: 0;
 
+    color: @theme_text_color;
+
     border-radius: 3;
     border-width: 1;
     border-style: none;
