@@ -949,10 +949,8 @@ GtkTreeMenu .menuitem * {
 }
 
 /* primary toolbar raised buttons */
-.primary-toolbar .toolbar .raised .button,
-.primary-toolbar.toolbar .raised .button,
-.primary-toolbar .toolbar .raised.button,
-.primary-toolbar.toolbar .raised.button {
+.toolbar .raised .button,
+.toolbar .raised.button {
     border-width: 1;
     border-style: none;
     padding: 3;
@@ -965,31 +963,23 @@ GtkTreeMenu .menuitem * {
     -GtkWidget-focus-line-width: 2;
 }
 
-.primary-toolbar .toolbar .raised .button:insensitive,
-.primary-toolbar.toolbar .raised .button:insensitive,
-.primary-toolbar .toolbar .raised.button:insensitive,
-.primary-toolbar.toolbar .raised.button:insensitive {
+.toolbar .raised .button:insensitive,
+.toolbar .raised.button:insensitive {
     background-image: none;
 }
 
-.primary-toolbar .toolbar .raised .button:hover,
-.primary-toolbar.toolbar .raised .button:hover,
-.primary-toolbar .toolbar .raised.button:hover,
-.primary-toolbar.toolbar .raised.button:hover {
+.toolbar .raised .button:hover,
+.toolbar .raised.button:hover {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (@button_hover_gradient_color_a),
 				     to (@button_hover_gradient_color_b));
 }
 
-.primary-toolbar .toolbar .raised .button:active,
-.primary-toolbar .toolbar .raised .button:hover:active,
-.primary-toolbar.toolbar .raised .button:hover:active,
-.primary-toolbar.toolbar .raised .button:active,
-.primary-toolbar .toolbar .raised.button:active,
-.primary-toolbar .toolbar .raised.button:hover:active,
-.primary-toolbar.toolbar .raised.button:hover:active,
-.primary-toolbar.toolbar .raised.button:active {
+.toolbar .raised .button:active,
+.toolbar .raised .button:hover:active,
+.toolbar .raised.button:hover:active,
+.toolbar .raised.button:active {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
                                      from (@button_raised_active_gradient_color_a),
@@ -997,59 +987,56 @@ GtkTreeMenu .menuitem * {
     background-color: @theme_base_color;
 }
 
-.primary-toolbar .toolbar .raised .button:insensitive:active,
-.primary-toolbar.toolbar .raised .button:insensitive:active,
-.primary-toolbar .toolbar .raised.button:insensitive:active,
-.primary-toolbar.toolbar .raised.button:insensitive:active {
+.toolbar .raised .button:insensitive:active
+.toolbar .raised.button:insensitive:active {
     border-style: solid;
     border-width: 1;
 }
 
 /* setup shadows */
-.primary-toolbar.toolbar .raised .button,
-.primary-toolbar .toolbar .raised .button,
-.primary-toolbar.toolbar .raised.button,
-.primary-toolbar .toolbar .raised.button {
+.toolbar .raised .button,
+.toolbar .raised.button {
     icon-shadow: 0 1 @theme_base_color;
     text-shadow: 0 1 @theme_base_color;
 }
 
-.primary-toolbar.toolbar .raised .button *:active,
-.primary-toolbar .toolbar .raised .button *:active,
-.primary-toolbar.toolbar .raised .button *:insensitive,
-.primary-toolbar .toolbar .raised .button *:insensitive
-.primary-toolbar.toolbar .raised.button *:active,
-.primary-toolbar .toolbar .raised.button *:active,
-.primary-toolbar.toolbar .raised.button *:insensitive,
-.primary-toolbar .toolbar .raised.button *:insensitive {
+.toolbar .raised .button *:active,
+.toolbar .raised .button *:insensitive
+.toolbar .raised.button *:active,
+.toolbar .raised.button *:insensitive {
     icon-shadow: none;
     text-shadow: none;
 }
 
 /* nth-child for linked regions */
-.primary-toolbar.toolbar .raised.linked .button,
-.primary-toolbar.toolbar .raised.linked .button:active,
-.primary-toolbar.toolbar .raised.linked.button,
-.primary-toolbar.toolbar .raised.linked.button:active {
+.toolbar .raised.linked .button,
+.toolbar .raised.linked .button:active,
+.toolbar .raised.linked.button,
+.toolbar .raised.linked.button:active {
     border-width: 1 0;
     border-radius: 0;
 
     box-shadow: inset 1 0 @button_raised_linked_shadow;
 }
 
-.primary-toolbar.toolbar .raised.linked.button:nth-child(first),
-.primary-toolbar.toolbar .raised.linked.button:active:nth-child(first),
-.primary-toolbar.toolbar .raised.linked:nth-child(first) .button,
-.primary-toolbar.toolbar .raised.linked:nth-child(first) .button:active {
+.toolbar .raised.linked .button *:active,
+.toolbar .raised.linked.button *:active {
+    icon-shadow: none;
+}
+
+.toolbar .raised.linked.button:nth-child(first),
+.toolbar .raised.linked.button:active:nth-child(first),
+.toolbar .raised.linked:nth-child(first) .button,
+.toolbar .raised.linked:nth-child(first) .button:active {
     border-width: 1 0 1 1;
 
     box-shadow: none;
 }
 
-.primary-toolbar.toolbar .raised.linked.button:nth-child(last),
-.primary-toolbar.toolbar .raised.linked.button:active:nth-child(last),
-.primary-toolbar.toolbar .raised.linked:nth-child(last) .button,
-.primary-toolbar.toolbar .raised.linked:nth-child(last) .button:active {
+.toolbar .raised.linked.button:nth-child(last),
+.toolbar .raised.linked.button:active:nth-child(last),
+.toolbar .raised.linked:nth-child(last) .button,
+.toolbar .raised.linked:nth-child(last) .button:active {
     border-width: 1 1 1 0;
 }
 
