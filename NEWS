@@ -1,3 +1,13 @@
+3.1.90
+======
+
+Use a flat style for radiobuttons on sidebars
+Enable raised/linked areas on non-primary toolbars
+Support menubar toolbars
+Support menu active state for button
+Fix tooltips background
+Fix fail whale dialog button prelight
+
 3.1.5
 =====
 
