@@ -800,50 +800,6 @@ adwaita_engine_render_handle (GtkThemingEngine *engine,
 }
 
 static void
-adwaita_engine_render_line (GtkThemingEngine *engine,
-                            cairo_t *cr,
-                            gdouble x0,
-                            gdouble y0,
-                            gdouble x1,
-                            gdouble y1)
-{
-  const GtkWidgetPath *path;
-
-  path = gtk_theming_engine_get_path (engine);
-
-  if ((gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MARK) &&
-       gtk_widget_path_is_type (path, GTK_TYPE_SCALE)) ||
-      (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_SEPARATOR) &&
-       gtk_widget_path_is_type (path, GTK_TYPE_TREE_VIEW)))
-    {
-      GtkStateFlags state;
-      GdkRGBA bg;
-
-      state = gtk_theming_engine_get_state (engine);
-      gtk_theming_engine_get_background_color (engine, state, &bg);
-
-      cairo_save (cr);
-
-      cairo_set_line_cap (cr, CAIRO_LINE_CAP_SQUARE);
-      cairo_set_line_width (cr, 1);
-
-      cairo_move_to (cr, x0 + 0.5, y0 + 0.5);
-      cairo_line_to (cr, x1 + 0.5, y1 + 0.5);
-
-      gdk_cairo_set_source_rgba (cr, &bg);
-      cairo_stroke (cr);
-
-      cairo_restore (cr);
-    }
-  else
-    {
-      GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_line
-        (engine, cr,
-         x0, y0, x1, y1);
-    }
-}
-
-static void
 adwaita_engine_class_init (AdwaitaEngineClass *klass)
 {
   GtkThemingEngineClass *engine_class = GTK_THEMING_ENGINE_CLASS (klass);
@@ -859,7 +815,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
   engine_class->render_activity = adwaita_engine_render_activity;
   engine_class->render_slider = adwaita_engine_render_slider;
   engine_class->render_handle = adwaita_engine_render_handle;
-  engine_class->render_line = adwaita_engine_render_line;
 
   gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
                                         g_param_spec_boxed ("focus-border-color",
