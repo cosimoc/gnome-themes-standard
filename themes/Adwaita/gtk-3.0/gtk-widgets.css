@@ -712,9 +712,11 @@ GtkTreeMenu .menuitem * {
 
 .menuitem:insensitive,
 .menuitem *:insensitive {
-    /* there is some weird alpha precomposing issues with this - ghosts on dark background */
-    color: mix (@menu_fg_color, @menu_bg_color, 0.8);
-    background-color: shade (@menu_bg_color, 1.10);
+    color: mix (@menu_fg_color, @menu_bg_color, 0.6);
+}
+
+.menuitem .accelerator:insensitive {
+    color: mix (@menu_fg_color, @menu_bg_color, 0.7);
 }
 
 .menuitem .accelerator {
