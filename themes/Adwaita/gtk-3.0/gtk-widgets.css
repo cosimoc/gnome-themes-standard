@@ -103,6 +103,7 @@ GtkWindow {
     border-radius: 2;
 }
 
+GtkTreeView .separator,
 .separator {
     color: darker (@theme_bg_color);
 }
