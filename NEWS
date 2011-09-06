@@ -1,3 +1,10 @@
+3.1.91
+======
+
+Make the text color for insensitive menu entries a bit darker
+Use stock gtk_render_line() implementation from GtkThemingEngine
+Apply a linked style for filechooser pathbar buttons
+
 3.1.90
 ======
 
