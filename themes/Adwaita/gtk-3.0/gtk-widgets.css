@@ -1474,21 +1474,6 @@ GtkCalendar.highlight {
     color: mix (@theme_selected_fg_color, @theme_base_color, 0.50);
 }
 
-ApDocView, /* Abiword */
-EogScrollView, /* Eog */
-CheeseThumbView /* Cheese */
-{
-    background-color: @chrome_bg_color;
-    -EogScrollView-shadow-type: none;
-}
-
-/* gnome-terminal */
-TerminalScreen {
-    background-color: @theme_base_color;
-    color: @theme_fg_color;
-    -TerminalScreen-background-darkness: 0.95;
-}
-
 /**********************
  * Fallback Mode Panel
  **********************/
