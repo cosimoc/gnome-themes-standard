@@ -61,6 +61,10 @@ NautilusSearchBar .entry {
     -GtkEntry-inner-border: 3;
 }
 
+NautilusSearchBar .entry.image {
+    color: @nautilus_cluebar_color;
+}
+
 .nautilus-cluebar-label {
     font: bold;
     color: @theme_base_color;
