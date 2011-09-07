@@ -28,8 +28,10 @@ AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
 AM_GLIB_GNU_GETTEXT
 
-PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 3.1.18 librsvg-2.0,,
-                  AC_MSG_ERROR([GTK+-3.0 is required to compile gnome-themes-standard]))
+GTK_VERSION_REQUIRED=3.1.18
+
+PKG_CHECK_MODULES(GTK, gtk+-3.0 >= $GTK_VERSION_REQUIRED librsvg-2.0,,
+                  AC_MSG_ERROR([GTK+ $GTK_VERSION_REQUIRED is required to compile gnome-themes-standard]))
 
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
