@@ -124,6 +124,13 @@ GtkStatusbar {
     -GtkStatusbar-shadow-type: none;
 }
 
+.dnd {
+    border-width: 1;
+    border-style: solid;
+    border-color: @theme_selected_bg_color;
+    border-radius: 0;
+}
+
 /****************
  * Text Entries *
  ****************/
