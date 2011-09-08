@@ -523,10 +523,18 @@ GtkComboBox .separator {
     -GtkWidget-vertical-separator: 0;
 }
 
-GtkComboBox .entry {
+GtkComboBox .entry,
+GtkComboBox .entry:nth-child(first) {
     border-width: 1 0 1 1;
     border-radius: 3 0 0 3;
     border-image-width: 2 0 2 2;
+}
+
+/* for RTL languages */
+GtkComboBox .entry:nth-child(last) {
+    border-width: 1 1 1 0;
+    border-radius: 0 3 3 0;
+    border-image-width: 2 2 2 0;
 }
 
 GtkComboBox .button {
@@ -536,6 +544,24 @@ GtkComboBox .button {
 
 GtkComboBox .button *:prelight {
     color: @theme_text_color;
+}
+
+.primary-toolbar GtkComboBox.combobox-entry .button,
+GtkComboBox.combobox-entry .button,
+.primary-toolbar GtkComboBox.combobox-entry .button:nth-child(last),
+GtkComboBox.combobox-entry .button:nth-child(last) {
+    border-width: 1 1 1 0;
+    border-radius: 0 3 3 0;
+
+    padding: 2 3;
+    -adwaita-focus-fill-color: alpha (@theme_base_color, 0.0);
+}
+
+/* for RTL languages */
+.primary-toolbar GtkComboBox.combobox-entry .button:nth-child(first),
+GtkComboBox.combobox-entry .button:nth-child(first) {
+    border-width: 1 0 1 1;
+    border-radius: 3 0 0 3;
 }
 
 .primary-toolbar GtkComboBox.combobox-entry .button,
@@ -557,7 +583,11 @@ GtkComboBox.combobox-entry .button *:prelight {
 .primary-toolbar GtkComboBox.combobox-entry .button:active,
 .primary-toolbar GtkComboBox.combobox-entry .button:hover:active,
 GtkComboBox.combobox-entry .button:active,
-GtkComboBox.combobox-entry .button:hover:active {
+GtkComboBox.combobox-entry .button:hover:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:active:nth-child(last),
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:active:nth-child(last),
+GtkComboBox.combobox-entry .button:active:nth-child(last),
+GtkComboBox.combobox-entry .button:hover:active:nth-child(last) {
     background-image: -gtk-gradient(linear,
                                     left top, left bottom,
                                     from(shade(@entry_background_a, 0.95)),
@@ -566,6 +596,13 @@ GtkComboBox.combobox-entry .button:hover:active {
                                     to(shade(@entry_background_d, 0.95)));
 
     box-shadow: 1 0 inset shade(@frame_color, 1.50);
+}
+
+.primary-toolbar GtkComboBox.combobox-entry .button:active:nth-child(first),
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:active:nth-child(first),
+GtkComboBox.combobox-entry .button:active:nth-child(first),
+GtkComboBox.combobox-entry .button:hover:active:nth-child(first) {
+    box-shadow: -1 0 inset shade(@frame_color, 1.50);
 }
 
 /**************
