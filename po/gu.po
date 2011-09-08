@@ -7,15 +7,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gu\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard&component=general\n"
-"POT-Creation-Date: 2011-02-16 22:07+0000\n"
-"PO-Revision-Date: 2011-02-17 12:19+0530\n"
-"Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
-"Language-Team: Gujarati\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=gnome-themes-standard&component=general\n"
+"POT-Creation-Date: 2011-03-01 17:06+0000\n"
+"PO-Revision-Date: 2011-09-08 14:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: gu_IN <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
@@ -29,4 +30,28 @@ msgstr "Adwaita"
 #: ../themes/Adwaita/index.theme.in.h:2
 msgid "There is only one"
 msgstr "ત્યાં ફક્ત એક છે"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "ઉચ્ચ વિરોધાભાસ"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "ઉચ્ચ વિરોધાભાસ થીમ"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "ઉચ્ચ વિરોધાભાસ વિપરીત"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "ઉચ્ચ વિરોધાભાસ વિપરીત થીમ"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "ઓછુ વિરોધાભાસ"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "ઓછુ વિરોધાભાસ થીમ"
 
