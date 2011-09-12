@@ -154,11 +154,11 @@
 </draw_ops>
 
 
-<draw_ops name="titlebar_fill_focused_alt2"> <!-- gradient for attached and modal dialogs titlebar-->
+<draw_ops name="titlebar_fill_attached_focused"> <!-- gradient for attached and modal dialogs titlebar-->
 	<gradient type="vertical" x="0" y="0" width="width" height="title_height">
-		<color value="gtk:bg[NORMAL]"/>
-		<color value="blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.4" />
-		<color value="gtk:bg[NORMAL]" />
+		<color value="gtk:custom(wm_bg_b,gtk:bg[NORMAL])" />
+		<color value="gtk:custom(wm_bg_a,blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.4)" />
+		<color value="gtk:custom(wm_bg_b,gtk:bg[NORMAL])" />
 	</gradient>
 </draw_ops>
 
@@ -194,13 +194,8 @@
 	<include name="hilight" />
 </draw_ops>
 
-<draw_ops name="titlebar_focused_alt">
-	<include name="titlebar_fill_focused" />
-	<include name="hilight" />
-</draw_ops>
-
-<draw_ops name="titlebar_focused_alt2"> <!-- titlebar for attached and modal dialogs -->
-	<include name="titlebar_fill_focused_alt2" />
+<draw_ops name="titlebar_attached_focused"> <!-- titlebar for attached and modal dialogs -->
+	<include name="titlebar_fill_attached_focused" />
 </draw_ops>
 
 <draw_ops name="rounded_titlebar_focused">
@@ -1396,7 +1391,7 @@
 
 <frame_style name="modal_dialog_focused" geometry="modal">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_focused_alt2" />
+	<piece position="titlebar" draw_ops="titlebar_attached_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="border_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -1611,7 +1606,7 @@
 
 <frame_style name="attached_focused" geometry="attached">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_focused_alt2" />
+	<piece position="titlebar" draw_ops="titlebar_attached_focused" />
 	<piece position="overlay" draw_ops="border_attached_focused" />
 	<button function="close" state="normal"><draw_ops></draw_ops></button>
 	<button function="close" state="pressed"><draw_ops></draw_ops></button>
