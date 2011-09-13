@@ -25,7 +25,7 @@ TerminalScreen {
 
 .nautilus-desktop.nautilus-canvas-item {
     color: @theme_bg_color;
-    text-shadow: 0 1 black;
+    text-shadow: 1 1 black;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active {
