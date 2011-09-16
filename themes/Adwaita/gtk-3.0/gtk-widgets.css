@@ -1105,32 +1105,38 @@ GtkTreeMenu .menuitem * {
     border-width: 1 1 1 0;
 }
 
-GtkPathBar .button,
+GtkPathBar .button {
+    border-image: none;
+    border-style: solid;
+    border-width: 1 0;
+    border-radius: 0;
+    border-color: @button_border;
+    box-shadow: 1 0 inset shade(@button_border, 1.40), -1 0 inset @button_border;
+}
+
 GtkPathBar .button:active,
 GtkPathBar .button:active:hover {
     border-image: none;
-    border-style: solid;
-    border-width: 1 0 1 1;
-    border-radius: 0;
-
-    border-color: @button_border;
-    box-shadow: 1 0 inset shade(@button_border, 1.40);
-}
-
-GtkPathBar .button:active,
-GtkPathBar .button:active:hover {
-    box-shadow: 1 0 inset shade(@button_border, 1.20);
+    box-shadow: -1 0 inset @button_border;
 }
 
 GtkPathBar .button:nth-child(first),
-GtkPathBar .button:active:nth-child(first) {
+GtkPathBar .button:active:nth-child(first),
+GtkPathBar .button:active:hover:nth-child(first) {
     border-radius: 3 0 0 3;
+    border-left-width: 1;
+    box-shadow: -1 0 inset @button_border;
 }
 
-GtkPathBar .button:nth-child(last),
-GtkPathBar .button:active:nth-child(last) {
-    border-width: 1;
+GtkPathBar .button:nth-child(last) {
+    box-shadow: 1 0 inset shade(@button_border, 1.40);
     border-radius: 0 3 3 0;
+    border-right-width: 1;
+}
+
+GtkPathBar .button:active:nth-child(last),
+GtkPathBar .button:active:hover:nth-child(last) {
+    box-shadow: none;
 }
 
 .primary-toolbar.toolbar .entry {
