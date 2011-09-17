@@ -166,11 +166,6 @@
 	<rectangle color="C_titlebar_unfocused" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
 
-<draw_ops name="titlebar_unfocused">
-	<include name="titlebar_fill_unfocused" />
-	<line x1="0" y1="height-1" x2="width-1" y2="height-1" color="C_icons_unfocused" />
-</draw_ops>
-
 <draw_ops name="hilight">
 	<line x1="0" y1="1" x2="width-1" y2="1" color="C_titlebar_focused_hilight" />
 	<gradient type="vertical" x="1" y="1" width="1" height="height-4">
@@ -1360,7 +1355,7 @@
 
 <frame_style name="dialog_unfocused" geometry="nobuttons">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_unfocused" />
+	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />
 	<piece position="overlay" draw_ops="rounded_border_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
@@ -1439,7 +1434,7 @@
 
 <frame_style name="modal_dialog_unfocused" geometry="modal">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_unfocused" />
+	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />
 	<piece position="overlay" draw_ops="border_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
@@ -1523,7 +1518,7 @@
 
 <frame_style name="utility_unfocused" geometry="small_unfocused">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_unfocused" />
+	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />
 	<piece position="overlay" draw_ops="border_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
