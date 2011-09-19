@@ -821,12 +821,20 @@ GtkTreeMenu .menuitem * {
     background-image: url("assets/checkbox-menuitem-checked-selected.svg");
 }
 
+.menuitem.check:active:insensitive {
+    background-image: url("assets/checkbox-menuitem-checked-insensitive.svg");
+}
+
 .menuitem.radio:active {
     background-image: url("assets/radio-menuitem-checked.svg");
 }
 
 .menuitem.radio:active:prelight {
     background-image: url("assets/radio-menuitem-checked-selected.svg");
+}
+
+.menuitem.radio:active:insensitive {
+    background-image: url("assets/radio-menuitem-checked-insensitive.svg");
 }
 
 /***************
