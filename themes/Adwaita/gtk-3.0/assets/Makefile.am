@@ -15,8 +15,9 @@ assets_DATA = 		\
 	checkbox-unchecked-insensitive.svg \
 	checkbox-unchecked-insensitive-dark.svg \
 	checkbox-mixed.svg \
-	checkbox-mixed-insensitive.svg \
 	checkbox-mixed-dark.svg \
+	checkbox-mixed-insensitive.svg \
+	checkbox-mixed-insensitive-dark.svg \
 	checkbox-menuitem-checked.svg \
 	checkbox-menuitem-checked-selected.svg \
 	combobox-entry-border-active.svg \
@@ -41,8 +42,9 @@ assets_DATA = 		\
 	radio-unselected-insensitive.svg \
 	radio-unselected-insensitive-dark.svg \
 	radio-mixed.svg \
-	radio-mixed-insensitive.svg \
 	radio-mixed-dark.svg \
+	radio-mixed-insensitive.svg \
+	radio-mixed-insensitive-dark.svg \
 	radio-menuitem-checked.svg \
 	radio-menuitem-checked-selected.svg \
 	scale-slider-horizontal.svg \
