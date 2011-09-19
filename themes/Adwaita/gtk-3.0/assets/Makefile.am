@@ -15,6 +15,7 @@ assets_DATA = 		\
 	checkbox-unchecked-insensitive.svg \
 	checkbox-unchecked-insensitive-dark.svg \
 	checkbox-mixed.svg \
+	checkbox-mixed-insensitive.svg \
 	checkbox-mixed-dark.svg \
 	checkbox-menuitem-checked.svg \
 	checkbox-menuitem-checked-selected.svg \
@@ -40,6 +41,7 @@ assets_DATA = 		\
 	radio-unselected-insensitive.svg \
 	radio-unselected-insensitive-dark.svg \
 	radio-mixed.svg \
+	radio-mixed-insensitive.svg \
 	radio-mixed-dark.svg \
 	radio-menuitem-checked.svg \
 	radio-menuitem-checked-selected.svg \

@@ -34,6 +34,12 @@
     background-image: url("assets/checkbox-mixed.svg");
 }
 
+.check:inconsistent:insensitive,
+.check row:selected:inconsistent:insensitive,
+.check row:selected:focused:inconsistent:insensitive {
+    background-image: url("assets/checkbox-mixed-insensitive.svg");
+}
+
 .radio,
 .radio row:selected,
 .radio row:selected:focused {
@@ -62,6 +68,12 @@
 .radio row:selected:inconsistent,
 .radio row:selected:focused:inconsistent {
     background-image: url("assets/radio-mixed.svg");
+}
+
+.radio:inconsistent:insensitive,
+.radio row:selected:inconsistent:insensitive,
+.radio row:selected:focused:inconsistent:insensitive {
+    background-image: url("assets/radio-mixed-insensitive.svg");
 }
 
 .sidebar .radio:active,
