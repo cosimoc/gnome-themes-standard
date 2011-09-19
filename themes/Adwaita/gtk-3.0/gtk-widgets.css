@@ -825,6 +825,14 @@ GtkTreeMenu .menuitem * {
     background-image: url("assets/checkbox-menuitem-checked-insensitive.svg");
 }
 
+.menuitem.check:inconsistent {
+    background-image: url("assets/checkbox-menuitem-mixed.svg");
+}
+
+.menuitem.check:inconsistent:insensitive {
+    background-image: url("assets/checkbox-menuitem-mixed-insensitive.svg");
+}
+
 .menuitem.radio:active {
     background-image: url("assets/radio-menuitem-checked.svg");
 }
@@ -835,6 +843,14 @@ GtkTreeMenu .menuitem * {
 
 .menuitem.radio:active:insensitive {
     background-image: url("assets/radio-menuitem-checked-insensitive.svg");
+}
+
+.menuitem.radio:inconsistent {
+    background-image: url("assets/radio-menuitem-mixed.svg");
+}
+
+.menuitem.radio:inconsistent:insensitive {
+    background-image: url("assets/radio-menuitem-mixed-insensitive.svg");
 }
 
 /***************
