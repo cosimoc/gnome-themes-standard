@@ -1,3 +1,14 @@
+3.1.92
+======
+
+Improve theming for radio/check menuitems for insensitive and mixed states
+Move applications overrides into a separate stylesheet
+Improve pathbar active button styling
+Remove highlight from active button border
+Add selectors for the DND style class
+Support RTL mode for GtkComboBox entries
+Improve attached modal dialogs
+
 3.1.91
 ======
 
