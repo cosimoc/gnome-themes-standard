@@ -1217,11 +1217,16 @@ GtkPathBar .button:active:hover:nth-child(last) {
 }
 
 /* setup shadows */
+.inline-toolbar.toolbar .button,
+.inline-toolbar.toolbar .button:active,
+.inline-toolbar.toolbar .button:active:hover {
+    border-image: none;
+}
+
 .inline-toolbar.toolbar .button {
     padding: 1;
     icon-shadow: 0 1 @theme_base_color;
 
-    border-image: none;
     border-color: shade(@button_border, 0.95);
     border-radius: 0;
     border-width: 1 0 1 1;
@@ -1254,6 +1259,11 @@ GtkPathBar .button:active:hover:nth-child(last) {
 .inline-toolbar.toolbar GtkToolButton:nth-child(last) .button {
     border-radius: 0 3 3 0;
     border-width: 1;
+}
+
+.inline-toolbar.toolbar GtkToolButton:active:nth-child(last) .button,
+.inline-toolbar.toolbar .button:active:nth-child(last) {
+    box-shadow: none;
 }
 
 /***********
