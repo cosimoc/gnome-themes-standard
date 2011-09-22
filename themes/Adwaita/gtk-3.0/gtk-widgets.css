@@ -468,7 +468,8 @@ GtkScrolledWindow.frame {
 }
 
 .notebook tab {
-    padding: 3 8 0;
+    padding: 3 2 0;
+
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@notebook_tab_gradient_a),
@@ -478,7 +479,7 @@ GtkScrolledWindow.frame {
 }
 
 .notebook tab:active {
-    border-width: 1;
+    padding: 6 2 0;
 
     -adwaita-border-gradient: -gtk-gradient (linear,
                                              left top, left bottom,
@@ -495,6 +496,8 @@ GtkScrolledWindow.frame {
 .notebook tab .button,
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
+    padding: 1;
+
     border-style: none;
     border-image: none;
     background-color: alpha (@theme_bg_color, 0.0);
