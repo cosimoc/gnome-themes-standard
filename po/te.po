@@ -1,0 +1,54 @@
+# Telugu translation for gnome-themes-standard.
+# Copyright (C) 2011 gnome-themes-standard's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-themes-standard package.
+# Praveen Illa <mail2ipn@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-themes-standard master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-09-21 19:50+0000\n"
+"PO-Revision-Date: 2011-09-23 09:46+0530\n"
+"Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
+"Language-Team: తెలుగు <indlinux-telugu@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
+msgid "Default Background"
+msgstr "అప్రమేయ నేపథ్యం"
+
+#: ../themes/Adwaita/index.theme.in.h:1
+msgid "Adwaita"
+msgstr "అద్వైత"
+
+#: ../themes/Adwaita/index.theme.in.h:2
+msgid "There is only one"
+msgstr "అక్కడ ఒకటే ఉన్నది"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "అధిక వ్యత్యాసం"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "అధిక వ్యత్యాస థీము"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "అధిక వ్యత్యాస విలోమం"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "అధిక వ్యత్యాస విలోమ థీము"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "తక్కువ వ్యత్యాసం"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "తక్కువ వ్యత్యాసం థీము"
