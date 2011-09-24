@@ -5,9 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=gnome-themes-standard&component=general\n"
-"POT-Creation-Date: 2011-03-02 07:02+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-03-21 07:11+0000\n"
 "PO-Revision-Date: 2011-03-14 16:59+0000\n"
 "Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
 "Language-Team: Assamese <kde-i18n-doc@kde.org>\n"
@@ -52,4 +52,3 @@ msgstr "নিম্ন কনট্ৰাস্ট"
 #: ../themes/LowContrast/index.theme.in.h:2
 msgid "Low contrast theme"
 msgstr "নিম্ন কনট্ৰাস্ট থীম"
-
