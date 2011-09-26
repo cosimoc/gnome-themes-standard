@@ -4,7 +4,7 @@ AC_PREREQ(2.53)
 AC_INIT([gnome-themes-standard], [3.1.92],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard])
 
-AM_INIT_AUTOMAKE([1.9 tar-ustar foreign dist-bzip2 no-dist-gzip])
+AM_INIT_AUTOMAKE([1.9 tar-ustar foreign dist-xz no-dist-gzip])
 
 PKG_PROG_PKG_CONFIG([0.19])
 
