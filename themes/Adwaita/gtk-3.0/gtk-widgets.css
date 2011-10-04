@@ -1603,13 +1603,10 @@ GtkCalendar.highlight {
  * Fallback Mode Panel
  **********************/
 
-PanelWidget,
-PanelApplet,
-PanelApplet > GtkMenuBar.menubar,
 .gnome-panel-menu-bar,
+PanelWidget,
 PanelAppletFrame,
-PanelMenuBar.menubar,
-PanelToplevel {
+PanelApplet {
     background-color: @os_chrome_bg_color;
     background-image: none;
     color: @os_chrome_fg_color;
@@ -1620,37 +1617,47 @@ ClockBox,
     font: bold;
 }
 
-PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
-.gnome-panel-menu-bar.menuitem:prelight {
+.gnome-panel-menu-bar .menuitem:prelight {
     background-color: @os_chrome_selected_bg_color;
     color: @os_chrome_selected_fg_color;
-    border-color: lighter (@os_chrome_selected_bg_color);
 }
 
-/* panel buttons (clock, tasklist etc) */
-PanelApplet GtkToggleButton {
-    background-color: @os_chrome_bg_color;
+.gnome-panel-menu-bar .menuitem *:prelight {
+    color: @os_chrome_selected_fg_color;
+    text-shadow: @os_chrome_bg_color 0 1;
+}
+
+PanelApplet .button,
+PanelApplet .button:prelight {
+    padding: 6 0;
+
+    border-image: none;
+    border-width: 0;
+    border-radius: 0;
+
     background-image: none;
-    border-color: @os_chrome_bg_color;
-    border-width: 1;
+    background-color: alpha(@theme_base_color, 0.0);
+
     color: @os_chrome_fg_color;
 }
 
-PanelApplet GtkToggleButton:prelight:active,
-PanelApplet GtkToggleButton:active {
-    background-color: @os_chrome_selected_bg_color;
+PanelApplet .button:active:prelight,
+PanelApplet .button:active {
+    border-image: none;
     background-image: none;
-    border-color: lighter (@os_chrome_selected_bg_color);
-    border-width: 1;
+    background-color: @os_chrome_selected_bg_color;
+    border-width: 0;
+    border-radius: 0;
+}
+
+PanelApplet *:prelight {
     color: @os_chrome_selected_fg_color;
 }
 
-PanelApplet GtkToggleButton:prelight {
-    background-color: @os_chrome_bg_color;
-    background-image: none;
-    border-color: @os_chrome_bg_color;
-    border-width: 1;
+PanelApplet *:active,
+PanelApplet *:prelight:active {
     color: @os_chrome_selected_fg_color;
+    text-shadow: @os_chrome_bg_color 0 1;
 }
 
 NaTrayApplet {
