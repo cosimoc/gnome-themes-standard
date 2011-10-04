@@ -1604,6 +1604,7 @@ GtkCalendar.highlight {
  **********************/
 
 .gnome-panel-menu-bar,
+PanelToplevel,
 PanelWidget,
 PanelAppletFrame,
 PanelApplet {
