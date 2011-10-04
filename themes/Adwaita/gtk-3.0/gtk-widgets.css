@@ -1630,7 +1630,7 @@ ClockBox,
 
 PanelApplet .button,
 PanelApplet .button:prelight {
-    padding: 6 0;
+    padding: 4;
 
     border-image: none;
     border-width: 0;
