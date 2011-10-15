@@ -468,7 +468,7 @@ GtkScrolledWindow.frame {
 }
 
 .notebook tab {
-    padding: 2;
+    padding: 3;
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@notebook_tab_gradient_a),
@@ -491,19 +491,19 @@ GtkScrolledWindow.frame {
 }
 
 .notebook tab.top {
-    padding: 3 2 0;
+    padding: 4 2 0;
 }
 
 .notebook tab.top:active {
-    padding: 6 2 0;
+    padding: 7 2 0;
 }
 
 .notebook tab.bottom {
-    padding: 0 2 3;
+    padding: 0 2 4;
 }
 
 .notebook tab.bottom:active {
-    padding: 0 2 6;
+    padding: 0 2 7;
 }
 
 .notebook tab.left,
