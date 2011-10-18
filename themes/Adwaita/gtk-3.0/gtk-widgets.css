@@ -1440,6 +1440,7 @@ column-header {
     padding: 1 2;
 }
 
+column-header.button,
 column-header .button {
     border-width: 0 1 1 0;
     border-radius: 0;
@@ -1455,6 +1456,7 @@ column-header .button GtkArrow {
     color: @internal_element_color;
 }
 
+column-header:nth-child(last).button,
 column-header:nth-child(last) .button {
     border-width: 0 0 1 0;
 }
