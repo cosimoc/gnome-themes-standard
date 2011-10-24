@@ -1401,7 +1401,7 @@ GtkSwitch.slider:insensitive {
     border-image: none;
 
     background-image: none;
-    background-color: @insensitive_bg_color;
+    background-color: @switch_slider_insensitive_bg;
 }
 
 GtkViewport,
