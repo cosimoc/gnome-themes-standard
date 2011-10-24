@@ -1610,6 +1610,7 @@ GtkCalendar.highlight {
  **********************/
 
 .gnome-panel-menu-bar,
+PanelApplet > GtkMenuBar.menubar,
 PanelToplevel,
 PanelWidget,
 PanelAppletFrame,
@@ -1620,16 +1621,19 @@ PanelApplet {
 }
 
 ClockBox,
-.gnome-panel-menu-bar {
+.gnome-panel-menu-bar,
+PanelApplet > GtkMenuBar.menubar {
     font: bold;
 }
 
-.gnome-panel-menu-bar .menuitem:prelight {
+.gnome-panel-menu-bar .menuitem:prelight,
+PanelApplet > GtkMenuBar.menubar .menuitem:prelight {
     background-color: @os_chrome_selected_bg_color;
     color: @os_chrome_selected_fg_color;
 }
 
-.gnome-panel-menu-bar .menuitem *:prelight {
+.gnome-panel-menu-bar .menuitem *:prelight,
+PanelApplet > GtkMenuBar.menubar .menuitem *:prelight {
     color: @os_chrome_selected_fg_color;
     text-shadow: @os_chrome_bg_color 0 1;
 }
