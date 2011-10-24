@@ -47,13 +47,12 @@
 @define-color notebook_tab_gradient_b @button_gradient_color_b;
 
 @define-color switch_slider_color shade(@theme_bg_color, 0.95);
-@define-color switch_slider_active_border shade(@active_switch_bg_color_a, 0.60);
+@define-color switch_slider_active_border shade(@switch_trough_active_bg_a, 0.60);
 @define-color switch_slider_insensitive_bg @insensitive_border_color;
 
 @define-color switch_trough_active_color @theme_text_color;
-
-@define-color active_switch_bg_color_a shade (@theme_selected_bg_color, 0.85);
-@define-color active_switch_bg_color_b @theme_selected_bg_color;
+@define-color switch_trough_active_bg_a shade (@theme_selected_bg_color, 0.85);
+@define-color switch_trough_active_bg_b @theme_selected_bg_color;
 
 @define-color highlighted_border @button_border;
 @define-color internal_element_color #888a85;
