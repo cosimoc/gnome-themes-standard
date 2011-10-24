@@ -83,8 +83,6 @@ assets_DATA = 		\
 	sidebar-radio-selected.svg \
 	sidebar-radio-selected-dark.svg \
 	sidebar-radio-selected-prelight.svg \
-	switch-slider-border.svg \
-	switch-slider-active-border.svg \
 	trough-border-horizontal.svg \
 	trough-border-horizontal-dark.svg \
 	trough-border-vertical.svg \

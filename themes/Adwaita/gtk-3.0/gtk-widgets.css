@@ -1380,8 +1380,10 @@ GtkSwitch.trough:insensitive {
 GtkSwitch.slider {
     border-width: 1;
     border-radius: 1;
-    border-style: none;
-    /* border-image defined in -assets variant */
+    border-style: solid;
+    border-color: shade(@switch_slider_color, 0.75);
+
+    box-shadow: 0 -1 inset alpha(@theme_base_color, 0.50);
 
     padding: 2;
 
@@ -1394,11 +1396,12 @@ GtkSwitch.slider {
 }
 
 GtkSwitch.slider:active {
-    border-color: @switch_slider_border;
+    border-color: @switch_slider_active_border;
 }
 
 GtkSwitch.slider:insensitive {
     border-image: none;
+    box-shadow: none;
 
     background-image: none;
     background-color: @switch_slider_insensitive_bg;

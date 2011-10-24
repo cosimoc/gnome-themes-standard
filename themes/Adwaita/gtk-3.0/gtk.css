@@ -82,7 +82,7 @@
 @define-color active_switch_bg_color_b #84b8ee;
 
 @define-color switch_slider_color #eeeeec;
-@define-color switch_slider_border #2a79cb;
+@define-color switch_slider_active_border #2a79cb;
 @define-color switch_slider_insensitive_bg @insensitive_bg_color;
 
 @define-color switch_trough_active_color @theme_base_color;

@@ -250,12 +250,3 @@ GtkScale.scale-has-marks-below.slider.vertical:insensitive {
 .progressbar.vertical {
     border-image: url("assets/progressbar-border-vertical-dark.svg") 3 / 3 stretch;
 }
-
-/* TODO: need dark versions */
-GtkSwitch.slider {
-    border-image: url("assets/switch-slider-border.svg") 2 / 2 stretch;
-}
-
-GtkSwitch.slider:active {
-    border-image: url("assets/switch-slider-active-border.svg") 2 / 2 stretch;
-}

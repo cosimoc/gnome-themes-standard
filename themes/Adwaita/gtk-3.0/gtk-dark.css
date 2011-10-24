@@ -46,8 +46,8 @@
 @define-color notebook_tab_gradient_a @button_gradient_color_a;
 @define-color notebook_tab_gradient_b @button_gradient_color_b;
 
-@define-color switch_slider_color #111113;
-@define-color switch_slider_border #a5b8cc;
+@define-color switch_slider_color shade(@theme_bg_color, 0.95);
+@define-color switch_slider_active_border shade(@active_switch_bg_color_a, 0.60);
 @define-color switch_slider_insensitive_bg @insensitive_border_color;
 
 @define-color switch_trough_active_color @theme_text_color;

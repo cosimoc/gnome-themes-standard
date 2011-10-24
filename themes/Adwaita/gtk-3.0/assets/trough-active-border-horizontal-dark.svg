@@ -15,7 +15,7 @@
    id="svg19404"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="scale-trough-border-progress-horizontal.svg">
+   sodipodi:docname="trough-active-border-horizontal-dark.svg">
   <defs
      id="defs19406">
     <linearGradient
@@ -52,11 +52,11 @@
     <linearGradient
        id="linearGradient4759">
       <stop
-         style="stop-color:#914100;stop-opacity:1;"
+         style="stop-color:#1c3350;stop-opacity:1;"
          offset="0"
          id="stop4761" />
       <stop
-         style="stop-color:#ce5c00;stop-opacity:1;"
+         style="stop-color:#1f3959;stop-opacity:1;"
          offset="1"
          id="stop4763" />
     </linearGradient>
@@ -72,10 +72,10 @@
        inkscape:collect="always" />
     <linearGradient
        gradientTransform="matrix(0.16730591,0,0,3.3332328,-6.2354097,-765.68415)"
-       y2="235.67775"
-       x2="-18.164774"
-       y1="230.23718"
-       x1="-18.164774"
+       y2="234.52895"
+       x2="-7.3942027"
+       y1="229.77534"
+       x1="-7.3942027"
        gradientUnits="userSpaceOnUse"
        id="linearGradient19484"
        xlink:href="#linearGradient4759"
@@ -89,7 +89,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.197802"
-     inkscape:cx="4.7438555"
+     inkscape:cx="5.1159863"
      inkscape:cy="4.3960396"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -97,7 +97,7 @@
      inkscape:document-units="px"
      inkscape:window-width="1124"
      inkscape:window-height="797"
-     inkscape:window-x="84"
+     inkscape:window-x="83"
      inkscape:window-y="193"
      inkscape:window-maximized="0" />
   <metadata
@@ -108,7 +108,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -135,7 +135,7 @@
        height="12"
        width="1"
        id="rect6687"
-       style="opacity:1;fill:#dddddd;fill-opacity:0.50196081;stroke:none;display:inline;enable-background:new"
+       style="opacity:1;fill:#3465a4;fill-opacity:0.27450982;stroke:none;display:inline;enable-background:new"
        transform="matrix(0,1,-1,0,0,0)" />
   </g>
 </svg>
