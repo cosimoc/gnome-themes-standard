@@ -471,6 +471,10 @@ GtkScrolledWindow.frame {
     -GtkNotebook-tab-curvature: 6;
 }
 
+.notebook GtkViewport {
+    background-color: @theme_base_color;
+}
+
 .notebook tab {
     padding: 3;
     background-image: -gtk-gradient (linear,
