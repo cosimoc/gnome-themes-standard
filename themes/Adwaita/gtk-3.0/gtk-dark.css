@@ -50,6 +50,11 @@
 @define-color switch_slider_border #a5b8cc;
 @define-color switch_slider_insensitive_bg @insensitive_border_color;
 
+@define-color switch_trough_active_color @theme_text_color;
+
+@define-color active_switch_bg_color_a shade (@theme_selected_bg_color, 0.85);
+@define-color active_switch_bg_color_b @theme_selected_bg_color;
+
 @define-color highlighted_border @button_border;
 @define-color internal_element_color #888a85;
 @define-color internal_element_prelight #333333;
@@ -91,9 +96,6 @@
 
 @define-color trough_bg_color_a #30312f;
 @define-color trough_bg_color_b #41433f;
-
-@define-color active_switch_bg_color_a shade (@theme_selected_bg_color, 0.85);
-@define-color active_switch_bg_color_b @theme_selected_bg_color;
 
 @define-color treeview_focus_border shade (@theme_selected_bg_color, 1.20);
 
