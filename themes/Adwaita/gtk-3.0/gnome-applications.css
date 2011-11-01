@@ -111,3 +111,42 @@ NautilusWindow > GtkTable > .pane-separator {
     border-style: solid;
     border-color: shade (@theme_bg_color, 0.66);
 }
+
+/* gnome-documents */
+.dropdown,
+.dropdown .view {
+    background-color: shade (@theme_bg_color, 1.02);
+}
+
+.dropdown .frame {
+    border-width: 0 1 1 1;
+    border-style: solid;
+    border-radius: 0 0 5 5;
+}
+
+.dropdown .radio,
+.dropdown .radio:focused,
+.dropdown .radio:selected {
+    background-image: none;
+    background-color: alpha(@theme_base_color, 0.0);
+}
+
+.dropdown .radio:active,
+.dropdown .radio:active:focused,
+.dropdown .radio:active:prelight {
+    background-image: url("assets/sidebar-radio-checked.svg");
+}
+
+.dropdown .radio:prelight {
+    background-image: url("assets/sidebar-radio-prelight.svg");
+}
+
+.dropdown .radio:active:selected,
+.dropdown .radio:active:selected:focused {
+    background-image: url("assets/sidebar-radio-selected.svg");
+}
+
+.dropdown .radio:selected:prelight,
+.dropdown .radio:selected:focused {
+    background-image: url("assets/sidebar-radio-selected-prelight.svg");
+}
