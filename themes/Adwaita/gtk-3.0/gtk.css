@@ -7,6 +7,7 @@
 @define-color fg_color #2e3436;
 @define-color tooltip_fg_color #ffffff;
 @define-color selected_fg_color #ffffff;
+@define-color unfocused_bg_color #f8f8f8;
 
 /* Colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_base_color @base_color;
@@ -17,6 +18,7 @@
 @define-color theme_tooltip_fg_color @tooltip_fg_color;
 @define-color theme_selected_bg_color @selected_bg_color;
 @define-color theme_selected_fg_color @selected_fg_color;
+@define-color theme_unfocused_bg_color @unfocused_bg_color;
 
 @define-color menu_bg_color shade (@theme_bg_color, 1.1);
 @define-color menu_fg_color @theme_fg_color;

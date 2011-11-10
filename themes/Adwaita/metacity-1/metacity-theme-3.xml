@@ -14,10 +14,10 @@
 <constant name="C_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
 <constant name="C_border_attached_focused" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
 <constant name="C_titlebar_focused_hilight" value="gtk:custom(wm_highlight,gtk:base[NORMAL])" />
-<constant name="C_titlebar_unfocused" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.4" />
+<constant name="C_titlebar_unfocused" value="gtk:bg[WINDOW-UNFOCUSED]" />
 <constant name="C_title_focused" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.1" />
 <constant name="C_title_focused_hilight" value="gtk:custom(wm_title_highlight,gtk:base[NORMAL])" />
-<constant name="C_title_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.9" />
+<constant name="C_title_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.5" />
 <!-- color of the button icons -->
 <constant name="C_icons_focused" value="gtk:text[SELECTED]" />
 <constant name="C_icons_focused_pressed" value="#ffffff" />
@@ -1627,6 +1627,7 @@
 
 <frame_style name="attached_unfocused" geometry="attached">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
+	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
 	<piece position="overlay" draw_ops="border_unfocused" />
 	<button function="close" state="normal"><draw_ops></draw_ops></button>
 	<button function="close" state="pressed"><draw_ops></draw_ops></button>
