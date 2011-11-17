@@ -59,6 +59,7 @@ themes/Adwaita/cursors/Makefile
 themes/Adwaita/gtk-2.0/Makefile
 themes/Adwaita/gtk-3.0/Makefile
 themes/Adwaita/gtk-3.0/assets/Makefile
+themes/Adwaita/gtk-3.0/borders/Makefile
 themes/Adwaita/metacity-1/Makefile
 themes/LowContrast/Makefile
 themes/LowContrast/gtk-2.0/Makefile

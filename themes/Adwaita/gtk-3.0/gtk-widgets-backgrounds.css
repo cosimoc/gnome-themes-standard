@@ -1,0 +1,103 @@
+/* Button background */
+.button,
+.primary-toolbar .button.raised,
+.primary-toolbar .raised .button,
+.primary-toolbar .button.raised:focus,
+.primary-toolbar .raised .button:focus {
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+                                     from (@button_gradient_color_a),
+                                     color-stop (0.2, @button_gradient_color_a),
+                                     color-stop (0.8, @button_gradient_color_b),
+                                     to (@button_gradient_color_b));
+}
+
+/* Pushed button background */
+.button:active,
+.button:hover:active,
+.toolbar .button:active,
+.toolbar .button:hover:active,
+.primary-toolbar .button:active:focus {
+    background-image: -gtk-gradient (linear,
+    				     left top, left bottom,
+                                     from (@button_active_gradient_color_a),
+				     to (alpha (@button_active_gradient_color_b, 0.13)));
+}
+
+/* Prelit button background */
+.button:hover,
+.toolbar .button:hover,
+.primary-toolbar .button.raised:hover,
+.primary-toolbar .raised .button:hover {
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (@button_hover_gradient_color_a),
+				     to (@button_hover_gradient_color_b));
+}
+
+.primary-toolbar .button:hover {
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (alpha (@theme_base_color, 0.0)),
+				     color-stop (0.54, alpha (shade (@theme_base_color, 0.92), 0.49)),
+			             to (alpha (@theme_base_color, 0.0)));
+}
+
+/* Insensitive button background */
+.button:insensitive {
+    background-image: none;
+    background-color: @insensitive_bg_color;
+
+    /* FIXME? - Not sure about insensitive colors
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (@insensitive_bg_color),
+                                     color-stop (0.4, @insensitive_bg_color),
+				     to (shade (@insensitive_bg_color, 0.97)));
+    */
+}
+
+/* Pushed + Insensitive button background */
+.button:active:insensitive {
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (shade (@insensitive_bg_color, 0.95)),
+                                     color-stop (0.4, @insensitive_bg_color),
+				     to (@insensitive_bg_color)); 
+}
+
+/* Entry background */
+.entry,
+GtkComboBox.combobox-entry .button,
+GtkComboBox.combobox-entry .button:prelight,
+GtkComboBox.combobox-entry .button:focus,
+.primary-toolbar GtkComboBox.combobox-entry .button,
+.primary-toolbar GtkComboBox.combobox-entry .button:prelight,
+.primary-toolbar GtkComboBox.combobox-entry .button:focus {
+    background-image: -gtk-gradient(linear,
+                                    left top, left bottom,
+                                    from(@entry_background_a),
+                                    color-stop(0.20, @entry_background_b),
+                                    color-stop(0.85, @entry_background_c),
+                                    to(@entry_background_d));
+}
+
+/* ComboboxEntry button background */
+.primary-toolbar GtkComboBox.combobox-entry .button:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:active,
+GtkComboBox.combobox-entry .button:active,
+GtkComboBox.combobox-entry .button:hover:active {
+    background-image: -gtk-gradient(linear,
+                                    left top, left bottom,
+                                    from(shade(@entry_background_a, 0.95)),
+                                    color-stop(0.20, shade(@entry_background_b, 0.95)),
+                                    color-stop(0.85, shade(@entry_background_c, 0.95)),
+                                    to(shade(@entry_background_d, 0.95)));
+}
+
+/* Insensitive entry background */
+.entry:insensitive,
+GtkComboBox.combobox-entry .button:insensitive {
+    background-color: @insensitive_bg_color;
+    background-image: none;
+}

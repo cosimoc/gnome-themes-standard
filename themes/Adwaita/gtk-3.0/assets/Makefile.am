@@ -1,8 +1,6 @@
 assetsdir = $(datadir)/themes/Adwaita/gtk-3.0/assets
 assets_DATA = 		\
-	button-active-border.svg \
 	button-active-border-dark.svg \
-	button-border.svg \
 	button-border-dark.svg \
 	button-default-border.svg \
 	button-default-border-dark.svg \
@@ -23,14 +21,9 @@ assets_DATA = 		\
 	checkbox-menuitem-checked-selected.svg \
 	checkbox-menuitem-mixed.svg \
 	checkbox-menuitem-mixed-insensitive.svg \
-	combobox-entry-border-active.svg \
-	entry-border-focused.svg \
 	entry-border-focused-dark.svg \
-	entry-border-normal.svg \
 	entry-border-normal-dark.svg \
-	primary-toolbar-button-active-border.svg \
 	primary-toolbar-button-active-border-dark.svg \
-	primary-toolbar-raised-button-border.svg \
 	primary-toolbar-raised-button-border-dark.svg \
 	progressbar-border.svg \
 	progressbar-border-dark.svg \
