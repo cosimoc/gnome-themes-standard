@@ -463,7 +463,7 @@ GtkScrolledWindow.frame {
  * tabs          *
  *****************/
 .notebook {
-    padding: 2;
+    padding: 0;
 
     border-color: @notebook_border;
     border-style: solid;
