@@ -52,11 +52,18 @@ GtkWindow {
 
 GtkWindow:window-unfocused {
     background-color: @theme_unfocused_bg_color;
-    color: red; /* This is very needed */
 }
 
 * {
     background-color: @theme_bg_color;
+}
+
+*:window-unfocused {
+    color: @insensitive_fg_color;
+}
+
+*:insensitive:window-unfocused {
+    color: mix (@theme_unfocused_bg_color, @insensitive_fg_color, 0.5);
 }
 
 *:hover {
@@ -1295,44 +1302,28 @@ GtkSwitch {
 }
 
 GtkSwitch.trough {
-    color: shade (@internal_element_color, 0.60);
-
-    border-radius: 1;
-    border-width: 1;
-    border-style: none;
-    /* border-image defined in the -assets variant */
-
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@trough_bg_color_a),
-                                     to (@trough_bg_color_b));
+    border-radius: 3;
+    border-width: 1 1 2 1;
 }
 
 GtkSwitch.trough:active {
     color: @switch_trough_active_color;
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@switch_trough_active_bg_a),
-                                     to (@switch_trough_active_bg_b));
 }
 
 GtkSwitch.trough:insensitive {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.9);
-
-    border-image: none;
-    border-style: solid;
 }
 
 GtkSwitch.slider {
     border-width: 1;
-    border-radius: 1;
+    border-radius: 2;
     border-style: solid;
-    border-color: shade(@switch_slider_color, 0.75);
+    border-color: mix (@button_border, @theme_text_color, 0.5);
 
     box-shadow: 0 -1 inset alpha(@theme_base_color, 0.50);
 
-    padding: 2;
+    padding: 2 2 3 2;
 
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
@@ -1340,6 +1331,11 @@ GtkSwitch.slider {
                                      to (@switch_slider_color));
 
     -adwaita-switch-grip-color: shade (@switch_slider_color, 0.97);
+}
+
+GtkSwitch.slider:window-unfocused,
+GtkSwitch.slider:active:window-unfocused {
+    border-color: @theme_unfocused_button_active_color;;
 }
 
 GtkSwitch.slider:active {

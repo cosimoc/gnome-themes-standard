@@ -39,7 +39,8 @@
 .button:hover:active,
 .toolbar .button:active,
 .toolbar .button:hover:active,
-.primary-toolbar .button:active:focus {
+.primary-toolbar .button:active:focus,
+GtkSwitch.trough {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
                                      from (@button_active_gradient_color_a),
@@ -117,7 +118,9 @@ GtkComboBox.combobox-entry .button:focus,
 /* Entry background for :window-unfocused */
 .entry:window-unfocused,
 GtkComboBox.combobox-entry .button:window-unfocused
-.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused {
+.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused,
+GtkSwitch.trough:window-unfocused,
+GtkSwitch.trough:active:window-unfocused {
     background-image: none;
     background-color: @theme_base_color;
 }
@@ -137,7 +140,8 @@ GtkComboBox.combobox-entry .button:hover:active {
 
 /* Insensitive entry background */
 .entry:insensitive,
-GtkComboBox.combobox-entry .button:insensitive {
+GtkComboBox.combobox-entry .button:insensitive,
+.entry:insensitive:window-unfocused {
     background-color: @insensitive_bg_color;
     background-image: none;
 }
@@ -160,4 +164,12 @@ GtkComboBox.combobox-entry .button:insensitive {
 .inline-toolbar.toolbar:window-unfocused  {
     background-image: none;
     background-color: @theme_unfocused_toolbar_color;
+}
+
+/* Active switch background*/
+GtkSwitch.trough:active {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@switch_trough_active_bg_a),
+                                     to (@switch_trough_active_bg_b));
 }

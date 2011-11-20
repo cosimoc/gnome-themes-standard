@@ -13,7 +13,7 @@
 /* Colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_base_color @base_color;
 @define-color theme_text_color @text_color;
-@define-color theme_unfocused_text_color shade(@text_color, 1.2);
+@define-color theme_unfocused_text_color shade(@text_color, 1.4);
 @define-color theme_bg_color @bg_color;
 @define-color theme_fg_color @fg_color;
 @define-color theme_tooltip_bg_color @tooltip_bg_color;
@@ -89,7 +89,7 @@
 
 @define-color switch_trough_active_color @theme_base_color;
 @define-color switch_trough_active_bg_a #509ae7;
-@define-color switch_trough_active_bg_b #84b8ee;
+@define-color switch_trough_active_bg_b #a5d0ff;
 
 @define-color progressbar_background_a #76b0ec;
 @define-color progressbar_background_b #1f72c6;
