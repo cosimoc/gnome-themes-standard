@@ -38,6 +38,25 @@ GtkComboBox.combobox-entry .entry:focus,
     border-width: 1 1 2 1;
 }
 
+/* buttons border for window unfocused state*/
+
+.primary-toolbar .raised .button:window-unfocused {
+    border-width: 1;
+    border-style: solid;
+    /*border-color: @theme_unfocused_border_color;*/
+    border-color: @theme_unfocused_button_active_color;
+    border-radius: 3;
+}
+
+.primary-toolbar .button:active:window-unfocused,
+.primary-toolbar .raised .button:active:window-unfocused {
+    border-width: 1;
+    border-style: solid;
+    border-color: @theme_unfocused_border_color;
+    border-radius: 3;
+}
+
+
 /* primary toolbar - generic element borders */
 .primary-toolbar .entry,
 .primary-toolbar GtkComboBox.combobox-entry .entry,
@@ -57,6 +76,27 @@ GtkComboBox.combobox-entry .entry:focus,
     border-image: url("borders/primary-toolbar-generic-border.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
+}
+
+/* primary toolbar - generic element borders for window unfocused state */
+.primary-toolbar .entry:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .entry:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .button:prelight:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .button:active:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .button:focus:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .button:insensitive:window-unfocused,
+.primary-toolbar .raised .button:window-unfocused,
+.primary-toolbar .button:active:window-unfocused,
+.primary-toolbar .button:active:hover:window-unfocused,
+.primary-toolbar .button.raised:insensitive:window-unfocused,
+.primary-toolbar .raised .button:insensitive:window-unfocused,
+.primary-toolbar .raised .button:window-unfocused,
+.inline-toolbar.toolbar .button:active:window-unfocused,
+.inline-toolbar.toolbar .button:active:hover:window-unfocused,
+.inline-toolbar.toolbar .button:insensitive:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton .button:active:window-unfocused {
+    border-image: none;
 }
 
 /* primary toolbar - focused element borders */
@@ -138,4 +178,25 @@ GtkSwitch.slider:active {
 
 .progressbar.vertical {
     border-image: url("assets/progressbar-border-vertical.svg") 3 / 3 stretch;
+}
+
+/* border image removal for window unfocued stuf */
+.primary-toolbar .entry:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .entry:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .button:prelight:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .button:active:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .button:focus:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .button:insensitive:window-unfocused,
+.primary-toolbar .raised .button:window-unfocused,
+.primary-toolbar .button:active:window-unfocused,
+.primary-toolbar .button:active:hover:window-unfocused,
+.primary-toolbar .button.raised:insensitive:window-unfocused,
+.primary-toolbar .raised .button:insensitive:window-unfocused,
+.primary-toolbar .raised .button:window-unfocused,
+.inline-toolbar.toolbar .button:active:window-unfocused,
+.inline-toolbar.toolbar .button:active:hover:window-unfocused,
+.inline-toolbar.toolbar .button:insensitive:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton .button:active:window-unfocused {
+    border-image: none;
 }

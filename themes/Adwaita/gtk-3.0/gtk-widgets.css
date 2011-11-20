@@ -50,6 +50,11 @@ GtkWindow {
     color: @theme_fg_color;
 }
 
+GtkWindow:window-unfocused {
+    background-color: @theme_unfocused_bg_color;
+    color: red; /* This is very needed */
+}
+
 * {
     background-color: @theme_bg_color;
 }
@@ -1159,14 +1164,6 @@ GtkTreeMenu .menuitem * {
  */
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
-    background-image: -gtk-gradient (linear,
-				     left top,
-				     left bottom,
-				     from (@toolbar_gradient_base),
-				     color-stop (0.16, @toolbar_gradient_step1),
-				     color-stop (0.90, @toolbar_gradient_step2),
-				     to (@toolbar_gradient_final));
-
     border-width: 1 0 1 0;
     border-radius: 0;
     border-style: solid;
@@ -1175,6 +1172,11 @@ GtkTreeMenu .menuitem * {
 
     -GtkWidget-window-dragging: true;
     -GtkToolbar-button-relief: normal;
+}
+
+.primary-toolbar .toolbar:window-unfocused,
+.primary-toolbar.toolbar:window-unfocused {
+    border-color: @theme_unfocused_toolbar_color;
 }
 
 .primary-toolbar .toolbar:insensitive,
@@ -1216,16 +1218,6 @@ GtkTreeMenu .menuitem * {
     -GtkToolbar-button-relief: normal;
 
     padding: 4;
-
-    background-image: -gtk-gradient (linear,
-				     left top,
-				     left bottom,
-				     from (@toolbar_gradient_base),
-				     color-stop (0.16, @toolbar_gradient_step1),
-				     color-stop (0.90, @toolbar_gradient_step2),
-				     color-stop (0.98, @toolbar_gradient_final),
-                                     color-stop (0.99, shade (@theme_bg_color, 0.83)),
-				     to (shade (@theme_bg_color, 0.83)));
 }
 
 .inline-toolbar.toolbar:last-child {

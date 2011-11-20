@@ -11,6 +11,7 @@
 /* Colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_base_color @base_color;
 @define-color theme_text_color @text_color;
+@define-color theme_unfocused_text_color shade(@text_color, 1.2);
 @define-color theme_bg_color @bg_color;
 @define-color theme_fg_color @fg_color;
 @define-color theme_tooltip_bg_color @tooltip_bg_color;
@@ -60,6 +61,8 @@
 
 @define-color button_active_gradient_color_a #a2a9a2;
 @define-color button_active_gradient_color_b shade (@button_active_gradient_color_a, 0.83);
+
+@define-color theme_unfocused_button_active_color shade(@theme_unfocused_bg_color, 0.8); /* to be defined */
 
 @define-color button_hover_gradient_color_a @theme_base_color;
 @define-color button_hover_gradient_color_b shade (@button_gradient_color_a, 0.94);
@@ -121,6 +124,9 @@
 @define-color toolbar_gradient_step1 #bcbcb4;
 @define-color toolbar_gradient_step2 #d9d9d7;
 @define-color toolbar_gradient_final #e5e5e2;
+
+@define-color theme_unfocused_toolbar_color shade(@theme_unfocused_bg_color, 0.9);
+@define-color theme_unfocused_border_color shade(@theme_unfocused_bg_color, 0.9);
 
 @define-color toolbar_border_top shade (@theme_bg_color, 0.56);
 @define-color toolbar_border_bottom shade (@theme_bg_color, 0.83);

@@ -12,6 +12,28 @@
                                      to (@button_gradient_color_b));
 }
 
+/* Button background :window-unfocused */
+.button:window-unfocused,
+.primary-toolbar .button.raised:window-unfocused,
+.primary-toolbar .raised .button:window-unfocused {
+    background-image: none;
+    background-color: @theme_unfocused_bg_color;
+}
+
+/* Primary toolbar button background :window-unfocused */
+.primary-toolbar .button:window-unfocused,
+.primary-toolbar .button:hover:window-unfocused {
+    background-image: none;
+    background-color: transparent;
+}
+
+/* Button background :hover :window-unfocused */
+.primary-toolbar .button.raised:hover:window-unfocused,
+.primary-toolbar .raised .button:hover:window-unfocused {
+    background-image: none;
+    background-color: shade(@theme_unfocused_bg_color, 1.2);
+}
+
 /* Pushed button background */
 .button:active,
 .button:hover:active,
@@ -22,6 +44,16 @@
     				     left top, left bottom,
                                      from (@button_active_gradient_color_a),
 				     to (alpha (@button_active_gradient_color_b, 0.13)));
+}
+
+/* Pushed buttons background for window unfocused state */
+.button:active:window-unfocused,
+.button:hover:active:window-unfocused,
+.toolbar .button:active:window-unfocused,
+.toolbar .button:hover:active:window-unfocused,
+.primary-toolbar .button:active:window-unfocused {
+    background-image: none;
+    background-color: @theme_unfocused_button_active_color;
 }
 
 /* Prelit button background */
@@ -100,4 +132,25 @@ GtkComboBox.combobox-entry .button:hover:active {
 GtkComboBox.combobox-entry .button:insensitive {
     background-color: @insensitive_bg_color;
     background-image: none;
+}
+
+/* Primary and inline toolbars background */
+
+.primary-toolbar .toolbar,
+.primary-toolbar.toolbar,
+.inline-toolbar.toolbar  {
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+				     from (@toolbar_gradient_base),
+				     color-stop (0.16, @toolbar_gradient_step1),
+				     color-stop (0.90, @toolbar_gradient_step2),
+				     to (@toolbar_gradient_final));
+}
+
+.primary-toolbar .toolbar:window-unfocused,
+.primary-toolbar.toolbar:window-unfocused,
+.inline-toolbar.toolbar:window-unfocused  {
+    background-image: none;
+    background-color: @theme_unfocused_toolbar_color;
 }
