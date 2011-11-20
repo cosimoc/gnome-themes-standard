@@ -320,20 +320,9 @@ render_notebook_extension (GtkThemingEngine *engine,
       cairo_translate (cr, width, height);
     }
 
-  if (gap_side == GTK_POS_BOTTOM)
-    cairo_translate (cr,
-                     x + 0.5,
-                     (state & GTK_STATE_FLAG_ACTIVE) ?
-                     y + 1.0 : y);
-  else if (gap_side == GTK_POS_TOP)
-    cairo_translate (cr,
-                     x - 0.5,
-                     (state & GTK_STATE_FLAG_ACTIVE) ?
-                     y - 1.0 : y);
-
+  cairo_translate (cr, x, y);
   cairo_rotate (cr, angle);
 
-  width -= 1.0;
   draw_tab_shape_active (cr, tab_curvature, 0, 0, width, height);
 
   if (background_pattern != NULL)
