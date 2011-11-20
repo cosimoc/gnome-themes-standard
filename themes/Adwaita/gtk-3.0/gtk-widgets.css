@@ -424,7 +424,9 @@ GtkScrolledWindow.frame {
 .primary-toolbar .button,
 .primary-toolbar .button:hover,
 .primary-toolbar .button:focus,
-.primary-toolbar .button:insensitive {
+.primary-toolbar .button:insensitive,
+.primary-toolbar .button:window-unfocused,
+.primary-toolbar .button:insensitive:window-unfocused {
     border-image: none;
     border-style: none;
     border-width: 0;
@@ -765,8 +767,7 @@ GtkComboBox.combobox-entry .entry:first-child,
 GtkComboBox.combobox-entry .entry:focus:first-child,
 GtkComboBox.combobox-entry .button:first-child,
 GtkComboBox.combobox-entry .button:focus:first-child,
-GtkComboBox.combobox-entry .button:insensitive:first-child,
-GtkComboBox.combobox-entry .button:active:first-child {
+GtkComboBox.combobox-entry .button:insensitive:first-child {
     border-image-width: 3 0 4 3;
     border-radius: 3 0 0 3;
     border-right-width: 0;
@@ -779,6 +780,26 @@ GtkComboBox.combobox-entry .button:focus:last-child,
 GtkComboBox.combobox-entry .button:insensitive:last-child,
 GtkComboBox.combobox-entry .button:active:last-child {
     border-image-width: 3 3 4 0;
+    border-radius: 0 3 3 0;
+    border-left-width: 0;
+}
+
+GtkComboBox.combobox-entry .button:active:first-child:window-unfocused,
+GtkComboBox.combobox-entry .entry:first-child:window-unfocused,
+GtkComboBox.combobox-entry .button:first-child:window-unfocused,
+GtkComboBox.combobox-entry .button:insensitive:first-child:window-unfocused,
+GtkComboBox.combobox-entry .button:active:first-child:window-unfocused {
+    border-width: 1 0 1 1;
+    border-radius: 3 0 0 3;
+    border-right-width: 0;
+}
+
+GtkComboBox.combobox-entry .button:active:last-child:window-unfocused,
+GtkComboBox.combobox-entry .entry:last-child:window-unfocused,
+GtkComboBox.combobox-entry .button:last-child:window-unfocused,
+GtkComboBox.combobox-entry .button:insensitive:last-child:window-unfocused,
+GtkComboBox.combobox-entry .button:active:last-child:window-unfocused {
+    border-width: 1 1 1 0;
     border-radius: 0 3 3 0;
     border-left-width: 0;
 }

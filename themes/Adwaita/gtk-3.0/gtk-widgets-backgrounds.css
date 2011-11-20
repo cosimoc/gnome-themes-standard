@@ -114,7 +114,15 @@ GtkComboBox.combobox-entry .button:focus,
                                     to(@entry_background_d));
 }
 
-/* ComboboxEntry button background */
+/* Entry background for :window-unfocused */
+.entry:window-unfocused,
+GtkComboBox.combobox-entry .button:window-unfocused
+.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused {
+    background-image: none;
+    background-color: @theme_base_color;
+}
+
+/* ComboboxEntry pushed button background */
 .primary-toolbar GtkComboBox.combobox-entry .button:active,
 .primary-toolbar GtkComboBox.combobox-entry .button:hover:active,
 GtkComboBox.combobox-entry .button:active,
@@ -135,7 +143,6 @@ GtkComboBox.combobox-entry .button:insensitive {
 }
 
 /* Primary and inline toolbars background */
-
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar,
 .inline-toolbar.toolbar  {
