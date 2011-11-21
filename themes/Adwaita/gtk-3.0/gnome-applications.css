@@ -127,7 +127,7 @@ NautilusWindow .sidebar .frame {
     border-radius: 0;
 }
 
-NautilusWindow > GtkTable > .pane-separator {
+NautilusWindow > GtkGrid > .pane-separator {
     border-width: 1 1 0 0;
     border-style: solid;
     border-color: shade (@theme_bg_color, 0.66);
