@@ -50,20 +50,8 @@ GtkWindow {
     color: @theme_fg_color;
 }
 
-GtkWindow:window-unfocused {
-    background-color: @theme_unfocused_bg_color;
-}
-
 * {
     background-color: @theme_bg_color;
-}
-
-*:window-unfocused {
-    color: @insensitive_fg_color;
-}
-
-*:insensitive:window-unfocused {
-    color: mix (@theme_unfocused_bg_color, @insensitive_fg_color, 0.5);
 }
 
 *:hover {
@@ -413,9 +401,7 @@ GtkScrolledWindow.frame {
 .primary-toolbar .button,
 .primary-toolbar .button:hover,
 .primary-toolbar .button:focus,
-.primary-toolbar .button:insensitive,
-.primary-toolbar .button:window-unfocused,
-.primary-toolbar .button:insensitive:window-unfocused {
+.primary-toolbar .button:insensitive {
     border-image: none;
     border-style: none;
     border-width: 0;
@@ -769,26 +755,6 @@ GtkComboBox.combobox-entry .button:focus:last-child,
 GtkComboBox.combobox-entry .button:insensitive:last-child,
 GtkComboBox.combobox-entry .button:active:last-child {
     border-image-width: 3 3 4 0;
-    border-radius: 0 3 3 0;
-    border-left-width: 0;
-}
-
-GtkComboBox.combobox-entry .button:active:first-child:window-unfocused,
-GtkComboBox.combobox-entry .entry:first-child:window-unfocused,
-GtkComboBox.combobox-entry .button:first-child:window-unfocused,
-GtkComboBox.combobox-entry .button:insensitive:first-child:window-unfocused,
-GtkComboBox.combobox-entry .button:active:first-child:window-unfocused {
-    border-width: 1 0 1 1;
-    border-radius: 3 0 0 3;
-    border-right-width: 0;
-}
-
-GtkComboBox.combobox-entry .button:active:last-child:window-unfocused,
-GtkComboBox.combobox-entry .entry:last-child:window-unfocused,
-GtkComboBox.combobox-entry .button:last-child:window-unfocused,
-GtkComboBox.combobox-entry .button:insensitive:last-child:window-unfocused,
-GtkComboBox.combobox-entry .button:active:last-child:window-unfocused {
-    border-width: 1 1 1 0;
     border-radius: 0 3 3 0;
     border-left-width: 0;
 }
@@ -1185,11 +1151,6 @@ GtkTreeMenu .menuitem * {
     -GtkToolbar-button-relief: normal;
 }
 
-.primary-toolbar .toolbar:window-unfocused,
-.primary-toolbar.toolbar:window-unfocused {
-    border-color: @theme_unfocused_toolbar_color;
-}
-
 .primary-toolbar .toolbar:insensitive,
 .primary-toolbar.toolbar:insensitive {
     background-image: none;
@@ -1314,11 +1275,6 @@ GtkSwitch.slider {
                                      to (@switch_slider_color));
 
     -adwaita-switch-grip-color: shade (@switch_slider_color, 0.97);
-}
-
-GtkSwitch.slider:window-unfocused,
-GtkSwitch.slider:active:window-unfocused {
-    border-color: @theme_unfocused_button_active_color;;
 }
 
 GtkSwitch.slider:active {

@@ -11,6 +11,7 @@ theme_DATA = 		\
 	gtk-widgets-dark-overrides.css \
 	gtk-widgets-assets.css \
 	gtk-widgets-assets-dark.css \
+	gtk-widgets-window-unfocused.css \
 	settings.ini
 
 EXTRA_DIST = $(theme_DATA)

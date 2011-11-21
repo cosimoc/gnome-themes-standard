@@ -134,24 +134,4 @@ GtkScale.progressbar.vertical {
     border-image: url("assets/trough-active-border-vertical.svg") 2 / 2 stretch;
 }
 
-/* generic element borders for :window-unfocused */
-.entry:window-unfocused,
-GtkComboBox.combobox-entry .entry:window-unfocused,
-GtkComboBox.combobox-entry .button:window-unfocused,
-.primary-toolbar GtkComboBox.combobox-entry .entry:window-unfocused,
-.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused,
-.button:window-unfocused,
-.button:active:window-unfocused,
-.button:active:hover:window-unfocused,
-.button:insensitive:window-unfocused,
-.primary-toolbar .raised .button:window-unfocused,
-GtkComboBox .button:window-unfocused,
-GtkSwitch.through:window-unfocused,
-GtkSwitch.through:active:window-unfocused {
-    border-image: none;
-    border-width: 1;
-    border-style: solid;
-    border-color: @theme_unfocused_button_active_color;
-    /*border-color: red;*/
-    border-radius: 3;
-}
+

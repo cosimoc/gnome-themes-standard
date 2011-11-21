@@ -171,4 +171,5 @@
 @import url("gtk-widgets-borders.css");
 @import url("gtk-widgets-assets.css");
 @import url("gnome-applications.css");
-@import url("gtk-widgets.css"); /* I want this file to be the last to ovverride things */
+@import url("gtk-widgets.css");
+/* @import url("gtk-widgets-window-unfocused.css"); */

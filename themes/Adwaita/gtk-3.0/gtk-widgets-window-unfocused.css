@@ -1,0 +1,132 @@
+GtkWindow:window-unfocused {
+    background-color: @theme_unfocused_bg_color;
+}
+
+*:window-unfocused {
+    color: @insensitive_fg_color;
+}
+
+*:insensitive:window-unfocused {
+    color: mix (@theme_unfocused_bg_color, @insensitive_fg_color, 0.5);
+}
+
+.menubar:window-unfocused {
+    background-color: @theme_unfocused_bg_color;
+}
+
+.toolbar:window-unfocused {
+    background-color: @theme_unfocused_bg_color;
+}
+
+.primary-toolbar .toolbar:window-unfocused,
+.primary-toolbar.toolbar:window-unfocused {
+    border-color: @theme_unfocused_toolbar_color;
+}
+
+.primary-toolbar .toolbar:window-unfocused,
+.primary-toolbar.toolbar:window-unfocused,
+.inline-toolbar.toolbar:window-unfocused  {
+    background-image: none;
+    background-color: @theme_unfocused_toolbar_color;
+}
+
+.primary-toolbar .button:window-unfocused,
+.primary-toolbar .button:insensitive:window-unfocused {
+    border-image: none;
+    border-style: none;
+    border-width: 0;
+}
+
+/* Button background :window-unfocused */
+.button:window-unfocused,
+.primary-toolbar .button.raised:window-unfocused,
+.primary-toolbar .raised .button:window-unfocused {
+    background-image: none;
+    background-color: @theme_unfocused_bg_color;
+}
+
+/* Primary toolbar button background :window-unfocused */
+.primary-toolbar .button:window-unfocused,
+.primary-toolbar .button:hover:window-unfocused {
+    background-image: none;
+    background-color: transparent;
+}
+
+/* Button background :hover :window-unfocused */
+.primary-toolbar .button.raised:hover:window-unfocused,
+.primary-toolbar .raised .button:hover:window-unfocused {
+    background-image: none;
+    background-color: shade(@theme_unfocused_bg_color, 1.2);
+}
+
+/* Pushed buttons background for window unfocused state */
+.button:active:window-unfocused,
+.button:hover:active:window-unfocused,
+.toolbar .button:active:window-unfocused,
+.toolbar .button:hover:active:window-unfocused,
+.primary-toolbar .button:active:window-unfocused {
+    background-image: none;
+    background-color: @theme_unfocused_button_active_color;
+}
+
+/* Entry background */
+.entry:window-unfocused,
+GtkComboBox.combobox-entry .button:window-unfocused
+.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused,
+GtkSwitch.trough:window-unfocused,
+GtkSwitch.trough:active:window-unfocused {
+    background-image: none;
+    background-color: @theme_base_color;
+}
+
+.entry:insensitive:window-unfocused {
+    background-color: @insensitive_bg_color;
+    background-image: none;
+}
+
+GtkComboBox.combobox-entry .button:active:first-child:window-unfocused,
+GtkComboBox.combobox-entry .entry:first-child:window-unfocused,
+GtkComboBox.combobox-entry .button:first-child:window-unfocused,
+GtkComboBox.combobox-entry .button:insensitive:first-child:window-unfocused,
+GtkComboBox.combobox-entry .button:active:first-child:window-unfocused {
+    border-width: 1 0 1 1;
+    border-radius: 3 0 0 3;
+    border-right-width: 0;
+}
+
+GtkComboBox.combobox-entry .button:active:last-child:window-unfocused,
+GtkComboBox.combobox-entry .entry:last-child:window-unfocused,
+GtkComboBox.combobox-entry .button:last-child:window-unfocused,
+GtkComboBox.combobox-entry .button:insensitive:last-child:window-unfocused,
+GtkComboBox.combobox-entry .button:active:last-child:window-unfocused {
+    border-width: 1 1 1 0;
+    border-radius: 0 3 3 0;
+    border-left-width: 0;
+}
+
+GtkSwitch.slider:window-unfocused,
+GtkSwitch.slider:active:window-unfocused {
+    border-color: @theme_unfocused_button_active_color;;
+}
+
+/* generic element borders for :window-unfocused */
+.entry:window-unfocused,
+GtkComboBox.combobox-entry .entry:window-unfocused,
+GtkComboBox.combobox-entry .button:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .entry:window-unfocused,
+.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused,
+.button:window-unfocused,
+.button:active:window-unfocused,
+.button:active:hover:window-unfocused,
+.button:insensitive:window-unfocused,
+.primary-toolbar .raised .button:window-unfocused,
+GtkComboBox .button:window-unfocused,
+GtkSwitch.through:window-unfocused,
+GtkSwitch.through:active:window-unfocused {
+    border-image: none;
+    border-width: 1;
+    border-style: solid;
+    border-color: @theme_unfocused_button_active_color;
+    /*border-color: red;*/
+    border-radius: 3;
+}
