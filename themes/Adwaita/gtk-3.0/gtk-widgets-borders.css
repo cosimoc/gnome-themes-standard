@@ -134,4 +134,37 @@ GtkScale.progressbar.vertical {
     border-image: url("assets/trough-active-border-vertical.svg") 2 / 2 stretch;
 }
 
+/* column-headers borders */
+column-header.button,
+column-header .button,
+column-header.button:hover,
+column-header .button:hover,
+column-header.button:focus,
+column-header .button:focus,
+column-header.button:focus:hover,
+column-header .button:focus:hover,
+column-header.button:active:focus:hover,
+column-header .button:active:focus:hover,
+column-header.button:active:focus,
+column-header .button:active:focus,
+column-header.button:active:hover,
+column-header .button:active:hover {
+    border-image: url("borders/column-header-border.svg") 4 5 4 4 / 4 5 4 4 stretch;
+}
 
+column-header.button:last-child,
+column-header:last-child .button,
+column-header.button:hover:last-child,
+column-header:last-child .button:hover,
+column-header.button:focus:last-child,
+column-header:last-child .button:focus,
+column-header.button:focus:hover:last-child,
+column-header:last-child .button:focus:hover,
+column-header.button:active:focus:hover:last-child,
+column-header:last-child .button:active:focus:hover,
+column-header.button:active:focus:last-child,
+column-header:last-child .button:active:focus,
+column-header.button:active:hover:last-child,
+column-header:last-child .button:active:hover {
+    border-image: url("borders/column-header-border-last.svg") 4 / 4 stretch;
+}
