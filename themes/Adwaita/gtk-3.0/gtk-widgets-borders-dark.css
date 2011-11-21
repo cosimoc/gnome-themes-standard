@@ -13,7 +13,7 @@ GtkComboBox.combobox-entry .button:focus,
 .trough row:hover,
 GtkSwitch.trough,
 GtkSwitch.trough:insensitive {
-    border-image: url("borders/generic-border.svg") 3 3 4 3 / 3 3 4 3 stretch;
+    border-image: url("borders/generic-border-dark.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3;
     border-width: 1 1 2 1;
 }
@@ -24,14 +24,14 @@ GtkComboBox.combobox-entry .entry:focus,
 .button:focus:active,
 .button.default:active,
 GtkSwitch.trough:active { 
-    border-image: url("borders/generic-border-focused.svg") 3 3 4 3 / 3 3 4 3 stretch;
+    border-image: url("borders/generic-border-focused-dark.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3;
     border-width: 1 1 2 1;
 }
 
 /* generic button borders */
 .button {
-    border-image: url("borders/button-border.svg") 3 3 4 3 / 3 3 4 3 stretch;
+    border-image: url("borders/button-border-dark.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3;
     border-width: 1 1 2 1;
 }
@@ -39,7 +39,7 @@ GtkSwitch.trough:active {
 /* focused button borders */
 .button:focus,
 .button.default { 
-    border-image: url("borders/button-border-focused.svg") 3 3 4 3 / 3 3 4 3 stretch;
+    border-image: url("borders/button-border-focused-dark.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3;
     border-width: 1 1 2 1;
 }
@@ -60,7 +60,7 @@ GtkSwitch.trough:active {
 .inline-toolbar.toolbar .button:active:hover,
 .inline-toolbar.toolbar .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton .button:active {
-    border-image: url("borders/primary-toolbar-generic-border.svg") 4 / 4 stretch;
+    border-image: url("borders/primary-toolbar-generic-border-dark.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
 }
@@ -76,7 +76,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .raised .button.default:active,
 .inline-toolbar.toolbar .button:focus:active,
 .inline-toolbar.toolbar .button.default:active { 
-    border-image: url("borders/primary-toolbar-generic-border-focused.svg") 4 / 4 stretch;
+    border-image: url("borders/primary-toolbar-generic-border-focused-dark.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
 }
@@ -87,7 +87,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised:hover,
 .primary-toolbar .raised .button:hover,
 .inline-toolbar.toolbar .button {
-    border-image: url("borders/primary-toolbar-button-border.svg") 4 / 4 stretch;
+    border-image: url("borders/primary-toolbar-button-border-dark.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
 }
@@ -101,7 +101,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .raised .button:focus:hover,
 .inline-toolbar.toolbar .button:focus,
 .inline-toolbar.toolbar .button.default { 
-    border-image: url("borders/primary-toolbar-button-border-focused.svg") 4 / 4 stretch;
+    border-image: url("borders/primary-toolbar-button-border-focused-dark.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
 }
@@ -109,20 +109,20 @@ GtkSwitch.trough:active {
 GtkScale.trough,
 /*GtkSwitch.trough,*/
 GtkScale.trough.horizontal {
-    border-image: url("assets/trough-border-horizontal.svg") 2 / 2 stretch;
+    border-image: url("assets/trough-border-horizontal-dark.svg") 2 / 2 stretch;
 }
 
 GtkScale.trough.vertical {
-    border-image: url("assets/trough-border-vertical.svg") 2 / 2 stretch;
+    border-image: url("assets/trough-border-vertical-dark.svg") 2 / 2 stretch;
 }
 
 /*GtkSwitch.trough:active,*/
 GtkScale.progressbar.horizontal {
-    border-image: url("assets/trough-active-border-horizontal.svg") 2 / 2 stretch;
+    border-image: url("assets/trough-active-border-horizontal-dark.svg") 2 / 2 stretch;
 }
 
 GtkScale.progressbar.vertical {
-    border-image: url("assets/trough-active-border-vertical.svg") 2 / 2 stretch;
+    border-image: url("assets/trough-active-border-vertical-dark.svg") 2 / 2 stretch;
 }
 
 /* column-headers borders */
@@ -140,7 +140,7 @@ column-header.button:active:focus,
 column-header .button:active:focus,
 column-header.button:active:hover,
 column-header .button:active:hover {
-    border-image: url("borders/column-header-border.svg") 4 5 4 4 / 4 5 4 4 stretch;
+    border-image: url("borders/column-header-border-dark.svg") 4 5 4 4 / 4 5 4 4 stretch;
 }
 
 column-header.button:last-child,
@@ -157,5 +157,5 @@ column-header.button:active:focus:last-child,
 column-header:last-child .button:active:focus,
 column-header.button:active:hover:last-child,
 column-header:last-child .button:active:hover {
-    border-image: url("borders/column-header-border-last.svg") 4 / 4 stretch;
+    border-image: url("borders/column-header-border-last-dark.svg") 4 / 4 stretch;
 }

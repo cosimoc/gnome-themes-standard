@@ -51,7 +51,7 @@
 @define-color switch_slider_insensitive_bg @insensitive_border_color;
 
 @define-color switch_trough_active_color @theme_text_color;
-@define-color switch_trough_active_bg_a shade (@theme_selected_bg_color, 0.85);
+@define-color switch_trough_active_bg_a shade(@theme_selected_bg_color, 0.6);
 @define-color switch_trough_active_bg_b @theme_selected_bg_color;
 
 @define-color highlighted_border @button_border;
@@ -61,7 +61,11 @@
 
 @define-color progressbar_background_a #5893df;
 @define-color progressbar_background_b #2465ba;
-@define-color progressbar_pattern #000000;
+@define-color progressbar_pattern @switch_slider_active_border;
+@define-color progressbar_border @switch_slider_active_border;
+
+/*@define-color progressbar_background_a #76b0ec;
+@define-color progressbar_background_b #1f72c6;*/
 
 @define-color entry_text_color #000000;
 @define-color entry_background_a #848684;
@@ -149,7 +153,9 @@
 @define-color wm_button_bg_active_b shade (@theme_bg_color, 0.7);
 @define-color wm_button_bg_active_c shade (@theme_bg_color, 0.7);
 
+@import url("gtk-widgets-backgrounds.css");
+@import url("gtk-widgets-borders-dark.css");
 @import url("gtk-widgets-assets-dark.css");
+@import url("gnome-applications.css");
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-dark-overrides.css");
-@import url("gnome-applications.css");

@@ -15,30 +15,9 @@
    id="svg33222"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="primary-toolbar-button-border-focused.svg">
+   sodipodi:docname="primary-toolbar-button-border-dark.svg">
   <defs
      id="defs33224">
-    <linearGradient
-       id="linearGradient3826">
-      <stop
-         id="stop3828"
-         offset="0"
-         style="stop-color:#000000;stop-opacity:0.051" />
-      <stop
-         id="stop3830"
-         offset="1"
-         style="stop-color:#ffffff;stop-opacity:0.502" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3826"
-       id="linearGradient3851-3"
-       x1="8.0000019"
-       y1="1.5371597"
-       x2="8.000001"
-       y2="13.462841"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.86666667,0,0,0.92857148,1.0666667,1.0357143)" />
     <linearGradient
        id="linearGradient3837">
       <stop
@@ -65,11 +44,11 @@
       <stop
          id="stop3828-2"
          offset="0"
-         style="stop-color:#adada4;stop-opacity:1" />
+         style="stop-color:#000000;stop-opacity:1" />
       <stop
          id="stop3830-6"
          offset="1"
-         style="stop-color:#ebebea;stop-opacity:1" />
+         style="stop-color:#ffffff;stop-opacity:1" />
     </linearGradient>
     <linearGradient
        y2="13.462841"
@@ -89,17 +68,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.627417"
-     inkscape:cx="9.2524004"
-     inkscape:cy="7.1218558"
+     inkscape:zoom="16"
+     inkscape:cx="14.390702"
+     inkscape:cy="4.7605794"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:window-width="1920"
      inkscape:window-height="1022"
-     inkscape:window-x="-10"
-     inkscape:window-y="18"
+     inkscape:window-x="0"
+     inkscape:window-y="26"
      inkscape:window-maximized="1"
      inkscape:snap-nodes="false"
      inkscape:snap-bbox="true"
@@ -121,7 +100,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -137,7 +116,7 @@
        height="14.499999"
        width="14.499999"
        id="rect17861-9"
-       style="color:#000000;fill:none;stroke:url(#linearGradient3880);stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       style="color:#000000;fill:none;stroke:url(#linearGradient3880);stroke-width:1.50000000000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;opacity:0.1" />
     <rect
        ry="2.5"
        rx="2.5"
@@ -146,7 +125,7 @@
        height="13"
        width="13"
        id="rect17861"
-       style="color:#000000;fill:none;stroke:#729fcf;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       style="color:#000000;fill:none;stroke:#3465a4;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;stroke-linecap:butt;stroke-linejoin:miter;stroke-dashoffset:0" />
     <rect
        ry="1.5"
        rx="1.5"
@@ -155,6 +134,6 @@
        height="11"
        width="11"
        id="rect17861-6"
-       style="opacity:0.8;color:#000000;fill:none;stroke:url(#linearGradient3864);stroke-width:0.99999994;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       style="opacity:0.1;color:#000000;fill:none;stroke:url(#linearGradient3864);stroke-width:0.99999994000000003;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   </g>
 </svg>

@@ -18,3 +18,12 @@ GtkIconView.view.cell:selected:focused {
 .entry:insensitive {
     background-image: none;
 }
+
+GtkSwitch.slider {
+    border-color: mix (@button_border, black, 0.4);
+    box-shadow: 0 -1 inset alpha(white, 0.1), 0 1 inset @theme_base_color, 0 2 inset alpha(@button_border, 0.15);
+}
+GtkSwitch.slider:insensitive {
+    border-color:
+    background-color: 
+}

@@ -358,9 +358,9 @@ GtkScrolledWindow.frame {
     border-color: darker (@theme_bg_color);
     border-width: 1;
     border-radius: 2;
-
     padding: 0;
 }
+
 
 /***********
  * Buttons *
@@ -378,7 +378,8 @@ GtkScrolledWindow.frame {
                                                    to (alpha (@keyboard_focus_border_b, 0.62)));
     -adwaita-focus-border-radius: 1;
     -adwaita-focus-border-dashes: 0;
-    -GtkWidget-focus-line-width: 2;
+    /*-GtkWidget-focus-line-width: 2; uhm.... */
+    -GtkWidget-focus-line-width: 0;
 
     -GtkButton-child-displacement-x: 0;
     -GtkButton-child-displacement-y: 1;
@@ -1404,10 +1405,10 @@ row:selected:focus {
 
 row:selected {
     border-width: 0;
-    background-image: -gtk-gradient (linear,
+/*    background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@theme_selected_bg_color),
-                                     to (@theme_selected_bg_color));
+                                     to (@theme_selected_bg_color)); */
 }
 
 .cell {
