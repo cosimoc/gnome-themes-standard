@@ -50,10 +50,6 @@ GtkWindow {
     color: @theme_fg_color;
 }
 
-GtkWindow:window-unfocused {
-    background-color: @theme_unfocused_bg_color;
-}
-
 * {
     background-color: @theme_bg_color;
 }
@@ -790,10 +786,6 @@ GtkTreeMenu .menuitem * {
     -GtkMenuBar-internal-padding: 0;
 }
 
-.menubar:window-unfocused {
-    background-color: @theme_unfocused_bg_color;
-}
-
 .menubar .menuitem {
     border-width: 0;
     border-style: none;
@@ -937,10 +929,6 @@ GtkTreeMenu .menuitem * {
     padding: 4;
 }
 
-.toolbar:window-unfocused {
-    background-color: @theme_unfocused_bg_color;
-}
-
 .toolbar .button {
     padding: 2;
 }
@@ -988,12 +976,6 @@ GtkTreeMenu .menuitem * {
 
     -GtkWidget-window-dragging: true;
     -GtkToolbar-button-relief: normal;
-}
-
-.primary-toolbar .toolbar:window-unfocused,
-.primary-toolbar.toolbar:window-unfocused {
-    background-image: none;
-    background-color: @theme_unfocused_bg_color;
 }
 
 .primary-toolbar .toolbar:insensitive,
