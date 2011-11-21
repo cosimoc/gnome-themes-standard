@@ -8,6 +8,7 @@ theme_DATA = 		\
 	gtk-widgets.css \
 	gtk-widgets-backgrounds.css \
 	gtk-widgets-borders.css \
+	gtk-widgets-borders-dark.css \
 	gtk-widgets-dark-overrides.css \
 	gtk-widgets-assets.css \
 	gtk-widgets-assets-dark.css \
