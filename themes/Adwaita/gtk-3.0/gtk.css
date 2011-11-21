@@ -93,7 +93,9 @@
 
 @define-color progressbar_background_a #76b0ec;
 @define-color progressbar_background_b #1f72c6;
-@define-color progressbar_pattern #000000;
+/*@define-color progressbar_pattern #000000;*/
+@define-color progressbar_pattern @switch_slider_active_border;
+@define-color progressbar_border @switch_slider_active_border;
 
 @define-color entry_text_color @theme_text_color;
 

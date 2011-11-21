@@ -40,9 +40,20 @@
 .toolbar .button:active,
 .toolbar .button:hover:active,
 .primary-toolbar .button:active:focus,
+.trough,
+.trough row,
+.trough row:hover,
 GtkSwitch.trough {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
+                                     from (@button_active_gradient_color_a),
+				     to (alpha (@button_active_gradient_color_b, 0.13)));
+}
+
+/* Flipped pushed button background for vertical progressbar through and the like */
+.trough.vertical {
+    background-image: -gtk-gradient (linear,
+    				     left top, right top,
                                      from (@button_active_gradient_color_a),
 				     to (alpha (@button_active_gradient_color_b, 0.13)));
 }

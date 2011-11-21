@@ -8,6 +8,9 @@ GtkComboBox.combobox-entry .button:focus,
 .button:active,
 .button:active:hover,
 .button:insensitive,
+.trough,
+.trough row,
+.trough row:hover,
 GtkSwitch.trough,
 GtkSwitch.trough:insensitive {
     border-image: url("borders/generic-border.svg") 3 3 4 3 / 3 3 4 3 stretch;
@@ -129,27 +132,6 @@ GtkScale.progressbar.horizontal {
 
 GtkScale.progressbar.vertical {
     border-image: url("assets/trough-active-border-vertical.svg") 2 / 2 stretch;
-}
-
-/*GtkSwitch.slider {
-    border-image: url("assets/switch-slider-border.svg") 2 / 2 stretch;
-}
-
-GtkSwitch.slider:active {
-    border-image: url("assets/switch-slider-active-border.svg") 2 / 2 stretch;
-}*/
-
-.progressbar,
-.entry.progressbar,
-.progressbar row,
-.progressbar row:hover,
-.progressbar row:selected,
-.progressbar row:selected:focus {
-    border-image: url("assets/progressbar-border.svg") 3 / 3 stretch;
-}
-
-.progressbar.vertical {
-    border-image: url("assets/progressbar-border-vertical.svg") 3 / 3 stretch;
 }
 
 /* generic element borders for :window-unfocused */
