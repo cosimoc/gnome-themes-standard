@@ -8,14 +8,17 @@ assets_DATA = 		\
 	checkbox-checked-dark.svg \
 	checkbox-checked-insensitive.svg \
 	checkbox-checked-insensitive-dark.svg \
+	checkbox-checked-no-hilight.svg \
 	checkbox-unchecked.svg \
 	checkbox-unchecked-dark.svg \
 	checkbox-unchecked-insensitive.svg \
 	checkbox-unchecked-insensitive-dark.svg \
+	checkbox-unchecked-no-hilight.svg \
 	checkbox-mixed.svg \
 	checkbox-mixed-dark.svg \
 	checkbox-mixed-insensitive.svg \
 	checkbox-mixed-insensitive-dark.svg \
+	checkbox-mixed-no-hilight.svg \
 	checkbox-menuitem-checked.svg \
 	checkbox-menuitem-checked-insensitive.svg \
 	checkbox-menuitem-checked-selected.svg \
@@ -31,14 +34,17 @@ assets_DATA = 		\
 	radio-selected-dark.svg \
 	radio-selected-insensitive.svg \
 	radio-selected-insensitive-dark.svg \
+	radio-selected-no-hilight.svg \
 	radio-unselected.svg \
 	radio-unselected-dark.svg \
 	radio-unselected-insensitive.svg \
 	radio-unselected-insensitive-dark.svg \
+	radio-unselected-no-hilight.svg \
 	radio-mixed.svg \
 	radio-mixed-dark.svg \
 	radio-mixed-insensitive.svg \
 	radio-mixed-insensitive-dark.svg \
+	radio-mixed-no-hilight.svg \
 	radio-menuitem-checked.svg \
 	radio-menuitem-checked-insensitive.svg \
 	radio-menuitem-checked-selected.svg \

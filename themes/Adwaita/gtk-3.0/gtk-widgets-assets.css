@@ -3,10 +3,13 @@
  *************************/
 
 /* draw regular check and radio items using our SVG assets */
-.check,
+.check {
+    background-image: url("assets/checkbox-unchecked.svg");
+}
+
 .check row:selected,
 .check row:selected:focus {
-    background-image: url("assets/checkbox-unchecked.svg");
+    background-image: url("assets/checkbox-unchecked-no-hilight.svg");
 }
 
 .check:insensitive,
@@ -15,10 +18,13 @@
     background-image: url("assets/checkbox-unchecked-insensitive.svg");
 }
 
-.check:active,
+.check:active {
+    background-image: url("assets/checkbox-checked.svg");
+}
+
 .check row:selected:active,
 .check row:selected:focus:active {
-    background-image: url("assets/checkbox-checked.svg");
+    background-image: url("assets/checkbox-checked-no-hilight.svg");
 }
 
 .check:active:insensitive,
@@ -28,10 +34,13 @@
     background-image: url("assets/checkbox-checked-insensitive.svg");
 }
 
-.check:inconsistent,
+.check:inconsistent {
+    background-image: url("assets/checkbox-mixed.svg");
+}
+
 .check row:selected:inconsistent,
 .check row:selected:focus:inconsistent {
-    background-image: url("assets/checkbox-mixed.svg");
+    background-image: url("assets/checkbox-mixed-no-hilight.svg");
 }
 
 .check:inconsistent:insensitive,
@@ -40,10 +49,13 @@
     background-image: url("assets/checkbox-mixed-insensitive.svg");
 }
 
-.radio,
+.radio {
+    background-image: url("assets/radio-unselected.svg");
+}
+
 .radio row:selected,
 .radio row:selected:focus {
-    background-image: url("assets/radio-unselected.svg");
+    background-image: url("assets/radio-unselected-no-hilight.svg");
 }
 
 .radio:insensitive,
@@ -52,10 +64,13 @@
     background-image: url("assets/radio-unselected-insensitive.svg");
 }
 
-.radio:active,
+.radio:active {
+    background-image: url("assets/radio-selected.svg");
+}
+
 .radio row:selected:active,
 .radio row:selected:focus:active {
-    background-image: url("assets/radio-selected.svg");
+    background-image: url("assets/radio-selected-no-hilight.svg");
 }
 
 .radio:active:insensitive,
@@ -64,10 +79,13 @@
     background-image: url("assets/radio-selected-insensitive.svg");
 }
 
-.radio:inconsistent,
+.radio:inconsistent {
+    background-image: url("assets/radio-mixed.svg");
+}
+
 .radio row:selected:inconsistent,
 .radio row:selected:focus:inconsistent {
-    background-image: url("assets/radio-mixed.svg");
+    background-image: url("assets/radio-mixed-no-hilight.svg");
 }
 
 .radio:inconsistent:insensitive,
