@@ -1,7 +1,9 @@
 bordersdir = $(datadir)/themes/Adwaita/gtk-3.0/borders
 borders_DATA = 		\
 	column-header-border.svg \
+	column-header-border-dark.svg \
 	column-header-border-last.svg \
+	column-header-border-last-dark.svg \
 	button-border-focused.svg \
 	button-border-focused-dark.svg \
 	button-border.svg \
