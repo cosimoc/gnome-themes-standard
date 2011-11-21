@@ -159,6 +159,10 @@ GtkTreeView .separator,
     color: @entry_text_color;
 }
 
+.entry:focus {
+    box-shadow: 1 1 inset alpha(@theme_selected_bg_color, 0.2), -1 -1 inset alpha(@theme_selected_bg_color, 0.2);
+}
+
 .entry.progressbar {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
@@ -378,8 +382,7 @@ GtkScrolledWindow.frame {
                                                    to (alpha (@keyboard_focus_border_b, 0.62)));
     -adwaita-focus-border-radius: 1;
     -adwaita-focus-border-dashes: 0;
-    /*-GtkWidget-focus-line-width: 2; uhm.... */
-    -GtkWidget-focus-line-width: 0;
+    -GtkWidget-focus-line-width: 2;
 
     -GtkButton-child-displacement-x: 0;
     -GtkButton-child-displacement-y: 1;

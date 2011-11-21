@@ -1,3 +1,7 @@
+.entry:focus {
+    box-shadow: 2 2 inset alpha(lighter(@theme_selected_bg_color), 0.2), -2 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 1 1 inset alpha(lighter(@theme_selected_bg_color), 0.7), -1 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
+}
+
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focused {
     background-color: alpha(@theme_base_color, 0.0);
