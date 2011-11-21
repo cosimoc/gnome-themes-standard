@@ -14,60 +14,16 @@
    height="16"
    id="svg814"
    version="1.1"
-   inkscape:version="0.48+devel r10053 custom"
-   sodipodi:docname="checkbox-checked-insensitive.svg">
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="checkbox-unchecked-insensitive.svg">
   <defs
      id="defs816">
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient10354-2"
-       id="linearGradient8378"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-1609.9926,-78.958432)"
-       x1="1205.5752"
-       y1="-186.45331"
-       x2="1205.5752"
-       y2="-202.34555" />
-    <linearGradient
-       id="linearGradient10354-2"
-       inkscape:collect="always">
-      <stop
-         id="stop10356-2"
-         offset="0"
-         style="stop-color:#bcbfb8;stop-opacity:1" />
-      <stop
-         id="stop10358-2"
-         offset="1"
-         style="stop-color:#ffffff;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient10332-5"
-       id="linearGradient8380"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.84941206,0,0,0.84794288,-623.98415,-483.16392)"
-       x1="260.92538"
-       y1="233.77748"
-       x2="260.92538"
-       y2="248.97633" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient10332-5">
-      <stop
-         style="stop-color:#d3d7cf;stop-opacity:1"
-         offset="0"
-         id="stop10334-5" />
-      <stop
-         style="stop-color:#8f9985;stop-opacity:1"
-         offset="1"
-         id="stop10336-29" />
-    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient10332-5-8"
        id="linearGradient8390"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.84941206,0,0,0.84794288,-623.98415,-483.16392)"
+       gradientTransform="matrix(0.84941208,0,0,0.84794287,-623.98417,-483.10941)"
        x1="260.92538"
        y1="233.77748"
        x2="260.92538"
@@ -93,7 +49,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="32"
-     inkscape:cx="7.1381674"
+     inkscape:cx="7.2006674"
      inkscape:cy="8.4772276"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -102,8 +58,8 @@
      inkscape:showpageshadow="false"
      inkscape:window-width="981"
      inkscape:window-height="899"
-     inkscape:window-x="1600"
-     inkscape:window-y="0"
+     inkscape:window-x="937"
+     inkscape:window-y="26"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
@@ -121,7 +77,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -135,14 +91,14 @@
        id="g16895"
        transform="translate(410.00739,765.05452)">
       <rect
-         ry="1.6105907"
-         rx="1.6105907"
-         y="-284.86218"
+         ry="1.9999999"
+         rx="2"
+         y="-284.80768"
          x="-409.50739"
-         height="11.023263"
-         width="11.042357"
+         height="11"
+         width="11"
          id="rect16897"
-         style="color:#000000;fill:none;stroke:url(#linearGradient8390);stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         style="color:#000000;fill:none;stroke:url(#linearGradient8390);stroke-width:0.99999994;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          transform="scale(1,-1)" />
     </g>
   </g>
