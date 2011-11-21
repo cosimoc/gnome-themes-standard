@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.53)
 
-AC_INIT([gnome-themes-standard], [3.3.1],
+AC_INIT([gnome-themes-standard], [3.3.2],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard])
 
 AM_INIT_AUTOMAKE([1.9 tar-ustar foreign dist-xz no-dist-gzip])
@@ -28,7 +28,7 @@ AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
 AM_GLIB_GNU_GETTEXT
 
-GTK_VERSION_REQUIRED=3.3.2
+GTK_VERSION_REQUIRED=3.3.3
 
 PKG_CHECK_MODULES(GTK, gtk+-3.0 >= $GTK_VERSION_REQUIRED librsvg-2.0,,
                   AC_MSG_ERROR([GTK+ $GTK_VERSION_REQUIRED is required to compile gnome-themes-standard]))

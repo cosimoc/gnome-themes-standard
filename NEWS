@@ -1,3 +1,12 @@
+3.3.2
+=====
+
+Initial implementation of selection-mode, dropdown and OSD toolbars for GNOME Documents
+Don't set a padding for GtkNotebook children
+Fix focus border color for iconview cells
+Don't override prelight color for dim-label
+Fix for Nautilus migrating GtkTable->GtkGrid
+
 3.3.1
 =====
 
