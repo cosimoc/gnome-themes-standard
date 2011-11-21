@@ -1,5 +1,26 @@
 @define-color nautilus_cluebar_color #729fcf;
 
+@define-color documents_selection_toolbar_a #8e9c80;
+@define-color documents_selection_toolbar_b #4f6838;
+@define-color documents_selection_toolbar_border #3e7b05;
+
+@define-color documents_selection_button_a #7fc141;
+@define-color documents_selection_button_b #47850d;
+@define-color documents_selection_button_c #4e9a06;
+
+@define-color documents_emblem_bg #3465a4;
+@define-color documents_collection_bg #d3d7cf;
+
+@define-color documents_osd_toolbar_a alpha(#242424, 0.80);
+@define-color documents_osd_toolbar_b alpha(#101010, 0.80);
+@define-color documents_osd_toolbar_c alpha(#262626, 0.80);
+
+@define-color documents_osd_button_a @theme_base_color;
+@define-color documents_osd_button_b #525252;
+@define-color documents_osd_button_inset #9f9f9f;
+
+@define-color documents_osd_fg #bebebe;
+
 /****************
  * Applications *
  ****************/
@@ -113,40 +134,202 @@ NautilusWindow > GtkTable > .pane-separator {
 }
 
 /* gnome-documents */
-.dropdown,
-.dropdown .view {
+.documents-dropdown,
+.documents-dropdown .view {
     background-color: shade (@theme_bg_color, 1.02);
 }
 
-.dropdown .frame {
+.documents-dropdown .frame {
     border-width: 0 1 1 1;
     border-style: solid;
     border-radius: 0 0 5 5;
 }
 
-.dropdown .radio,
-.dropdown .radio:focused,
-.dropdown .radio:selected {
+.documents-dropdown .radio,
+.documents-dropdown .radio:focused,
+.documents-dropdown .radio:selected {
     background-image: none;
     background-color: alpha(@theme_base_color, 0.0);
 }
 
-.dropdown .radio:active,
-.dropdown .radio:active:focused,
-.dropdown .radio:active:prelight {
+.documents-dropdown .radio:active,
+.documents-dropdown .radio:active:focused,
+.documents-dropdown .radio:active:prelight {
     background-image: url("assets/sidebar-radio-checked.svg");
 }
 
-.dropdown .radio:prelight {
+.documents-dropdown .radio:prelight {
     background-image: url("assets/sidebar-radio-prelight.svg");
 }
 
-.dropdown .radio:active:selected,
-.dropdown .radio:active:selected:focused {
+.documents-dropdown .radio:active:selected,
+.documents-dropdown .radio:active:selected:focused {
     background-image: url("assets/sidebar-radio-selected.svg");
 }
 
-.dropdown .radio:selected:prelight,
-.dropdown .radio:selected:focused {
+.documents-dropdown .radio:selected:prelight,
+.documents-dropdown .radio:selected:focused {
     background-image: url("assets/sidebar-radio-selected-prelight.svg");
+}
+
+.documents-load-more.button {
+    border-image-width: 0 2 2 2;
+    border-width: 0 1 1 1;
+}
+
+.documents-scrolledwin.frame {
+    border-width: 1 0;
+    border-radius: 0;
+}
+
+.documents-main-view.view {
+    background-color: #f1f2f1;
+}
+
+.documents-selection-mode.toolbar {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@documents_selection_toolbar_a),
+                                    to(@documents_selection_toolbar_b));
+    color: alpha(@theme_base_color, 0.32);
+    border-width: 1 0 0 0;
+    border-color: @documents_selection_toolbar_border;
+    border-style: solid;
+}
+
+.documents-selection-mode.toolbar .button {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@documents_selection_button_a),
+                                    color-stop(0.83, @documents_selection_button_b),
+                                    to(@documents_selection_button_c));
+
+    border-color: @documents_selection_toolbar_border;
+    border-image: none;
+    border-style: solid;
+    border-width: 1;
+
+    color: @theme_base_color;
+
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+.documents-selection-mode.toolbar .button:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(shade(@documents_selection_button_a, 1.20)),
+                                    color-stop(0.83, shade(@documents_selection_button_b, 1.10)),
+                                    to(shade(@documents_selection_button_c, 1.10)));
+}
+
+.documents-selection-mode.toolbar .button:active,
+.documents-selection-mode.toolbar .button:hover:active {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@documents_selection_button_b),
+                                    to(shade(@documents_selection_button_a, 0.90)));
+
+    border-color: @documents_selection_toolbar_border;
+    border-image: none;
+    border-style: solid;
+    border-width: 1;
+}
+
+.documents-selection-mode.toolbar .button *:hover {
+    color: @theme_base_color;
+}
+
+.documents-icon-bg {
+    background-color: @documents_emblem_bg;
+    border-radius: 4;
+
+    color: @theme_base_color;
+}
+
+.documents-collection-icon {
+    background-color: @documents_collection_bg;
+    border-radius: 8;
+}
+
+.documents-osd {
+    background-image: none;
+    background-color: transparent;
+}
+
+.documents-osd .toolbar {
+    padding: 16;
+    border-style: none;
+    border-radius: 5;
+    border-width: 0;
+
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@documents_osd_toolbar_a),
+                                    color-stop(0.63, @documents_osd_toolbar_b),
+                                    to(@documents_osd_toolbar_c));
+    color: @documents_osd_fg;
+
+    -GtkToolbar-button-relief: normal;
+}
+
+.documents-osd .toolbar .button {
+    padding: 4;
+
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(alpha(@documents_osd_button_a, 0.16)),
+                                    color-stop(0.68, alpha(@documents_osd_button_b, 0.05)),
+                                    to(alpha(@documents_osd_button_a, 0.12)));
+    border-width: 1 0;
+    border-style: solid;
+    border-image: none;
+    border-color: alpha(@documents_osd_button_a, 0.50);
+    border-radius: 0;
+
+    color: @documents_osd_fg;
+
+    text-shadow: none;
+    icon-shadow: none;
+    box-shadow: -1 0 inset @documents_osd_button_inset;
+}
+
+.documents-osd .toolbar .button:nth-child(first) {
+    border-radius: 4 0 0 4;
+    border-left-width: 1;
+    box-shadow: -1 0 inset @documents_osd_button_inset;
+}
+
+.documents-osd .toolbar .button:nth-child(last) {
+    box-shadow: none;
+    border-radius: 0 4 4 0;
+    border-right-width: 1;
+}
+
+.documents-osd .toolbar .button:only-child {
+    border-width: 1;
+    border-radius: 4;
+    border-style: solid;
+}
+
+.documents-osd .toolbar .separator {
+    color: @documents_osd_button_inset;
+}
+
+.documents-osd .toolbar .button:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(alpha(@documents_osd_button_a, 0.28)),
+                                    color-stop(0.68, alpha(@documents_osd_button_b, 0.14)),
+                                    to(alpha(@documents_osd_button_a, 0.14)));
+}
+
+.documents-osd .toolbar .button *:hover {
+    color: shade(@documents_osd_fg, 1.20);
+}
+
+.documents-osd .toolbar .button:active,
+.documents-osd .toolbar .button:active:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(alpha(@documents_osd_button_b, 0.18)),
+                                    color-stop(0.68, alpha(@documents_osd_button_a, 0.23)),
+                                    to(alpha(@documents_osd_button_b, 0.17)));
+}
+
+.documents-osd .toolbar .button.favorite,
+.documents-osd .toolbar .button.favorite *:hover {
+    color: shade(@theme_selected_bg_color, 1.20);
 }
