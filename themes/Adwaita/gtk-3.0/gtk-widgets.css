@@ -651,6 +651,7 @@ GtkScrolledWindow.frame {
 
     -GtkNotebook-tab-overlap: 8;
     -GtkNotebook-tab-curvature: 6;
+    -GtkNotebook-initial-gap: 8;
 }
 
 .notebook GtkViewport {
