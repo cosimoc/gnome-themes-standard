@@ -27,7 +27,3 @@ GtkSwitch.slider {
 .button {
     text-shadow: @button_text_shadow 0 -1;
 }
-
-.button:insensitive {
-    text-shadow: none;
-}

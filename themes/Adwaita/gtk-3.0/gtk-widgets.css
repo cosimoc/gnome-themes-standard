@@ -403,9 +403,7 @@ GtkScrolledWindow.frame {
     text-shadow: @button_text_shadow 0 1;
 }
 
-.button:insensitive,
-.button:insensitive:hover,
-.button:insensitive:active {
+.button *:insensitive { /* this really makes no sense*/
     color: @insensitive_fg_color;
     text-shadow: none;
 }
