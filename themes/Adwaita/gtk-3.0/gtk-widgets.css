@@ -183,6 +183,7 @@ GtkTreeView .separator,
     color: @internal_element_prelight;
 }
 
+
 /*****************
  * GtkSpinButton *
  *****************/
@@ -371,6 +372,7 @@ GtkScrolledWindow.frame {
 /***********
  * Buttons *
  ***********/
+
 .button,
 .button.menuitem.menubar {
     padding: 1 4;
@@ -397,10 +399,15 @@ GtkScrolledWindow.frame {
 
     border-style: none;
     /* border-image in -assets variant */
+
+    text-shadow: @button_text_shadow 0 1;
 }
 
-.button:insensitive {
+.button:insensitive,
+.button:insensitive:hover,
+.button:insensitive:active {
     color: @insensitive_fg_color;
+    text-shadow: none;
 }
 
 /* Remove borders from primary toolbar buttons*/
@@ -419,6 +426,14 @@ GtkScrolledWindow.frame {
 .primary-toolbar .button:insensitive {
     background-image: none;
     background-color: transparent;
+}
+
+.primary-toolbar .button {
+    text-shadow: @primary_toolbar_button_text_shadow 0 1;
+}
+
+.primary-toolbar .button:insensitive {
+    text-shadow: none;
 }
 
 /* linked buttons */
