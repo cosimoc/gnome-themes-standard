@@ -40,7 +40,7 @@
 @define-color inactive_frame_color shade (@theme_bg_color, 0.8);
 
 @define-color notebook_border @button_border;
-@define-color notebook_active_tab_border alpha (@theme_selected_bg_color, 1.0);
+@define-color notebook_active_tab_border shade (@theme_selected_bg_color, 0.5);
 @define-color notebook_selected_tab_color alpha (@theme_selected_bg_color, 0.75);
 
 @define-color notebook_tab_gradient_a @button_gradient_color_a;

@@ -1259,6 +1259,7 @@ GtkSwitch {
     font: bold condensed 10;
 }
 
+GtkScale.progressbar,
 GtkSwitch.trough:active {
     color: @switch_trough_active_color;
 }
