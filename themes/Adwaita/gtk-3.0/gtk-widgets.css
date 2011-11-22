@@ -189,7 +189,6 @@ GtkTreeView .separator,
  *****************/
 .spinbutton .button {
     color: @internal_element_color;
-    box-shadow: none; /* Doesn't work */
 }
 
 .spinbutton .button:prelight,
@@ -210,6 +209,7 @@ GtkTreeView .separator,
     border-radius: 0;
     border-style: solid;
     border-image-width: 0 3;
+    box-shadow: none;
 }
 
 .spinbutton .button:nth-child(first),
