@@ -15,7 +15,7 @@
    id="svg33222"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="primary-toolbar-button-border.svg">
+   sodipodi:docname="primary-toolbar-button-border-dark.svg">
   <defs
      id="defs33224">
     <linearGradient
@@ -69,7 +69,7 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="16"
-     inkscape:cx="14.265702"
+     inkscape:cx="14.390702"
      inkscape:cy="4.7605794"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -134,6 +134,6 @@
        height="11"
        width="11"
        id="rect17861-6"
-       style="opacity:0.1;color:#000000;fill:none;stroke:url(#linearGradient3864);stroke-width:0.99999994000000003;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       style="opacity:0.05;color:#000000;fill:none;stroke:url(#linearGradient3864);stroke-width:0.99999994000000003;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   </g>
 </svg>
