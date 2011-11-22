@@ -20,7 +20,8 @@
 @define-color button_gradient_color_b shade (@theme_bg_color, 0.8);
 @define-color button_border #24282a;
 
-@define-color button_text_shadow alpha(black, 0.9);
+@define-color button_active_text_shadow black;
+@define-color button_text_shadow black;
 @define-color primary_toolbar_button_text_shadow alpha(black, 0.1);
 
 @define-color button_active_gradient_color_a shade (@button_gradient_color_b, 0.7);

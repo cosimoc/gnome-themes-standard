@@ -189,6 +189,7 @@ GtkTreeView .separator,
  *****************/
 .spinbutton .button {
     color: @internal_element_color;
+    box-shadow: none; /* Doesn't work */
 }
 
 .spinbutton .button:prelight,
@@ -403,6 +404,10 @@ GtkScrolledWindow.frame {
     text-shadow: @button_text_shadow 0 1;
 }
 
+.button *:active {
+    text-shadow: @button_active_text_shadow 0 1;
+}
+
 .button *:insensitive { /* this really makes no sense*/
     color: @insensitive_fg_color;
     text-shadow: none;
@@ -426,9 +431,33 @@ GtkScrolledWindow.frame {
     background-color: transparent;
 }
 
-.primary-toolbar .button {
+.button.raised *,
+.raised .button *,
+.inline-toolbar .button * {
+    icon-shadow: @button_text_shadow 0 1;
+}
+
+.button.raised *:active,
+.raised .button *:active,
+.inline-toolbar .button *:active {
+    icon-shadow: @button_active_text_shadow 0 1;
+}
+
+.button.raised *:insensitive,
+.raised .button *:insensitive,
+.inline-toolbar .button *:insensitive {
+    icon-shadow: none;
+}
+
+.primary-toolbar .button * {
     text-shadow: @primary_toolbar_button_text_shadow 0 1;
 }
+
+.button.raised,
+.raised .button {
+    text-shadow: @button_text_shadow 0 1;
+}
+
 
 .primary-toolbar .button:insensitive {
     text-shadow: none;

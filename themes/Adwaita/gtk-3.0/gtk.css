@@ -63,8 +63,8 @@
 
 @define-color button_active_gradient_color_a #a2a9a2;
 @define-color button_active_gradient_color_b shade (@button_active_gradient_color_a, 0.83);
-
-@define-color button_text_shadow alpha(white, 0.2);
+@define-color button_active_text_shadow alpha(white, 0.3);
+@define-color button_text_shadow alpha(white, 0.7);
 @define-color primary_toolbar_button_text_shadow alpha(black, 0.1);
 
 @define-color theme_unfocused_button_active_color shade(@theme_unfocused_bg_color, 0.8); /* to be defined */

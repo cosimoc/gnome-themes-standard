@@ -27,3 +27,32 @@ GtkSwitch.slider {
 .button {
     text-shadow: @button_text_shadow 0 -1;
 }
+
+.button *:active {
+    text-shadow: @button_active_text_shadow 0 -1;
+}
+
+.button
+.button.raised,
+.raised .button,
+.inline-toolbar .button {
+    icon-shadow: @button_text_shadow 0 -1;
+}
+
+.button.raised *,
+.raised .button *,
+.inline-toolbar .button * {
+    icon-shadow: @button_text_shadow 0 -1;
+}
+
+.button.raised *:active,
+.raised .button *:active,
+.inline-toolbar .button *:active {
+    icon-shadow: @button_active_text_shadow 0 -1;
+}
+
+.button.raised *:insensitive,
+.raised .button *:insensitive,
+.inline-toolbar .button *:insensitive {
+    icon-shadow: none;
+}
