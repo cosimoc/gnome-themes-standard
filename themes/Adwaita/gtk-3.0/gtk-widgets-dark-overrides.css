@@ -21,5 +21,17 @@ GtkIconView.view.cell:selected:focused {
 
 GtkSwitch.slider {
     border-color: mix (@button_border, black, 0.4);
-    box-shadow: 0 -1 inset alpha(white, 0.1), 0 1 inset @theme_base_color, 0 2 inset alpha(@button_border, 0.15);
+    box-shadow: 0 -1 inset alpha(white, 0.07), 0 1 inset @theme_base_color, 0 2 inset alpha(@button_border, 0.15);
 }
+
+/* Don't ask me why I need this one, seems like a bug to me eh */
+GtkScale.trough,
+GtkScale.trough row,
+GtkScale.trough row:hover {
+    background-image: -gtk-gradient (linear,
+    				     left top, left bottom,
+                                     from (@button_border),
+				     to (shade(@theme_bg_color, 0.94)));
+    border-image: none;
+}
+

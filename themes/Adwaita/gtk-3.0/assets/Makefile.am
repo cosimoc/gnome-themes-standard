@@ -1,9 +1,5 @@
 assetsdir = $(datadir)/themes/Adwaita/gtk-3.0/assets
 assets_DATA = 		\
-	button-active-border-dark.svg \
-	button-border-dark.svg \
-	button-default-border.svg \
-	button-default-border-dark.svg \
 	checkbox-checked.svg \
 	checkbox-checked-dark.svg \
 	checkbox-checked-insensitive.svg \
@@ -24,12 +20,6 @@ assets_DATA = 		\
 	checkbox-menuitem-checked-selected.svg \
 	checkbox-menuitem-mixed.svg \
 	checkbox-menuitem-mixed-insensitive.svg \
-	entry-border-focused-dark.svg \
-	entry-border-normal-dark.svg \
-	primary-toolbar-button-active-border-dark.svg \
-	primary-toolbar-raised-button-border-dark.svg \
-	progressbar-border-dark.svg \
-	progressbar-border-vertical-dark.svg \
 	radio-selected.svg \
 	radio-selected-dark.svg \
 	radio-selected-insensitive.svg \
@@ -79,14 +69,6 @@ assets_DATA = 		\
 	sidebar-radio-prelight.svg \
 	sidebar-radio-selected.svg \
 	sidebar-radio-selected-dark.svg \
-	sidebar-radio-selected-prelight.svg \
-	trough-border-horizontal.svg \
-	trough-border-horizontal-dark.svg \
-	trough-border-vertical.svg \
-	trough-border-vertical-dark.svg \
-	trough-active-border-horizontal.svg \
-	trough-active-border-horizontal-dark.svg \
-	trough-active-border-vertical.svg \
-	trough-active-border-vertical-dark.svg
+	sidebar-radio-selected-prelight.svg
 
 EXTRA_DIST = $(assets_DATA)

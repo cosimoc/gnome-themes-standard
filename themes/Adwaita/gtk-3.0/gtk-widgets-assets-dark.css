@@ -96,42 +96,6 @@
     background-image: url("assets/sidebar-radio-selected-prelight.svg");    
 }
 
-/*.entry {
-    border-image: url("assets/entry-border-normal-dark.svg") 2 / 2 stretch;
-}
-
-.entry:focused {
-    border-image: url("assets/entry-border-focused-dark.svg") 2 / 2 stretch;
-}
-
-.primary-toolbar GtkComboBox.combobox-entry .button:active,
-.primary-toolbar GtkComboBox.combobox-entry .button:hover:active,
-.primary-toolbar GtkComboBox.combobox-entry .button,
-GtkComboBox.combobox-entry .button:active,
-GtkComboBox.combobox-entry .button:hover:active,
-GtkComboBox.combobox-entry .button {
-    border-image: url("assets/entry-border-normal-dark.svg") 2 / 2 2 2 0 stretch;
-}
-*/
-
-GtkScale.trough,
-GtkScale.trough.horizontal {
-    border-image: url("assets/trough-border-horizontal-dark.svg") 2 / 2 stretch;
-}
-
-GtkScale.trough.vertical {
-    border-image: url("assets/trough-border-vertical-dark.svg") 2 / 2 stretch;
-}
-
-GtkSwitch.trough:active,
-GtkScale.progressbar.horizontal {
-    border-image: url("assets/trough-active-border-horizontal-dark.svg") 2 / 2 stretch;
-}
-
-GtkScale.progressbar.vertical {
-    border-image: url("assets/trough-active-border-vertical-dark.svg") 2 / 2 stretch;
-}
-
 GtkScale.slider,
 GtkScale.slider.horizontal {
     background-image: url("assets/scale-slider-horizontal-dark.svg");

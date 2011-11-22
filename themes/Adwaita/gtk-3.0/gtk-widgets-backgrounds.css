@@ -20,20 +20,19 @@
 .primary-toolbar .button:active:focus,
 .trough,
 .trough row,
-.trough row:hover,
-GtkSwitch.trough {
+.trough row:hover {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
-                                     from (@button_active_gradient_color_a),
-				     to (alpha (@button_active_gradient_color_b, 0.13)));
+                                     from (@button_border),
+				     to (shade(@theme_bg_color, 0.94)));
 }
 
 /* Flipped pushed button background for vertical progressbar through and the like */
 .trough.vertical {
     background-image: -gtk-gradient (linear,
     				     left top, right top,
-                                     from (@button_active_gradient_color_a),
-				     to (alpha (@button_active_gradient_color_b, 0.13)));
+                                     from (@button_border),
+				     to (shade(@theme_bg_color, 0.94)));
 }
 
 /* Prelit button background */
@@ -128,9 +127,17 @@ GtkComboBox.combobox-entry .button:insensitive {
 }
 
 /* Active switch background*/
-GtkSwitch.trough:active {
+GtkSwitch.trough:active,
+GtkScale.progressbar {
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
+                                     from (@switch_trough_active_bg_a),
+                                     to (@switch_trough_active_bg_b));
+}
+
+GtkScale.progressbar.vertical {
+    background-image: -gtk-gradient (linear,
+                                     left top, right top,
                                      from (@switch_trough_active_bg_a),
                                      to (@switch_trough_active_bg_b));
 }

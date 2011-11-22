@@ -314,38 +314,40 @@ GtkScale.slider:insensitive {
     /* background-image in -assets variant */
 }
 
-GtkScale.trough {
+GtkScale.trough,
+GtkScale.trough.vertical {
+/*    background-color: @scale_fill;
+    background-image: none;*/
+
     border-width: 1;
-    border-radius: 2;
-    border-style: none;
-
-    background-color: @scale_fill;
-
-    /* border-image defined in the -assets variants */
+    border-image: none;
+    border-style: solid;
+    border-color: @button_border;
 }
 
 GtkScale.trough:insensitive {
     background-color: @insensitive_bg_color;
-    background-image: none;
-
-    border-image: none;
-    border-style: solid;
     border-color: @insensitive_border_color;
+    box-shadow: none;
+    background-image: none;
 }
 
 GtkScale.progressbar {
     background-color: @scale_progress_fill;
-
-    border-width: 1;
-    border-radius: 2;
-    border-style: none;
-    /* border-image defined in the -assets variants */
 
     -adwaita-progressbar-pattern: none;
 }
 
 GtkScale.mark {
     color: shade (@theme_bg_color, 0.56);
+}
+
+GtkScale.trough.vertical {
+    box-shadow: -1 0 inset @theme_bg_color;
+}
+
+GtkScale.trough {
+    box-shadow: 0 -1 inset @theme_bg_color;
 }
 
 /**********
@@ -1255,11 +1257,6 @@ GtkAssistant .sidebar {
 
 GtkSwitch {
     font: bold condensed 10;
-}
-
-GtkSwitch.trough {
-    border-radius: 3;
-    border-width: 1 1 2 1;
 }
 
 GtkSwitch.trough:active {
