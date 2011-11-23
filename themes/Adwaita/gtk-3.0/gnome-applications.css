@@ -190,10 +190,14 @@ NautilusWindow > GtkGrid > .pane-separator {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                     from(@documents_selection_toolbar_a),
                                     to(@documents_selection_toolbar_b));
-    color: alpha(@theme_base_color, 0.32);
+    color: @theme_base_color;
     border-width: 1 0 0 0;
     border-color: @documents_selection_toolbar_border;
     border-style: solid;
+}
+
+.documents-selection-mode.toolbar .dim-label {
+    color: alpha(@theme_base_color, 0.50);
 }
 
 .documents-selection-mode.toolbar .button {
