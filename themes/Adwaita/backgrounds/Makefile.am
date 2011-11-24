@@ -1,7 +1,11 @@
 
 backgrounddir = $(datadir)/themes/Adwaita/backgrounds
 background_DATA = \
-        stripes.jpg
+        adwaita-timed.xml \
+        bright-day.jpg \
+        good-night.jpg \
+        morning.jpg
+
 
 metadata_in_files = adwaita.xml.in
 metadatadir = $(datadir)/gnome-background-properties
