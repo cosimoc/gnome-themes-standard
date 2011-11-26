@@ -337,3 +337,34 @@ NautilusWindow > GtkGrid > .pane-separator {
 .documents-osd .toolbar .button.favorite *:hover {
     color: shade(@theme_selected_bg_color, 1.20);
 }
+
+.documents-entry-tag {
+    background-color: @documents_emblem_bg;
+    color: @theme_base_color;
+
+    border-radius: 4;
+    border-width: 0;
+
+    margin: 2;
+    padding: 4;
+}
+
+.documents-entry-tag:hover {
+    background-color: shade(@documents_emblem_bg, 1.10);
+    color: @theme_base_color;
+}
+
+.documents-entry-tag.button,
+.documents-entry-tag.button:hover,
+.documents-entry-tag.button:active,
+.documents-entry-tag.button:active:hover {
+    background-color: transparent;
+    background-image: none;
+    border-image: none;
+    border-width: 0;
+}
+
+.documents-entry-tag.button:hover {
+    color: shade(@documents_emblem_bg, 2.10);
+}
+
