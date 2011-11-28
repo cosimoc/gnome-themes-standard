@@ -308,7 +308,6 @@ GtkScale {
 GtkScale.slider,
 GtkScale.slider:hover,
 GtkScale.slider:insensitive {
-    border-width: 0;
     border-radius: 0;
     border-style: none;
 
@@ -978,7 +977,6 @@ GtkTreeMenu .menuitem * {
 
     border-image: none;
     border-style: none;
-    border-width: 0;
 }
 
 .menu.button:hover {
@@ -988,7 +986,6 @@ GtkTreeMenu .menuitem * {
 
     border-image: none;
     border-style: none;
-    border-width: 0;
 }
 
 .menu.button:insensitive {
@@ -997,13 +994,10 @@ GtkTreeMenu .menuitem * {
 
     border-image: none;
     border-style: none;
-    border-width: 0;
 }
 
 /* this controls the general appearance of the menubar */
 .menubar {
-    border-color: @theme_bg_color;
-    border-width: 0;
     border-style: none;
     padding: 4;
 
@@ -1012,7 +1006,6 @@ GtkTreeMenu .menuitem * {
 }
 
 .menubar .menuitem {
-    border-width: 0;
     border-style: none;
     padding: 3 5;
 }
@@ -1145,7 +1138,6 @@ GtkTreeMenu .menuitem * {
 .radio,
 .check {
     background-color: transparent;
-    border-width: 0;
     border-style: none;
 
     /* background-image defined in -assets variant */
@@ -1191,7 +1183,6 @@ GtkTreeMenu .menuitem * {
                                      left top, left bottom,
                                      from(@theme_bg_color),
                                      to(shade(@theme_bg_color, 0.96)));
-    border-width: 0;
     border-style: none;
 
     -GtkToolbar-button-relief: normal;

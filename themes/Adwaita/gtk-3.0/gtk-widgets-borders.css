@@ -108,25 +108,6 @@ GtkSwitch.trough:active {
     border-width: 2;
 }
 
-/*
-GtkScale.trough,
-GtkScale.trough.horizontal {
-    border-image: url("assets/trough-border-horizontal.svg") 2 / 2 stretch;
-}
-
-GtkScale.trough.vertical {
-    border-image: url("assets/trough-border-vertical.svg") 2 / 2 stretch;
-}
-
-GtkScale.progressbar.horizontal {
-    border-image: url("assets/trough-active-border-horizontal.svg") 2 / 2 stretch;
-}
-
-GtkScale.progressbar.vertical {
-    border-image: url("assets/trough-active-border-vertical.svg") 2 / 2 stretch;
-}
-*/
-
 /* column-headers borders */
 column-header.button,
 column-header .button,
