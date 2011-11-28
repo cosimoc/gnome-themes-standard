@@ -465,6 +465,41 @@ GtkScrolledWindow.frame {
     border-width: 1;
 }
 
+/* linked style for buttons */
+.linked .button {
+    border-image: none;
+    border-style: solid;
+    border-width: 1 0;
+    border-radius: 0;
+    border-color: @button_border;
+    box-shadow: 1 0 inset shade(@button_border, 1.40), -1 0 inset @button_border;
+}
+
+.linked .button:active,
+.linked .button:active:hover {
+    border-image: none;
+    box-shadow: -1 0 inset @button_border;
+}
+
+.linked .button:nth-child(first),
+.linked .button:active:nth-child(first),
+.linked .button:active:hover:nth-child(first) {
+    border-radius: 3 0 0 3;
+    border-left-width: 1;
+    box-shadow: -1 0 inset @button_border;
+}
+
+.linked .button:nth-child(last) {
+    box-shadow: 1 0 inset shade(@button_border, 1.40);
+    border-radius: 0 3 3 0;
+    border-right-width: 1;
+}
+
+.linked .button:active:nth-child(last),
+.linked .button:active:hover:nth-child(last) {
+    box-shadow: none;
+}
+
 /*****************
  * Notebooks and *
  * tabs          *
@@ -1186,40 +1221,6 @@ GtkTreeMenu .menuitem * {
 .toolbar .raised.linked:nth-child(last) .button,
 .toolbar .raised.linked:nth-child(last) .button:active {
     border-width: 1 1 1 0;
-}
-
-GtkPathBar .button {
-    border-image: none;
-    border-style: solid;
-    border-width: 1 0;
-    border-radius: 0;
-    border-color: @button_border;
-    box-shadow: 1 0 inset shade(@button_border, 1.40), -1 0 inset @button_border;
-}
-
-GtkPathBar .button:active,
-GtkPathBar .button:active:hover {
-    border-image: none;
-    box-shadow: -1 0 inset @button_border;
-}
-
-GtkPathBar .button:nth-child(first),
-GtkPathBar .button:active:nth-child(first),
-GtkPathBar .button:active:hover:nth-child(first) {
-    border-radius: 3 0 0 3;
-    border-left-width: 1;
-    box-shadow: -1 0 inset @button_border;
-}
-
-GtkPathBar .button:nth-child(last) {
-    box-shadow: 1 0 inset shade(@button_border, 1.40);
-    border-radius: 0 3 3 0;
-    border-right-width: 1;
-}
-
-GtkPathBar .button:active:nth-child(last),
-GtkPathBar .button:active:hover:nth-child(last) {
-    box-shadow: none;
 }
 
 .primary-toolbar.toolbar .entry {
