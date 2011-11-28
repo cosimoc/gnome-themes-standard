@@ -2,6 +2,8 @@
     engine: adwaita;
     padding: 1;
 
+    background-clip: padding-box;
+
     /* Style properties */
     -GtkToolButton-icon-spacing: 4;
 
@@ -358,6 +360,7 @@ GtkScale.trough {
 .frame {
     padding: 2;
     border-width: 0;
+    background-color: @theme_base_color;
 }
 
 /* only render frames in a GtkScrolledWindow */
@@ -398,7 +401,8 @@ GtkScrolledWindow.frame {
 
     color: @theme_text_color;
 
-    border-style: none;
+    border-style: solid;
+    border-color: transparent;
     /* border-image in -assets variant */
 
     text-shadow: @button_text_shadow 0 1;
@@ -419,7 +423,8 @@ GtkScrolledWindow.frame {
 .primary-toolbar .button:focus,
 .primary-toolbar .button:insensitive {
     border-image: none;
-    border-style: none;
+    border-style: solid;
+    border-color: transparent;
     border-width: 0;
 }
 
@@ -1064,6 +1069,8 @@ GtkTreeMenu .menuitem * {
 
 .menuitem.check,
 .menuitem.radio,
+.menuitem.check:prelight,
+.menuitem.radio:prelight,
 .menuitem.check:insensitive,
 .menuitem.radio:insensitive {
     background-image: none;
@@ -1145,12 +1152,14 @@ GtkTreeMenu .menuitem * {
 }
 
 .radio:active,
-.check:active {
+.check:active,
+.radio:insensitive,
+.check:insensitive,
+.radio:selected:hover,
+.check:selected:hover {
     background-color: transparent;
 }
 
-.radio:selected:hover,
-.check:selected:hover,
 .radio:hover,
 .check:hover {
     background-color: shade (@theme_bg_color, 1.02);
@@ -1346,6 +1355,7 @@ GtkViewport,
 GtkIconView {
     border-radius: 3;
     padding: 0;
+    background-color: @theme_base_color;
 }
 
 GtkIconView.view.cell:selected,

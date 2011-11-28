@@ -47,6 +47,7 @@
 }
 
 .primary-toolbar .button:hover {
+    background-color: transparent;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (alpha (@theme_base_color, 0.0)),
