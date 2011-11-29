@@ -24,21 +24,20 @@ GtkSwitch.slider {
     box-shadow: 0 -1 inset alpha(white, 0.07), 0 1 inset @theme_base_color, 0 2 inset alpha(@button_border, 0.15);
 }
 
-.button {
+.button,
+GtkComboBox {
     text-shadow: @button_text_shadow 0 -1;
 }
 
-.button *:active {
+.button *:active,
+GtkComboBox:active {
     text-shadow: @button_active_text_shadow 0 -1;
 }
 
 .button
 .button.raised,
 .raised .button,
-.inline-toolbar .button {
-    icon-shadow: @button_text_shadow 0 -1;
-}
-
+.inline-toolbar .button,
 .button.raised *,
 .raised .button *,
 .inline-toolbar .button * {

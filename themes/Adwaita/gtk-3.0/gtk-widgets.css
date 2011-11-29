@@ -48,6 +48,7 @@
 /***************
  * Base States *
  ***************/
+
 GtkWindow {
     color: @theme_fg_color;
 }
@@ -407,7 +408,7 @@ GtkScrolledWindow.frame {
     text-shadow: @button_text_shadow 0 1;
 }
 
-.button *:active {
+.button *:active * {
     text-shadow: @button_active_text_shadow 0 1;
 }
 
@@ -422,9 +423,7 @@ GtkScrolledWindow.frame {
 .primary-toolbar .button:focus,
 .primary-toolbar .button:insensitive {
     border-image: none;
-    border-style: solid;
-    border-color: transparent;
-    border-width: 0;
+    border-style: none;
 }
 
 /* We may want a background for focused buttons, but in the meantime let's remove it too */
@@ -684,6 +683,10 @@ GtkScrolledWindow.frame {
     border-radius: 3;
 }
 
+GtkLinkButton * {
+    text-shadow: none;
+}
+
 /*****************
  * Notebooks and *
  * tabs          *
@@ -783,6 +786,10 @@ GtkComboBox {
     -GtkComboBox-shadow-type: none;
 
     text-shadow: @button_text_shadow 0 1;
+}
+
+GtkComboBox *:insensitive {
+    text-shadow: none;
 }
 
 GtkComboBox .separator {
