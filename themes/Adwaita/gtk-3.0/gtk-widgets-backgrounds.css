@@ -46,7 +46,8 @@
 				     to (@button_hover_gradient_color_b));
 }
 
-.primary-toolbar .button:hover {
+.primary-toolbar .button:hover,
+.primary-toolbar .button:hover:focus {
     background-color: transparent;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
