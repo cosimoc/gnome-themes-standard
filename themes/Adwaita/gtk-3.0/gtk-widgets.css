@@ -375,7 +375,6 @@ GtkScrolledWindow.frame {
 /***********
  * Buttons *
  ***********/
-
 .button,
 .button.menuitem.menubar {
     padding: 1 4;
@@ -774,7 +773,6 @@ GtkScrolledWindow.frame {
 /**************
  * ComboBoxes *
  **************/
-
 GtkComboBox {
     padding: 0;
     -GtkWidget-focus-padding: 0;
@@ -782,6 +780,8 @@ GtkComboBox {
 
     -GtkComboBox-arrow-scaling: 0.5;
     -GtkComboBox-shadow-type: none;
+
+    text-shadow: @button_text_shadow 0 1;
 }
 
 GtkComboBox .separator {
