@@ -56,3 +56,8 @@ GtkSwitch.slider {
 .inline-toolbar .button *:insensitive {
     icon-shadow: none;
 }
+
+.button .separator,
+.button .separator:prelight {
+    color: alpha (@theme_text_color, 0.1);
+}

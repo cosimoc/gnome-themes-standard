@@ -85,7 +85,7 @@ GtkWindow {
  * Tooltips *
  ************/
 .tooltip {
-    padding: 4 4;
+    padding: 4;
     border-style: none;
     border-radius: 5;
 
@@ -130,7 +130,8 @@ GtkStatusbar {
 }
 
 GtkTreeView .separator,
-.separator {
+.separator,
+.separator:prelight {
     color: darker (@theme_bg_color);
 }
 
