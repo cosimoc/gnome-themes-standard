@@ -233,7 +233,12 @@ GtkComboBox.combobox-entry .button:prelight,
 .spinbutton .button:nth-child(first):prelight,
 .spinbutton .button:nth-child(first):active,
 .spinbutton .button:nth-child(first):focused,
-.spinbutton .button:nth-child(first):insensitive,
+.spinbutton .button:nth-child(first):insensitive {
+    border-style: none;
+    border-image: none;
+
+    border-radius: 1 0 0 1;
+}
 .spinbutton .button:nth-child(last),
 .spinbutton .button:nth-child(last):prelight,
 .spinbutton .button:nth-child(last):active,
@@ -241,6 +246,8 @@ GtkComboBox.combobox-entry .button:prelight,
 .spinbutton .button:nth-child(last):insensitive {
     border-style: none;
     border-image: none;
+
+    border-radius: 0 1 1 0;
 }
 
 /****************
