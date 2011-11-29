@@ -323,9 +323,6 @@ GtkScale.slider:insensitive {
 
 GtkScale.trough,
 GtkScale.trough.vertical {
-/*    background-color: @scale_fill;
-    background-image: none;*/
-
     border-width: 1;
     border-image: none;
     border-style: solid;
@@ -346,7 +343,7 @@ GtkScale.progressbar {
 }
 
 GtkScale.mark {
-    color: shade (@theme_bg_color, 0.56);
+    color: alpha(@theme_fg_color, 0.3);
 }
 
 GtkScale.trough.vertical {
