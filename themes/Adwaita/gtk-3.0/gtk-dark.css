@@ -7,6 +7,8 @@
 @define-color theme_selected_bg_color #3465a4;
 @define-color theme_selected_fg_color @theme_text_color;
 
+@define-color placeholder_text_color shade(@theme_text_color, 0.7);
+
 @define-color menu_bg_color #555753;
 @define-color menu_fg_color @theme_text_color;
 
@@ -162,5 +164,5 @@
 @import url("gtk-widgets-assets-dark.css");
 @import url("gnome-applications.css");
 @import url("gtk-widgets.css");
-@import url("gtk-scrollbar-experiments.css");
+/* @import url("gtk-scrollbar-experiments.css"); */
 @import url("gtk-widgets-dark-overrides.css");
