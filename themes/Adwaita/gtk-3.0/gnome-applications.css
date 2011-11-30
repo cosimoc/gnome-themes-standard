@@ -292,6 +292,12 @@ NautilusWindow > GtkGrid > .pane-separator {
     box-shadow: -1 0 inset @documents_osd_button_inset;
 }
 
+.documents-osd .toolbar .button,
+.documents-osd .toolbar .button:prelight,
+.documents-osd .toolbar .button:active {
+    background-color: transparent;
+}
+
 .documents-osd .toolbar .button:nth-child(first) {
     border-radius: 4 0 0 4;
     border-left-width: 1;
