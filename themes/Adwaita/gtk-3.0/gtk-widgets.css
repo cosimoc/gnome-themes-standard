@@ -38,7 +38,7 @@
 
     -GtkWidget-focus-padding: 2;
     -GtkWidget-focus-line-width: 1;
-    -adwaita-focus-border-color: alpha(@theme_text_color, 0.4);
+    -adwaita-focus-border-color: alpha(@theme_text_color, 0.3);
     -adwaita-focus-border-radius: 2;
     -adwaita-focus-fill-color: alpha(@theme_base_color, 0.0);
     -adwaita-focus-border-gradient: none;
@@ -205,12 +205,17 @@ GtkTreeView .separator,
     border-radius: 0;
     border-style: solid;
     border-image: none;
-    border-color: alpha(@internal_element_color, 0.15);
-
-    background-image: none;
-    background-color: none;
+    border-color: @inset_dark_color;
 
     box-shadow: none;
+}
+
+.spinbutton .button,
+.spinbutton .button:prelight,
+.spinbutton .button:focus,
+.spinbutton .button:insensitive {
+    background-color: none;
+    background-image: none;
 }
 
 .spinbutton .button:insensitive {
@@ -228,6 +233,7 @@ GtkTreeView .separator,
 .spinbutton .button:first-child:focus,
 .spinbutton .button:first-child:insensitive {
     border-left-width: 0;
+    border-radius: 2 0 0 2;
 }
 
 .spinbutton .button:last-child,
@@ -236,6 +242,7 @@ GtkTreeView .separator,
 .spinbutton .button:last-child:focus,
 .spinbutton .button:last-child:insensitive {
     border-width: 0;
+    border-radius: 0 2 2 0;
 }
 
 
@@ -316,7 +323,7 @@ GtkScale.slider:insensitive {
     border-style: none;
 
     color: alpha(@theme_base_color, 0.0); /* FIXME */
-    background-color: transparent;
+    background-color: none;
 
     /* background-image in -assets variant */
 }
@@ -837,9 +844,13 @@ GtkComboBox.combobox-entry .button:hover:active:first-child {
     box-shadow: -1 0 inset @inset_dark_color;
 }
 
+GtkComboBox.combobox-entry .button *:active,
+GtkComboBox.combobox-entry .button *:active:hover {
+    color: @theme_text_color;
+}
+
 GtkComboBox .button {
     color: @internal_element_color;
-    padding: 2 3 2 6; /* FIXME */
 }
 
 GtkComboBox .button *:prelight {

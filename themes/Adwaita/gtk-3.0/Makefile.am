@@ -5,6 +5,7 @@ theme_DATA = 		\
 	gnome-applications.css \
 	gtk.css 	\
 	gtk-dark.css	\
+	gtk-scrollbar-experiments.css	\
 	gtk-widgets.css \
 	gtk-widgets-backgrounds.css \
 	gtk-widgets-borders.css \

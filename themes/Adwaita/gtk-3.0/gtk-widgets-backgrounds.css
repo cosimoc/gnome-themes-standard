@@ -99,13 +99,13 @@ GtkComboBox.combobox-entry .button:focus,
 .primary-toolbar GtkComboBox.combobox-entry .button:active,
 .primary-toolbar GtkComboBox.combobox-entry .button:hover:active,
 GtkComboBox.combobox-entry .button:active,
-GtkComboBox.combobox-entry .button:hover:active {
+GtkComboBox.combobox-entry .button:hover:active,
+.spinbutton .button:active,
+.spinbutton .button:active:hover {
     background-image: -gtk-gradient(linear,
                                     left top, left bottom,
-                                    from(shade(@entry_background_a, 0.95)),
-                                    color-stop(0.20, shade(@entry_background_b, 0.95)),
-                                    color-stop(0.85, shade(@entry_background_c, 0.95)),
-                                    to(shade(@entry_background_d, 0.95)));
+                                    from(shade(@entry_background_a, 0.9)),
+                                    to(@entry_background_d));
 }
 
 /* Insensitive entry background */

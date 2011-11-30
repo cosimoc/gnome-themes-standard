@@ -106,6 +106,15 @@ GtkSwitch.trough:active {
     border-width: 2;
 }
 
+/* Remove borders from primary toolbar buttons*/
+.primary-toolbar .button,
+.primary-toolbar .button:hover,
+.primary-toolbar .button:focus,
+.primary-toolbar .button:insensitive {
+    border-image: none;
+    border-style: none;
+}
+
 /* column-headers borders */
 column-header.button,
 column-header .button,

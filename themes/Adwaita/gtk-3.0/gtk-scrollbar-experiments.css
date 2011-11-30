@@ -1,0 +1,46 @@
+.scrollbar {
+    background-image: none;
+    border-style: solid;
+    -GtkRange-trough-border: 2;
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false;
+    -GtkRange-slider-width: 7;
+    -GtkScrollbar-min-slider-length: 30; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
+
+    -GtkRange-stepper-spacing: 1;
+    -GtkRange-trough-under-steppers: 1;
+}
+
+.scrollbar.trough {
+    background-image: none;
+    background-color: shade (@theme_bg_color, 0.882);
+    border-width: 0;
+    border-radius: 0;
+    border-image: none;
+}
+
+.scrollbar.slider {
+    background-image: none;
+    background-color: alpha(@theme_text_color, 0.3);
+    border-radius: 3;
+    border-style: none;
+    border-image: none;
+}
+
+.scrollbar.slider:prelight {
+    background-image: none;
+    background-color: alpha(@theme_text_color, 0.4);
+}
+
+.scrollbar.slider:prelight:active {
+    background-image: none;
+    background-color: @theme_selected_bg_color;
+}
+
+.scrollbar.slider:insensitive {
+    background-color: alpha(@theme_base_color, 0.2)
+}
+
+.scrollbar.trough:insensitive {
+    background-color: shade (@theme_bg_color, 0.882);
+}
