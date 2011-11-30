@@ -409,21 +409,12 @@ GtkScrolledWindow.frame {
     text-shadow: none;
 }
 
-/* Remove borders from primary toolbar buttons*/
-.primary-toolbar .button,
-.primary-toolbar .button:hover,
-.primary-toolbar .button:focus,
-.primary-toolbar .button:insensitive {
-    border-image: none;
-    border-style: none;
-}
-
 /* We may want a background for focused buttons, but in the meantime let's remove it too */
 .primary-toolbar .button,
 .primary-toolbar .button:focus,
 .primary-toolbar .button:insensitive {
     background-image: none;
-    background-color: transparent;
+    background-color: none;
 }
 
 .button.raised *,
