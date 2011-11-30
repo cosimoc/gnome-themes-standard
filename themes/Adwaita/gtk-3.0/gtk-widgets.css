@@ -192,18 +192,8 @@ GtkTreeView .separator,
  * GtkSpinButton *
  *****************/
 .spinbutton .button {
-    color: @theme_text_color;
-    icon-shadow: @button_text_shadow 0 1;
+    color: @internal_element_color;
     padding: 2 6;
-}
-
-.spinbutton .button:active {
-    icon-shadow: @button_active_text_shadow 0 1;
-}
-
-.spinbutton .button:insensitive {
-    color: @insensitive_border_color;
-    icon-shadow: none;
 }
 
 .spinbutton .button,
@@ -214,8 +204,22 @@ GtkTreeView .separator,
     border-width: 0 1;
     border-radius: 0;
     border-style: solid;
-    border-image-width: 0 3;
+    border-image: none;
+    border-color: alpha(@internal_element_color, 0.15);
+
+    background-image: none;
+    background-color: none;
+
     box-shadow: none;
+}
+
+.spinbutton .button:insensitive {
+    color: @internal_element_insensitive;
+}
+
+.spinbutton .button:active,
+.spinbutton .button:prelight {
+    color: @entry_text_color;
 }
 
 .spinbutton .button:first-child,
@@ -223,21 +227,17 @@ GtkTreeView .separator,
 .spinbutton .button:first-child:active,
 .spinbutton .button:first-child:focused,
 .spinbutton .button:first-child:insensitive {
-    border-style: none;
-    border-image: none;
-
-    border-radius: 1 0 0 1;
+    border-left-width: 0;
 }
+
 .spinbutton .button:last-child,
 .spinbutton .button:last-child:prelight,
 .spinbutton .button:last-child:active,
 .spinbutton .button:last-child:focused,
 .spinbutton .button:last-child:insensitive {
-    border-style: none;
-    border-image: none;
-
-    border-radius: 0 1 1 0;
+    border-width: 0;
 }
+
 
 /****************
  * Progress bar *

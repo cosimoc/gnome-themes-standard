@@ -40,15 +40,13 @@ GtkComboBox *:active {
 .inline-toolbar .button,
 .button.raised *,
 .raised .button *,
-.inline-toolbar .button *,
-.spinbutton .button {
+.inline-toolbar .button * {
     icon-shadow: @button_text_shadow 0 -1;
 }
 
 .button.raised *:active,
 .raised .button *:active,
-.inline-toolbar .button *:active,
-.spinbutton .button:active {
+.inline-toolbar .button *:active {
     icon-shadow: @button_active_text_shadow 0 -1;
 }
 
@@ -61,4 +59,8 @@ GtkComboBox *:active {
 .button .separator,
 .button .separator:prelight {
     color: alpha (@theme_text_color, 0.1);
+}
+
+.spinbutton .button:insensitive {
+    color: shade(@internal_element_color, 1.35);
 }
