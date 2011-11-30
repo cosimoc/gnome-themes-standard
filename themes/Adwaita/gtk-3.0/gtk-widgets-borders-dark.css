@@ -59,7 +59,11 @@ GtkSwitch.trough:active {
 .inline-toolbar.toolbar .button:active,
 .inline-toolbar.toolbar .button:active:hover,
 .inline-toolbar.toolbar .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton .button:active {
+.inline-toolbar.toolbar GtkToolButton .button:active,
+.primary-toolbar GtkSwitch.trough,
+.primary-toolbar GtkSwitch.trough:insensitive,
+.primary-toolbar GtkComboBox .button:active,
+.primary-toolbar GtkComboBox .button:insensitive {
     border-image: url("borders/primary-toolbar-generic-border-dark.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
@@ -75,7 +79,8 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised.default:active,
 .primary-toolbar .raised .button.default:active,
 .inline-toolbar.toolbar .button:focus:active,
-.inline-toolbar.toolbar .button.default:active { 
+.inline-toolbar.toolbar .button.default:active,
+.primary-toolbar GtkComboBox .button:active:focus { 
     border-image: url("borders/primary-toolbar-generic-border-focused-dark.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
@@ -86,7 +91,9 @@ GtkSwitch.trough:active {
 .primary-toolbar .raised .button,
 .primary-toolbar .button.raised:hover,
 .primary-toolbar .raised .button:hover,
-.inline-toolbar.toolbar .button {
+.inline-toolbar.toolbar .button,
+.primary-toolbar GtkComboBox .button,
+.primary-toolbar GtkComboBox .button:hover {
     border-image: url("borders/primary-toolbar-button-border-dark.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
@@ -100,19 +107,11 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised:focus:hover,
 .primary-toolbar .raised .button:focus:hover,
 .inline-toolbar.toolbar .button:focus,
-.inline-toolbar.toolbar .button.default { 
+.inline-toolbar.toolbar .button.default,
+.primary-toolbar GtkComboBox .button:focus { 
     border-image: url("borders/primary-toolbar-button-border-focused-dark.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
-}
-
-/* Remove borders from primary toolbar buttons*/
-.primary-toolbar .button,
-.primary-toolbar .button:hover,
-.primary-toolbar .button:focus,
-.primary-toolbar .button:insensitive {
-    border-image: none;
-    border-style: none;
 }
 
 /* column-headers borders */

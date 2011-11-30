@@ -424,6 +424,21 @@ GtkScrolledWindow.frame {
     background-color: none;
 }
 
+/* Remove borders from primary toolbar buttons*/
+.primary-toolbar .button,
+.primary-toolbar .button:hover,
+.primary-toolbar .button:focus,
+.primary-toolbar .button:insensitive {
+    border-image: none;
+    border-style: none;
+}
+
+/*.primary-toolbar GtkComboBox .button {
+    border-style: solid;
+    border-width: 1;
+    border-color: red;
+}*/
+
 .button.raised *,
 .raised .button *,
 .inline-toolbar .button * {
@@ -758,7 +773,7 @@ GtkLinkButton * {
 
     border-style: none;
     border-image: none;
-    background-color: transparent;
+    background-color: none;
     background-image: none;
 }
 
@@ -1061,12 +1076,12 @@ GtkTreeMenu .menuitem * {
 .menuitem.check:insensitive,
 .menuitem.radio:insensitive {
     background-image: none;
-    background-color: transparent;
+    background-color: none;
 }
 
 .menuitem.check:active,
 .menuitem.radio:active {
-    background-color: transparent;
+    background-color: none;
 }
 
 .menuitem.check:active {
@@ -1263,7 +1278,7 @@ GtkTreeMenu .menuitem * {
 .sidebar .radio:focus,
 .sidebar .radio:selected {
     background-image: none;
-    background-color: transparent;
+    background-color: none;
 }
 
 /****************

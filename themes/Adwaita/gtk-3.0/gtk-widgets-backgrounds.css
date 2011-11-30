@@ -3,7 +3,9 @@
 .primary-toolbar .button.raised,
 .primary-toolbar .raised .button,
 .primary-toolbar .button.raised:focus,
-.primary-toolbar .raised .button:focus {
+.primary-toolbar .raised .button:focus,
+.primary-toolbar GtkComboBox .button,
+.primary-toolbar GtkComboBox .button:focus {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
                                      from (@button_gradient_color_a),
@@ -24,7 +26,7 @@
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
                                      from (@button_border),
-				     to (shade(@theme_bg_color, 0.94)));
+				     to (alpha(@button_border, 0)));
 }
 
 /* Flipped pushed button background for vertical progressbar through and the like */
@@ -32,14 +34,15 @@
     background-image: -gtk-gradient (linear,
     				     left top, right top,
                                      from (@button_border),
-				     to (shade(@theme_bg_color, 0.94)));
+				     to (alpha(@button_border, 0)));
 }
 
 /* Prelit button background */
 .button:hover,
 .toolbar .button:hover,
 .primary-toolbar .button.raised:hover,
-.primary-toolbar .raised .button:hover {
+.primary-toolbar .raised .button:hover,
+.primary-toolbar GtkComboBox .button:hover {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (@button_hover_gradient_color_a),
@@ -48,7 +51,7 @@
 
 .primary-toolbar .button:hover,
 .primary-toolbar .button:hover:focus {
-    background-color: transparent;
+    background-color: none;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (alpha (@theme_base_color, 0.0)),
@@ -57,7 +60,8 @@
 }
 
 /* Insensitive button background */
-.button:insensitive {
+.button:insensitive,
+.primary-toolbar GtkComboBox .button:insensitive {
     background-image: none;
     background-color: @insensitive_bg_color;
 
@@ -71,7 +75,8 @@
 }
 
 /* Pushed + Insensitive button background */
-.button:active:insensitive {
+.button:active:insensitive,
+.primary-toolbar GtkComboBox .button:active:insensitive {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
 				     from (shade (@insensitive_bg_color, 0.95)),
