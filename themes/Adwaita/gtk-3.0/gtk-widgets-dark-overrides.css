@@ -3,7 +3,7 @@
 }
 
 GtkIconView.view.cell:selected,
-GtkIconView.view.cell:selected:focused {
+GtkIconView.view.cell:selected:focus {
     background-color: alpha(@theme_base_color, 0.0);
 
     border-style: solid;

@@ -199,7 +199,7 @@ GtkTreeView .separator,
 .spinbutton .button,
 .spinbutton .button:prelight,
 .spinbutton .button:active,
-.spinbutton .button:focused,
+.spinbutton .button:focus,
 .spinbutton .button:insensitive  {
     border-width: 0 1;
     border-radius: 0;
@@ -225,7 +225,7 @@ GtkTreeView .separator,
 .spinbutton .button:first-child,
 .spinbutton .button:first-child:prelight,
 .spinbutton .button:first-child:active,
-.spinbutton .button:first-child:focused,
+.spinbutton .button:first-child:focus,
 .spinbutton .button:first-child:insensitive {
     border-left-width: 0;
 }
@@ -233,7 +233,7 @@ GtkTreeView .separator,
 .spinbutton .button:last-child,
 .spinbutton .button:last-child:prelight,
 .spinbutton .button:last-child:active,
-.spinbutton .button:last-child:focused,
+.spinbutton .button:last-child:focus,
 .spinbutton .button:last-child:insensitive {
     border-width: 0;
 }
@@ -1137,7 +1137,7 @@ GtkTreeMenu .menuitem * {
 
 .radio,
 .check {
-    background-color: transparent;
+    background-color: none;
     border-style: none;
 
     /* background-image defined in -assets variant */
@@ -1149,7 +1149,7 @@ GtkTreeMenu .menuitem * {
 .check:insensitive,
 .radio:selected:hover,
 .check:selected:hover {
-    background-color: transparent;
+    background-color: none;
 }
 
 .radio:hover,
