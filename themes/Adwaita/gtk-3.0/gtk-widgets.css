@@ -245,6 +245,19 @@ GtkTreeView .separator,
     border-radius: 0 2 2 0;
 }
 
+/* Add back the glowy effect from the entry covered by the pushed button background*/
+.spinbutton .button:active {
+    box-shadow: 0 1 inset alpha(@theme_selected_bg_color, 0.2), 0 -1 inset alpha(@theme_selected_bg_color, 0.2);
+}
+
+.spinbutton .button:first-child:active {
+    box-shadow: 1 1 inset alpha(@theme_selected_bg_color, 0.2), 0 -1 inset alpha(@theme_selected_bg_color, 0.2);
+}
+
+.spinbutton .button:last-child:active {
+    box-shadow: 0 1 inset alpha(@theme_selected_bg_color, 0.2), -1 -1 inset alpha(@theme_selected_bg_color, 0.2);
+}
+
 
 /****************
  * Progress bar *

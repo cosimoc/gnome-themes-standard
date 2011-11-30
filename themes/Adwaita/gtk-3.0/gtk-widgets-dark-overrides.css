@@ -2,6 +2,18 @@
     box-shadow: 2 2 inset alpha(lighter(@theme_selected_bg_color), 0.2), -2 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 1 1 inset alpha(lighter(@theme_selected_bg_color), 0.7), -1 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
 }
 
+.spinbutton .button:active {
+    box-shadow: 0 2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 0 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 0 1 inset alpha(lighter(@theme_selected_bg_color), 0.7), 0 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
+}
+
+.spinbutton .button:first-child:active {
+    box-shadow: 2 2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 0 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 1 1 inset alpha(lighter(@theme_selected_bg_color), 0.7), 0 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
+}
+
+.spinbutton .button:last-child:active {
+    box-shadow: 0 2 inset alpha(lighter(@theme_selected_bg_color), 0.2), -2 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 0 1 inset alpha(lighter(@theme_selected_bg_color), 0.7), -1 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
+}
+
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
     background-color: alpha(@theme_base_color, 0.0);
