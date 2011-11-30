@@ -888,7 +888,7 @@ GtkComboBox .button *:prelight {
     background-color: @theme_base_color;
     border-radius: 3;
     border-width: 1;
-
+    border-color: @button_border;
     border-image: none;
 }
 
@@ -908,15 +908,7 @@ GtkComboBox .button *:prelight {
     color: @internal_element_color;
 }
 
-.scrollbar.button:prelight {
-    background-image: none;
-    background-color: @theme_base_color;
-
-    border-image: none;
-    border-color: shade (@highlighted_border, 0.964);
-    border-width: 1;
-}
-
+.scrollbar.button:prelight,
 .scrollbar.button:prelight:active {
     background-image: none;
     background-color: @theme_base_color;
@@ -925,6 +917,7 @@ GtkComboBox .button *:prelight {
     border-color: shade (@highlighted_border, 0.964);
     border-width: 1;
 }
+
 
 .scrollbar.button:insensitive {
     background-image: none;

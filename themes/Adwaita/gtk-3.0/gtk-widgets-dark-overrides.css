@@ -56,11 +56,21 @@ GtkComboBox *:active {
     icon-shadow: none;
 }
 
+column-header.button,
+column-header .button {
+    text-shadow: none;
+}
+
 .button .separator,
 .button .separator:prelight {
     color: alpha (@theme_text_color, 0.1);
 }
 
 .spinbutton .button:insensitive {
-    color: shade(@internal_element_color, 1.35);
+    /* color: shade(@internal_element_color, 1.65); */
+    color: shade(@internal_element_color, 1.27);
+}
+
+.scrollbar.button {
+    color: shade(@internal_element_color, 0.4);
 }
