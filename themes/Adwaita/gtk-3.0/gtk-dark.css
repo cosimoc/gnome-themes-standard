@@ -59,8 +59,8 @@
 @define-color switch_trough_active_bg_b @theme_selected_bg_color;
 
 @define-color highlighted_border @button_border;
-@define-color internal_element_color #888a85;
-@define-color internal_element_prelight #333333;
+@define-color internal_element_color #555555;
+@define-color internal_element_prelight #eeeeee;
 @define-color internal_element_insensitive shade (@internal_element_color, 0.75);
 
 @define-color progressbar_background_a shade(@theme_selected_bg_color, 1.15);
@@ -69,10 +69,10 @@
 @define-color progressbar_border @switch_slider_active_border;
 
 @define-color entry_text_color #000000;
-@define-color entry_background_a #848684;
-@define-color entry_background_b #babcba;
-@define-color entry_background_c #e7e8e7;
-@define-color entry_background_d #f3f3f3;
+@define-color entry_background_a #444644;
+@define-color entry_background_b #6a6c6a;
+@define-color entry_background_c #878887;
+@define-color entry_background_d #a3a3a3;
 
 @define-color frame_color #707070;
 

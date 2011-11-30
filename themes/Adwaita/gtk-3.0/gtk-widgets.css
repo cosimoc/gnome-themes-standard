@@ -219,7 +219,7 @@ GtkTreeView .separator,
 
 .spinbutton .button:active,
 .spinbutton .button:prelight {
-    color: @entry_text_color;
+    color: @internal_element_prelight;
 }
 
 .spinbutton .button:first-child,
@@ -884,7 +884,6 @@ GtkComboBox .button *:prelight {
 .scrollbar.button {
     background-image: none;
     background-color: @theme_base_color;
-    border-color: @button_border;
     border-radius: 3;
     border-width: 1;
 
