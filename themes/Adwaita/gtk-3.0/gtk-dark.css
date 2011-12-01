@@ -1,6 +1,6 @@
 /* dark colormap */
 
-@define-color theme_base_color #363636;
+@define-color theme_base_color #2b2f2f;
 @define-color theme_text_color #eeeeec;
 @define-color theme_bg_color #363b3b;
 @define-color theme_fg_color @theme_text_color;
@@ -40,7 +40,7 @@
 @define-color button_raised_active_gradient_color_b @button_raised_gradient_color_a;
 
 @define-color insensitive_fg_color #535555;
-@define-color insensitive_bg_color shade(@insensitive_fg_color, 0.6);
+@define-color insensitive_bg_color shade(@insensitive_fg_color, 0.62);
 @define-color insensitive_border_color #535555;
 
 @define-color inactive_frame_color shade (@theme_bg_color, 0.8);
@@ -71,10 +71,10 @@
 @define-color progressbar_border @switch_slider_active_border;
 
 @define-color entry_text_color #ffffff;
-@define-color entry_background_a #2d2d2d;
-@define-color entry_background_b #333333;
-@define-color entry_background_c #353535;
-@define-color entry_background_d #383838;
+@define-color entry_background_a #252929;
+@define-color entry_background_b #292d2d;
+@define-color entry_background_c #2d3131;
+@define-color entry_background_d #303434;
 
 @define-color frame_color #707070;
 
