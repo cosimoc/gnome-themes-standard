@@ -915,7 +915,7 @@ GtkComboBox .button *:prelight {
 
 .scrollbar.trough {
     background-image: none;
-    background-color: shade (@theme_bg_color, 0.882);
+    background-color: @scrollbar_trough_color;
     border-width: 0;
     border-radius: 0;
     border-image: none;
@@ -1360,7 +1360,7 @@ GtkSwitch.slider {
                                      from (@theme_base_color),
                                      to (@switch_slider_color));
 
-    -adwaita-switch-grip-color: shade (@switch_slider_color, 0.97);
+    -adwaita-switch-grip-color: shade (@switch_slider_color, 0.95);
 }
 
 GtkSwitch.slider:active {

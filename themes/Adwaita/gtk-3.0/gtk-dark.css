@@ -7,7 +7,7 @@
 @define-color theme_selected_bg_color #3465a4;
 @define-color theme_selected_fg_color @theme_text_color;
 
-@define-color placeholder_text_color shade(@theme_text_color, 0.7);
+@define-color placeholder_text_color shade(@theme_text_color, 0.3);
 
 @define-color menu_bg_color #555753;
 @define-color menu_fg_color @theme_text_color;
@@ -52,7 +52,7 @@
 @define-color notebook_tab_gradient_a @button_gradient_color_a;
 @define-color notebook_tab_gradient_b @button_gradient_color_b;
 
-@define-color switch_slider_color shade(@theme_bg_color, 0.95);
+@define-color switch_slider_color shade(@theme_bg_color, 0.9);
 @define-color switch_slider_active_border shade(@switch_trough_active_bg_a, 0.60);
 @define-color switch_slider_insensitive_bg @theme_bg_color;
 
@@ -63,7 +63,7 @@
 @define-color highlighted_border @button_border;
 @define-color internal_element_color #555555;
 @define-color internal_element_prelight #eeeeee;
-@define-color internal_element_insensitive shade (@internal_element_color, 0.75);
+@define-color internal_element_insensitive shade (@internal_element_color, 0.63);
 
 @define-color progressbar_background_a shade(@theme_selected_bg_color, 1.15);
 @define-color progressbar_background_b shade(@theme_selected_bg_color, 0.8);
@@ -105,6 +105,8 @@
 
 @define-color trough_bg_color_a #30312f;
 @define-color trough_bg_color_b #41433f;
+
+@define-color scrollbar_trough_color #414141;
 
 @define-color treeview_focus_border shade (@theme_selected_bg_color, 1.20);
 

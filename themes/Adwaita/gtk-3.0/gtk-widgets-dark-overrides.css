@@ -31,11 +31,6 @@ GtkIconView.view.cell:selected:focus {
     -adwaita-focus-border-dashes: true;
 }
 
-GtkSwitch.slider {
-    border-color: mix (@button_border, black, 0.4);
-    box-shadow: 0 -1 inset alpha(white, 0.07), 0 1 inset @theme_base_color, 0 2 inset alpha(@button_border, 0.15);
-}
-
 .button,
 GtkComboBox {
     text-shadow: @button_text_shadow 0 -1;
@@ -78,11 +73,22 @@ column-header .button {
     color: alpha (@theme_text_color, 0.1);
 }
 
-.spinbutton .button:insensitive {
-    /* color: shade(@internal_element_color, 1.65); */
-    color: shade(@internal_element_color, 1.27);
+.scrollbar.slider:prelight,
+.scrollbar.button:prelight,
+.scrollbar.button:prelight:active {
+    border-color: shade (@highlighted_border, 0.75);
 }
 
-.scrollbar.button {
-    color: shade(@internal_element_color, 0.4);
+GtkSwitch.slider {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (@theme_bg_color),
+                                     to (@switch_slider_color));
+
+    -adwaita-switch-grip-color: shade (@switch_slider_color, 0.9);
+}
+
+GtkSwitch.slider {
+    border-color: mix (@button_border, black, 0.4);
+    box-shadow: 0 -1 inset alpha(white, 0.04), 0 1 inset shade(@theme_bg_color, 1.1), 0 2 inset alpha(@button_border, 0.2);
 }

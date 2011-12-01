@@ -87,6 +87,8 @@
 @define-color trough_bg_color_a #bcbcb7;
 @define-color trough_bg_color_b #e0e0dd;
 
+@define-color scrollbar_trough_color shade(@theme_bg_color, 0.882);
+
 @define-color switch_slider_color #eeeeec;
 @define-color switch_slider_active_border #2a79cb;
 @define-color switch_slider_insensitive_bg @insensitive_bg_color;
