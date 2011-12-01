@@ -53,6 +53,7 @@ GtkSwitch.trough:active {
 .primary-toolbar GtkComboBox.combobox-entry .button:focus,
 .primary-toolbar GtkComboBox.combobox-entry .button:insensitive,
 .primary-toolbar .button:active,
+.primary-toolbar .button:active:insensitive,
 .primary-toolbar .button:active:hover,
 .primary-toolbar .button.raised:insensitive,
 .primary-toolbar .raised .button:insensitive,

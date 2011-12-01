@@ -61,7 +61,8 @@
 
 /* Insensitive button background */
 .button:insensitive,
-.primary-toolbar GtkComboBox .button:insensitive {
+.primary-toolbar GtkComboBox .button:insensitive,
+.primary-toolbar .button *:active:insensitive {
     background-image: none;
     background-color: @insensitive_bg_color;
 
