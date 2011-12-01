@@ -61,8 +61,7 @@
 
 /* Insensitive button background */
 .button:insensitive,
-.primary-toolbar GtkComboBox .button:insensitive,
-.primary-toolbar .button *:active:insensitive {
+.primary-toolbar GtkComboBox .button:insensitive {
     background-image: none;
     background-color: @insensitive_bg_color;
 
@@ -77,6 +76,7 @@
 
 /* Pushed + Insensitive button background */
 .button:active:insensitive,
+.primary-toolbar .button:active:insensitive,
 .primary-toolbar GtkComboBox .button:active:insensitive {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
