@@ -1203,7 +1203,7 @@ GtkTreeMenu .menuitem * {
 }
 
 .toolbar .button {
-    padding: 2;
+    padding: 3;
 }
 
 .toolbar:insensitive {
