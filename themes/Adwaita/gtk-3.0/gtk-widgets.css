@@ -397,7 +397,8 @@ GtkScrolledWindow.frame {
  * Buttons *
  ***********/
 .button,
-.button.menuitem.menubar {
+.button.menuitem.menubar,
+GtkComboBox.combobox-entry .button {
     padding: 2 5;
 }
 
@@ -797,6 +798,7 @@ GtkLinkButton * {
  **************/
 GtkComboBox {
     padding: 0;
+    padding-right: 6;
     -GtkWidget-focus-padding: 0;
     -GtkWidget-focus-line-width: 0;
 
@@ -804,6 +806,10 @@ GtkComboBox {
     -GtkComboBox-shadow-type: none;
 
     text-shadow: @button_text_shadow 0 1;
+}
+
+GtkComboBox.combobox-entry {
+    padding-right: 0;
 }
 
 GtkComboBox *:insensitive {
@@ -878,6 +884,7 @@ GtkComboBox.combobox-entry .button *:active:hover {
 }
 
 GtkComboBox .button {
+    padding-right: 0;
     color: @internal_element_color;
 }
 
