@@ -451,12 +451,6 @@ GtkComboBox.combobox-entry .button {
     border-color: transparent;
 }
 
-/*.primary-toolbar GtkComboBox .button {
-    border-style: solid;
-    border-width: 1;
-    border-color: red;
-}*/
-
 .button.raised *,
 .raised .button *,
 .inline-toolbar .button * {
