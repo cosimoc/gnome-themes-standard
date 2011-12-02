@@ -335,8 +335,9 @@ render_notebook_extension (GtkThemingEngine *engine,
 
   if (state & GTK_STATE_FLAG_ACTIVE)
     {
-      style_pattern_set_matrix (pattern, width, height - 6.0, FALSE);
+      cairo_scale (cr, width, height - 6.0);
       cairo_set_source (cr, pattern);
+      cairo_scale (cr, 1.0 / width, 1.0 / (height - 6.0));
     }
   else
     {
@@ -566,9 +567,12 @@ adwaita_engine_render_activity (GtkThemingEngine *engine,
 
       if (pattern != NULL)
         {
-          style_pattern_set_matrix (pattern, 20, 20, TRUE);
-          cairo_rectangle (cr, x, y, width, height);
+          cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
+          cairo_scale (cr, 20, 20);
           cairo_set_source (cr, pattern);
+          cairo_scale (cr, 1.0 / 20, 1.0 / 20);
+
+          cairo_rectangle (cr, x, y, width, height);
           cairo_fill (cr);
 
           cairo_pattern_destroy (pattern);

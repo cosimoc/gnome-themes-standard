@@ -146,34 +146,3 @@ _cairo_round_rectangle_sides (cairo_t          *cr,
         cairo_arc (cr, x + width - radius, y + radius, radius, 3 * (G_PI / 2), - G_PI / 4);
     }
 }
-
-/* Set the appropriate matrix for
- * patterns coming from the style context
- */
-void
-style_pattern_set_matrix (cairo_pattern_t *pattern,
-                          gdouble          width,
-                          gdouble          height,
-			  gboolean         repeat)
-{
-  cairo_matrix_t matrix;
-  gint w, h;
-
-  if (cairo_pattern_get_type (pattern) == CAIRO_PATTERN_TYPE_SURFACE)
-    {
-      cairo_surface_t *surface;
-
-      cairo_pattern_get_surface (pattern, &surface);
-      w = cairo_image_surface_get_width (surface);
-      h = cairo_image_surface_get_height (surface);
-    }
-  else
-    w = h = 1;
-
-  cairo_matrix_init_scale (&matrix, (gdouble) w / width, (gdouble) h / height);
-  cairo_pattern_set_matrix (pattern, &matrix);
-
-  if (repeat)
-    cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
-}
-

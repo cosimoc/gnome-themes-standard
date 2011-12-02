@@ -44,12 +44,6 @@ adwaita_trim_allocation_for_scale (GtkThemingEngine *engine,
                                    gdouble *height);
 
 void
-style_pattern_set_matrix (cairo_pattern_t *pattern,
-                          gdouble          width,
-                          gdouble          height,
-			  gboolean         repeat);
-
-void
 _cairo_round_rectangle_sides (cairo_t          *cr,
                               gdouble           radius,
                               gdouble           x,
