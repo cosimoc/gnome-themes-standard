@@ -310,6 +310,9 @@ render_notebook_extension (GtkThemingEngine *engine,
   width -= 1.0;
   draw_tab_shape_active (cr, tab_curvature, 0, 0, width, height);
 
+  gdk_cairo_set_source_rgba (cr, &background_color);
+  cairo_fill_preserve (cr);
+
   if (background_pattern != NULL)
     {
       cairo_matrix_init_scale (&matrix,
@@ -317,13 +320,9 @@ render_notebook_extension (GtkThemingEngine *engine,
                                1. / height);
       cairo_pattern_set_matrix (background_pattern, &matrix);
       cairo_set_source (cr, background_pattern);
-    }
-  else
-    {
-      gdk_cairo_set_source_rgba (cr, &background_color);
-    }
 
-  cairo_fill (cr);
+      cairo_fill (cr);
+    }
 
   if (state & GTK_STATE_FLAG_ACTIVE)
     {
