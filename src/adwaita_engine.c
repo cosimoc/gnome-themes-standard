@@ -200,30 +200,6 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
 }
 
 static void
-adwaita_engine_render_check (GtkThemingEngine *engine,
-                             cairo_t          *cr,
-                             gdouble           x,
-                             gdouble           y,
-                             gdouble           width,
-                             gdouble           height)
-{
-  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
-    (engine, cr, x, y, width, height);
-}
-
-static void
-adwaita_engine_render_option (GtkThemingEngine *engine,
-                              cairo_t          *cr,
-                              gdouble           x,
-                              gdouble           y,
-                              gdouble           width,
-                              gdouble           height)
-{
-  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
-      (engine, cr, x, y, width, height);
-}
-
-static void
 draw_tab_arcs (cairo_t *cr,
                gdouble curve_width,
                gdouble x,
@@ -783,8 +759,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 
   engine_class->render_arrow = adwaita_engine_render_arrow;
   engine_class->render_focus = adwaita_engine_render_focus;
-  engine_class->render_check = adwaita_engine_render_check;
-  engine_class->render_option = adwaita_engine_render_option;
   engine_class->render_extension = adwaita_engine_render_extension;
   engine_class->render_frame = adwaita_engine_render_frame;
   engine_class->render_background = adwaita_engine_render_background;
