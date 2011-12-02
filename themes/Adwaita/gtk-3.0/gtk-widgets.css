@@ -1354,7 +1354,7 @@ GtkSwitch.slider {
                                      from (@theme_base_color),
                                      to (@switch_slider_color));
 
-    -adwaita-switch-grip-color: shade (@switch_slider_color, 0.95);
+    color: shade (@switch_slider_color, 0.95);
 }
 
 GtkSwitch.slider:active {

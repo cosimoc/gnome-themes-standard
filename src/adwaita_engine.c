@@ -568,16 +568,14 @@ render_switch_lines (GtkThemingEngine *engine,
                      GtkOrientation orientation)
 {
   GtkStateFlags state;
-  GdkRGBA *lines_color;
+  GdkRGBA lines_color;
 
   state = gtk_theming_engine_get_state (engine);
 
   if (state & GTK_STATE_FLAG_INSENSITIVE)
     return;
 
-  gtk_theming_engine_get (engine, state,
-                          "-adwaita-switch-grip-color", &lines_color,
-                          NULL);
+  gtk_theming_engine_get_color (engine, state, &lines_color);
 
   cairo_save (cr);
 
@@ -595,12 +593,10 @@ render_switch_lines (GtkThemingEngine *engine,
   cairo_move_to (cr, 8.0, 0.0);
   cairo_line_to (cr, 8.0, 6.0);
 
-  gdk_cairo_set_source_rgba (cr, lines_color);
+  gdk_cairo_set_source_rgba (cr, &lines_color);
   cairo_stroke (cr);
 
   cairo_restore (cr);
-
-  gdk_rgba_free (lines_color);
 }
 
 static void
@@ -797,11 +793,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
                                         g_param_spec_boxed ("menuitem-arrow-color",
                                                             "Menuitem arrow color",
                                                             "Menuitem arrow color",
-                                                            GDK_TYPE_RGBA, 0));
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_boxed ("switch-grip-color",
-                                                            "Switch grip color",
-                                                            "Switch grip color",
                                                             GDK_TYPE_RGBA, 0));
   gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
                                         g_param_spec_boxed ("progressbar-pattern",
