@@ -101,22 +101,6 @@ adwaita_engine_render_arrow (GtkThemingEngine *engine,
 
   state = gtk_theming_engine_get_state (engine);
   gtk_theming_engine_get_color (engine, state, &color);
-
-  if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_MENUITEM) &&
-      !(state & GTK_STATE_FLAG_INSENSITIVE) && !(state & GTK_STATE_FLAG_PRELIGHT))
-    {
-      GdkRGBA *arrow_color;
-
-      gtk_theming_engine_get (engine, state,
-                              "-adwaita-menuitem-arrow-color", &arrow_color,
-                              NULL);
-
-      if (arrow_color != NULL)
-        color = *arrow_color;
-
-      gdk_rgba_free (arrow_color);
-    }
-
   gdk_cairo_set_source_rgba (cr, &color);
   cairo_stroke (cr);
 
@@ -789,11 +773,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
                                                               "Focus border uses dashes",
                                                               "Focus border uses dashes",
                                                               FALSE, 0));
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_boxed ("menuitem-arrow-color",
-                                                            "Menuitem arrow color",
-                                                            "Menuitem arrow color",
-                                                            GDK_TYPE_RGBA, 0));
   gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
                                         g_param_spec_boxed ("progressbar-pattern",
                                                             "Progressbar pattern",

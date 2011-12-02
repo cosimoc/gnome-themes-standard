@@ -1051,8 +1051,11 @@ GtkTreeMenu .menuitem * {
 
 .menuitem {
     -GtkMenuItem-arrow-scaling: 0.4;
-    -adwaita-menuitem-arrow-color: @menu_controls_color;
     padding: 4;
+}
+
+.menuitem.arrow {
+    color: @menu_controls_color;
 }
 
 .menuitem:active,
