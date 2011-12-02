@@ -1,13 +1,13 @@
 /* dark colormap */
 
-@define-color theme_base_color #2b2f2f;
+@define-color theme_base_color #333333;
 @define-color theme_text_color #eeeeec;
-@define-color theme_bg_color #363b3b;
+@define-color theme_bg_color #393f3f;
 @define-color theme_fg_color @theme_text_color;
 @define-color theme_selected_bg_color #3465a4;
 @define-color theme_selected_fg_color @theme_text_color;
 
-@define-color placeholder_text_color shade(@theme_text_color, 0.3);
+@define-color placeholder_text_color shade(@theme_text_color, 0.4);
 
 @define-color menu_bg_color #555753;
 @define-color menu_fg_color @theme_text_color;
@@ -40,7 +40,7 @@
 @define-color button_raised_active_gradient_color_b @button_raised_gradient_color_a;
 
 @define-color insensitive_fg_color #535555;
-@define-color insensitive_bg_color shade(@insensitive_fg_color, 0.62);
+@define-color insensitive_bg_color mix(@theme_bg_color, @theme_base_color, 0.6);
 @define-color insensitive_border_color #535555;
 
 @define-color inactive_frame_color shade (@theme_bg_color, 0.8);
@@ -61,9 +61,9 @@
 @define-color switch_trough_active_bg_b @theme_selected_bg_color;
 
 @define-color highlighted_border @button_border;
-@define-color internal_element_color #555555;
+@define-color internal_element_color #595959;
 @define-color internal_element_prelight #eeeeee;
-@define-color internal_element_insensitive shade (@internal_element_color, 0.63);
+@define-color internal_element_insensitive mix(@internal_element_color, @theme_base_color, 0.65);
 
 @define-color progressbar_background_a shade(@theme_selected_bg_color, 1.15);
 @define-color progressbar_background_b shade(@theme_selected_bg_color, 0.8);
@@ -71,10 +71,10 @@
 @define-color progressbar_border @switch_slider_active_border;
 
 @define-color entry_text_color #ffffff;
-@define-color entry_background_a #252929;
-@define-color entry_background_b #292d2d;
-@define-color entry_background_c #2b2f2f;
-@define-color entry_background_d #2d3131;
+@define-color entry_background_a #2d2d2d;
+@define-color entry_background_b #333333;
+@define-color entry_background_c #343434;
+@define-color entry_background_d #373737;
 
 @define-color frame_color #707070;
 
