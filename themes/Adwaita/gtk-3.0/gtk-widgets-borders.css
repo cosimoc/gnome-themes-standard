@@ -68,6 +68,8 @@ GtkSwitch.trough:active {
     border-image: url("borders/primary-toolbar-generic-border.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
+    border-style: solid;
+    border-color: transparent;
 }
 
 /* primary toolbar - focused element borders */
@@ -85,6 +87,8 @@ GtkSwitch.trough:active {
     border-image: url("borders/primary-toolbar-generic-border-focused.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
+    border-style: solid;
+    border-color: transparent;
 }
 
 /* primary toolbar - generic button borders */
@@ -98,6 +102,9 @@ GtkSwitch.trough:active {
     border-image: url("borders/primary-toolbar-button-border.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
+    border-style: solid;
+    border-color: transparent;
+
 }
 
 /* primary toolbar - focused button borders */
@@ -113,6 +120,9 @@ GtkSwitch.trough:active {
     border-image: url("borders/primary-toolbar-button-border-focused.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
+    border-style: solid;
+    border-color: transparent;
+
 }
 
 /* column-headers borders */

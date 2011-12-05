@@ -1407,6 +1407,12 @@ GtkTreeView {
     -adwaita-focus-border-radius: 2;
     -adwaita-focus-border-dashes: 1;
     -adwaita-focus-border-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
+
+    background-color: @theme_base_color;
+}
+
+GtkTreeView.view {
+    background-color: @theme_base_color;
 }
 
 /*column-header {
