@@ -1415,55 +1415,47 @@ GtkTreeView {
 
 column-header.button,
 column-header .button {
+    color: @internal_element_color;
+}
+
+column-header.button,
+column-header .button,
+column-header.button:insensitive,
+column-header:insensitive. .button,
+column-header .button:insensitive,
+column-header.button:hover,
+column-header .button:hover,
+column-header.button:focus:hover,
+column-header .button:focus:hover {
     background-color: @theme_base_color;
     background-image: none;
     padding: 0 4;
+    text-shadow: none;
+    icon-shadow: none;
+    font-weight: bold; /* Not sure about this one */
 }
 
+column-header.button:insensitive,
+column-header:insensitive. .button,
+column-header .button:insensitive {
+    color: @internal_element_color_insensitive;
+}
+
+column-header.button:hover,
+column-header .button:hover,
+column-header.button:focus:hover,
+column-header .button:focus:hover,
 column-header.button:active:focus:hover,
 column-header .button:active:focus:hover,
 column-header.button:active:focus,
 column-header .button:active:focus,
 column-header.button:active:hover,
 column-header .button:active:hover {
-    font: bold; /* doesn't work */
+    color: @internal_element_color_prelight;
+    text-shadow: none;
+    icon-shadow: none;
 }
 
-column-header.button:active:hover,
-column-header .button:active:hover,
-column-header.button:active:focus:hover,
-column-header .button:active:focus:hover {
-    color: white; /*doesn't work */
-    background-color: @theme_bg_color;
-    text-shadow: white 0 1;
-}
-
-/* this kinda is a gross hack, I'll do something better with border images */
-column-header.button:hover,
-column-header .button:hover,
-column-header.button:focus:hover,
-column-header .button:focus:hover,
-column-header.button:active:focus,
-column-header .button:active:focus {
-    background-color: @theme_base_color;
-    background-image: none;
-    border-width: 4 5 4 4;
-}
-
-column-header.button:hover:last-child,
-column-header:last-child .button:hover,
-column-header.button:focus:hover:last-child,
-column-header:last-child .button:focus:hover,
-column-header.button:active:focus:last-child,
-column-header:last-child .button:active:focus {
-    background-color: @theme_base_color;
-    background-image: none;
-    border-width: 4 5 4 4;
-}
-
-column-header .button GtkArrow {
-    color: @internal_element_color;
-}
 
 row:hover {
     border-width: 0;
