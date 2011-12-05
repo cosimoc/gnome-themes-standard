@@ -745,7 +745,7 @@ GtkLinkButton * {
     -adwaita-selected-tab-color: @notebook_selected_tab_color;
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
-                                     from (shade (@theme_base_color, 0.98)),
+                                     from (@button_gradient_color_a),
                                      to (@theme_base_color));
 }
 
