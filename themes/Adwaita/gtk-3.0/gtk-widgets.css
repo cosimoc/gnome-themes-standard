@@ -632,6 +632,7 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:first-child .button:focus,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:insensitive {
+    border-left-width: 2;
     border-right-width: 0;
     border-image-width: 4 0 4 4;
     border-bottom-right-radius: 0;
@@ -664,6 +665,7 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:last-child .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive {
     border-left-width: 0;
+    border-right-width: 2;
     border-image-width: 4 4 4 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
