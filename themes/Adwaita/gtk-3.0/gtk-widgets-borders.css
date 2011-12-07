@@ -168,3 +168,25 @@ column-header:last-child .button:active:hover {
     border-image: none;
     border-width: 0;
 }
+
+/* unfocused window: generic element borders */
+.button:window-unfocused,
+GtkComboBox.combobox-entry .entry:window-unfocused,
+GtkComboBox.combobox-entry .button:window-unfocused, /* not working */
+GtkComboBox *:window-unfocused, /* not working */
+.entry:window-unfocused {
+    border-image: url("borders/generic-border-unfocused.svg") 3 3 4 3 / 3 3 4 3 stretch;
+    border-radius: 3;
+    border-width: 1 1 2 1;
+}
+
+/* unfocused window: primary toolbar generic element borders */
+.primary-toolbar .button:window-unfocused,
+.primary-toolbar .entry:window-unfocused { 
+    border-image: url("borders/primary-toolbar-generic-border-unfocused.svg") 4 / 4 stretch;
+    border-radius: 3;
+    border-width: 2;
+    border-style: solid;
+    border-color: transparent;
+
+}

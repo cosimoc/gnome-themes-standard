@@ -198,20 +198,33 @@ GtkTreeView .separator,
 .spinbutton .button:prelight,
 .spinbutton .button:active,
 .spinbutton .button:focus,
-.spinbutton .button:insensitive  {
+.spinbutton .button:insensitive,
+.spinbutton .button:window-unfocused {
     border-width: 0 1;
     border-radius: 0;
     border-style: solid;
     border-image: none;
-    border-color: @inset_dark_color;
 
     box-shadow: none;
 }
 
 .spinbutton .button,
 .spinbutton .button:prelight,
+.spinbutton .button:active,
 .spinbutton .button:focus,
 .spinbutton .button:insensitive {
+    border-color: @inset_dark_color;
+}
+
+.spinbutton .button:window-unfocused {
+    border-color:  @inset_dark_color; /* FIXME */
+}
+
+.spinbutton .button,
+.spinbutton .button:prelight,
+.spinbutton .button:focus,
+.spinbutton .button:insensitive,
+.spinbutton .button:window-unfocused {
     background-color: none;
     background-image: none;
 }
@@ -229,7 +242,8 @@ GtkTreeView .separator,
 .spinbutton .button:first-child:prelight,
 .spinbutton .button:first-child:active,
 .spinbutton .button:first-child:focus,
-.spinbutton .button:first-child:insensitive {
+.spinbutton .button:first-child:insensitive,
+.spinbutton .button:first-child:window-unfocused {
     border-left-width: 0;
     border-radius: 2 0 0 2;
 }
@@ -238,7 +252,8 @@ GtkTreeView .separator,
 .spinbutton .button:last-child:prelight,
 .spinbutton .button:last-child:active,
 .spinbutton .button:last-child:focus,
-.spinbutton .button:last-child:insensitive {
+.spinbutton .button:last-child:insensitive,
+.spinbutton .button:last-child:window-unfocused {
     border-width: 0;
     border-radius: 0 2 2 0;
 }
@@ -434,7 +449,8 @@ GtkComboBox.combobox-entry .button {
 /* We may want a background for focused buttons, but in the meantime let's remove it too */
 .primary-toolbar .button,
 .primary-toolbar .button:focus,
-.primary-toolbar .button:insensitive {
+.primary-toolbar .button:insensitive,
+.primary-toolbar .button:window-unfocused {
     background-image: none;
     background-color: none;
 }
@@ -443,7 +459,8 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button,
 .primary-toolbar .button:hover,
 .primary-toolbar .button:focus,
-.primary-toolbar .button:insensitive {
+.primary-toolbar .button:insensitive,
+.primary-toolbar .button:window-unfocused {
     border-image: none;
 
     /* setting border-style: none; here would override the border-width values 
@@ -829,9 +846,11 @@ GtkComboBox .separator {
 
 GtkComboBox.combobox-entry .entry:first-child,
 GtkComboBox.combobox-entry .entry:focus:first-child,
+GtkComboBox.combobox-entry .entry:window-unfocused:first-child,
 GtkComboBox.combobox-entry .button:first-child,
 GtkComboBox.combobox-entry .button:focus:first-child,
-GtkComboBox.combobox-entry .button:insensitive:first-child {
+GtkComboBox.combobox-entry .button:insensitive:first-child,
+GtkComboBox.combobox-entry .button:window-unfocused:first-child {
     border-image-width: 3 0 4 3;
     border-radius: 3 0 0 3;
     border-right-width: 0;
@@ -839,10 +858,12 @@ GtkComboBox.combobox-entry .button:insensitive:first-child {
 
 GtkComboBox.combobox-entry .entry:last-child,
 GtkComboBox.combobox-entry .entry:focus:last-child,
+GtkComboBox.combobox-entry .entry:window-unfocused:last-child,
 GtkComboBox.combobox-entry .button:last-child,
 GtkComboBox.combobox-entry .button:focus:last-child,
 GtkComboBox.combobox-entry .button:insensitive:last-child,
-GtkComboBox.combobox-entry .button:active:last-child {
+GtkComboBox.combobox-entry .button:active:last-child,
+GtkComboBox.combobox-entry .button:window-unfocused:last-child {
     border-image-width: 3 3 4 0;
     border-radius: 0 3 3 0;
     border-left-width: 0;

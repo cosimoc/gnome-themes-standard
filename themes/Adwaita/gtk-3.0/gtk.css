@@ -22,6 +22,13 @@
 @define-color theme_selected_bg_color @selected_bg_color;
 @define-color theme_selected_fg_color @selected_fg_color;
 
+@define-color theme_unfocused_base_color @theme_base_color; /* FIXME */
+@define-color theme_unfocused_text_color @theme_text_color; /* FIXME */
+@define-color theme_unfocused_fg_color @theme_fg_color; /* FIXME */
+@define-color theme_unfocused_bg_color @theme_bg_color; /* FIXME */
+@define-color theme_unfocused_selected_bg_color @theme_selected_bg_color; /* FIXME */
+@define-color theme_unfocused_selected_fg_color @theme_selected_fg_color; /* FIXME */
+
 @define-color menu_bg_color shade (@theme_bg_color, 1.1);
 @define-color menu_fg_color @theme_fg_color;
 @define-color menu_controls_color shade (@theme_fg_color, 0.9);
@@ -67,8 +74,6 @@
 @define-color button_active_text_shadow alpha(white, 0.3);
 @define-color button_text_shadow alpha(white, 0.7);
 @define-color primary_toolbar_button_text_shadow alpha(black, 0.1);
-
-@define-color theme_unfocused_button_active_color shade(@theme_unfocused_bg_color, 0.8); /* to be defined */
 
 @define-color button_hover_gradient_color_a @theme_base_color;
 @define-color button_hover_gradient_color_b shade (@button_gradient_color_a, 0.94);
@@ -177,5 +182,4 @@
 @import url("gtk-widgets-assets.css");
 @import url("gtk-widgets.css");
 @import url("gnome-applications.css");
-/* @import url("gtk-widgets-window-unfocused.css"); */
 /* @import url("gtk-scrollbar-experiments.css"); */
