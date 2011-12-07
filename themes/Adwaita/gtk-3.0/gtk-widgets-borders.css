@@ -174,7 +174,12 @@ column-header:last-child .button:active:hover {
 GtkComboBox.combobox-entry .entry:window-unfocused,
 GtkComboBox.combobox-entry .button:window-unfocused, /* not working */
 GtkComboBox *:window-unfocused, /* not working */
-.entry:window-unfocused {
+.entry:window-unfocused,
+GtkSwitch.trough:window-unfocused,
+.trough:window-unfocused, /* not working */
+.trough row:window-unfocused, /* not working */
+GtkProgressBar:window-unfocused, /* not working */
+.progressbar:window-unfocused /* not working */ {
     border-image: url("borders/generic-border-unfocused.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3;
     border-width: 1 1 2 1;
