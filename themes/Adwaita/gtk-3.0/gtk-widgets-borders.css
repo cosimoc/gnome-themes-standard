@@ -182,7 +182,8 @@ GtkComboBox *:window-unfocused, /* not working */
 
 /* unfocused window: primary toolbar generic element borders */
 .primary-toolbar .button:window-unfocused,
-.primary-toolbar .entry:window-unfocused { 
+.primary-toolbar .entry:window-unfocused,
+.inline-toolbar.toolbar .button:window-unfocused { 
     border-image: url("borders/primary-toolbar-generic-border-unfocused.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;

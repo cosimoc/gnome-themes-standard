@@ -552,7 +552,10 @@ GtkComboBox.combobox-entry .button {
 .linked .button:active,
 .linked .button:active:hover,
 .linked .button:focus,
-.linked .button:focus:active {
+.linked .button:focus:active,
+.linked .button:window-unfocused,
+.linked .button:active:window-unfocused,
+.linked .button:active:hover:window-unfocused {
     border-right-width: 0;
     border-left-width: 0;
     border-image-width: 3 0 4 0;
@@ -564,7 +567,10 @@ GtkComboBox.combobox-entry .button {
 .linked .button:active:first-child,
 .linked .button:active:hover:first-child,
 .linked .button:focus:first-child,
-.linked .button:focus:active:first-child {
+.linked .button:focus:active:first-child,
+.linked .button:window-unfocused:first-child,
+.linked .button:active:window-unfocused:first-child,
+.linked .button:active:hover:window-unfocused:first-child {
     border-right-width: 0;
     border-image-width: 3 0 4 3;
     border-bottom-right-radius: 0;
@@ -576,7 +582,10 @@ GtkComboBox.combobox-entry .button {
 .linked .button:active:last-child,
 .linked .button:active:hover:last-child,
 .linked .button:focus:last-child,
-.linked .button:focus:active:last-child {
+.linked .button:focus:active:last-child,
+.linked .button:window-unfocused:last-child,
+.linked .button:active:window-unfocused:last-child,
+.linked .button:active:hover:window-unfocused:last-child {
     border-left-width: 0;
     border-image-width: 3 3 4 0;
     border-bottom-left-radius: 0;
@@ -588,7 +597,10 @@ GtkComboBox.combobox-entry .button {
 .linked .button:active:only-child,
 .linked .button:active:hover:only-child,
 .linked .button:focus:only-child,
-.linked .button:focus:active:only-child {
+.linked .button:focus:active:only-child,
+.linked .button:window-unfocused:only-child,
+.linked .button:active:window-unfocused:only-child,
+.linked .button:active:hover:window-unfocused:only-child {
     border-right-width: 1;
     border-left-width: 1;
     border-image-width: 3 3 4 3;
@@ -621,7 +633,19 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton .button:active:hover,
 .inline-toolbar.toolbar GtkToolButton .button:focus,
 .inline-toolbar.toolbar GtkToolButton .button:focus:active,
-.inline-toolbar.toolbar GtkToolButton .button:insensitive {
+.inline-toolbar.toolbar GtkToolButton .button:insensitive,
+.toolbar .button.raised.linked:window-unfocused,
+.toolbar .button.raised.linked:active:window-unfocused,
+.toolbar .button.raised.linked:active:hover:window-unfocused,
+.toolbar .raised.linked .button:window-unfocused,
+.toolbar .raised.linked .button:active:window-unfocused,
+.toolbar .raised.linked .button:active:hover:window-unfocused,
+.inline-toolbar.toolbar .button:window-unfocused,
+.inline-toolbar.toolbar .button:active:window-unfocused,
+.inline-toolbar.toolbar .button:active:hover:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton .button:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton .button:active:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton .button:active:hover:window-unfocused {
     border-right-width: 0;
     border-left-width: 0;
     border-image-width: 4 0 4 0;
@@ -652,7 +676,19 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:first-child .button:active:hover,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:focus,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:focus:active,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:insensitive {
+.inline-toolbar.toolbar GtkToolButton:first-child .button:insensitive,
+.toolbar .button.raised.linked:window-unfocused:first-child,
+.toolbar .button.raised.linked:active:window-unfocused:first-child,
+.toolbar .button.raised.linked:active:hover:window-unfocused:first-child,
+.toolbar .raised.linked .button:window-unfocused:first-child,
+.toolbar .raised.linked .button:active:window-unfocused:first-child,
+.toolbar .raised.linked .button:active:hover:window-unfocused:first-child,
+.inline-toolbar.toolbar .button:window-unfocused:first-child,
+.inline-toolbar.toolbar .button:active:window-unfocused:first-child,
+.inline-toolbar.toolbar .button:active:hover:window-unfocused:first-child,
+.inline-toolbar.toolbar GtkToolButton:first-child .button:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton:first-child .button:active:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton:first-child .button:active:hover:window-unfocused {
     border-left-width: 2;
     border-right-width: 0;
     border-image-width: 4 0 4 4;
@@ -684,7 +720,19 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:last-child .button:active:hover,
 .inline-toolbar.toolbar GtkToolButton:last-child .button:focus,
 .inline-toolbar.toolbar GtkToolButton:last-child .button:focus:active,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive {
+.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive,
+.toolbar .button.raised.linked:window-unfocused:last-child,
+.toolbar .button.raised.linked:active:window-unfocused:last-child,
+.toolbar .button.raised.linked:active:hover:window-unfocused:last-child,
+.toolbar .raised.linked .button:window-unfocused:last-child,
+.toolbar .raised.linked .button:active:window-unfocused:last-child,
+.toolbar .raised.linked .button:active:hover:window-unfocused:last-child,
+.inline-toolbar.toolbar .button:window-unfocused:last-child,
+.inline-toolbar.toolbar .button:active:window-unfocused:last-child,
+.inline-toolbar.toolbar .button:active:hover:window-unfocused:last-child,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:active:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:active:hover:window-unfocused {
     border-left-width: 0;
     border-right-width: 2;
     border-image-width: 4 4 4 0;
@@ -716,7 +764,19 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:only-child .button:active:hover,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:focus,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:focus:active,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive {
+.inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive,
+.toolbar .button.raised.linked:window-unfocused:only-child,
+.toolbar .button.raised.linked:active:window-unfocused:only-child,
+.toolbar .button.raised.linked:active:hover:window-unfocused:only-child,
+.toolbar .raised.linked .button:window-unfocused:only-child,
+.toolbar .raised.linked .button:active:window-unfocused:only-child,
+.toolbar .raised.linked .button:active:hover:window-unfocused:only-child,
+.inline-toolbar.toolbar .button:window-unfocused:only-child,
+.inline-toolbar.toolbar .button:active:window-unfocused:only-child,
+.inline-toolbar.toolbar .button:active:hover:window-unfocused:only-child,
+.inline-toolbar.toolbar GtkToolButton:only-child .button:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton:only-child .button:active:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton:only-child .button:active:hover:window-unfocused {
     border-right-width: 2;
     border-left-width: 2;
     border-image-width: 4;
