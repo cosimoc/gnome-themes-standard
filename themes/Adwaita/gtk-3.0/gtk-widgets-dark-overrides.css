@@ -37,8 +37,15 @@ GtkComboBox {
 }
 
 .button *:active,
-GtkComboBox *:active {
+.button *:active:hover,
+.button *:active:focus,
+.button *:active:hover:focus,
+GtkComboBox *:active,
+GtkComboBox *:active:hover,
+GtkComboBox *:active:focus,
+GtkComboBox *:active:hover:focus {
     text-shadow: @button_active_text_shadow 0 -1;
+    color: @theme_selected_bg_color; /* Not sure about this one */
 }
 
 .button

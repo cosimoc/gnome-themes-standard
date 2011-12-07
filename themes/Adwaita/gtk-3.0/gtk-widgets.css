@@ -414,16 +414,20 @@ GtkComboBox.combobox-entry .button {
 
     border-style: solid;
     border-color: transparent;
-    /* border-image in -assets variant */
 
     text-shadow: @button_text_shadow 0 1;
 }
 
-.button *:active {
+.button *:active,
+.button *:active:hover,
+.button *:active:hover:focus,
+.button *:active:focus {
     text-shadow: @button_active_text_shadow 0 1;
+    font-weight: medium;
+    color: darker(@theme_selected_bg_color); /* Not sure about this one */
 }
 
-.button *:insensitive { /* this really makes no sense*/
+.button *:insensitive {
     color: @insensitive_fg_color;
     text-shadow: none;
 }
@@ -451,10 +455,11 @@ GtkComboBox.combobox-entry .button {
     border-color: transparent;
 }
 
-.button.raised *,
-.raised .button *,
+.primary-toolbar .button.raised *,
+.primary-toolbar .raised .button *,
 .inline-toolbar .button * {
     icon-shadow: @button_text_shadow 0 1;
+    text-shadow: @button_text_shadow 0 1;
 }
 
 .button.raised *:active,
