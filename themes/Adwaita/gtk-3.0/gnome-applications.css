@@ -75,9 +75,12 @@ NautilusQueryEditor.info {
     border-style: solid;
 }
 
-NautilusSearchBar .entry {
+NautilusSearchBar .entry,
+NautilusSearchBar .entry:focus {
     border-image: none;
-    border-color: @nautilus_cluebar_color;
+    border-color: darker(@nautilus_cluebar_color);
+    border-style: solid;
+    border-width: 1;
 
     -GtkEntry-inner-border: 3;
 }
