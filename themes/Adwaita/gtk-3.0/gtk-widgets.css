@@ -423,7 +423,6 @@ GtkComboBox.combobox-entry .button {
 .button *:active:hover:focus,
 .button *:active:focus {
     text-shadow: @button_active_text_shadow 0 1;
-    font-weight: medium;
     color: darker(@theme_selected_bg_color); /* Not sure about this one */
 }
 
@@ -1451,7 +1450,7 @@ column-header .button:focus:hover {
 column-header.button:insensitive,
 column-header:insensitive. .button,
 column-header .button:insensitive {
-    color: @internal_element_color_insensitive;
+    color: @internal_element_insensitive;
 }
 
 column-header.button:hover,
@@ -1463,12 +1462,15 @@ column-header .button:active:focus:hover,
 column-header.button:active:focus,
 column-header .button:active:focus,
 column-header.button:active:hover,
-column-header .button:active:hover {
-    color: @internal_element_color_prelight;
+column-header .button:active:hover,
+column-header.button *:active,
+column-header .button *:active,
+column-header.button *:active:hover,
+column-header .button *:active:hover {
+    color: @internal_element_prelight;
     text-shadow: none;
     icon-shadow: none;
 }
-
 
 row:hover {
     border-width: 0;
