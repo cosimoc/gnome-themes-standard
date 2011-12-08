@@ -36,6 +36,12 @@ background-color: red;
 				     to (shade (@insensitive_bg_color, 0.9))); */
 }
 
+/* Unfocused window button background */
+.button:window-unfocused {
+    background-image: none;
+    background-color: @unfocused_button_background;
+}
+
 /* Entry background */
 .entry,
 GtkComboBox.combobox-entry .button,

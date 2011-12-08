@@ -51,6 +51,10 @@ GtkWindow {
     color: @theme_fg_color;
 }
 
+GtkWindow:window-unfocused {
+    color: @theme_unfocused_fg_color;
+}
+
 * {
     background-color: @theme_bg_color;
 }
@@ -78,6 +82,13 @@ GtkWindow {
 
 *:active {
     background-color: shade (@theme_bg_color, 0.915);
+}
+
+*:window-unfocused {
+    /* I want everything nice and flat in the unfocused window */
+    text-shadow: none;
+    icon-shadow: none;
+    color: @theme_unfocused_fg_color;
 }
 
 /************
@@ -317,6 +328,15 @@ GtkTreeView .separator,
                                                  to (alpha (@progressbar_pattern, 0.25)));
 }
 
+.progressbar:window-unfocused,
+.progressbar row:window-unfocused,
+.progressbar row:selected:window-unfocused {
+    -adwaita-progressbar-pattern: none;
+    background-image: none;
+    background-color: @theme_selected_bg_color; /* FIXME */
+    box-shadow: none;
+}
+
 /* through component */
 GtkProgressBar,
 .trough row {
@@ -331,6 +351,12 @@ GtkProgressBar,
                                      left top, left bottom,
                                      from (mix (@trough_bg_color_a, @theme_selected_bg_color, 0.25)),
                                      to (mix (@trough_bg_color_b, @theme_selected_bg_color, 0.25)));
+}
+
+GtkProgressBar:window-unfocused,
+.trough row:window-unfocused {
+    background-image: none;
+    background-color: mix(@theme_unfocused_bg_color, @unfocused_borders_color, 0.5); /*FIXME*/
 }
 
 /************
@@ -385,6 +411,11 @@ GtkScale.trough.vertical {
 
 GtkScale.trough {
     box-shadow: 0 -1 inset @theme_bg_color;
+}
+
+GtkScale.trough:window-unfocused {
+    box-shadow: none;
+    color: red;
 }
 
 /**********
@@ -446,11 +477,16 @@ GtkComboBox.combobox-entry .button {
     text-shadow: none;
 }
 
+.button *:active:window-unfocused {
+    color: @theme_unfocused_bg_color;
+}
+
 /* We may want a background for focused buttons, but in the meantime let's remove it too */
 .primary-toolbar .button,
 .primary-toolbar .button:focus,
 .primary-toolbar .button:insensitive,
-.primary-toolbar .button:window-unfocused {
+.primary-toolbar .button:window-unfocused,
+.primary-toolbar .button:insensitive:window-unfocused {
     background-image: none;
     background-color: none;
 }
@@ -809,6 +845,12 @@ GtkLinkButton * {
     background-color: @theme_base_color;
 }
 
+.notebook:window-unfocused,
+.notebook GtkViewport:window-unfocused { /* not working */
+    background-color: red;
+    border-color: red;
+}
+
 .notebook tab {
     padding: 3;
     background-image: -gtk-gradient (linear,
@@ -817,6 +859,11 @@ GtkLinkButton * {
                                      to (@notebook_tab_gradient_b));
 
     -adwaita-focus-border-radius: 2;
+}
+
+.notebook tab:window-unfocused { /* not working */
+    background-image: none;
+    background-color: red;
 }
 
 .notebook tab:active {
@@ -830,6 +877,17 @@ GtkLinkButton * {
                                      left top, left bottom,
                                      from (@button_gradient_color_a),
                                      to (@theme_base_color));
+}
+
+.notebook tab:active:window-unfocused { /* not working */
+    background-image: none;
+    background-color: red;
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (red),
+                                             to (red));
+
+    -adwaita-selected-tab-color: red;
 }
 
 .notebook tab.top {
@@ -871,8 +929,6 @@ GtkLinkButton * {
     background-color: none;
     background-image: none;
 }
-
-/* FIXME: background behind tabs -- slight gradient continuing from menubar */
 
 /**************
  * ComboBoxes *
@@ -1332,6 +1388,11 @@ GtkTreeMenu .menuitem * {
     border-color: shade (@theme_bg_color, 0.91);
 }
 
+.primary-toolbar .toolbar:window-unfocused,
+.primary-toolbar.toolbar:window-unfocused {
+    border-color: @unfocused_borders_color;
+}
+
 /* progressbars on primary toolbar entries are special */
 .primary-toolbar .toolbar .entry.progressbar,
 .primary-toolbar.toolbar .entry.progressbar {
@@ -1428,6 +1489,14 @@ GtkSwitch.trough:insensitive {
     background-color: shade (@theme_bg_color, 0.9);
 }
 
+GtkSwitch.trough:window-unfocused {
+    color: @theme_unfocused_fg_color;
+}
+
+GtkSwitch.trough:insensitive:window-unfocused {
+    color: @unfocused_borders_color; /* FIXME */
+}
+
 GtkSwitch.slider {
     border-width: 1;
     border-radius: 2;
@@ -1457,6 +1526,21 @@ GtkSwitch.slider:insensitive {
 
     background-image: none;
     background-color: @switch_slider_insensitive_bg;
+}
+
+GtkSwitch.slider:window-unfocused {
+    background-color: @theme_unfocused_base_color;
+    background-image: none;
+
+    border-color: @unfocused_borders_color;
+
+    box-shadow: none;
+
+    color: @theme_unfocused_base_color;
+}
+
+GtkSwitch.slider:insensitive:window-unfocused {
+    background-color: @theme_unfocused_bg_color;
 }
 
 GtkViewport,
@@ -1551,6 +1635,11 @@ column-header .button *:active:hover {
     color: @internal_element_prelight;
     text-shadow: none;
     icon-shadow: none;
+}
+
+column-header.button:window-unfocused,
+column-header .button:window-unfocused {
+    border-image: none;
 }
 
 row:hover {

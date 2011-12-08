@@ -89,6 +89,31 @@
 				     to (@insensitive_bg_color)); 
 }
 
+/* Unfocused window button background */
+.button:window-unfocused,
+.primary-toolbar .button.raised:window-unfocused,
+.primary-toolbar .raised .button:window-unfocused {
+    background-image: none;
+    background-color: @unfocused_button_background;
+}
+
+/* Unfocused window pushed button background */
+.button:active:window-unfocused {
+    background-image: none;
+    background-color: @unfocused_borders_color;
+}
+
+/* Unfocused window insensitive button background */
+.button:insensitive:window-unfocused {
+    background-image: none;
+    background-color: @unfocused_insensitive_bg_color;
+}
+
+.button:insensitive:active:window-unfocused {
+    background-image: none;
+    background-color: mix(@unfocused_insensitive_bg_color, @unfocused_borders_color, 0.5);
+}
+
 /* Entry background */
 .entry,
 GtkComboBox.combobox-entry .button,
@@ -134,6 +159,25 @@ GtkComboBox.combobox-entry .button:insensitive {
     background-image: none;
 }
 
+/* Unfocused windows entry background */
+.entry:window-unfocused,
+GtkComboBox.combobox-entry .button:window-unfocused,
+column-header.button:window-unfocused,
+column-header .button:window-unfocused,
+column-header.button:insensitive:window-unfocused,
+column-header .button:insensitive:window-unfocused {
+    background-image: none;
+    background-color: @theme_unfocused_base_color;
+}
+
+/* Unfocused windows insensitive entry background */
+.entry:insensitive:window-unfocused,
+GtkComboBox.combobox-entry .button:insensitive:window-unfocused {
+    background-image: none;
+    background-color: @unfocused_insensitive_bg_color;
+}
+
+
 /* Primary and inline toolbars background */
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar,
@@ -148,6 +192,14 @@ GtkComboBox.combobox-entry .button:insensitive {
 				     to (@toolbar_gradient_final));
 }
 
+/* Unfocused window primary and inline toolbars background */
+.primary-toolbar .toolbar:window-unfocused,
+.primary-toolbar.toolbar:window-unfocused,
+.inline-toolbar.toolbar:window-unfocused  {
+    background-image: none;
+    background-color: @unfocused_toolbar;
+}
+
 /* Active switch background*/
 GtkSwitch.trough:active,
 GtkScale.progressbar {
@@ -156,6 +208,16 @@ GtkScale.progressbar {
                                      left top, left bottom,
                                      from (@switch_trough_active_bg_a),
                                      to (@switch_trough_active_bg_b));
+}
+
+GtkSwitch.trough:window-unfocused {
+    background-color: @theme_unfocused_bg_color; /* FIXME */
+    background-image: none;
+}
+
+GtkSwitch.trough:active:window-unfocused {
+    background-color: @unfocused_borders_color;
+    background-image: none;
 }
 
 GtkScale.progressbar.vertical {
