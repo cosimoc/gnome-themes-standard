@@ -91,6 +91,14 @@ GtkWindow:window-unfocused {
     color: @theme_unfocused_fg_color;
 }
 
+*:insensitive:window-unfocused {
+    /* I want everything nice and flat in the unfocused window */
+    text-shadow: none;
+    icon-shadow: none;
+    color: @unfocused_insensitive_fg_color;
+}
+
+
 /************
  * Tooltips *
  ************/
@@ -477,7 +485,8 @@ GtkComboBox.combobox-entry .button {
     text-shadow: none;
 }
 
-.button *:active:window-unfocused {
+.button *:active:window-unfocused,
+.button *:active:insensitive:window-unfocused {
     color: @theme_unfocused_bg_color;
 }
 
