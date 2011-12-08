@@ -14,7 +14,6 @@
 /* Colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_base_color @base_color;
 @define-color theme_text_color @text_color;
-@define-color theme_unfocused_text_color shade(@text_color, 1.4);
 @define-color theme_bg_color @bg_color;
 @define-color theme_fg_color @fg_color;
 @define-color theme_tooltip_bg_color @tooltip_bg_color;
@@ -22,8 +21,8 @@
 @define-color theme_selected_bg_color @selected_bg_color;
 @define-color theme_selected_fg_color @selected_fg_color;
 
-@define-color theme_unfocused_base_color shade(@insensitive_bg_color, 1.05);
-@define-color theme_unfocused_text_color #a7aba7;
+@define-color theme_unfocused_base_color shade(@insensitive_bg_color, 1.015); /* I don't want the same color, hope not to hurt usability to much here */
+@define-color theme_unfocused_text_color mix(@theme_unfocused_fg_color, @theme_text_color, 0.5); /* Need something darker here to have stuff nicelly readable*/
 @define-color theme_unfocused_fg_color #a7aba7;
 @define-color theme_unfocused_bg_color @theme_bg_color; /* FIXME */
 @define-color theme_unfocused_selected_bg_color @theme_selected_bg_color; /* FIXME */

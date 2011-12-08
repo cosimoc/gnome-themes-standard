@@ -149,6 +149,17 @@ column-header .button:active:hover {
     border-radius: 0;
 }
 
+column-header.button:window-unfocused,
+column-header .button:window-unfocused {
+    border-image: -gtk-gradient (linear,
+                                 left top, left bottom,
+                                 from (@unfocused_borders_color),
+                                 to (@theme_unfocused_base_color)) 0 1 0 0;
+    border-width: 0 1 0 0;
+    border-radius: 0;
+
+}
+
 column-header.button:last-child,
 column-header:last-child .button,
 column-header.button:hover:last-child,
@@ -164,9 +175,12 @@ column-header:last-child .button:active:focus:hover,
 column-header.button:active:focus:last-child,
 column-header:last-child .button:active:focus,
 column-header.button:active:hover:last-child,
-column-header:last-child .button:active:hover {
+column-header:last-child .button:active:hover,
+column-header.button:window-unfocused:last-child,
+column-hedaer:last-child .button:window-unfocused {
     border-image: none;
     border-width: 0;
+    border-radius: 0;
 }
 
 /* unfocused window: generic element borders */

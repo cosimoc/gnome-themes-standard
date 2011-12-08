@@ -1569,7 +1569,7 @@ GtkIconView.view.cell:selected:focus {
 
 .view {
     background-color: @theme_base_color;
-    color: @theme_fg_color;
+    color: @theme_text_color;
     border-radius: 0;
 }
 
@@ -1590,6 +1590,13 @@ GtkTreeView.view {
     background-color: @theme_base_color;
 }
 
+.view:window-unfocused,
+GtkTreeView:window-unfocused, /* not working */
+GtkTreeView.view:window-unfocused /*not working*/ {
+    background-color: @theme_unfocused_base_color;
+    color: @theme_unfocused_text_color;
+}
+
 /*column-header {
     padding: 0 4;
 }*/
@@ -1602,7 +1609,7 @@ column-header .button {
 column-header.button,
 column-header .button,
 column-header.button:insensitive,
-column-header:insensitive. .button,
+/* column-header:insensitive .button, */
 column-header .button:insensitive,
 column-header.button:hover,
 column-header .button:hover,
@@ -1614,6 +1621,12 @@ column-header .button:focus:hover {
     text-shadow: none;
     icon-shadow: none;
     font-weight: bold; /* Not sure about this one */
+}
+
+column-header.button:window-unfocused,
+column-header .button:window-unfocused {
+    background-color: @theme_unfocused_base_color;
+    /* color: FIXME */
 }
 
 column-header.button:insensitive,
@@ -1639,11 +1652,6 @@ column-header .button *:active:hover {
     color: @internal_element_prelight;
     text-shadow: none;
     icon-shadow: none;
-}
-
-column-header.button:window-unfocused,
-column-header .button:window-unfocused {
-    border-image: none;
 }
 
 row:hover {
