@@ -1493,6 +1493,10 @@ GtkSwitch.trough:window-unfocused {
     color: @theme_unfocused_fg_color;
 }
 
+GtkSwitch.trough:active:window-unfocused {
+    color: @theme_unfocused_bg_color;
+}
+
 GtkSwitch.trough:insensitive:window-unfocused {
     color: @unfocused_borders_color; /* FIXME */
 }
