@@ -549,6 +549,15 @@ GtkComboBox.combobox-entry .button {
     text-shadow: none;
 }
 
+.primary-toolbar .button *:insensitive:window-unfocused {
+    color: mix(@unfocused_insensitive_bg_color, @unfocused_toolbar, 0.5);
+}
+
+.primary-toolbar .button.raised *:insensitive:window-unfocused,
+.primary-toolbar .raised .button *:insensitive:window-unfocused {
+    color: @unfocused_insensitive_fg_color;
+}
+
 /* linked buttons */
 
 /* Set up shadows and hilights for button visual separation */
