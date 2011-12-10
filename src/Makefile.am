@@ -5,7 +5,7 @@ assetsdir = $(datadir)/themes/Adwaita/gtk-3.0/assets
 
 INCLUDES = \
 	-DASSETS_DIR=\""$(assetsdir)"\" \
-	$(GTK_CFLAGS)
+	$(DEPENDENCIES_CFLAGS)
 
 libadwaita_la_SOURCES =			\
 	adwaita_utils.h			\
@@ -13,7 +13,7 @@ libadwaita_la_SOURCES =			\
 	adwaita_engine.c
 
 libadwaita_la_LDFLAGS = -module -avoid-version -no-undefined -export-symbols $(top_srcdir)/src/engine.symbols
-libadwaita_la_LIBADD =  $(GTK_LIBS)
+libadwaita_la_LIBADD =  $(DEPENDENCIES_LIBS)
 
 EXTRA_DIST = engine.symbols
 
