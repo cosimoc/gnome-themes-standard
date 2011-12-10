@@ -1076,6 +1076,14 @@ GtkComboBox .button *:prelight {
     border-image: none;
 }
 
+.scrollbar.trough:insensitive {
+    background-color: shade (@theme_bg_color, 0.882);
+}
+
+.scrollbar.trough:window-unfocused { /* not working */
+    background-color: red;
+}
+
 .scrollbar.slider,
 .scrollbar.button {
     background-image: none;
@@ -1098,6 +1106,14 @@ GtkComboBox .button *:prelight {
     border-color: @theme_selected_bg_color;
 }
 
+.scrollbar.slider:insensitive {
+    background-color: @theme_base_color;
+}
+
+.scrollbar.slider:window-unfocused { /* not working */
+    background-color: red;
+}
+
 .scrollbar.button {
     color: @internal_element_color;
 }
@@ -1112,7 +1128,6 @@ GtkComboBox .button *:prelight {
     border-width: 1;
 }
 
-
 .scrollbar.button:insensitive {
     background-image: none;
     background-color: @theme_base_color;
@@ -1123,12 +1138,8 @@ GtkComboBox .button *:prelight {
     border-width: 1;
 }
 
-.scrollbar.slider:insensitive {
-    background-color: @theme_base_color;
-}
-
-.scrollbar.trough:insensitive {
-    background-color: shade (@theme_bg_color, 0.882);
+.scrollbar.button:window-unfocused { /* not working */
+    background-color: red;
 }
 
 /*********
@@ -1570,6 +1581,12 @@ GtkIconView {
     border-radius: 3;
     padding: 0;
     background-color: @theme_base_color;
+}
+
+GtkViewport:window-unfocused,
+GtkIconView:window-unfocused {
+    /*background-color: @theme_unfocused_base_color;*/
+    background-color: red;
 }
 
 GtkIconView.view.cell:selected,
