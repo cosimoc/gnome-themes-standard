@@ -389,6 +389,7 @@ GtkScale.slider:insensitive {
 }
 
 GtkScale.trough,
+GtkScale.trough.highlight,
 GtkScale.trough.vertical {
     border-width: 1;
     border-image: none;

@@ -22,6 +22,7 @@
 .toolbar .button:hover:active,
 .primary-toolbar .button:active:focus,
 .trough,
+.trough.highlight,
 .trough row,
 .trough row:hover {
     background-image: -gtk-gradient (linear,
