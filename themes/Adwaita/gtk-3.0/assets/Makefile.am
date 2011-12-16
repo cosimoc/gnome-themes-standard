@@ -59,20 +59,28 @@ assets_DATA = 		\
 	scale-slider-vertical-insensitive-unfocused.svg \
 	scale-slider-vertical-insensitive-dark.svg \
 	scale-slider-marks-above-horizontal.svg \
+	scale-slider-marks-above-horizontal-unfocused.svg \
 	scale-slider-marks-above-horizontal-dark.svg \
 	scale-slider-marks-above-horizontal-insensitive.svg \
+	scale-slider-marks-above-horizontal-insensitive-unfocused.svg \
 	scale-slider-marks-above-horizontal-insensitive-dark.svg \
 	scale-slider-marks-above-vertical.svg \
+	scale-slider-marks-above-vertical-unfocused.svg \
 	scale-slider-marks-above-vertical-dark.svg \
 	scale-slider-marks-above-vertical-insensitive.svg \
+	scale-slider-marks-above-vertical-insensitive-unfocused.svg \
 	scale-slider-marks-above-vertical-insensitive-dark.svg \
 	scale-slider-marks-below-horizontal.svg \
+	scale-slider-marks-below-horizontal-unfocused.svg \
 	scale-slider-marks-below-horizontal-dark.svg \
 	scale-slider-marks-below-horizontal-insensitive.svg \
+	scale-slider-marks-below-horizontal-insensitive-unfocused.svg \
 	scale-slider-marks-below-horizontal-insensitive-dark.svg \
 	scale-slider-marks-below-vertical.svg \
+	scale-slider-marks-below-vertical-unfocused.svg \
 	scale-slider-marks-below-vertical-dark.svg \
 	scale-slider-marks-below-vertical-insensitive.svg \
+	scale-slider-marks-below-vertical-insensitive-unfocused.svg \
 	scale-slider-marks-below-vertical-insensitive-dark.svg \
 	sidebar-radio-checked.svg \
 	sidebar-radio-checked-dark.svg \

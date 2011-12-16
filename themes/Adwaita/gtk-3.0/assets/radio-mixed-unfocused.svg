@@ -15,7 +15,7 @@
    id="svg814"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="radio-unselected-unfocused.svg">
+   sodipodi:docname="radio-mixed-unfocused.svg">
   <defs
      id="defs816">
     <linearGradient
@@ -59,8 +59,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="16.066901"
-     inkscape:cy="6.7683276"
+     inkscape:cx="14.58588"
+     inkscape:cy="7.4383929"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -88,7 +88,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -108,13 +108,13 @@
        d="m 665.47588,255.0668 c 0,4.02825 -2.01821,7.29379 -4.5078,7.29379 -2.48959,0 -4.50781,-3.26554 -4.50781,-7.29379 0,-4.02824 2.01822,-7.29378 4.50781,-7.29378 2.48959,0 4.5078,3.26554 4.5078,7.29378 z"
        transform="matrix(1.4419436,0,0,0.89116967,-945.07873,817.05441)" />
     <rect
-       style="color:#000000;fill:#376594;fill-opacity:1;fill-rule:nonzero;stroke:#376594;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;stroke-opacity:1"
-       id="rect5494"
+       style="color:#000000;fill:#376594;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect5494-9"
        width="8.9375"
-       height="3.03125"
-       x="3.53125"
-       y="1042.8622"
+       height="2"
+       x="3.5"
+       y="1043.3622"
        rx="1.515625"
-       ry="1.515625" />
+       ry="1" />
   </g>
 </svg>

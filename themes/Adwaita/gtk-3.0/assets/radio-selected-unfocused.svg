@@ -15,7 +15,7 @@
    id="svg814"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="radio-selected-no-hilight.svg">
+   sodipodi:docname="radio-selected-unfocused.svg">
   <defs
      id="defs816">
     <linearGradient
@@ -135,11 +135,11 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="16.686006"
-     inkscape:cy="5.4240912"
+     inkscape:cx="8.0388533"
+     inkscape:cy="8.9615707"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      borderlayer="true"
      inkscape:showpageshadow="false"
      inkscape:window-width="1180"
@@ -164,7 +164,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -184,14 +184,14 @@
        d="m 665.47588,255.0668 c 0,4.02825 -2.01821,7.29379 -4.5078,7.29379 -2.48959,0 -4.50781,-3.26554 -4.50781,-7.29379 0,-4.02824 2.01822,-7.29378 4.50781,-7.29378 2.48959,0 4.5078,3.26554 4.5078,7.29378 z"
        transform="matrix(1.4419436,0,0,0.89116967,-945.07873,817.05441)" />
     <path
-       transform="matrix(0.99826332,0,0,0.61696032,-651.82021,886.99611)"
+       transform="matrix(0.88735442,0,0,0.54841489,-578.51297,904.47977)"
        d="m 665.47588,255.0668 a 4.5078058,7.2937827 0 1 1 -9.01561,0 4.5078058,7.2937827 0 1 1 9.01561,0 z"
        sodipodi:ry="7.2937827"
        sodipodi:rx="4.5078058"
        sodipodi:cy="255.0668"
        sodipodi:cx="660.96808"
        id="path6309"
-       style="color:#000000;fill:#376594;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.63711647000000005;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:144.44521581000000765;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#376594;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.63711649;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        sodipodi:type="arc" />
   </g>
 </svg>

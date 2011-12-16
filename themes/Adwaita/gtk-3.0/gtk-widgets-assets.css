@@ -191,30 +191,59 @@ GtkScale.scale-has-marks-above.slider.horizontal {
     background-image: url("assets/scale-slider-marks-above-horizontal.svg");
 }
 
+GtkScale.scale-has-marks-above.slider.horizontal:window-unfocused {
+    background-image: url("assets/scale-slider-marks-above-horizontal-unfocused.svg");
+}
+
 GtkScale.scale-has-marks-above.slider.horizontal:insensitive {
     background-image: url("assets/scale-slider-marks-above-horizontal-insensitive.svg");
+}
+
+GtkScale.scale-has-marks-above.slider.horizontal:insensitive:window-unfocused {
+    background-image: url("assets/scale-slider-marks-above-horizontal-insensitive-unfocused.svg");
 }
 
 GtkScale.scale-has-marks-above.slider.vertical {
     background-image: url("assets/scale-slider-marks-above-vertical.svg");
 }
 
+GtkScale.scale-has-marks-above.slider.vertical:window-unfocused {
+    background-image: url("assets/scale-slider-marks-above-vertical-unfocused.svg");
+}
+
 GtkScale.scale-has-marks-above.slider.vertical:insensitive {
     background-image: url("assets/scale-slider-marks-above-vertical-insensitive.svg");
+}
+
+GtkScale.scale-has-marks-above.slider.vertical:insensitive:window-unfocused {
+    background-image: url("assets/scale-slider-marks-above-vertical-insensitive-unfocused.svg");
 }
 
 GtkScale.scale-has-marks-below.slider.horizontal {
     background-image: url("assets/scale-slider-marks-below-horizontal.svg");
 }
 
-GtkScale.scale-has-marks-below.slider.horizontal:insensitive {
-    background-image: url("assets/scale-slider-marks-below-horizontal-insensitive.svg");
+GtkScale.scale-has-marks-below.slider.horizontal:window-unfocused {
+    background-image: url("assets/scale-slider-marks-below-horizontal-unfocused.svg");
+}
+
+GtkScale.scale-has-marks-below.slider.horizontal:insensitive:window-unfocused {
+    background-image: url("assets/scale-slider-marks-below-horizontal-insensitive-unfocused.svg");
 }
 
 GtkScale.scale-has-marks-below.slider.vertical {
     background-image: url("assets/scale-slider-marks-below-vertical.svg");
 }
 
+GtkScale.scale-has-marks-below.slider.vertical:window-unfocused {
+    background-image: url("assets/scale-slider-marks-below-vertical-unfocused.svg");
+}
+
 GtkScale.scale-has-marks-below.slider.vertical:insensitive {
     background-image: url("assets/scale-slider-marks-below-vertical-insensitive.svg");
 }
+
+GtkScale.scale-has-marks-below.slider.vertical:insensitive:window-unfocused {
+    background-image: url("assets/scale-slider-marks-below-vertical-insensitive-unfocused.svg");
+}
+
