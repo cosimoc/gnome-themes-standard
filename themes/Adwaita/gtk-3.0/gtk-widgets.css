@@ -341,8 +341,10 @@ GtkTreeView .separator,
 .progressbar row:selected:window-unfocused {
     -adwaita-progressbar-pattern: none;
     background-image: none;
-    background-color: @theme_selected_bg_color; /* FIXME */
+    background-color: @theme_unfocused_selected_bg_color;
+    border-color: @theme_unfocused_selected_bg_color;
     box-shadow: none;
+    -adwaita-progressbar-pattern: none;
 }
 
 /* through component */
@@ -378,7 +380,9 @@ GtkScale {
 
 GtkScale.slider,
 GtkScale.slider:hover,
-GtkScale.slider:insensitive {
+GtkScale.slider:insensitive,
+GtkScale.slider:window-unfocused,
+GtkScale.slider:insensitive:window-unfocused {
     border-radius: 0;
     border-style: none;
 
@@ -390,7 +394,8 @@ GtkScale.slider:insensitive {
 
 GtkScale.trough,
 GtkScale.trough.highlight,
-GtkScale.trough.vertical {
+GtkScale.trough.vertical,
+GtkScale.trough:window-unfocused {
     border-width: 1;
     border-image: none;
     border-style: solid;
@@ -410,6 +415,12 @@ GtkScale.progressbar {
     -adwaita-progressbar-pattern: none;
 }
 
+GtkScale.progressbar:window-unfocused {
+    background-color: @unfocused_borders_color;
+
+    -adwaita-progressbar-pattern: none;
+}
+
 GtkScale.mark {
     color: alpha(@theme_fg_color, 0.3);
 }
@@ -424,7 +435,16 @@ GtkScale.trough {
 
 GtkScale.trough:window-unfocused {
     box-shadow: none;
-    color: red;
+    border-color: @unfocused_borders_color;
+    background-color: mix(@theme_unfocused_bg_color, @unfocused_borders_color, 0.5);
+    background-image: none;
+}
+
+GtkScale.trough:insensitive:window-unfocused {
+    background-color: @unfocused_insensitive_bg_color;
+    border-color: @unfocused_insensitive_borders_color;
+    box-shadow: none;
+    background-image: none;
 }
 
 /**********
@@ -857,6 +877,7 @@ GtkLinkButton * {
 
     -GtkNotebook-tab-overlap: 8;
     -GtkNotebook-tab-curvature: 6;
+    /* FIXME - the gap should be applied only to top or bottom tabs */
     -GtkNotebook-initial-gap: 8;
 }
 
@@ -883,6 +904,7 @@ GtkLinkButton * {
 .notebook tab:window-unfocused {
     background-image: none;
     background-color: @theme_unfocused_bg_color;
+    border-color: @unfocused_insensitive_borders_color;
 }
 
 .notebook tab:active {
@@ -898,19 +920,25 @@ GtkLinkButton * {
                                      to (@theme_base_color));
 }
 
-.notebook tab:active:window-unfocused { /* not working */
-    /* FIXME I need to set a background image here, background color is ignored */
+.notebook tab:active:window-unfocused {
+    /* FIXME I need to set a background-image here, background-color is ignored */
     background-image: -gtk-gradient (linear, 
                                              left top, left bottom,
                                              from (@theme_unfocused_base_color),
                                              to (@theme_unfocused_base_color));
     background-color:  @theme_unfocused_base_color;
-    /* FIXME This should work with just a color now it wants an image*/
+    border-color: @unfocused_borders_color;
+    /* FIXME - should be possible to set it to none and use border color */
     -adwaita-border-gradient: -gtk-gradient (linear, 
                                              left top, left bottom,
-                                             from (@notebook_border),
-                                             to (@notebook_border));
-    -adwaita-selected-tab-color: @notebook_border;
+                                             from (@unfocused_borders_color),
+                                             to (@unfocused_borders_color));
+    -adwaita-selected-tab-color: @unfocused_borders_color;
+}
+
+.notebook tab.left:active:window-unfocused,
+.notebook tab.right:active:window-unfocused {
+    -adwaita-selected-tab-color: alpha(@theme_base_color, 0.0);
 }
 
 .notebook tab.top {
@@ -931,15 +959,33 @@ GtkLinkButton * {
 
 .notebook tab.left,
 .notebook tab.right {
-    padding: 2;
+    background-image: none;
+    background-color: @theme_bg_color;
+    padding: 3;
+}
+
+.notebook tab.left:active,
+.notebook tab.right:active {
+    background-image: none;
+    background-color: @theme_base_color;
+    -adwaita-selected-tab-color: alpha(@theme_base_color, 0.0);
+}
+
+.notebook tab.left {
+    border-radius: 3 0 0 3;
 }
 
 .notebook tab.left:active {
-    padding: 2 2 2 5;
+    padding: 3 3 3 5;
+    border-width: 1;
+}
+
+.notebook tab.right {
+    border-radius: 0 3 3 0;
 }
 
 .notebook tab.right:active {
-    padding: 2 5 2 2;
+    padding: 3 5 3 3;
 }
 
 .notebook tab .button,
@@ -1085,18 +1131,30 @@ GtkComboBox .button *:prelight {
     background-color: shade (@theme_bg_color, 0.882);
 }
 
-.scrollbar.trough:window-unfocused { /* not working */
-    background-color: red;
+.scrollbar.trough:window-unfocused {
+    background-color: mix(@theme_unfocused_bg_color, @unfocused_borders_color, 0.3);
+    
+    /* FIXME - all those values should be inherited */
+    background-image: none;
+    border-width: 0;
+    border-radius: 0;
+    border-image: none;
+}
+
+.scrollbar.slider,
+.scrollbar.button,
+.scrollbar.slider:window-unfocused,
+.scrollbar.button:window-unfocused {
+    background-image: none;
+    border-radius: 3;
+    border-width: 1;
+    border-image: none;
 }
 
 .scrollbar.slider,
 .scrollbar.button {
-    background-image: none;
     background-color: @theme_base_color;
-    border-radius: 3;
-    border-width: 1;
     border-color: @button_border;
-    border-image: none;
 }
 
 .scrollbar.slider:prelight {
@@ -1113,10 +1171,6 @@ GtkComboBox .button *:prelight {
 
 .scrollbar.slider:insensitive {
     background-color: @theme_base_color;
-}
-
-.scrollbar.slider:window-unfocused { /* not working */
-    background-color: red;
 }
 
 .scrollbar.button {
@@ -1143,8 +1197,15 @@ GtkComboBox .button *:prelight {
     border-width: 1;
 }
 
-.scrollbar.button:window-unfocused { /* not working */
-    background-color: red;
+.scrollbar.slider:window-unfocused,
+.scrollbar.button:window-unfocused,
+.scrollbar.button:insensitive:window-unfocused {
+    background-color: @theme_unfocused_base_color;
+    border-color: @unfocused_borders_color;
+}
+
+.scrollbar.button:insensitive:window-unfocused {
+    color: @internal_element_insensitive;
 }
 
 /*********
@@ -1579,6 +1640,7 @@ GtkSwitch.slider:window-unfocused {
 
 GtkSwitch.slider:insensitive:window-unfocused {
     background-color: @theme_unfocused_bg_color;
+    border-color: @unfocused_insensitive_borders_color;
 }
 
 GtkViewport,
@@ -1590,8 +1652,7 @@ GtkIconView {
 
 GtkViewport:window-unfocused,
 GtkIconView:window-unfocused {
-    /*background-color: @theme_unfocused_base_color;*/
-    background-color: red;
+    background-color: @theme_unfocused_base_color;
 }
 
 GtkIconView.view.cell:selected,

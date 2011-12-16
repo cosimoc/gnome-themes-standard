@@ -18,6 +18,11 @@
     background-image: url("assets/checkbox-unchecked-insensitive.svg");
 }
 
+.check:window-unfocused,
+.check row:selected:window-unfocused {
+    background-image: url("assets/checkbox-unchecked-unfocused.svg");
+}
+
 .check:active {
     background-image: url("assets/checkbox-checked.svg");
 }
@@ -25,6 +30,11 @@
 .check row:selected:active,
 .check row:selected:focus:active {
     background-image: url("assets/checkbox-checked-no-hilight.svg");
+}
+
+.check:active:window-unfocused,
+.check row:selected:active:window-unfocused {
+    background-image: url("assets/checkbox-checked-unfocused.svg");
 }
 
 .check:active:insensitive,
@@ -43,6 +53,11 @@
     background-image: url("assets/checkbox-mixed-no-hilight.svg");
 }
 
+.check:inconsistent:window-unfocused,
+.check row:selected:inconsistent:window-unfocused {
+    background-image: url("assets/checkbox-mixed-unfocused.svg");
+}
+
 .check:inconsistent:insensitive,
 .check row:selected:inconsistent:insensitive,
 .check row:selected:focus:inconsistent:insensitive {
@@ -56,6 +71,11 @@
 .radio row:selected,
 .radio row:selected:focus {
     background-image: url("assets/radio-unselected-no-hilight.svg");
+}
+
+.radio:window-unfocused,
+.radio row:selected:window-unfocused {
+    background-image: url("assets/radio-unselected-unfocused.svg");
 }
 
 .radio:insensitive,
@@ -73,6 +93,12 @@
     background-image: url("assets/radio-selected-no-hilight.svg");
 }
 
+.radio:active:window-unfocused,
+.radio row:selected:active:window-unfocused {
+    background-image: url("assets/radio-selected-unfocused.svg");
+}
+
+
 .radio:active:insensitive,
 .radio row:selected:active:insensitive,
 .radio row:selected:focus:active:insensitive {
@@ -87,6 +113,12 @@
 .radio row:selected:focus:inconsistent {
     background-image: url("assets/radio-mixed-no-hilight.svg");
 }
+
+.radio:inconsistent:window-unfocused,
+.radio row:selected:inconsistent:window-unfocused {
+    background-image: url("assets/radio-mixed-unfocused.svg");
+}
+
 
 .radio:inconsistent:insensitive,
 .radio row:selected:inconsistent:insensitive,
@@ -122,17 +154,37 @@ GtkScale.slider.horizontal {
     background-image: url("assets/scale-slider-horizontal.svg");
 }
 
+
+GtkScale.slider:window-unfocused,
+GtkScale.slider.horizontal:window-unfocused {
+    background-image: url("assets/scale-slider-horizontal-unfocused.svg");
+}
+
 GtkScale.slider:insensitive,
 GtkScale.slider.horizontal:insensitive {
     background-image: url("assets/scale-slider-horizontal-insensitive.svg");
 }
 
+GtkScale.slider:insensitive:window-unfocused,
+GtkScale.slider.horizontal:insensitive:window-unfocused {
+    background-image: url("assets/scale-slider-horizontal-insensitive-unfocused.svg");
+}
+
+
 GtkScale.slider.vertical {
     background-image: url("assets/scale-slider-vertical.svg");
 }
 
+GtkScale.slider.vertical:window-unfocused {
+    background-image: url("assets/scale-slider-vertical-unfocused.svg");
+}
+
 GtkScale.slider.vertical:insensitive {
     background-image: url("assets/scale-slider-vertical-insensitive.svg");
+}
+
+GtkScale.slider.vertical:insensitive:window-unfocused {
+    background-image: url("assets/scale-slider-vertical-insensitive-unfocused.svg");
 }
 
 GtkScale.scale-has-marks-above.slider.horizontal {

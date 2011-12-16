@@ -25,10 +25,11 @@
 @define-color theme_unfocused_text_color mix(@theme_unfocused_fg_color, @theme_text_color, 0.5); /* Need something darker here to have stuff nicelly readable*/
 @define-color theme_unfocused_fg_color #a7aba7;
 @define-color theme_unfocused_bg_color @theme_bg_color; /* FIXME */
-@define-color theme_unfocused_selected_bg_color @theme_selected_bg_color; /* FIXME */
+@define-color theme_unfocused_selected_bg_color darker(@theme_selected_bg_color);
 @define-color theme_unfocused_selected_fg_color @theme_selected_fg_color; /* FIXME */
 @define-color unfocused_button_background @theme_unfocused_bg_color;
 @define-color unfocused_borders_color #a7aba7;
+@define-color unfocused_insensitive_borders_color mix(@theme_unfocused_bg_color, @unfocused_borders_color, 0.5);
 @define-color unfocused_insensitive_fg_color mix(@theme_unfocused_bg_color, @theme_unfocused_fg_color, 0.5);
 @define-color unfocused_insensitive_bg_color mix(@theme_unfocused_bg_color, @theme_unfocused_base_color, 0.5);
 @define-color unfocused_toolbar mix(@theme_unfocused_bg_color, @unfocused_borders_color, 0.5);

@@ -5,16 +5,19 @@ assets_DATA = 		\
 	checkbox-checked-insensitive.svg \
 	checkbox-checked-insensitive-dark.svg \
 	checkbox-checked-no-hilight.svg \
+	checkbox-checked-unfocused.svg \
 	checkbox-unchecked.svg \
 	checkbox-unchecked-dark.svg \
 	checkbox-unchecked-insensitive.svg \
 	checkbox-unchecked-insensitive-dark.svg \
 	checkbox-unchecked-no-hilight.svg \
+	checkbox-unchecked-unfocused.svg \
 	checkbox-mixed.svg \
 	checkbox-mixed-dark.svg \
 	checkbox-mixed-insensitive.svg \
 	checkbox-mixed-insensitive-dark.svg \
 	checkbox-mixed-no-hilight.svg \
+	checkbox-mixed-unfocused.svg \
 	checkbox-menuitem-checked.svg \
 	checkbox-menuitem-checked-insensitive.svg \
 	checkbox-menuitem-checked-selected.svg \
@@ -25,28 +28,35 @@ assets_DATA = 		\
 	radio-selected-insensitive.svg \
 	radio-selected-insensitive-dark.svg \
 	radio-selected-no-hilight.svg \
+	radio-selected-unfocused.svg \
 	radio-unselected.svg \
 	radio-unselected-dark.svg \
 	radio-unselected-insensitive.svg \
 	radio-unselected-insensitive-dark.svg \
 	radio-unselected-no-hilight.svg \
+	radio-unselected-unfocused.svg \
 	radio-mixed.svg \
 	radio-mixed-dark.svg \
 	radio-mixed-insensitive.svg \
 	radio-mixed-insensitive-dark.svg \
 	radio-mixed-no-hilight.svg \
+	radio-mixed-unfocused.svg \
 	radio-menuitem-checked.svg \
 	radio-menuitem-checked-insensitive.svg \
 	radio-menuitem-checked-selected.svg \
 	radio-menuitem-mixed.svg \
 	radio-menuitem-mixed-insensitive.svg \
 	scale-slider-horizontal.svg \
+	scale-slider-horizontal-unfocused.svg \
 	scale-slider-horizontal-dark.svg \
 	scale-slider-horizontal-insensitive.svg \
+	scale-slider-horizontal-insensitive-unfocused.svg \
 	scale-slider-horizontal-insensitive-dark.svg \
 	scale-slider-vertical.svg \
+	scale-slider-vertical-unfocused.svg \
 	scale-slider-vertical-dark.svg \
 	scale-slider-vertical-insensitive.svg \
+	scale-slider-vertical-insensitive-unfocused.svg \
 	scale-slider-vertical-insensitive-dark.svg \
 	scale-slider-marks-above-horizontal.svg \
 	scale-slider-marks-above-horizontal-dark.svg \
