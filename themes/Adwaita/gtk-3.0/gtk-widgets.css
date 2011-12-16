@@ -865,9 +865,9 @@ GtkLinkButton * {
 }
 
 .notebook:window-unfocused,
-.notebook GtkViewport:window-unfocused { /* not working */
-    background-color: red;
-    border-color: red;
+.notebook GtkViewport:window-unfocused {
+    background-color: @theme_unfocused_base_color;
+    border-color: @notebook_border;
 }
 
 .notebook tab {
@@ -880,9 +880,9 @@ GtkLinkButton * {
     -adwaita-focus-border-radius: 2;
 }
 
-.notebook tab:window-unfocused { /* not working */
+.notebook tab:window-unfocused {
     background-image: none;
-    background-color: red;
+    background-color: @theme_unfocused_bg_color;
 }
 
 .notebook tab:active {
@@ -899,14 +899,18 @@ GtkLinkButton * {
 }
 
 .notebook tab:active:window-unfocused { /* not working */
-    background-image: none;
-    background-color: red;
-    -adwaita-border-gradient: -gtk-gradient (linear,
+    /* FIXME I need to set a background image here, background color is ignored */
+    background-image: -gtk-gradient (linear, 
                                              left top, left bottom,
-                                             from (red),
-                                             to (red));
-
-    -adwaita-selected-tab-color: red;
+                                             from (@theme_unfocused_base_color),
+                                             to (@theme_unfocused_base_color));
+    background-color:  @theme_unfocused_base_color;
+    /* FIXME This should work with just a color now it wants an image*/
+    -adwaita-border-gradient: -gtk-gradient (linear, 
+                                             left top, left bottom,
+                                             from (@notebook_border),
+                                             to (@notebook_border));
+    -adwaita-selected-tab-color: @notebook_border;
 }
 
 .notebook tab.top {
