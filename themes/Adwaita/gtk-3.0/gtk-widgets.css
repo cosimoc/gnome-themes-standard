@@ -622,6 +622,56 @@ GtkComboBox.combobox-entry .button {
     box-shadow: 1 0 inset @inset_dark_color;
 }
 
+.linked .button:insensitive,
+.primary-toolbar .button.raised.linked:insensitive,
+.primary-toolbar .raised.linked .button:insensitive,
+.inline-toolbar.toolbar .button:insensitive,
+.inline-toolbar.toolbar GtkToolButton .button:insensitive {
+    box-shadow: -1 0 inset @inset_dark_color;
+}
+
+.linked .button:insensitive:last-child,
+.primary-toolbar .button.raised.linked:insensitive:last-child,
+.primary-toolbar .raised.linked .button:insensitive:last-child,
+.inline-toolbar.toolbar .button:insensitive:last-child,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive {
+    box-shadow: none;
+}
+
+.linked .button:window-unfocused,
+.primary-toolbar .button.raised.linked:window-unfocused,
+.primary-toolbar .raised.linked .button:window-unfocused,
+.inline-toolbar.toolbar .button:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton .button:window-unfocused /*,
+.linked .button:insensitive:window-unfocused,
+.primary-toolbar .button.raised.linked:insensitive:window-unfocused,
+.primary-toolbar .raised.linked .button:insensitive:window-unfocused,
+.inline-toolbar.toolbar .button:insensitive:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton .button:insensitive:window-unfocused */ {
+    box-shadow: -1 0 inset @unfocused_borders_color;
+}
+
+.linked .button:insensitive:window-unfocused,
+.primary-toolbar .button.raised.linked:insensitive:window-unfocused,
+.primary-toolbar .raised.linked .button:insensitive:window-unfocused,
+.inline-toolbar.toolbar .button:insensitive:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton .button:insensitive:window-unfocused {
+    box-shadow: -1 0 inset @unfocused_insensitive_borders_color;
+}
+
+.linked .button:window-unfocused:last-child,
+.primary-toolbar .button.raised.linked:window-unfocused:last-child,
+.primary-toolbar .raised.linked .button:window-unfocused:last-child,
+.inline-toolbar.toolbar .button:window-unfocused:last-child,
+.inline-toolbar.toolbar GtkToolButton .button:window-unfocused:last-child,
+.linked .button:insensitive:window-unfocused:last-child,
+.primary-toolbar .button.raised.linked:insensitive:window-unfocused:last-child,
+.primary-toolbar .raised.linked .button:insensitive:window-unfocused:last-child,
+.inline-toolbar.toolbar .button:insensitive:window-unfocused:last-child,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:window-unfocused {
+    box-shadow: none;
+}
+
 /* Middle button */
 .linked .button,
 .linked .button:active,
