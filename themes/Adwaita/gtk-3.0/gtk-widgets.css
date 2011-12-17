@@ -606,14 +606,6 @@ GtkComboBox.combobox-entry .button {
     box-shadow: 1 0 inset @inset_light_color;
 }
 
-.linked .button:only-child,
-.primary-toolbar .button.raised.linked:only-child,
-.primary-toolbar .raised.linked .button:only-child,
-.inline-toolbar.toolbar .button:only-child,
-.inline-toolbar.toolbar GtkToolButton:only-child .button {
-    box-shadow: none;
-}
-
 .linked .button:active,
 .primary-toolbar .button.raised.linked:active,
 .primary-toolbar .raised.linked .button:active,
@@ -642,12 +634,7 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button.raised.linked:window-unfocused,
 .primary-toolbar .raised.linked .button:window-unfocused,
 .inline-toolbar.toolbar .button:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton .button:window-unfocused /*,
-.linked .button:insensitive:window-unfocused,
-.primary-toolbar .button.raised.linked:insensitive:window-unfocused,
-.primary-toolbar .raised.linked .button:insensitive:window-unfocused,
-.inline-toolbar.toolbar .button:insensitive:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton .button:insensitive:window-unfocused */ {
+.inline-toolbar.toolbar GtkToolButton .button:window-unfocused {
     box-shadow: -1 0 inset @unfocused_borders_color;
 }
 
@@ -659,16 +646,31 @@ GtkComboBox.combobox-entry .button {
     box-shadow: -1 0 inset @unfocused_insensitive_borders_color;
 }
 
+.linked .button:only-child,
+.primary-toolbar .button.raised.linked:only-child,
+.primary-toolbar .raised.linked .button:only-child,
+.inline-toolbar.toolbar .button:only-child,
+.inline-toolbar.toolbar GtkToolButton:only-child .button,
 .linked .button:window-unfocused:last-child,
 .primary-toolbar .button.raised.linked:window-unfocused:last-child,
 .primary-toolbar .raised.linked .button:window-unfocused:last-child,
 .inline-toolbar.toolbar .button:window-unfocused:last-child,
-.inline-toolbar.toolbar GtkToolButton .button:window-unfocused:last-child,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:window-unfocused,
 .linked .button:insensitive:window-unfocused:last-child,
 .primary-toolbar .button.raised.linked:insensitive:window-unfocused:last-child,
 .primary-toolbar .raised.linked .button:insensitive:window-unfocused:last-child,
 .inline-toolbar.toolbar .button:insensitive:window-unfocused:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:window-unfocused {
+.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:window-unfocused
+.linked .button:window-unfocused:only-child,
+.primary-toolbar .button.raised.linked:window-unfocused:only-child,
+.primary-toolbar .raised.linked .button:window-unfocused:only-child,
+.inline-toolbar.toolbar .button:window-unfocused:only-child,
+.inline-toolbar.toolbar GtkToolButton:only-child .button:window-unfocused,
+.linked .button:window-unfocused:insensitive:only-child,
+.primary-toolbar .button.raised.linked:window-unfocused:insensitive:only-child,
+.primary-toolbar .raised.linked .button:window-unfocused:insensitive:only-child,
+.inline-toolbar.toolbar .button:window-unfocused:insensitive:only-child,
+.inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive:window-unfocused {
     box-shadow: none;
 }
 
