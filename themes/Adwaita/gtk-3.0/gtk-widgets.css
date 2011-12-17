@@ -153,6 +153,12 @@ GtkTreeView .separator,
     color: darker (@theme_bg_color);
 }
 
+GtkTreeView .separator:window-unfocused,
+.separator:window-unfocused,
+.separator:prelight:window-unfocused {
+    color: @unfocused_insensitive_borders_color;
+}
+
 .pane-separator {
     color: shade (@inactive_frame_color, 0.80);
 }
