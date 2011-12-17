@@ -622,14 +622,6 @@ GtkComboBox.combobox-entry .button {
     box-shadow: -1 0 inset @inset_dark_color;
 }
 
-.linked .button:insensitive:last-child,
-.primary-toolbar .button.raised.linked:insensitive:last-child,
-.primary-toolbar .raised.linked .button:insensitive:last-child,
-.inline-toolbar.toolbar .button:insensitive:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive {
-    box-shadow: none;
-}
-
 .linked .button:window-unfocused,
 .primary-toolbar .button.raised.linked:window-unfocused,
 .primary-toolbar .raised.linked .button:window-unfocused,
@@ -646,12 +638,25 @@ GtkComboBox.combobox-entry .button {
     box-shadow: -1 0 inset @unfocused_insensitive_borders_color;
 }
 
+.linked .button:insensitive:last-child:window-unfocused,
+.primary-toolbar .button.raised.linked:insensitive:last-child:window-unfocused,
+.primary-toolbar .raised.linked .button:insensitive:last-child:window-unfocused,
+.inline-toolbar.toolbar .button:insensitive:last-child:window-unfocused,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:window-unfocused {
+    box-shadow: none;
+}
+
 .linked .button:only-child,
 .primary-toolbar .button.raised.linked:only-child,
 .primary-toolbar .raised.linked .button:only-child,
 .inline-toolbar.toolbar .button:only-child,
 .inline-toolbar.toolbar GtkToolButton:only-child .button,
 .linked .button:window-unfocused:last-child,
+.linked .button:insensitive:last-child,
+.primary-toolbar .button.raised.linked:insensitive:last-child,
+.primary-toolbar .raised.linked .button:insensitive:last-child,
+.inline-toolbar.toolbar .button:insensitive:last-child,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive,
 .primary-toolbar .button.raised.linked:window-unfocused:last-child,
 .primary-toolbar .raised.linked .button:window-unfocused:last-child,
 .inline-toolbar.toolbar .button:window-unfocused:last-child,
@@ -660,7 +665,7 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button.raised.linked:insensitive:window-unfocused:last-child,
 .primary-toolbar .raised.linked .button:insensitive:window-unfocused:last-child,
 .inline-toolbar.toolbar .button:insensitive:window-unfocused:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:window-unfocused
+.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:window-unfocused,
 .linked .button:window-unfocused:only-child,
 .primary-toolbar .button.raised.linked:window-unfocused:only-child,
 .primary-toolbar .raised.linked .button:window-unfocused:only-child,
@@ -671,7 +676,7 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .raised.linked .button:window-unfocused:insensitive:only-child,
 .inline-toolbar.toolbar .button:window-unfocused:insensitive:only-child,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive:window-unfocused {
-    box-shadow: none;
+    box-shadow: none; 
 }
 
 /* Middle button */
