@@ -162,6 +162,16 @@ GtkTreeView .separator,
     color: @theme_text_color;
 }
 
+.pane-separator,
+.pane-separator:prelight {
+    background-color: @theme_bg_color;
+}
+
+.notebook .pane-separator,
+.notebook .pane-separator:prelight {
+    background-color: @theme_base_color;
+}
+
 /****************
  * Text Entries *
  ****************/
