@@ -646,9 +646,10 @@ GtkComboBox.combobox-entry .button {
     box-shadow: none;
 }
 
+/* remove box shadow from last-child and only-child */
 .linked .button:only-child,
-.primary-toolbar .button.raised.linked:only-child,
-.primary-toolbar .raised.linked .button:only-child,
+/* .primary-toolbar .button.raised.linked:only-child,
+.primary-toolbar .raised.linked .button:only-child, */
 .inline-toolbar.toolbar .button:only-child,
 .inline-toolbar.toolbar GtkToolButton:only-child .button,
 .linked .button:window-unfocused:last-child,
@@ -873,7 +874,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 /* Single button */
-.toolbar .button.raised.linked:only-child,
+/* .toolbar .button.raised.linked:only-child,
 .toolbar .button.raised.linked:active:only-child,
 .toolbar .button.raised.linked:active:hover:only-child,
 .toolbar .button.raised.linked:focus:only-child,
@@ -884,7 +885,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .raised.linked .button:active:hover:only-child,
 .toolbar .raised.linked .button:focus:only-child,
 .toolbar .raised.linked .button:focus:active:only-child,
-.toolbar .raised.linked .button:insensitive:only-child,
+.toolbar .raised.linked .button:insensitive:only-child, */
 .inline-toolbar.toolbar .button:only-child,
 .inline-toolbar.toolbar .button:active:only-child,
 .inline-toolbar.toolbar .button:active:hover:only-child,
@@ -897,12 +898,12 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:only-child .button:focus,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive,
-.toolbar .button.raised.linked:window-unfocused:only-child,
+/* .toolbar .button.raised.linked:window-unfocused:only-child,
 .toolbar .button.raised.linked:active:window-unfocused:only-child,
 .toolbar .button.raised.linked:active:hover:window-unfocused:only-child,
 .toolbar .raised.linked .button:window-unfocused:only-child,
 .toolbar .raised.linked .button:active:window-unfocused:only-child,
-.toolbar .raised.linked .button:active:hover:window-unfocused:only-child,
+.toolbar .raised.linked .button:active:hover:window-unfocused:only-child, */
 .inline-toolbar.toolbar .button:window-unfocused:only-child,
 .inline-toolbar.toolbar .button:active:window-unfocused:only-child,
 .inline-toolbar.toolbar .button:active:hover:window-unfocused:only-child,
