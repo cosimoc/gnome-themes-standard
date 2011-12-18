@@ -20,7 +20,7 @@
 .button:hover:active,
 .toolbar .button:active,
 .toolbar .button:hover:active,
-.primary-toolbar .button:active:focus,
+/*.primary-toolbar .button:active:focus, */
 .trough,
 .trough.highlight,
 .trough row,
@@ -28,8 +28,24 @@
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
                                      from (@button_border),
-				     to (alpha(@button_border, 0)));
+				     to (shade(@theme_bg_color, 0.95)));
     background-color: none; 
+}
+
+/* Primary and inline toolbars pushed button background */
+.primary-toolbar .button:active,
+.primary-toolbar .button:active:hover,
+.primary-toolbar .button:active:focus,
+.primary-toolbar .button:active:focus:hover,
+.inline-toolbar .button:active,
+.inline-toolbar .button:active:hover,
+.inline-toolbar .button:active:focus,
+.inline-toolbar .button:active:focus:hover {
+    background-image: -gtk-gradient (linear,
+    				     left top, left bottom,
+                                     from (shade(@button_border, 0.95)),
+				     to (shade(@theme_bg_color, 0.88)));
+    background-color: none;
 }
 
 /* Flipped pushed button background for vertical progressbar through and the like */
@@ -37,15 +53,20 @@
     background-image: -gtk-gradient (linear,
     				     left top, right top,
                                      from (@button_border),
-				     to (alpha(@button_border, 0)));
+				     to (shade(@theme_bg_color, 0.95)));
 }
 
 /* Prelit button background */
 .button:hover,
+.button:hover:focus,
 .toolbar .button:hover,
+.toolbar .button:hover:focus,
 .primary-toolbar .button.raised:hover,
+.primary-toolbar .button.raised:hover:focus,
 .primary-toolbar .raised .button:hover,
-.primary-toolbar GtkComboBox .button:hover {
+.primary-toolbar .raised .button:hover:focus,
+.primary-toolbar GtkComboBox .button:hover,
+.primary-toolbar GtkComboBox .button:hover:focus {
     background-color: none;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
