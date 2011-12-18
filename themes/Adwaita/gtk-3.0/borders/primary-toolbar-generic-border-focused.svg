@@ -79,7 +79,7 @@
       <stop
          id="stop3830-6-8"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:0.251" />
+         style="stop-color:#ffffff;stop-opacity:0.3137255;" />
     </linearGradient>
     <linearGradient
        y2="13.462841"
@@ -106,8 +106,8 @@
      showgrid="false"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1022"
+     inkscape:window-width="1366"
+     inkscape:window-height="710"
      inkscape:window-x="0"
      inkscape:window-y="26"
      inkscape:window-maximized="1"
