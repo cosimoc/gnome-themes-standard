@@ -1663,9 +1663,15 @@ GtkSwitch.trough:active {
     color: @switch_trough_active_color;
 }
 
-GtkSwitch.trough:insensitive {
+/*GtkSwitch.trough:insensitive {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.9);
+}*/
+
+GtkSwitch.trough:insensitive {
+    background-image: none;
+    background-color: @insensitive_bg_color;
+    color: mix(@insensitive_bg_color, @insensitive_fg_color, 0.5);
 }
 
 GtkSwitch.trough:window-unfocused {
@@ -1677,7 +1683,7 @@ GtkSwitch.trough:active:window-unfocused {
 }
 
 GtkSwitch.trough:insensitive:window-unfocused {
-    color: @unfocused_borders_color; /* FIXME */
+    color: @unfocused_insensitive_borders_color;
 }
 
 GtkSwitch.slider {
@@ -1699,16 +1705,16 @@ GtkSwitch.slider {
     color: shade (@switch_slider_color, 0.95);
 }
 
-GtkSwitch.slider:active {
-    border-color: @switch_slider_active_border;
+GtkSwitch.slider:insensitive {
+    background-image: none;
+
+    border-color: @insensitive_boder_color;
+
+    box-shadow: none;
 }
 
 GtkSwitch.slider:insensitive {
-    border-image: none;
-    box-shadow: none;
-
-    background-image: none;
-    background-color: @switch_slider_insensitive_bg;
+    border-color: @insensitive_border_color;
 }
 
 GtkSwitch.slider:window-unfocused {
