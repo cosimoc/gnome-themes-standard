@@ -143,10 +143,10 @@
 /* Entry background */
 .entry,
 GtkComboBox.combobox-entry .button,
-GtkComboBox.combobox-entry .button:prelight,
+GtkComboBox.combobox-entry .button:hover,
 GtkComboBox.combobox-entry .button:focus,
 .primary-toolbar GtkComboBox.combobox-entry .button,
-.primary-toolbar GtkComboBox.combobox-entry .button:prelight,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus {
     background-image: -gtk-gradient(linear,
                                     left top, left bottom,

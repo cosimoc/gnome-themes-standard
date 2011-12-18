@@ -128,11 +128,11 @@
 
 .sidebar .radio:active,
 .sidebar .radio:active:focus,
-.sidebar .radio:active:prelight {
+.sidebar .radio:active:hover {
     background-image: url("assets/sidebar-radio-checked.svg");
 }
 
-.sidebar .radio:prelight {
+.sidebar .radio:hover {
     background-image: url("assets/sidebar-radio-prelight.svg");
 }
 
@@ -141,7 +141,7 @@
     background-image: url("assets/sidebar-radio-selected.svg");
 }
 
-.sidebar .radio:selected:prelight,
+.sidebar .radio:selected:hover,
 .sidebar .radio:selected:focus {
     background-image: url("assets/sidebar-radio-selected-prelight.svg");    
 }

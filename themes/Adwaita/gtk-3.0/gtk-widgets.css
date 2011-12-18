@@ -59,10 +59,10 @@ GtkWindow:window-unfocused {
     background-color: @theme_bg_color;
 }
 
-*:hover {
+/* *:hover {
     background-color: shade (@theme_bg_color, 1.02);
     color: @theme_fg_color;
-}
+}*/
 
 *:selected {
     background-color: @theme_selected_bg_color;
@@ -80,9 +80,11 @@ GtkWindow:window-unfocused {
     border-color: @insensitive_border_color;
 }
 
+/*
 *:active {
     background-color: shade (@theme_bg_color, 0.915);
 }
+*/
 
 *:window-unfocused {
     /* I want everything nice and flat in the unfocused window */
@@ -149,13 +151,13 @@ GtkStatusbar {
 
 GtkTreeView .separator,
 .separator,
-.separator:prelight {
+.separator:hover {
     color: darker (@theme_bg_color);
 }
 
 GtkTreeView .separator:window-unfocused,
 .separator:window-unfocused,
-.separator:prelight:window-unfocused {
+.separator:hover:window-unfocused {
     color: @unfocused_insensitive_borders_color;
 }
 
@@ -163,28 +165,28 @@ GtkTreeView .separator:window-unfocused,
     color: shade (@inactive_frame_color, 0.80);
 }
 
-.pane-separator:prelight,
+.pane-separator:hover,
 .pane-separator:selected {
     color: @theme_text_color;
 }
 
 .pane-separator,
-.pane-separator:prelight {
+.pane-separator:hover {
     background-color: @theme_bg_color;
 }
 
 .pane-separator:window-unfocused,
-.pane-separator:prelight:window-unfocused {
+.pane-separator:hover:window-unfocused {
     background-color: @theme_unfocused_bg_color;
 }
 
 .notebook .pane-separator,
-.notebook .pane-separator:prelight {
+.notebook .pane-separator:hover {
     background-color: @theme_base_color;
 }
 
 .notebook .pane-separator:window-unfocused,
-.notebook .pane-separator:prelight:window-unfocused {
+.notebook .pane-separator:hover:window-unfocused {
     background-color: @theme_unfocused_base_color;
 }
 
@@ -226,7 +228,7 @@ GtkTreeView .separator:window-unfocused,
     color: @internal_element_color;
 }
 
-.image:prelight {
+.image:hover {
     color: @internal_element_prelight;
 }
 
@@ -240,7 +242,7 @@ GtkTreeView .separator:window-unfocused,
 }
 
 .spinbutton .button,
-.spinbutton .button:prelight,
+.spinbutton .button:hover,
 .spinbutton .button:active,
 .spinbutton .button:focus,
 .spinbutton .button:insensitive,
@@ -254,7 +256,7 @@ GtkTreeView .separator:window-unfocused,
 }
 
 .spinbutton .button,
-.spinbutton .button:prelight,
+.spinbutton .button:hover,
 .spinbutton .button:active,
 .spinbutton .button:focus,
 .spinbutton .button:insensitive {
@@ -266,7 +268,7 @@ GtkTreeView .separator:window-unfocused,
 }
 
 .spinbutton .button,
-.spinbutton .button:prelight,
+.spinbutton .button:hover,
 .spinbutton .button:focus,
 .spinbutton .button:insensitive,
 .spinbutton .button:window-unfocused {
@@ -279,12 +281,12 @@ GtkTreeView .separator:window-unfocused,
 }
 
 .spinbutton .button:active,
-.spinbutton .button:prelight {
+.spinbutton .button:hover {
     color: @internal_element_prelight;
 }
 
 .spinbutton .button:first-child,
-.spinbutton .button:first-child:prelight,
+.spinbutton .button:first-child:hover,
 .spinbutton .button:first-child:active,
 .spinbutton .button:first-child:focus,
 .spinbutton .button:first-child:insensitive,
@@ -294,7 +296,7 @@ GtkTreeView .separator:window-unfocused,
 }
 
 .spinbutton .button:last-child,
-.spinbutton .button:last-child:prelight,
+.spinbutton .button:last-child:hover,
 .spinbutton .button:last-child:active,
 .spinbutton .button:last-child:focus,
 .spinbutton .button:last-child:insensitive,
@@ -1141,7 +1143,7 @@ GtkComboBox.combobox-entry .button:window-unfocused:last-child {
 .primary-toolbar GtkComboBox.combobox-entry .entry:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .entry:focus:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:first-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:prelight:first-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:active:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:insensitive:first-child {
@@ -1153,7 +1155,7 @@ GtkComboBox.combobox-entry .button:window-unfocused:last-child {
 .primary-toolbar GtkComboBox.combobox-entry .entry:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .entry:focus:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:last-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:prelight:last-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:active:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:insensitive:last-child {
@@ -1182,7 +1184,7 @@ GtkComboBox .button {
     color: @internal_element_color;
 }
 
-GtkComboBox .button *:prelight {
+GtkComboBox .button *:hover {
     color: @theme_text_color;
 }
 
@@ -1241,13 +1243,13 @@ GtkComboBox .button *:prelight {
     border-color: @button_border;
 }
 
-.scrollbar.slider:prelight {
+.scrollbar.slider:hover {
     background-image: none;
     background-color: @theme_base_color;
     border-color: shade (@highlighted_border, 0.964);
 }
 
-.scrollbar.slider:prelight:active {
+.scrollbar.slider:hover:active {
     background-image: none;
     background-color: @theme_base_color;
     border-color: @theme_selected_bg_color;
@@ -1261,8 +1263,8 @@ GtkComboBox .button *:prelight {
     color: @internal_element_color;
 }
 
-.scrollbar.button:prelight,
-.scrollbar.button:prelight:active {
+.scrollbar.button:hover,
+.scrollbar.button:hover:active {
     background-image: none;
     background-color: @theme_base_color;
 
@@ -1360,14 +1362,14 @@ GtkTreeMenu .menuitem * {
 }
 
 /* remove the image from the prelight areas */
-.menubar .menuitem:prelight {
+.menubar .menuitem:hover {
     background-image: none;
     background-color: @menu_bg_color;
 
     border-radius: 5 5 0 0;
 }
 
-.menubar .menuitem *:prelight {
+.menubar .menuitem *:hover {
     color: @menu_fg_color;
 }
 
@@ -1382,8 +1384,8 @@ GtkTreeMenu .menuitem * {
 
 .menuitem:active,
 .menuitem *:active,
-.menuitem:prelight,
-.menuitem *:prelight {
+.menuitem:hover,
+.menuitem *:hover {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
@@ -1401,7 +1403,7 @@ GtkTreeMenu .menuitem * {
     color: alpha (@menu_fg_color, 0.4);
 }
 
-.menuitem .accelerator:prelight,
+.menuitem .accelerator:hover,
 .menuitem .accelerator:active {
     color: alpha (@menu_fg_color, 0.3);
 }
@@ -1414,8 +1416,8 @@ GtkTreeMenu .menuitem * {
 
 .menuitem.check,
 .menuitem.radio,
-.menuitem.check:prelight,
-.menuitem.radio:prelight,
+.menuitem.check:hover,
+.menuitem.radio:hover,
 .menuitem.check:insensitive,
 .menuitem.radio:insensitive {
     background-image: none;
@@ -1431,7 +1433,7 @@ GtkTreeMenu .menuitem * {
     background-image: url("assets/checkbox-menuitem-checked.svg");
 }
 
-.menuitem.check:active:prelight {
+.menuitem.check:active:hover {
     background-image: url("assets/checkbox-menuitem-checked-selected.svg");
 }
 
@@ -1451,7 +1453,7 @@ GtkTreeMenu .menuitem * {
     background-image: url("assets/radio-menuitem-checked.svg");
 }
 
-.menuitem.radio:active:prelight {
+.menuitem.radio:active:hover {
     background-image: url("assets/radio-menuitem-checked-selected.svg");
 }
 
@@ -1487,29 +1489,19 @@ GtkTreeMenu .menuitem * {
  * Radiobuttons *
  ****************/
 
+.check,
 .radio,
-.check {
-    background-color: none;
-    border-style: none;
-
-    /* background-image defined in -assets variant */
-}
-
-.radio:active,
-.check:active,
-.radio:insensitive,
-.radio:active:hover,
-.check:active:hover,
 .check:insensitive,
-.radio:selected:hover,
-.check:selected:hover {
-    background-color: none;
+.radio:insensitive {
+    background-color: transparent;
+    border-style: none;
 }
 
-.radio:hover,
-.check:hover {
-    background-color: shade (@theme_bg_color, 1.02);
+GtkCheckButton:selected,
+GtkCheckButton:selected:focus {
+    background-color: transparent;
 }
+
 
 /************
  * Toolbars *
@@ -1893,7 +1885,7 @@ row:selected {
     background-color: @theme_base_color;
 }
 
-.expander:prelight {
+.expander:hover {
     border-style: solid;
     border-width: 1;
 
@@ -1973,7 +1965,7 @@ GtkCalendar.highlight {
 }
 
 .dim-label,
-.dim-label:prelight {
+.dim-label:hover {
     color: mix (@theme_fg_color, @theme_bg_color, 0.50);
 }
 
@@ -2004,20 +1996,20 @@ PanelApplet > GtkMenuBar.menubar {
     font: bold;
 }
 
-.gnome-panel-menu-bar .menuitem:prelight,
-PanelApplet > GtkMenuBar.menubar .menuitem:prelight {
+.gnome-panel-menu-bar .menuitem:hover,
+PanelApplet > GtkMenuBar.menubar .menuitem:hover {
     background-color: @os_chrome_selected_bg_color;
     color: @os_chrome_selected_fg_color;
 }
 
-.gnome-panel-menu-bar .menuitem *:prelight,
-PanelApplet > GtkMenuBar.menubar .menuitem *:prelight {
+.gnome-panel-menu-bar .menuitem *:hover,
+PanelApplet > GtkMenuBar.menubar .menuitem *:hover {
     color: @os_chrome_selected_fg_color;
     text-shadow: @os_chrome_bg_color 0 1;
 }
 
 PanelApplet .button,
-PanelApplet .button:prelight {
+PanelApplet .button:hover {
     padding: 4;
 
     border-image: none;
@@ -2030,7 +2022,7 @@ PanelApplet .button:prelight {
     color: @os_chrome_fg_color;
 }
 
-PanelApplet .button:active:prelight,
+PanelApplet .button:active:hover,
 PanelApplet .button:active {
     border-image: none;
     background-image: none;
@@ -2039,12 +2031,12 @@ PanelApplet .button:active {
     border-radius: 0;
 }
 
-PanelApplet *:prelight {
+PanelApplet *:hover {
     color: @os_chrome_selected_fg_color;
 }
 
 PanelApplet *:active,
-PanelApplet *:prelight:active {
+PanelApplet *:hover:active {
     color: @os_chrome_selected_fg_color;
     text-shadow: @os_chrome_bg_color 0 1;
 }
