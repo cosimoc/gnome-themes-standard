@@ -1498,6 +1498,8 @@ GtkTreeMenu .menuitem * {
 .radio:active,
 .check:active,
 .radio:insensitive,
+.radio:active:hover,
+.check:active:hover,
 .check:insensitive,
 .radio:selected:hover,
 .check:selected:hover {
@@ -1663,11 +1665,6 @@ GtkSwitch.trough:active {
     color: @switch_trough_active_color;
 }
 
-/*GtkSwitch.trough:insensitive {
-    background-image: none;
-    background-color: shade (@theme_bg_color, 0.9);
-}*/
-
 GtkSwitch.trough:insensitive {
     background-image: none;
     background-color: @insensitive_bg_color;
@@ -1714,7 +1711,7 @@ GtkSwitch.slider:insensitive {
 }
 
 GtkSwitch.slider:insensitive {
-    border-color: @insensitive_border_color;
+    border-color: mix(@insensitive_bg_color, @insensitive_fg_color, 0.5);
 }
 
 GtkSwitch.slider:window-unfocused {

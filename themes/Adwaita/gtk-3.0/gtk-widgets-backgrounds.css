@@ -16,10 +16,14 @@
 }
 
 /* Pushed button background */
-.button:active,
-.button:hover:active,
+.button:active, 
+.button:active:hover, 
+.button:active:focus,
+.button:active:hover:focus,
 .toolbar .button:active,
-.toolbar .button:hover:active,
+.toolbar .button:active:hover,
+.toolbar .button:active:focus,
+.toolbar .button:active:hover:focus,
 /*.primary-toolbar .button:active:focus, */
 .trough,
 .trough.highlight,

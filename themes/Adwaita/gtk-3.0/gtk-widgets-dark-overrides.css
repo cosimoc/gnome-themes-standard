@@ -93,9 +93,7 @@ GtkSwitch.slider {
                                      to (@switch_slider_color));
 
     -adwaita-switch-grip-color: shade (@switch_slider_color, 0.9);
-}
-
-GtkSwitch.slider {
     border-color: mix (@button_border, black, 0.4);
     box-shadow: 0 -1 inset alpha(white, 0.04), 0 1 inset shade(@theme_bg_color, 1.1), 0 2 inset alpha(@button_border, 0.2);
 }
+
