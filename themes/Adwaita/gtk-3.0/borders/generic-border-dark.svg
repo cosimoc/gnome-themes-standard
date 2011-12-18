@@ -15,7 +15,7 @@
    id="svg33222"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="button-border-dark.svg">
+   sodipodi:docname="generic-border-dark.svg">
   <defs
      id="defs33224">
     <linearGradient
@@ -38,6 +38,35 @@
        x2="7.999999"
        y2="14.003025"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3758"
+       id="linearGradient3764"
+       x1="8"
+       y1="0"
+       x2="8"
+       y2="15"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient3758">
+      <stop
+         style="stop-color:#121516;stop-opacity:1"
+         offset="0"
+         id="stop3760" />
+      <stop
+         style="stop-color:#24282a;stop-opacity:1"
+         offset="1"
+         id="stop3762" />
+    </linearGradient>
+    <linearGradient
+       y2="15"
+       x2="8"
+       y1="0"
+       x1="8"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3781"
+       xlink:href="#linearGradient3758"
+       inkscape:collect="always" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -48,15 +77,15 @@
      inkscape:pageshadow="2"
      inkscape:zoom="16"
      inkscape:cx="15.81232"
-     inkscape:cy="7.0803639"
+     inkscape:cy="8"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:window-width="611"
      inkscape:window-height="438"
-     inkscape:window-x="0"
-     inkscape:window-y="26"
+     inkscape:window-x="268"
+     inkscape:window-y="120"
      inkscape:window-maximized="0"
      inkscape:snap-nodes="false"
      inkscape:snap-bbox="true"
@@ -78,7 +107,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -99,7 +128,7 @@
        x="0.5"
        height="13.999999"
        width="15"
-       id="rect17861"
-       style="color:#000000;fill:none;stroke:#24282a;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       id="rect17861-2"
+       style="color:#000000;fill:none;stroke:url(#linearGradient3781);stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   </g>
 </svg>
