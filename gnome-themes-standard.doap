@@ -26,4 +26,19 @@
       <gnome:userid>jimmac</gnome:userid>
     </foaf:Person>
   </maintainer>
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Lapo Calamandrei</foaf:name>
+      <foaf:mbox rdf:resource="mailto:calamandrei@gmail.com" />
+      <gnome:userid>lapo</gnome:userid>
+    </foaf:Person>
+  </maintainer>
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Cosimo Cecchi</foaf:name>
+      <foaf:mbox rdf:resource="mailto:cosimoc@gnome.org" />
+      <gnome:userid>cosimoc</gnome:userid>
+    </foaf:Person>
+  </maintainer>
+
 </Project>
