@@ -1,3 +1,12 @@
+3.3.3
+=====
+
+Big theme revamp; better details and niceties all around \o/
+Theming for new horizontal GtkSpinButtons
+Implement border-only style for maximized windows
+Use an animated wallpaper changing troughout the day
+Better error messages for missing build dependencies
+
 3.3.2
 =====
 
