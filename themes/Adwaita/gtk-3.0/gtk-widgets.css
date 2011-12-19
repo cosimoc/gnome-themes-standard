@@ -1609,11 +1609,11 @@ GtkCheckButton:selected:focus {
  ***********/
 .sidebar,
 .sidebar .view {
-    background-color: shade (@theme_bg_color, 1.02);
+    background-color: @sidebar_bg_color;
 }
 
 .sidebar .scrollbar.trough {
-    background-color: shade (@theme_bg_color, 1.02);
+    background-color: @sidebar_bg_color;
 }
 
 .sidebar .radio,
@@ -1642,6 +1642,8 @@ GtkAssistant .sidebar {
     color: mix (@theme_fg_color, @theme_bg_color, 0.40);
 
     background-color: shade (@theme_bg_color, 0.97);
+    /* shall we make it like sidebars in general? */
+
 }
 
 /*************

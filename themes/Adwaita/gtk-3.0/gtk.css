@@ -9,7 +9,6 @@
 @define-color selected_fg_color #ffffff;
 /*@define-color unfocused_bg_color #f8f8f8;*/
 @define-color unfocused_bg_color @bg_color;
-@define-color placeholder_text_color shade(@text_color, 3.5);
 
 /* Colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_base_color @base_color;
@@ -20,6 +19,8 @@
 @define-color theme_tooltip_fg_color @tooltip_fg_color;
 @define-color theme_selected_bg_color @selected_bg_color;
 @define-color theme_selected_fg_color @selected_fg_color;
+
+@define-color placeholder_text_color shade(@text_color, 3.5);
 
 @define-color theme_unfocused_base_color shade(@insensitive_bg_color, 1.015); /* I don't want the same color, hope not to hurt usability to much here */
 @define-color theme_unfocused_text_color mix(@theme_unfocused_fg_color, @theme_text_color, 0.5); /* Need something darker here to have stuff nicelly readable*/
@@ -36,7 +37,9 @@
 
 @define-color menu_bg_color shade (@theme_bg_color, 1.1);
 @define-color menu_fg_color @theme_fg_color;
+
 @define-color menu_controls_color shade (@theme_fg_color, 0.9);
+
 @define-color menu_combobox_border #3277bf;
 @define-color menu_separator mix (@menu_fg_color, @menu_bg_color, 0.9);
 
@@ -58,6 +61,9 @@
 
 @define-color keyboard_focus_border_a #a2c9f1;
 @define-color keyboard_focus_border_b #6794cf;
+
+/* @define-color sidebar_bg_color shade (@theme_bg_color, 1.02); */
+@define-color sidebar_bg_color shade (@theme_bg_color, 1.025);
 
 @define-color os_chrome_bg_color black;
 @define-color os_chrome_fg_color #ccc;

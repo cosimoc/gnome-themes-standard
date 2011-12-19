@@ -137,7 +137,7 @@ NautilusWindow > GtkGrid > .pane-separator:hover {
     border-width: 1 1 0 0;
     border-style: solid;
     border-color: shade (@theme_bg_color, 0.66);
-    background-color: shade (@theme_bg_color, 1.02);
+    background-color: @sidebar_bg_color;
     color: shade (@theme_bg_color, 0.9);
 }
 

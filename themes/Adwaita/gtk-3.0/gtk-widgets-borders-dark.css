@@ -9,6 +9,7 @@ GtkComboBox.combobox-entry .button:focus,
 .button:active:hover,
 .button:insensitive,
 .trough,
+.trough.highlight,
 .trough row,
 .trough row:hover,
 GtkSwitch.trough,
@@ -48,7 +49,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .entry,
 .primary-toolbar GtkComboBox.combobox-entry .entry,
 .primary-toolbar GtkComboBox.combobox-entry .button,
-.primary-toolbar GtkComboBox.combobox-entry .button:prelight,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover,
 .primary-toolbar GtkComboBox.combobox-entry .button:active,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus,
 .primary-toolbar GtkComboBox.combobox-entry .button:insensitive,
@@ -139,6 +140,17 @@ column-header .button:active:hover {
     border-radius: 0;
 }
 
+column-header.button:window-unfocused,
+column-header .button:window-unfocused {
+    border-image: -gtk-gradient (linear,
+                                 left top, left bottom,
+                                 from (@unfocused_borders_color),
+                                 to (@theme_unfocused_base_color)) 0 1 0 0;
+    border-width: 0 1 0 0;
+    border-radius: 0;
+
+}
+
 column-header.button:last-child,
 column-header:last-child .button,
 column-header.button:hover:last-child,
@@ -157,4 +169,29 @@ column-header.button:active:hover:last-child,
 column-header:last-child .button:active:hover {
     border-image: none;
     border-width: 0;
+}
+/* unfocused window: generic element borders */
+.button:window-unfocused,
+GtkComboBox.combobox-entry .entry:window-unfocused,
+GtkComboBox.combobox-entry .button:window-unfocused,
+GtkComboBox *:window-unfocused, 
+.entry:window-unfocused,
+GtkSwitch.trough:window-unfocused,
+.trough:window-unfocused {
+    border-image: url("borders/generic-border-unfocused-dark.svg") 3 3 4 3 / 3 3 4 3 stretch;
+    border-radius: 3;
+    border-width: 1 1 2 1;
+}
+
+/* unfocused window: primary toolbar generic element borders */
+.primary-toolbar .button.raised:window-unfocused,
+.primary-toolbar .raised .button:window-unfocused,
+.primary-toolbar .entry:window-unfocused,
+.inline-toolbar.toolbar .button:window-unfocused { 
+    border-image: url("borders/primary-toolbar-generic-border-unfocused-dark.svg") 4 / 4 stretch;
+    border-radius: 3;
+    border-width: 2;
+    border-style: solid;
+    border-color: transparent;
+
 }

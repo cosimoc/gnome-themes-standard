@@ -9,6 +9,7 @@ borders_DATA = 		\
 	generic-border.svg \
 	generic-border-dark.svg \
 	generic-border-unfocused.svg \
+	generic-border-unfocused-dark.svg \
 	primary-toolbar-button-border-focused.svg \
 	primary-toolbar-button-border-focused-dark.svg \
 	primary-toolbar-button-border.svg \
@@ -17,6 +18,7 @@ borders_DATA = 		\
 	primary-toolbar-generic-border-focused-dark.svg \
 	primary-toolbar-generic-border.svg \
 	primary-toolbar-generic-border-dark.svg \
-	primary-toolbar-generic-border-unfocused.svg
+	primary-toolbar-generic-border-unfocused.svg \
+	primary-toolbar-generic-border-unfocused-dark.svg
 
 EXTRA_DIST = $(borders_DATA)
