@@ -100,6 +100,12 @@
     background-image: url("assets/radio-unselected-insensitive.svg");
 }
 
+.radio:insensitive:window-unfocused,
+.radio row:selected:insensitive:window-unfocused {
+    background-image: url("assets/radio-unselected-insensitive-unfocused.svg");
+}
+
+
 .radio:active {
     background-image: url("assets/radio-selected.svg");
 }
@@ -121,6 +127,12 @@
     background-image: url("assets/radio-selected-insensitive.svg");
 }
 
+.radio:active:insensitive:window-unfocused,
+.radio row:selected:active:insensitive:window-unfocused {
+    background-image: url("assets/radio-selected-insensitive-unfocused.svg");
+}
+
+
 .radio:inconsistent {
     background-image: url("assets/radio-mixed.svg");
 }
@@ -140,6 +152,11 @@
 .radio row:selected:inconsistent:insensitive,
 .radio row:selected:focus:inconsistent:insensitive {
     background-image: url("assets/radio-mixed-insensitive.svg");
+}
+
+.radio:inconsistent:insensitive:window-unfocused,
+.radio row:selected:inconsistent:insensitive:window-unfocused {
+    background-image: url("assets/radio-mixed-insensitive-unfocused.svg");
 }
 
 .sidebar .radio:active,

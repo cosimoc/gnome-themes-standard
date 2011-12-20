@@ -30,18 +30,21 @@ assets_DATA = 		\
 	radio-selected-dark.svg \
 	radio-selected-insensitive.svg \
 	radio-selected-insensitive-dark.svg \
+	radio-selected-insensitive-unfocused.svg \
 	radio-selected-no-hilight.svg \
 	radio-selected-unfocused.svg \
 	radio-unselected.svg \
 	radio-unselected-dark.svg \
 	radio-unselected-insensitive.svg \
 	radio-unselected-insensitive-dark.svg \
+	radio-unselected-insensitive-unfocused.svg \
 	radio-unselected-no-hilight.svg \
 	radio-unselected-unfocused.svg \
 	radio-mixed.svg \
 	radio-mixed-dark.svg \
 	radio-mixed-insensitive.svg \
 	radio-mixed-insensitive-dark.svg \
+	radio-mixed-insensitive-unfocused.svg \
 	radio-mixed-no-hilight.svg \
 	radio-mixed-unfocused.svg \
 	radio-menuitem-checked.svg \
