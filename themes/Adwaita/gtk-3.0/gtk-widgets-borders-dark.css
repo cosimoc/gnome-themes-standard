@@ -134,7 +134,7 @@ column-header.button:active:hover,
 column-header .button:active:hover {
     border-image: -gtk-gradient (linear,
                                  left top, left bottom,
-                                 from (@button_border),
+                                 from (@borders),
                                  to (@theme_base_color)) 0 1 0 0;
     border-width: 0 1 0 0;
     border-radius: 0;
