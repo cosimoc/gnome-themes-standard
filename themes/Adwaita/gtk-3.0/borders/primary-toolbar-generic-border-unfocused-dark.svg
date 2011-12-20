@@ -68,9 +68,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.627417"
-     inkscape:cx="6.284171"
-     inkscape:cy="9.0507553"
+     inkscape:zoom="16"
+     inkscape:cx="11.653849"
+     inkscape:cy="8.8456424"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:grid-bbox="true"
@@ -116,6 +116,6 @@
        height="13"
        width="13"
        id="rect17861"
-       style="color:#000000;fill:none;stroke:#24282a;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       style="color:#000000;fill:none;stroke:#545959;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;stroke-linecap:butt;stroke-linejoin:miter;stroke-dashoffset:0" />
   </g>
 </svg>

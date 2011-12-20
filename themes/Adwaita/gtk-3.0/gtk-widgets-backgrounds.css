@@ -31,7 +31,7 @@
 .trough row:hover {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
-                                     from (@button_border),
+                                     from (@borders),
 				     to (shade(@theme_bg_color, 0.95)));
     background-color: transparent; 
 }
@@ -47,7 +47,7 @@
 .inline-toolbar .button:active:focus:hover {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
-                                     from (shade(@button_border, 0.95)),
+                                     from (shade(@borders, 0.95)),
 				     to (shade(@theme_bg_color, 0.88)));
     background-color: transparent;
 }
@@ -56,7 +56,7 @@
 .trough.vertical {
     background-image: -gtk-gradient (linear,
     				     left top, right top,
-                                     from (@button_border),
+                                     from (@borders),
 				     to (shade(@theme_bg_color, 0.95)));
 }
 
@@ -126,7 +126,7 @@
 /* Unfocused window pushed button background */
 .button:active:window-unfocused {
     background-image: none;
-    background-color: @unfocused_borders_color;
+    background-color: @unfocused_borders;
 }
 
 /* Unfocused window insensitive button background */
@@ -137,7 +137,7 @@
 
 .button:insensitive:active:window-unfocused {
     background-image: none;
-    background-color: mix(@unfocused_insensitive_bg_color, @unfocused_borders_color, 0.5);
+    background-color: mix(@unfocused_insensitive_bg_color, @unfocused_borders, 0.5);
 }
 
 /* Entry background */
@@ -225,7 +225,7 @@ GtkComboBox.combobox-entry .button:insensitive:window-unfocused {
 .primary-toolbar.toolbar:window-unfocused,
 .inline-toolbar.toolbar:window-unfocused  {
     background-image: none;
-    background-color: @unfocused_toolbar;
+    background-color: @unfocused_dark_bg;
 }
 
 /* Active switch background*/
@@ -244,7 +244,7 @@ GtkSwitch.trough:window-unfocused {
 }
 
 GtkSwitch.trough:active:window-unfocused {
-    background-color: @unfocused_borders_color;
+    background-color: @unfocused_borders;
     background-image: none;
 }
 

@@ -14,7 +14,7 @@
    id="svg33222"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="generic-border-unfocused.svg">
+   sodipodi:docname="generic-border-unfocused-dark.svg">
   <defs
      id="defs33224" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="11.313709"
      inkscape:cx="17.850819"
-     inkscape:cy="-1.2397353"
+     inkscape:cy="-4.775269"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:grid-bbox="true"
@@ -56,7 +56,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -72,6 +72,6 @@
        height="13.999999"
        width="15"
        id="rect17861"
-       style="color:#000000;fill:none;stroke:#24282a;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;stroke-linecap:butt;stroke-linejoin:miter;stroke-dashoffset:0" />
+       style="color:#000000;fill:none;stroke:#545959;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;stroke-linecap:butt;stroke-linejoin:miter;stroke-dashoffset:0" />
   </g>
 </svg>

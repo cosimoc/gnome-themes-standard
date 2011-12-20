@@ -144,7 +144,7 @@ column-header.button:window-unfocused,
 column-header .button:window-unfocused {
     border-image: -gtk-gradient (linear,
                                  left top, left bottom,
-                                 from (@unfocused_borders_color),
+                                 from (@unfocused_borders),
                                  to (@theme_unfocused_base_color)) 0 1 0 0;
     border-width: 0 1 0 0;
     border-radius: 0;
