@@ -504,8 +504,6 @@ GtkComboBox.combobox-entry .button {
 }
 
 .button {
-    -GtkWidget-focus-line-width: 1;
-
     -GtkButton-child-displacement-x: 0;
     -GtkButton-child-displacement-y: 1;
     -GtkButton-image-spacing: 4;
@@ -1100,7 +1098,6 @@ GtkComboBox {
     padding: 0;
     padding-right: 6;
     -GtkWidget-focus-padding: 0;
-    -GtkWidget-focus-line-width: 0;
 
     -GtkComboBox-arrow-scaling: 0.5;
     -GtkComboBox-shadow-type: none;
