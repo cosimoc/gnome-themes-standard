@@ -500,7 +500,7 @@ GtkScrolledWindow.frame {
 .button,
 .button.menuitem.menubar,
 GtkComboBox.combobox-entry .button {
-    padding: 2 5;
+    padding: 1 4 0 4;
 }
 
 .button {
@@ -509,7 +509,6 @@ GtkComboBox.combobox-entry .button {
     -GtkButton-image-spacing: 4;
     -GtkButton-interior-focus: true;
     -GtkButton-default-border: 0;
-    -GtkButton-inner-border: 0;
 
     color: @theme_text_color;
 
@@ -1186,6 +1185,7 @@ GtkComboBox.combobox-entry .button *:active:hover {
 
 GtkComboBox .button {
     padding-right: 0;
+    padding-bottom: 1;
     color: @internal_element_color;
 }
 
@@ -1521,7 +1521,7 @@ GtkCheckButton:selected:focus {
 }
 
 .toolbar .button {
-    padding: 3;
+    padding: 1;
 }
 
 .toolbar:insensitive {
