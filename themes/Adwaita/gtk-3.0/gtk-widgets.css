@@ -714,7 +714,9 @@ GtkComboBox.combobox-entry .button {
 .linked .button:active:hover,
 .linked .button:focus,
 .linked .button:focus:active,
+.linked .button:insensitive,
 .linked .button:window-unfocused,
+.linked .button:insensitive:window-unfocused,
 .linked .button:active:window-unfocused,
 .linked .button:active:hover:window-unfocused {
     border-right-width: 0;
@@ -729,7 +731,9 @@ GtkComboBox.combobox-entry .button {
 .linked .button:active:hover:first-child,
 .linked .button:focus:first-child,
 .linked .button:focus:active:first-child,
+.linked .button:insensitive:first-child,
 .linked .button:window-unfocused:first-child,
+.linked .button:insensitive:window-unfocused:first-child,
 .linked .button:active:window-unfocused:first-child,
 .linked .button:active:hover:window-unfocused:first-child {
     border-right-width: 0;
@@ -744,7 +748,9 @@ GtkComboBox.combobox-entry .button {
 .linked .button:active:hover:last-child,
 .linked .button:focus:last-child,
 .linked .button:focus:active:last-child,
+.linked .button:insensitive:last-child,
 .linked .button:window-unfocused:last-child,
+.linked .button:insensitive:window-unfocused:last-child,
 .linked .button:active:window-unfocused:last-child,
 .linked .button:active:hover:window-unfocused:last-child {
     border-left-width: 0;
@@ -759,7 +765,9 @@ GtkComboBox.combobox-entry .button {
 .linked .button:active:hover:only-child,
 .linked .button:focus:only-child,
 .linked .button:focus:active:only-child,
+.linked .button:insensitive:only-child,
 .linked .button:window-unfocused:only-child,
+.linked .button:insensitive:window-unfocused:only-child,
 .linked .button:active:window-unfocused:only-child,
 .linked .button:active:hover:window-unfocused:only-child {
     border-right-width: 1;
