@@ -23,6 +23,12 @@
     background-image: url("assets/checkbox-unchecked-unfocused.svg");
 }
 
+.check:insensitive:window-unfocused,
+.check row:selected:insensitive:window-unfocused {
+    background-image: url("assets/checkbox-unchecked-insensitive-unfocused.svg");
+}
+
+
 .check:active {
     background-image: url("assets/checkbox-checked.svg");
 }
@@ -39,10 +45,15 @@
 
 .check:active:insensitive,
 .check row:selected:active:insensitive,
-.check row:selected:focus:active:insensitive
-{
+.check row:selected:focus:active:insensitive {
     background-image: url("assets/checkbox-checked-insensitive.svg");
 }
+
+.check:active:insensitive:window-unfocused,
+.check row:selected:active:insensitive:window-unfocused {
+    background-image: url("assets/checkbox-checked-insensitive-unfocused.svg");
+}
+
 
 .check:inconsistent {
     background-image: url("assets/checkbox-mixed.svg");
@@ -62,6 +73,11 @@
 .check row:selected:inconsistent:insensitive,
 .check row:selected:focus:inconsistent:insensitive {
     background-image: url("assets/checkbox-mixed-insensitive.svg");
+}
+
+.check:inconsistent:insensitive:window-unfocused,
+.check row:selected:inconsistent:insensitive:window-unfocused {
+    background-image: url("assets/checkbox-mixed-insensitive-unfocused.svg");
 }
 
 .radio {

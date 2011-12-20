@@ -4,18 +4,21 @@ assets_DATA = 		\
 	checkbox-checked-dark.svg \
 	checkbox-checked-insensitive.svg \
 	checkbox-checked-insensitive-dark.svg \
+	checkbox-checked-insensitive-unfocused.svg \
 	checkbox-checked-no-hilight.svg \
 	checkbox-checked-unfocused.svg \
 	checkbox-unchecked.svg \
 	checkbox-unchecked-dark.svg \
 	checkbox-unchecked-insensitive.svg \
 	checkbox-unchecked-insensitive-dark.svg \
+	checkbox-unchecked-insensitive-unfocused.svg \
 	checkbox-unchecked-no-hilight.svg \
 	checkbox-unchecked-unfocused.svg \
 	checkbox-mixed.svg \
 	checkbox-mixed-dark.svg \
 	checkbox-mixed-insensitive.svg \
 	checkbox-mixed-insensitive-dark.svg \
+	checkbox-mixed-insensitive-unfocused.svg \
 	checkbox-mixed-no-hilight.svg \
 	checkbox-mixed-unfocused.svg \
 	checkbox-menuitem-checked.svg \
