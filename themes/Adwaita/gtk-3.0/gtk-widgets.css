@@ -1136,6 +1136,7 @@ GtkComboBox.combobox-entry .entry:focus:first-child,
 GtkComboBox.combobox-entry .entry:window-unfocused:first-child,
 GtkComboBox.combobox-entry .button:first-child,
 GtkComboBox.combobox-entry .button:focus:first-child,
+GtkComboBox.combobox-entry .button:active:first-child,
 GtkComboBox.combobox-entry .button:insensitive:first-child,
 GtkComboBox.combobox-entry .button:window-unfocused:first-child {
     border-image-width: 3 0 4 3;
