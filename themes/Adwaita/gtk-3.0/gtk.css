@@ -98,7 +98,7 @@
 
 @define-color insensitive_bg_color #f4f4f2;
 @define-color insensitive_fg_color #a7aba7;
-@define-color insensitive_border_color shade (@internal_element_color, 1.37);
+@define-color insensitive_borders shade (@internal_element_color, 1.37);
 
 @define-color trough_bg_color_a #bcbcb7;
 @define-color trough_bg_color_b #e0e0dd;
@@ -129,7 +129,7 @@
 @define-color internal_element_prelight @theme_text_color;
 @define-color internal_element_insensitive shade (@internal_element_color, 1.7);
 
-@define-color scale_fill @insensitive_border_color;
+@define-color scale_fill @insensitive_borders;
 @define-color scale_border_a @internal_element_color;
 @define-color scale_border_b shade (@internal_element_color, 1.25);
 @define-color scale_progress_fill #2c85e2;

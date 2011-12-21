@@ -187,7 +187,6 @@ GtkScale.slider.horizontal {
     background-image: url("assets/scale-slider-horizontal.svg");
 }
 
-
 GtkScale.slider:window-unfocused,
 GtkScale.slider.horizontal:window-unfocused {
     background-image: url("assets/scale-slider-horizontal-unfocused.svg");

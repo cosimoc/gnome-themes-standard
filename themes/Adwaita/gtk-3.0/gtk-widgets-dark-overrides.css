@@ -86,6 +86,10 @@ column-header .button {
     border-color: shade (@highlighted_border, 0.75);
 }
 
+GtkScale.trough:insensitive:window-unfocused { /* not working */
+    background-color: transparent;
+}
+
 GtkSwitch.slider {
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
