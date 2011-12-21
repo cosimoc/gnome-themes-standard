@@ -103,7 +103,12 @@
 @define-color trough_bg_color_a #bcbcb7;
 @define-color trough_bg_color_b #e0e0dd;
 
-@define-color scrollbar_trough_color shade(@theme_bg_color, 0.882);
+@define-color scrollbar_trough shade(@theme_bg_color, 0.9);
+@define-color scrollbar_trough_insensitive shade(@theme_bg_color, 0.95);
+@define-color scrollbar_slider mix(@scrollbar_trough, @theme_fg_color, 0.3);
+@define-color scrollbar_slider_prelight mix(@scrollbar_trough, @theme_fg_color, 0.5);
+@define-color scrollbar_slider_active @theme_selected_bg_color;
+@define-color scrollbar_slider_insensitive @insensitive_bg_color; /* FIXME */
 
 @define-color switch_slider_color #eeeeec;
 @define-color switch_slider_active_border #2a79cb;
@@ -189,4 +194,3 @@
 @import url("gtk-widgets-assets.css");
 @import url("gtk-widgets.css");
 @import url("gnome-applications.css");
-/* @import url("gtk-scrollbar-experiments.css"); */

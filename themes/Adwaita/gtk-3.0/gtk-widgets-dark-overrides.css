@@ -80,12 +80,6 @@ column-header .button {
     color: alpha (@theme_text_color, 0.1);
 }
 
-.scrollbar.slider:prelight,
-.scrollbar.button:prelight,
-.scrollbar.button:prelight:active {
-    border-color: shade (@highlighted_border, 0.75);
-}
-
 GtkScale.trough:insensitive:window-unfocused { /* not working */
     background-color: transparent;
 }

@@ -1237,103 +1237,66 @@ GtkComboBox .button *:hover {
 .scrollbar {
     background-image: none;
     border-style: solid;
-    -GtkRange-trough-border: 2;
-    -GtkRange-arrow-scaling: 0.444;
-    -GtkRange-slider-width: 18;
-    -GtkRange-stepper-size: 18;
-    -GtkScrollbar-min-slider-length: 30; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
+    -GtkRange-trough-border: 0;
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false;
+    -GtkRange-slider-width: 11;
+    -GtkScrollbar-min-slider-length: 7; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 
-    -GtkRange-stepper-spacing: 1;
+    -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-under-steppers: 1;
 }
 
 .scrollbar.trough {
     background-image: none;
-    background-color: @scrollbar_trough_color;
+    background-color: @scrollbar_trough;
     border-width: 0;
     border-radius: 0;
     border-image: none;
 }
 
-.scrollbar.trough:insensitive {
-    background-color: shade (@theme_bg_color, 0.882);
-}
-
-.scrollbar.trough:window-unfocused {
-    background-color: mix(@theme_unfocused_bg_color, @unfocused_borders, 0.3);
-    
-    /* FIXME - all those values should be inherited */
+.scrollbar.slider {
     background-image: none;
-    border-width: 0;
-    border-radius: 0;
+    background-color: @scrollbar_slider;
+    border-radius: 10;
+    border-style: solid;
     border-image: none;
-}
-
-.scrollbar.slider,
-.scrollbar.button,
-.scrollbar.slider:window-unfocused,
-.scrollbar.button:window-unfocused {
-    background-image: none;
-    border-radius: 3;
-    border-width: 1;
-    border-image: none;
-}
-
-.scrollbar.slider,
-.scrollbar.button {
-    background-color: @theme_base_color;
-    border-color: @borders;
+    border-color: transparent;
+    border-width: 2;
 }
 
 .scrollbar.slider:hover {
     background-image: none;
-    background-color: @theme_base_color;
-    border-color: shade (@highlighted_border, 0.964);
+    background-color: @scrollbar_slider_prelight;
+    border-style: solid;
+    border-image: none;
+    border-color: transparent;
+    border-width: 2;
 }
 
-.scrollbar.slider:hover:active {
+.scrollbar.slider:prelight:active {
     background-image: none;
-    background-color: @theme_base_color;
-    border-color: @theme_selected_bg_color;
+    background-color: @scrollbar_slider_active;
+    border-style: solid;
+    border-image: none;
+    border-color: transparent;
+    border-width: 2;
 }
 
 .scrollbar.slider:insensitive {
-    background-color: @theme_base_color;
-}
-
-.scrollbar.button {
-    color: @internal_element_color;
-}
-
-.scrollbar.button:hover,
-.scrollbar.button:hover:active {
-    background-image: none;
-    background-color: @theme_base_color;
-
+    background-color: @scrollbar_slider_insensitive;
+    border-style: solid;
     border-image: none;
-    border-color: shade (@highlighted_border, 0.964);
-    border-width: 1;
+    border-color: transparent;
+    border-width: 2;
 }
 
-.scrollbar.button:insensitive {
-    background-image: none;
-    background-color: @theme_base_color;
-    color: @internal_element_insensitive;
-
+.scrollbar.trough:insensitive {
+    background-color: @scrollbar_trough_insensitive;
+    border-style: solid;
     border-image: none;
-    border-color: @borders;
-    border-width: 1;
-}
-
-.scrollbar.slider:window-unfocused,
-.scrollbar.button:window-unfocused,
-.scrollbar.button:insensitive:window-unfocused {
-    background-color: @theme_unfocused_base_color;
-    border-color: @unfocused_borders;
-}
-
-.scrollbar.button:insensitive:window-unfocused {
-    color: @internal_element_insensitive;
+    border-color: transparent;
+    border-width: 2;
 }
 
 /*********
