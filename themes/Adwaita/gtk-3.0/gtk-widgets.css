@@ -195,11 +195,12 @@ GtkTreeView .separator:window-unfocused,
  ****************/
 .entry {
     border-style: solid;
+    padding: 0;
 
     /* we use inner-border instead of padding because padding
      * also applies to the progressbar.
      */
-    padding: 0;
+
     -GtkEntry-inner-border: 5;
     -GtkEntry-progress-border: 0;
 
@@ -570,7 +571,7 @@ GtkComboBox.combobox-entry .button {
      * we set in gtk-widget-borders.css to zero.
      */
     border-style: solid;
-    border-width: 0;
+    border-width: 2;
     border-color: transparent;
 }
 
@@ -1117,7 +1118,7 @@ GtkComboBox {
 }
 
 GtkComboBox.combobox-entry {
-    padding-right: 0;
+    padding-right: 0; /* does it work for rtl? */
 }
 
 GtkComboBox *:insensitive {
@@ -1130,6 +1131,25 @@ GtkComboBox .separator {
     -GtkWidget-horizontal-separator: 0;
     -GtkWidget-vertical-separator: 0;
 }
+
+GtkComboBox.combobox-entry .button:first-child,
+GtkComboBox.combobox-entry .button:focus:first-child,
+GtkComboBox.combobox-entry .button:active:first-child,
+GtkComboBox.combobox-entry .button:active:focus:first-child,
+GtkComboBox.combobox-entry .button:insensitive:first-child,
+GtkComboBox.combobox-entry .button:window-unfocused:first-child {
+    padding-right: 5;
+}
+
+GtkComboBox.combobox-entry .button:last-child,
+GtkComboBox.combobox-entry .button:focus:last-child,
+GtkComboBox.combobox-entry .button:active:last-child,
+GtkComboBox.combobox-entry .button:active:focus:last-child,
+GtkComboBox.combobox-entry .button:insensitive:last-child,
+GtkComboBox.combobox-entry .button:window-unfocused:last-child {
+    padding-left: 5;
+}
+
 
 GtkComboBox.combobox-entry .entry:first-child,
 GtkComboBox.combobox-entry .entry:focus:first-child,
