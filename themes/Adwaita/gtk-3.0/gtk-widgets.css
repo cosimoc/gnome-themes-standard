@@ -1241,7 +1241,7 @@ GtkComboBox .button *:hover {
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
     -GtkRange-slider-width: 11;
-    -GtkScrollbar-min-slider-length: 7; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
+    -GtkScrollbar-min-slider-length: 30; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-under-steppers: 1;
@@ -1258,20 +1258,21 @@ GtkComboBox .button *:hover {
 .scrollbar.slider {
     background-image: none;
     background-color: @scrollbar_slider;
-    border-radius: 10;
+    border-radius: 20;
     border-style: solid;
     border-image: none;
     border-color: transparent;
-    border-width: 2;
+    border-width: 3;
 }
 
 .scrollbar.slider:hover {
+    transition: 1000ms linear; /* doesn't work */
     background-image: none;
     background-color: @scrollbar_slider_prelight;
     border-style: solid;
     border-image: none;
     border-color: transparent;
-    border-width: 2;
+    border-width: 3;
 }
 
 .scrollbar.slider:prelight:active {
@@ -1280,7 +1281,7 @@ GtkComboBox .button *:hover {
     border-style: solid;
     border-image: none;
     border-color: transparent;
-    border-width: 2;
+    border-width: 3;
 }
 
 .scrollbar.slider:insensitive {
@@ -1288,7 +1289,7 @@ GtkComboBox .button *:hover {
     border-style: solid;
     border-image: none;
     border-color: transparent;
-    border-width: 2;
+    border-width: 3;
 }
 
 .scrollbar.trough:insensitive {
@@ -1296,7 +1297,7 @@ GtkComboBox .button *:hover {
     border-style: solid;
     border-image: none;
     border-color: transparent;
-    border-width: 2;
+    border-width: 3;
 }
 
 /*********
