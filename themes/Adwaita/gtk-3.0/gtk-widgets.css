@@ -1137,11 +1137,8 @@ GtkComboBox.combobox-entry .entry:window-unfocused:first-child,
 GtkComboBox.combobox-entry .button:first-child,
 GtkComboBox.combobox-entry .button:focus:first-child,
 GtkComboBox.combobox-entry .button:active:first-child,
-GtkComboBox.combobox-entry .button:insensitive:first-child,
-GtkComboBox.combobox-entry .button:active:first-child,
-GtkComboBox.combobox-entry .button:active:hover:first-child,
 GtkComboBox.combobox-entry .button:active:focus:first-child,
-GtkComboBox.combobox-entry .button:active:hover:focus:first-child,
+GtkComboBox.combobox-entry .button:insensitive:first-child,
 GtkComboBox.combobox-entry .button:window-unfocused:first-child {
     border-image-width: 3 0 4 3;
     border-radius: 3 0 0 3;
@@ -1153,11 +1150,9 @@ GtkComboBox.combobox-entry .entry:focus:last-child,
 GtkComboBox.combobox-entry .entry:window-unfocused:last-child,
 GtkComboBox.combobox-entry .button:last-child,
 GtkComboBox.combobox-entry .button:focus:last-child,
-GtkComboBox.combobox-entry .button:insensitive:last-child,
 GtkComboBox.combobox-entry .button:active:last-child,
-GtkComboBox.combobox-entry .button:active:hover:last-child,
 GtkComboBox.combobox-entry .button:active:focus:last-child,
-GtkComboBox.combobox-entry .button:active:hover:focus:last-child,
+GtkComboBox.combobox-entry .button:insensitive:last-child,
 GtkComboBox.combobox-entry .button:window-unfocused:last-child {
     border-image-width: 3 3 4 0;
     border-radius: 0 3 3 0;
@@ -1167,13 +1162,11 @@ GtkComboBox.combobox-entry .button:window-unfocused:last-child {
 .primary-toolbar GtkComboBox.combobox-entry .entry:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .entry:focus:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:first-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:hover:first-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:active:first-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:active:hover:first-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:active:focus:first-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:active:hover:focus:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus:first-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:insensitive:first-child {
+.primary-toolbar GtkComboBox.combobox-entry .button:active:first-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:active:focus:first-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:insensitive:first-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused:first-child {
     border-image-width: 4 0 4 4;
     border-radius: 3 0 0 3;
     border-right-width: 0;
@@ -1182,13 +1175,11 @@ GtkComboBox.combobox-entry .button:window-unfocused:last-child {
 .primary-toolbar GtkComboBox.combobox-entry .entry:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .entry:focus:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:last-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:hover:last-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:active:last-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:active:hover:last-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:active:focus:last-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:active:hover:focus:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus:last-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:insensitive:last-child {
+.primary-toolbar GtkComboBox.combobox-entry .button:active:last-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:active:focus:last-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:insensitive:last-child
+.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused:last-child {
     border-image-width: 4 4 4 0;
     border-radius: 0 3 3 0;
     border-left-width: 0;
