@@ -64,14 +64,16 @@ GtkWindow:window-unfocused {
     color: @theme_fg_color;
 }*/
 
-*:selected {
+
+*:selected,
+*:selected:focus {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
 
-*:selected:focus {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
+*:selected:window-unfocused {
+    background-color: @theme_unfocused_selected_bg_color;
+    color: @theme_unfocused_selected_fg_color;
 }
 
 *:insensitive {
