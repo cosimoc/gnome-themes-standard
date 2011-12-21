@@ -203,6 +203,7 @@ GtkSwitch.trough:window-unfocused,
 }
 
 /* unfocused window: primary toolbar generic element borders */
+.primary-toolbar .button:active:window-unfocused,
 .primary-toolbar .button.raised:window-unfocused,
 .primary-toolbar .raised .button:window-unfocused,
 .primary-toolbar .entry:window-unfocused,
