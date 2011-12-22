@@ -98,3 +98,10 @@ GtkSwitch.slider {
     box-shadow: 0 -1 inset alpha(white, 0.04), 0 1 inset shade(@theme_bg_color, 1.1), 0 2 inset alpha(@borders, 0.2);
 }
 
+.scrollbar.trough.vertical {
+    box-shadow: none;
+}
+
+.scrollbar.trough.horizontal {
+    box-shadow: none;
+}

@@ -166,7 +166,9 @@ column-header:last-child .button:active:focus:hover,
 column-header.button:active:focus:last-child,
 column-header:last-child .button:active:focus,
 column-header.button:active:hover:last-child,
-column-header:last-child .button:active:hover {
+column-header:last-child .button:active:hover,
+column-header.button:window-unfocused:last-child,
+column-header:last-child .button:window-unfocused {
     border-image: none;
     border-width: 0;
 }

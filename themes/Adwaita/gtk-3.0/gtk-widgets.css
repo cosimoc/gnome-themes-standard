@@ -1254,11 +1254,13 @@ GtkComboBox .button *:hover {
     border-image: none;
 }
 
-.scrollbar.trough.vertical {
+.scrollbar.trough.vertical,
+.scrollbar.trough.vertical:window-unfocused {
     box-shadow: -1 0 inset alpha(@theme_text_color, 0.05), 1 0 inset alpha(@theme_text_color, 0.1);
 }
 
-.scrollbar.trough.horizontal {
+.scrollbar.trough.horizontal,
+.scrollbar.trough.horizontal:window-unfocused {
     box-shadow: 0 -1 inset alpha(@theme_text_color, 0.05), 0 1 inset alpha(@theme_text_color, 0.1);
 }
 
@@ -1318,6 +1320,14 @@ GtkComboBox .button *:hover {
 
 .scrollbar.slider:insensitive {
     background-color: @scrollbar_slider_insensitive;
+    border-style: solid;
+    border-image: none;
+    border-color: transparent;
+    border-width: 3;
+}
+
+.scrollbar.slider:window-unfocused {
+    background-color: @scrollbar_slider_unfocused;
     border-style: solid;
     border-image: none;
     border-color: transparent;

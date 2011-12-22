@@ -110,8 +110,8 @@
 @define-color scrollbar_slider mix(@scrollbar_trough, @theme_fg_color, 0.35);
 @define-color scrollbar_slider_prelight mix(@scrollbar_trough, @theme_fg_color, 0.5);
 @define-color scrollbar_slider_active @theme_selected_bg_color;
-@define-color scrollbar_slider_insensitive @insensitive_bg_color; /* FIXME */
-@define-color scrollbar_slider_unfocused mix(@scrollbar_trough_unfocused, @theme_unfocused_fg_color, 0.35);
+@define-color scrollbar_slider_insensitive alpha(black, 0); /* FIXME should be transparent */
+@define-color scrollbar_slider_unfocused @theme_unfocused_bg_color;
 
 @define-color switch_slider_color #eeeeec;
 @define-color switch_slider_active_border #2a79cb;
