@@ -1254,6 +1254,14 @@ GtkComboBox .button *:hover {
     border-image: none;
 }
 
+.scrollbar.trough.vertical {
+    box-shadow: -1 0 inset alpha(@theme_text_color, 0.05), 1 0 inset alpha(@theme_text_color, 0.1);
+}
+
+.scrollbar.trough.horizontal {
+    box-shadow: 0 -1 inset alpha(@theme_text_color, 0.05), 0 1 inset alpha(@theme_text_color, 0.1);
+}
+
 .scrollbar.trough:insensitive {
     background-color: @scrollbar_trough_insensitive;
     border-style: solid;
