@@ -998,9 +998,21 @@ GtkLinkButton * {
     padding: 3;
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
-                                     from (@notebook_tab_gradient_a),
+                                     from (@notebook_tab_hilight),
+                                     color-stop (0.15, @notebook_tab_hilight),
+                                     color-stop (0.15, @notebook_tab_gradient_a),
                                      to (@notebook_tab_gradient_b));
 
+    -adwaita-focus-border-radius: 2;
+}
+
+/* workaround */
+.notebook tab.bottom {
+    padding: 3;
+    background-image: -gtk-gradient (linear,
+                                     left bottom, left top,
+                                     from (@notebook_tab_gradient_a),
+                                     to (@notebook_tab_gradient_b));
     -adwaita-focus-border-radius: 2;
 }
 
