@@ -34,11 +34,12 @@
 @define-color theme_tooltip_fg_color #eeeeee;
 
 @define-color button_gradient_color_a shade (@theme_bg_color, 1.15);
-@define-color button_gradient_color_b shade (@theme_bg_color, 0.8);
+@define-color button_gradient_color_b @theme_bg_color;
+@define-color button_gradient_color_c shade (@theme_bg_color, 0.8);
 @define-color borders #24282a;
 
-@define-color button_active_text_shadow black;
-@define-color button_text_shadow black;
+@define-color button_active_text_shadow alpha(black, 0.45);
+@define-color button_text_shadow alpha(black, 0.7);
 @define-color primary_toolbar_button_text_shadow alpha(black, 0.1);
 
 @define-color button_active_gradient_color_a shade (@button_gradient_color_b, 0.7);

@@ -9,7 +9,8 @@
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
                                      from (@button_gradient_color_a),
-                                     to (@button_gradient_color_b));
+                                     color-stop (0.4, @button_gradient_color_b),
+                                     to (@button_gradient_color_c));
 
     background-color: transparent;
 }

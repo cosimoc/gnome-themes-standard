@@ -78,7 +78,8 @@
 @define-color focused_entry_inset alpha (#d7e4f1, 0.50);
 
 @define-color button_gradient_color_a shade(@theme_bg_color, 1.05);
-@define-color button_gradient_color_b shade(@theme_bg_color, 0.94);
+@define-color button_gradient_color_b @theme_bg_color;
+@define-color button_gradient_color_c shade(@theme_bg_color, 0.92);
 @define-color borders #a7aba7;
 
 @define-color button_active_gradient_color_a #a2a9a2;
