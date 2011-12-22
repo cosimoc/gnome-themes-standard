@@ -172,7 +172,7 @@ column-header.button:hover:last-child,
 column-header:last-child .button:hover,
 column-header.button:focus:last-child,
 column-header:last-child .button:focus,
-column-header .button:insensitive:last-child,
+column-header.button:insensitive:last-child,
 column-header:last-child .button:insensitive,
 column-header.button:focus:hover:last-child,
 column-header:last-child .button:focus:hover,
@@ -183,7 +183,7 @@ column-header:last-child .button:active:focus,
 column-header.button:active:hover:last-child,
 column-header:last-child .button:active:hover,
 column-header.button:window-unfocused:last-child,
-column-hedaer:last-child .button:window-unfocused {
+column-header:last-child .button:window-unfocused {
     border-image: none;
     border-width: 0;
     border-radius: 0;
