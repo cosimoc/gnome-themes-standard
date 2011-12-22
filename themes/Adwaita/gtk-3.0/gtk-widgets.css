@@ -1593,6 +1593,7 @@ GtkCheckButton:selected:focus {
 
     -GtkWidget-window-dragging: true;
     -GtkToolbar-button-relief: normal;
+    box-shadow: 0 3 inset alpha(black, 0.02), 0 2 inset alpha(black, 0.02), 0 1 inset alpha(black, 0.02);
 }
 
 .primary-toolbar .toolbar:insensitive,
@@ -1606,6 +1607,7 @@ GtkCheckButton:selected:focus {
 .primary-toolbar .toolbar:window-unfocused,
 .primary-toolbar.toolbar:window-unfocused {
     border-color: @unfocused_borders;
+    box-shadow: none;
 }
 
 /* progressbars on primary toolbar entries are special */

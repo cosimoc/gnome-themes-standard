@@ -95,14 +95,15 @@
 @define-color focused_entry_border @theme_selected_bg_color;
 @define-color focused_entry_inset alpha (@theme_selected_bg_color, 0.50);
 
-@define-color toolbar_gradient_base #252624;
-@define-color toolbar_gradient_step1 #323331;
-@define-color toolbar_gradient_step2 #444642;
-@define-color toolbar_gradient_final #51534f;
+@define-color toolbar_gradient_a shade(@theme_bg_color, 0.75);
+@define-color toolbar_gradient_b shade(@theme_bg_color, 0.8);
+@define-color toolbar_gradient_c shade(@theme_bg_color, 0.9);
 
 @define-color toolbar_active_button_color #222222;
-@define-color toolbar_border_top #2e3436;
-@define-color toolbar_border_bottom #5e605b;
+@define-color toolbar_border_top shade(@borders, 0.7);
+@define-color toolbar_border_bottom shade(@borders, 1.05);
+
+@define-color toolbar_button_prelight alpha(black, 0.3);
 
 @define-color primary_toolbar_entry_bg #ffffff;
 @define-color primary_toolbar_entry_fg #2e3436;
