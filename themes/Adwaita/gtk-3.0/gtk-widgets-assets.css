@@ -259,6 +259,10 @@ GtkScale.scale-has-marks-below.slider.horizontal:window-unfocused {
     background-image: url("assets/scale-slider-marks-below-horizontal-unfocused.svg");
 }
 
+GtkScale.scale-has-marks-below.slider.horizontal:insensitive {
+    background-image: url("assets/scale-slider-marks-below-horizontal-insensitive.svg");
+}
+
 GtkScale.scale-has-marks-below.slider.horizontal:insensitive:window-unfocused {
     background-image: url("assets/scale-slider-marks-below-horizontal-insensitive-unfocused.svg");
 }
