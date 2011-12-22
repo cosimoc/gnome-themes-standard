@@ -2,16 +2,19 @@
     box-shadow: 2 2 inset alpha(lighter(@theme_selected_bg_color), 0.2), -2 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 1 1 inset alpha(lighter(@theme_selected_bg_color), 0.7), -1 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
 }
 
-.spinbutton .button:active {
-    box-shadow: 0 2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 0 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 0 1 inset alpha(lighter(@theme_selected_bg_color), 0.7), 0 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
+.spinbutton .button:active,
+.spinbutton .button:active:focus {
+    box-shadow: 1 0 inset @inset_dark_color, 0 2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 0 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 0 1 inset alpha(lighter(@theme_selected_bg_color), 0.7), 0 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
 }
 
-.spinbutton .button:first-child:active {
+.spinbutton .button:first-child:active,
+.spinbutton .button:first-child:active:focus {
     box-shadow: 2 2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 0 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 1 1 inset alpha(lighter(@theme_selected_bg_color), 0.7), 0 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
 }
 
-.spinbutton .button:last-child:active {
-    box-shadow: 0 2 inset alpha(lighter(@theme_selected_bg_color), 0.2), -2 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 0 1 inset alpha(lighter(@theme_selected_bg_color), 0.7), -1 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
+.spinbutton .button:last-child:active,
+.spinbutton .button:last-child:active:focus {
+    box-shadow: 1 0 inset @inset_dark_color, 0 2 inset alpha(lighter(@theme_selected_bg_color), 0.2), -2 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2), 0 1 inset alpha(lighter(@theme_selected_bg_color), 0.7), -1 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
 }
 
 GtkIconView.view.cell:selected,
