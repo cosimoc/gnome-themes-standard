@@ -58,12 +58,6 @@ GtkWindow:window-unfocused {
     background-color: @theme_bg_color;
 }
 
-/* *:hover {
-    background-color: shade (@theme_bg_color, 1.02);
-    color: @theme_fg_color;
-}*/
-
-
 *:selected,
 *:selected:focus {
     background-color: @theme_selected_bg_color;
@@ -248,6 +242,11 @@ GtkTreeView .separator:window-unfocused,
     box-shadow: 1 0 inset @inset_dark_color;
 }
 
+.spinbutton .button:window-unfocused {
+    box-shadow: 1 0 inset @unfocused_entry_separators;
+    box-shadow: none;
+}
+
 .spinbutton .button:active,
 .spinbutton .button:focus,
 .spinbutton .button:active:focus,
@@ -262,13 +261,18 @@ GtkTreeView .separator:window-unfocused,
 .spinbutton .button:focus,
 .spinbutton .button:focus:hover,
 .spinbutton .button:insensitive,
-.spinbutton .button:window-unfocused {
+.spinbutton .button:window-unfocused,
+.spinbutton .button:insensitive:window-unfocused {
     background-color: transparent;
     background-image: none;
 }
 
 .spinbutton .button:insensitive {
     color: @internal_element_insensitive;
+}
+
+.spinbutton .button:insensitive:window-unfocused {
+    color: mix(@internal_element_color, @theme_unfocused_base_color, 0.7);
 }
 
 .spinbutton .button:active,
