@@ -1641,11 +1641,41 @@ GtkCheckButton:selected:focus {
  ***********/
 .sidebar,
 .sidebar .view {
-    background-color: @sidebar_bg_color;
+    background-color: @sidebar_bg;
+}
+
+.sidebar:window-unfocused,
+.sidebar .view:window-unfocused {
+    background-color: @sidebar_bg_unfocused;
+}
+
+.sidebar .scrollbar.trough,
+.sidebar .scrollbar.trough:window-unfocused {
+    box-shadow: none;
+    border-radius: 100;
+    border-style: solid;
+    border-width: 2;
+    border-color: transparent;
 }
 
 .sidebar .scrollbar.trough {
-    background-color: @sidebar_bg_color;
+    background-color: shade(@sidebar_bg, 0.8);
+}
+
+.sidebar .scrollbar.trough:window-unfocused {
+    background-color: shade(@sidebar_bg_unfocused, 0.8);
+}
+
+.sidebar .scrollbar.slider {
+    background-color: @sidebar_bg;
+}
+
+.sidebar .scrollbar.slider:window-unfocused {
+    background-color: @sidebar_bg_unfocused;
+}
+
+.sidebar .scrollbar.slider:hover {
+    background-color: @theme_base_color;
 }
 
 .sidebar .radio,

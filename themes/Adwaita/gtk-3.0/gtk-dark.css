@@ -115,7 +115,7 @@
 @define-color keyboard_focus_border_a alpha (@theme_fg_color, 0.30);
 @define-color keyboard_focus_border_b alpha (@theme_fg_color, 0.10);
 
-@define-color sidebar_bg_color shade (@theme_bg_color, 1.02);
+@define-color sidebar_bg shade (@theme_bg_color, 1.02);
 
 @define-color trough_bg_color_a #30312f;
 @define-color trough_bg_color_b #41433f;

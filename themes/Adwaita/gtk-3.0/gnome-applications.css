@@ -122,22 +122,31 @@ NautilusFloatingBar .button {
 NautilusWindow .sidebar .frame {
     border-width: 1 0 0 0;
     border-style: solid;
-    border-color: shade (@theme_bg_color, 0.66);
+    border-color: @borders;
     border-radius: 0;
 }
 
 NautilusWindow > GtkGrid > .pane-separator {
     border-width: 1 1 0 0;
     border-style: solid;
-    border-color: shade (@theme_bg_color, 0.66);
+    border-color: @borders;
 }
 
 NautilusWindow > GtkGrid > .pane-separator,
 NautilusWindow > GtkGrid > .pane-separator:hover {
     border-width: 1 1 0 0;
     border-style: solid;
-    border-color: shade (@theme_bg_color, 0.66);
-    background-color: @sidebar_bg_color;
+    border-color: @borders;
+    background-color: @sidebar_bg;
+    color: shade (@theme_bg_color, 0.9);
+}
+
+NautilusWindow > GtkGrid > .pane-separator:window-unfocused,
+NautilusWindow > GtkGrid > .pane-separator:hover:window-unfocused {
+    border-width: 1 1 0 0;
+    border-style: solid;
+    border-color: @unfocused_borders;
+    background-color: @sidebar_bg_unfocused;
     color: shade (@theme_bg_color, 0.9);
 }
 

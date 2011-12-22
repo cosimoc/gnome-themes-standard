@@ -63,7 +63,8 @@
 @define-color keyboard_focus_border_b #6794cf;
 
 /* @define-color sidebar_bg_color shade (@theme_bg_color, 1.02); */
-@define-color sidebar_bg_color shade (@theme_bg_color, 1.025);
+@define-color sidebar_bg shade (@theme_bg_color, 1.025);
+@define-color sidebar_bg_unfocused mix(@sidebar_bg, @theme_unfocused_base_color, 0.5);
 
 @define-color os_chrome_bg_color black;
 @define-color os_chrome_fg_color #ccc;
