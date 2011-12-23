@@ -293,7 +293,7 @@ render_notebook_extension (GtkThemingEngine *engine,
 
   draw_tab_shape_active (cr, tab_curvature, 0, 0, width, height);
 
-  if (state & GTK_STATE_FLAG_ACTIVE)
+  if (pattern && (state & GTK_STATE_FLAG_ACTIVE))
     {
       cairo_scale (cr, width, height - 6.0);
       cairo_set_source (cr, pattern);
