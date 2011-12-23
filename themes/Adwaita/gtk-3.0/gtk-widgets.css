@@ -521,6 +521,7 @@ GtkComboBox.combobox-entry .button {
     -GtkButton-image-spacing: 4;
     -GtkButton-interior-focus: true;
     -GtkButton-default-border: 0;
+    -GtkButton-inner-boder: 3;
 
     color: @theme_text_color;
 
@@ -1166,9 +1167,12 @@ GtkComboBox.combobox-entry .entry:first-child,
 GtkComboBox.combobox-entry .entry:focus:first-child,
 GtkComboBox.combobox-entry .entry:window-unfocused:first-child,
 GtkComboBox.combobox-entry .button:first-child,
+GtkComboBox.combobox-entry .button:hover:first-child,
 GtkComboBox.combobox-entry .button:focus:first-child,
 GtkComboBox.combobox-entry .button:active:first-child,
+GtkComboBox.combobox-entry .button:active:hover:first-child,
 GtkComboBox.combobox-entry .button:active:focus:first-child,
+GtkComboBox.combobox-entry .button:active:focus:hover:first-child,
 GtkComboBox.combobox-entry .button:insensitive:first-child,
 GtkComboBox.combobox-entry .button:window-unfocused:first-child {
     border-image-width: 3 0 4 3;
@@ -1180,9 +1184,12 @@ GtkComboBox.combobox-entry .entry:last-child,
 GtkComboBox.combobox-entry .entry:focus:last-child,
 GtkComboBox.combobox-entry .entry:window-unfocused:last-child,
 GtkComboBox.combobox-entry .button:last-child,
+GtkComboBox.combobox-entry .button:hover:last-child,
 GtkComboBox.combobox-entry .button:focus:last-child,
 GtkComboBox.combobox-entry .button:active:last-child,
+GtkComboBox.combobox-entry .button:active:hover:last-child,
 GtkComboBox.combobox-entry .button:active:focus:last-child,
+GtkComboBox.combobox-entry .button:active:focus:hover:last-child,
 GtkComboBox.combobox-entry .button:insensitive:last-child,
 GtkComboBox.combobox-entry .button:window-unfocused:last-child {
     border-image-width: 3 3 4 0;
@@ -1193,9 +1200,12 @@ GtkComboBox.combobox-entry .button:window-unfocused:last-child {
 .primary-toolbar GtkComboBox.combobox-entry .entry:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .entry:focus:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:first-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:active:first-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:active:hover:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:active:focus:first-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:active:focus:hover:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:insensitive:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused:first-child {
     border-image-width: 4 0 4 4;
@@ -1206,9 +1216,12 @@ GtkComboBox.combobox-entry .button:window-unfocused:last-child {
 .primary-toolbar GtkComboBox.combobox-entry .entry:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .entry:focus:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:last-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus:last-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:focus:hover:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:active:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:active:focus:last-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:active:focus:hover:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:insensitive:last-child
 .primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused:last-child {
     border-image-width: 4 4 4 0;
@@ -1709,6 +1722,7 @@ GtkCheckButton:selected:focus {
     background-color: transparent;
 }
 
+
 /****************
  * GtkAssistant *
  ****************/
@@ -2030,6 +2044,46 @@ GtkCalendar.highlight {
     border-radius: 0;
     padding: 0;
     border-width: 0;
+}
+
+GtkInfoBar .button,
+GtkInfoBar .button:insensitive,
+GtkInfoBar .button:active,
+GtkInfoBar .button:focus,
+GtkInfoBar .button:active:focus,
+.info .button,
+.info .button:insensitive,
+.info .button:active,
+.info .button:focus,
+.info .button:active:focus,
+.warning .button,
+.warning .button:insensitive,
+.warning .button:active,
+.warning .button:focus,
+.warning .button:active:focus,
+.question .button,
+.question .button:insensitive,
+.question .button:active,
+.question .button:focus,
+.question .button:active:focus,
+.error .button,
+.error .button:insensitive,
+.error .button:active,
+.error .button:focus,
+.error .button:active:focus {
+    border-image: none;
+
+    border-color: shade(@borders, 0.9);
+    border-style: solid;
+    border-width: 1;
+}
+
+GtkInfoBar,
+.info,
+.warning,
+.question,
+.error {
+    text-shadow: 0 1 alpha(black, 0.15);
 }
 
 .info {

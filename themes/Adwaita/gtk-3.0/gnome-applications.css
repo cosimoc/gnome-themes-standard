@@ -71,8 +71,27 @@ NautilusQueryEditor.info {
     border-color: darker (@nautilus_cluebar_color);
 
     border-radius: 0;
-    border-width: 1 0;
+    border-width: 0 0 1 0;
     border-style: solid;
+}
+
+/*
+NautilusTrashBar.info:first-child,
+NautilusXContentBar.info:first-child,
+NautilusSearchBar.info:first-child,
+NautilusQueryEditor.info:first-child {
+    border-width: 1 0;
+}*/
+
+/* This will make the location entry tall as buttons.
+   Buttons are too tall btw, then it's ugly */
+/*NautilusLocationEntry.entry {
+    -GtkEntry-inner-border: 9;
+}*/
+
+NautilusLocationEntry.entry {
+    padding-left: 4;
+    padding-right: 4;
 }
 
 NautilusSearchBar .entry,
@@ -81,23 +100,25 @@ NautilusSearchBar .entry:focus {
     border-color: darker(@nautilus_cluebar_color);
     border-style: solid;
     border-width: 1;
+    padding-left: 4;
+    padding-right: 4;
 
     -GtkEntry-inner-border: 3;
 }
 
-NautilusSearchBar .entry.image {
+/*NautilusSearchBar .entry.image {
     color: @nautilus_cluebar_color;
-}
+}*/
 
 .nautilus-cluebar-label {
     font: bold;
     color: @theme_base_color;
 }
 
-#nautilus-search-button *:active,
+/*#nautilus-search-button *:active,
 #nautilus-search-button *:active:prelight {
     color: darker (@nautilus_cluebar_color);
-}
+}*/
 
 NautilusFloatingBar {
     background-color: @info_bg_color;
@@ -148,6 +169,50 @@ NautilusWindow > GtkGrid > .pane-separator:hover:window-unfocused {
     border-color: @unfocused_borders;
     background-color: @sidebar_bg_unfocused;
     color: shade (@theme_bg_color, 0.9);
+}
+
+/* gedit */
+
+GeditWindow .pane-separator, 
+GeditWindow .pane-separator:hover {
+   border-width: 0 1 1 1;
+   border-style: solid;
+   border-color: @borders;
+   background-color: shade(@theme_bg_color, 0.95);
+   color: @borders;
+}
+
+GeditPanel {
+    background-color: red;
+}
+
+GeditPanel .toolbar {
+    border-style: none;
+    background-color: transparent;
+}
+
+GeditWindow .sidebar {
+    background-color: @theme_base_color;
+    border-width: 0 0 1 0;
+    border-style: solid;
+    border-color: @borders;
+    
+}
+
+GeditPanel .notebook {
+    padding: 2;
+    border-width: 1 0;
+}
+
+GeditWindow .notebook {
+    border-width: 1 0 1 0;
+}
+
+GeditStatusbar {
+    padding: 1 0 0 0;
+    border-width: 1 0 0 0;
+    border-style: solid;
+    border-color: @borders;
 }
 
 /* gnome-documents */
