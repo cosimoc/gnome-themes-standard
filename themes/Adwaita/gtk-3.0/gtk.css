@@ -129,10 +129,10 @@
 
 @define-color entry_text_color @theme_text_color;
 
-@define-color entry_background_a #e1e1e1;
-@define-color entry_background_b #f8f8f8;
-@define-color entry_background_c #fafafa;
-@define-color entry_background_d @theme_base_color;
+@define-color entry_background_a shade(@theme_base_color, 0.94);
+@define-color entry_background_b @theme_base_color;
+
+@define-color entry_inset alpha(black, 0.1);
 
 @define-color internal_element_color #888a85;
 @define-color internal_element_prelight @theme_text_color;

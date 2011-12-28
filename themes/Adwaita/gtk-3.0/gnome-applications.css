@@ -89,6 +89,8 @@ NautilusQueryEditor.info:first-child {
     -GtkEntry-inner-border: 9;
 }*/
 
+
+
 NautilusLocationEntry.entry {
     padding-left: 4;
     padding-right: 4;
@@ -114,6 +116,11 @@ NautilusSearchBar .entry:focus {
     font: bold;
     color: @theme_base_color;
 }
+
+/*NautilusPlacesSidebar .cell:selected { FUNGE, ci vuole una border image qui
+    border-radius: 0 100 100 0;
+    box-shadow: 0 1 inset alpha(black, 0.2), 0 -1 inset alpha(white, 0.5);
+}*/
 
 /*#nautilus-search-button *:active,
 #nautilus-search-button *:active:prelight {

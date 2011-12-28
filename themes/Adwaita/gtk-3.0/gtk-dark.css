@@ -87,10 +87,11 @@
 @define-color progressbar_border @switch_slider_active_border;
 
 @define-color entry_text_color #ffffff;
-@define-color entry_background_a #2d2d2d;
-@define-color entry_background_b #333333;
-@define-color entry_background_c #343434;
-@define-color entry_background_d #373737;
+@define-color entry_background_a shade(@theme_base_color, 0.85);
+@define-color entry_background_b @theme_base_color;
+
+@define-color entry_inset alpha(black, 0.15);
+
 
 @define-color frame_color #707070;
 

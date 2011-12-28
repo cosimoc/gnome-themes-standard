@@ -150,12 +150,18 @@ GtkComboBox.combobox-entry .button:hover:focus,
 .primary-toolbar GtkComboBox.combobox-entry .button:hover,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus
 .primary-toolbar GtkComboBox.combobox-entry .button:hover:focus {
-    background-image: -gtk-gradient(linear,
+/*    background-image: -gtk-gradient(linear,
                                     left top, left bottom,
                                     from(@entry_background_a),
                                     color-stop(0.15, @entry_background_b),
                                     color-stop(0.85, @entry_background_c),
-                                    to(@entry_background_d));
+                                    to(@entry_background_d)); */
+    background-image: -gtk-gradient(linear,
+                                    left top, left bottom,
+                                    from(@entry_background_a),
+									/* color-stop(0.7, mix(@entry_background_a, @entry_background_b, 0.4)), */
+                                    to(@entry_background_b));
+    box-shadow: 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4);
 }
 
 /* Entry pushed button background */
@@ -186,6 +192,7 @@ column-header .button:active:focus {
 GtkComboBox.combobox-entry .button:insensitive {
     background-color: @insensitive_bg_color;
     background-image: none;
+    box-shadow: none;
 }
 
 /* Unfocused windows entry background */
@@ -197,6 +204,7 @@ column-header.button:insensitive:window-unfocused,
 column-header .button:insensitive:window-unfocused {
     background-image: none;
     background-color: @theme_unfocused_base_color;
+    box-shadow: none;
 }
 
 /* Unfocused windows insensitive entry background */

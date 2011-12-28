@@ -1886,6 +1886,8 @@ GtkTreeView.view:window-unfocused {
 column-header.button,
 column-header .button {
     color: @internal_element_color;
+    /* I'd like to have shadows inside any white box, not possible yet */
+    /* box-shadow: 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4); */
 }
 
 column-header.button,
