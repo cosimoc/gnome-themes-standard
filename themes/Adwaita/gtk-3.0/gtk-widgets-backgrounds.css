@@ -184,7 +184,8 @@ column-header .button:active:focus {
     background-image: -gtk-gradient(linear,
                                     left top, left bottom,
                                     from(shade(@entry_background_a, 0.9)),
-                                    to(@entry_background_d));
+                                    to(@entry_background_b));
+    box-shadow: 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4);
 }
 
 /* Insensitive entry background */

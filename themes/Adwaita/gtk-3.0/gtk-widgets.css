@@ -1231,12 +1231,12 @@ GtkComboBox.combobox-entry .button:window-unfocused:last-child {
 
 GtkComboBox.combobox-entry .button:active:last-child,
 GtkComboBox.combobox-entry .button:hover:active:last-child {
-    box-shadow: 1 0 inset @inset_dark_color;
+    box-shadow: 1 0 inset @inset_dark_color, 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4);;
 }
 
 GtkComboBox.combobox-entry .button:active:first-child,
 GtkComboBox.combobox-entry .button:hover:active:first-child {
-    box-shadow: -1 0 inset @inset_dark_color;
+    box-shadow: -1 0 inset @inset_dark_color, 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4);;
 }
 
 GtkComboBox.combobox-entry .button *:active,
