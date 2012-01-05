@@ -169,8 +169,8 @@ NautilusWindow > GtkGrid > .pane-separator:hover {
     color: shade (@theme_bg_color, 0.9);
 }
 
-NautilusWindow > GtkGrid > .pane-separator:window-unfocused,
-NautilusWindow > GtkGrid > .pane-separator:hover:window-unfocused {
+NautilusWindow > GtkGrid > .pane-separator:backdrop,
+NautilusWindow > GtkGrid > .pane-separator:hover:backdrop {
     border-width: 1 1 0 0;
     border-style: solid;
     border-color: @unfocused_borders;

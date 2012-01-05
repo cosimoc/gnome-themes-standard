@@ -156,8 +156,8 @@ column-header .button:active:hover {
     border-radius: 0;
 }
 
-column-header.button:window-unfocused,
-column-header .button:window-unfocused {
+column-header.button:backdrop,
+column-header .button:backdrop {
     border-image: -gtk-gradient (linear,
                                  left top, left bottom,
                                  from (@unfocused_borders),
@@ -183,32 +183,32 @@ column-header.button:active:focus:last-child,
 column-header:last-child .button:active:focus,
 column-header.button:active:hover:last-child,
 column-header:last-child .button:active:hover,
-column-header.button:window-unfocused:last-child,
-column-header:last-child .button:window-unfocused {
+column-header.button:backdrop:last-child,
+column-header:last-child .button:backdrop {
     border-image: none;
     border-width: 0;
     border-radius: 0;
 }
 
 /* unfocused window: generic element borders */
-.button:window-unfocused,
-GtkComboBox.combobox-entry .entry:window-unfocused,
-GtkComboBox.combobox-entry .button:window-unfocused,
-GtkComboBox *:window-unfocused, 
-.entry:window-unfocused,
-GtkSwitch.trough:window-unfocused,
-.trough:window-unfocused {
+.button:backdrop,
+GtkComboBox.combobox-entry .entry:backdrop,
+GtkComboBox.combobox-entry .button:backdrop,
+GtkComboBox *:backdrop, 
+.entry:backdrop,
+GtkSwitch.trough:backdrop,
+.trough:backdrop {
     border-image: url("borders/generic-border-unfocused.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3;
     border-width: 1 1 2 1;
 }
 
 /* unfocused window: primary toolbar generic element borders */
-.primary-toolbar .button:active:window-unfocused,
-.primary-toolbar .button.raised:window-unfocused,
-.primary-toolbar .raised .button:window-unfocused,
-.primary-toolbar .entry:window-unfocused,
-.inline-toolbar.toolbar .button:window-unfocused { 
+.primary-toolbar .button:active:backdrop,
+.primary-toolbar .button.raised:backdrop,
+.primary-toolbar .raised .button:backdrop,
+.primary-toolbar .entry:backdrop,
+.inline-toolbar.toolbar .button:backdrop { 
     border-image: url("borders/primary-toolbar-generic-border-unfocused.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;

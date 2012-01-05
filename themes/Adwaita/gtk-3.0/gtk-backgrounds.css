@@ -37,7 +37,7 @@ background-color: red;
 }
 
 /* Unfocused window button background */
-.button:window-unfocused {
+.button:backdrop {
     background-image: none;
     background-color: @unfocused_button_background;
 }

@@ -50,7 +50,7 @@ GtkWindow {
     color: @theme_fg_color;
 }
 
-GtkWindow:window-unfocused {
+GtkWindow:backdrop {
     color: @theme_unfocused_fg_color;
 }
 
@@ -64,7 +64,7 @@ GtkWindow:window-unfocused {
     color: @theme_selected_fg_color;
 }
 
-*:selected:window-unfocused {
+*:selected:backdrop {
     background-color: @theme_unfocused_selected_bg_color;
     color: @theme_unfocused_selected_fg_color;
 }
@@ -81,14 +81,14 @@ GtkWindow:window-unfocused {
 }
 */
 
-*:window-unfocused {
+*:backdrop {
     /* I want everything nice and flat in the unfocused window */
     text-shadow: none;
     icon-shadow: none;
     color: @theme_unfocused_fg_color;
 }
 
-*:insensitive:window-unfocused {
+*:insensitive:backdrop {
     /* I want everything nice and flat in the unfocused window */
     text-shadow: none;
     icon-shadow: none;
@@ -150,9 +150,9 @@ GtkTreeView .separator,
     color: @borders;
 }
 
-GtkTreeView .separator:window-unfocused,
-.separator:window-unfocused,
-.separator:hover:window-unfocused {
+GtkTreeView .separator:backdrop,
+.separator:backdrop,
+.separator:hover:backdrop {
     color: @unfocused_insensitive_borders;
 }
 
@@ -170,8 +170,8 @@ GtkTreeView .separator:window-unfocused,
     background-color: @theme_bg_color;
 }
 
-.pane-separator:window-unfocused,
-.pane-separator:hover:window-unfocused {
+.pane-separator:backdrop,
+.pane-separator:hover:backdrop {
     background-color: @theme_unfocused_bg_color;
 }
 
@@ -180,8 +180,8 @@ GtkTreeView .separator:window-unfocused,
     background-color: @theme_base_color;
 }
 
-.notebook .pane-separator:window-unfocused,
-.notebook .pane-separator:hover:window-unfocused {
+.notebook .pane-separator:backdrop,
+.notebook .pane-separator:hover:backdrop {
     background-color: @theme_unfocused_base_color;
 }
 
@@ -242,7 +242,7 @@ GtkTreeView .separator:window-unfocused,
     box-shadow: 1 0 inset @inset_dark_color;
 }
 
-.spinbutton .button:window-unfocused {
+.spinbutton .button:backdrop {
     box-shadow: 1 0 inset @unfocused_entry_separators;
     box-shadow: none;
 }
@@ -251,7 +251,7 @@ GtkTreeView .separator:window-unfocused,
 .spinbutton .button:focus,
 .spinbutton .button:active:focus,
 .spinbutton .button:insensitive,
-.spinbutton .button:window-unfocused {
+.spinbutton .button:backdrop {
     border-image: none;
     border-radius: 0;
 }
@@ -261,8 +261,8 @@ GtkTreeView .separator:window-unfocused,
 .spinbutton .button:focus,
 .spinbutton .button:focus:hover,
 .spinbutton .button:insensitive,
-.spinbutton .button:window-unfocused,
-.spinbutton .button:insensitive:window-unfocused {
+.spinbutton .button:backdrop,
+.spinbutton .button:insensitive:backdrop {
     background-color: transparent;
     background-image: none;
 }
@@ -271,7 +271,7 @@ GtkTreeView .separator:window-unfocused,
     color: @internal_element_insensitive;
 }
 
-.spinbutton .button:insensitive:window-unfocused {
+.spinbutton .button:insensitive:backdrop {
     color: mix(@internal_element_color, @theme_unfocused_base_color, 0.7);
 }
 
@@ -287,7 +287,7 @@ GtkTreeView .separator:window-unfocused,
 .spinbutton .button:first-child:focus,
 .spinbutton .button:first-child:active:focus,
 .spinbutton .button:first-child:insensitive,
-.spinbutton .button:first-child:window-unfocused {
+.spinbutton .button:first-child:backdrop {
     border-radius: 2 0 0 2;
     box-shadow: none;
 }
@@ -298,7 +298,7 @@ GtkTreeView .separator:window-unfocused,
 .spinbutton .button:last-child:focus,
 .spinbutton .button:last-child:active:focus,
 .spinbutton .button:last-child:insensitive,
-.spinbutton .button:last-child:window-unfocused {
+.spinbutton .button:last-child:backdrop {
     border-radius: 0 2 2 0;
 }
 
@@ -364,9 +364,9 @@ GtkTreeView .separator:window-unfocused,
                                                  to (alpha (@progressbar_pattern, 0.25)));
 }
 
-.progressbar:window-unfocused,
-.progressbar row:window-unfocused,
-.progressbar row:selected:window-unfocused {
+.progressbar:backdrop,
+.progressbar row:backdrop,
+.progressbar row:selected:backdrop {
     -adwaita-progressbar-pattern: none;
     background-image: none;
     background-color: @theme_unfocused_selected_bg_color;
@@ -391,8 +391,8 @@ GtkProgressBar,
                                      to (mix (@trough_bg_color_b, @theme_selected_bg_color, 0.25)));
 }
 
-GtkProgressBar:window-unfocused,
-.trough row:window-unfocused {
+GtkProgressBar:backdrop,
+.trough row:backdrop {
     background-image: none;
     background-color: @unfocused_dark_bg;
 }
@@ -409,8 +409,8 @@ GtkScale {
 GtkScale.slider,
 GtkScale.slider:hover,
 GtkScale.slider:insensitive,
-GtkScale.slider:window-unfocused,
-GtkScale.slider:insensitive:window-unfocused {
+GtkScale.slider:backdrop,
+GtkScale.slider:insensitive:backdrop {
     border-radius: 0;
     border-style: none;
 
@@ -423,7 +423,7 @@ GtkScale.slider:insensitive:window-unfocused {
 GtkScale.trough,
 GtkScale.trough.highlight,
 GtkScale.trough.vertical,
-GtkScale.trough:window-unfocused {
+GtkScale.trough:backdrop {
     border-width: 1;
     border-image: none;
     border-style: solid;
@@ -435,7 +435,7 @@ GtkScale.trough.vertical {
     border-color: @borders;
 }
 
-GtkScale.trough:window-unfocused {
+GtkScale.trough:backdrop {
     border-color: @unfocused_borders;
 }
 
@@ -452,7 +452,7 @@ GtkScale.progressbar {
     -adwaita-progressbar-pattern: none;
 }
 
-GtkScale.progressbar:window-unfocused {
+GtkScale.progressbar:backdrop {
     background-color: @unfocused_borders;
 
     -adwaita-progressbar-pattern: none;
@@ -470,14 +470,14 @@ GtkScale.trough {
     box-shadow: 0 -1 inset @theme_bg_color;
 }
 
-GtkScale.trough:window-unfocused {
+GtkScale.trough:backdrop {
     box-shadow: none;
     border-color: @unfocused_borders;
     background-color: @unfocused_dark_bg;
     background-image: none;
 }
 
-GtkScale.trough:insensitive:window-unfocused {
+GtkScale.trough:insensitive:backdrop {
     background-color: @unfocused_insensitive_bg_color;
     border-color: @unfocused_insensitive_borders;
     box-shadow: none;
@@ -502,7 +502,7 @@ GtkScrolledWindow.frame {
     padding: 0;
 }
 
-GtkScrolledWindow.frame:window-unfocused {
+GtkScrolledWindow.frame:backdrop {
     border-color: @unfocused_borders;
 }
 
@@ -544,8 +544,8 @@ GtkComboBox.combobox-entry .button {
     text-shadow: none;
 }
 
-.button *:active:window-unfocused,
-.button *:active:insensitive:window-unfocused {
+.button *:active:backdrop,
+.button *:active:insensitive:backdrop {
     color: @theme_unfocused_bg_color;
 }
 
@@ -553,8 +553,8 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button,
 .primary-toolbar .button:focus,
 .primary-toolbar .button:insensitive,
-.primary-toolbar .button:window-unfocused,
-.primary-toolbar .button:insensitive:window-unfocused {
+.primary-toolbar .button:backdrop,
+.primary-toolbar .button:insensitive:backdrop {
     background-image: none;
     background-color: transparent;
 }
@@ -564,7 +564,7 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button:hover,
 .primary-toolbar .button:focus,
 .primary-toolbar .button:insensitive,
-.primary-toolbar .button:window-unfocused {
+.primary-toolbar .button:backdrop {
     border-image: none;
 
     /* setting border-style: none; here would override the border-width values 
@@ -608,12 +608,12 @@ GtkComboBox.combobox-entry .button {
     text-shadow: none;
 }
 
-.primary-toolbar .button *:insensitive:window-unfocused {
+.primary-toolbar .button *:insensitive:backdrop {
     color: mix(@unfocused_insensitive_bg_color, @unfocused_dark_bg, 0.65); /* FIXME */
 }
 
-.primary-toolbar .button.raised *:insensitive:window-unfocused,
-.primary-toolbar .raised .button *:insensitive:window-unfocused {
+.primary-toolbar .button.raised *:insensitive:backdrop,
+.primary-toolbar .raised .button *:insensitive:backdrop {
     color: @unfocused_insensitive_fg_color;
 }
 
@@ -660,27 +660,27 @@ GtkComboBox.combobox-entry .button {
     box-shadow: -1 0 inset @inset_dark_color;
 }
 
-.linked .button:window-unfocused,
-.primary-toolbar .button.raised.linked:window-unfocused,
-.primary-toolbar .raised.linked .button:window-unfocused,
-.inline-toolbar.toolbar .button:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton .button:window-unfocused {
+.linked .button:backdrop,
+.primary-toolbar .button.raised.linked:backdrop,
+.primary-toolbar .raised.linked .button:backdrop,
+.inline-toolbar.toolbar .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton .button:backdrop {
     box-shadow: -1 0 inset @unfocused_borders;
 }
 
-.linked .button:insensitive:window-unfocused,
-.primary-toolbar .button.raised.linked:insensitive:window-unfocused,
-.primary-toolbar .raised.linked .button:insensitive:window-unfocused,
-.inline-toolbar.toolbar .button:insensitive:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton .button:insensitive:window-unfocused {
+.linked .button:insensitive:backdrop,
+.primary-toolbar .button.raised.linked:insensitive:backdrop,
+.primary-toolbar .raised.linked .button:insensitive:backdrop,
+.inline-toolbar.toolbar .button:insensitive:backdrop,
+.inline-toolbar.toolbar GtkToolButton .button:insensitive:backdrop {
     box-shadow: -1 0 inset @unfocused_insensitive_borders;
 }
 
-.linked .button:insensitive:last-child:window-unfocused,
-.primary-toolbar .button.raised.linked:insensitive:last-child:window-unfocused,
-.primary-toolbar .raised.linked .button:insensitive:last-child:window-unfocused,
-.inline-toolbar.toolbar .button:insensitive:last-child:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:window-unfocused {
+.linked .button:insensitive:last-child:backdrop,
+.primary-toolbar .button.raised.linked:insensitive:last-child:backdrop,
+.primary-toolbar .raised.linked .button:insensitive:last-child:backdrop,
+.inline-toolbar.toolbar .button:insensitive:last-child:backdrop,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:backdrop {
     box-shadow: none;
 }
 
@@ -690,31 +690,31 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .raised.linked .button:only-child, */
 .inline-toolbar.toolbar .button:only-child,
 .inline-toolbar.toolbar GtkToolButton:only-child .button,
-.linked .button:window-unfocused:last-child,
+.linked .button:backdrop:last-child,
 .linked .button:insensitive:last-child,
 .primary-toolbar .button.raised.linked:insensitive:last-child,
 .primary-toolbar .raised.linked .button:insensitive:last-child,
 .inline-toolbar.toolbar .button:insensitive:last-child,
 .inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive,
-.primary-toolbar .button.raised.linked:window-unfocused:last-child,
-.primary-toolbar .raised.linked .button:window-unfocused:last-child,
-.inline-toolbar.toolbar .button:window-unfocused:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:window-unfocused,
-.linked .button:insensitive:window-unfocused:last-child,
-.primary-toolbar .button.raised.linked:insensitive:window-unfocused:last-child,
-.primary-toolbar .raised.linked .button:insensitive:window-unfocused:last-child,
-.inline-toolbar.toolbar .button:insensitive:window-unfocused:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:window-unfocused,
-.linked .button:window-unfocused:only-child,
-.primary-toolbar .button.raised.linked:window-unfocused:only-child,
-.primary-toolbar .raised.linked .button:window-unfocused:only-child,
-.inline-toolbar.toolbar .button:window-unfocused:only-child,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:window-unfocused,
-.linked .button:window-unfocused:insensitive:only-child,
-.primary-toolbar .button.raised.linked:window-unfocused:insensitive:only-child,
-.primary-toolbar .raised.linked .button:window-unfocused:insensitive:only-child,
-.inline-toolbar.toolbar .button:window-unfocused:insensitive:only-child,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive:window-unfocused {
+.primary-toolbar .button.raised.linked:backdrop:last-child,
+.primary-toolbar .raised.linked .button:backdrop:last-child,
+.inline-toolbar.toolbar .button:backdrop:last-child,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:backdrop,
+.linked .button:insensitive:backdrop:last-child,
+.primary-toolbar .button.raised.linked:insensitive:backdrop:last-child,
+.primary-toolbar .raised.linked .button:insensitive:backdrop:last-child,
+.inline-toolbar.toolbar .button:insensitive:backdrop:last-child,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:backdrop,
+.linked .button:backdrop:only-child,
+.primary-toolbar .button.raised.linked:backdrop:only-child,
+.primary-toolbar .raised.linked .button:backdrop:only-child,
+.inline-toolbar.toolbar .button:backdrop:only-child,
+.inline-toolbar.toolbar GtkToolButton:only-child .button:backdrop,
+.linked .button:backdrop:insensitive:only-child,
+.primary-toolbar .button.raised.linked:backdrop:insensitive:only-child,
+.primary-toolbar .raised.linked .button:backdrop:insensitive:only-child,
+.inline-toolbar.toolbar .button:backdrop:insensitive:only-child,
+.inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive:backdrop {
     box-shadow: none; 
 }
 
@@ -725,10 +725,10 @@ GtkComboBox.combobox-entry .button {
 .linked .button:focus,
 .linked .button:focus:active,
 .linked .button:insensitive,
-.linked .button:window-unfocused,
-.linked .button:insensitive:window-unfocused,
-.linked .button:active:window-unfocused,
-.linked .button:active:hover:window-unfocused {
+.linked .button:backdrop,
+.linked .button:insensitive:backdrop,
+.linked .button:active:backdrop,
+.linked .button:active:hover:backdrop {
     border-right-width: 0;
     border-left-width: 0;
     border-image-width: 3 0 4 0;
@@ -742,10 +742,10 @@ GtkComboBox.combobox-entry .button {
 .linked .button:focus:first-child,
 .linked .button:focus:active:first-child,
 .linked .button:insensitive:first-child,
-.linked .button:window-unfocused:first-child,
-.linked .button:insensitive:window-unfocused:first-child,
-.linked .button:active:window-unfocused:first-child,
-.linked .button:active:hover:window-unfocused:first-child {
+.linked .button:backdrop:first-child,
+.linked .button:insensitive:backdrop:first-child,
+.linked .button:active:backdrop:first-child,
+.linked .button:active:hover:backdrop:first-child {
     border-right-width: 0;
     border-image-width: 3 0 4 3;
     border-bottom-right-radius: 0;
@@ -759,10 +759,10 @@ GtkComboBox.combobox-entry .button {
 .linked .button:focus:last-child,
 .linked .button:focus:active:last-child,
 .linked .button:insensitive:last-child,
-.linked .button:window-unfocused:last-child,
-.linked .button:insensitive:window-unfocused:last-child,
-.linked .button:active:window-unfocused:last-child,
-.linked .button:active:hover:window-unfocused:last-child {
+.linked .button:backdrop:last-child,
+.linked .button:insensitive:backdrop:last-child,
+.linked .button:active:backdrop:last-child,
+.linked .button:active:hover:backdrop:last-child {
     border-left-width: 0;
     border-image-width: 3 3 4 0;
     border-bottom-left-radius: 0;
@@ -776,10 +776,10 @@ GtkComboBox.combobox-entry .button {
 .linked .button:focus:only-child,
 .linked .button:focus:active:only-child,
 .linked .button:insensitive:only-child,
-.linked .button:window-unfocused:only-child,
-.linked .button:insensitive:window-unfocused:only-child,
-.linked .button:active:window-unfocused:only-child,
-.linked .button:active:hover:window-unfocused:only-child {
+.linked .button:backdrop:only-child,
+.linked .button:insensitive:backdrop:only-child,
+.linked .button:active:backdrop:only-child,
+.linked .button:active:hover:backdrop:only-child {
     border-right-width: 1;
     border-left-width: 1;
     border-image-width: 3 3 4 3;
@@ -813,18 +813,18 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton .button:focus,
 .inline-toolbar.toolbar GtkToolButton .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton .button:insensitive,
-.toolbar .button.raised.linked:window-unfocused,
-.toolbar .button.raised.linked:active:window-unfocused,
-.toolbar .button.raised.linked:active:hover:window-unfocused,
-.toolbar .raised.linked .button:window-unfocused,
-.toolbar .raised.linked .button:active:window-unfocused,
-.toolbar .raised.linked .button:active:hover:window-unfocused,
-.inline-toolbar.toolbar .button:window-unfocused,
-.inline-toolbar.toolbar .button:active:window-unfocused,
-.inline-toolbar.toolbar .button:active:hover:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton .button:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton .button:active:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton .button:active:hover:window-unfocused {
+.toolbar .button.raised.linked:backdrop,
+.toolbar .button.raised.linked:active:backdrop,
+.toolbar .button.raised.linked:active:hover:backdrop,
+.toolbar .raised.linked .button:backdrop,
+.toolbar .raised.linked .button:active:backdrop,
+.toolbar .raised.linked .button:active:hover:backdrop,
+.inline-toolbar.toolbar .button:backdrop,
+.inline-toolbar.toolbar .button:active:backdrop,
+.inline-toolbar.toolbar .button:active:hover:backdrop,
+.inline-toolbar.toolbar GtkToolButton .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton .button:active:backdrop,
+.inline-toolbar.toolbar GtkToolButton .button:active:hover:backdrop {
     border-right-width: 0;
     border-left-width: 0;
     border-image-width: 4 0 4 0;
@@ -856,18 +856,18 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:first-child .button:focus,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:insensitive,
-.toolbar .button.raised.linked:window-unfocused:first-child,
-.toolbar .button.raised.linked:active:window-unfocused:first-child,
-.toolbar .button.raised.linked:active:hover:window-unfocused:first-child,
-.toolbar .raised.linked .button:window-unfocused:first-child,
-.toolbar .raised.linked .button:active:window-unfocused:first-child,
-.toolbar .raised.linked .button:active:hover:window-unfocused:first-child,
-.inline-toolbar.toolbar .button:window-unfocused:first-child,
-.inline-toolbar.toolbar .button:active:window-unfocused:first-child,
-.inline-toolbar.toolbar .button:active:hover:window-unfocused:first-child,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:active:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:active:hover:window-unfocused {
+.toolbar .button.raised.linked:backdrop:first-child,
+.toolbar .button.raised.linked:active:backdrop:first-child,
+.toolbar .button.raised.linked:active:hover:backdrop:first-child,
+.toolbar .raised.linked .button:backdrop:first-child,
+.toolbar .raised.linked .button:active:backdrop:first-child,
+.toolbar .raised.linked .button:active:hover:backdrop:first-child,
+.inline-toolbar.toolbar .button:backdrop:first-child,
+.inline-toolbar.toolbar .button:active:backdrop:first-child,
+.inline-toolbar.toolbar .button:active:hover:backdrop:first-child,
+.inline-toolbar.toolbar GtkToolButton:first-child .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton:first-child .button:active:backdrop,
+.inline-toolbar.toolbar GtkToolButton:first-child .button:active:hover:backdrop {
     border-left-width: 2;
     border-right-width: 0;
     border-image-width: 4 0 4 4;
@@ -900,18 +900,18 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:last-child .button:focus,
 .inline-toolbar.toolbar GtkToolButton:last-child .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive,
-.toolbar .button.raised.linked:window-unfocused:last-child,
-.toolbar .button.raised.linked:active:window-unfocused:last-child,
-.toolbar .button.raised.linked:active:hover:window-unfocused:last-child,
-.toolbar .raised.linked .button:window-unfocused:last-child,
-.toolbar .raised.linked .button:active:window-unfocused:last-child,
-.toolbar .raised.linked .button:active:hover:window-unfocused:last-child,
-.inline-toolbar.toolbar .button:window-unfocused:last-child,
-.inline-toolbar.toolbar .button:active:window-unfocused:last-child,
-.inline-toolbar.toolbar .button:active:hover:window-unfocused:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:active:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:active:hover:window-unfocused {
+.toolbar .button.raised.linked:backdrop:last-child,
+.toolbar .button.raised.linked:active:backdrop:last-child,
+.toolbar .button.raised.linked:active:hover:backdrop:last-child,
+.toolbar .raised.linked .button:backdrop:last-child,
+.toolbar .raised.linked .button:active:backdrop:last-child,
+.toolbar .raised.linked .button:active:hover:backdrop:last-child,
+.inline-toolbar.toolbar .button:backdrop:last-child,
+.inline-toolbar.toolbar .button:active:backdrop:last-child,
+.inline-toolbar.toolbar .button:active:hover:backdrop:last-child,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:active:backdrop,
+.inline-toolbar.toolbar GtkToolButton:last-child .button:active:hover:backdrop {
     border-left-width: 0;
     border-right-width: 2;
     border-image-width: 4 4 4 0;
@@ -944,18 +944,18 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:only-child .button:focus,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive,
-/* .toolbar .button.raised.linked:window-unfocused:only-child,
-.toolbar .button.raised.linked:active:window-unfocused:only-child,
-.toolbar .button.raised.linked:active:hover:window-unfocused:only-child,
-.toolbar .raised.linked .button:window-unfocused:only-child,
-.toolbar .raised.linked .button:active:window-unfocused:only-child,
-.toolbar .raised.linked .button:active:hover:window-unfocused:only-child, */
-.inline-toolbar.toolbar .button:window-unfocused:only-child,
-.inline-toolbar.toolbar .button:active:window-unfocused:only-child,
-.inline-toolbar.toolbar .button:active:hover:window-unfocused:only-child,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:active:window-unfocused,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:active:hover:window-unfocused {
+/* .toolbar .button.raised.linked:backdrop:only-child,
+.toolbar .button.raised.linked:active:backdrop:only-child,
+.toolbar .button.raised.linked:active:hover:backdrop:only-child,
+.toolbar .raised.linked .button:backdrop:only-child,
+.toolbar .raised.linked .button:active:backdrop:only-child,
+.toolbar .raised.linked .button:active:hover:backdrop:only-child, */
+.inline-toolbar.toolbar .button:backdrop:only-child,
+.inline-toolbar.toolbar .button:active:backdrop:only-child,
+.inline-toolbar.toolbar .button:active:hover:backdrop:only-child,
+.inline-toolbar.toolbar GtkToolButton:only-child .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton:only-child .button:active:backdrop,
+.inline-toolbar.toolbar GtkToolButton:only-child .button:active:hover:backdrop {
     border-right-width: 2;
     border-left-width: 2;
     border-image-width: 4;
@@ -989,8 +989,8 @@ GtkLinkButton * {
     background-color: @theme_base_color;
 }
 
-.notebook:window-unfocused,
-.notebook GtkViewport:window-unfocused {
+.notebook:backdrop,
+.notebook GtkViewport:backdrop {
     background-color: @theme_unfocused_base_color;
     border-color: @unfocused_borders;
 }
@@ -1017,7 +1017,7 @@ GtkLinkButton * {
     -adwaita-focus-border-radius: 2;
 }
 
-.notebook tab:window-unfocused {
+.notebook tab:backdrop {
     background-image: none;
     background-color: @theme_unfocused_bg_color;
     border-color: @unfocused_insensitive_borders;
@@ -1036,7 +1036,7 @@ GtkLinkButton * {
                                      to (@theme_base_color));
 }
 
-.notebook tab:active:window-unfocused {
+.notebook tab:active:backdrop {
     /* FIXME I need to set a background-image here, background-color is ignored */
     background-image: -gtk-gradient (linear, 
                                              left top, left bottom,
@@ -1052,8 +1052,8 @@ GtkLinkButton * {
     -adwaita-selected-tab-color: @unfocused_borders;
 }
 
-.notebook tab.left:active:window-unfocused,
-.notebook tab.right:active:window-unfocused {
+.notebook tab.left:active:backdrop,
+.notebook tab.right:active:backdrop {
     -adwaita-selected-tab-color: alpha(@theme_base_color, 0.0);
 }
 
@@ -1149,7 +1149,7 @@ GtkComboBox.combobox-entry .button:focus:first-child,
 GtkComboBox.combobox-entry .button:active:first-child,
 GtkComboBox.combobox-entry .button:active:focus:first-child,
 GtkComboBox.combobox-entry .button:insensitive:first-child,
-GtkComboBox.combobox-entry .button:window-unfocused:first-child {
+GtkComboBox.combobox-entry .button:backdrop:first-child {
     padding-right: 5;
 }
 
@@ -1158,14 +1158,14 @@ GtkComboBox.combobox-entry .button:focus:last-child,
 GtkComboBox.combobox-entry .button:active:last-child,
 GtkComboBox.combobox-entry .button:active:focus:last-child,
 GtkComboBox.combobox-entry .button:insensitive:last-child,
-GtkComboBox.combobox-entry .button:window-unfocused:last-child {
+GtkComboBox.combobox-entry .button:backdrop:last-child {
     padding-left: 5;
 }
 
 
 GtkComboBox.combobox-entry .entry:first-child,
 GtkComboBox.combobox-entry .entry:focus:first-child,
-GtkComboBox.combobox-entry .entry:window-unfocused:first-child,
+GtkComboBox.combobox-entry .entry:backdrop:first-child,
 GtkComboBox.combobox-entry .button:first-child,
 GtkComboBox.combobox-entry .button:hover:first-child,
 GtkComboBox.combobox-entry .button:focus:first-child,
@@ -1174,7 +1174,7 @@ GtkComboBox.combobox-entry .button:active:hover:first-child,
 GtkComboBox.combobox-entry .button:active:focus:first-child,
 GtkComboBox.combobox-entry .button:active:focus:hover:first-child,
 GtkComboBox.combobox-entry .button:insensitive:first-child,
-GtkComboBox.combobox-entry .button:window-unfocused:first-child {
+GtkComboBox.combobox-entry .button:backdrop:first-child {
     border-image-width: 3 0 4 3;
     border-radius: 3 0 0 3;
     border-right-width: 0;
@@ -1182,7 +1182,7 @@ GtkComboBox.combobox-entry .button:window-unfocused:first-child {
 
 GtkComboBox.combobox-entry .entry:last-child,
 GtkComboBox.combobox-entry .entry:focus:last-child,
-GtkComboBox.combobox-entry .entry:window-unfocused:last-child,
+GtkComboBox.combobox-entry .entry:backdrop:last-child,
 GtkComboBox.combobox-entry .button:last-child,
 GtkComboBox.combobox-entry .button:hover:last-child,
 GtkComboBox.combobox-entry .button:focus:last-child,
@@ -1191,7 +1191,7 @@ GtkComboBox.combobox-entry .button:active:hover:last-child,
 GtkComboBox.combobox-entry .button:active:focus:last-child,
 GtkComboBox.combobox-entry .button:active:focus:hover:last-child,
 GtkComboBox.combobox-entry .button:insensitive:last-child,
-GtkComboBox.combobox-entry .button:window-unfocused:last-child {
+GtkComboBox.combobox-entry .button:backdrop:last-child {
     border-image-width: 3 3 4 0;
     border-radius: 0 3 3 0;
     border-left-width: 0;
@@ -1207,7 +1207,7 @@ GtkComboBox.combobox-entry .button:window-unfocused:last-child {
 .primary-toolbar GtkComboBox.combobox-entry .button:active:focus:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:active:focus:hover:first-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:insensitive:first-child,
-.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused:first-child {
+.primary-toolbar GtkComboBox.combobox-entry .button:backdrop:first-child {
     border-image-width: 4 0 4 4;
     border-radius: 3 0 0 3;
     border-right-width: 0;
@@ -1223,7 +1223,7 @@ GtkComboBox.combobox-entry .button:window-unfocused:last-child {
 .primary-toolbar GtkComboBox.combobox-entry .button:active:focus:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:active:focus:hover:last-child,
 .primary-toolbar GtkComboBox.combobox-entry .button:insensitive:last-child
-.primary-toolbar GtkComboBox.combobox-entry .button:window-unfocused:last-child {
+.primary-toolbar GtkComboBox.combobox-entry .button:backdrop:last-child {
     border-image-width: 4 4 4 0;
     border-radius: 0 3 3 0;
     border-left-width: 0;
@@ -1280,14 +1280,14 @@ GtkComboBox .button *:hover {
 }
 
 .scrollbar.trough.vertical,
-.scrollbar.trough.vertical:window-unfocused {
+.scrollbar.trough.vertical:backdrop {
     /* FIXME: disable until we have have an extra px padded towards the border. It feels uncentered now.
        box-shadow: -1 0 inset alpha(@theme_text_color, 0.05), 1 0 inset alpha(@theme_text_color, 0.1);
      */
 }
 
 .scrollbar.trough.horizontal,
-.scrollbar.trough.horizontal:window-unfocused {
+.scrollbar.trough.horizontal:backdrop {
    /* box-shadow: 0 -1 inset alpha(@theme_text_color, 0.05), 0 1 inset alpha(@theme_text_color, 0.1); */
 }
 
@@ -1299,7 +1299,7 @@ GtkComboBox .button *:hover {
     border-width: 3;
 }
 
-.scrollbar.trough:window-unfocused {
+.scrollbar.trough:backdrop {
     background-image: none;
     background-color: @scrollbar_trough_unfocused;
     border-width: 0;
@@ -1307,7 +1307,7 @@ GtkComboBox .button *:hover {
     border-image: none;
 }
 
-.scrollbar.trough:insensitive:window-unfocused {
+.scrollbar.trough:insensitive:backdrop {
     background-image: none;
     background-color: mix(@scrollbar_trough_unfocused, @scrollbar_trough_insensitive, 0.5);
     border-width: 0;
@@ -1353,7 +1353,7 @@ GtkComboBox .button *:hover {
     border-width: 3;
 }
 
-.scrollbar.slider:window-unfocused {
+.scrollbar.slider:backdrop {
     background-color: @scrollbar_slider_unfocused;
     border-style: solid;
     border-image: none;
@@ -1631,8 +1631,8 @@ GtkCheckButton:selected:focus {
     border-color: shade (@theme_bg_color, 0.91);
 }
 
-.primary-toolbar .toolbar:window-unfocused,
-.primary-toolbar.toolbar:window-unfocused {
+.primary-toolbar .toolbar:backdrop,
+.primary-toolbar.toolbar:backdrop {
     border-color: @unfocused_borders;
     box-shadow: none;
 }
@@ -1683,13 +1683,13 @@ GtkCheckButton:selected:focus {
     background-color: @sidebar_bg;
 }
 
-.sidebar:window-unfocused,
-.sidebar .view:window-unfocused {
+.sidebar:backdrop,
+.sidebar .view:backdrop {
     background-color: @sidebar_bg_unfocused;
 }
 
 .sidebar .scrollbar.trough,
-.sidebar .scrollbar.trough:window-unfocused {
+.sidebar .scrollbar.trough:backdrop {
     box-shadow: none;
     border-radius: 100;
     border-style: solid;
@@ -1701,7 +1701,7 @@ GtkCheckButton:selected:focus {
     background-color: shade(@sidebar_bg, 0.8);
 }
 
-.sidebar .scrollbar.trough:window-unfocused {
+.sidebar .scrollbar.trough:backdrop {
     background-color: shade(@sidebar_bg_unfocused, 0.8);
 }
 
@@ -1709,7 +1709,7 @@ GtkCheckButton:selected:focus {
     background-color: @sidebar_bg;
 }
 
-.sidebar .scrollbar.slider:window-unfocused {
+.sidebar .scrollbar.slider:backdrop {
     background-color: @sidebar_bg_unfocused;
 }
 
@@ -1767,15 +1767,15 @@ GtkSwitch.trough:insensitive {
     color: mix(@insensitive_bg_color, @insensitive_fg_color, 0.5); /* FIXME */
 }
 
-GtkSwitch.trough:window-unfocused {
+GtkSwitch.trough:backdrop {
     color: @theme_unfocused_fg_color;
 }
 
-GtkSwitch.trough:active:window-unfocused {
+GtkSwitch.trough:active:backdrop {
     color: @theme_unfocused_bg_color;
 }
 
-GtkSwitch.trough:insensitive:window-unfocused {
+GtkSwitch.trough:insensitive:backdrop {
     color: @unfocused_insensitive_borders;
 }
 
@@ -1810,7 +1810,7 @@ GtkSwitch.slider:insensitive {
     border-color: mix(@insensitive_bg_color, @insensitive_fg_color, 0.5);
 }
 
-GtkSwitch.slider:window-unfocused {
+GtkSwitch.slider:backdrop {
     background-color: @theme_unfocused_base_color;
     background-image: none;
 
@@ -1821,7 +1821,7 @@ GtkSwitch.slider:window-unfocused {
     color: @theme_unfocused_base_color;
 }
 
-GtkSwitch.slider:insensitive:window-unfocused {
+GtkSwitch.slider:insensitive:backdrop {
     background-color: @theme_unfocused_bg_color;
     border-color: @unfocused_insensitive_borders;
 }
@@ -1833,8 +1833,8 @@ GtkIconView {
     background-color: @theme_base_color;
 }
 
-GtkViewport:window-unfocused,
-GtkIconView:window-unfocused {
+GtkViewport:backdrop,
+GtkIconView:backdrop {
     background-color: @theme_unfocused_base_color;
 }
 
@@ -1874,9 +1874,9 @@ GtkTreeView.view {
     background-color: @theme_base_color;
 }
 
-.view:window-unfocused,
-GtkTreeView:window-unfocused,
-GtkTreeView.view:window-unfocused {
+.view:backdrop,
+GtkTreeView:backdrop,
+GtkTreeView.view:backdrop {
     background-color: @theme_unfocused_base_color;
     color: @theme_unfocused_text_color;
 }
@@ -1909,8 +1909,8 @@ column-header .button:focus:hover {
     font-weight: bold; /* Not sure about this one */
 }
 
-column-header.button:window-unfocused,
-column-header .button:window-unfocused {
+column-header.button:backdrop,
+column-header .button:backdrop {
     background-color: @theme_unfocused_base_color;
     /* color: FIXME */
 }
@@ -2035,8 +2035,8 @@ GtkCalendar.header {
 
 GtkCalendar.button,
 GtkCalendar.button:insensitive,
-GtkCalendar.button:window-unfocused,
-GtkCalendar.button:insensitive:window-unfocused {
+GtkCalendar.button:backdrop,
+GtkCalendar.button:insensitive:backdrop {
     background-image: none;
     background-color: none;
 }
