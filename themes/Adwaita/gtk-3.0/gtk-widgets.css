@@ -1281,12 +1281,14 @@ GtkComboBox .button *:hover {
 
 .scrollbar.trough.vertical,
 .scrollbar.trough.vertical:window-unfocused {
-    box-shadow: -1 0 inset alpha(@theme_text_color, 0.05), 1 0 inset alpha(@theme_text_color, 0.1);
+    /* FIXME: disable until we have have an extra px padded towards the border. It feels uncentered now.
+       box-shadow: -1 0 inset alpha(@theme_text_color, 0.05), 1 0 inset alpha(@theme_text_color, 0.1);
+     */
 }
 
 .scrollbar.trough.horizontal,
 .scrollbar.trough.horizontal:window-unfocused {
-    box-shadow: 0 -1 inset alpha(@theme_text_color, 0.05), 0 1 inset alpha(@theme_text_color, 0.1);
+   /* box-shadow: 0 -1 inset alpha(@theme_text_color, 0.05), 0 1 inset alpha(@theme_text_color, 0.1); */
 }
 
 .scrollbar.trough:insensitive {
