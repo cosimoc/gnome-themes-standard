@@ -2038,7 +2038,7 @@ GtkCalendar.button:insensitive,
 GtkCalendar.button:backdrop,
 GtkCalendar.button:insensitive:backdrop {
     background-image: none;
-    background-color: none;
+    background-color: transparent;
 }
 
 .highlight,
