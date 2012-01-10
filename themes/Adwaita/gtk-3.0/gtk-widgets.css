@@ -232,7 +232,8 @@ GtkTreeView .separator:backdrop,
 /*****************
  * GtkSpinButton *
  *****************/
-.spinbutton .button {
+.spinbutton .button,
+.spinbutton .button:focus {
     color: @internal_element_color;
     padding: 2 6;
     border-width: 0;
@@ -247,22 +248,7 @@ GtkTreeView .separator:backdrop,
     box-shadow: none;
 }
 
-.spinbutton .button:active,
-.spinbutton .button:focus,
-.spinbutton .button:active:focus,
-.spinbutton .button:insensitive,
-.spinbutton .button:backdrop {
-    border-image: none;
-    border-radius: 0;
-}
-
-.spinbutton .button,
-.spinbutton .button:hover,
-.spinbutton .button:focus,
-.spinbutton .button:focus:hover,
-.spinbutton .button:insensitive,
-.spinbutton .button:backdrop,
-.spinbutton .button:insensitive:backdrop {
+.spinbutton .button {
     background-color: transparent;
     background-image: none;
 }
@@ -281,24 +267,12 @@ GtkTreeView .separator:backdrop,
     color: @internal_element_prelight;
 }
 
-.spinbutton .button:first-child,
-.spinbutton .button:first-child:hover,
-.spinbutton .button:first-child:active,
-.spinbutton .button:first-child:focus,
-.spinbutton .button:first-child:active:focus,
-.spinbutton .button:first-child:insensitive,
-.spinbutton .button:first-child:backdrop {
+.spinbutton .button:first-child {
     border-radius: 2 0 0 2;
     box-shadow: none;
 }
 
-.spinbutton .button:last-child,
-.spinbutton .button:last-child:hover,
-.spinbutton .button:last-child:active,
-.spinbutton .button:last-child:focus,
-.spinbutton .button:last-child:active:focus,
-.spinbutton .button:last-child:insensitive,
-.spinbutton .button:last-child:backdrop {
+.spinbutton .button:last-child {
     border-radius: 0 2 2 0;
 }
 
@@ -551,7 +525,7 @@ GtkComboBox.combobox-entry .button {
 
 /* We may want a background for focused buttons, but in the meantime let's remove it too */
 .primary-toolbar .button,
-.primary-toolbar .button:focus,
+/*.primary-toolbar .button:focus,*/
 .primary-toolbar .button:insensitive,
 .primary-toolbar .button:backdrop,
 .primary-toolbar .button:insensitive:backdrop {
@@ -560,11 +534,11 @@ GtkComboBox.combobox-entry .button {
 }
 
 /* Remove borders from primary toolbar buttons*/
-.primary-toolbar .button,
+.primary-toolbar .button /*,
 .primary-toolbar .button:hover,
 .primary-toolbar .button:focus,
 .primary-toolbar .button:insensitive,
-.primary-toolbar .button:backdrop {
+.primary-toolbar .button:backdrop */ {
     border-image: none;
 
     /* setting border-style: none; here would override the border-width values 

@@ -18,13 +18,12 @@
 /* Pushed button background */
 .button:active, 
 .button:active:hover, 
-.button:active:focus,
-.button:active:hover:focus,
 .toolbar .button:active,
 .toolbar .button:active:hover,
-.toolbar .button:active:focus,
-.toolbar .button:active:hover:focus,
-/*.primary-toolbar .button:active:focus, */
+.primary-toolbar .button.raised:active,
+.primary-toolbar .raised .button:active,
+.primary-toolbar .button.raised:active:hover,
+.primary-toolbar .raised .button:active:hover,
 .trough,
 .trough.highlight,
 .trough row,
@@ -47,12 +46,8 @@
 /* Primary and inline toolbars pushed button background */
 .primary-toolbar .button:active,
 .primary-toolbar .button:active:hover,
-.primary-toolbar .button:active:focus,
-.primary-toolbar .button:active:focus:hover,
 .inline-toolbar .button:active,
-.inline-toolbar .button:active:hover,
-.inline-toolbar .button:active:focus,
-.inline-toolbar .button:active:focus:hover {
+.inline-toolbar .button:active:hover {
     background-image: -gtk-gradient (linear,
     				     left top, left bottom,
                                      from (shade(@borders, 0.95)),
@@ -62,15 +57,10 @@
 
 /* Prelit button background */
 .button:hover,
-.button:hover:focus,
 .toolbar .button:hover,
-.toolbar .button:hover:focus,
 .primary-toolbar .button.raised:hover,
-.primary-toolbar .button.raised:hover:focus,
 .primary-toolbar .raised .button:hover,
-.primary-toolbar .raised .button:hover:focus,
-.primary-toolbar GtkComboBox .button:hover,
-.primary-toolbar GtkComboBox .button:hover:focus {
+.primary-toolbar GtkComboBox .button:hover {
     background-color: transparent;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -78,8 +68,7 @@
 				     to (@button_hover_gradient_color_b));
 }
 
-.primary-toolbar .button:hover,
-.primary-toolbar .button:hover:focus {
+.primary-toolbar .button:hover {
     background-color: transparent;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -144,12 +133,12 @@
 .entry,
 GtkComboBox.combobox-entry .button,
 GtkComboBox.combobox-entry .button:hover,
-GtkComboBox.combobox-entry .button:focus,
-GtkComboBox.combobox-entry .button:hover:focus,
+/*GtkComboBox.combobox-entry .button:focus,
+GtkComboBox.combobox-entry .button:hover:focus,*/
 .primary-toolbar GtkComboBox.combobox-entry .button,
-.primary-toolbar GtkComboBox.combobox-entry .button:hover,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover /*,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus
-.primary-toolbar GtkComboBox.combobox-entry .button:hover:focus {
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:focus */ {
 /*    background-image: -gtk-gradient(linear,
                                     left top, left bottom,
                                     from(@entry_background_a),
@@ -168,10 +157,11 @@ GtkComboBox.combobox-entry .button:hover:focus,
 .primary-toolbar GtkComboBox.combobox-entry .button:active,
 .primary-toolbar GtkComboBox.combobox-entry .button:hover:active,
 GtkComboBox.combobox-entry .button:active,
-GtkComboBox.combobox-entry .button:active:focus,
+/*GtkComboBox.combobox-entry .button:active:focus, */
 .spinbutton .button:active,
-.spinbutton .button:active:focus,
 .spinbutton .button:active:hover,
+/*.spinbutton .button:active:focus,
+.spinbutton .button:active:hover, */
 column-header.button:active,
 column-header .button:active,
 column-header.button:active:hover,
