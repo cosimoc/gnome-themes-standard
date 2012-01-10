@@ -594,7 +594,7 @@ GtkComboBox.combobox-entry .button {
     icon-shadow: none;
 }
 
-.primary-toolbar .button * {
+.primary-toolbar .button {
     text-shadow: @primary_toolbar_button_text_shadow 0 1;
 }
 
