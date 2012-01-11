@@ -1209,6 +1209,72 @@ GtkComboBox .button *:hover {
     border-image: none;
 }
 
+.scrollbar.button,
+.scrollbar.button:active,
+.scrollbar.button:active:hover,
+.scrollbar.button:insensitive,
+.scrollbar.button:hover:backdrop,
+.scrollbar.button:active:hover:backdrop {
+    border-style: none;
+    border-image: none;
+    border-radius: 0;
+    background-image: none;
+    background-color: transparent;
+}
+
+.scrollbar.button:active,
+.scrollbar.button:active:hover {
+    background-color: mix(@scrollbar_slider, @scrollbar_trough, 0.8);
+}
+
+.scrollbar.button.top:hover {
+    box-shadow: 0 -1 inset mix(@scrollbar_slider, @scrollbar_trough, 0.8);
+}
+
+.scrollbar.button.bottom:hover {
+    box-shadow: 0 1 inset mix(@scrollbar_slider, @scrollbar_trough, 0.8);
+}
+
+.scrollbar.button.right:hover {
+    box-shadow: 1 0 inset mix(@scrollbar_slider, @scrollbar_trough, 0.8);
+}
+
+.scrollbar.button.left:hover {
+    box-shadow: -1 0 inset mix(@scrollbar_slider, @scrollbar_trough, 0.8);
+}
+
+
+.scrollbar.button.top:hover:backdrop,
+.scrollbar.button.bottom:hover:backdrop,
+.scrollbar.button.right:hover:backdrop,
+.scrollbar.button.left:hover:backdrop {
+    box-shadow: none;
+}
+
+.scrollbar.button {
+    color: @scrollbar_slider;
+}
+
+.scrollbar.button:hover {
+    color: @scrollbar_slider_prelight;
+}
+
+.scrollbar.button:insensitive {
+    color: mix(@scrollbar_slider, @scrollbar_trough, 0.6);
+}
+
+.scrollbar.button:active {
+    color: @scrollbar_slider_active;
+}
+
+.scrollbar.button:backdrop {
+    color: @scrollbar_slider_unfocused;
+}
+
+.scrollbar.button:insensitive:backdrop {
+    color: mix(@scrollbar_slider_unfocused, @scrollbar_trough_unfocused, 0.7);
+}
+
 .scrollbar.trough.vertical,
 .scrollbar.trough.vertical:backdrop {
     /* FIXME: disable until we have have an extra px padded towards the border. It feels uncentered now.
