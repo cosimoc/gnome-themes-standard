@@ -1,9 +1,9 @@
 /* Button background */
 .button,
-.primary-toolbar .button.raised,
-.primary-toolbar .raised .button,
-.primary-toolbar .button.raised:focus,
-.primary-toolbar .raised .button:focus,
+.toolbar .button.raised,
+.toolbar .raised .button,
+.toolbar .button.raised:focus,
+.toolbar .raised .button:focus,
 .primary-toolbar GtkComboBox .button,
 .primary-toolbar GtkComboBox .button:focus {
     background-image: -gtk-gradient (linear,
@@ -20,10 +20,10 @@
 .button:active:hover, 
 .toolbar .button:active,
 .toolbar .button:active:hover,
-.primary-toolbar .button.raised:active,
-.primary-toolbar .raised .button:active,
-.primary-toolbar .button.raised:active:hover,
-.primary-toolbar .raised .button:active:hover,
+.toolbar .button.raised:active,
+.toolbar .raised .button:active,
+.toolbar .button.raised:active:hover,
+.toolbar .raised .button:active:hover,
 .trough,
 .trough.highlight,
 .trough row,
@@ -58,8 +58,8 @@
 /* Prelit button background */
 .button:hover,
 .toolbar .button:hover,
-.primary-toolbar .button.raised:hover,
-.primary-toolbar .raised .button:hover,
+.toolbar .button.raised:hover,
+.toolbar .raised .button:hover,
 .primary-toolbar GtkComboBox .button:hover {
     background-color: transparent;
     background-image: -gtk-gradient (linear,
@@ -106,14 +106,15 @@
 
 /* Unfocused window button background */
 .button:backdrop,
-.primary-toolbar .button.raised:backdrop,
-.primary-toolbar .raised .button:backdrop {
+.toolbar .button.raised:backdrop,
+.toolbar .raised .button:backdrop {
     background-image: none;
     background-color: @unfocused_button_background;
 }
 
 /* Unfocused window pushed button background */
-.button:active:backdrop {
+.button:active:backdrop,
+.primary-toolbar .button:active:backdrop {
     background-image: none;
     background-color: @unfocused_borders;
 }
@@ -149,8 +150,6 @@ GtkComboBox.combobox-entry .button:hover,
 GtkComboBox.combobox-entry .button:active,
 .spinbutton .button:active,
 .spinbutton .button:active:hover,
-/*.spinbutton .button:active:focus,
-.spinbutton .button:active:hover, */
 column-header.button:active,
 column-header .button:active,
 column-header.button:active:hover,
@@ -200,14 +199,7 @@ GtkComboBox.combobox-entry .button:insensitive:backdrop {
 .primary-toolbar.toolbar,
 .inline-toolbar.toolbar  {
     background-color: transparent;
-/*   background-image: -gtk-gradient (linear,
-				     left top,
-				     left bottom,
-				     from (@toolbar_gradient_base),
-				     color-stop (0.16, @toolbar_gradient_step1),
-				     color-stop (0.90, @toolbar_gradient_step2),
-				     to (@toolbar_gradient_final));*/
-   background-image: -gtk-gradient (linear,
+    background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
 				     from (@toolbar_gradient_a),
