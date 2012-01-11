@@ -29,7 +29,7 @@ GtkComboBox *:active:hover,
 GtkComboBox *:active:focus,
 GtkComboBox *:active:hover:focus*/ {
     text-shadow: @button_active_text_shadow 0 -1;
-/*    color: @theme_selected_bg_color; /* Not sure about this one */
+    color: @theme_selected_bg_color; /* Not sure about this one */
 }
 
 .button *:insensitive,

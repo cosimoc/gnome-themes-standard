@@ -5,14 +5,11 @@
 GtkComboBox.combobox-entry .entry,
 GtkComboBox.combobox-entry .button,
 .button:active,
-.button:active:hover,
 .button:insensitive,
 .trough,
 .trough.highlight,
 .trough row,
-.trough row:hover,
-GtkSwitch.trough,
-GtkSwitch.trough:insensitive {
+GtkSwitch.trough {
     border-image: url("borders/generic-border.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3;
     border-width: 1 1 2 1;
@@ -54,7 +51,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised:insensitive,
 .primary-toolbar .raised .button:insensitive,
 .inline-toolbar.toolbar .button:active,
-.inline-toolbar.toolbar .button:active:hover,
+/*.inline-toolbar.toolbar .button:active:hover,*/
 .inline-toolbar.toolbar .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton .button:active,
 .primary-toolbar GtkSwitch.trough,
@@ -123,7 +120,7 @@ column-header .button:focus,
 column-header.button:active,
 column-header .button:active,
 column-header.button:active:hover,
-column-header .button:active:hover,
+column-header .button:active:hover
 column-header.button:active:focus,
 column-header .button:active:focus {
     border-image: -gtk-gradient (linear,
