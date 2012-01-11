@@ -4,9 +4,6 @@
 .entry,
 GtkComboBox.combobox-entry .entry,
 GtkComboBox.combobox-entry .button,
-/*GtkComboBox.combobox-entry .button:focus,
-GtkComboBox.combobox-entry .button:active,
-GtkComboBox.combobox-entry .button:focus:active,*/
 .button:active,
 .button:active:hover,
 .button:insensitive,
@@ -93,8 +90,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised,
 .primary-toolbar .raised .button,
 .inline-toolbar.toolbar .button,
-.primary-toolbar GtkComboBox .button,
-.primary-toolbar GtkComboBox .button:hover {
+.primary-toolbar GtkComboBox .button {
     border-image: url("borders/primary-toolbar-button-border.svg") 4 / 4 stretch;
     border-radius: 3;
     border-width: 2;
@@ -129,16 +125,7 @@ column-header .button:active,
 column-header.button:active:hover,
 column-header .button:active:hover,
 column-header.button:active:focus,
-column-header .button:active:focus /*, 
-column-header .button:insensitive,
-column-header.button:focus:hover,
-column-header .button:focus:hover,
-column-header.button:active:focus:hover,
-column-header .button:active:focus:hover,
-column-header.button:active:focus,
-column-header .button:active:focus,
-column-header.button:active:hover,
-column-header .button:active:hover */ {
+column-header .button:active:focus {
     border-image: -gtk-gradient (linear,
                                  left top, left bottom,
                                  from (@borders),

@@ -133,31 +133,20 @@
 .entry,
 GtkComboBox.combobox-entry .button,
 GtkComboBox.combobox-entry .button:hover,
-/*GtkComboBox.combobox-entry .button:focus,
-GtkComboBox.combobox-entry .button:hover:focus,*/
 .primary-toolbar GtkComboBox.combobox-entry .button,
-.primary-toolbar GtkComboBox.combobox-entry .button:hover /*,
-.primary-toolbar GtkComboBox.combobox-entry .button:focus
-.primary-toolbar GtkComboBox.combobox-entry .button:hover:focus */ {
-/*    background-image: -gtk-gradient(linear,
-                                    left top, left bottom,
-                                    from(@entry_background_a),
-                                    color-stop(0.15, @entry_background_b),
-                                    color-stop(0.85, @entry_background_c),
-                                    to(@entry_background_d)); */
+.primary-toolbar GtkComboBox.combobox-entry .button:hover {
+
     background-image: -gtk-gradient(linear,
                                     left top, left bottom,
                                     from(@entry_background_a),
-									/* color-stop(0.7, mix(@entry_background_a, @entry_background_b, 0.4)), */
                                     to(@entry_background_b));
     box-shadow: 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4);
 }
 
 /* Entry pushed button background */
 .primary-toolbar GtkComboBox.combobox-entry .button:active,
-.primary-toolbar GtkComboBox.combobox-entry .button:hover:active,
+/* .primary-toolbar GtkComboBox.combobox-entry .button:hover:active,*/
 GtkComboBox.combobox-entry .button:active,
-/*GtkComboBox.combobox-entry .button:active:focus, */
 .spinbutton .button:active,
 .spinbutton .button:active:hover,
 /*.spinbutton .button:active:focus,
