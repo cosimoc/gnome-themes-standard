@@ -48,16 +48,11 @@
 
 GtkWindow {
     color: @theme_fg_color;
+    background-color: @theme_bg_color;
 }
 
 GtkWindow:backdrop {
     color: @theme_unfocused_fg_color;
-}
-
-* {
-    /* inherit the color from parent by default */
-    color: inherit;
-    background-color: @theme_bg_color;
 }
 
 *:selected,
