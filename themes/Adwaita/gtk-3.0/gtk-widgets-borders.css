@@ -50,7 +50,7 @@ GtkSwitch.trough:active {
 /* primary toolbar - generic element borders */
 .primary-toolbar .entry,
 .primary-toolbar GtkComboBox.combobox-entry .entry,
-.primary-toolbar GtkComboBox.combobox-entry .button /*,
+.primary-toolbar GtkComboBox.combobox-entry .button, /*
 .primary-toolbar GtkComboBox.combobox-entry .button:hover,
 .primary-toolbar GtkComboBox.combobox-entry .button:active,
 .primary-toolbar GtkComboBox.combobox-entry .button:active:focus,
@@ -58,9 +58,9 @@ GtkSwitch.trough:active {
 .primary-toolbar GtkComboBox.combobox-entry .button:active:hover:focus,
 .primary-toolbar GtkComboBox.combobox-entry .button:focus,
 .primary-toolbar GtkComboBox.combobox-entry .button:insensitive, */
-.primary-toolbar .button:active, /*
-.primary-toolbar .button:active:insensitive,
-.primary-toolbar .button:active:hover, */
+.primary-toolbar .button:active,
+.primary-toolbar .button.raised:active,
+.primary-toolbar .raised .button:active,
 .primary-toolbar .button.raised:insensitive,
 .primary-toolbar .raised .button:insensitive,
 .inline-toolbar.toolbar .button:active,
@@ -101,8 +101,8 @@ GtkSwitch.trough:active {
 /* primary toolbar - generic button borders */
 .primary-toolbar .button.raised,
 .primary-toolbar .raised .button,
-.primary-toolbar .button.raised:hover,
-.primary-toolbar .raised .button:hover,
+/*.primary-toolbar .button.raised:hover,
+.primary-toolbar .raised .button:hover,*/
 .inline-toolbar.toolbar .button,
 .primary-toolbar GtkComboBox .button,
 .primary-toolbar GtkComboBox .button:hover {
@@ -119,8 +119,8 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised.default,
 .primary-toolbar .raised .button:focus,
 .primary-toolbar .raised .button.default,
-.primary-toolbar .button.raised:focus:hover,
-.primary-toolbar .raised .button:focus:hover,
+/*.primary-toolbar .button.raised:focus:hover,
+.primary-toolbar .raised .button:focus:hover,*/
 .inline-toolbar.toolbar .button:focus,
 .inline-toolbar.toolbar .button.default,
 .primary-toolbar GtkComboBox .button:focus { 
