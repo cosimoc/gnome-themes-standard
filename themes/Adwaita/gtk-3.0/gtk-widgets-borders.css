@@ -50,14 +50,7 @@ GtkSwitch.trough:active {
 /* primary toolbar - generic element borders */
 .primary-toolbar .entry,
 .primary-toolbar GtkComboBox.combobox-entry .entry,
-.primary-toolbar GtkComboBox.combobox-entry .button, /*
-.primary-toolbar GtkComboBox.combobox-entry .button:hover,
-.primary-toolbar GtkComboBox.combobox-entry .button:active,
-.primary-toolbar GtkComboBox.combobox-entry .button:active:focus,
-.primary-toolbar GtkComboBox.combobox-entry .button:active:hover,
-.primary-toolbar GtkComboBox.combobox-entry .button:active:hover:focus,
-.primary-toolbar GtkComboBox.combobox-entry .button:focus,
-.primary-toolbar GtkComboBox.combobox-entry .button:insensitive, */
+.primary-toolbar GtkComboBox.combobox-entry .button,
 .primary-toolbar .button:active,
 .primary-toolbar .button.raised:active,
 .primary-toolbar .raised .button:active,
@@ -84,8 +77,6 @@ GtkSwitch.trough:active {
 .primary-toolbar GtkComboBox.combobox-entry .entry:focus,
 .primary-toolbar .button.raised:focus:active,
 .primary-toolbar .raised .button:focus:active,
-/*.primary-toolbar .button.raised:focus:active:hover,
-.primary-toolbar .raised .button:focus:active:hover,*/
 .primary-toolbar .button.raised.default:active,
 .primary-toolbar .raised .button.default:active,
 .inline-toolbar.toolbar .button:focus:active,
@@ -101,8 +92,6 @@ GtkSwitch.trough:active {
 /* primary toolbar - generic button borders */
 .primary-toolbar .button.raised,
 .primary-toolbar .raised .button,
-/*.primary-toolbar .button.raised:hover,
-.primary-toolbar .raised .button:hover,*/
 .inline-toolbar.toolbar .button,
 .primary-toolbar GtkComboBox .button,
 .primary-toolbar GtkComboBox .button:hover {
@@ -119,8 +108,6 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised.default,
 .primary-toolbar .raised .button:focus,
 .primary-toolbar .raised .button.default,
-/*.primary-toolbar .button.raised:focus:hover,
-.primary-toolbar .raised .button:focus:hover,*/
 .inline-toolbar.toolbar .button:focus,
 .inline-toolbar.toolbar .button.default,
 .primary-toolbar GtkComboBox .button:focus { 
@@ -135,10 +122,14 @@ GtkSwitch.trough:active {
 /* column-headers borders */
 column-header.button,
 column-header .button,
-column-header.button:hover,
-column-header .button:hover,
 column-header.button:focus,
 column-header .button:focus,
+column-header.button:active,
+column-header .button:active,
+column-header.button:active:hover,
+column-header .button:active:hover,
+column-header.button:active:focus,
+column-header .button:active:focus /*, 
 column-header .button:insensitive,
 column-header.button:focus:hover,
 column-header .button:focus:hover,
@@ -147,7 +138,7 @@ column-header .button:active:focus:hover,
 column-header.button:active:focus,
 column-header .button:active:focus,
 column-header.button:active:hover,
-column-header .button:active:hover {
+column-header .button:active:hover */ {
     border-image: -gtk-gradient (linear,
                                  left top, left bottom,
                                  from (@borders),
@@ -169,22 +160,14 @@ column-header .button:backdrop {
 
 column-header.button:last-child,
 column-header:last-child .button,
-column-header.button:hover:last-child,
-column-header:last-child .button:hover,
-column-header.button:focus:last-child,
+column-header.button:last-child:focus,
 column-header:last-child .button:focus,
-column-header.button:insensitive:last-child,
-column-header:last-child .button:insensitive,
-column-header.button:focus:hover:last-child,
-column-header:last-child .button:focus:hover,
-column-header.button:active:focus:hover:last-child,
-column-header:last-child .button:active:focus:hover,
-column-header.button:active:focus:last-child,
-column-header:last-child .button:active:focus,
-column-header.button:active:hover:last-child,
+column-header.button:last-child:active,
+column-header:last-child .button:active,
+column-header.button:last-child:active:hover,
 column-header:last-child .button:active:hover,
-column-header.button:backdrop:last-child,
-column-header:last-child .button:backdrop {
+column-header.button:last-child:active:focus,
+column-header:last-child .button:active:focus {
     border-image: none;
     border-width: 0;
     border-radius: 0;
