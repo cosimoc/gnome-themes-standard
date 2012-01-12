@@ -506,28 +506,6 @@ GtkComboBox.combobox-entry .button {
     text-shadow: @button_text_shadow 0 1;
 }
 
-.button *:active {
-    text-shadow: @button_active_text_shadow 0 1;
-    color: @button_active_text; /* Not sure about this one */
-}
-
-.button *:insensitive {
-    color: @insensitive_fg_color;
-    text-shadow: none;
-}
-
-.button *:insensitive:backdrop {
-    color: @unfocused_insensitive_fg_color;
-    text-shadow: none;
-}
-
-.button *:active:backdrop,
-.button *:active:insensitive:backdrop {
-    color: @theme_unfocused_bg_color;
-    text-shadow: none;
-    icon-shadow: none;
-}
-
 /* We may want a background for focused buttons, but in the meantime let's remove it too */
 .primary-toolbar .button,
 .primary-toolbar .button:insensitive,
@@ -547,6 +525,33 @@ GtkComboBox.combobox-entry .button {
     border-style: solid;
     border-width: 2;
     border-color: transparent;
+
+    text-shadow: @primary_toolbar_button_text_shadow 0 1;
+}
+
+.button *:active {
+    color: @button_active_text; /* Not sure about this one */
+    text-shadow: @button_active_text_shadow 0 1;
+}
+
+.button *:insensitive {
+    color: @insensitive_fg_color;
+    text-shadow: none;
+}
+
+.button *:insensitive:backdrop {
+    color: @unfocused_insensitive_fg_color;
+}
+
+.primary-toolbar .button *:insensitive:backdrop {
+    color: mix(@unfocused_insensitive_bg_color, @unfocused_dark_bg, 0.65); /* FIXME */
+}
+
+.button *:active:backdrop,
+.button *:active:insensitive:backdrop {
+    color: @theme_unfocused_bg_color;
+    text-shadow: none;
+    icon-shadow: none;
 }
 
 .toolbar .button.raised *,
@@ -556,39 +561,23 @@ GtkComboBox.combobox-entry .button {
     text-shadow: @button_text_shadow 0 1;
 }
 
-.button.raised *:active,
-.raised .button *:active,
+.toolbar .button.raised *:active,
+.toolbar .raised .button *:active,
 .inline-toolbar .button *:active {
     icon-shadow: @button_active_text_shadow 0 1;
 }
 
-.button.raised *:insensitive,
-.raised .button *:insensitive,
+.toolbar .button.raised *:insensitive,
+.toolbar .raised .button *:insensitive,
 .inline-toolbar .button *:insensitive {
     icon-shadow: none;
 }
 
-.primary-toolbar .button {
-    text-shadow: @primary_toolbar_button_text_shadow 0 1;
-}
-
-.button.raised,
-.raised .button {
-    text-shadow: @button_text_shadow 0 1;
-}
-
-
-.primary-toolbar .button:insensitive {
+.toolbar .button.raised *:backdrop,
+.toolbar .raised .button *:backdrop,
+.inline-toolbar .button *:backdrop {
     text-shadow: none;
-}
-
-.primary-toolbar .button *:insensitive:backdrop {
-    color: mix(@unfocused_insensitive_bg_color, @unfocused_dark_bg, 0.65); /* FIXME */
-}
-
-.toolbar .button.raised *:insensitive:backdrop,
-.toolbar .raised .button *:insensitive:backdrop {
-    color: @unfocused_insensitive_fg_color;
+    icon-shadow: none;
 }
 
 /* linked buttons */
