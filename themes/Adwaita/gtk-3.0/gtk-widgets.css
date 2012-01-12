@@ -506,10 +506,7 @@ GtkComboBox.combobox-entry .button {
     text-shadow: @button_text_shadow 0 1;
 }
 
-.button *:active /*,
-.button *:active:hover,
-.button *:active:hover:focus,
-.button *:active:focus */ {
+.button *:active {
     text-shadow: @button_active_text_shadow 0 1;
     color: @button_active_text; /* Not sure about this one */
 }
@@ -533,7 +530,6 @@ GtkComboBox.combobox-entry .button {
 
 /* We may want a background for focused buttons, but in the meantime let's remove it too */
 .primary-toolbar .button,
-/*.primary-toolbar .button:focus,*/
 .primary-toolbar .button:insensitive,
 .primary-toolbar .button:backdrop,
 .primary-toolbar .button:insensitive:backdrop {
@@ -542,11 +538,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 /* Remove borders from primary toolbar buttons*/
-.primary-toolbar .button /*,
-.primary-toolbar .button:hover,
-.primary-toolbar .button:focus,
-.primary-toolbar .button:insensitive,
-.primary-toolbar .button:backdrop */ {
+.primary-toolbar .button {
     border-image: none;
 
     /* setting border-style: none; here would override the border-width values 
