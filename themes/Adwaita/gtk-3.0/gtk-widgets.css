@@ -244,7 +244,8 @@ GtkPaned {
     box-shadow: none;
 }
 
-.spinbutton .button {
+.spinbutton .button,
+.spinbutton .button:backdrop {
     background-color: transparent;
     background-image: none;
 }
