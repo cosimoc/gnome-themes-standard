@@ -758,19 +758,7 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton .button:focus,
 .inline-toolbar.toolbar GtkToolButton .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton .button:backdrop /*,
-.toolbar .button.raised.linked:backdrop,
-.toolbar .button.raised.linked:active:backdrop, 
-.toolbar .button.raised.linked:active:hover:backdrop,
-.toolbar .raised.linked .button:backdrop,
-.toolbar .raised.linked .button:active:backdrop,
-.toolbar .raised.linked .button:active:hover:backdrop,
-.inline-toolbar.toolbar .button:backdrop,
-.inline-toolbar.toolbar .button:active:backdrop,
-.inline-toolbar.toolbar .button:active:hover:backdrop,
-.inline-toolbar.toolbar GtkToolButton .button:backdrop,
-.inline-toolbar.toolbar GtkToolButton .button:active:backdrop,
-.inline-toolbar.toolbar GtkToolButton .button:active:hover:backdrop */ {
+.inline-toolbar.toolbar GtkToolButton .button:backdrop {
     border-right-width: 0;
     border-left-width: 0;
     border-image-width: 4 0 4 0;
@@ -801,19 +789,7 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:first-child .button:focus,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:backdrop /*,
-.toolbar .button.raised.linked:backdrop:first-child,
-.toolbar .button.raised.linked:active:backdrop:first-child,
-.toolbar .button.raised.linked:active:hover:backdrop:first-child,
-.toolbar .raised.linked .button:backdrop:first-child,
-.toolbar .raised.linked .button:active:backdrop:first-child,
-.toolbar .raised.linked .button:active:hover:backdrop:first-child,
-.inline-toolbar.toolbar .button:backdrop:first-child,
-.inline-toolbar.toolbar .button:active:backdrop:first-child,
-.inline-toolbar.toolbar .button:active:hover:backdrop:first-child,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:backdrop,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:active:backdrop,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:active:hover:backdrop */ {
+.inline-toolbar.toolbar GtkToolButton:first-child .button:backdrop {
     border-left-width: 2;
     border-right-width: 0;
     border-image-width: 4 0 4 4;
@@ -845,19 +821,7 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:last-child .button:focus,
 .inline-toolbar.toolbar GtkToolButton:last-child .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:backdrop /*,
-.toolbar .button.raised.linked:backdrop:last-child,
-.toolbar .button.raised.linked:active:backdrop:last-child,
-.toolbar .button.raised.linked:active:hover:backdrop:last-child,
-.toolbar .raised.linked .button:backdrop:last-child,
-.toolbar .raised.linked .button:active:backdrop:last-child,
-.toolbar .raised.linked .button:active:hover:backdrop:last-child,
-.inline-toolbar.toolbar .button:backdrop:last-child,
-.inline-toolbar.toolbar .button:active:backdrop:last-child,
-.inline-toolbar.toolbar .button:active:hover:backdrop:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:backdrop,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:active:backdrop,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:active:hover:backdrop */ {
+.inline-toolbar.toolbar GtkToolButton:last-child .button:backdrop {
     border-left-width: 0;
     border-right-width: 2;
     border-image-width: 4 4 4 0;
@@ -877,13 +841,7 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:only-child .button:focus,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:focus:active,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:backdrop /*,
-.inline-toolbar.toolbar .button:backdrop:only-child,
-.inline-toolbar.toolbar .button:active:backdrop:only-child,
-.inline-toolbar.toolbar .button:active:hover:backdrop:only-child,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:backdrop,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:active:backdrop,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:active:hover:backdrop*/ {
+.inline-toolbar.toolbar GtkToolButton:only-child .button:backdrop {
     border-right-width: 2;
     border-left-width: 2;
     border-image-width: 4;
