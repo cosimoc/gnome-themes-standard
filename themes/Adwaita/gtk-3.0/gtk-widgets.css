@@ -1966,26 +1966,37 @@ GtkCalendar.highlight {
     border-width: 0;
 }
 
+/* Use different button and entry borders on infobars */
+GtkInfoBar .entry,
+GtkInfoBar .entry:focus,
 GtkInfoBar .button,
 GtkInfoBar .button:insensitive,
 GtkInfoBar .button:active,
 GtkInfoBar .button:focus,
 GtkInfoBar .button:active:focus,
+.info .entry,
+.info .entry:focus,
 .info .button,
 .info .button:insensitive,
 .info .button:active,
 .info .button:focus,
 .info .button:active:focus,
+.warning .entry,
+.warning .entry:focus,
 .warning .button,
 .warning .button:insensitive,
 .warning .button:active,
 .warning .button:focus,
 .warning .button:active:focus,
+.question .entry,
+.question .entry:focus,
 .question .button,
 .question .button:insensitive,
 .question .button:active,
 .question .button:focus,
 .question .button:active:focus,
+.error .entry,
+.error .entry:focus,
 .error .button,
 .error .button:insensitive,
 .error .button:active,
@@ -2006,24 +2017,59 @@ GtkInfoBar,
     text-shadow: 0 1 alpha(black, 0.15);
 }
 
+GtkInfoBar:backdrop,
+.info:backdrop,
+.warning:backdrop,
+.question:backdrop,
+.error:backdrop {
+    text-shadow: none;
+    background-color: @theme_base_color;
+    color: @unfocused_theme_fg_color;
+}
+
+/* GtkInfoBar:first-child,
+.info:first-child,
+.warning:first-child,
+.question:first-child,
+.error:first-child {
+    border-top: 1 solid black;
+} */
+
+GtkInfoBar:last-child,
+.info:last-child,
+.warning:last-child,
+.question:last-child,
+.error:last-child {
+    border-bottom-width: 1;
+    border-style: solid;
+}
+
 .info {
     background-color: @info_bg_color;
     color: @info_fg_color;
+
+    border-color: darker(@info_bg_color);
 }
 
 .warning {
     background-color: @warning_bg_color;
     color: @warning_fg_color;
+
+    border-color: darker(@warning_bg_color);
 }
 
 .question {
     background-color: @question_bg_color;
     color: @question_fg_color;
+
+    border-color: darker(@question_bg_color);
 }
 
 .error {
     background-color: @error_bg_color;
     color: @error_fg_color;
+
+    border-color: darker(@error_bg_color);
 }
 
 .dim-label,

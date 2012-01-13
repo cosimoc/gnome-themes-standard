@@ -68,12 +68,55 @@ NautilusXContentBar.info,
 NautilusSearchBar.info,
 NautilusQueryEditor.info {
     background-color: @nautilus_cluebar_color;
+    color: @theme_base_color;
+
+/*    border-width: 0;
+    border-style: solid; */
+    border-color: shade(@nautilus_cluebar_color, 0.85);
+}
+
+NautilusTrashBar.info:backdrop,
+NautilusXContentBar.info:backdrop,
+NautilusSearchBar.info:backdrop,
+NautilusQueryEditor.info:backdrop {
+    border-color: @unfocused_theme_fg_color;
+/*    border-style: solid; */
+}
+
+/*NautilusTrashBar.info:backdrop:last-child,
+NautilusXContentBar.info:backdrop:last-child,
+NautilusSearchBar.info:backdrop:last-child,
+NautilusQueryEditor.info:backdrop:last-child {
+    border-bottom-width: 1;
+    border-style: solid;
+}*/
+
+/* Something broken here, need to investigate with Cosimo */
+/*.nautilus-cluebar-label {
+    font: bold;
+    color: @theme_base_color;
+    text-shadow: 0 1 alpha(black, 0.15);
+}
+
+.nautilus-cluebar-label:backdrop {
+    font: bold;
+    color: @unfocused_theme_fg_color;
+    text-shadow: none;
+}*/
+
+/*
+NautilusTrashBar.info,
+NautilusXContentBar.info,
+NautilusSearchBar.info,
+NautilusQueryEditor.info {
+    background-color: @nautilus_cluebar_color;
     border-color: darker (@nautilus_cluebar_color);
 
     border-radius: 0;
     border-width: 0 0 1 0;
     border-style: solid;
 }
+*/
 
 /*
 NautilusTrashBar.info:first-child,
@@ -96,6 +139,7 @@ NautilusLocationEntry.entry {
     padding-right: 4;
 }
 
+
 NautilusSearchBar .entry,
 NautilusSearchBar .entry:focus {
     border-image: none;
@@ -112,10 +156,6 @@ NautilusSearchBar .entry:focus {
     color: @nautilus_cluebar_color;
 }*/
 
-.nautilus-cluebar-label {
-    font: bold;
-    color: @theme_base_color;
-}
 
 /*NautilusPlacesSidebar .cell:selected { FUNGE, ci vuole una border image qui
     border-radius: 0 100 100 0;
