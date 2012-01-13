@@ -2024,22 +2024,17 @@ GtkInfoBar:backdrop,
 .error:backdrop {
     text-shadow: none;
     background-color: @theme_base_color;
-    color: @unfocused_theme_fg_color;
+    color: @theme_unfocused_fg_color;
+    border-color: @theme_unfocused_fg_color;
 }
-
-/* GtkInfoBar:first-child,
-.info:first-child,
-.warning:first-child,
-.question:first-child,
-.error:first-child {
-    border-top: 1 solid black;
-} */
 
 GtkInfoBar:last-child,
 .info:last-child,
 .warning:last-child,
 .question:last-child,
 .error:last-child {
+    /* only apply a border on the last infobar if
+     * there's more than one packed in */
     border-bottom-width: 1;
     border-style: solid;
 }
