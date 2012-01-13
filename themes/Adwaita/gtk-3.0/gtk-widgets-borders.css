@@ -51,9 +51,9 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised:insensitive,
 .primary-toolbar .raised .button:insensitive,
 .inline-toolbar.toolbar .button:active,
-/*.inline-toolbar.toolbar .button:active:hover,*/
 .inline-toolbar.toolbar .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton .button:active,
+.inline-toolbar.toolbar GtkToolButton .button:insensitive,
 .primary-toolbar GtkSwitch.trough,
 .primary-toolbar GtkSwitch.trough:insensitive,
 .primary-toolbar GtkComboBox .button:active,
