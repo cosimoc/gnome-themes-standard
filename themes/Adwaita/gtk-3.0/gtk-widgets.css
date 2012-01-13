@@ -1809,6 +1809,11 @@ GtkIconView.view.cell:selected:focus {
     border-radius: 0;
 }
 
+.view:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
 GtkTreeView {
     -GtkTreeView-vertical-separator: 0;
     -GtkTreeView-expander-size: 17;
