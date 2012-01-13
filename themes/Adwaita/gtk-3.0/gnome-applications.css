@@ -136,6 +136,11 @@ NautilusFloatingBar {
     border-style: solid;
 }
 
+NautilusFloatingBar:backdrop {
+    background-color: @theme_unfocused_base_color;
+    border-color: shade(@theme_unfocused_base_color, 0.9);
+}
+
 NautilusFloatingBar .button {
     background-color: alpha (@theme_base_color, 0.0);
     background-image: none;
