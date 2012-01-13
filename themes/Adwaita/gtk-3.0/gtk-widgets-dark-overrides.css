@@ -21,40 +21,32 @@ GtkComboBox {
 }
 
 .button *:active,
-/*.button *:active:hover,
-.button *:active:focus,
-.button *:active:hover:focus, */
-GtkComboBox *:active /*,
-GtkComboBox *:active:hover,
-GtkComboBox *:active:focus,
-GtkComboBox *:active:hover:focus*/ {
+GtkComboBox *:active {
     text-shadow: @button_active_text_shadow 0 -1;
     color: @theme_selected_bg_color; /* Not sure about this one */
 }
 
-.button *:insensitive,
-.button *:active:insensitive {
-    text-shadow: none;
-}
-
-.button.raised,
-.raised .button,
-.inline-toolbar .button,
-.button.raised *,
-.raised .button *,
+.toolbar .button.raised *,
+.toolbar .raised .button *,
 .inline-toolbar .button * {
     icon-shadow: @button_text_shadow 0 -1;
 }
 
-.button.raised *:active,
-.raised .button *:active,
+.toolbar .button.raised *:active,
+.toolbar .raised .button *:active,
 .inline-toolbar .button *:active {
     icon-shadow: @button_active_text_shadow 0 -1;
 }
 
-.button.raised *:insensitive,
-.raised .button *:insensitive,
+.toolbar .button.raised *:insensitive,
+.toolbar .raised .button *:insensitive,
 .inline-toolbar .button *:insensitive {
+    icon-shadow: none;
+}
+
+.toolbar .button.raised *:backdrop,
+.toolbar .raised .button *:backdrop,
+.inline-toolbar .button *:backdrop {
     icon-shadow: none;
 }
 
