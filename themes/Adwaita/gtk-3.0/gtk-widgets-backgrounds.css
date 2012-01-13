@@ -4,8 +4,8 @@
 .toolbar .raised .button,
 .toolbar .button.raised:focus,
 .toolbar .raised .button:focus,
-.primary-toolbar GtkComboBox .button,
-.primary-toolbar GtkComboBox .button:focus {
+.toolbar GtkComboBox .button,
+.toolbar GtkComboBox .button:focus {
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
                                      from (@button_gradient_color_a),
@@ -60,7 +60,7 @@
 .toolbar .button:hover,
 .toolbar .button.raised:hover,
 .toolbar .raised .button:hover,
-.primary-toolbar GtkComboBox .button:hover {
+.toolbar GtkComboBox .button:hover {
     background-color: transparent;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -68,6 +68,7 @@
 				     to (@button_hover_gradient_color_b));
 }
 
+/* Prelit button on primary toolbar background */
 .primary-toolbar .button:hover {
     background-color: transparent;
     background-image: -gtk-gradient (linear,
@@ -79,23 +80,15 @@
 
 /* Insensitive button background */
 .button:insensitive,
-.primary-toolbar GtkComboBox .button:insensitive {
+.toolbar GtkComboBox .button:insensitive {
     background-image: none;
     background-color: @insensitive_bg_color;
-
-    /* FIXME? - Not sure about insensitive colors
-    background-image: -gtk-gradient (linear,
-				     left top, left bottom,
-				     from (@insensitive_bg_color),
-                                     color-stop (0.4, @insensitive_bg_color),
-				     to (shade (@insensitive_bg_color, 0.97)));
-    */
 }
 
 /* Pushed + Insensitive button background */
 .button:active:insensitive,
-.primary-toolbar .button:active:insensitive,
-.primary-toolbar GtkComboBox .button:active:insensitive {
+.toolbar .button:active:insensitive,
+.toolbar GtkComboBox .button:active:insensitive {
     background-color: transparent;
     background-image: -gtk-gradient (linear,
 				     left top, left bottom,
@@ -114,7 +107,8 @@
 
 /* Unfocused window pushed button background */
 .button:active:backdrop,
-.primary-toolbar .button:active:backdrop {
+.toolbar .button:active:backdrop,
+.toolbar .button:active:hover:backdrop {
     background-image: none;
     background-color: @unfocused_borders;
 }
