@@ -482,18 +482,41 @@ EphyToolbar .entry:backdrop {
     border-top-right-radius: 0;
 }
 
-EphyToolbar .button:last-child,
-EphyToolbar .button:hover:last-child,
-EphyToolbar .button:active:last-child,
-EphyToolbar .button:focus:last-child {
+EphyToolbar .location-entry .button {
+    color: @internal_element_color;
+}
+
+EphyToolbar .location-entry .button:last-child {
     border-image: url("borders/generic-border.svg") 3 3 4 3 / 3 3 4 0 stretch;
-    border-radius: 3;
     border-width: 1 1 2 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+    padding-left: 4;
+    padding-right: 2;
+}
+
+EphyToolbar .location-entry .button,
+EphyToolbar .location-entry .button:hover,
+EphyToolbar .location-entry .button:focus {
+    icon-shadow: none;
     background-image: -gtk-gradient(linear,
                                     left top, left bottom,
                                     from(@entry_background_a),
                                     to(@entry_background_b));
-    box-shadow: 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4);
+    box-shadow: 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4), 1 0 inset @inset_dark_color;
+}
+
+EphyToolbar .location-entry .button:active,
+EphyToolbar .location-entry .button:active:hover {
+    background-image: -gtk-gradient(linear,
+                                    left top, left bottom,
+                                    from(shade(@entry_background_a, 0.9)),
+                                    to(@entry_background_b));
+    box-shadow: 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4), 1 0 inset @inset_dark_color;
+}
+
+EphyToolbar .location-entry .button:hover,
+EphyToolbar .location-entry .button:focus,
+EphyToolbar .location-entry .button:active {
+    color: @theme_text_color;
 }
