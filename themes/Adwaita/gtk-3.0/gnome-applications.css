@@ -465,3 +465,35 @@ GeditStatusbar {
     color: shade(@documents_emblem_bg, 2.10);
 }
 
+/* epiphany */
+
+/*
+EphyLocationEntry .entry,
+EphyLocationEntry .entry:focus {
+    border-image-width: 3 0 4 3;
+}
+*/
+EphyToolbar .entry,
+EphyToolbar .entry:focus,
+EphyToolbar .entry:backdrop {
+    border-image-width: 3 0 4 3;
+    border-width: 1 0 2 1;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+EphyToolbar .button:last-child,
+EphyToolbar .button:hover:last-child,
+EphyToolbar .button:active:last-child,
+EphyToolbar .button:focus:last-child {
+    border-image: url("borders/generic-border.svg") 3 3 4 3 / 3 3 4 0 stretch;
+    border-radius: 3;
+    border-width: 1 1 2 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    background-image: -gtk-gradient(linear,
+                                    left top, left bottom,
+                                    from(@entry_background_a),
+                                    to(@entry_background_b));
+    box-shadow: 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4);
+}
