@@ -100,7 +100,8 @@
 /* Unfocused window button background */
 .button:backdrop,
 .toolbar .button.raised:backdrop,
-.toolbar .raised .button:backdrop {
+.toolbar .raised .button:backdrop,
+.toolbar .button:hover:backdrop {
     background-image: none;
     background-color: @unfocused_button_background;
 }

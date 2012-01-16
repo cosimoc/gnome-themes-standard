@@ -467,12 +467,14 @@ GeditStatusbar {
 
 /* epiphany */
 
-/*
-EphyLocationEntry .entry,
-EphyLocationEntry .entry:focus {
-    border-image-width: 3 0 4 3;
+EphyToolbar.toolbar {
+    border-bottom: 1 solid @borders;
 }
-*/
+
+EphyToolbar.toolbar:backdrop {
+    border-bottom: 1 solid @unfocused_borders;
+}
+
 EphyToolbar .entry,
 EphyToolbar .entry:focus,
 EphyToolbar .entry:backdrop {
@@ -484,6 +486,7 @@ EphyToolbar .entry:backdrop {
 
 EphyToolbar .location-entry .button {
     color: @internal_element_color;
+    -GtkButton-child-displacement-y: 0;
 }
 
 EphyToolbar .location-entry .button:last-child {
@@ -519,4 +522,14 @@ EphyToolbar .location-entry .button:hover,
 EphyToolbar .location-entry .button:focus,
 EphyToolbar .location-entry .button:active {
     color: @theme_text_color;
+}
+
+EphyToolbar .location-entry .button:backdrop,
+EphyToolbar .location-entry .button:hover:backdrop {
+    background-image: none;
+    background-color: @theme_unfocused_base_color;
+    box-shadow: none;
+    border-image: url("borders/generic-border-unfocused.svg") 3 3 4 3 / 3 3 4 0 stretch;
+    border-radius: 3;
+    border-width: 1 1 2 0;
 }
