@@ -158,18 +158,33 @@ GtkTreeView .separator:backdrop,
     color: @unfocused_insensitive_borders;
 }
 
-GtkPaned {
-    background-color: transparent;
-}
-
 .pane-separator {
     color: shade (@inactive_frame_color, 0.80);
-    background-color: transparent;
 }
 
 .pane-separator:hover,
 .pane-separator:selected {
     color: @theme_text_color;
+}
+
+.pane-separator,
+.pane-separator:hover {
+    background-color: @theme_bg_color;
+}
+
+.pane-separator:backdrop,
+.pane-separator:hover:backdrop {
+    background-color: @theme_unfocused_bg_color;
+}
+
+.notebook .pane-separator,
+.notebook .pane-separator:hover {
+    background-color: @theme_base_color;
+}
+
+.notebook .pane-separator:backdrop,
+.notebook .pane-separator:hover:backdrop {
+    background-color: @theme_unfocused_base_color;
 }
 
 /****************
