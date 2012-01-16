@@ -467,13 +467,14 @@ GeditStatusbar {
 
 /* epiphany */
 
-EphyToolbar.toolbar {
+/* EphyToolbar.toolbar {
     border-bottom: 1 solid @borders;
 }
 
 EphyToolbar.toolbar:backdrop {
     border-bottom: 1 solid @unfocused_borders;
 }
+*/
 
 EphyToolbar .entry,
 EphyToolbar .entry:focus,

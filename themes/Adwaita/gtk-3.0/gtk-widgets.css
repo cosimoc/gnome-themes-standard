@@ -1508,7 +1508,11 @@ GtkCheckButton:selected:focus {
     padding: 4;
 }
 
-.toolbar .button {
+/*.toolbar .button {
+    padding: 1;
+}*/
+
+.primary-toolbar .button {
     padding: 1;
 }
 
