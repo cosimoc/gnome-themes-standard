@@ -67,6 +67,7 @@ GtkWindow:backdrop {
 }
 
 *:selected:backdrop {
+    /* I would like to remove colors from the backdrop state, next release*/
     background-color: @theme_unfocused_selected_bg_color;
     color: @theme_unfocused_selected_fg_color;
 }
@@ -227,6 +228,9 @@ GtkTreeView .separator:backdrop,
     color: @unfocused_insensitive_fg_color;
 }
 
+.entry:selected:backdrop {
+    color: @theme_unfocused_selected_fg_color;
+}
 
 /*******************
  * Symbolic images *
@@ -1512,11 +1516,7 @@ GtkCheckButton:selected:focus {
     padding: 4;
 }
 
-/*.toolbar .button {
-    padding: 1;
-}*/
-
-.primary-toolbar .button {
+.toolbar .button {
     padding: 1;
 }
 

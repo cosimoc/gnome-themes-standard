@@ -124,6 +124,8 @@ NautilusSearchBar .entry:focus {
     color: darker (@nautilus_cluebar_color);
 }*/
 
+
+/* FIXME - will be `.floating-bar` in gtk-widgets.css for the next release*/
 NautilusFloatingBar {
     background-color: @info_bg_color;
     border-color: darker(@info_bg_color);
@@ -483,6 +485,8 @@ EphyToolbar .entry:backdrop {
     border-width: 1 0 2 1;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
+    padding-left: 4;
+    padding-right: 4;
 }
 
 EphyToolbar .location-entry .button {
@@ -534,3 +538,20 @@ EphyToolbar .location-entry .button:hover:backdrop {
     border-radius: 3;
     border-width: 1 1 2 0;
 }
+
+EphyNotebook.notebook {
+    border-width: 1 0 1 0;
+}
+
+EphyToolbar.toolbar .button {
+    padding-left: 4;
+    padding-right: 4;
+}
+
+/* not working
+#ephy-page-menu-button.active-menu {
+    background-image: none;
+    background-color: red;
+}
+*/
+
