@@ -26,6 +26,12 @@ GtkComboBox *:active {
     color: @theme_selected_bg_color; /* Not sure about this one */
 }
 
+.button *:active:insensitive,
+GtkComboBox *:active:insensitive {
+    text-shadow: none;
+    color: @insensitive_fg_color;
+}
+
 .toolbar .button.raised *,
 .toolbar .raised .button *,
 .inline-toolbar .button * {
