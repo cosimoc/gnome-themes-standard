@@ -548,10 +548,12 @@ EphyToolbar.toolbar .button {
     padding-right: 4;
 }
 
-/* not working
 #ephy-page-menu-button.active-menu {
     background-image: none;
-    background-color: red;
+    background-color: @menu_bg_color;
+
+    border-image: none;
+    border-color: @menu_bg_color;
+    border-radius: 4 4 0 0;
 }
-*/
 

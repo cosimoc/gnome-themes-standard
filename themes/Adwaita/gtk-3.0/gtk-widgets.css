@@ -1363,7 +1363,7 @@ GtkTreeMenu .menuitem * {
     background-image: none;
     background-color: @menu_bg_color;
 
-    border-radius: 5 5 0 0;
+    border-radius: 4 4 0 0;
 }
 
 .menubar .menuitem *:hover {
