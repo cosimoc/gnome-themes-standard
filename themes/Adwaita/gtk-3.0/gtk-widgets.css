@@ -511,8 +511,6 @@ GtkComboBox.combobox-entry .button {
 }
 
 .button {
-    -GtkButton-child-displacement-x: 0;
-    -GtkButton-child-displacement-y: 1;
     -GtkButton-image-spacing: 4;
     -GtkButton-interior-focus: true;
     -GtkButton-default-border: 0;
