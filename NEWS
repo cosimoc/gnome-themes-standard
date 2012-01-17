@@ -1,3 +1,15 @@
+3.3.4
+=====
+
+Implement support for the backdrop state
+New scrollbar design
+Improved support for Epiphany, Nautilus and GEdit
+Improve nighttime background
+Many smaller detail tweaks and fixes
+Adapt to GTK+ master changes for
+ - button border allocations
+ - new CSS parser stricter spec-compliant syntax
+
 3.3.3
 =====
 
