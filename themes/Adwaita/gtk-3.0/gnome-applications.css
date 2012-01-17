@@ -47,7 +47,7 @@ TerminalWindow GtkNotebook.notebook {
 
 /* nautilus */
 .nautilus-canvas-item {
-    border-radius: 5;
+    border-radius: 5px;
 }
 
 .nautilus-desktop.nautilus-canvas-item {
@@ -108,7 +108,7 @@ NautilusSearchBar .entry:focus {
     border-image: none;
     border-color: darker(@nautilus_cluebar_color);
     border-style: solid;
-    border-width: 1;
+    border-width: 1px;
     padding-left: 4;
     padding-right: 4;
 
@@ -125,7 +125,7 @@ NautilusFloatingBar {
     border-color: darker(@info_bg_color);
 
     border-radius: 0;
-    border-width: 1;
+    border-width: 1px;
     border-style: solid;
 }
 
@@ -146,21 +146,21 @@ NautilusFloatingBar .button {
 }
 
 NautilusWindow .sidebar .frame {
-    border-width: 1 0 0 0;
+    border-width: 1px 0 0 0;
     border-style: solid;
     border-color: @borders;
     border-radius: 0;
 }
 
 NautilusWindow > GtkGrid > .pane-separator {
-    border-width: 1 1 0 0;
+    border-width: 1px 1px 0 0;
     border-style: solid;
     border-color: @borders;
 }
 
 NautilusWindow > GtkGrid > .pane-separator,
 NautilusWindow > GtkGrid > .pane-separator:hover {
-    border-width: 1 1 0 0;
+    border-width: 1px 1px 0 0;
     border-style: solid;
     border-color: @borders;
     background-color: @sidebar_bg;
@@ -169,7 +169,7 @@ NautilusWindow > GtkGrid > .pane-separator:hover {
 
 NautilusWindow > GtkGrid > .pane-separator:backdrop,
 NautilusWindow > GtkGrid > .pane-separator:hover:backdrop {
-    border-width: 1 1 0 0;
+    border-width: 1px 1px 0 0;
     border-style: solid;
     border-color: @unfocused_borders;
     background-color: @sidebar_bg_unfocused;
@@ -186,7 +186,7 @@ NautilusNotebook.notebook {
 
 GeditWindow .pane-separator, 
 GeditWindow .pane-separator:hover {
-   border-width: 0 1 1 1;
+   border-width: 0 1px 1px 1px;
    border-style: solid;
    border-color: @borders;
    background-color: shade(@theme_bg_color, 0.95);
@@ -204,7 +204,7 @@ GeditPanel .toolbar {
 
 GeditWindow .sidebar {
     background-color: @theme_base_color;
-    border-width: 0 0 1 0;
+    border-width: 0 0 1px 0;
     border-style: solid;
     border-color: @borders;
     
@@ -212,11 +212,11 @@ GeditWindow .sidebar {
 
 GeditPanel .notebook {
     padding: 2;
-    border-width: 1 0;
+    border-width: 1px 0;
 }
 
 GeditWindow .notebook {
-    border-width: 1 0;
+    border-width: 1px 0;
 }
 
 /* gnome-documents */
@@ -226,9 +226,9 @@ GeditWindow .notebook {
 }
 
 .documents-dropdown .frame {
-    border-width: 0 1 1 1;
+    border-width: 0 1px 1px 1px;
     border-style: solid;
-    border-radius: 0 0 5 5;
+    border-radius: 0 0 5px 5px;
 }
 
 .documents-dropdown .radio,
@@ -260,11 +260,11 @@ GeditWindow .notebook {
 
 .documents-load-more.button {
     border-image-width: 0 2 2 2;
-    border-width: 0 1 1 1;
+    border-width: 0 1px 1px 1px;
 }
 
 .documents-scrolledwin.frame {
-    border-width: 1 0;
+    border-width: 1px 0;
     border-radius: 0;
 }
 
@@ -277,7 +277,7 @@ GeditWindow .notebook {
                                     from(@documents_selection_toolbar_a),
                                     to(@documents_selection_toolbar_b));
     color: @theme_base_color;
-    border-width: 1 0 0 0;
+    border-width: 1px 0 0 0;
     border-color: @documents_selection_toolbar_border;
     border-style: solid;
 }
@@ -295,7 +295,7 @@ GeditWindow .notebook {
     border-color: @documents_selection_toolbar_border;
     border-image: none;
     border-style: solid;
-    border-width: 1;
+    border-width: 1px;
 
     color: @theme_base_color;
 
@@ -319,7 +319,7 @@ GeditWindow .notebook {
     border-color: @documents_selection_toolbar_border;
     border-image: none;
     border-style: solid;
-    border-width: 1;
+    border-width: 1px;
 }
 
 .documents-selection-mode.toolbar .button *:hover {
@@ -328,14 +328,14 @@ GeditWindow .notebook {
 
 .documents-icon-bg {
     background-color: @documents_emblem_bg;
-    border-radius: 4;
+    border-radius: 4px;
 
     color: @theme_base_color;
 }
 
 .documents-collection-icon {
     background-color: @documents_collection_bg;
-    border-radius: 8;
+    border-radius: 8px;
 }
 
 .documents-osd {
@@ -346,7 +346,7 @@ GeditWindow .notebook {
 .documents-osd .toolbar {
     padding: 16;
     border-style: none;
-    border-radius: 5;
+    border-radius: 5px;
     border-width: 0;
 
     background-image: -gtk-gradient(linear, left top, left bottom,
@@ -365,7 +365,7 @@ GeditWindow .notebook {
                                     from(alpha(@documents_osd_button_a, 0.16)),
                                     color-stop(0.68, alpha(@documents_osd_button_b, 0.05)),
                                     to(alpha(@documents_osd_button_a, 0.12)));
-    border-width: 1 0;
+    border-width: 1px 0;
     border-style: solid;
     border-image: none;
     border-color: alpha(@documents_osd_button_a, 0.50);
@@ -385,20 +385,20 @@ GeditWindow .notebook {
 }
 
 .documents-osd .toolbar .button:nth-child(first) {
-    border-radius: 4 0 0 4;
-    border-left-width: 1;
+    border-radius: 4px 0 0 4px;
+    border-left-width: 1px;
     box-shadow: -1 0 inset @documents_osd_button_inset;
 }
 
 .documents-osd .toolbar .button:nth-child(last) {
     box-shadow: none;
-    border-radius: 0 4 4 0;
-    border-right-width: 1;
+    border-radius: 0 4px 4px 0;
+    border-right-width: 1px;
 }
 
 .documents-osd .toolbar .button:only-child {
-    border-width: 1;
-    border-radius: 4;
+    border-width: 1px;
+    border-radius: 4px;
     border-style: solid;
 }
 
@@ -434,7 +434,7 @@ GeditWindow .notebook {
     background-color: @documents_emblem_bg;
     color: @theme_base_color;
 
-    border-radius: 4;
+    border-radius: 4px;
     border-width: 0;
 
     margin: 2;
@@ -475,7 +475,7 @@ EphyToolbar .entry,
 EphyToolbar .entry:focus,
 EphyToolbar .entry:backdrop {
     border-image-width: 3 0 4 3;
-    border-width: 1 0 2 1;
+    border-width: 1px 0 2px 1px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     padding-left: 4;
@@ -495,7 +495,7 @@ EphyToolbar .location-entry .button {
 
 EphyToolbar .location-entry .button:last-child {
     border-image: url("borders/generic-border.svg") 3 3 4 3 / 3 3 4 0 stretch;
-    border-width: 1 1 2 0;
+    border-width: 1px 1px 2px 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     padding-left: 4;
@@ -539,12 +539,12 @@ EphyToolbar .location-entry .button:hover:backdrop {
     background-color: @theme_unfocused_base_color;
     box-shadow: none;
     border-image: url("borders/generic-border-unfocused.svg") 3 3 4 3 / 3 3 4 0 stretch;
-    border-radius: 3;
-    border-width: 1 1 2 0;
+    border-radius: 3px;
+    border-width: 1px 1px 2px 0;
 }
 
 EphyNotebook.notebook {
-    border-width: 1 0 1 0;
+    border-width: 1px 0 1px 0;
 }
 
 EphyToolbar.toolbar .button {
@@ -558,7 +558,7 @@ EphyToolbar.toolbar .button {
 
     border-image: none;
     border-color: @menu_bg_color;
-    border-radius: 4 4 0 0;
+    border-radius: 4px 4px 0 0;
 }
 
 /* Gnome Contacts */
