@@ -2032,6 +2032,33 @@ GtkInfoBar .button:active:focus,
     border-width: 1;
 }
 
+GtkInfoBar .entry:backdrop,
+GtkInfoBar .button:backdrop,
+GtkInfoBar .button:insensitive:backdrop,
+GtkInfoBar .button:active:backdrop,
+.info .entry:backdrop,
+.info .button:backdrop,
+.info .button:insensitive:backdrop,
+.info .button:active:backdrop,
+.warning .entry:backdrop,
+.warning .button:backdrop,
+.warning .button:insensitive:backdrop,
+.warning .button:active:backdrop,
+.question .entry:backdrop,
+.question .button:backdrop,
+.question .button:insensitive:backdrop,
+.question .button:active:backdrop,
+.error .entry:backdrop,
+.error .button:backdrop,
+.error .button:insensitive:backdrop,
+.error .button:active:backdrop {
+    border-image: none;
+
+    border-color: @unfocused_borders;
+    border-style: solid;
+    border-width: 1;
+}
+
 GtkInfoBar,
 .info,
 .warning,
