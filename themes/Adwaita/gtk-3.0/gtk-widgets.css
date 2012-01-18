@@ -208,7 +208,7 @@ GtkTreeView .separator:backdrop,
 }
 
 .entry:focus {
-    box-shadow: 1 1 inset alpha(@theme_selected_bg_color, 0.2), -1 -1 inset alpha(@theme_selected_bg_color, 0.2);
+    box-shadow: 1 2 inset alpha(@theme_selected_bg_color, 0.1), 1 1 inset alpha(@theme_selected_bg_color, 0.1), -1 -1 inset alpha(@theme_selected_bg_color, 0.2);
 }
 
 .entry.progressbar {
