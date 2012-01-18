@@ -525,7 +525,8 @@ EphyToolbar .location-entry .button:active:hover {
 
 EphyToolbar .location-entry .button:hover,
 EphyToolbar .location-entry .button:focus,
-EphyToolbar .location-entry .button:active {
+EphyToolbar .location-entry .button:active,
+EphyToolbar .location-entry .button *:active {
     color: @theme_text_color;
 }
 

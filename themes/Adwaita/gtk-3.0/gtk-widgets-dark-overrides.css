@@ -22,7 +22,7 @@ GtkComboBox {
 
 .button *:active,
 GtkComboBox *:active {
-    text-shadow: @button_active_text_shadow 0 -1;
+    text-shadow: @button_active_text_shadow 0 1;
     color: @theme_selected_bg_color; /* Not sure about this one */
 }
 

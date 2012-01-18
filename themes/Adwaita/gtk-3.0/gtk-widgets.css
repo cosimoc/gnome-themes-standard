@@ -547,6 +547,8 @@ GtkComboBox.combobox-entry .button {
     text-shadow: @primary_toolbar_button_text_shadow 0 1;
 }
 
+.primary-toolbar .button *:active,
+.inline-toolbar .button *:active,
 .button *:active {
     color: @button_active_text; /* Not sure about this one */
     text-shadow: @button_active_text_shadow 0 1;
@@ -1526,13 +1528,15 @@ GtkCheckButton:selected:focus {
  * Menubar Toolbars *
  ********************/
 .toolbar.menubar {
-    background-image: -gtk-gradient (linear,
+    /*background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from(@theme_bg_color),
-                                     to(shade(@theme_bg_color, 0.96)));
+                                     to(shade(@theme_bg_color, 0.96)));*/
     border-style: none;
 
     -GtkToolbar-button-relief: normal;
+    padding-left: 6;
+    padding-right: 6;
 }
 
 /********************

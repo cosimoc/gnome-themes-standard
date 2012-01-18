@@ -39,7 +39,7 @@
 @define-color borders #24282a;
 
 @define-color button_active_text @theme_selected_bg_color;
-@define-color button_active_text_shadow alpha(black, 0.45);
+@define-color button_active_text_shadow alpha(black, 0.6);
 @define-color button_text_shadow alpha(black, 0.7);
 @define-color primary_toolbar_button_text_shadow alpha(black, 0.1);
 
