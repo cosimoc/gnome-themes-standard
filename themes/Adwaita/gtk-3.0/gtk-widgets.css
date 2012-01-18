@@ -528,6 +528,7 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button,
 .primary-toolbar .button:insensitive,
 .primary-toolbar .button:backdrop,
+.primary-toolbar .button:hover:backdrop,
 .primary-toolbar .button:insensitive:backdrop {
     background-image: none;
     background-color: transparent;
@@ -1010,14 +1011,25 @@ GtkLinkButton * {
 }
 
 .notebook tab .button,
-.notebook tab .button:hover,
-.notebook tab .button:hover:active {
+.notebook tab .button:active {
     padding: 1;
 
     border-style: none;
     border-image: none;
     background-color: transparent;
     background-image: none;
+}
+
+.notebook tab .button {
+    color: @internal_element_color;
+}
+
+.notebook tab .button *:hover {
+    color:  @theme_text_color;
+}
+
+.notebook tab .button *:active {
+    color: @theme_selected_bg_color;
 }
 
 /**************

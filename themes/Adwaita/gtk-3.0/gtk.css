@@ -84,8 +84,8 @@
 
 @define-color button_active_gradient_color_a #a2a9a2;
 @define-color button_active_gradient_color_b shade (@button_active_gradient_color_a, 0.83);
-@define-color button_active_text /*darker(@theme_selected_bg_color);*/ @theme_base_color;
-@define-color button_active_text_shadow /*alpha(white, 0.3);*/ alpha(black, 0.4);
+@define-color button_active_text @theme_base_color;
+@define-color button_active_text_shadow alpha(black, 0.4);
 @define-color button_text_shadow alpha(white, 0.4);
 @define-color primary_toolbar_button_text_shadow alpha(black, 0.1);
 
@@ -170,8 +170,8 @@
 @define-color toolbar_gradient_b shade(@borders, 1.25);
 @define-color toolbar_gradient_c shade(@borders, 1.3);
 
-@define-color toolbar_border_top shade(@borders, 0.9); /*shade (@theme_bg_color, 0.7);*/
-@define-color toolbar_border_bottom shade(@borders, 1.1); /*shade (@theme_bg_color, 0.7);*/
+@define-color toolbar_border_top shade(@borders, 0.9);
+@define-color toolbar_border_bottom shade(@borders, 1.1);
 
 @define-color toolbar_button_prelight alpha(white, 0.4);
 
