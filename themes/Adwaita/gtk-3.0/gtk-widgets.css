@@ -1060,6 +1060,7 @@ GtkComboBox.combobox-entry {
 
 GtkComboBox *:insensitive {
     text-shadow: none;
+    color: @insensitive_fg_color;
 }
 
 GtkComboBox .separator {
