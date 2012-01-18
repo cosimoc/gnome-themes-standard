@@ -872,6 +872,8 @@ GtkLinkButton * {
     text-shadow: none;
 }
 
+.button .separator { color: shade(@internal_element_color, 1.3); }
+
 /*****************
  * Notebooks and *
  * tabs          *
