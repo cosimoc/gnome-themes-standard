@@ -551,7 +551,7 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button *:active,
 .inline-toolbar .button *:active,
 .button *:active {
-    color: @button_active_text; /* Not sure about this one */
+    color: @button_active_text;
     text-shadow: @button_active_text_shadow 0 1;
 }
 

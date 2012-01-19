@@ -109,21 +109,9 @@ NautilusSearchBar .entry:focus {
     -GtkEntry-inner-border: 3;
 }
 
-/*NautilusSearchBar .entry.image {
-    color: @nautilus_cluebar_color;
-}*/
-
-
-/*NautilusPlacesSidebar .cell:selected { FUNGE, ci vuole una border image qui
-    border-radius: 0 100 100 0;
-    box-shadow: 0 1 inset alpha(black, 0.2), 0 -1 inset alpha(white, 0.5);
-}*/
-
-/*#nautilus-search-button *:active,
-#nautilus-search-button *:active:prelight {
-    color: darker (@nautilus_cluebar_color);
-}*/
-
+#nautilus-search-button *:active {
+    text-shadow: @button_active_text_shadow 0 1;
+}
 
 /* FIXME - will be `.floating-bar` in gtk-widgets.css for the next release*/
 NautilusFloatingBar {
