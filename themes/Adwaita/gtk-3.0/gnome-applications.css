@@ -39,6 +39,12 @@ TerminalScreen {
     -TerminalScreen-background-darkness: 0.95;
 }
 
+TerminalWindow GtkNotebook.notebook {
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+}
+
 /* nautilus */
 .nautilus-canvas-item {
     border-radius: 5;
