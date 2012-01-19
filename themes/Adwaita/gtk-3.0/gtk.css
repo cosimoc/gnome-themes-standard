@@ -26,7 +26,7 @@
 @define-color theme_unfocused_text_color mix(@theme_unfocused_fg_color, @theme_text_color, 0.5); /* Need something darker here to have stuff nicelly readable*/
 @define-color theme_unfocused_fg_color #a7aba7;
 @define-color theme_unfocused_bg_color @theme_bg_color;
-@define-color theme_unfocused_selected_bg_color shade(@theme_unfocused_bg_color, 0.75);
+@define-color theme_unfocused_selected_bg_color shade(@theme_unfocused_bg_color, 0.9);
 @define-color theme_unfocused_selected_fg_color @theme_fg_color;
 @define-color unfocused_button_background @theme_unfocused_bg_color;
 @define-color unfocused_borders @borders;
@@ -127,6 +127,8 @@
 @define-color progressbar_background_b #1f72c6;
 @define-color progressbar_pattern @switch_slider_active_border;
 @define-color progressbar_border @switch_slider_active_border;
+@define-color progressbar_unfocused_background @theme_base_color;
+@define-color progressbar_unfocused_border @unfocused_borders;
 
 @define-color entry_text_color @theme_text_color;
 

@@ -364,8 +364,8 @@ GtkTreeView .separator:backdrop,
 .progressbar.vertical row:selected:backdrop {
     -adwaita-progressbar-pattern: none;
     background-image: none;
-    background-color: @theme_unfocused_selected_bg_color;
-    border-color: @theme_unfocused_selected_bg_color;
+    background-color: @progressbar_unfocused_background;
+    border-color: @progressbar_unfocused_border;
     box-shadow: none;
     -adwaita-progressbar-pattern: none;
 }
