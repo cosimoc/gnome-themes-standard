@@ -105,9 +105,23 @@ GtkSwitch.slider {
 
 .entry:focus {
     box-shadow: 2 2 inset alpha(lighter(@theme_selected_bg_color), 0.2),
-               -2 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2),
-               1 1 inset alpha(lighter(@theme_selected_bg_color), 0.7),
-               -1 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
+                -2 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2),
+                1 1 inset alpha(lighter(@theme_selected_bg_color), 0.7),
+                -1 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
+}
+
+GtkComboBox.combobox-entry .entry:focus:first-child {
+    box-shadow: 2 2 inset alpha(lighter(@theme_selected_bg_color), 0.2),
+                -1 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2),
+                1 1 inset alpha(lighter(@theme_selected_bg_color), 0.7),
+                0 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
+}
+
+GtkComboBox.combobox-entry .entry:focus:last-child {
+    box-shadow: 1 2 inset alpha(lighter(@theme_selected_bg_color), 0.2),
+                -2 -2 inset alpha(lighter(@theme_selected_bg_color), 0.2),
+                0 1 inset alpha(lighter(@theme_selected_bg_color), 0.7),
+                -1 -1 inset alpha(lighter(@theme_selected_bg_color), 0.7);
 }
 
 .spinbutton .button:active,

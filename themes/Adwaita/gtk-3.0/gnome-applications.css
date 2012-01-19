@@ -505,7 +505,9 @@ EphyToolbar .location-entry .button:focus {
                                     left top, left bottom,
                                     from(@entry_background_a),
                                     to(@entry_background_b));
-    box-shadow: 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4), 1 0 inset @inset_dark_color;
+    box-shadow: 1 0 inset @inset_dark_color,
+                0 1 inset @entry_inset,
+                0 2 inset alpha(@entry_inset, 0.4);
 }
 
 EphyToolbar .location-entry .button:active,
@@ -514,9 +516,9 @@ EphyToolbar .location-entry .button:active:hover {
                                     left top, left bottom,
                                     from(shade(@entry_background_a, 0.9)),
                                     to(@entry_background_b));
-    box-shadow: 0 1 inset @entry_inset, 
-                0 2 inset alpha(@entry_inset, 0.4), 
-                1 0 inset @inset_dark_color;
+    box-shadow: 1 0 inset @inset_dark_color,
+                0 1 inset @entry_inset, 
+                0 2 inset alpha(@entry_inset, 0.4);
 }
 
 EphyToolbar .location-entry .button:hover,

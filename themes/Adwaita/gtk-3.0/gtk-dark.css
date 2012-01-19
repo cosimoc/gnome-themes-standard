@@ -115,7 +115,7 @@
 @define-color expander_row_selected_color alpha (@theme_base_color, 0.60);
 
 @define-color inset_light_color alpha(white, 0.05);
-@define-color inset_dark_color alpha(black, 0.15);
+@define-color inset_dark_color alpha(black, 0.25);
 
 @define-color keyboard_focus_border_a alpha (@theme_fg_color, 0.30);
 @define-color keyboard_focus_border_b alpha (@theme_fg_color, 0.10);

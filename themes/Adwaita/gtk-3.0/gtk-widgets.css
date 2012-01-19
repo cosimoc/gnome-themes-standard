@@ -208,7 +208,9 @@ GtkTreeView .separator:backdrop,
 }
 
 .entry:focus {
-    box-shadow: 1 2 inset alpha(@theme_selected_bg_color, 0.1), 1 1 inset alpha(@theme_selected_bg_color, 0.1), -1 -1 inset alpha(@theme_selected_bg_color, 0.2);
+    box-shadow: 1 2 inset alpha(@theme_selected_bg_color, 0.1),
+                1 1 inset alpha(@theme_selected_bg_color, 0.1),
+                -1 -1 inset alpha(@theme_selected_bg_color, 0.2);
 }
 
 .entry.progressbar {
@@ -1073,11 +1075,11 @@ GtkComboBox .separator {
 }
 
 GtkComboBox.combobox-entry .button:first-child {
-    padding-right: 5;
+    padding-right: 4;
 }
 
 GtkComboBox.combobox-entry .button:last-child {
-    padding-left: 5;
+    padding-left: 4;
 }
 
 
@@ -1109,14 +1111,47 @@ GtkComboBox.combobox-entry .button:last-child {
     border-left-width: 0;
 }
 
-GtkComboBox.combobox-entry .button:active:last-child,
-GtkComboBox.combobox-entry .button:hover:active:last-child {
-    box-shadow: 1 0 inset @inset_dark_color, 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4);;
+GtkComboBox.combobox-entry .entry:focus:first-child {
+    box-shadow: 1 2 inset alpha(@theme_selected_bg_color, 0.1),
+                1 1 inset alpha(@theme_selected_bg_color, 0.1),
+                0 -1 inset alpha(@theme_selected_bg_color, 0.2);
 }
 
+GtkComboBox.combobox-entry .entry:focus:last-child {
+    box-shadow: -1 2 inset alpha(@theme_selected_bg_color, 0.1),
+                -1 1 inset alpha(@theme_selected_bg_color, 0.1),
+                0 -1 inset alpha(@theme_selected_bg_color, 0.2);
+}
+
+GtkComboBox.combobox-entry .button:last-child,
+GtkComboBox.combobox-entry .button:hover:last-child,
+GtkComboBox.combobox-entry .button:active:last-child,
+GtkComboBox.combobox-entry .button:hover:active:last-child {
+    box-shadow: 1 0 inset @inset_dark_color, 
+                0 1 inset @entry_inset,
+                0 2 inset alpha(@entry_inset, 0.4);
+}
+
+GtkComboBox.combobox-entry .button:first-child,
+GtkComboBox.combobox-entry .button:hover:first-child,
 GtkComboBox.combobox-entry .button:active:first-child,
 GtkComboBox.combobox-entry .button:hover:active:first-child {
-    box-shadow: -1 0 inset @inset_dark_color, 0 1 inset @entry_inset, 0 2 inset alpha(@entry_inset, 0.4);;
+    box-shadow: -1 0 inset @inset_dark_color, 
+                0 1 inset @entry_inset,
+                0 2 inset alpha(@entry_inset, 0.4);
+}
+
+GtkComboBox.combobox-entry .button:insensitive:first-child {
+    box-shadow: -1 0 inset @inset_dark_color;
+}
+
+GtkComboBox.combobox-entry .button:insensitive:last-child {
+    box-shadow: 1 0 inset @inset_dark_color;
+}
+
+GtkComboBox.combobox-entry .button:backdrop:first-child,
+GtkComboBox.combobox-entry .button:backdrop:last-child {
+    box-shadow: none;
 }
 
 GtkComboBox.combobox-entry .button *:active,
