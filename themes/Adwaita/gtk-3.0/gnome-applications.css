@@ -170,6 +170,11 @@ NautilusWindow > GtkGrid > .pane-separator:hover:backdrop {
     color: shade (@theme_bg_color, 0.9);
 }
 
+NautilusNotebook.notebook {
+    border-right-width: 0;
+    border-left-width: 0;
+}
+
 /* gedit */
 
 GeditWindow .pane-separator, 
