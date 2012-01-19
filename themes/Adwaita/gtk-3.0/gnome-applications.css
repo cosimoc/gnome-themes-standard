@@ -173,6 +173,7 @@ NautilusWindow > GtkGrid > .pane-separator:hover:backdrop {
 NautilusNotebook.notebook {
     border-right-width: 0;
     border-left-width: 0;
+    border-bottom-width: 0;
 }
 
 /* gedit */
