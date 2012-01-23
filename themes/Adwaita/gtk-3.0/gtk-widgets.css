@@ -98,6 +98,10 @@ GtkWindow:backdrop {
     color: @unfocused_insensitive_fg_color;
 }
 
+GtkImage,
+GtkImage:insensitive {
+    background-color: transparent;
+}
 
 /************
  * Tooltips *
