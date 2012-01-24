@@ -1033,21 +1033,32 @@ GtkLinkButton * {
     background-color: transparent;
 }
 
-
-.notebook tab .button {
-    color: @internal_element_color;
-    border-style: none;
-    border-image: none;
+.notebook tab .button GtkImage {
+    border-radius: 3;
+    color: mix(@theme_fg_color, @theme_base_color, 0.7); /* FIXME*/
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1;
+    padding: 0;
+    icon-shadow: 0 1 alpha(white, 0.5); /* FIXME*/
 }
 
-.notebook tab .button *:hover {
-    color:  @theme_text_color;
+.notebook tab .button GtkImage:hover {
+    color: @theme_fg_color; /* FIXME*/
+    border-color: alpha(black, 0.1); /* FIXME*/
 }
 
-.notebook tab .button *:active {
-    color: @theme_selected_bg_color;
+.notebook tab .button GtkImage:active,
+.notebook tab .button GtkImage:active:hover {
+    background-color: alpha(black, 0.08); /* FIXME*/
+    box-shadow: 0 1 inset alpha(black, 0.05); /* FIXME*/
+    color:  @theme_base_color; /* FIXME*/
+    icon-shadow: 0 1 alpha(black, 0.25); /* FIXME*/
+    border-color: alpha(black, 0.2) 
+                  alpha(black, 0.1) 
+                  alpha(black, 0.1) 
+                  alpha(black, 0.1); /* FIXME*/
 }
-
 
 /**************
  * ComboBoxes *
