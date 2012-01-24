@@ -194,6 +194,10 @@ GtkImage:insensitive {
     background-color: transparent;
 }
 
+.primary-toolbar GtkLabel {
+    text-shadow: @primary_toolbar_button_text_shadow 0 1;
+}
+
 /****************
  * Text Entries *
  ****************/
