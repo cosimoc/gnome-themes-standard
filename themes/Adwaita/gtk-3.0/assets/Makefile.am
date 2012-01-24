@@ -52,6 +52,7 @@ assets_DATA = 		\
 	radio-menuitem-checked-selected.svg \
 	radio-menuitem-mixed.svg \
 	radio-menuitem-mixed-insensitive.svg \
+	resize-grip.svg \
 	scale-slider-horizontal.svg \
 	scale-slider-horizontal-unfocused.svg \
 	scale-slider-horizontal-dark.svg \

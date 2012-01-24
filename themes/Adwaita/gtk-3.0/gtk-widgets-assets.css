@@ -1,3 +1,12 @@
+/***************
+ * Resize grip *
+ ***************/
+
+.grip {
+    background-color: transparent;
+    background-image: url("assets/resize-grip.svg");
+}
+
 /*************************
  * Check and Radio items *
  *************************/

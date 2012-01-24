@@ -615,73 +615,10 @@ adwaita_engine_render_handle (GtkThemingEngine *engine,
 {
   if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_GRIP))
     {
-      GdkRGBA bg;
-      GtkJunctionSides sides;
-      GtkStateFlags state;
-      int lx, ly;
-      int x_down;
-      int y_down;
-      int dots;
-
-      state = gtk_theming_engine_get_state (engine);
-      gtk_theming_engine_get_background_color (engine, state, &bg);
-
-      /* The number of dots fitting into the area. Just hardcoded to 3 right now. */
-      /* dots = MIN (width - 2, height - 2) / 3; */
-      dots = 3;
-
-      cairo_save (cr);
-
-      sides = gtk_theming_engine_get_junction_sides (engine);
-
-      switch (sides)
-        {
-        case GTK_JUNCTION_CORNER_TOPRIGHT:
-          x_down = 0;
-          y_down = 0;
-          cairo_translate (cr, x + width - 4*dots, y + 1);
-          break;
-        case GTK_JUNCTION_CORNER_BOTTOMRIGHT:
-          x_down = 0;
-          y_down = 1;
-          cairo_translate (cr, x + width - 4*dots, y + height + 1 - 4*dots);
-          break;
-        case GTK_JUNCTION_CORNER_BOTTOMLEFT:
-          x_down = 1;
-          y_down = 1;
-          cairo_translate (cr, x + 2, y + height + 1 - 4*dots);
-          break;
-        case GTK_JUNCTION_CORNER_TOPLEFT:
-          x_down = 1;
-          y_down = 0;
-          cairo_translate (cr, x + 2, y + 1);
-          break;
-        default:
-          /* Not implemented. */
-          cairo_restore (cr);
-          return;
-        }
-
-      for (lx = 0; lx < dots; lx++) /* horizontally */
-        {
-          for (ly = 0; ly <= lx; ly++) /* vertically */
-            {
-              int mx, my;
-              mx = x_down * dots + (1 - x_down * 2) * lx - x_down;
-              my = y_down * dots + (1 - y_down * 2) * ly - y_down;
-
-              gdk_cairo_set_source_rgba (cr, &bg);
-              cairo_arc (cr,
-                         mx * 4 - 1 + 1.5,
-                         my * 4 - 1 + 1.5,
-                         1.5,
-                         0, G_PI * 2.0);
-
-              cairo_fill (cr);
-            }
-        }
-
-      cairo_restore (cr);
+      GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
+        (engine, cr, x, y, width, height);
+      GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame
+        (engine, cr, x, y, width, height);
     }
   else if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PANE_SEPARATOR))
     {
