@@ -42,6 +42,14 @@ background-color: red;
     background-color: @unfocused_button_background;
 }
 
+/* Unfocused prelit button background */
+
+.button:hover:backdrop {
+    background-image: none;
+    background-color: @unfocused_button_hover_background;
+}
+
+
 /* Entry background */
 .entry,
 GtkComboBox.combobox-entry .button,

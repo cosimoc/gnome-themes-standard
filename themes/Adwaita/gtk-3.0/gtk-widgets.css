@@ -40,6 +40,8 @@
     -adwaita-focus-border-color: alpha(@theme_text_color, 0.3);
     -adwaita-focus-border-radius: 2;
     -adwaita-focus-border-dashes: 1;
+    -GtkWindow-resize-grip-width: 13;
+    -GtkWindow-resize-grip-height: 13;   
 }
 
 /***************
@@ -96,11 +98,6 @@ GtkWindow:backdrop {
     text-shadow: none;
     icon-shadow: none;
     color: @unfocused_insensitive_fg_color;
-}
-
-GtkImage,
-GtkImage:insensitive {
-    background-color: transparent;
 }
 
 /************
@@ -190,6 +187,11 @@ GtkTreeView .separator:backdrop,
 .notebook .pane-separator:backdrop,
 .notebook .pane-separator:hover:backdrop {
     background-color: @theme_unfocused_base_color;
+}
+
+GtkImage,
+GtkImage:insensitive {
+    background-color: transparent;
 }
 
 /****************
@@ -707,6 +709,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 /* Middle button */
+.linked .entry,
 .linked .button,
 .linked .button:active,
 .linked .button:active:hover,
@@ -720,6 +723,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 /* Leftmost button */
+.linked .entry:first-child,
 .linked .button:first-child,
 .linked .button:active:first-child,
 .linked .button:active:hover:first-child,
@@ -733,6 +737,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 /* Rightmost button */
+.linked .entry:last-child,
 .linked .button:last-child,
 .linked .button:active:last-child,
 .linked .button:active:hover:last-child,
@@ -746,6 +751,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 /* Linked single button */
+.linked .entry:only-child,
 .linked .button:only-child,
 .linked .button:active:only-child,
 .linked .button:active:hover:only-child,
@@ -1019,17 +1025,19 @@ GtkLinkButton * {
 }
 
 .notebook tab .button,
-.notebook tab .button:active {
-    padding: 1;
-
-    border-style: none;
+.notebook tab .button:active,
+.notebook tab .button:hover {
     border-image: none;
-    background-color: transparent;
+    border-style: none;
     background-image: none;
+    background-color: transparent;
 }
+
 
 .notebook tab .button {
     color: @internal_element_color;
+    border-style: none;
+    border-image: none;
 }
 
 .notebook tab .button *:hover {
@@ -1039,6 +1047,7 @@ GtkLinkButton * {
 .notebook tab .button *:active {
     color: @theme_selected_bg_color;
 }
+
 
 /**************
  * ComboBoxes *
@@ -1786,6 +1795,10 @@ GtkSwitch.slider {
                                      to (@switch_slider_color));
 
     color: shade (@switch_slider_color, 0.95);
+}
+
+.primary-toolbar GtkSwitch.slider {
+    padding: 3;
 }
 
 GtkSwitch.slider:insensitive {

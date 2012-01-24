@@ -92,6 +92,8 @@
 @define-color button_hover_gradient_color_a @theme_base_color;
 @define-color button_hover_gradient_color_b shade (@button_gradient_color_a, 0.94);
 
+@define-color unfocused_button_hover_background @unfocused_theme_base_color;
+
 @define-color button_raised_gradient_color_a @button_gradient_color_a;
 @define-color button_raised_gradient_color_b @button_gradient_color_b;
 @define-color button_raised_linked_shadow alpha(@theme_base_color, 0.70);
