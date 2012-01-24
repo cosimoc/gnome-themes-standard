@@ -194,10 +194,6 @@ GtkImage:insensitive {
     background-color: transparent;
 }
 
-.primary-toolbar GtkLabel {
-    text-shadow: @primary_toolbar_button_text_shadow 0 1;
-}
-
 /****************
  * Text Entries *
  ****************/
@@ -1643,6 +1639,7 @@ GtkCheckButton:selected:focus {
     -GtkWidget-window-dragging: true;
     -GtkToolbar-button-relief: normal;
     box-shadow: 0 3 inset alpha(black, 0.02), 0 2 inset alpha(black, 0.02), 0 1 inset alpha(black, 0.02);
+    text-shadow: @primary_toolbar_button_text_shadow 0 1;
 }
 
 .primary-toolbar .toolbar:insensitive,
@@ -1651,12 +1648,14 @@ GtkCheckButton:selected:focus {
     background-color: shade (@theme_bg_color, 0.97);
 
     border-color: shade (@theme_bg_color, 0.91);
+    text-shadow: none;
 }
 
 .primary-toolbar .toolbar:backdrop,
 .primary-toolbar.toolbar:backdrop {
     border-color: @unfocused_borders;
     box-shadow: none;
+    text-shadow: none;
 }
 
 /* progressbars on primary toolbar entries are special */
