@@ -68,7 +68,7 @@ GtkSwitch.trough:active {
 /* primary toolbar - focused element borders */
 .primary-toolbar .entry:focus,
 .primary-toolbar .button:active:focus,
-.primary-toolbar GtkComboBox.bobox-entry .entry:focus,
+.primary-toolbar GtkComboBox.combobox-entry .entry:focus,
 .primary-toolbar .button.raised:focus:active,
 .primary-toolbar .raised .button:focus:active,
 .primary-toolbar .button.raised.default:active,
