@@ -104,7 +104,7 @@ GtkWindow:backdrop {
  * Tooltips *
  ************/
 .tooltip {
-    padding: 4;
+    padding: 4px;
     border-style: none;
     border-radius: 5px;
 
@@ -132,7 +132,7 @@ GtkWindow:backdrop {
 }
 
 GtkStatusbar {
-    padding: 5;
+    padding: 5px;
     color: @theme_fg_color;
     -GtkStatusbar-shadow-type: none;
 }
@@ -195,7 +195,7 @@ GtkImage:insensitive {
  ****************/
 .entry {
     border-style: solid;
-    padding: 4;
+    padding: 4px;
 
     /* border-image defined in the -assets variants */
 
@@ -247,7 +247,7 @@ GtkImage:insensitive {
 .spinbutton .button,
 .spinbutton .button:focus {
     color: @internal_element_color;
-    padding: 2 6;
+    padding: 2px 6px;
     border-width: 0;
     border-radius: 0;
     border-style: none;
@@ -368,7 +368,7 @@ GtkImage:insensitive {
 /* through component */
 GtkProgressBar,
 .trough row {
-    padding: 0 0 1 0;
+    padding: 0 0 1px 0;
     -GtkProgressBar-xspacing: 20;
     -GtkProgressBar-yspacing: 20;
 }
@@ -480,7 +480,7 @@ GtkScale.trough:insensitive:backdrop {
  * Frames *
  **********/
 .frame {
-    padding: 2;
+    padding: 2px;
     border-width: 0;
     background-color: @theme_base_color;
 }
@@ -504,7 +504,7 @@ GtkScrolledWindow.frame:backdrop {
 .button,
 .button.menuitem.menubar,
 GtkComboBox.combobox-entry .button {
-    padding: 1 4;
+    padding: 1px 4px;
 }
 
 .button {
@@ -905,7 +905,7 @@ GtkLinkButton * {
 }
 
 .notebook tab {
-    padding: 3;
+    padding: 3px;
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@notebook_tab_hilight),
@@ -918,7 +918,7 @@ GtkLinkButton * {
 
 /* workaround */
 .notebook tab.bottom {
-    padding: 3;
+    padding: 3px;
     background-image: -gtk-gradient (linear,
                                      left bottom, left top,
                                      from (@notebook_tab_gradient_a),
@@ -1023,11 +1023,11 @@ GtkLinkButton * {
 }
 
 .notebook tab .button GtkImage {
-    border-radius: 3;
+    border-radius: 3px;
     color: mix(@theme_fg_color, @theme_base_color, 0.7); /* FIXME*/
     border-style: solid;
     border-color: transparent;
-    border-width: 1;
+    border-width: 1px;
     padding: 0;
     icon-shadow: 0 1 alpha(white, 0.5); /* FIXME*/
 }
@@ -1354,7 +1354,7 @@ GtkTreeMenu.menu {
 }
 
 GtkTreeMenu .menuitem {
-    padding: 2;
+    padding: 2px;
 
     border-style: solid;
     border-width: 1px 0;
@@ -1401,7 +1401,7 @@ GtkTreeMenu .menuitem * {
 /* this controls the general appearance of the menubar */
 .menubar {
     border-style: none;
-    padding: 4;
+    padding: 4px;
 
     -GtkWidget-window-dragging: true;
     -GtkMenuBar-internal-padding: 0;
@@ -1409,7 +1409,7 @@ GtkTreeMenu .menuitem * {
 
 .menubar .menuitem {
     border-style: none;
-    padding: 3 5;
+    padding: 3px 5px;
 }
 
 /* remove the image from the prelight areas */
@@ -1426,7 +1426,7 @@ GtkTreeMenu .menuitem * {
 
 .menu .menuitem {
     -GtkMenuItem-arrow-scaling: 0.4;
-    padding: 4;
+    padding: 4px;
 }
 
 .menu .menuitem:hover {
@@ -1567,11 +1567,11 @@ GtkCheckButton:selected:focus {
     border-style: none;
     border-color: darker (@theme_bg_color);
 /*    border-width: 1 0 1px 0; */
-    padding: 4;
+    padding: 4px;
 }
 
 .toolbar .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .toolbar:insensitive {
@@ -1589,8 +1589,8 @@ GtkCheckButton:selected:focus {
     border-style: none;
 
     -GtkToolbar-button-relief: normal;
-    padding-left: 6;
-    padding-right: 6;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 /********************
@@ -1660,7 +1660,7 @@ GtkCheckButton:selected:focus {
 
     -GtkToolbar-button-relief: normal;
 
-    padding: 4;
+    padding: 4px;
 }
 
 .inline-toolbar.toolbar:last-child {
@@ -1727,7 +1727,7 @@ GtkAssistant .sidebar .highlight {
 }
 
 GtkAssistant .sidebar {
-    padding: 12;
+    padding: 1px 2px;
 
     border-width: 1px;
     border-radius: 2px;
@@ -1781,7 +1781,7 @@ GtkSwitch.slider {
     /*box-shadow: 0 -1 inset alpha(@theme_base_color, 0.50);*/
     box-shadow: 0 -1 inset alpha(white, 0.9), 0 1 inset @theme_base_color, 0 2 inset alpha(@borders, 0.15);
 
-    padding: 2 2 3 2;
+    padding: 2px 2px 3px 2px;
 
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
@@ -1792,7 +1792,7 @@ GtkSwitch.slider {
 }
 
 .primary-toolbar GtkSwitch.slider {
-    padding: 3;
+    padding: 3px;
 }
 
 GtkSwitch.slider:insensitive {
@@ -1884,7 +1884,7 @@ GtkTreeView.view:backdrop {
 }
 
 /*column-header {
-    padding: 0 4;
+    padding: 0 4px;
 }*/
 
 column-header.button,
@@ -1905,7 +1905,7 @@ column-header.button:focus:hover,
 column-header .button:focus:hover {
     background-color: @theme_base_color;
     background-image: none;
-    padding: 0 4;
+    padding: 0 4px;
     text-shadow: none;
     icon-shadow: none;
     font-weight: bold; /* Not sure about this one */
@@ -1965,7 +1965,7 @@ row:selected {
 
 .cell {
     color: @theme_text_color;
-    padding: 2;
+    padding: 2px;
     border-width: 0;
 }
 
@@ -2015,14 +2015,14 @@ row:selected {
 
 /* Calendars */
 GtkCalendar {
-    padding: 2;
+    padding: 2px;
 }
 
 GtkCalendar.view {
     border-radius: 3px;
     border-style: solid;
     border-width: 1px;
-    padding: 2;
+    padding: 2px;
 }
 
 GtkCalendar.header {
@@ -2226,7 +2226,7 @@ PanelApplet > GtkMenuBar.menubar .menuitem *:hover {
 
 PanelApplet .button,
 PanelApplet .button:hover {
-    padding: 4;
+    padding: 4px;
 
     border-image: none;
     border-width: 0;

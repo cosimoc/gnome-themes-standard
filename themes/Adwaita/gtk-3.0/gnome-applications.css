@@ -98,8 +98,8 @@ NautilusQueryEditor.info {
 }*/
 
 NautilusLocationEntry.entry {
-    padding-left: 4;
-    padding-right: 4;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 
@@ -109,8 +109,8 @@ NautilusSearchBar .entry:focus {
     border-color: darker(@nautilus_cluebar_color);
     border-style: solid;
     border-width: 1px;
-    padding-left: 4;
-    padding-right: 4;
+    padding-left: 4px;
+    padding-right: 4px;
 
     -GtkEntry-inner-border: 3;
 }
@@ -211,7 +211,7 @@ GeditWindow .sidebar {
 }
 
 GeditPanel .notebook {
-    padding: 2;
+    padding: 2px;
     border-width: 1px 0;
 }
 
@@ -344,7 +344,7 @@ GeditWindow .notebook {
 }
 
 .documents-osd .toolbar {
-    padding: 16;
+    padding: 1px 6px;
     border-style: none;
     border-radius: 5px;
     border-width: 0;
@@ -359,7 +359,7 @@ GeditWindow .notebook {
 }
 
 .documents-osd .toolbar .button {
-    padding: 4;
+    padding: 4px;
 
     background-image: -gtk-gradient(linear, left top, left bottom,
                                     from(alpha(@documents_osd_button_a, 0.16)),
@@ -437,8 +437,8 @@ GeditWindow .notebook {
     border-radius: 4px;
     border-width: 0;
 
-    margin: 2;
-    padding: 4;
+    margin: 2px;
+    padding: 4px;
 }
 
 .documents-entry-tag:hover {
@@ -478,8 +478,8 @@ EphyToolbar .entry:backdrop {
     border-width: 1px 0 2px 1px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
-    padding-left: 4;
-    padding-right: 4;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 EphyToolbar .entry:focus {
@@ -498,8 +498,8 @@ EphyToolbar .location-entry .button:last-child {
     border-width: 1px 1px 2px 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    padding-left: 4;
-    padding-right: 2;
+    padding-left: 4px;
+    padding-right: 2px;
 }
 
 EphyToolbar .location-entry .button,
@@ -548,8 +548,8 @@ EphyNotebook.notebook {
 }
 
 EphyToolbar.toolbar .button {
-    padding-left: 4;
-    padding-right: 4;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 #ephy-page-menu-button.active-menu {
@@ -565,7 +565,7 @@ EphyToolbar.toolbar .button {
 
 /* Line at top in contacts pane, similar to .documents-scrolledwin.frame */
 .contacts-content.frame {
- border-width: 1 0 0 0;
+ border-width: 1px 0 0 0;
  border-radius: 0;
 }
 
@@ -577,19 +577,19 @@ EphyToolbar.toolbar .button {
 .contacts-suggestion {
  background-color: #434343;
  color: #ffffff;
- border-radius: 4;
+ border-radius: 4px;
 }
 
 /* Border on the right in the left menu toolbar */
 .contacts-left-toolbar.toolbar.menubar {
- border-width: 0 1 0 0;
+ border-width: 0 1px 0 0;
  border-style: solid;
  border-color: @borders;
 }
 
 /* Sidebar with line at top and the left */
 ContactsWindow .sidebar.frame {
- border-width: 1 1 0 0;
+ border-width: 1px 1px 0 0;
  border-style: solid;
  border-color: @borders;
  border-image: none;
@@ -599,7 +599,7 @@ ContactsWindow .sidebar.frame {
 
 /* Primary toolbar with no line at top to avoid conflicts with frame border */
 ContactsWindow .primary-toolbar.toolbar {
- border-width: 0 0 1 0;
+ border-width: 0 0 1px 0;
 }
 
 ContactsWindow .sidebar,
@@ -615,8 +615,8 @@ ContactsWindow .sidebar.view {
 .contacts-entry {
  box-shadow: none;
  border-image: none;
- border-width: 1;
- border-radius: 4;
+ border-width: 1px;
+ border-radius: 4px;
  border-style: solid;
  border-color: #bbbeb7;
  background-image: none;
@@ -631,21 +631,21 @@ ContactsWindow .sidebar.view {
 
 .contacts-entry.contacts-postal-entry {
  border-radius: 0 0 0 0;
- border-width: 1 1 0 1;
+ border-width: 1px 1px 0 1px;
 }
 
 .contacts-entry.contacts-postal-entry:nth-child(first) {
- border-radius: 4 4 0 0;
+ border-radius: 4px 4px 0 0;
 }
 
 .contacts-entry.contacts-postal-entry:nth-child(last) {
- border-radius: 0 0 4 4;
- border-width: 1 1 1 1;
+ border-radius: 0 0 4px 4px;
+ border-width: 1px;
 }
 
 .contacts-combo .button {
  border-image: none;
- border-width: 1;
+ border-width: 1px;
  border-style: solid;
  border-color: #bbbeb7;
  background-image: none;
@@ -677,9 +677,9 @@ ContactsWindow .sidebar.view {
 .contacts-notification {
  border-style: solid;
  border-color: #949486;
- border-width: 0 1 1 1;
- border-radius: 0 0 5 5;
- padding: 8;
+ border-width: 0 1px 1px 1px;
+ border-radius: 0 0 5px 5px;
+ padding: 8px;
  background-color: #d8d8d8;
  background-image: -gtk-gradient (linear,
  left top, left bottom,
