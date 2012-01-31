@@ -195,14 +195,7 @@ GtkImage:insensitive {
  ****************/
 .entry {
     border-style: solid;
-
-    /* we use inner-border instead of padding because padding
-     * also applies to the progressbar.
-     */
-    padding: 0;
-
-    -GtkEntry-inner-border: 5;
-    -GtkEntry-progress-border: 0;
+    padding: 4;
 
     /* border-image defined in the -assets variants */
 
