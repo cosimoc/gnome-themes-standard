@@ -504,7 +504,7 @@ GtkScrolledWindow.frame:backdrop {
 .button,
 .button.menuitem.menubar,
 GtkComboBox.combobox-entry .button {
-    padding: 1 4 0 4;
+    padding: 1 4;
 }
 
 .button {
@@ -1062,8 +1062,6 @@ GtkLinkButton * {
  **************/
 GtkComboBox {
     padding: 0;
-    padding-right: 6;
-    -GtkWidget-focus-padding: 0;
 
     -GtkComboBox-arrow-scaling: 0.5;
     -GtkComboBox-shadow-type: none;
@@ -1079,10 +1077,6 @@ GtkComboBox *:insensitive:backdrop {
     color: @unfocused_insensitive_fg_color;
 }
 
-GtkComboBox.combobox-entry {
-    padding-right: 0; /* does it work for rtl? */
-}
-
 GtkComboBox *:insensitive {
     text-shadow: none;
     color: @insensitive_fg_color;
@@ -1094,15 +1088,6 @@ GtkComboBox .separator {
     -GtkWidget-horizontal-separator: 0;
     -GtkWidget-vertical-separator: 0;
 }
-
-GtkComboBox.combobox-entry .button:first-child {
-    padding-right: 4;
-}
-
-GtkComboBox.combobox-entry .button:last-child {
-    padding-left: 4;
-}
-
 
 GtkComboBox.combobox-entry .entry:first-child,
 GtkComboBox.combobox-entry .button:first-child {
@@ -1181,8 +1166,6 @@ GtkComboBox.combobox-entry .button *:active:hover {
 }
 
 GtkComboBox .button {
-    padding-right: 0;
-    padding-bottom: 1;
     color: @internal_element_color;
 }
 
