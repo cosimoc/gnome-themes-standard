@@ -344,7 +344,7 @@ GeditWindow .notebook {
 }
 
 .documents-osd .toolbar {
-    padding: 1px 6px;
+    padding: 16px;
     border-style: none;
     border-radius: 5px;
     border-width: 0;

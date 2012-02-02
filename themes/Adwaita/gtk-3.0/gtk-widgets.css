@@ -1727,7 +1727,7 @@ GtkAssistant .sidebar .highlight {
 }
 
 GtkAssistant .sidebar {
-    padding: 1px 2px;
+    padding: 12px;
 
     border-width: 1px;
     border-radius: 2px;
