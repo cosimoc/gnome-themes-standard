@@ -597,6 +597,15 @@ ContactsWindow .sidebar.frame {
  padding: 0;
 }
 
+.contacts-avatar-frame.frame {
+ border-width: 1px 1px 0 1px;
+ border-style: solid;
+ border-color: @borders;
+ border-image: none;
+ border-radius: 0;
+ padding: 0;
+}
+
 /* Primary toolbar with no line at top to avoid conflicts with frame border */
 ContactsWindow .primary-toolbar.toolbar {
  border-width: 0 0 1px 0;
