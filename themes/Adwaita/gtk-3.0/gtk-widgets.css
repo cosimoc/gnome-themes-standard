@@ -1485,43 +1485,43 @@ GtkTreeMenu .menuitem * {
 }
 
 .menuitem.check:active {
-    background-image: url("assets/checkbox-menuitem-checked.svg");
+    background-image: url("assets/menuitem-checkbox-checked.svg");
 }
 
 .menuitem.check:active:hover {
-    background-image: url("assets/checkbox-menuitem-checked-selected.svg");
+    background-image: url("assets/menuitem-checkbox-checked-selected.svg");
 }
 
 .menuitem.check:active:insensitive {
-    background-image: url("assets/checkbox-menuitem-checked-insensitive.svg");
+    background-image: url("assets/menuitem-checkbox-checked-insensitive.svg");
 }
 
 .menuitem.check:inconsistent {
-    background-image: url("assets/checkbox-menuitem-mixed.svg");
+    background-image: url("assets/menuitem-checkbox-mixed.svg");
 }
 
 .menuitem.check:inconsistent:insensitive {
-    background-image: url("assets/checkbox-menuitem-mixed-insensitive.svg");
+    background-image: url("assets/menuitem-checkbox-mixed-insensitive.svg");
 }
 
 .menuitem.radio:active {
-    background-image: url("assets/radio-menuitem-checked.svg");
+    background-image: url("assets/menuitem-radio-checked.svg");
 }
 
 .menuitem.radio:active:hover {
-    background-image: url("assets/radio-menuitem-checked-selected.svg");
+    background-image: url("assets/menuitem-radio-checked-selected.svg");
 }
 
 .menuitem.radio:active:insensitive {
-    background-image: url("assets/radio-menuitem-checked-insensitive.svg");
+    background-image: url("assets/menuitem-radio-checked-insensitive.svg");
 }
 
 .menuitem.radio:inconsistent {
-    background-image: url("assets/radio-menuitem-mixed.svg");
+    background-image: url("assets/menuitem-radio-mixed.svg");
 }
 
 .menuitem.radio:inconsistent:insensitive {
-    background-image: url("assets/radio-menuitem-mixed-insensitive.svg");
+    background-image: url("assets/menuitem-radio-mixed-insensitive.svg");
 }
 
 /***************
