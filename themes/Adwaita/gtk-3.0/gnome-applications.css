@@ -652,28 +652,6 @@ ContactsWindow .sidebar.view {
  background-color: #ffffff;
 }
 
-.contacts-frame-button {
- padding: 0;
- border-image: none;
- border-width: 0;
- border-radius: 0;
- border-style: none;
- background-color: transparent;
- background-image: none;
- -adwaita-focus-border-radius: 4;
- -GtkButton-child-displacement-x: 0;
- -GtkButton-child-displacement-y: 0;
-}
-
-.contacts-frame-button:active {
- background-color: #2e3436;
-}
-
-.contacts-frame-menu {
- background-color: #2e3436;
- color: #ffffff;
-}
-
 .contacts-notification {
  border-style: solid;
  border-color: #949486;
