@@ -613,14 +613,7 @@ adwaita_engine_render_handle (GtkThemingEngine *engine,
                               gdouble           width,
                               gdouble           height)
 {
-  if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_GRIP))
-    {
-      GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
-        (engine, cr, x, y, width, height);
-      GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame
-        (engine, cr, x, y, width, height);
-    }
-  else if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PANE_SEPARATOR))
+  if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PANE_SEPARATOR))
     {
       GdkRGBA fg;
       GtkStateFlags state;
