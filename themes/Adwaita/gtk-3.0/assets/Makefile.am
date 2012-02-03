@@ -60,16 +60,15 @@ assets_DATA = 		\
 	radio-mixed-insensitive-dark.png \
 	radio-mixed-backdrop-dark.png \
 	radio-mixed-backdrop-insensitive-dark.png \
-	menuitem-checkbox-checked.svg \
-	menuitem-checkbox-checked-insensitive.svg \
-	menuitem-checkbox-checked-selected.svg \
-	menuitem-checkbox-mixed.svg \
-	menuitem-checkbox-mixed-insensitive.svg \
-	menuitem-radio-checked.svg \
-	menuitem-radio-checked-insensitive.svg \
-	menuitem-radio-checked-selected.svg \
-	menuitem-radio-mixed.svg \
-	menuitem-radio-mixed-insensitive.svg \
+	menuitem-checkbox-checked.png \
+	menuitem-checkbox-checked-insensitive.png \
+	menuitem-checkbox-checked-selected.png \
+	menuitem-checkbox-mixed.png \
+	menuitem-checkbox-mixed-insensitive.png \
+	menuitem-checkbox-mixed-selected.png \
+	menuitem-radio-checked.png \
+	menuitem-radio-checked-insensitive.png \
+	menuitem-radio-checked-selected.png \
 	resize-grip.svg \
 	scale-slider-horizontal.svg \
 	scale-slider-horizontal-unfocused.svg \

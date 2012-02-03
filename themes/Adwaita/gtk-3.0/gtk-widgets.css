@@ -1497,12 +1497,12 @@ GtkTreeMenu .menuitem * {
 }
 
 .menuitem.check:inconsistent,
-.menuitem.radio:inconsisten {
+.menuitem.radio:inconsistent {
     background-image: url("assets/menuitem-checkbox-mixed.png");
 }
 
 .menuitem.check:inconsistent:insensitive,
-.menuitem.radio:inconsisten:insensitive {
+.menuitem.radio:inconsistent:insensitive {
     background-image: url("assets/menuitem-checkbox-mixed-insensitive.png");
 }
 
