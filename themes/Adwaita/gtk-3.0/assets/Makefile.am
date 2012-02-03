@@ -1,5 +1,4 @@
-assetsdir = $(datadir)/themes/Adwaita/gtk-3.0/assets
-assets_DATA = 		\
+EXTRA_DIST = 		\
 	checkbox-checked.png \
 	checkbox-checked-alt.png \
 	checkbox-checked-insensitive.png \
@@ -112,5 +111,3 @@ assets_DATA = 		\
 	sidebar-radio-selected.svg \
 	sidebar-radio-selected-dark.svg \
 	sidebar-radio-selected-prelight.svg
-
-EXTRA_DIST = $(assets_DATA)

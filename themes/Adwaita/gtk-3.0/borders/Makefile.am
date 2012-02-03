@@ -1,5 +1,4 @@
-bordersdir = $(datadir)/themes/Adwaita/gtk-3.0/borders
-borders_DATA = 		\
+EXTRA_DIST = 		\
 	button-border-focused.svg \
 	button-border-focused-dark.svg \
 	button-border.svg \
@@ -20,5 +19,3 @@ borders_DATA = 		\
 	primary-toolbar-generic-border-dark.svg \
 	primary-toolbar-generic-border-unfocused.svg \
 	primary-toolbar-generic-border-unfocused-dark.svg
-
-EXTRA_DIST = $(borders_DATA)

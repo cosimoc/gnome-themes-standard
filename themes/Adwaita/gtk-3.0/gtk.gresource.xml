@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/adwaita">
+    <file preprocess="to-pixdata">assets/checkbox-checked-alt-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-alt.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-backdrop-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-backdrop-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-backdrop-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-backdrop.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-alt-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-alt.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-backdrop-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-backdrop-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-backdrop-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-backdrop.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-unchecked-alt-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-unchecked-alt.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-unchecked-backdrop-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-unchecked-backdrop-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-unchecked-backdrop-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-unchecked-backdrop.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-unchecked-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-unchecked-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-unchecked-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-unchecked.png</file>
+    <file preprocess="to-pixdata">assets/menuitem-checkbox-checked-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/menuitem-checkbox-checked.png</file>
+    <file preprocess="to-pixdata">assets/menuitem-checkbox-checked-selected.png</file>
+    <file preprocess="to-pixdata">assets/menuitem-checkbox-mixed-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/menuitem-checkbox-mixed.png</file>
+    <file preprocess="to-pixdata">assets/menuitem-checkbox-mixed-selected.png</file>
+    <file preprocess="to-pixdata">assets/menuitem-radio-checked-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/menuitem-radio-checked.png</file>
+    <file preprocess="to-pixdata">assets/menuitem-radio-checked-selected.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-alt-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-alt.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-backdrop-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-backdrop-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-backdrop-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-backdrop.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-alt-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-alt.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-backdrop-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-backdrop-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-backdrop-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-backdrop.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed.png</file>
+    <file preprocess="to-pixdata">assets/radio-unchecked-alt-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-unchecked-alt.png</file>
+    <file preprocess="to-pixdata">assets/radio-unchecked-backdrop-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-unchecked-backdrop-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-unchecked-backdrop-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/radio-unchecked-backdrop.png</file>
+    <file preprocess="to-pixdata">assets/radio-unchecked-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-unchecked-insensitive-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-unchecked-insensitive.png</file>
+    <file preprocess="to-pixdata">assets/radio-unchecked.png</file>
+    <file preprocess="to-pixdata">assets/resize-grip.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-horizontal-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-horizontal-insensitive-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-horizontal-insensitive.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-horizontal-insensitive-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-horizontal.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-horizontal-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-horizontal-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-horizontal-insensitive-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-horizontal-insensitive.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-horizontal-insensitive-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-horizontal.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-horizontal-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-vertical-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-vertical-insensitive-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-vertical-insensitive.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-vertical-insensitive-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-vertical.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-above-vertical-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-horizontal-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-horizontal-insensitive-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-horizontal-insensitive.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-horizontal-insensitive-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-horizontal.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-horizontal-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-vertical-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-vertical-insensitive-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-vertical-insensitive.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-vertical-insensitive-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-vertical.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-marks-below-vertical-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-vertical-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-vertical-insensitive-dark.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-vertical-insensitive.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-vertical-insensitive-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-vertical.svg</file>
+    <file preprocess="to-pixdata">assets/scale-slider-vertical-unfocused.svg</file>
+    <file preprocess="to-pixdata">assets/sidebar-radio-checked-dark.svg</file>
+    <file preprocess="to-pixdata">assets/sidebar-radio-checked.svg</file>
+    <file preprocess="to-pixdata">assets/sidebar-radio-prelight.svg</file>
+    <file preprocess="to-pixdata">assets/sidebar-radio-selected-dark.svg</file>
+    <file preprocess="to-pixdata">assets/sidebar-radio-selected-prelight.svg</file>
+    <file preprocess="to-pixdata">assets/sidebar-radio-selected.svg</file>
+    <file preprocess="to-pixdata">borders/button-border-dark.svg</file>
+    <file preprocess="to-pixdata">borders/button-border-focused-dark.svg</file>
+    <file preprocess="to-pixdata">borders/button-border-focused.svg</file>
+    <file preprocess="to-pixdata">borders/button-border.svg</file>
+    <file preprocess="to-pixdata">borders/generic-border-dark.svg</file>
+    <file preprocess="to-pixdata">borders/generic-border-focused-dark.svg</file>
+    <file preprocess="to-pixdata">borders/generic-border-focused.svg</file>
+    <file preprocess="to-pixdata">borders/generic-border.svg</file>
+    <file preprocess="to-pixdata">borders/generic-border-unfocused-dark.svg</file>
+    <file preprocess="to-pixdata">borders/generic-border-unfocused.svg</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-button-border-dark.svg</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-button-border-focused-dark.svg</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-button-border-focused.svg</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-button-border.svg</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-dark.svg</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-focused-dark.svg</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-focused.svg</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-generic-border.svg</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-unfocused-dark.svg</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-unfocused.svg</file>
+    <file>gnome-applications.css</file>
+    <file>gtk-widgets.css</file>
+    <file>gtk-widgets-backgrounds.css</file>
+    <file>gtk-widgets-borders.css</file>
+    <file>gtk-widgets-borders-dark.css</file>
+    <file>gtk-widgets-dark-overrides.css</file>
+    <file>gtk-widgets-assets.css</file>
+    <file>gtk-widgets-assets-dark.css</file>
+    <file>gtk-main.css</file>
+    <file>gtk-main-dark.css</file>
+  </gresource>
+</gresources>
