@@ -1506,6 +1506,11 @@ GtkTreeMenu .menuitem * {
     background-image: url("assets/menuitem-checkbox-mixed-insensitive.png");
 }
 
+.menuitem.check:inconsistent:hover,
+.menuitem.radio:inconsistent:hover {
+    background-image: url("assets/menuitem-checkbox-mixed-selected.png");
+}
+
 .menuitem.radio:active {
     background-image: url("assets/menuitem-radio-checked.png");
 }
