@@ -58,3 +58,12 @@ radio-mixed-alt-dark
 radio-mixed-insensitive-dark
 radio-mixed-backdrop-dark
 radio-mixed-backdrop-insensitive-dark
+menuitem-checkbox-checked
+menuitem-checkbox-checked-insensitive
+menuitem-checkbox-checked-selected
+menuitem-checkbox-mixed
+menuitem-checkbox-mixed-insensitive
+menuitem-checkbox-mixed-selected
+menuitem-radio-checked
+menuitem-radio-checked-insensitive
+menuitem-radio-checked-selected
