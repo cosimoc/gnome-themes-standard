@@ -193,39 +193,39 @@
  *********************/
 GtkScale.slider,
 GtkScale.slider.horizontal {
-    background-image: url("assets/scale-slider-horizontal.svg");
+    background-image: url("assets/scale-slider-horz.png");
 }
 
 GtkScale.slider:backdrop,
 GtkScale.slider.horizontal:backdrop {
-    background-image: url("assets/scale-slider-horizontal-unfocused.svg");
+    background-image: url("assets/scale-slider-horz-backdrop.png");
 }
 
 GtkScale.slider:insensitive,
 GtkScale.slider.horizontal:insensitive {
-    background-image: url("assets/scale-slider-horizontal-insensitive.svg");
+    background-image: url("assets/scale-slider-horz-insensitive.png");
 }
 
 GtkScale.slider:insensitive:backdrop,
 GtkScale.slider.horizontal:insensitive:backdrop {
-    background-image: url("assets/scale-slider-horizontal-insensitive-unfocused.svg");
+    background-image: url("assets/scale-slider-horz-backdrop-insensitive.png");
 }
 
 
 GtkScale.slider.vertical {
-    background-image: url("assets/scale-slider-vertical.svg");
+    background-image: url("assets/scale-slider-vert.png");
 }
 
 GtkScale.slider.vertical:backdrop {
-    background-image: url("assets/scale-slider-vertical-unfocused.svg");
+    background-image: url("assets/scale-slider-vert-backdrop.png");
 }
 
 GtkScale.slider.vertical:insensitive {
-    background-image: url("assets/scale-slider-vertical-insensitive.svg");
+    background-image: url("assets/scale-slider-vert-insensitive.png");
 }
 
 GtkScale.slider.vertical:insensitive:backdrop {
-    background-image: url("assets/scale-slider-vertical-insensitive-unfocused.svg");
+    background-image: url("assets/scale-slider-vert-backdrop-insensitive.png");
 }
 
 GtkScale.scale-has-marks-above.slider.horizontal {

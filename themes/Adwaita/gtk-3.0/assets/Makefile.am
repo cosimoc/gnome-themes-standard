@@ -69,18 +69,22 @@ EXTRA_DIST = 		\
 	menuitem-radio-checked-insensitive.png \
 	menuitem-radio-checked-selected.png \
 	resize-grip.svg \
-	scale-slider-horizontal.svg \
-	scale-slider-horizontal-unfocused.svg \
-	scale-slider-horizontal-dark.svg \
-	scale-slider-horizontal-insensitive.svg \
-	scale-slider-horizontal-insensitive-unfocused.svg \
-	scale-slider-horizontal-insensitive-dark.svg \
-	scale-slider-vertical.svg \
-	scale-slider-vertical-unfocused.svg \
-	scale-slider-vertical-dark.svg \
-	scale-slider-vertical-insensitive.svg \
-	scale-slider-vertical-insensitive-unfocused.svg \
-	scale-slider-vertical-insensitive-dark.svg \
+	scale-slider-horz.png \
+	scale-slider-horz-insensitive.png \
+	scale-slider-horz-backdrop.png \
+	scale-slider-horz-backdrop-insensitive.png \
+	scale-slider-vert.png \
+	scale-slider-vert-insensitive.png \
+	scale-slider-vert-backdrop.png \
+	scale-slider-vert-backdrop-insensitive.png \
+	scale-slider-horz-dark.png \
+	scale-slider-horz-insensitive-dark.png \
+	scale-slider-horz-backdrop-dark.png \
+	scale-slider-horz-backdrop-insensitive-dark.png \
+	scale-slider-vert-dark.png \
+	scale-slider-vert-insensitive-dark.png \
+	scale-slider-vert-backdrop-dark.png \
+	scale-slider-vert-backdrop-insensitive-dark.png \
 	scale-slider-marks-above-horizontal.svg \
 	scale-slider-marks-above-horizontal-unfocused.svg \
 	scale-slider-marks-above-horizontal-dark.svg \
