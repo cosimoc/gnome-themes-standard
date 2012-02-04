@@ -193,19 +193,19 @@ draw_tab_shape (cairo_t *cr,
                 gdouble width,
                 gdouble height)
 {
-  cairo_move_to (cr, 0, height);
+  cairo_move_to (cr, x, height);
 
   cairo_arc (cr, 
-             curve_width, y + 3.0,
+             x + curve_width, y + 3.0,
              2.5,
              G_PI, G_PI + G_PI_2);
 
   cairo_arc (cr,
-             width - curve_width, y + 3.0,
+             x + width - curve_width, y + 3.0,
              2.5,
              G_PI + G_PI_2, 2 * G_PI);
 
-  cairo_line_to (cr, width, height);
+  cairo_line_to (cr, x + width, height);
 }
 
 static void
@@ -247,11 +247,11 @@ render_notebook_extension (GtkThemingEngine *engine,
     }
 
   if (gap_side == GTK_POS_BOTTOM)
-    x += 0.5;
+    x += border_width / 2;
   else if (gap_side == GTK_POS_TOP)
-    x -= 0.5;
+    x -= border_width / 2;
 
-  width -= 1.0;
+  width -= border_width / 2;
 
   cairo_translate (cr, x, y);
   cairo_rotate (cr, angle);
