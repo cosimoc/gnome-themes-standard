@@ -251,7 +251,7 @@ render_notebook_extension (GtkThemingEngine *engine,
   else if (gap_side == GTK_POS_TOP)
     x -= border_width / 2;
 
-  width -= border_width / 2;
+  width -= border_width;
 
   cairo_translate (cr, x, y);
   cairo_rotate (cr, angle);
