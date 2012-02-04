@@ -183,36 +183,27 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
     gdk_rgba_free (border_color);
 }
 
+#define NOTEBOOK_TAB_TOP_MARGIN 3.0
+
 static void
-draw_tab_arcs (cairo_t *cr,
-               gdouble curve_width,
-               gdouble x,
-               gdouble y,
-               gdouble width,
-               gdouble height)
+draw_tab_shape (cairo_t *cr,
+                gdouble curve_width,
+                gdouble x,
+                gdouble y,
+                gdouble width,
+                gdouble height)
 {
+  cairo_move_to (cr, 0, height);
+
   cairo_arc (cr, 
-             curve_width, 6.0,
+             curve_width, y + 3.0,
              2.5,
              G_PI, G_PI + G_PI_2);
 
   cairo_arc (cr,
-             width - curve_width, 6.0,
+             width - curve_width, y + 3.0,
              2.5,
              G_PI + G_PI_2, 2 * G_PI);
-}
-
-static void
-draw_tab_shape_active (cairo_t *cr,
-                       gdouble curve_width,
-                       gdouble x,
-                       gdouble y,
-                       gdouble width,
-                       gdouble height)
-{
-  cairo_move_to (cr, 0, height);
-
-  draw_tab_arcs (cr, curve_width, x, y, width, height);
 
   cairo_line_to (cr, width, height);
 }
@@ -226,12 +217,12 @@ render_notebook_extension (GtkThemingEngine *engine,
                            gdouble           height,
                            GtkPositionType   gap_side)
 {
-  gint tab_curvature;
-  GdkRGBA *color, border_color, background_color;
+  gint tab_curvature, border_width;
+  GdkRGBA border_color, background_color;
   GtkStateFlags state;
   gdouble angle = 0;
-  cairo_pattern_t *pattern = NULL, *background_pattern = NULL;
-  cairo_matrix_t matrix;
+  cairo_pattern_t *pattern = NULL;
+  gboolean is_active;
 
   gtk_theming_engine_get_style (engine,
                                 "tab-curvature", &tab_curvature,
@@ -240,13 +231,14 @@ render_notebook_extension (GtkThemingEngine *engine,
   gtk_theming_engine_get_background_color (engine, state, &background_color);
   gtk_theming_engine_get_border_color (engine, state, &border_color);
   gtk_theming_engine_get (engine, state,
-                          "-adwaita-selected-tab-color", &color,
                           "-adwaita-border-gradient", &pattern,
-                          "background-image", &background_pattern,
                           NULL);
 
+  is_active = (state & GTK_STATE_FLAG_ACTIVE);
+  border_width = 1.0;
+
   cairo_save (cr);
-  cairo_set_line_width (cr, 1.0);
+  cairo_set_line_width (cr, border_width);
 
   if (gap_side == GTK_POS_TOP)
     {
@@ -255,49 +247,38 @@ render_notebook_extension (GtkThemingEngine *engine,
     }
 
   if (gap_side == GTK_POS_BOTTOM)
-    cairo_translate (cr,
-                     x + 0.5,
-                     (state & GTK_STATE_FLAG_ACTIVE) ?
-                     y + 1.0 : y);
+    x += 0.5;
   else if (gap_side == GTK_POS_TOP)
-    cairo_translate (cr,
-                     x - 0.5,
-                     (state & GTK_STATE_FLAG_ACTIVE) ?
-                     y - 1.0 : y);
-
-  cairo_rotate (cr, angle);
+    x -= 0.5;
 
   width -= 1.0;
-  draw_tab_shape_active (cr, tab_curvature, 0, 0, width, height);
 
-  gdk_cairo_set_source_rgba (cr, &background_color);
-  cairo_fill_preserve (cr);
+  cairo_translate (cr, x, y);
+  cairo_rotate (cr, angle);
 
-  if (background_pattern != NULL)
-    {
-      cairo_matrix_init_scale (&matrix,
-                               1. / width,
-                               1. / height);
-      cairo_pattern_set_matrix (background_pattern, &matrix);
-      cairo_set_source (cr, background_pattern);
+  /* draw the tab shape and clip the background inside it */
+  cairo_save (cr);
+  draw_tab_shape (cr, tab_curvature, 
+                  0, NOTEBOOK_TAB_TOP_MARGIN + border_width + 0.5,
+                  width, is_active ? (height + 1.0) : (height));
+  cairo_clip (cr);
 
-      cairo_fill (cr);
-    }
+  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
+    (engine, cr, 0, NOTEBOOK_TAB_TOP_MARGIN + border_width + 0.5,
+     width, is_active ? (height + 1.0) : (height));
 
-  if (state & GTK_STATE_FLAG_ACTIVE)
-    {
-      draw_tab_shape_active (cr, tab_curvature, 0, 0, width, 6.0);
-      gdk_cairo_set_source_rgba (cr, color);
-      cairo_fill (cr);
-    }
+  cairo_restore (cr);
 
-  draw_tab_shape_active (cr, tab_curvature, 0, 0, width, height);
+  /* now draw the border */
+  draw_tab_shape (cr, tab_curvature,
+                  0, NOTEBOOK_TAB_TOP_MARGIN + border_width,
+                  width, height);
 
   if (pattern && (state & GTK_STATE_FLAG_ACTIVE))
     {
-      cairo_scale (cr, width, height - 6.0);
+      cairo_scale (cr, width, height - NOTEBOOK_TAB_TOP_MARGIN);
       cairo_set_source (cr, pattern);
-      cairo_scale (cr, 1.0 / width, 1.0 / (height - 6.0));
+      cairo_scale (cr, 1.0 / width, 1.0 / (height - NOTEBOOK_TAB_TOP_MARGIN));
     }
   else
     {
@@ -306,13 +287,8 @@ render_notebook_extension (GtkThemingEngine *engine,
 
   cairo_stroke (cr);
 
-  gdk_rgba_free (color);
-
   if (pattern != NULL)
     cairo_pattern_destroy (pattern);
-
-  if (background_pattern != NULL)
-    cairo_pattern_destroy (background_pattern);
 
   cairo_restore (cr);
 }
@@ -326,8 +302,6 @@ adwaita_engine_render_extension (GtkThemingEngine *engine,
                                  gdouble           height,
                                  GtkPositionType   gap_side)
 {
-  GtkStateFlags state;
-
   if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_NOTEBOOK) &&
       ((gap_side == GTK_POS_TOP) || (gap_side == GTK_POS_BOTTOM)))
     {
@@ -339,46 +313,6 @@ adwaita_engine_render_extension (GtkThemingEngine *engine,
     (engine, cr,
      x, y, width, height,
      gap_side);
-
-  state = gtk_theming_engine_get_state (engine);
-
-  if (state & GTK_STATE_FLAG_ACTIVE)
-    {
-      GdkRGBA *fill;
-
-      gtk_theming_engine_get (engine, state,
-                              "-adwaita-selected-tab-color", &fill,
-                              NULL);
-
-      switch (gap_side)
-        {
-        case GTK_POS_BOTTOM:
-          cairo_rectangle (cr,
-                           x + 1, y + 1,
-                           width - 2, 3);
-          break;
-        case GTK_POS_TOP:
-          cairo_rectangle (cr,
-                           x + 1, y + height - 4,
-                           width - 2, 3);
-          break;
-        case GTK_POS_RIGHT:
-          cairo_rectangle (cr,
-                           x + 1, y + 1,
-                           3, height - 2);
-          break;
-        case GTK_POS_LEFT:
-          cairo_rectangle (cr,
-                           x + width - 4, y + 1,
-                           3, height - 2);
-          break;
-        }
-
-      gdk_cairo_set_source_rgba (cr, fill);
-      cairo_fill (cr);
-
-      gdk_rgba_free (fill);
-    }
 }
 
 static void
@@ -688,11 +622,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
                                                           "Focus border radius",
                                                           0, G_MAXINT, 0,
                                                           0));
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_boxed ("selected-tab-color",
-                                                            "Selected tab color",
-                                                            "Selected tab color",
-                                                            GDK_TYPE_RGBA, 0));
   gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
                                         g_param_spec_boxed ("border-gradient",
                                                             "Border gradient",
