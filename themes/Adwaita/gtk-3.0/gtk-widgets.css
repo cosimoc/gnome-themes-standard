@@ -217,6 +217,10 @@ GtkImage:insensitive {
     -adwaita-progressbar-pattern: none;
 }
 
+.entry:selected {
+    color: @theme_selected_fg_color;
+}
+
 .entry:backdrop {
     color: @theme_unfocused_text_color;
 }
@@ -933,16 +937,17 @@ GtkLinkButton * {
     background-image: linear-gradient(to bottom,
                                       @notebook_selected_tab_color,
                                       @notebook_selected_tab_color 2px,
-                                      @button_gradient_color_a 3px,
+                                      @button_gradient_color_a 3px, /* FIXME */
                                       @theme_base_color);
 }
 
 .notebook tab:active:backdrop {
     /* FIXME I need to set a background-image here, background-color is ignored */
-    background-image: -gtk-gradient (linear, 
-                                             left top, left bottom,
-                                             from (@theme_unfocused_base_color),
-                                             to (@theme_unfocused_base_color));
+    background-image: linear-gradient(to bottom,
+                                      @unfocused_borders,
+                                      @unfocused_borders 2px,
+                                      @theme_unfocused_base_color 3px,
+                                      @theme_unfocused_base_color);
     background-color:  @theme_unfocused_base_color;
     border-color: @unfocused_borders;
     /* FIXME - should be possible to set it to none and use border color */
@@ -951,11 +956,6 @@ GtkLinkButton * {
                                              from (@unfocused_borders),
                                              to (@unfocused_borders));
     -adwaita-selected-tab-color: @unfocused_borders;
-}
-
-.notebook tab.left:active:backdrop,
-.notebook tab.right:active:backdrop {
-    -adwaita-selected-tab-color: alpha(@theme_base_color, 0.0);
 }
 
 .notebook tab.top {
@@ -1003,6 +1003,7 @@ GtkLinkButton * {
     border-radius: 0 3px 3px 0;
 }
 
+/* close button styling */
 .notebook tab .button,
 .notebook tab .button:active,
 .notebook tab .button:hover {
@@ -1014,7 +1015,7 @@ GtkLinkButton * {
 
 .notebook tab .button GtkImage {
     border-radius: 3px;
-    color: mix(@theme_fg_color, @theme_base_color, 0.7); /* FIXME*/
+    color: mix(@theme_fg_color, @theme_base_color, 0.6); /* FIXME*/
     border-style: solid;
     border-color: transparent;
     border-width: 1px;
@@ -1829,6 +1830,7 @@ GtkIconView:backdrop {
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
     background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
     border-radius: 4px;
 
     /* FIXME: this probably needs to be better;
@@ -1962,6 +1964,7 @@ row:selected {
 
 .cell:selected {
     background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 .expander {
