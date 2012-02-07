@@ -194,6 +194,7 @@ GtkImage:insensitive {
  * Text Entries *
  ****************/
 .entry {
+    background-color: @theme_base_color;
     border-style: solid;
     padding: 4px;
 
