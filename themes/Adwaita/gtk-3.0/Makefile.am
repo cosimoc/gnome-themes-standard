@@ -26,4 +26,7 @@ EXTRA_DIST = \
 	gtk-widgets-assets-dark.css \
 	settings.ini
 
+CLEANFILES = \
+	gtk.gresource
+
 -include $(top_srcdir)/git.mk
