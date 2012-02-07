@@ -1,3 +1,17 @@
+3.3.5
+=====
+
+Use GTK resource file support
+Use PNG assets instead of SVG
+Remove the window resize grip
+Don't set child-displacement-y on buttons
+Don't set WM title/button borders on frameless windows
+Improve check/radio and slider assets
+Adapt to GTK+ master changed for
+ - border/padding/margin units
+ - entry/combobox border allocations
+ - GtkImage backgrounds
+
 3.3.4
 =====
 
