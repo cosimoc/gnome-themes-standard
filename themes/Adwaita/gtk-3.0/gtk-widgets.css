@@ -50,6 +50,7 @@
 
 GtkWindow {
     color: @theme_fg_color;
+    background-color: @theme_bg_color;
 }
 
 GtkWindow:backdrop {
@@ -59,7 +60,6 @@ GtkWindow:backdrop {
 * {
     /* inherit the color from parent by default */
     color: inherit;
-    background-color: @theme_bg_color;
 }
 
 *:selected,
