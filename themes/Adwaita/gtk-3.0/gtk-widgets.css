@@ -316,6 +316,59 @@ GtkImage:insensitive {
     box-shadow: 1 0 inset @inset_dark_color, 0 1 inset alpha(@theme_selected_bg_color, 0.2), -1 -1 inset alpha(@theme_selected_bg_color, 0.2);
 }
 
+/*****************
+ * Color Chooser *
+ *****************/
+GtkColorSwatch {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: @borders;
+}
+
+GtkColorSwatch.left,
+GtkColorSwatch:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+GtkColorSwatch.right,
+GtkColorSwatch:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+GtkColorSwatch:only-child {
+    border-radius: 10px;
+}
+
+GtkColorSwatch.top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+GtkColorSwatch.bottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.color-active-badge {
+    background-color: @theme_bg_color;
+    color: @theme_text_color;
+    border-width: 2px;
+}
+
+.color-active-badge.color-light {
+    border-color: alpha(black, 0.4);
+}
+
+.color-active-badge.color-dark {
+    border-color: alpha(white, 0.4);
+}
+
+GtkColorEditor GtkColorSwatch {
+    border-radius: 2px;
+}
 
 /****************
  * Progress bar *
