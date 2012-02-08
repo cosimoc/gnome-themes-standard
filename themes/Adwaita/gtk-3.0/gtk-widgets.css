@@ -194,7 +194,6 @@ GtkImage:insensitive {
  * Text Entries *
  ****************/
 .entry {
-    background-color: @theme_base_color;
     border-style: solid;
     padding: 4px;
 
@@ -220,6 +219,10 @@ GtkImage:insensitive {
 
 .entry:selected {
     color: @theme_selected_fg_color;
+}
+
+.entry:insensitive {
+	color: @insensitive_fg_color;
 }
 
 .entry:backdrop {
