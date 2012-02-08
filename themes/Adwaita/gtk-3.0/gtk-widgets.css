@@ -200,6 +200,7 @@ GtkImage:insensitive {
     /* border-image defined in the -assets variants */
 
     color: @entry_text_color;
+    background-color: @theme_base_color;
 }
 
 .entry:focus {
@@ -219,10 +220,11 @@ GtkImage:insensitive {
 
 .entry:selected {
     color: @theme_selected_fg_color;
+    background-color: @theme_selected_bg_color;
 }
 
 .entry:insensitive {
-	color: @insensitive_fg_color;
+    color: @insensitive_fg_color;
 }
 
 .entry:backdrop {
@@ -235,6 +237,7 @@ GtkImage:insensitive {
 
 .entry:selected:backdrop {
     color: @theme_unfocused_selected_fg_color;
+    background-color: @theme_unfocused_selected_bg_color
 }
 
 /*******************
