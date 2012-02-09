@@ -319,11 +319,14 @@ GtkImage:insensitive {
 /*****************
  * Color Chooser *
  *****************/
-GtkColorSwatch {
+GtkColorSwatch,
+GtkColorSwatch:selected {
     border-width: 1px;
     border-style: solid;
     border-radius: 1px;
     border-color: @borders;
+
+    background-color: transparent;
 }
 
 GtkColorSwatch.left,
@@ -352,7 +355,8 @@ GtkColorSwatch.bottom {
     border-bottom-right-radius: 10px;
 }
 
-.color-active-badge {
+.color-active-badge,
+.color-active-badge:selected {
     background-color: @theme_bg_color;
     color: @theme_text_color;
     border-width: 2px;
