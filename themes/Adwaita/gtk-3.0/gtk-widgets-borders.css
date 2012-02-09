@@ -41,6 +41,20 @@ GtkSwitch.trough:active {
     border-width: 1px 1px 2px 1px;
 }
 
+/* tooltip elements borders */
+.tooltip .entry,
+.tooltip .button {
+    border-image: url("borders/tooltip-generic-border.svg") 3 / 3 stretch;
+    border-width: 1px;
+}
+
+/* tooltip focused elements borders */
+.tooltip .entry:focus,
+.tooltip .button:focus {
+    border-image: url("borders/tooltip-generic-border-focused.svg") 3 / 3 stretch;
+    border-width: 1px;
+}
+
 /* primary toolbar - generic element borders */
 .primary-toolbar .entry,
 .primary-toolbar GtkComboBox.combobox-entry .entry,

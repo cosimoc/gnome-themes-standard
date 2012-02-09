@@ -18,4 +18,8 @@ EXTRA_DIST = 		\
 	primary-toolbar-generic-border.svg \
 	primary-toolbar-generic-border-dark.svg \
 	primary-toolbar-generic-border-unfocused.svg \
-	primary-toolbar-generic-border-unfocused-dark.svg
+	primary-toolbar-generic-border-unfocused-dark.svg \
+	tooltip-generic-border.svg \
+	tooltip-generic-border-dark.svg \
+	tooltip-generic-border-focused.svg \
+	tooltip-generic-border-focused-dark.svg
