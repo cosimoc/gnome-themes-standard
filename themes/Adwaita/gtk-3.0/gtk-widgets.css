@@ -930,8 +930,9 @@ GtkLinkButton * {
     border-width: 0;
 
     background-image: linear-gradient(to bottom,
-                                      @notebook_tab_hilight 1px,
+                                      @notebook_tab_hilight 2px,
                                       @notebook_tab_gradient_a 2px,
+                                      @notebook_tab_gradient_a 7px,
                                       @notebook_tab_gradient_b);
 
     -adwaita-focus-border-radius: 2;
@@ -1035,6 +1036,7 @@ GtkLinkButton * {
     border-color: transparent;
     border-width: 1px;
     padding: 0;
+
     icon-shadow: 0 1 alpha(white, 0.5); /* FIXME*/
 }
 

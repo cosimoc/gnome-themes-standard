@@ -156,8 +156,8 @@
 @define-color notebook_active_tab_border #1372d3;
 @define-color notebook_selected_tab_color #8dc0f3;
 
-@define-color notebook_tab_gradient_a shade(@theme_bg_color, 0.98);
-@define-color notebook_tab_gradient_b shade(@theme_bg_color, 0.93);
+@define-color notebook_tab_gradient_a shade(@theme_bg_color, 0.97);
+@define-color notebook_tab_gradient_b shade(@theme_bg_color, 0.85);
 @define-color notebook_tab_hilight shade(@theme_bg_color, 1.02);
 
 /*@define-color toolbar_gradient_base #aaaa9e;
