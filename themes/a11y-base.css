@@ -1,0 +1,305 @@
+* {
+    -GtkRange-stepper-size: 20;
+
+    -GtkTreeView-expander-size: 16;
+
+    -GtkWidget-cursor-color: #cc0000;
+    -GtkWidget-cursor-aspect-ratio: 0.1;
+    -GtkWidget-focus-line-width: 30;
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 2;
+    -GtkWidget-focus-line-pattern: "\002\001";
+    -GtkWidget-link-color: #000060;
+    -GtkWidget-visited-link-color: #600000;
+
+    -GtkMenu-horizontal-padding: 0;
+    -GtkMenu-vertical-padding: 0;
+
+    -GtkScrolledWindow-scrollbar-spacing: 0;
+    -GtkScrolledWindow-scrollbars-within-bevel: 1;
+
+    /* Pidgin */
+    -GtkIMHtml-hyperlink-color: #000060;
+    -GtkIMHtml-hyperlink-visited-color: #600000;
+    -GtkIMHtml-hyperlink-prelight-color: #404080;
+
+    /* Evolution */
+    -GtkHTML-link-color: #000060;
+    -GtkHTML-vlink-color: #600000;
+    -GtkHTML-cite-color: #003000;
+
+    -GtkComboBox-arrow-scaling: 0.9;
+}
+
+GtkWindow {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+}
+
+*:insensitive {
+    color: @theme_insensitive_color;
+    background-color: @theme_insensitive_bg;
+    border-color: @theme_insensitive_color;
+}
+
+*:selected {
+    background-color: @theme_active_color;
+    color: @theme_fg_color;
+}
+
+*:selected:focused {
+    background-color: @theme_fg_color;
+    color: @theme_base_color;
+}
+
+GtkImage:insensitive {
+    background-color: transparent;
+}
+
+.tooltip {
+    background-color: @theme_fg_color;
+    color: @theme_insensitive_bg;
+}
+
+.grip {
+    background-color: @theme_insensitive_color;
+}
+
+.button,
+.trough,
+.entry {
+    border-width: 2px;
+    border-style: solid;
+    border-color: @theme_fg_color;
+}
+
+.button:hover {
+    background-color: @theme_fg_color;
+    border-color: @theme_insensitive_bg;
+    color: @theme_insensitive_bg;
+}
+
+GtkComboBox *:hover {
+    color: @theme_insensitive_bg;
+}
+
+GtkComboBox .separator {
+    color: transparent;
+}
+
+.button:insensitive,
+.trough:insensitive,
+.entry:insensitive {
+    border-color: @theme_insensitive_color;
+}
+
+.trough {
+    background-color: @theme_active_color;
+    color: @theme_fg_color;
+}
+
+.trough:active {
+    color: @theme_base_color;
+}
+
+.trough:insensitive {
+    background-color: @theme_insensitive_bg;
+    color: @theme_insensitive_color;
+}
+
+.button:active,
+.trough:active {
+    background-color: @theme_active_color;
+}
+
+.button:hover:active {
+    background-color: @theme_fg_color;
+}
+
+.button:insensitive:active,
+.trough:insensitive:active {
+    background-color: @theme_insensitive_bg;
+}
+
+.entry {
+    padding: 4px;
+}
+
+.button {
+    padding: 1px 4px;
+}
+
+GtkComboBox .button {
+    padding: 0 4px;
+}
+
+.combobox-entry .entry:first-child {
+    border-right-width: 0px;
+}
+
+.combobox-entry .entry:last-child {
+    border-left-width: 0px;
+}
+
+.spinbutton .button {
+    padding: 2px 6px;
+    border-width: 0px 2px;
+    color: @theme_fg_color;
+}
+
+.spinbutton .button:hover {
+    color: @theme_insensitive_bg;
+    border-color: @theme_fg_color;
+}
+
+.spinbutton .button:insensitive {
+    color: @theme_insensitive_color;
+}
+
+.spinbutton .button:first-child,
+.spinbutton .button:last-child {
+    border-width: 0px;
+}
+
+.menubar .menuitem {
+    padding: 3px 5px;
+}
+
+.menubar .menuitem:hover {
+    background-color: @theme_fg_color;
+    color: @theme_insensitive_bg;
+}
+
+.menu .menuitem {
+    padding: 4px;
+}
+
+.menu .menuitem:hover {
+    background-color: @theme_fg_color;
+    color: @theme_insensitive_bg;
+}
+
+.menu {
+    border-style: solid;
+    border-color: red;
+    border-width: 0px;
+}
+
+.menuitem.separator {
+    -GtkMenuItem-horizontal-padding: 0;
+}
+
+.toolbar {
+    padding: 4px;
+    border-width: 2px 0;
+    border-style: solid;
+}
+
+.toolbar .button *:insensitive,
+.toolbar .button:insensitive {
+    background-color: @theme_base_color;
+}
+
+.toolbar .button *:insensitive:active,
+.toolbar .button:insensitive:active {
+    background-color: @theme_insensitive_bg;
+}
+
+.inline-toolbar {
+    border-width: 0 2px 2px;
+}
+
+.primary-toolbar.toolbar,
+.primary-toolbar .toolbar,
+.menubar.toolbar,
+.inline-toolbar {
+    -GtkToolbar-button-relief: normal;
+}
+
+.primary-toolbar .button {
+    border-color: transparent;
+}
+
+.primary-toolbar .button.raised,
+.primary-toolbar .raised .button {
+    border-color: @theme_fg_color;
+}
+
+.primary-toolbar .button:active {
+    border-color: @theme_fg_color;
+}
+
+.primary-toolbar .button:hover:active {
+    border-color: @theme_insensitive_bg;
+}
+
+.primary-toolbar .button:active:insensitive {
+    border-color: @theme_insensitive_color;
+}
+
+.slider {
+    background-color: @theme_base_color;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @theme_fg_color;
+
+    color: transparent;
+}
+
+.slider:hover {
+    background-color: @theme_fg_color;
+    border-color: @theme_fg_color;
+}
+
+.slider:hover:active {
+    border-color: @theme_insensitive_bg;
+}
+
+GtkSwitch.slider {
+    padding: 2px;
+    border-width: 1px;
+    border-color: @theme_insensitive_bg;
+}
+
+.notebook {
+    border-width: 2px;
+    border-color: @theme_fg_color;
+    border-style: solid;
+}
+
+tab {
+    background-color: @theme_active_color;
+    padding: 3px;
+}
+
+tab:active,
+row:hover {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+}
+
+GtkScrolledWindow.frame {
+    border-width: 2px;
+    border-style: solid;
+}
+
+column-header .button {
+    border-top-width: 0;
+    border-right-width: 0;
+}
+
+column-header .button:hover {
+    background-color: @theme_fg_color;
+    color: @theme_base_color;
+    border-color: @theme_fg_color;
+}
+
+column-header:first-child .button {
+    border-left-width: 0;
+}
+
+.check,
+.radio {
+    border-width: 1px;
+    border-style: solid;
+}
