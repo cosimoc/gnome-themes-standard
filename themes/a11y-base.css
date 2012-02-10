@@ -108,6 +108,13 @@ GtkComboBox .separator {
     background-color: @theme_insensitive_bg;
 }
 
+.progressbar {
+    background-color: @theme_fg_color;
+    border-color: @theme_insensitive_bg;
+    border-style: solid;
+    border-width: 2px;
+}
+
 .entry {
     padding: 4px;
 }
