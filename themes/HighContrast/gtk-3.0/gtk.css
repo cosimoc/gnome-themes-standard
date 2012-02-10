@@ -4,4 +4,21 @@
 @define-color theme_insensitive_color #999;
 @define-color theme_insensitive_bg #ccf;
 
+@define-color theme_cursor_color #cc0000;
+
+* {
+    /* Pidgin */
+    -GtkIMHtml-hyperlink-color: #000060;
+    -GtkIMHtml-hyperlink-visited-color: #600000;
+    -GtkIMHtml-hyperlink-prelight-color: #404080;
+
+    /* Evolution */
+    -GtkHTML-link-color: #000060;
+    -GtkHTML-vlink-color: #600000;
+    -GtkHTML-cite-color: #003000;
+
+    -GtkWidget-link-color: #80ccff;
+    -GtkWidget-visited-link-color: #ff80ff;
+}
+
 @import url("resource:///org/gnome/HighContrast/a11y.css");

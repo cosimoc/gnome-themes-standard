@@ -3,30 +3,18 @@
 
     -GtkTreeView-expander-size: 16;
 
-    -GtkWidget-cursor-color: #cc0000;
+    -GtkWidget-cursor-color: @theme_cursor_color;
     -GtkWidget-cursor-aspect-ratio: 0.1;
     -GtkWidget-focus-line-width: 30;
     -GtkWidget-focus-padding: 1;
     -GtkWidget-focus-line-width: 2;
     -GtkWidget-focus-line-pattern: "\002\001";
-    -GtkWidget-link-color: #000060;
-    -GtkWidget-visited-link-color: #600000;
 
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
 
     -GtkScrolledWindow-scrollbar-spacing: 0;
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
-
-    /* Pidgin */
-    -GtkIMHtml-hyperlink-color: #000060;
-    -GtkIMHtml-hyperlink-visited-color: #600000;
-    -GtkIMHtml-hyperlink-prelight-color: #404080;
-
-    /* Evolution */
-    -GtkHTML-link-color: #000060;
-    -GtkHTML-vlink-color: #600000;
-    -GtkHTML-cite-color: #003000;
 
     -GtkComboBox-arrow-scaling: 0.9;
 }
