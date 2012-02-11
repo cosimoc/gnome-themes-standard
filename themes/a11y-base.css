@@ -34,11 +34,6 @@ GtkWindow {
     color: @theme_fg_color;
 }
 
-*:selected:focused {
-    background-color: @theme_fg_color;
-    color: @theme_base_color;
-}
-
 GtkImage:insensitive {
     background-color: transparent;
 }
@@ -89,6 +84,7 @@ GtkComboBox .separator {
     color: @theme_base_color;
 }
 
+.entry:insensitive,
 .trough:insensitive {
     background-color: @theme_insensitive_bg;
     color: @theme_insensitive_color;
@@ -106,6 +102,10 @@ GtkComboBox .separator {
 .button:insensitive:active,
 .trough:insensitive:active {
     background-color: @theme_insensitive_bg;
+}
+
+.entry {
+    background-color: @theme_base_color;
 }
 
 .progressbar {
@@ -175,8 +175,8 @@ GtkComboBox .button {
 
 .menu {
     border-style: solid;
-    border-color: red;
-    border-width: 0px;
+    border-color: @theme_fg_color;
+    border-width: 2px;
 }
 
 .menuitem.separator {
@@ -231,6 +231,38 @@ GtkComboBox .button {
     border-color: @theme_insensitive_color;
 }
 
+.linked .button,
+.inline-toolbar .button {
+    border-right-width: 0;
+}
+
+.linked .button:hover,
+.inline-toolbar .button:hover {
+    border-color: transparent;
+}
+
+.linked .button:insensitive,
+.inline-toolbar .button:insensitive {
+    border-top-color: @theme_fg_color;
+    border-bottom-color: @theme_fg_color;
+}
+
+.linked .button:first-child,
+.inline-toolbar GtkToolButton:first-child .button {
+    border-left-color: @theme_fg_color;
+}
+
+.linked .button:last-child,
+.inline-toolbar GtkToolButton:last-child .button {
+    border-width: 2px;
+    border-right-color: @theme_fg_color;
+}
+
+.inline-toolbar .button *:insensitive,
+.inline-toolbar .button:insensitive {
+    background-color: @theme_insensitive_bg;
+}
+
 .slider {
     background-color: @theme_base_color;
     border-width: 2px;
@@ -271,8 +303,7 @@ tab {
     padding: 3px;
 }
 
-tab:active,
-row:hover {
+tab:active {
     background-color: @theme_base_color;
     color: @theme_fg_color;
 }
@@ -301,4 +332,22 @@ column-header:first-child .button {
 .radio {
     border-width: 1px;
     border-style: solid;
+}
+
+.expander row:selected:focus {
+    color: @theme_base_color;
+}
+
+.floating-bar {
+    background-color: @theme_insensitive_bg;
+}
+
+.info {
+    background-color: @theme_active_color;
+}
+
+.scrollbar {
+    -GtkRange-slider-width: 20;
+    -GtkRange-stepper-size: 20;
+    -GtkRange-trough-border: 0;
 }
