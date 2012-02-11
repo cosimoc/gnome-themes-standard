@@ -249,6 +249,11 @@ GtkComboBox .button {
     border-color: @theme_insensitive_bg;
 }
 
+.slider:insensitive {
+    background-color: @theme_insensitive_bg;
+    border-color: @theme_insensitive_color;
+}
+
 GtkSwitch.slider {
     padding: 2px;
     border-width: 1px;
