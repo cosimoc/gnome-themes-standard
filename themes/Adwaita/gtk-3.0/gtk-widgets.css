@@ -1893,6 +1893,15 @@ GtkTreeView.view:backdrop {
     color: @theme_unfocused_text_color;
 }
 
+GtkIconView.view.cell:backdrop:selected,
+.cell:backdrop:selected,
+.view:backdrop:selected,
+GtkTreeView:backdrop:selected,
+GtkTreeView.view:backdrop:selected {
+    background-color: @theme_unfocused_selected_bg_color;
+    color: @theme_unfocused_selected_fg_color;
+}
+
 /*column-header {
     padding: 0 4px;
 }*/

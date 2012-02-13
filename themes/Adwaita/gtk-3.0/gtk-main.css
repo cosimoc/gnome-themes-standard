@@ -26,7 +26,7 @@
 @define-color theme_unfocused_text_color mix(@theme_unfocused_fg_color, @theme_text_color, 0.5); /* Need something darker here to have stuff nicelly readable*/
 @define-color theme_unfocused_fg_color #a7aba7;
 @define-color theme_unfocused_bg_color @theme_bg_color;
-@define-color theme_unfocused_selected_bg_color shade(@theme_unfocused_bg_color, 0.9);
+@define-color theme_unfocused_selected_bg_color shade(@theme_unfocused_bg_color, 0.95);
 @define-color theme_unfocused_selected_fg_color @theme_fg_color;
 @define-color unfocused_button_background @theme_unfocused_bg_color;
 @define-color unfocused_borders @borders;
