@@ -2033,6 +2033,12 @@ row:selected {
     background-color: @theme_selected_bg_color;
 }
 
+.expander row:selected:backdrop {
+    background-color: @theme_unfocused_selected_bg_color;
+    color: @internal_element_color;
+    border-color: @internal_element_color;
+}
+
 /* Calendars */
 GtkCalendar {
     padding: 2px;
