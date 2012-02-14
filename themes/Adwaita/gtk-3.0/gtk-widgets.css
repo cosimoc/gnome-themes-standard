@@ -1877,7 +1877,7 @@ GtkTreeView {
     -GtkWidget-focus-padding: 1;
     -adwaita-focus-border-radius: 2;
     -adwaita-focus-border-dashes: 1;
-    -adwaita-focus-border-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
+    -adwaita-focus-border-color: alpha(@theme_text_color, 0.6);
 
     background-color: @theme_base_color;
 }
@@ -1900,6 +1900,10 @@ GtkTreeView:backdrop:selected,
 GtkTreeView.view:backdrop:selected {
     background-color: @theme_unfocused_selected_bg_color;
     color: @theme_unfocused_selected_fg_color;
+}
+
+GtkTreeView:selected:focus {
+    -adwaita-focus-border-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
 }
 
 /*column-header {
