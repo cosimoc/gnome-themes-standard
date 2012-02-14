@@ -1882,6 +1882,13 @@ GtkTreeView {
     background-color: @theme_base_color;
 }
 
+GtkTreeView.dnd {
+    border-color: @internal_element_color;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+}
+
 GtkTreeView.view {
     background-color: @theme_base_color;
 }
