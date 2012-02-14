@@ -352,3 +352,9 @@ column-header:first-child .button {
     -GtkRange-stepper-size: 20;
     -GtkRange-trough-border: 0;
 }
+
+GtkColorSwatch {
+    border-width: 1px;
+    border-style: solid;
+    border-color: @theme_fg_color;
+}
