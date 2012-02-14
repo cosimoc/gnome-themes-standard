@@ -50,6 +50,11 @@ TerminalWindow GtkNotebook.notebook {
     border-radius: 5px;
 }
 
+.nautilus-inactive-pane .nautilus-canvas-item:selected {
+    background-color: @theme_unfocused_selected_bg_color;
+    color: @theme_unfocused_selected_fg_color;
+}
+
 .nautilus-desktop.nautilus-canvas-item {
     color: @theme_bg_color;
     text-shadow: 1 1 black;
