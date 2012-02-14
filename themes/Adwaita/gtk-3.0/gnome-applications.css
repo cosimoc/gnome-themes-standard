@@ -669,6 +669,10 @@ ContactsWindow .sidebar .view:selected:focus {
  border-width: 1px;
 }
 
+.button.contacts-square {
+ padding: 0px;
+}
+
 .contacts-combo .button {
  border-image: none;
  border-width: 1px;
