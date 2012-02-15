@@ -2285,6 +2285,13 @@ GtkInfoBar:last-child,
     color: mix (@theme_selected_fg_color, @theme_base_color, 0.50);
 }
 
+GtkAboutDialog .notebook {
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+}
+
+
 /**********************
  * Fallback Mode Panel
  **********************/

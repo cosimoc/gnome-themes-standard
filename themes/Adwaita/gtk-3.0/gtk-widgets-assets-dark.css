@@ -193,8 +193,8 @@ GtkScale.slider.horizontal:insensitive {
     background-image: url("assets/scale-slider-horz-insensitive-dark.png");
 }
 
-GtkScale.slider:insensitive:backdrop,
-GtkScale.slider.horizontal:insensitive:backdrop {
+GtkScale.slider:backdrop:insensitive,
+GtkScale.slider.horizontal:backdrop:insensitive {
     background-image: url("assets/scale-slider-horz-backdrop-insensitive-dark.png");
 }
 
@@ -211,40 +211,71 @@ GtkScale.slider.vertical:insensitive {
     background-image: url("assets/scale-slider-vert-insensitive-dark.png");
 }
 
-GtkScale.slider.vertical:insensitive:backdrop {
+GtkScale.slider.vertical:backdrop:insensitive {
     background-image: url("assets/scale-slider-vert-backdrop-insensitive-dark.png");
 }
 
 GtkScale.scale-has-marks-above.slider.horizontal {
-    background-image: url("assets/scale-slider-marks-above-horizontal-dark.svg");
+    background-image: url("assets/scale-slider-up-dark.png");
 }
 
 GtkScale.scale-has-marks-above.slider.horizontal:insensitive {
-    background-image: url("assets/scale-slider-marks-above-horizontal-insensitive-dark.svg");
+    background-image: url("assets/scale-slider-up-insensitive-dark.png");
+}
+
+GtkScale.scale-has-marks-above.slider.horizontal:backdrop {
+    background-image: url("assets/scale-slider-up-backdrop-dark.png");
+}
+
+GtkScale.scale-has-marks-above.slider.horizontal:backdrop:insensitive {
+    background-image: url("assets/scale-slider-up-backdrop-insensitive-dark.png");
 }
 
 GtkScale.scale-has-marks-above.slider.vertical {
-    background-image: url("assets/scale-slider-marks-above-vertical-dark.svg");
+    background-image: url("assets/scale-slider-left-dark.png");
 }
 
 GtkScale.scale-has-marks-above.slider.vertical:insensitive {
-    background-image: url("assets/scale-slider-marks-above-vertical-insensitive-dark.svg");
+    background-image: url("assets/scale-slider-left-insensitive-dark.png");
+}
+
+GtkScale.scale-has-marks-above.slider.vertical:backdrop {
+    background-image: url("assets/scale-slider-left-backdrop-dark.png");
+}
+
+GtkScale.scale-has-marks-above.slider.vertical:backdrop:insensitive {
+    background-image: url("assets/scale-slider-left-backdrop-insensitive-dark.png");
 }
 
 GtkScale.scale-has-marks-below.slider.horizontal {
-    background-image: url("assets/scale-slider-marks-below-horizontal-dark.svg");
+    background-image: url("assets/scale-slider-down-dark.png");
 }
 
 GtkScale.scale-has-marks-below.slider.horizontal:insensitive {
-    background-image: url("assets/scale-slider-marks-below-horizontal-insensitive-dark.svg");
+    background-image: url("assets/scale-slider-down-insensitive-dark.png");
+}
+
+GtkScale.scale-has-marks-below.slider.horizontal:backdrop {
+    background-image: url("assets/scale-slider-down-backdrop-dark.png");
+}
+
+GtkScale.scale-has-marks-below.slider.horizontal:backdrop:insensitive {
+    background-image: url("assets/scale-slider-down-backdrop-insensitive-dark.png");
 }
 
 GtkScale.scale-has-marks-below.slider.vertical {
-    background-image: url("assets/scale-slider-marks-below-vertical-dark.svg");
+    background-image: url("assets/scale-slider-right-dark.png");
 }
 
 GtkScale.scale-has-marks-below.slider.vertical:insensitive {
-    background-image: url("assets/scale-slider-marks-below-vertical-insensitive-dark.svg");
+    background-image: url("assets/scale-slider-right-insensitive-dark.png");
 }
 
+GtkScale.scale-has-marks-below.slider.vertical:backdrop {
+    background-image: url("assets/scale-slider-right-backdrop-dark.png");
+}
+
+GtkScale.scale-has-marks-below.slider.vertical:backdrop:insensitive {
+    background-image: url("assets/scale-slider-right-backdrop-insensitive-dark.png");
+}
 

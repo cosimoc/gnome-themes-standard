@@ -229,66 +229,66 @@ GtkScale.slider.vertical:insensitive:backdrop {
 }
 
 GtkScale.scale-has-marks-above.slider.horizontal {
-    background-image: url("assets/scale-slider-marks-above-horizontal.svg");
-}
-
-GtkScale.scale-has-marks-above.slider.horizontal:backdrop {
-    background-image: url("assets/scale-slider-marks-above-horizontal-unfocused.svg");
+    background-image: url("assets/scale-slider-up.png");
 }
 
 GtkScale.scale-has-marks-above.slider.horizontal:insensitive {
-    background-image: url("assets/scale-slider-marks-above-horizontal-insensitive.svg");
+    background-image: url("assets/scale-slider-up-insensitive.png");
 }
 
-GtkScale.scale-has-marks-above.slider.horizontal:insensitive:backdrop {
-    background-image: url("assets/scale-slider-marks-above-horizontal-insensitive-unfocused.svg");
+GtkScale.scale-has-marks-above.slider.horizontal:backdrop {
+    background-image: url("assets/scale-slider-up-backdrop.png");
+}
+
+GtkScale.scale-has-marks-above.slider.horizontal:backdrop:insensitive {
+    background-image: url("assets/scale-slider-up-backdrop-insensitive.png");
 }
 
 GtkScale.scale-has-marks-above.slider.vertical {
-    background-image: url("assets/scale-slider-marks-above-vertical.svg");
-}
-
-GtkScale.scale-has-marks-above.slider.vertical:backdrop {
-    background-image: url("assets/scale-slider-marks-above-vertical-unfocused.svg");
+    background-image: url("assets/scale-slider-left.png");
 }
 
 GtkScale.scale-has-marks-above.slider.vertical:insensitive {
-    background-image: url("assets/scale-slider-marks-above-vertical-insensitive.svg");
+    background-image: url("assets/scale-slider-left-insensitive.png");
 }
 
-GtkScale.scale-has-marks-above.slider.vertical:insensitive:backdrop {
-    background-image: url("assets/scale-slider-marks-above-vertical-insensitive-unfocused.svg");
+GtkScale.scale-has-marks-above.slider.vertical:backdrop {
+    background-image: url("assets/scale-slider-left-backdrop.png");
+}
+
+GtkScale.scale-has-marks-above.slider.vertical:backdrop:insensitive {
+    background-image: url("assets/scale-slider-left-backdrop-insensitive.png");
 }
 
 GtkScale.scale-has-marks-below.slider.horizontal {
-    background-image: url("assets/scale-slider-marks-below-horizontal.svg");
-}
-
-GtkScale.scale-has-marks-below.slider.horizontal:backdrop {
-    background-image: url("assets/scale-slider-marks-below-horizontal-unfocused.svg");
+    background-image: url("assets/scale-slider-down.png");
 }
 
 GtkScale.scale-has-marks-below.slider.horizontal:insensitive {
-    background-image: url("assets/scale-slider-marks-below-horizontal-insensitive.svg");
+    background-image: url("assets/scale-slider-down-insensitive.png");
 }
 
-GtkScale.scale-has-marks-below.slider.horizontal:insensitive:backdrop {
-    background-image: url("assets/scale-slider-marks-below-horizontal-insensitive-unfocused.svg");
+GtkScale.scale-has-marks-below.slider.horizontal:backdrop {
+    background-image: url("assets/scale-slider-down-backdrop.png");
+}
+
+GtkScale.scale-has-marks-below.slider.horizontal:backdrop:insensitive {
+    background-image: url("assets/scale-slider-down-backdrop-insensitive.png");
 }
 
 GtkScale.scale-has-marks-below.slider.vertical {
-    background-image: url("assets/scale-slider-marks-below-vertical.svg");
-}
-
-GtkScale.scale-has-marks-below.slider.vertical:backdrop {
-    background-image: url("assets/scale-slider-marks-below-vertical-unfocused.svg");
+    background-image: url("assets/scale-slider-right.png");
 }
 
 GtkScale.scale-has-marks-below.slider.vertical:insensitive {
-    background-image: url("assets/scale-slider-marks-below-vertical-insensitive.svg");
+    background-image: url("assets/scale-slider-right-insensitive.png");
 }
 
-GtkScale.scale-has-marks-below.slider.vertical:insensitive:backdrop {
-    background-image: url("assets/scale-slider-marks-below-vertical-insensitive-unfocused.svg");
+GtkScale.scale-has-marks-below.slider.vertical:backdrop {
+    background-image: url("assets/scale-slider-right-backdrop.png");
+}
+
+GtkScale.scale-has-marks-below.slider.vertical:backdrop:insensitive {
+    background-image: url("assets/scale-slider-right-backdrop-insensitive.png");
 }
 
