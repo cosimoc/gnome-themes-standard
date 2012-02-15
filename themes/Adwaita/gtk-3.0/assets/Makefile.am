@@ -1,64 +1,34 @@
 EXTRA_DIST = 		\
 	checkbox-checked.png \
 	checkbox-checked-alt.png \
-	checkbox-checked-insensitive.png \
+	checkbox-checked-alt-dark.png \
 	checkbox-checked-backdrop.png \
+	checkbox-checked-backdrop-dark.png \
 	checkbox-checked-backdrop-insensitive.png \
-	checkbox-unchecked.png \
-	checkbox-unchecked-alt.png \
-	checkbox-unchecked-insensitive.png \
-	checkbox-unchecked-backdrop.png \
-	checkbox-unchecked-backdrop-insensitive.png \
+	checkbox-checked-backdrop-insensitive-dark.png \
+	checkbox-checked-dark.png \
+	checkbox-checked-insensitive.png \
+	checkbox-checked-insensitive-dark.png \
 	checkbox-mixed.png \
 	checkbox-mixed-alt.png \
-	checkbox-mixed-insensitive.png \
-	checkbox-mixed-backdrop.png \
-	checkbox-mixed-backdrop-insensitive.png \
-	radio-checked.png \
-	radio-checked-alt.png \
-	radio-checked-insensitive.png \
-	radio-checked-backdrop.png \
-	radio-checked-backdrop-insensitive.png \
-	radio-unchecked.png \
-	radio-unchecked-alt.png \
-	radio-unchecked-insensitive.png \
-	radio-unchecked-backdrop.png \
-	radio-unchecked-backdrop-insensitive.png \
-	radio-mixed.png \
-	radio-mixed-alt.png \
-	radio-mixed-insensitive.png \
-	radio-mixed-backdrop.png \
-	radio-mixed-backdrop-insensitive.png \
-	checkbox-checked-dark.png \
-	checkbox-checked-alt-dark.png \
-	checkbox-checked-insensitive-dark.png \
-	checkbox-checked-backdrop-dark.png \
-	checkbox-checked-backdrop-insensitive-dark.png \
-	checkbox-unchecked-dark.png \
-	checkbox-unchecked-alt-dark.png \
-	checkbox-unchecked-insensitive-dark.png \
-	checkbox-unchecked-backdrop-dark.png \
-	checkbox-unchecked-backdrop-insensitive-dark.png \
-	checkbox-mixed-dark.png \
 	checkbox-mixed-alt-dark.png \
-	checkbox-mixed-insensitive-dark.png \
+	checkbox-mixed-backdrop.png \
 	checkbox-mixed-backdrop-dark.png \
+	checkbox-mixed-backdrop-insensitive.png \
 	checkbox-mixed-backdrop-insensitive-dark.png \
-	radio-checked-dark.png \
-	radio-checked-alt-dark.png \
-	radio-checked-insensitive-dark.png \
-	radio-checked-backdrop-dark.png \
-	radio-checked-backdrop-insensitive-dark.png \
-	radio-unchecked-dark.png \
-	radio-unchecked-alt-dark.png \
-	radio-unchecked-insensitive-dark.png \
-	radio-unchecked-backdrop-dark.png \
-	radio-unchecked-backdrop-insensitive-dark.png \
-	radio-mixed-dark.png \
-	radio-mixed-alt-dark.png \
-	radio-mixed-insensitive-dark.png \
-	radio-mixed-backdrop-dark.png \
-	radio-mixed-backdrop-insensitive-dark.png \
+	checkbox-mixed-dark.png \
+	checkbox-mixed-insensitive.png \
+	checkbox-mixed-insensitive-dark.png \
+	checkbox-unchecked.png \
+	checkbox-unchecked-alt.png \
+	checkbox-unchecked-alt-dark.png \
+	checkbox-unchecked-backdrop.png \
+	checkbox-unchecked-backdrop-dark.png \
+	checkbox-unchecked-backdrop-insensitive.png \
+	checkbox-unchecked-backdrop-insensitive-dark.png \
+	checkbox-unchecked-dark.png \
+	checkbox-unchecked-insensitive.png \
+	checkbox-unchecked-insensitive-dark.png \
 	menuitem-checkbox-checked.png \
 	menuitem-checkbox-checked-insensitive.png \
 	menuitem-checkbox-checked-selected.png \
@@ -68,47 +38,85 @@ EXTRA_DIST = 		\
 	menuitem-radio-checked.png \
 	menuitem-radio-checked-insensitive.png \
 	menuitem-radio-checked-selected.png \
+	radio-checked.png \
+	radio-checked-alt.png \
+	radio-checked-alt-dark.png \
+	radio-checked-backdrop.png \
+	radio-checked-backdrop-dark.png \
+	radio-checked-backdrop-insensitive.png \
+	radio-checked-backdrop-insensitive-dark.png \
+	radio-checked-dark.png \
+	radio-checked-insensitive.png \
+	radio-checked-insensitive-dark.png \
+	radio-mixed.png \
+	radio-mixed-alt.png \
+	radio-mixed-alt-dark.png \
+	radio-mixed-backdrop.png \
+	radio-mixed-backdrop-dark.png \
+	radio-mixed-backdrop-insensitive.png \
+	radio-mixed-backdrop-insensitive-dark.png \
+	radio-mixed-dark.png \
+	radio-mixed-insensitive.png \
+	radio-mixed-insensitive-dark.png \
+	radio-unchecked.png \
+	radio-unchecked-alt.png \
+	radio-unchecked-alt-dark.png \
+	radio-unchecked-backdrop.png \
+	radio-unchecked-backdrop-dark.png \
+	radio-unchecked-backdrop-insensitive.png \
+	radio-unchecked-backdrop-insensitive-dark.png \
+	radio-unchecked-dark.png \
+	radio-unchecked-insensitive.png \
+	radio-unchecked-insensitive-dark.png \
 	resize-grip.svg \
+	scale-slider-down.png \
+	scale-slider-down-backdrop.png \
+	scale-slider-down-backdrop-dark.png \
+	scale-slider-down-backdrop-insensitive.png \
+	scale-slider-down-backdrop-insensitive-dark.png \
+	scale-slider-down-dark.png \
+	scale-slider-down-insensitive.png \
+	scale-slider-down-insensitive-dark.png \
 	scale-slider-horz.png \
-	scale-slider-horz-insensitive.png \
 	scale-slider-horz-backdrop.png \
-	scale-slider-horz-backdrop-insensitive.png \
-	scale-slider-vert.png \
-	scale-slider-vert-insensitive.png \
-	scale-slider-vert-backdrop.png \
-	scale-slider-vert-backdrop-insensitive.png \
-	scale-slider-horz-dark.png \
-	scale-slider-horz-insensitive-dark.png \
 	scale-slider-horz-backdrop-dark.png \
+	scale-slider-horz-backdrop-insensitive.png \
 	scale-slider-horz-backdrop-insensitive-dark.png \
-	scale-slider-vert-dark.png \
-	scale-slider-vert-insensitive-dark.png \
+	scale-slider-horz-dark.png \
+	scale-slider-horz-insensitive.png \
+	scale-slider-horz-insensitive-dark.png \
+	scale-slider-left.png \
+	scale-slider-left-backdrop.png \
+	scale-slider-left-backdrop-dark.png \
+	scale-slider-left-backdrop-insensitive.png \
+	scale-slider-left-backdrop-insensitive-dark.png \
+	scale-slider-left-dark.png \
+	scale-slider-left-insensitive.png \
+	scale-slider-left-insensitive-dark.png \
+	scale-slider-right.png \
+	scale-slider-right-backdrop.png \
+	scale-slider-right-backdrop-dark.png \
+	scale-slider-right-backdrop-insensitive.png \
+	scale-slider-right-backdrop-insensitive-dark.png \
+	scale-slider-right-dark.png \
+	scale-slider-right-insensitive.png \
+	scale-slider-right-insensitive-dark.png \
+	scale-slider-up.png \
+	scale-slider-up-backdrop.png \
+	scale-slider-up-backdrop-dark.png \
+	scale-slider-up-backdrop-insensitive.png \
+	scale-slider-up-backdrop-insensitive-dark.png \
+	scale-slider-up-dark.png \
+	scale-slider-up-insensitive.png \
+	scale-slider-up-insensitive-dark.png \
+	scale-slider-vert.png \
+	scale-slider-vert-backdrop.png \
 	scale-slider-vert-backdrop-dark.png \
+	scale-slider-vert-backdrop-insensitive.png \
 	scale-slider-vert-backdrop-insensitive-dark.png \
-	scale-slider-marks-above-horizontal.svg \
-	scale-slider-marks-above-horizontal-unfocused.svg \
-	scale-slider-marks-above-horizontal-dark.svg \
-	scale-slider-marks-above-horizontal-insensitive.svg \
-	scale-slider-marks-above-horizontal-insensitive-unfocused.svg \
-	scale-slider-marks-above-horizontal-insensitive-dark.svg \
-	scale-slider-marks-above-vertical.svg \
-	scale-slider-marks-above-vertical-unfocused.svg \
-	scale-slider-marks-above-vertical-dark.svg \
-	scale-slider-marks-above-vertical-insensitive.svg \
-	scale-slider-marks-above-vertical-insensitive-unfocused.svg \
-	scale-slider-marks-above-vertical-insensitive-dark.svg \
-	scale-slider-marks-below-horizontal.svg \
-	scale-slider-marks-below-horizontal-unfocused.svg \
-	scale-slider-marks-below-horizontal-dark.svg \
-	scale-slider-marks-below-horizontal-insensitive.svg \
-	scale-slider-marks-below-horizontal-insensitive-unfocused.svg \
-	scale-slider-marks-below-horizontal-insensitive-dark.svg \
-	scale-slider-marks-below-vertical.svg \
-	scale-slider-marks-below-vertical-unfocused.svg \
-	scale-slider-marks-below-vertical-dark.svg \
-	scale-slider-marks-below-vertical-insensitive.svg \
-	scale-slider-marks-below-vertical-insensitive-unfocused.svg \
-	scale-slider-marks-below-vertical-insensitive-dark.svg \
+	scale-slider-vert-dark.png \
+	scale-slider-vert-insensitive.png \
+	scale-slider-vert-insensitive-dark.png \
 	sidebar-radio-checked.svg \
 	sidebar-radio-checked-dark.svg \
 	sidebar-radio-prelight.svg \
