@@ -629,10 +629,6 @@ GtkComboBox.combobox-entry .button {
     color: @unfocused_insensitive_fg_color;
 }
 
-.primary-toolbar .button *:insensitive:backdrop {
-    color: mix(@unfocused_insensitive_bg_color, @unfocused_dark_bg, 0.65); /* FIXME */
-}
-
 .button *:active:backdrop,
 .button *:active:insensitive:backdrop {
     color: @theme_unfocused_bg_color;
