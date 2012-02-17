@@ -324,35 +324,37 @@ GtkColorSwatch:selected {
     border-width: 1px;
     border-style: solid;
     border-radius: 1px;
-    border-color: @borders;
+    border-color: alpha(black, 0.3);
+    box-shadow: 0 1 inset alpha(black, 0.1), 1 0 inset alpha(black, 0.05);
 
     background-color: transparent;
+    background-clip: border-box;
 }
 
 GtkColorSwatch.left,
 GtkColorSwatch:first-child {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
 GtkColorSwatch.right,
 GtkColorSwatch:last-child {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 GtkColorSwatch:only-child {
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 GtkColorSwatch.top {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 GtkColorSwatch.bottom {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 .color-active-badge,
@@ -371,8 +373,10 @@ GtkColorSwatch.bottom {
 }
 
 GtkColorEditor GtkColorSwatch {
-    border-radius: 2px;
+    border-radius: 6px;
 }
+
+
 
 /****************
  * Progress bar *
