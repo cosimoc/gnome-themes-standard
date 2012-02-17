@@ -325,7 +325,7 @@ GtkColorSwatch:selected {
     border-style: solid;
     border-radius: 1px;
     border-color: alpha(black, 0.3);
-    box-shadow: 0 1 inset alpha(black, 0.1), 1 0 inset alpha(black, 0.05);
+    box-shadow: 0 2 inset alpha(black, 0.07), 1 1 inset alpha(black, 0.07);
 
     background-color: transparent;
     background-clip: border-box;
