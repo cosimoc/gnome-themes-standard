@@ -198,10 +198,6 @@ GeditWindow .pane-separator:hover {
    color: @borders;
 }
 
-GeditPanel {
-    background-color: red;
-}
-
 GeditPanel .toolbar {
     border-style: none;
     background-color: transparent;

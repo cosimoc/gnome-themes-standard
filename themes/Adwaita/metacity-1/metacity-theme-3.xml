@@ -4,7 +4,7 @@
 	<name>Adwaita</name>
 	<author>GNOME Art Team &lt;art.gnome.org&gt;</author>
 	<copyright>&#194; Intel, &#194; Red Hat, Lapo Calamandrei</copyright>
-	<date>2010</date>
+	<date>2012</date>
 	<description>Default GNOME 3 window theme</description>
 </info>
 
@@ -15,9 +15,10 @@
 <constant name="C_border_attached_focused" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
 <constant name="C_titlebar_focused_hilight" value="gtk:custom(wm_highlight,gtk:base[NORMAL])" />
 <constant name="C_titlebar_unfocused" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.4" />
-<constant name="C_title_focused" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.1" />
+<constant name="C_title_focused" value="gtk:custom(wm_title,gtk:fg[NORMAL])" />
 <constant name="C_title_focused_hilight" value="gtk:custom(wm_title_highlight,gtk:base[NORMAL])" />
-<constant name="C_title_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.9" />
+<constant name="C_title_focused_hilight_dark" value="gtk:custom(wm_title_highlight_dark,gtk:bg[NORMAL])" />
+<constant name="C_title_unfocused" value="gtk:custom(wm_unfocused_title,gtk:fg[INSENSITIVE])" />
 <!-- color of the button icons -->
 <constant name="C_icons_focused" value="gtk:text[SELECTED]" />
 <constant name="C_icons_focused_pressed" value="#ffffff" />
@@ -114,18 +115,27 @@
 
 <draw_ops name="title_focused">
 	<title version="< 3.1"
-               x="(0 `max` ((width - title_width) / 2)) + 3"
+               x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(0 `max` ((height - title_height) / 2)) + 2"
                color="C_title_focused_hilight" />
+	<title version="< 3.1"
+               x="(0 `max` ((width - title_width) / 2)) + 2"
+               y="(0 `max` ((height - title_height) / 2))"
+               color="C_title_focused_hilight_dark" />
 	<title version="< 3.1"
                x="(0 `max` ((width - title_width) / 2)) + 2"
                y="(0 `max` ((height - title_height) / 2)) + 1"
                color="C_title_focused" />
 	<title version=">= 3.1"
-               x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width))) + 3"
+               x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width))) + 2"
                y="(0 `max` ((height - title_height) / 2)) + 2"
                ellipsize_width="width"
                color="C_title_focused_hilight" />
+	<title version=">= 3.1"
+               x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width))) + 2"
+               y="(0 `max` ((height - title_height) / 2))"
+               ellipsize_width="width"
+               color="C_title_focused_hilight_dark" />
 	<title version=">= 3.1"
                x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width))) + 2"
                y="(0 `max` ((height - title_height) / 2)) + 1"
