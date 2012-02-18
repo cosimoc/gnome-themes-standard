@@ -357,6 +357,15 @@ GtkColorSwatch.bottom {
     border-bottom-right-radius: 6px;
 }
 
+GtkColorChooserWidget > GtkBox > GtkBox > GtkColorSwatch:first-child {
+    background-clip: padding-box;
+    border-color: mix(@borders, @theme_bg_color, 0.5);
+    /* background-color: mix(@borders, @theme_bg_color, 0.5); background doesn't work right yet
+    color: @theme_bg_color; */
+    color: mix(@borders, @theme_bg_color, 0.5);
+    box-shadow: none;
+}
+
 .color-active-badge,
 .color-active-badge:selected {
     background-color: @theme_bg_color;
