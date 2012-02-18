@@ -120,10 +120,6 @@ NautilusSearchBar .entry:focus {
     -GtkEntry-inner-border: 3;
 }
 
-#nautilus-search-button *:active {
-    text-shadow: @button_active_text_shadow 0 1;
-}
-
 /* FIXME - will be `.floating-bar` in gtk-widgets.css for the next release*/
 NautilusFloatingBar {
     background-color: @info_bg_color;

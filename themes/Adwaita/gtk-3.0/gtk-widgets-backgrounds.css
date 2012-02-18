@@ -101,7 +101,8 @@
 .button:backdrop,
 .toolbar .button.raised:backdrop,
 .toolbar .raised .button:backdrop,
-.toolbar .button:hover:backdrop {
+.toolbar .button:backdrop:hover,
+.primary-toolbar .raised .button:backdrop:hover {
     background-image: none;
     background-color: @unfocused_button_background;
 }
