@@ -10,4 +10,7 @@ EXTRA_DIST = \
 	gtk.css \
 	gtk.gresource.xml
 
+CLEANFILES = \
+	gtk.gresource
+
 -include $(top_srcdir)/git.mk
