@@ -120,32 +120,6 @@ NautilusSearchBar .entry:focus {
     -GtkEntry-inner-border: 3;
 }
 
-/* FIXME - will be `.floating-bar` in gtk-widgets.css for the next release*/
-NautilusFloatingBar {
-    background-color: @info_bg_color;
-    border-color: darker(@info_bg_color);
-
-    border-radius: 0;
-    border-width: 1px;
-    border-style: solid;
-}
-
-NautilusFloatingBar:backdrop {
-    background-color: @theme_unfocused_base_color;
-    border-color: shade(@theme_unfocused_base_color, 0.9);
-}
-
-NautilusFloatingBar .button {
-    background-color: alpha (@theme_base_color, 0.0);
-    background-image: none;
-
-    border-style: none;
-    border-image: none;
-
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 0;
-}
-
 NautilusWindow .sidebar .frame {
     border-width: 1px 0 0 0;
     border-style: solid;
