@@ -691,6 +691,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .raised .button *:active,
 .inline-toolbar .button *:active {
     icon-shadow: @button_active_text_shadow 0 1;
+    text-shadow: @button_active_text_shadow 0 1;
 }
 
 .toolbar .button.raised *:insensitive,
