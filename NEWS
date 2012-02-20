@@ -1,3 +1,15 @@
+3.3.90
+======
+
+Rewrite HighContrast/HighContrastInverse themes
+Theming support for GtkColorChooser
+Fix selections in backdrop state
+Convert more assets to PNG images
+Improvements in the dark WM theme
+Fix base background compatibility with GtkStyle-using applications
+Don't set a padding for GtkViewport
+Fix styling for Gucharmap
+
 3.3.5.1
 =======
 
