@@ -2017,7 +2017,8 @@ GtkIconView.view.cell:selected:focus {
     border-radius: 0;
 }
 
-.view:selected {
+.view:selected,
+GtkTreeView.view:selected {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
