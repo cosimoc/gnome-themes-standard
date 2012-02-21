@@ -13,6 +13,8 @@ GtkSwitch.trough {
     border-image: url("borders/generic-border.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: transparent;
 }
 
 /* focused element borders */
@@ -24,6 +26,9 @@ GtkSwitch.trough:active {
     border-image: url("borders/generic-border-focused.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: transparent;
+
 }
 
 /* generic button borders */
@@ -31,6 +36,9 @@ GtkSwitch.trough:active {
     border-image: url("borders/button-border.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: transparent;
+
 }
 
 /* focused button borders */
@@ -39,6 +47,9 @@ GtkSwitch.trough:active {
     border-image: url("borders/button-border-focused.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: transparent;
+
 }
 
 /* tooltip elements borders */
@@ -46,6 +57,8 @@ GtkSwitch.trough:active {
 .tooltip .button {
     border-image: url("borders/tooltip-generic-border.svg") 3 / 3 stretch;
     border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
 }
 
 /* tooltip focused elements borders */
@@ -53,6 +66,8 @@ GtkSwitch.trough:active {
 .tooltip .button:focus {
     border-image: url("borders/tooltip-generic-border-focused.svg") 3 / 3 stretch;
     border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
 }
 
 /* primary toolbar - generic element borders */
@@ -142,6 +157,9 @@ column-header .button:active:focus {
                                  to (@theme_base_color)) 0 1 0 0;
     border-width: 0 1px 0 0;
     border-radius: 0;
+    border-style: solid;
+    border-color: transparent;
+
 }
 
 column-header.button:backdrop,
@@ -152,7 +170,8 @@ column-header .button:backdrop {
                                  to (@theme_unfocused_base_color)) 0 1 0 0;
     border-width: 0 1px 0 0;
     border-radius: 0;
-
+    border-style: solid;
+    border-color: transparent;
 }
 
 column-header.button:last-child,
@@ -168,6 +187,8 @@ column-header:last-child .button:active:focus {
     border-image: none;
     border-width: 0;
     border-radius: 0;
+    border-style: solid;
+    border-color: transparent;
 }
 
 /* unfocused window: generic element borders */
@@ -181,6 +202,8 @@ GtkSwitch.trough:backdrop,
     border-image: url("borders/generic-border-unfocused.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: transparent;
 }
 
 /* unfocused window: primary toolbar generic element borders */
@@ -200,5 +223,4 @@ GtkSwitch.trough:backdrop,
     border-width: 2px;
     border-style: solid;
     border-color: transparent;
-
 }
