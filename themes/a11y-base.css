@@ -358,3 +358,8 @@ GtkColorSwatch {
     border-style: solid;
     border-color: @theme_fg_color;
 }
+
+TerminalScreen {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+}
