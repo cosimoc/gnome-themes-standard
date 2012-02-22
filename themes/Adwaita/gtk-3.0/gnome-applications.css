@@ -161,11 +161,15 @@ NautilusNotebook.notebook {
 
 GeditWindow .pane-separator, 
 GeditWindow .pane-separator:hover {
-   border-width: 0 1px 1px 1px;
-   border-style: solid;
-   border-color: @borders;
-   background-color: shade(@theme_bg_color, 0.95);
-   color: @borders;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: @borders;
+    background-color: shade(@theme_bg_color, 0.95);
+    color: @borders;
+}
+
+GeditPanel.title GtkLabel {
+    padding: 7px 0 6px 0;
 }
 
 GeditPanel .toolbar {
@@ -173,16 +177,16 @@ GeditPanel .toolbar {
     background-color: transparent;
 }
 
-GeditWindow .sidebar {
-    background-color: @theme_base_color;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: @borders;
-    
+GeditDocumentsPanel .view {
+    background-color: @sidebar_bg;
+}
+
+GeditDocumentsPanel .view:backdrop {
+    background-color: @sidebar_bg_unfocused;
 }
 
 GeditPanel .notebook {
-    padding: 2px;
+    padding: 0px;
     border-width: 1px 0;
 }
 
