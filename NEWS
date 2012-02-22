@@ -1,3 +1,13 @@
+3.3.90.1
+========
+
+Theme GtkColorChooser backdrop state
+Fix borders for primary toolbar combobox entries on primary toolbars
+Fix background not properly clipped on GtkSwitch and troughs
+Fix background color of selected rows for Documents
+Fix Terminal colors in HighContrast/HighContrastInverse
+Fix text shadow for raised active buttons
+
 3.3.90
 ======
 
