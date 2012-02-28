@@ -2313,12 +2313,21 @@ GtkInfoBar .button:active:backdrop,
     border-width: 1px;
 }
 
-GtkInfoBar,
-.info,
-.warning,
-.question,
+
+.info {
+    text-shadow: 0 1 @info_text_shadow;
+}
+
+.warning {
+    text-shadow: 0 1 @warning_text_shadow;
+}
+
+.question {
+    text-shadow: 0 1 @question_text_shadow;
+}
+
 .error {
-    text-shadow: 0 1 alpha(black, 0.15);
+    text-shadow: 0 1 @error_text_shadow;
 }
 
 GtkInfoBar:backdrop,

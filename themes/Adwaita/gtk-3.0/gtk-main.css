@@ -50,13 +50,17 @@
 @define-color error_color #cc0000;
 @define-color success_color #4e9a06;
 
-@define-color info_fg_color rgb (181, 171, 156);
+@define-color info_fg_color black;
+@define-color info_text_shadow alpha(black, 0.1);
 @define-color info_bg_color rgb (252, 252, 189);
-@define-color warning_fg_color rgb (173, 120, 41);
+@define-color warning_fg_color black;
+@define-color warning_text_shadow alpha(black, 0.1);
 @define-color warning_bg_color rgb (250, 173, 61);
-@define-color question_fg_color rgb (97, 122, 214);
+@define-color question_fg_color white;
+@define-color question_text_shadow alpha(black, 0.5);
 @define-color question_bg_color rgb (138, 173, 212);
-@define-color error_fg_color rgb (166, 38, 38);
+@define-color error_fg_color white;
+@define-color error_text_shadow alpha(black, 0.5);
 @define-color error_bg_color rgb (237, 54, 54);
 
 @define-color keyboard_focus_border_a #a2c9f1;
