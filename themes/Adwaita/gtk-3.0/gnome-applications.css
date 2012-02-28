@@ -252,6 +252,20 @@ GeditWindow .notebook tab {
     background-color: #f1f2f1;
 }
 
+GtkIconView.documents-main-view {
+    -GdMainIconView-icon-size: 40;
+}
+
+GtkIconView.documents-main-view.check {
+    background-image: url("assets/grid-selection-unchecked.svg");
+    background-color: transparent;
+}
+
+GtkIconView.documents-main-view.check:active {
+    background-image: url("assets/grid-selection-checked.svg");
+    background-color: transparent;
+}
+
 .documents-selection-mode.toolbar {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                     from(@documents_selection_toolbar_a),

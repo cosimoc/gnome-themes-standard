@@ -29,6 +29,8 @@ EXTRA_DIST = 		\
 	checkbox-unchecked-dark.png \
 	checkbox-unchecked-insensitive.png \
 	checkbox-unchecked-insensitive-dark.png \
+	grid-selection-checked.svg \
+	grid-selection-unchecked.svg \
 	menuitem-checkbox-checked.png \
 	menuitem-checkbox-checked-insensitive.png \
 	menuitem-checkbox-checked-selected.png \
