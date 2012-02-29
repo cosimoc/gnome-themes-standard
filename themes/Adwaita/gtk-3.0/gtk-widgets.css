@@ -1352,6 +1352,7 @@ GtkComboBox .button *:hover {
     -GtkRange-trough-under-steppers: 1;
 }
 
+.scrollbars-junction, /* the small square between scrollbars!!! */
 .scrollbar.trough {
     background-image: none;
     background-color: @scrollbar_trough;
@@ -1425,17 +1426,17 @@ GtkComboBox .button *:hover {
     color: mix(@scrollbar_slider_unfocused, @scrollbar_trough_unfocused, 0.7);
 }
 
+/* FIXME: disable until we have have an extra px padded towards the border. It feels uncentered now.
 .scrollbar.trough.vertical,
 .scrollbar.trough.vertical:backdrop {
-    /* FIXME: disable until we have have an extra px padded towards the border. It feels uncentered now.
        box-shadow: -1 0 inset alpha(@theme_text_color, 0.05), 1 0 inset alpha(@theme_text_color, 0.1);
-     */
 }
 
 .scrollbar.trough.horizontal,
 .scrollbar.trough.horizontal:backdrop {
-   /* box-shadow: 0 -1 inset alpha(@theme_text_color, 0.05), 0 1 inset alpha(@theme_text_color, 0.1); */
+   box-shadow: 0 -1 inset alpha(@theme_text_color, 0.05), 0 1 inset alpha(@theme_text_color, 0.1);
 }
+*/
 
 .scrollbar.trough:insensitive {
     background-color: @scrollbar_trough_insensitive;
@@ -1445,6 +1446,7 @@ GtkComboBox .button *:hover {
     border-width: 3px;
 }
 
+.scrollbars-junction:backdrop,
 .scrollbar.trough:backdrop {
     background-image: none;
     background-color: @scrollbar_trough_unfocused;
