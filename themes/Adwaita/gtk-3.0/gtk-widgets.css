@@ -121,6 +121,11 @@ GtkWindow:backdrop {
 /*****************
  * Miscellaneous *
  *****************/
+
+.spinner:active {
+    transition: 750ms linear loop;
+}
+
 .floating-bar {
     background-color: @info_bg_color;
     border-color: darker(@info_bg_color);
