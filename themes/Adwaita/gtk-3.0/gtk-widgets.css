@@ -2388,11 +2388,11 @@ GtkInfoBar:last-child,
 }
 
 .dim-label,
-.dim-label:hover {
+.dim-label:hover,
+.dim-label:focus {
     color: mix (@theme_fg_color, @theme_bg_color, 0.50);
 }
 
-.dim-label:focus,
 .dim-label:selected,
 .dim-label:selected:focus {
     color: mix (@theme_selected_fg_color, @theme_base_color, 0.50);
