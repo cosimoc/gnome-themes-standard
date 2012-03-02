@@ -31,6 +31,7 @@
     <file preprocess="to-pixdata">assets/checkbox-unchecked-insensitive-dark.png</file>
     <file preprocess="to-pixdata">assets/checkbox-unchecked-insensitive.png</file>
     <file preprocess="to-pixdata">assets/checkbox-unchecked.png</file>
+    <file preprocess="to-pixdata">assets/dnd-counter.svg</file>
     <file preprocess="to-pixdata">assets/grid-selection-checked.svg</file>
     <file preprocess="to-pixdata">assets/grid-selection-unchecked.svg</file>
     <file preprocess="to-pixdata">assets/menuitem-checkbox-checked-insensitive.png</file>

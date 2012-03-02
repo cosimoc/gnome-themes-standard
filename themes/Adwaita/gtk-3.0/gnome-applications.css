@@ -333,6 +333,14 @@ GtkIconView.documents-main-view.check:active {
     border-radius: 8px;
 }
 
+.documents-counter {
+    background-image: url('assets/dnd-counter.svg');
+    background-size: contain;
+    background-color: transparent;
+    color: @theme_base_color;
+    font: bold;
+}
+
 .documents-osd {
     background-image: none;
     background-color: transparent;
