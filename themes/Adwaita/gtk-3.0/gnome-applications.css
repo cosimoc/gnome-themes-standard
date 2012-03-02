@@ -266,7 +266,8 @@ GeditWindow .notebook tab {
     color: alpha(@theme_base_color, 0.50);
 }
 
-.documents-selection-mode.toolbar .button {
+.documents-selection-mode.toolbar .button,
+.documents-selection-mode.toolbar .button:focus {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                     from(@documents_selection_button_a),
                                     color-stop(0.83, @documents_selection_button_b),
