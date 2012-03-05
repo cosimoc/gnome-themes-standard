@@ -2074,10 +2074,6 @@ GtkTreeView:selected:focus {
     -adwaita-focus-border-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
 }
 
-/*column-header {
-    padding: 0 4px;
-}*/
-
 column-header.button,
 column-header .button {
     color: @internal_element_color;
@@ -2148,10 +2144,6 @@ row:selected:focus {
 
 row:selected {
     border-width: 0;
-/*    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@theme_selected_bg_color),
-                                     to (@theme_selected_bg_color)); */
 }
 
 .cell {
