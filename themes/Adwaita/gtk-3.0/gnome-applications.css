@@ -463,6 +463,20 @@ GtkIconView.documents-main-view.check:active {
     color: shade(@documents_emblem_bg, 2.10);
 }
 
+.documents-osd .documents-notification {
+    border-style: solid;
+    border-color: #949486;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 5px 5px;
+    padding: 8px;
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from(#aeaea4),
+                                     color-stop(0.18, #d1d1cb),
+                                     to(#d8d8d3));
+    text-shadow: @primary_toolbar_button_text_shadow 0 1;
+}
+
 /* epiphany */
 
 /* EphyToolbar.toolbar {
