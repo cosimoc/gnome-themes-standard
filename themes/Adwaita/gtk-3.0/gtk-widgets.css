@@ -1992,6 +1992,24 @@ GtkSwitch.slider:insensitive:backdrop {
     border-color: @unfocused_insensitive_borders;
 }
 
+GtkTreeView {
+    -GtkTreeView-vertical-separator: 0;
+    -GtkTreeView-expander-size: 17;
+
+    -GtkWidget-focus-line-width: 1;
+    -GtkWidget-focus-padding: 1;
+    -adwaita-focus-border-radius: 2;
+    -adwaita-focus-border-dashes: 1;
+    -adwaita-focus-border-color: alpha(@theme_text_color, 0.6);
+}
+
+GtkTreeView.dnd {
+    border-color: @internal_element_color;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+}
+
 GtkViewport,
 GtkIconView {
     border-radius: 3px;
@@ -2018,7 +2036,9 @@ GtkIconView.view.cell:selected:focus {
     -adwaita-focus-border-dashes: 0;
 }
 
-.view {
+.view,
+GtkTreeView,
+GtkTreeView.view {
     background-color: @theme_base_color;
     color: @theme_text_color;
     border-radius: 0;
@@ -2028,30 +2048,6 @@ GtkIconView.view.cell:selected:focus {
 GtkTreeView.view:selected {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
-}
-
-GtkTreeView {
-    -GtkTreeView-vertical-separator: 0;
-    -GtkTreeView-expander-size: 17;
-
-    -GtkWidget-focus-line-width: 1;
-    -GtkWidget-focus-padding: 1;
-    -adwaita-focus-border-radius: 2;
-    -adwaita-focus-border-dashes: 1;
-    -adwaita-focus-border-color: alpha(@theme_text_color, 0.6);
-
-    background-color: @theme_base_color;
-}
-
-GtkTreeView.dnd {
-    border-color: @internal_element_color;
-    border-radius: 2px;
-    border-width: 1px;
-    border-style: solid;
-}
-
-GtkTreeView.view {
-    background-color: @theme_base_color;
 }
 
 .view:insensitive,
