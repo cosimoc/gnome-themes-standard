@@ -1,3 +1,15 @@
+3.3.91
+======
+
+Use bright color for text on high-saturation infobars
+Theme GtkColorChooser dark variation
+Theme junction between scrollbars
+Fix missing GtkSpinner animation
+Fix wrong color for focused dim-labels
+Fix insensitive state for GtkTreeView and GtkIconView
+Update Documents theming for 0.3.91
+Remove gedit sidepane custom styling for 3.4
+
 3.3.90.1
 ========
 
