@@ -2192,6 +2192,10 @@ row:selected {
     background-color: shade (@theme_bg_color, 1.02);
 }
 
+.expander row {
+    border-radius: 2px;
+}
+
 .expander row:selected,
 .expander row:selected:focus {
     border-style: solid;
