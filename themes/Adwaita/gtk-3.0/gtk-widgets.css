@@ -724,7 +724,8 @@ GtkComboBox.combobox-entry .button {
     text-shadow: @button_active_text_shadow 0 1;
 }
 
-.button *:insensitive {
+.button *:insensitive,
+.button *:active:insensitive {
     color: @insensitive_fg_color;
     text-shadow: none;
 }
@@ -758,6 +759,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .raised .button *:insensitive,
 .inline-toolbar .button *:insensitive {
     icon-shadow: none;
+    text-shadow: none;
 }
 
 .toolbar .button.raised *:backdrop,
