@@ -127,17 +127,45 @@ GtkWindow:backdrop {
 }
 
 .floating-bar {
-    background-color: @info_bg_color;
-    border-color: darker(@info_bg_color);
+    background-image: linear-gradient(to bottom, @theme_base_color 20%, shade(@theme_base_color, 0.9));
+    background-color: @theme_base_color;
+    border-color: @borders;
 
-    border-radius: 0;
+    border-radius: 3px;
     border-width: 1px;
     border-style: solid;
+    box-shadow: 1 1 inset white, -1 -1 inset white;
+}
+
+.floating-bar.top {
+    border-top-width: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.floating-bar.right {
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.floating-bar.bottom {
+    border-bottom-width: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.floating-bar.left {
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .floating-bar:backdrop {
     background-color: @theme_unfocused_base_color;
     border-color: shade(@theme_unfocused_base_color, 0.9);
+    background-image: none;
+    box-shadow: none;
 }
 
 .floating-bar .button {
