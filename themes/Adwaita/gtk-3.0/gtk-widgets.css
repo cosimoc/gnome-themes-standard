@@ -2416,6 +2416,7 @@ GtkInfoBar:last-child,
     border-color: darker(@error_bg_color);
 }
 
+.view.dim-label,
 .dim-label,
 .dim-label:hover,
 .dim-label:focus {
