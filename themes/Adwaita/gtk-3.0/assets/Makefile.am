@@ -8,6 +8,8 @@ EXTRA_DIST = 		\
 	checkbox-checked-backdrop-insensitive-dark.png \
 	checkbox-checked-dark.png \
 	checkbox-checked-insensitive.png \
+	checkbox-checked-insensitive-alt.png \
+	checkbox-checked-insensitive-alt-dark.png \
 	checkbox-checked-insensitive-dark.png \
 	checkbox-mixed.png \
 	checkbox-mixed-alt.png \
@@ -18,6 +20,8 @@ EXTRA_DIST = 		\
 	checkbox-mixed-backdrop-insensitive-dark.png \
 	checkbox-mixed-dark.png \
 	checkbox-mixed-insensitive.png \
+	checkbox-mixed-insensitive-alt.png \
+	checkbox-mixed-insensitive-alt-dark.png \
 	checkbox-mixed-insensitive-dark.png \
 	checkbox-unchecked.png \
 	checkbox-unchecked-alt.png \
@@ -28,6 +32,8 @@ EXTRA_DIST = 		\
 	checkbox-unchecked-backdrop-insensitive-dark.png \
 	checkbox-unchecked-dark.png \
 	checkbox-unchecked-insensitive.png \
+	checkbox-unchecked-insensitive-alt.png \
+	checkbox-unchecked-insensitive-alt-dark.png \
 	checkbox-unchecked-insensitive-dark.png \
 	dnd-counter.svg \
 	grid-selection-checked.svg \
@@ -50,6 +56,8 @@ EXTRA_DIST = 		\
 	radio-checked-backdrop-insensitive-dark.png \
 	radio-checked-dark.png \
 	radio-checked-insensitive.png \
+	radio-checked-insensitive-alt.png \
+	radio-checked-insensitive-alt-dark.png \
 	radio-checked-insensitive-dark.png \
 	radio-mixed.png \
 	radio-mixed-alt.png \
@@ -60,6 +68,8 @@ EXTRA_DIST = 		\
 	radio-mixed-backdrop-insensitive-dark.png \
 	radio-mixed-dark.png \
 	radio-mixed-insensitive.png \
+	radio-mixed-insensitive-alt.png \
+	radio-mixed-insensitive-alt-dark.png \
 	radio-mixed-insensitive-dark.png \
 	radio-unchecked.png \
 	radio-unchecked-alt.png \
@@ -70,6 +80,8 @@ EXTRA_DIST = 		\
 	radio-unchecked-backdrop-insensitive-dark.png \
 	radio-unchecked-dark.png \
 	radio-unchecked-insensitive.png \
+	radio-unchecked-insensitive-alt.png \
+	radio-unchecked-insensitive-alt-dark.png \
 	radio-unchecked-insensitive-dark.png \
 	resize-grip.svg \
 	scale-slider-down.png \

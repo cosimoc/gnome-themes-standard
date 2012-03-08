@@ -12,10 +12,13 @@
     background-image: url("assets/checkbox-unchecked-alt-dark.png");
 }
 
-.check:insensitive,
+.check:insensitive {
+    background-image: url("assets/checkbox-unchecked-insensitive-dark.png");
+}
+
 .check row:selected:insensitive,
 .check row:selected:focus:insensitive {
-    background-image: url("assets/checkbox-unchecked-insensitive-dark.png");
+    background-image: url("assets/checkbox-unchecked-insensitive-alt-dark.png");
 }
 
 .check:backdrop,
@@ -38,15 +41,18 @@
     background-image: url("assets/checkbox-checked-alt-dark.png");
 }
 
+.check:active:insensitive {
+    background-image: url("assets/checkbox-checked-insensitive-dark.png");
+}
+
+.check row:selected:active:insensitive,
+.check row:selected:focus:active:insensitive {
+    background-image: url("assets/checkbox-checked-insensitive-alt-dark.png");
+}
+
 .check:active:backdrop,
 .check row:selected:active:backdrop {
     background-image: url("assets/checkbox-checked-backdrop-dark.png");
-}
-
-.check:active:insensitive,
-.check row:selected:active:insensitive,
-.check row:selected:focus:active:insensitive {
-    background-image: url("assets/checkbox-checked-insensitive-dark.png");
 }
 
 .check:active:insensitive:backdrop,
@@ -64,15 +70,18 @@
     background-image: url("assets/checkbox-mixed-alt-dark.png");
 }
 
+.check:inconsistent:insensitive {
+    background-image: url("assets/checkbox-mixed-insensitive-dark.png");
+}
+
+.check row:selected:inconsistent:insensitive,
+.check row:selected:focus:inconsistent:insensitive {
+    background-image: url("assets/checkbox-mixed-insensitive-alt-dark.png");
+}
+
 .check:inconsistent:backdrop,
 .check row:selected:inconsistent:backdrop {
     background-image: url("assets/checkbox-mixed-backdrop-dark.png");
-}
-
-.check:inconsistent:insensitive,
-.check row:selected:inconsistent:insensitive,
-.check row:selected:focus:inconsistent:insensitive {
-    background-image: url("assets/checkbox-mixed-insensitive-dark.png");
 }
 
 .check:inconsistent:insensitive:backdrop,
@@ -89,15 +98,18 @@
     background-image: url("assets/radio-unchecked-alt-dark.png");
 }
 
+.radio:insensitive {
+    background-image: url("assets/radio-unchecked-insensitive-dark.png");
+}
+
+.radio row:selected:insensitive,
+.radio row:selected:focus:insensitive {
+    background-image: url("assets/radio-unchecked-insensitive-alt-dark.png");
+}
+
 .radio:backdrop,
 .radio row:selected:backdrop {
     background-image: url("assets/radio-unchecked-backdrop-dark.png");
-}
-
-.radio:insensitive,
-.radio row:selected:insensitive,
-.radio row:selected:focus:insensitive {
-    background-image: url("assets/radio-unchecked-insensitive-dark.png");
 }
 
 .radio:insensitive:backdrop,
@@ -115,16 +127,18 @@
     background-image: url("assets/radio-checked-alt-dark.png");
 }
 
+.radio:active:insensitive {
+    background-image: url("assets/radio-checked-insensitive-dark.png");
+}
+
+.radio row:selected:active:insensitive,
+.radio row:selected:focus:active:insensitive {
+    background-image: url("assets/radio-checked-insensitive-alt-dark.png");
+}
+
 .radio:active:backdrop,
 .radio row:selected:active:backdrop {
     background-image: url("assets/radio-checked-backdrop-dark.png");
-}
-
-
-.radio:active:insensitive,
-.radio row:selected:active:insensitive,
-.radio row:selected:focus:active:insensitive {
-    background-image: url("assets/radio-checked-insensitive-dark.png");
 }
 
 .radio:active:insensitive:backdrop,
@@ -142,22 +156,25 @@
     background-image: url("assets/radio-mixed-alt-dark.png");
 }
 
+.radio:inconsistent:insensitive {
+    background-image: url("assets/radio-mixed-insensitive-dark.png");
+}
+
+.radio row:selected:inconsistent:insensitive,
+.radio row:selected:focus:inconsistent:insensitive {
+    background-image: url("assets/radio-mixed-insensitive-alt-dark.png");
+}
+
 .radio:inconsistent:backdrop,
 .radio row:selected:inconsistent:backdrop {
     background-image: url("assets/radio-mixed-backdrop-dark.png");
-}
-
-
-.radio:inconsistent:insensitive,
-.radio row:selected:inconsistent:insensitive,
-.radio row:selected:focus:inconsistent:insensitive {
-    background-image: url("assets/radio-mixed-insensitive-dark.png");
 }
 
 .radio:inconsistent:insensitive:backdrop,
 .radio row:selected:inconsistent:insensitive:backdrop {
     background-image: url("assets/radio-mixed-backdrop-insensitive-dark.png");
 }
+
 .sidebar .radio:active,
 .sidebar .radio:active:focused,
 .sidebar .radio:active:prelight {
