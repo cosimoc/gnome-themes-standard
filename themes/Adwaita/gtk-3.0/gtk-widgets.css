@@ -202,13 +202,15 @@ GtkStatusbar {
     border-radius: 0;
 }
 
-GtkTreeView .separator,
+GtkTreeView.view.separator,
+GtkTreeView.separator,
 .separator,
 .separator:hover {
     color: @borders;
 }
 
-GtkTreeView .separator:backdrop,
+GtkTreeView.view.separator:backdrop,
+GtkTreeView.separator:backdrop,
 .separator:backdrop,
 .separator:hover:backdrop {
     color: @unfocused_insensitive_borders;
