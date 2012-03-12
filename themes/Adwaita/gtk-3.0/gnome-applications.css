@@ -201,6 +201,12 @@ GeditWindow .notebook tab {
     border-width: 0;
 }
 
+GeditFloatingSlider .not-found {
+    color: @error_fg_color;
+    background-image: none;
+    background-color: @error_bg_color;
+}
+
 /* gnome-documents */
 .documents-dropdown,
 .documents-dropdown .view {
