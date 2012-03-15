@@ -5,6 +5,6 @@ _Comment=High contrast theme
 Encoding=UTF-8
 GtkTheme=HighContrast
 MetacityTheme=Adwaita
-IconTheme=gnome
+IconTheme=HighContrast
 CursorTheme=Adwaita
 CursorSize=24

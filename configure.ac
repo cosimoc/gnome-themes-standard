@@ -31,6 +31,7 @@ AM_GLIB_GNU_GETTEXT
 GTK_VERSION_REQUIRED=3.3.14
 
 PKG_CHECK_MODULES([DEPENDENCIES], [gtk+-3.0 >= $GTK_VERSION_REQUIRED librsvg-2.0])
+PKG_CHECK_MODULES([HIGHCONTRAST], [cairo gio-2.0 gdk-pixbuf-2.0 gdk-3.0])
 
 AC_SUBST(DEPENDENCIES_CFLAGS)
 AC_SUBST(DEPENDENCIES_LIBS)
@@ -48,6 +49,11 @@ AC_ARG_ENABLE([placeholders],
               enable_placeholders=$enableval,
               enable_placeholders=no)
 AM_CONDITIONAL(PLACEHOLDERS, test "x$enable_placeholders" != "xno")
+
+AC_PATH_PROG(GTK_UPDATE_ICON_CACHE, gtk-update-icon-cache)
+if test -z "$GTK_UPDATE_ICON_CACHE"; then
+    AC_MSG_ERROR([Could not find gtk-update-icon-cache])
+fi
 
 # Workaround to make aclocal get the right flags
 AC_SUBST(ACLOCAL_AMFLAGS, "\${ACLOCAL_FLAGS}")
@@ -77,28 +83,6 @@ themes/HighContrast/Makefile
 themes/HighContrast/gtk-2.0/Makefile
 themes/HighContrast/gtk-3.0/Makefile
 themes/HighContrast/icons/Makefile
-themes/HighContrast/icons/48x48/Makefile
-themes/HighContrast/icons/48x48/animations/Makefile
-themes/HighContrast/icons/48x48/stock/Makefile
-themes/HighContrast/icons/scalable/Makefile
-themes/HighContrast/icons/scalable/actions/Makefile
-themes/HighContrast/icons/scalable/apps/Makefile
-themes/HighContrast/icons/scalable/categories/Makefile
-themes/HighContrast/icons/scalable/devices/Makefile
-themes/HighContrast/icons/scalable/emblems/Makefile
-themes/HighContrast/icons/scalable/emotes/Makefile
-themes/HighContrast/icons/scalable/mimetypes/Makefile
-themes/HighContrast/icons/scalable/places/Makefile
-themes/HighContrast/icons/scalable/status/Makefile
-themes/HighContrast/icons/scalable/actions-extra/Makefile
-themes/HighContrast/icons/scalable/apps-extra/Makefile
-themes/HighContrast/icons/scalable/categories-extra/Makefile
-themes/HighContrast/icons/scalable/devices-extra/Makefile
-themes/HighContrast/icons/scalable/emblems-extra/Makefile
-themes/HighContrast/icons/scalable/emotes-extra/Makefile
-themes/HighContrast/icons/scalable/mimetypes-extra/Makefile
-themes/HighContrast/icons/scalable/places-extra/Makefile
-themes/HighContrast/icons/scalable/status-extra/Makefile
 themes/HighContrastInverse/Makefile
 themes/HighContrastInverse/gtk-2.0/Makefile
 themes/HighContrastInverse/gtk-3.0/Makefile

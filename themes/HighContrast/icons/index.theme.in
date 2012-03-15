@@ -1,0 +1,7 @@
+[Icon Theme]
+Name=HighContrast
+Comment=High contrast scalable icons with black borders
+Inherits=gnome
+Example=folder
+
+Directories=@THEME_DIRS@
