@@ -280,8 +280,8 @@
 
 <draw_ops name="border_right_focused">
 	<line
-		x1="width-1" y1="0" 
-		x2="width-1" y2="height" 
+		x1="width" y1="0"
+		x2="width" y2="height"
 		color="C_border_focused" />
 </draw_ops>
 
