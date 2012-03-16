@@ -109,6 +109,10 @@ GtkComboBox .separator {
     background-color: @theme_base_color;
 }
 
+.entry:selected {
+    background-color: @theme_active_color;
+}
+
 .progressbar {
     background-color: @theme_fg_color;
     border-color: @theme_insensitive_bg;
