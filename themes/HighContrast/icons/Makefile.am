@@ -100,5 +100,4 @@ EXTRA_DIST = \
 	index.theme.in \
 	index.theme
 
-CLEANFILES = Makefile-icons.am
 DISTCLEANFILES = index.theme
