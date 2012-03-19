@@ -311,6 +311,9 @@ GtkImage:insensitive {
     color: @internal_element_prelight;
 }
 
+.image:selected {
+    color: @theme_selected_fg_color;
+}
 
 /*****************
  * GtkSpinButton *
