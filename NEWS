@@ -1,3 +1,18 @@
+3.3.92
+======
+
+Add HighContrast icon theme generated from gnome-icon-theme-symbolic
+Don't make floating bars yellow
+Fix text shadows in active+insensitive toolbar buttons
+Fix right WM border in focused left tiled windows
+Add no-nighlight versions of insensitive radio/check assets for use in treeviews
+Fix expander radius in treeviews
+Fix color for 'image' style class over a selected background
+Fix GtkTreeView separators on hover and backdrop states
+Fix color of dim labels in treeview renderers
+Fix border for buttons in NautilusQueryEditor infobars
+Add styling for gedit's not-found search entry style class
+
 3.3.91
 ======
 
