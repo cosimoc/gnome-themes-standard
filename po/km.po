@@ -1,0 +1,53 @@
+# translation of gnome-themes-standard.master.po to Khmer
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-themes-standard.master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-01-13 00:39+0000\n"
+"PO-Revision-Date: 2012-02-06 15:32+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
+msgid "Default Background"
+msgstr "ផ្ទៃ​ខាង​ក្រោយ​លំនាំដើម"
+
+#: ../themes/Adwaita/index.theme.in.h:1
+msgid "Adwaita"
+msgstr "Adwaita"
+
+#: ../themes/Adwaita/index.theme.in.h:2
+msgid "There is only one"
+msgstr "មាន​តែ​មួយ​គត់"
+
+#: ../themes/HighContrast/index.theme.in.h:1
+msgid "High Contrast"
+msgstr "កម្រិត​ពណ៌​ខ្ពស់"
+
+#: ../themes/HighContrast/index.theme.in.h:2
+msgid "High contrast theme"
+msgstr "ស្បែក​កម្រិត​ពណ៌​ខ្ពស់"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:1
+msgid "High Contrast Inverse"
+msgstr "ច្រាស​​កម្រិត​ពណ៌​ខ្ពស់"
+
+#: ../themes/HighContrastInverse/index.theme.in.h:2
+msgid "High contrast inverse theme"
+msgstr "ស្បែក​ច្រាស​កម្រិត​ពណ៌​ខ្ពស់"
+
+#: ../themes/LowContrast/index.theme.in.h:1
+msgid "Low Contrast"
+msgstr "កម្រិត​ពណ៌​ទាប"
+
+#: ../themes/LowContrast/index.theme.in.h:2
+msgid "Low contrast theme"
+msgstr "ស្បែក​កម្រិត​ពណ៌​ទាប"
