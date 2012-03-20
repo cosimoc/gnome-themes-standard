@@ -240,45 +240,49 @@ render_notebook_extension (GtkThemingEngine *engine,
   cairo_save (cr);
   cairo_set_line_width (cr, border_width);
 
-  if (gap_side == GTK_POS_TOP)
-    {
-      angle = G_PI;
-      cairo_translate (cr, width, height);
-    }
-
   if (gap_side == GTK_POS_BOTTOM)
     x += border_width / 2;
   else if (gap_side == GTK_POS_TOP)
     x -= border_width / 2;
 
-  width -= border_width;
+  if (gap_side == GTK_POS_TOP)
+    {
+      angle = G_PI;
+      cairo_translate (cr, x + width, y + height - NOTEBOOK_TAB_TOP_MARGIN - border_width);
+    }
+  else
+    {
+      cairo_translate (cr, x, y + NOTEBOOK_TAB_TOP_MARGIN + border_width);
+    }
 
-  cairo_translate (cr, x, y);
   cairo_rotate (cr, angle);
+
+  width -= border_width;
+  height -= NOTEBOOK_TAB_TOP_MARGIN + border_width;
 
   /* draw the tab shape and clip the background inside it */
   cairo_save (cr);
   draw_tab_shape (cr, tab_curvature, 
-                  0, NOTEBOOK_TAB_TOP_MARGIN + border_width + 0.5,
+                  0, 0.5,
                   width, is_active ? (height + 1.0) : (height));
   cairo_clip (cr);
 
   GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
-    (engine, cr, 0, NOTEBOOK_TAB_TOP_MARGIN + border_width + 0.5,
+    (engine, cr, 0, 0.5,
      width, is_active ? (height + 1.0) : (height));
 
   cairo_restore (cr);
 
   /* now draw the border */
   draw_tab_shape (cr, tab_curvature,
-                  0, NOTEBOOK_TAB_TOP_MARGIN + border_width,
+                  0, 0,
                   width, height);
 
   if (pattern && (state & GTK_STATE_FLAG_ACTIVE))
     {
-      cairo_scale (cr, width, height - NOTEBOOK_TAB_TOP_MARGIN);
+      cairo_scale (cr, width, height);
       cairo_set_source (cr, pattern);
-      cairo_scale (cr, 1.0 / width, 1.0 / (height - NOTEBOOK_TAB_TOP_MARGIN));
+      cairo_scale (cr, 1.0 / width, 1.0 / height);
     }
   else
     {
