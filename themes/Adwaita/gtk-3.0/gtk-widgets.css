@@ -2520,3 +2520,11 @@ GsmFailWhaleDialog * {
     background-color: @os_chrome_bg_color;
     background-image: none;
 }
+
+/* gnome-screensaver lock dialog */
+GSLockPlug .frame {
+    border-color: @borders;
+    border-width: 1;
+    border-style: solid;
+    border-radius: 0;
+}
