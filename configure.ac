@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.53)
 
-AC_INIT([gnome-themes-standard], [3.3.92],
+AC_INIT([gnome-themes-standard], [3.4.0],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard])
 
 AM_INIT_AUTOMAKE([1.9 tar-ustar foreign dist-xz no-dist-gzip])
