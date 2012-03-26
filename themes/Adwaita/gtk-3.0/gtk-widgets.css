@@ -2524,7 +2524,7 @@ GsmFailWhaleDialog * {
 /* gnome-screensaver lock dialog */
 GSLockPlug .frame {
     border-color: @borders;
-    border-width: 1;
+    border-width: 1px;
     border-style: solid;
     border-radius: 0;
 }
