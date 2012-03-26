@@ -1793,8 +1793,8 @@ GtkCheckButton:selected:focus {
     border-style: none;
 
     -GtkToolbar-button-relief: normal;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 /********************
