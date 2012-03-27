@@ -685,13 +685,13 @@ GtkScale.trough:insensitive:backdrop {
     border-color: @borders;
     border-style: solid;
     background-color: @theme_base_color;
-}
-
-GtkViewport.frame {
     padding: 0;
 }
 
-/* only render frames in a GtkScrolledWindow */
+.frame:backdrop {
+    border-color: @unfocused_borders;
+}
+
 GtkScrolledWindow.frame {
     border-style: solid;
     border-color: @borders;
