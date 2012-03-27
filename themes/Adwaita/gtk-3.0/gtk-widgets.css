@@ -681,8 +681,9 @@ GtkScale.trough:insensitive:backdrop {
  * Frames *
  **********/
 .frame {
-    padding: 2px;
-    border-width: 0;
+    border-width: 1px;
+    border-color: @borders;
+    border-style: solid;
     background-color: @theme_base_color;
 }
 
