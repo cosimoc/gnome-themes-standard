@@ -1082,7 +1082,8 @@ GtkComboBox.combobox-entry .button {
     border-radius: 3px;
 }
 
-GtkLinkButton * {
+GtkLinkButton.button,
+GtkLinkButton.button *:active {
     text-shadow: none;
 }
 
