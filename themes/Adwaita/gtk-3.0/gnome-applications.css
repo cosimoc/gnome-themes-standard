@@ -301,9 +301,11 @@ GtkIconView.documents-main-view.check:active {
     border-width: 1px;
 
     color: @theme_base_color;
+}
 
-    text-shadow: none;
-    icon-shadow: none;
+.documents-selection-mode.toolbar .button * {
+    text-shadow: shade(@documents_selection_toolbar_border, 0.90) 0 1;
+    icon-shadow: shade(@documents_selection_toolbar_border, 0.90) 0 1;
 }
 
 .documents-selection-mode.toolbar .button:hover {
