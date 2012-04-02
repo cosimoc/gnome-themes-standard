@@ -2089,7 +2089,6 @@ GtkTreeView,
 GtkTreeView.view {
     background-color: @theme_base_color;
     color: @theme_text_color;
-    border-radius: 0;
 }
 
 .view:selected,
