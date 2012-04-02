@@ -17,6 +17,15 @@ GtkSwitch.trough {
     border-color: transparent;
 }
 
+.trough row:selected,
+.trough row:selected:focus {
+    border-image: url("borders/generic-border-alt.svg") 3 / 3 stretch;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+}
+
 /* focused element borders */
 .entry:focus,
 GtkComboBox.combobox-entry .entry:focus,

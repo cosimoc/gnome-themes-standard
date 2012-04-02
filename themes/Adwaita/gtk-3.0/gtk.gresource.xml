@@ -145,9 +145,11 @@
     <file preprocess="to-pixdata">borders/button-border-focused.svg</file>
     <file preprocess="to-pixdata">borders/button-border.svg</file>
     <file preprocess="to-pixdata">borders/generic-border-dark.svg</file>
+    <file preprocess="to-pixdata">borders/generic-border-dark-alt.svg</file>
     <file preprocess="to-pixdata">borders/generic-border-focused-dark.svg</file>
     <file preprocess="to-pixdata">borders/generic-border-focused.svg</file>
     <file preprocess="to-pixdata">borders/generic-border.svg</file>
+    <file preprocess="to-pixdata">borders/generic-border-alt.svg</file>
     <file preprocess="to-pixdata">borders/generic-border-unfocused-dark.svg</file>
     <file preprocess="to-pixdata">borders/generic-border-unfocused.svg</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-button-border-dark.svg</file>

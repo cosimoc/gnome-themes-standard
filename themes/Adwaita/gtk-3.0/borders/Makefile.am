@@ -6,7 +6,9 @@ EXTRA_DIST = 		\
 	generic-border-focused.svg \
 	generic-border-focused-dark.svg \
 	generic-border.svg \
+	generic-border-alt.svg \
 	generic-border-dark.svg \
+	generic-border-dark-alt.svg \
 	generic-border-unfocused.svg \
 	generic-border-unfocused-dark.svg \
 	primary-toolbar-button-border-focused.svg \
