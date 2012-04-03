@@ -115,7 +115,7 @@ GtkWindow:backdrop {
 }
 
 .tooltip * {
-    background-color: alpha(@theme_tooltip_bg_color, 0.90);
+    background-color: transparent;
 }
 
 /*****************
