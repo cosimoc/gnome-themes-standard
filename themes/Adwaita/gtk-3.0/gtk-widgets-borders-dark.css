@@ -8,7 +8,6 @@ GtkComboBox.combobox-entry .button,
 .button:insensitive,
 .trough,
 .trough.highlight,
-.trough row,
 GtkSwitch.trough {
     border-image: url("borders/generic-border-dark.svg") 3 3 4 3 / 3 3 4 3 stretch;
     border-radius: 3px;
@@ -17,8 +16,7 @@ GtkSwitch.trough {
     border-color: transparent;
 }
 
-.trough row:selected,
-.trough row:selected:focus {
+.trough row {
     border-image: url("borders/generic-border-dark-alt.svg") 3 / 3 stretch;
     border-radius: 3px;
     border-width: 1px;
