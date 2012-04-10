@@ -573,7 +573,6 @@ GtkProgressBar {
     background-color: @progressbar_unfocused_background;
     border-color: @progressbar_unfocused_border;
     box-shadow: none;
-    -adwaita-progressbar-pattern: none;
 }
 
 /* for progressbars in cell renderers */
