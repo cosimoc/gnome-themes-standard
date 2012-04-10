@@ -2463,7 +2463,9 @@ PanelApplet > GtkMenuBar.menubar {
 }
 
 .gnome-panel-menu-bar .menuitem:hover,
-PanelApplet > GtkMenuBar.menubar .menuitem:hover {
+PanelApplet > GtkMenuBar.menubar .menuitem:hover,
+.gnome-panel-menu-bar .menuitem *:hover,
+PanelApplet > GtkMenuBar.menubar .menuitem *:hover {
     background-color: @os_chrome_selected_bg_color;
     color: @os_chrome_selected_fg_color;
 }
