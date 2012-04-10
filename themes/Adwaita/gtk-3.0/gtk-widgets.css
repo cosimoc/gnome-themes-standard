@@ -510,10 +510,6 @@ GtkColorEditor GtkColorSwatch.color-light:hover {
 /****************
  * Progress bar *
  ****************/
-GtkProgressBar {
-    -GtkProgressBar-xspacing: 20;
-    -GtkProgressBar-yspacing: 20;
-}
 
 /* FIXME: this should really be a margin... */
 GtkProgressBar {
