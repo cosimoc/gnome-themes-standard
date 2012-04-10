@@ -2080,37 +2080,33 @@ GtkIconView.view.cell:selected:focus {
 }
 
 .view,
-GtkTreeView,
-GtkTreeView.view {
+GtkTreeView {
     background-color: @theme_base_color;
     color: @theme_text_color;
 }
 
 .view:selected,
-GtkTreeView.view:selected {
+GtkTreeView:selected {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
 
 .view:insensitive,
-GtkTreeView:insensitive,
-GtkTreeView.view:insensitive {
+GtkTreeView:insensitive {
     background-color: @insensitive_bg_color;
     color: @insensitive_fg_color;
 }
 
 .view:backdrop,
-GtkTreeView:backdrop,
-GtkTreeView.view:backdrop {
+GtkTreeView:backdrop {
     background-color: @theme_unfocused_base_color;
     color: @theme_unfocused_text_color;
 }
 
-GtkIconView.view.cell:backdrop:selected,
 .cell:backdrop:selected,
+GtkIconView.view.cell:backdrop:selected,
 .view:backdrop:selected,
-GtkTreeView:backdrop:selected,
-GtkTreeView.view:backdrop:selected {
+GtkTreeView:backdrop:selected {
     background-color: @theme_unfocused_selected_bg_color;
     color: @theme_unfocused_selected_fg_color;
 }
