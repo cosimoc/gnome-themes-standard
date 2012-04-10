@@ -211,6 +211,14 @@ GtkSwitch.trough:backdrop,
     border-color: transparent;
 }
 
+.trough row:backdrop {
+    border-image: url("borders/generic-border-unfocused-dark-alt.svg") 3 / 3 stretch;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+}
+
 /* unfocused window: primary toolbar generic element borders */
 .primary-toolbar .button:active:backdrop,
 .primary-toolbar .button.raised:backdrop,
