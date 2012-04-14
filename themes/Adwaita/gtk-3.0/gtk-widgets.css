@@ -2125,7 +2125,6 @@ column-header .button {
 column-header.button,
 column-header .button,
 column-header.button:insensitive,
-/* column-header:insensitive .button, */
 column-header .button:insensitive,
 column-header.button:hover,
 column-header .button:hover,
@@ -2142,13 +2141,11 @@ column-header .button:focus:hover {
 column-header.button:backdrop,
 column-header .button:backdrop {
     background-color: @theme_unfocused_base_color;
-    /* color: FIXME */
 }
 
 column-header.button:insensitive,
-column-header:insensitive. .button,
 column-header .button:insensitive {
-    color: @internal_element_insensitive;
+    background-color: @insensitive_bg_color;
 }
 
 column-header.button:hover,
