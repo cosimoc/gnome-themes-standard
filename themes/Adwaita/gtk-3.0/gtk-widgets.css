@@ -1929,6 +1929,105 @@ GtkCheckButton:selected:focus {
     background-color: transparent;
 }
 
+/*******
+ * OSD *
+ *******/
+.osd {
+    color: @osd_fg;
+    background-color: @osd_bg;
+}
+
+.osd.toolbar {
+    padding: 16px;
+    border-style: none;
+    border-radius: 5px;
+
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@osd_toolbar_bg_a),
+                                    color-stop(0.63, @osd_toolbar_bg_b),
+                                    to(@osd_toolbar_bg_a));
+    background-color: transparent;
+
+    -GtkToolbar-button-relief: normal;
+}
+
+.osd.toolbar .button {
+    padding: 4px;
+
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@osd_button_bg_a),
+                                    color-stop(0.68, @osd_button_bg_b),
+                                    to(@osd_button_bg_c));
+    border-width: 1px 0;
+    border-style: solid;
+    border-image: none;
+    border-color: @osd_button_border;
+    border-radius: 0;
+
+    color: @osd_button_fg;
+
+    text-shadow: none;
+    icon-shadow: none;
+    box-shadow: inset -1px 0 @osd_button_inset;
+}
+
+.osd.toolbar .button,
+.osd.toolbar .button:prelight,
+.osd.toolbar .button:active {
+    background-color: transparent;
+}
+
+.osd.toolbar .button:nth-child(first) {
+    border-radius: 4px 0 0 4px;
+    border-left-width: 1px;
+    box-shadow: inset -1px 0 @osd_button_inset;
+}
+
+.osd.toolbar .button:nth-child(last) {
+    box-shadow: none;
+    border-radius: 0 4px 4px 0;
+    border-right-width: 1px;
+}
+
+.osd.toolbar GtkToolButton .button,
+.osd.toolbar .button:only-child {
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+
+    box-shadow: none;
+}
+
+.osd.toolbar .separator {
+    color: @osd_button_inset;
+}
+
+.osd.toolbar .button:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@osd_button_bg_hover_a),
+                                    color-stop(0.68, @osd_button_bg_hover_b),
+                                    to(@osd_button_bg_hover_c));
+}
+
+.osd.toolbar .button *:hover {
+    color: shade(@osd_button_fg, 1.20);
+}
+
+.osd.toolbar .button:active,
+.osd.toolbar .button:active:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@osd_button_bg_active_a),
+                                    color-stop(0.68, @osd_button_bg_active_b),
+                                    to(@osd_button_bg_active_c));
+}
+
+.osd.trough {
+    background-color: @osd_trough_bg;
+}
+
+.osd.progressbar {
+    background-color: @osd_fg;
+}
 
 /****************
  * GtkAssistant *

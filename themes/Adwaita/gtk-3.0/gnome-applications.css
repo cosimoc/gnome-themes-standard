@@ -11,16 +11,6 @@
 @define-color documents_emblem_bg #3465a4;
 @define-color documents_collection_bg #d3d7cf;
 
-@define-color documents_osd_toolbar_a alpha(#242424, 0.80);
-@define-color documents_osd_toolbar_b alpha(#101010, 0.80);
-@define-color documents_osd_toolbar_c alpha(#262626, 0.80);
-
-@define-color documents_osd_button_a @theme_base_color;
-@define-color documents_osd_button_b #525252;
-@define-color documents_osd_button_inset #9f9f9f;
-
-@define-color documents_osd_fg #bebebe;
-
 /****************
  * Applications *
  ****************/
@@ -351,95 +341,8 @@ GtkIconView.documents-main-view.check:active {
     font: bold;
 }
 
-.documents-osd {
-    background-image: none;
-    background-color: transparent;
-}
-
-.documents-osd .toolbar {
-    padding: 16px;
-    border-style: none;
-    border-radius: 5px;
-    border-width: 0;
-
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(@documents_osd_toolbar_a),
-                                    color-stop(0.63, @documents_osd_toolbar_b),
-                                    to(@documents_osd_toolbar_c));
-    color: @documents_osd_fg;
-
-    -GtkToolbar-button-relief: normal;
-}
-
-.documents-osd .toolbar .button {
-    padding: 4px;
-
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(alpha(@documents_osd_button_a, 0.16)),
-                                    color-stop(0.68, alpha(@documents_osd_button_b, 0.05)),
-                                    to(alpha(@documents_osd_button_a, 0.12)));
-    border-width: 1px 0;
-    border-style: solid;
-    border-image: none;
-    border-color: alpha(@documents_osd_button_a, 0.50);
-    border-radius: 0;
-
-    color: @documents_osd_fg;
-
-    text-shadow: none;
-    icon-shadow: none;
-    box-shadow: inset -1px 0 @documents_osd_button_inset;
-}
-
-.documents-osd .toolbar .button,
-.documents-osd .toolbar .button:prelight,
-.documents-osd .toolbar .button:active {
-    background-color: transparent;
-}
-
-.documents-osd .toolbar .button:nth-child(first) {
-    border-radius: 4px 0 0 4px;
-    border-left-width: 1px;
-    box-shadow: inset -1px 0 @documents_osd_button_inset;
-}
-
-.documents-osd .toolbar .button:nth-child(last) {
-    box-shadow: none;
-    border-radius: 0 4px 4px 0;
-    border-right-width: 1px;
-}
-
-.documents-osd .toolbar .button:only-child {
-    border-width: 1px;
-    border-radius: 4px;
-    border-style: solid;
-}
-
-.documents-osd .toolbar .separator {
-    color: @documents_osd_button_inset;
-}
-
-.documents-osd .toolbar .button:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(alpha(@documents_osd_button_a, 0.28)),
-                                    color-stop(0.68, alpha(@documents_osd_button_b, 0.14)),
-                                    to(alpha(@documents_osd_button_a, 0.14)));
-}
-
-.documents-osd .toolbar .button *:hover {
-    color: shade(@documents_osd_fg, 1.20);
-}
-
-.documents-osd .toolbar .button:active,
-.documents-osd .toolbar .button:active:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(alpha(@documents_osd_button_b, 0.18)),
-                                    color-stop(0.68, alpha(@documents_osd_button_a, 0.23)),
-                                    to(alpha(@documents_osd_button_b, 0.17)));
-}
-
-.documents-osd .toolbar .button.favorite,
-.documents-osd .toolbar .button.favorite *:hover {
+.documents-favorite.button *:active,
+.documents-favorite.button *:active:hover {
     color: shade(@theme_selected_bg_color, 1.20);
 }
 
@@ -473,7 +376,7 @@ GtkIconView.documents-main-view.check:active {
     color: shade(@documents_emblem_bg, 2.10);
 }
 
-.documents-osd .documents-notification {
+.documents-notification {
     border-style: solid;
     border-color: #949486;
     border-width: 0 1px 1px 1px;

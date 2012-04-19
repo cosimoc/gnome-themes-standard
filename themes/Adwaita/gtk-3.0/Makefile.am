@@ -16,6 +16,7 @@ EXTRA_DIST = \
 	gtk.css \
 	gtk-dark.css \
 	gtk-main.css \
+	gtk-main-common.css \
 	gtk-main-dark.css \
 	gtk-widgets.css \
 	gtk-widgets-backgrounds.css \
