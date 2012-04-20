@@ -10,8 +10,13 @@
 @define-color osd_fg #ededed;
 @define-color osd_bg alpha(@osd_base, 0.80);
 
+@define-color osd_text_shadow alpha(black, 0.75);
+
+@define-color osd_active_fg shade(@osd_fg, 1.10);
+
 @define-color osd_toolbar_bg_a alpha(@osd_base, 0.80);
 @define-color osd_toolbar_bg_b alpha(#101010, 0.80);
+@define-color osd_toolbar_bg_c alpha(shade(@osd_base, 1.02), 0.80);
 
 @define-color osd_button_bg_a alpha(@osd_highlight, 0.16);
 @define-color osd_button_bg_b alpha(@osd_lowlight, 0.05);
@@ -25,8 +30,10 @@
 @define-color osd_button_bg_active_b alpha(@osd_highlight, 0.23);
 @define-color osd_button_bg_active_c alpha(@osd_lowlight, 0.17);
 
-@define-color osd_button_border alpha(@osd_highlight, 0.50);
+@define-color osd_button_border alpha(@osd_highlight, 0.40);
 @define-color osd_button_fg shade(@osd_fg, 0.80);
 @define-color osd_button_inset shade(@osd_fg, 0.67);
+
+@define-color osd_button_shadow alpha(black, 0.35);
 
 @define-color osd_trough_bg alpha(@osd_button_fg, 0.10);

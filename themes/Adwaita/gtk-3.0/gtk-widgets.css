@@ -1935,6 +1935,8 @@ GtkCheckButton:selected:focus {
 .osd {
     color: @osd_fg;
     background-color: @osd_bg;
+
+    text-shadow: 0 1px @osd_text_shadow;
 }
 
 .osd.toolbar {
@@ -1945,13 +1947,13 @@ GtkCheckButton:selected:focus {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                     from(@osd_toolbar_bg_a),
                                     color-stop(0.63, @osd_toolbar_bg_b),
-                                    to(@osd_toolbar_bg_a));
+                                    to(@osd_toolbar_bg_c));
     background-color: transparent;
 
     -GtkToolbar-button-relief: normal;
 }
 
-.osd.toolbar .button {
+.osd .button {
     padding: 4px;
 
     background-image: -gtk-gradient(linear, left top, left bottom,
@@ -1966,31 +1968,31 @@ GtkCheckButton:selected:focus {
 
     color: @osd_button_fg;
 
-    text-shadow: none;
-    icon-shadow: none;
+    text-shadow: 0 -1px @osd_button_shadow;
+    icon-shadow: 0 -1px @osd_button_shadow;
     box-shadow: inset -1px 0 @osd_button_inset;
 }
 
-.osd.toolbar .button,
-.osd.toolbar .button:prelight,
-.osd.toolbar .button:active {
+.osd .button,
+.osd .button:prelight,
+.osd .button:active {
     background-color: transparent;
 }
 
-.osd.toolbar .button:nth-child(first) {
+.osd .button:nth-child(first) {
     border-radius: 4px 0 0 4px;
     border-left-width: 1px;
     box-shadow: inset -1px 0 @osd_button_inset;
 }
 
-.osd.toolbar .button:nth-child(last) {
+.osd .button:nth-child(last) {
     box-shadow: none;
     border-radius: 0 4px 4px 0;
     border-right-width: 1px;
 }
 
-.osd.toolbar GtkToolButton .button,
-.osd.toolbar .button:only-child {
+.osd GtkToolButton .button,
+.osd .button:only-child {
     border-width: 1px;
     border-radius: 4px;
     border-style: solid;
@@ -1998,23 +2000,32 @@ GtkCheckButton:selected:focus {
     box-shadow: none;
 }
 
-.osd.toolbar .separator {
-    color: @osd_button_inset;
+.osd .separator {
+    color: shade(@osd_lowlight, 0.80);
 }
 
-.osd.toolbar .button:hover {
+.osd .button:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                     from(@osd_button_bg_hover_a),
                                     color-stop(0.68, @osd_button_bg_hover_b),
                                     to(@osd_button_bg_hover_c));
 }
 
-.osd.toolbar .button *:hover {
+.osd .button *:hover {
     color: shade(@osd_button_fg, 1.20);
 }
 
-.osd.toolbar .button:active,
-.osd.toolbar .button:active:hover {
+.osd .button *:hover:active,
+.osd .button *:active {
+    color: @osd_active_fg;
+}
+
+.osd .button *:insensitive {
+    color: shade(@osd_button_fg, 0.75);
+}
+
+.osd .button:active,
+.osd .button:active:hover {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                     from(@osd_button_bg_active_a),
                                     color-stop(0.68, @osd_button_bg_active_b),
@@ -2023,6 +2034,14 @@ GtkCheckButton:selected:focus {
 
 .osd.trough {
     background-color: @osd_trough_bg;
+}
+
+.osd GtkScale.trough {
+    border-color: @osd_button_border;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(shade(@osd_button_border, 0.70)),
+                                    to(shade(@osd_button_border, 0.90)));
+    background-color: transparent;
 }
 
 .osd.progressbar {
