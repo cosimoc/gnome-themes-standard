@@ -3,6 +3,8 @@
 @define-color theme_active_color #b8b891;
 @define-color theme_selected_bg_color #555;
 
+@define-color theme_highlight_color shade(#4a90d9, 0.85);
+
 @define-color theme_internal_border shade(#ddd, 0.90);
 @define-color theme_internal_bg #ddd;
 

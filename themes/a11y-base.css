@@ -132,7 +132,7 @@ GtkComboBox .separator {
 
 .entry:focus {
     border-width: 2px;
-    border-color: #2e3436;
+    border-color: @theme_highlight_color;
 }
 
 .progressbar {
