@@ -34,8 +34,9 @@ GtkWindow {
     border-color: @theme_insensitive_color;
 }
 
-*:selected {
-    background-color: @theme_active_color;
+GtkCheckButton:selected,
+GtkCheckButton:selected:focus {
+    background-color: @theme_internal_bg;
     color: @theme_fg_color;
 }
 
@@ -53,7 +54,6 @@ GtkImage:insensitive {
 }
 
 .button,
-.trough,
 .entry {
     border-width: 1px;
     border-style: solid;
@@ -95,20 +95,16 @@ GtkComboBox .separator {
 .trough {
     background-color: @theme_internal_bg;
     color: @theme_fg_color;
-}
 
-.trough:active {
-    color: @theme_base_color;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @theme_internal_border;
 }
 
 .entry:insensitive,
 .trough:insensitive {
     background-color: @theme_insensitive_bg;
     color: @theme_insensitive_color;
-}
-
-.trough:active {
-    background-color: @theme_active_color;
 }
 
 .button:hover:active {
