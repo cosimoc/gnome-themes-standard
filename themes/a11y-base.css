@@ -271,7 +271,7 @@ GtkComboBox .button {
 
 .linked .button:hover,
 .inline-toolbar .button:hover {
-    border-color: transparent;
+    border-color: @theme_fg_color;
 }
 
 .linked .button:insensitive,
