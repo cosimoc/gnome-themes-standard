@@ -255,20 +255,27 @@ GtkComboBox .button {
     border-color: transparent;
 }
 
+.primary-toolbar .button:hover,
+.primary-toolbar .button:active {
+    border-color: @theme_fg_color;
+}
+
+.primary-toolbar .button:active:insensitive {
+    border-color: @theme_insensitive_color;
+}
+
 .primary-toolbar .button.raised,
 .primary-toolbar .raised .button {
     border-color: @theme_fg_color;
 }
 
-.primary-toolbar .button:active {
-    border-color: @theme_fg_color;
+.primary-toolbar .raised .button:insensitive,
+.primary-toolbar .raised.button:insensitive {
+    border-color: transparent;
 }
 
-.primary-toolbar .button:hover:active {
-    border-color: @theme_insensitive_bg;
-}
-
-.primary-toolbar .button:active:insensitive {
+.primary-toolbar .raised .button:active:insensitive,
+.primary-toolbar .raised.button:active:insensitive {
     border-color: @theme_insensitive_color;
 }
 
