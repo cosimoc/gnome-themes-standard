@@ -10,7 +10,7 @@
 
     -GtkWidget-focus-padding: 1;
     -GtkWidget-focus-line-width: 2;
-    -GtkWidget-focus-line-pattern: "\002\001";
+    -GtkWidget-focus-line-pattern: "\002\002";
 
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
@@ -338,10 +338,11 @@ GtkScale.trough.vertical {
 }
 
 GtkScale.slider {
+    background-clip: border-box;
     background-color: @theme_slider_bg;
     color: transparent;
 
-    border-radius: 10px;
+    border-radius: 20px;
     border-color: @theme_slider_border;
     border-style: solid;
     border-width: 1px;
@@ -349,11 +350,16 @@ GtkScale.slider {
 
 GtkScale.slider:hover {
     background-color: @theme_fg_color;
+    border-color: @theme_fg_color;
 }
 
 GtkScale.slider:insensitive {
     background-color: @theme_insensitive_bg;
     border-color: @theme_insensitive_color;
+}
+
+GtkSwitch {
+    font: bold;
 }
 
 GtkSwitch.slider {
@@ -365,10 +371,7 @@ GtkSwitch.slider {
     border-radius: 3px;
 
     background-color: @theme_slider_bg;
-}
-
-GtkSwitch {
-    font: bold;
+    background-clip: border-box;
 }
 
 GtkSwitch.slider:insensitive {
@@ -461,6 +464,7 @@ column-header:first-child .button {
     -GtkRange-trough-border: 0;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
+    -GtkScrollbar-min-slider-length: 64;
 }
 
 .scrollbar.trough {
