@@ -41,6 +41,14 @@ GtkCheckButton:selected:focus {
     color: @theme_fg_color;
 }
 
+.image {
+    color: @theme_selected_bg_color;
+}
+
+.image:hover {
+    color: @theme_fg_color;
+}
+
 GtkImage:insensitive {
     background-color: transparent;
 }
@@ -495,6 +503,10 @@ column-header:first-child .button {
 .view:selected:focus {
     background-color: @theme_fg_color;
     color: @theme_base_color;
+}
+
+GtkIconView.view.cell {
+    border-radius: 4px;
 }
 
 GtkColorSwatch {
