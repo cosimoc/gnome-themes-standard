@@ -6,7 +6,7 @@
     -GtkTreeView-expander-size: 16;
 
     -GtkWidget-cursor-color: @theme_highlight_color;
-    -GtkWidget-cursor-aspect-ratio: 0.2;
+    -GtkWidget-cursor-aspect-ratio: 0.10;
 
     -GtkWidget-focus-padding: 1;
     -GtkWidget-focus-line-width: 2;
