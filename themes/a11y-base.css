@@ -352,6 +352,10 @@ GtkSwitch.slider {
     background-color: @theme_slider_bg;
 }
 
+GtkSwitch {
+    font: bold;
+}
+
 GtkSwitch.slider:insensitive {
     background-color: @theme_insensitive_bg;
     border-color: @theme_insensitive_color;
@@ -402,6 +406,8 @@ GtkScrolledWindow.frame {
 }
 
 column-header .button {
+    font: bold;
+
     border-top-width: 0;
     border-right-width: 0;
 }
