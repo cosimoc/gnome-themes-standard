@@ -1,5 +1,7 @@
 * {
-    -GtkRange-stepper-size: 20;
+    -GtkRange-stepper-size: 2;
+    -GtkScale-slider-length: 18;
+    -GtkRange-slider-width: 18;
 
     -GtkTreeView-expander-size: 16;
 
@@ -58,10 +60,23 @@ GtkImage:insensitive {
     border-color: @theme_fg_color;
 }
 
+.button {
+    background-color: @theme_button_bg;
+}
+
+.button:insensitive {
+    background-color: @theme_insensitive_bg;
+}
+
 .button:hover {
     background-color: @theme_fg_color;
     border-color: @theme_insensitive_bg;
     color: @theme_insensitive_bg;
+}
+
+.button:active {
+    background-color: @theme_slider_bg;
+    color: @theme_base_color;
 }
 
 GtkComboBox *:hover {
@@ -79,7 +94,7 @@ GtkComboBox .separator {
 }
 
 .trough {
-    background-color: @theme_scrollbar_trough;
+    background-color: @theme_internal_bg;
     color: @theme_fg_color;
 }
 
@@ -93,7 +108,6 @@ GtkComboBox .separator {
     color: @theme_insensitive_color;
 }
 
-.button:active,
 .trough:active {
     background-color: @theme_active_color;
 }
@@ -114,6 +128,11 @@ GtkComboBox .separator {
 .entry:selected {
     background-color: @theme_selected_bg_color;
     color: @theme_base_color;
+}
+
+.entry:focus {
+    border-width: 2px;
+    border-color: #2e3436;
 }
 
 .progressbar {
@@ -271,27 +290,48 @@ GtkComboBox .button {
     background-color: @theme_insensitive_bg;
 }
 
-.slider {
-    background-color: @theme_base_color;
-    border-width: 1px;
+GtkScale.trough {
+    border-image: linear-gradient(to bottom,
+                                  transparent,
+                                  transparent 5px,
+                                  @theme_internal_border 5px,
+                                  @theme_internal_border 15px,
+                                  transparent 15px,
+                                  transparent) 6 1 6 1 / 6px 1px 6px 1px;
     border-style: solid;
-    border-color: @theme_fg_color;
+    border-width: 6px 1px;
+    border-radius: 0;
+}
 
+GtkScale.trough.vertical {
+    border-image: linear-gradient(to left,
+                                  transparent,
+                                  transparent 5px,
+                                  @theme_internal_border 5px,
+                                  @theme_internal_border 15px,
+                                  transparent 15px,
+                                  transparent) 1 6 1 6 / 1px 6px 1px 6px;
+    border-style: solid;
+    border-width: 1px 6px;
+    border-radius: 0;
+}
+
+GtkScale.slider {
+    background-color: @theme_slider_bg;
     color: transparent;
+
+    border-radius: 10px;
+    border-color: @theme_slider_border;
+    border-style: solid;
+    border-width: 1px;
 }
 
-.slider:hover {
+GtkScale.slider:hover {
     background-color: @theme_fg_color;
-    border-color: @theme_fg_color;
 }
 
-.slider:hover:active {
-    border-color: @theme_insensitive_bg;
-}
-
-.slider:insensitive {
+GtkScale.slider:insensitive {
     background-color: @theme_insensitive_bg;
-    border-color: @theme_insensitive_color;
 }
 
 GtkSwitch.slider {
@@ -376,26 +416,26 @@ column-header:first-child .button {
 }
 
 .scrollbar.trough {
-    background-color: @theme_scrollbar_trough;
+    background-color: @theme_internal_bg;
 
     border-width: 0;
     border-color: transparent;
 }
 
 .scrollbars-junction {
-    background-color: @theme_scrollbar_trough;
+    background-color: @theme_internal_bg;
 }
 
 .scrollbar.trough.vertical {
-    box-shadow: inset 1px 0 shade(@theme_scrollbar_trough, 0.90);
+    box-shadow: inset 1px 0 @theme_internal_border;
 }
 
 .scrollbar.trough.horizontal {
-    box-shadow: inset 0 1px shade(@theme_scrollbar_trough, 0.90);
+    box-shadow: inset 0 1px @theme_internal_border;
 }
 
 .scrollbar.slider {
-    background-color: @theme_scrollbar_slider;
+    background-color: @theme_slider_bg;
 
     border-style: solid;
     border-radius: 12px;

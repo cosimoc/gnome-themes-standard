@@ -1,13 +1,18 @@
 @define-color theme_base_color #fff;
 @define-color theme_fg_color #000;
 @define-color theme_active_color #b8b891;
-@define-color theme_insensitive_color #999;
-@define-color theme_insensitive_bg #ccf;
 @define-color theme_selected_bg_color #555;
 
-@define-color theme_scrollbar_slider @theme_selected_bg_color;
-@define-color theme_scrollbar_border darker(@theme_scrollbar_slider);
-@define-color theme_scrollbar_trough #ddd;
+@define-color theme_internal_border shade(#ddd, 0.90);
+@define-color theme_internal_bg #ddd;
+
+@define-color theme_insensitive_color shade(#ddd, 0.90);
+@define-color theme_insensitive_bg @theme_base_color;
+
+@define-color theme_slider_bg shade(@theme_selected_bg_color, 1.10);
+@define-color theme_slider_border darker(@theme_slider_bg);
+
+@define-color theme_button_bg #f3f3f3;
 
 @define-color theme_cursor_color #cc0000;
 
