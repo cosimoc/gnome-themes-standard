@@ -336,8 +336,28 @@ GtkScale.slider:insensitive {
 
 GtkSwitch.slider {
     padding: 2px;
+
     border-width: 1px;
-    border-color: @theme_insensitive_bg;
+    border-color: @theme_slider_border;
+    border-style: solid;
+    border-radius: 3px;
+
+    background-color: @theme_slider_bg;
+}
+
+GtkSwitch.slider:insensitive {
+    background-color: @theme_insensitive_bg;
+    border-color: @theme_insensitive_color;
+}
+
+GtkSwitch.trough {
+    border-color: @theme_internal_border;
+    background-color: @theme_button_bg;
+}
+
+GtkSwitch.trough:active {
+    color: @theme_highlight_color;
+    background-color: @theme_button_bg;
 }
 
 .notebook {
