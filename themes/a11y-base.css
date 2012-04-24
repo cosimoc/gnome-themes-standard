@@ -351,7 +351,7 @@ GtkSwitch.slider:insensitive {
 }
 
 GtkSwitch.trough {
-    border-color: @theme_internal_border;
+    border-color: @theme_fg_color;
     background-color: @theme_button_bg;
 }
 
