@@ -79,7 +79,7 @@ GtkComboBox .separator {
 }
 
 .trough {
-    background-color: @theme_active_color;
+    background-color: @theme_scrollbar_trough;
     color: @theme_fg_color;
 }
 
