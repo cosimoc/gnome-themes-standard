@@ -366,7 +366,7 @@ GtkSwitch.trough:active {
 }
 
 .notebook tab {
-    background-color: @theme_active_color;
+    background-color: @theme_internal_bg;
     padding: 3px;
 }
 
@@ -374,7 +374,7 @@ GtkSwitch.trough:active {
     border-image: linear-gradient(to bottom,
                                   transparent,
                                   transparent 2px,
-                                  @theme_fg_color 3px,
+                                  @theme_fg_color 2px,
                                   @theme_fg_color);
     border-image-slice: 3 1 1 1;
     border-image-width: 1;
