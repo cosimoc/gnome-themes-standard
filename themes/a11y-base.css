@@ -17,6 +17,8 @@
 
     -GtkComboBox-arrow-scaling: 0.9;
     -GtkButton-default-border: 0;
+
+    background-clip: padding-box;
 }
 
 GtkWindow {
@@ -51,7 +53,7 @@ GtkImage:insensitive {
 .button,
 .trough,
 .entry {
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     border-color: @theme_fg_color;
 }
@@ -110,14 +112,15 @@ GtkComboBox .separator {
 }
 
 .entry:selected {
-    background-color: @theme_active_color;
+    background-color: @theme_selected_bg_color;
+    color: @theme_base_color;
 }
 
 .progressbar {
     background-color: @theme_fg_color;
     border-color: @theme_insensitive_bg;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
 }
 
 .entry {
@@ -142,7 +145,7 @@ GtkComboBox .button {
 
 .spinbutton .button {
     padding: 2px 6px;
-    border-width: 0px 2px;
+    border-width: 0px 1px;
     color: @theme_fg_color;
 }
 
@@ -165,8 +168,8 @@ GtkComboBox .button {
 }
 
 .menubar .menuitem:hover {
-    background-color: @theme_fg_color;
-    color: @theme_insensitive_bg;
+    background-color: @theme_selected_bg_color;
+    color: @theme_base_color;
 }
 
 .menu .menuitem {
@@ -174,8 +177,8 @@ GtkComboBox .button {
 }
 
 .menu .menuitem:hover {
-    background-color: @theme_fg_color;
-    color: @theme_insensitive_bg;
+    background-color: @theme_selected_bg_color;
+    color: @theme_base_color;
 }
 
 .menu {
@@ -190,7 +193,7 @@ GtkComboBox .button {
 
 .toolbar {
     padding: 4px;
-    border-width: 2px 0;
+    border-width: 1px 0;
     border-style: solid;
 }
 
@@ -205,7 +208,7 @@ GtkComboBox .button {
 }
 
 .inline-toolbar {
-    border-width: 0 2px 2px;
+    border-width: 0 1px 1px;
 }
 
 .primary-toolbar.toolbar,
@@ -259,7 +262,7 @@ GtkComboBox .button {
 
 .linked .button:last-child,
 .inline-toolbar GtkToolButton:last-child .button {
-    border-width: 2px;
+    border-width: 1px;
     border-right-color: @theme_fg_color;
 }
 
@@ -270,7 +273,7 @@ GtkComboBox .button {
 
 .slider {
     background-color: @theme_base_color;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     border-color: @theme_fg_color;
 
@@ -298,23 +301,36 @@ GtkSwitch.slider {
 }
 
 .notebook {
-    border-width: 2px;
+    border-width: 1px;
     border-color: @theme_fg_color;
     border-style: solid;
 }
 
-tab {
+.notebook tab {
     background-color: @theme_active_color;
     padding: 3px;
 }
 
-tab:active {
+.notebook tab.top {
+    border-image: linear-gradient(to bottom,
+                                  transparent,
+                                  transparent 2px,
+                                  @theme_fg_color 3px,
+                                  @theme_fg_color);
+    border-image-slice: 3 1 1 1;
+    border-image-width: 1;
+    border-width: 3px 1px 0 1px;
+
+    border-color: transparent;
+}
+
+.notebook tab:active {
     background-color: @theme_base_color;
     color: @theme_fg_color;
 }
 
 GtkScrolledWindow.frame {
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
 }
 
@@ -355,6 +371,47 @@ column-header:first-child .button {
     -GtkRange-slider-width: 20;
     -GtkRange-stepper-size: 20;
     -GtkRange-trough-border: 0;
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false;
+}
+
+.scrollbar.trough {
+    background-color: @theme_scrollbar_trough;
+
+    border-width: 0;
+    border-color: transparent;
+
+    box-shadow: inset 1px 0 shade(@theme_scrollbar_trough, 0.90);
+}
+
+.scrollbar.slider {
+    background-color: @theme_scrollbar_slider;
+
+    border-style: solid;
+    border-radius: 12px;
+    border-width: 4px;
+    border-color: transparent;
+}
+
+.scrollbar.slider:hover,
+.scrollbar.slider:active:hover {
+    background-color: @theme_fg_color;
+    border-width: 4px;
+    border-color: transparent;
+}
+
+.view {
+    background-color: @theme_base_color;
+}
+
+.view:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_base_color;
+}
+
+.view:selected:focus {
+    background-color: @theme_fg_color;
+    color: @theme_base_color;
 }
 
 GtkColorSwatch {

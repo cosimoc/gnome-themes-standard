@@ -3,6 +3,11 @@
 @define-color theme_active_color #b8b891;
 @define-color theme_insensitive_color #999;
 @define-color theme_insensitive_bg #ccf;
+@define-color theme_selected_bg_color #555;
+
+@define-color theme_scrollbar_slider @theme_selected_bg_color;
+@define-color theme_scrollbar_border darker(@theme_scrollbar_slider);
+@define-color theme_scrollbar_trough #ddd;
 
 @define-color theme_cursor_color #cc0000;
 
