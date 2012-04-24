@@ -70,7 +70,6 @@ GtkImage:insensitive {
 
 .button:hover {
     background-color: @theme_fg_color;
-    border-color: @theme_insensitive_bg;
     color: @theme_insensitive_bg;
 }
 
@@ -212,6 +211,18 @@ GtkComboBox .button {
     padding: 4px;
     border-width: 1px 0;
     border-style: solid;
+}
+
+.toolbar .button {
+    background-color: transparent;
+}
+
+.toolbar .button:active {
+    background-color: @theme_slider_bg;
+}
+
+.toolbar .button:hover {
+    background-color: @theme_fg_color;
 }
 
 .toolbar .button *:insensitive,
