@@ -58,6 +58,15 @@ GtkImage:insensitive {
     color: @theme_insensitive_bg;
 }
 
+.view.rubberband,
+.rubberband {
+    border-color: @theme_fg_color;
+    border-style: solid;
+    border-width: 1px;
+
+    background-color: alpha(@theme_internal_bg, 0.35);
+}
+
 .grip {
     background-color: @theme_insensitive_color;
 }
