@@ -477,7 +477,8 @@ GtkScrolledWindow.frame {
     border-style: solid;
 }
 
-column-header .button {
+column-header .button,
+column-header.button {
     font: bold;
 
     border-top-width: 0;
