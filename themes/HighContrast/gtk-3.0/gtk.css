@@ -8,6 +8,8 @@
 @define-color theme_internal_border shade(#ddd, 0.90);
 @define-color theme_internal_bg #ddd;
 
+@define-color theme_notebook_bg @theme_internal_bg;
+
 @define-color theme_insensitive_color shade(#ddd, 0.90);
 @define-color theme_insensitive_bg @theme_base_color;
 
@@ -16,7 +18,7 @@
 
 @define-color theme_button_bg #f3f3f3;
 
-@define-color theme_cursor_color #cc0000;
+@define-color theme_cursor_color @theme_highlight_color;
 
 * {
     /* Pidgin */

@@ -1,10 +1,24 @@
-@define-color theme_base_color #003;
+@define-color theme_base_color #002;
 @define-color theme_fg_color #fff;
-@define-color theme_active_color #669;
-@define-color theme_insensitive_color #999;
-@define-color theme_insensitive_bg #033;
+@define-color theme_active_color #668;
+@define-color theme_selected_bg_color #eee;
 
-@define-color theme_cursor_color #0cc;
+@define-color theme_highlight_color shade(#4a90d9, 1.05);
+
+@define-color theme_internal_bg #555;
+@define-color theme_internal_border shade(@theme_internal_bg, 1.40);
+
+@define-color theme_notebook_bg shade(@theme_active_color, 0.60);
+
+@define-color theme_insensitive_color #555;
+@define-color theme_insensitive_bg #002;
+
+@define-color theme_slider_bg shade(@theme_selected_bg_color, 0.95);
+@define-color theme_slider_border shade(@theme_slider_bg, 0.30);
+
+@define-color theme_button_bg shade(@theme_active_color, 0.50);
+
+@define-color theme_cursor_color @theme_highlight_color;
 
 * {
     /* Pidgin */
@@ -17,7 +31,7 @@
     -GtkHTML-vlink-color: #ff80ff;
     -GtkHTML-cite-color: #ccff80;
 
-    -GtkWidget-link-color: #000060;
+    -GtkWidget-link-color: @theme_highlight_color;
     -GtkWidget-visited-link-color: #600000;
 }
 
