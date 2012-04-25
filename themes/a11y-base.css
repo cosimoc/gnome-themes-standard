@@ -393,14 +393,18 @@ GtkSwitch.trough:active {
     border-width: 1px;
     border-color: @theme_fg_color;
     border-style: solid;
+    background-clip: border-box;
 }
 
 .notebook tab {
     background-color: @theme_internal_bg;
     padding: 3px;
+
+    border-color: @theme_fg_color;
 }
 
 .notebook tab.top {
+    background-clip: padding-box;
     border-image: linear-gradient(to bottom,
                                   transparent,
                                   transparent 2px,
@@ -413,9 +417,26 @@ GtkSwitch.trough:active {
     border-color: transparent;
 }
 
+.notebook tab.bottom {
+    border-width: 0 1px 1px 1px;
+}
+
+.notebook tab.left {
+    border-width: 1px 0 1px 1px;
+}
+
+.notebook tab.right {
+    border-width: 1px 1px 1px 0;
+}
+
 .notebook tab:active {
     background-color: @theme_base_color;
     color: @theme_fg_color;
+}
+
+.frame {
+    border-width: 1px;
+    border-style: solid;
 }
 
 GtkScrolledWindow.frame {
