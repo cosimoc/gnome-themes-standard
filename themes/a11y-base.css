@@ -257,6 +257,12 @@ GtkComboBox .button {
     -GtkToolbar-button-relief: normal;
 }
 
+.raised .button,
+.raised.button,
+.inline-toolbar .button {
+    background-color: @theme_button_bg;
+}
+
 .primary-toolbar .button {
     border-color: transparent;
 }
