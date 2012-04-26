@@ -1,6 +1,5 @@
 @define-color theme_base_color #fff;
 @define-color theme_fg_color #000;
-@define-color theme_active_color #b8b891;
 @define-color theme_selected_bg_color #555;
 
 @define-color theme_highlight_color shade(#4a90d9, 0.85);

@@ -1,3 +1,20 @@
+/* common color definitions */
+
+@define-color warning_color #faad3d;
+@define-color warning_bg_color @warning_color;
+@define-color warning_fg_color black;
+
+@define-color question_color #8aadd4;
+@define-color question_bg_color @question_color;
+@define-color question_fg_color white;
+
+@define-color error_color #ed3636;
+@define-color error_bg_color @error_color;
+@define-color error_fg_color white;
+
+@define-color error_color #cc0000;
+@define-color success_color #4e9a06;
+
 * {
     -GtkRange-stepper-size: 2;
     -GtkScale-slider-length: 18;
@@ -25,8 +42,12 @@
 }
 
 GtkWindow {
-    background-color: @theme_base_color;
     color: @theme_fg_color;
+}
+
+/* FIXME: this shouldn't be needed... */
+* {
+    background-color: @theme_base_color;
 }
 
 *:insensitive {
@@ -49,6 +70,7 @@ GtkCheckButton:selected:focus {
     color: @theme_fg_color;
 }
 
+GtkImage,
 GtkImage:insensitive {
     background-color: transparent;
 }
@@ -83,6 +105,7 @@ GtkImage:insensitive {
 .button {
     background-color: @theme_button_bg;
     padding: 1px 4px;
+    color: @theme_fg_color;
 }
 
 .button:insensitive {
@@ -282,6 +305,12 @@ GtkComboBox .button {
     -GtkToolbar-button-relief: normal;
 }
 
+.primary-toolbar.toolbar,
+.primary-toolbar .toolbar,
+.menubar {
+    -GtkWidget-window-dragging: true;
+}
+
 .raised .button,
 .raised.button,
 .inline-toolbar .button {
@@ -316,6 +345,7 @@ GtkComboBox .button {
     border-color: @theme_insensitive_color;
 }
 
+.osd .button,
 .linked .button,
 .inline-toolbar .button {
     border-right-width: 0;
@@ -333,12 +363,14 @@ GtkComboBox .button {
     border-bottom-color: @theme_fg_color;
 }
 
+.osd .button:first-child,
 .linked .button:first-child,
 .inline-toolbar GtkToolButton:first-child .button {
     border-radius: 3px 0 0 3px;
     border-left-color: @theme_fg_color;
 }
 
+.osd .button:last-child,
 .linked .button:last-child,
 .inline-toolbar GtkToolButton:last-child .button {
     border-width: 1px;
@@ -520,7 +552,23 @@ column-header:first-child .button {
 }
 
 .info {
-    background-color: @theme_active_color;
+    background-color: @theme_selected_bg_color;
+    color: @theme_base_color;
+}
+
+.warning {
+    background-color: @warning_bg_color;
+    color: @warning_fg_color;
+}
+
+.question {
+    background-color: @question_bg_color;
+    color: @question_fg_color;
+}
+
+.error {
+    background-color: @error_bg_color;
+    color: @error_fg_color;
 }
 
 .scrollbar {
@@ -594,4 +642,46 @@ GtkColorSwatch {
 TerminalScreen {
     background-color: @theme_base_color;
     color: @theme_fg_color;
+}
+
+.nautilus-cluebar-label {
+    color: @theme_base_color;
+    font: bold;
+}
+
+.osd {
+    color: @theme_base_color;
+    background-color: @theme_selected_bg_color;
+}
+
+.osd.toolbar {
+    padding: 20px;
+
+    border-style: solid;
+    border-color: @theme_internal_bg;
+    border-width: 2px;
+
+    -GtkToolbar-button-relief: normal;
+}
+
+.osd .button {
+    padding: 4px;
+    color: @theme_fg_color;
+    background-color: @theme_internal_bg;
+}
+
+.osd GtkToolButton .button,
+.osd .button:only-child {
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+}
+
+.osd .button:hover {
+    color: @theme_base_color;
+}
+
+.osd .button:active {
+    color: @theme_fg_color;
+    background-color: @theme_base_color;
 }
