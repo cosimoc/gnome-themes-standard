@@ -649,6 +649,21 @@ TerminalScreen {
     font: bold;
 }
 
+.documents-icon-bg {
+    background-color: @theme_internal_bg;
+    color: @theme_fg_color;
+    border-radius: 3px;
+}
+
+.documents-collection-icon {
+    background-color: @theme_internal_bg;
+    border-radius: 6px;
+}
+
+.documents-selection-mode.toolbar {
+    background-color: @theme_internal_bg;
+}
+
 .osd {
     color: @theme_base_color;
     background-color: @theme_selected_bg_color;
