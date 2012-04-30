@@ -57,8 +57,6 @@ GtkWindow:backdrop {
 }
 
 * {
-    /* inherit the color from parent by default */
-    color: inherit;
     background-color: @theme_bg_color;
 }
 
