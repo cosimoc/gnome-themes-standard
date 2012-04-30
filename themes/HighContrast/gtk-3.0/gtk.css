@@ -6,12 +6,12 @@
 @define-color theme_highlight_alt #204a87;
 @define-color theme_highlight_border #12294a;
 
-@define-color theme_internal_bg #d3d4d1;
+@define-color theme_internal_bg #d6d6d6;
 @define-color theme_internal_border shade(@theme_internal_bg, 0.90);
 
 @define-color theme_notebook_bg @theme_internal_bg;
 
-@define-color theme_insensitive_color alpha(#000, 0.50);
+@define-color theme_insensitive_color #7a7a79;
 @define-color theme_insensitive_bg #f4f4f2;
 @define-color theme_insensitive_border #babdb6;
 
@@ -27,7 +27,7 @@
 
 @define-color theme_primary_toolbar #d3d7cf;
 
-@define-color theme_cursor_color @theme_highlight_color;
+@define-color theme_cursor_color @theme_fg_color;
 
 * {
     /* Pidgin */

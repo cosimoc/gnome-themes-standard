@@ -17,13 +17,13 @@
 
 * {
     -GtkRange-stepper-size: 2;
-    -GtkScale-slider-length: 18;
-    -GtkRange-slider-width: 18;
+    -GtkScale-slider-length: 28;
+    -GtkRange-slider-width: 28;
 
     -GtkTreeView-expander-size: 16;
 
     -GtkWidget-cursor-color: @theme_cursor_color;
-    -GtkWidget-cursor-aspect-ratio: 0.10;
+    -GtkWidget-cursor-aspect-ratio: 0.08;
 
     -GtkWidget-focus-padding: 1;
     -GtkWidget-focus-line-width: 2;
@@ -119,6 +119,10 @@ GtkImage:insensitive {
     border-color: @theme_insensitive_border;
 }
 
+GtkComboBox:insensitive {
+    color: @theme_button_insensitive_fg
+}
+
 .button:insensitive:active {
     background-color: @theme_button_insensitive_active_bg;
     border-color: @theme_button_insensitive_active_bg;
@@ -210,6 +214,15 @@ GtkComboBox .button {
     color: @theme_fg_color;
     border-width: 1px;
     border-color: @theme_fg_color;
+}
+
+.combobox-entry .button:hover {
+    background-color: @theme_fg_color;
+}
+
+.combobox-entry .button:active {
+    background-color: @theme_active_color;
+    color: @theme_base_color;
 }
 
 .combobox-entry .button:insensitive {
@@ -338,6 +351,7 @@ GtkComboBox .button {
 
 .primary-toolbar .button:insensitive {
     background-color: transparent;
+    color: @theme_insensitive_color ;
 }
 
 .raised .button,
@@ -465,10 +479,10 @@ GtkComboBox .button {
 GtkScale.trough {
     background-image: linear-gradient(to bottom,
                                       transparent,
-                                      transparent 9px,
-                                      @theme_active_color 9px,
-                                      @theme_active_color 11px,
-                                      transparent 11px,
+                                      transparent 14px,
+                                      @theme_active_color 14px,
+                                      @theme_active_color 16px,
+                                      transparent 16px,
                                       transparent);
 
     background-color:transparent;
@@ -478,10 +492,10 @@ GtkScale.trough {
 GtkScale.trough:insensitive {
     background-image: linear-gradient(to bottom,
                                       transparent,
-                                      transparent 9px,
-                                      @theme_button_insensitive_active_bg 9px,
-                                      @theme_button_insensitive_active_bg 11px,
-                                      transparent 11px,
+                                      transparent 14px,
+                                      @theme_button_insensitive_active_bg 14px,
+                                      @theme_button_insensitive_active_bg 16px,
+                                      transparent 16px,
                                       transparent);
     background-color: transparent;
 }
@@ -489,10 +503,10 @@ GtkScale.trough:insensitive {
 GtkScale.trough.vertical {
     background-image: linear-gradient(to right,
                                       transparent,
-                                      transparent 9px,
-                                      @theme_active_color 9px,
-                                      @theme_active_color 11px,
-                                      transparent 11px,
+                                      transparent 14px,
+                                      @theme_active_color 14px,
+                                      @theme_active_color 16px,
+                                      transparent 16px,
                                       transparent);
     background-color:transparent;
     border-style: none;
@@ -501,10 +515,10 @@ GtkScale.trough.vertical {
 GtkScale.trough.vertical:insensitive {
     background-image: linear-gradient(to right,
                                       transparent,
-                                      transparent 9px,
-                                      @theme_button_insensitive_active_bg 9px,
-                                      @theme_button_insensitive_active_bg 11px,
-                                      transparent 11px,
+                                      transparent 14px,
+                                      @theme_button_insensitive_active_bg 14px,
+                                      @theme_button_insensitive_active_bg 16px,
+                                      transparent 16px,
                                       transparent);
 }
 
@@ -513,8 +527,8 @@ GtkScale.slider {
     background-color: @theme_button_bg;
     color: transparent;
 
-    border-radius: 10px;
-    border-color: @theme_slider_border;
+    border-radius: 15px;
+    border-color: @theme_active_color;
     border-style: solid;
     border-width: 1px;
 }
@@ -584,24 +598,20 @@ GtkSwitch.trough:active:insensitive {
 }
 
 .notebook tab {
-    background-color: @theme_notebook_bg;
     padding: 3px;
-
-    border-color: @theme_active_color;
 }
 
 .notebook tab.top {
-    background-clip: padding-box;
     border-image: linear-gradient(to bottom,
-                                  transparent,
-                                  transparent 2px,
-                                  @theme_fg_color 2px,
-                                  @theme_fg_color);
-    border-image-slice: 3 1 1 1;
-    border-image-width: 1;
-    border-width: 3px 1px 0 1px;
+                                  alpha(@theme_active_color, 0.00),
+                                  @theme_active_color) 1 / 0 1px;
+}
 
-    border-color: transparent;
+.notebook tab.top:active {
+    border-width: 1px 1px 0 1px;
+    border-radius: 4px 4px 0 0;
+
+    border-image: none;
 }
 
 .notebook tab.bottom {
@@ -765,6 +775,21 @@ TerminalScreen {
 .nautilus-cluebar-label {
     color: @theme_base_color;
     font: bold;
+}
+
+NautilusWindow .pane-separator {
+    border-style: solid;
+    border-width: 1px;
+    border-color: @theme_active_color;
+}
+
+NautilusWindow .sidebar .frame {
+    border-style: solid;
+    border-width: 1px 0 0 0;
+}
+
+.nautilus-inactive-pane .view {
+    background-color: @theme_insensitive_bg;
 }
 
 .documents-icon-bg {
