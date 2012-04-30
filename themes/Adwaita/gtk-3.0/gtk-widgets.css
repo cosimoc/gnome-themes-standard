@@ -100,6 +100,13 @@ GtkWindow:backdrop {
     color: @unfocused_insensitive_fg_color;
 }
 
+GtkImage,
+GtkImage:insensitive,
+GtkLabel,
+GtkLabel:insensitive {
+    background-color: transparent;
+}
+
 /************
  * Tooltips *
  ************/
@@ -243,11 +250,6 @@ GtkTreeView.separator:backdrop,
 .notebook .pane-separator:backdrop,
 .notebook .pane-separator:hover:backdrop {
     background-color: @theme_unfocused_base_color;
-}
-
-GtkImage,
-GtkImage:insensitive {
-    background-color: transparent;
 }
 
 /****************
