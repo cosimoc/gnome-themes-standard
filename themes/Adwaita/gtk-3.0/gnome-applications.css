@@ -14,14 +14,6 @@
 /****************
  * Applications *
  ****************/
-ApDocView, /* Abiword */
-EogScrollView, /* Eog */
-CheeseThumbView /* Cheese */
-{
-    background-color: @chrome_bg_color;
-    -EogScrollView-shadow-type: none;
-}
-
 /* gnome-terminal */
 TerminalScreen {
     background-color: @theme_base_color;
