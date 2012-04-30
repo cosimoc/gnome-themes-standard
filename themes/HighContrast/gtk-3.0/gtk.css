@@ -1,21 +1,27 @@
 @define-color theme_base_color #fff;
 @define-color theme_fg_color #000;
-@define-color theme_selected_bg_color #555;
+@define-color theme_selected_bg_color #555753;
 
-@define-color theme_highlight_color shade(#4a90d9, 0.85);
+@define-color theme_highlight_color #3465a4;
 
-@define-color theme_internal_border shade(#ddd, 0.90);
-@define-color theme_internal_bg #ddd;
+@define-color theme_internal_bg #d3d4d1;
+@define-color theme_internal_border shade(@theme_internal_bg, 0.90);
 
 @define-color theme_notebook_bg @theme_internal_bg;
 
-@define-color theme_insensitive_color shade(#ddd, 0.90);
-@define-color theme_insensitive_bg @theme_base_color;
+@define-color theme_insensitive_color alpha(#000, 0.50);
+@define-color theme_insensitive_bg #f4f4f2;
+@define-color theme_insensitive_border #babdb6;
 
 @define-color theme_slider_bg shade(@theme_selected_bg_color, 1.10);
 @define-color theme_slider_border darker(@theme_slider_bg);
 
 @define-color theme_button_bg #f3f3f3;
+@define-color theme_button_fg #2e3436;
+@define-color theme_button_insensitive_fg #c6c8c8;
+@define-color theme_button_insensitive_bg alpha(@theme_button_bg, 0.30);
+@define-color theme_button_insensitive_border alpha(@theme_fg_color, 0.30);
+@define-color theme_button_insensitive_active_bg alpha(@theme_selected_bg_color, 0.30);
 
 @define-color theme_cursor_color @theme_highlight_color;
 

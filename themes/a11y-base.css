@@ -51,9 +51,8 @@ GtkWindow {
 }
 
 *:insensitive {
-    color: @theme_insensitive_color;
     background-color: @theme_insensitive_bg;
-    border-color: @theme_insensitive_color;
+    border-color: @theme_insensitive_border;
 }
 
 GtkCheckButton:selected,
@@ -93,74 +92,58 @@ GtkImage:insensitive {
     background-color: @theme_insensitive_color;
 }
 
-.button,
-.entry {
-    border-width: 1px;
+/***********
+ * Buttons *
+ ***********/
+.button {
+    border-width: 2px;
     border-style: solid;
-    border-color: @theme_fg_color;
+    border-color: @theme_button_fg;
 
     border-radius: 3px;
-}
 
-.button {
     background-color: @theme_button_bg;
     padding: 1px 4px;
-    color: @theme_fg_color;
-}
-
-.button:insensitive {
-    background-color: @theme_insensitive_bg;
-}
-
-.button:hover {
-    background-color: @theme_fg_color;
-    color: @theme_insensitive_bg;
+    color: @theme_button_fg;
 }
 
 .button:active {
     background-color: @theme_slider_bg;
     color: @theme_base_color;
+    border-color: @theme_slider_bg;
 }
 
-GtkComboBox *:hover {
-    color: @theme_insensitive_bg;
+.button:insensitive {
+    background-color: @theme_button_insensitive_bg;
+    color: @theme_button_insensitive_fg;
+    border-color: @theme_insensitive_border;
 }
 
-GtkComboBox .separator {
-    color: transparent;
+.button:insensitive:active {
+    background-color: @theme_button_insensitive_active_bg;
+    border-color: @theme_button_insensitive_active_bg;
+    color: @theme_base_color;
 }
 
-.button:insensitive,
-.trough:insensitive,
-.entry:insensitive {
-    border-color: @theme_insensitive_color;
-}
-
-.trough {
-    background-color: @theme_internal_bg;
-    color: @theme_fg_color;
-
-    border-width: 1px;
-    border-style: solid;
-    border-color: @theme_internal_border;
-}
-
-.entry:insensitive,
-.trough:insensitive {
-    background-color: @theme_insensitive_bg;
-    color: @theme_insensitive_color;
+.button:hover {
+    background-color: @theme_fg_color;
+    color: @theme_base_color;
 }
 
 .button:hover:active {
     background-color: @theme_fg_color;
 }
 
-.button:insensitive:active,
-.trough:insensitive:active {
-    background-color: @theme_insensitive_bg;
-}
-
+/***********
+ * Entries *
+ ***********/
 .entry {
+    border-width: 1px;
+    border-style: solid;
+    border-color: @theme_fg_color;
+
+    border-radius: 3px;
+
     background-color: @theme_base_color;
     padding: 4px;
 }
@@ -175,6 +158,39 @@ GtkComboBox .separator {
     border-color: @theme_highlight_color;
 }
 
+.entry:insensitive {
+    border-color: @theme_insensitive_border;
+    background-color: @theme_insensitive_bg;
+    color: @theme_insensitive_color;
+}
+
+GtkComboBox *:hover {
+    color: @theme_insensitive_bg;
+}
+
+GtkComboBox .separator {
+    color: transparent;
+}
+
+.trough {
+    background-color: @theme_internal_bg;
+    color: @theme_fg_color;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: @theme_internal_border;
+}
+
+.trough:insensitive {
+    border-color: @theme_insensitive_border;
+    background-color: @theme_insensitive_bg;
+    color: @theme_insensitive_color;
+}
+
+.trough:insensitive:active {
+    background-color: @theme_insensitive_bg;
+}
+
 .progressbar {
     background-color: @theme_highlight_color;
     border-style: none;
@@ -182,6 +198,19 @@ GtkComboBox .separator {
 
 GtkComboBox .button {
     padding: 0 4px;
+}
+
+.combobox-entry .button {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+    border-width: 1px;
+    border-color: @theme_fg_color;
+}
+
+.combobox-entry .button:insensitive {
+    background-color: @theme_insensitive_bg;
+    color: @theme_internal_bg;
+    border-color: @theme_insensitive_border;
 }
 
 .combobox-entry .entry:first-child {
@@ -204,19 +233,23 @@ GtkComboBox .button {
 
 .spinbutton .button {
     padding: 2px 6px;
-    color: @theme_fg_color;
+    color: @theme_selected_bg_color;
 
     border-width: 0px 1px;
     border-radius: 0;
+    background-color: @theme_base_color;
+    border-color: @theme_internal_border;
 }
 
 .spinbutton .button:hover {
+    background-color: @theme_selected_bg_color;
     color: @theme_insensitive_bg;
     border-color: @theme_fg_color;
 }
 
 .spinbutton .button:insensitive {
-    color: @theme_insensitive_color;
+    color: @theme_internal_bg;
+    background-color: @theme_insensitive_bg;
 }
 
 .spinbutton .button:first-child,
@@ -276,22 +309,41 @@ GtkComboBox .button {
     background-color: transparent;
 }
 
-.toolbar .button:active {
-    background-color: @theme_slider_bg;
-}
-
-.toolbar .button:hover {
-    background-color: @theme_fg_color;
-}
-
-.toolbar .button *:insensitive,
 .toolbar .button:insensitive {
     background-color: @theme_base_color;
 }
 
-.toolbar .button *:insensitive:active,
-.toolbar .button:insensitive:active {
-    background-color: @theme_insensitive_bg;
+.primary-toolbar .raised .button:insensitive,
+.primary-toolbar .raised.button:insensitive {
+    border-color: @theme_button_insensitive_border;
+    background-color: @theme_button_insensitive_bg;
+    color: @theme_button_insensitive_fg;
+}
+
+.primary-toolbar .raised .button:active,
+.primary-toolbar .raised.button:active,
+.primary-toolbar .button:active,
+.toolbar .button:active {
+    background-color: @theme_slider_bg;
+    border-color: @theme_slider_bg;
+}
+
+.primary-toolbar .raised .button:hover,
+.primary-toolbar .raised.button:hover,
+.primary-toolbar .button:hover,
+.toolbar .button:hover {
+    background-color: @theme_fg_color;
+    border-color: @theme_fg_color;
+}
+
+.primary-toolbar .raised .button:active:insensitive,
+.primary-toolbar .raised.button:active:insensitive,
+.primary-toolbar .button:active:insensitive,
+.toolbar .button:active:insensitive {
+    border-color: @theme_button_insensitive_active_bg;
+    background-color: @theme_button_insensitive_active_bg;
+
+    color: @theme_base_color;
 }
 
 .inline-toolbar {
@@ -321,34 +373,15 @@ GtkComboBox .button {
     border-color: transparent;
 }
 
-.primary-toolbar .button:hover,
-.primary-toolbar .button:active {
-    border-color: @theme_fg_color;
-}
-
-.primary-toolbar .button:active:insensitive {
-    border-color: @theme_insensitive_color;
-}
-
 .primary-toolbar .button.raised,
 .primary-toolbar .raised .button {
-    border-color: @theme_fg_color;
-}
-
-.primary-toolbar .raised .button:insensitive,
-.primary-toolbar .raised.button:insensitive {
-    border-color: transparent;
-}
-
-.primary-toolbar .raised .button:active:insensitive,
-.primary-toolbar .raised.button:active:insensitive {
-    border-color: @theme_insensitive_color;
+    border-color: @theme_button_fg;
 }
 
 .osd .button,
 .linked .button,
 .inline-toolbar .button {
-    border-right-width: 0;
+    border-left-width: 0;
     border-radius: 0;
 }
 
@@ -357,30 +390,23 @@ GtkComboBox .button {
     border-color: @theme_fg_color;
 }
 
-.linked .button:insensitive,
-.inline-toolbar .button:insensitive {
-    border-top-color: @theme_fg_color;
-    border-bottom-color: @theme_fg_color;
-}
-
 .osd .button:first-child,
 .linked .button:first-child,
 .inline-toolbar GtkToolButton:first-child .button {
     border-radius: 3px 0 0 3px;
-    border-left-color: @theme_fg_color;
+    border-left-width: 2px;
 }
 
 .osd .button:last-child,
 .linked .button:last-child,
 .inline-toolbar GtkToolButton:last-child .button {
-    border-width: 1px;
-    border-right-color: @theme_fg_color;
     border-radius: 0 3px 3px 0;
 }
 
-.inline-toolbar .button *:insensitive,
+.linked .button:insensitive,
 .inline-toolbar .button:insensitive {
-    background-color: @theme_insensitive_bg;
+    background-color: @theme_button_insensitive_bg;
+    border-color: @theme_insensitive_border;
 }
 
 GtkScale.trough {
@@ -521,6 +547,8 @@ GtkScrolledWindow.frame {
 column-header .button,
 column-header.button {
     font: bold;
+
+    border-width: 1px;
 
     border-top-width: 0;
     border-right-width: 0;
@@ -687,7 +715,7 @@ TerminalScreen {
 
 .osd GtkToolButton .button,
 .osd .button:only-child {
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 3px;
     border-style: solid;
 }
