@@ -173,12 +173,13 @@ GtkComboBox .separator {
 }
 
 .trough {
-    background-color: @theme_internal_bg;
-    color: @theme_fg_color;
+    background-color: @theme_button_bg;
+    color: @theme_selected_bg_color;
 
     border-width: 1px;
     border-style: solid;
-    border-color: @theme_internal_border;
+    border-color: @theme_selected_bg_color;
+    border-radius: 3px;
 }
 
 .trough:insensitive {
@@ -193,7 +194,9 @@ GtkComboBox .separator {
 
 .progressbar {
     background-color: @theme_highlight_color;
-    border-style: none;
+    border-width: 1px;
+    border-color: @theme_highlight_border;
+    border-radius: 3px
 }
 
 GtkComboBox .button {
@@ -346,6 +349,31 @@ GtkComboBox .button {
     color: @theme_base_color;
 }
 
+.linked .button,
+.inline-toolbar .button {
+    color: @theme_selected_bg_color;
+    border-color: @theme_selected_bg_color;
+}
+
+.linked .button:hover,
+.inline-toolbar .button:hover {
+    color: @theme_base_color;
+    border-color: @theme_fg_color;
+}
+
+.linked .button:active,
+.inline-toolbar .button:active {
+    color: @theme_base_color;
+}
+
+.linked .button:insensitive,
+.inline-toolbar .button:insensitive {
+    border-color: @theme_insensitive_border;
+    background-color: @theme_button_insensitive_bg;
+
+    color: @theme_button_insensitive_fg;
+}
+
 .inline-toolbar {
     border-width: 0 1px 1px;
 }
@@ -385,11 +413,6 @@ GtkComboBox .button {
     border-radius: 0;
 }
 
-.linked .button:hover,
-.inline-toolbar .button:hover {
-    border-color: @theme_fg_color;
-}
-
 .osd .button:first-child,
 .linked .button:first-child,
 .inline-toolbar GtkToolButton:first-child .button {
@@ -401,12 +424,6 @@ GtkComboBox .button {
 .linked .button:last-child,
 .inline-toolbar GtkToolButton:last-child .button {
     border-radius: 0 3px 3px 0;
-}
-
-.linked .button:insensitive,
-.inline-toolbar .button:insensitive {
-    background-color: @theme_button_insensitive_bg;
-    border-color: @theme_insensitive_border;
 }
 
 GtkScale.trough {
@@ -463,18 +480,20 @@ GtkSwitch {
 GtkSwitch.slider {
     padding: 2px;
 
-    border-width: 1px;
-    border-color: @theme_slider_border;
+    border-width: 0;
     border-style: solid;
     border-radius: 3px;
 
-    background-color: @theme_slider_bg;
+    background-color: @theme_selected_bg_color;
     background-clip: border-box;
 }
 
 GtkSwitch.slider:insensitive {
-    background-color: @theme_insensitive_bg;
-    border-color: @theme_insensitive_color;
+    background-color: @theme_button_insensitive_active_bg;
+}
+
+GtkSwitch.slider:active {
+    background-color: @theme_base_color;
 }
 
 GtkSwitch.trough {
@@ -485,8 +504,14 @@ GtkSwitch.trough {
 }
 
 GtkSwitch.trough:active {
-    color: @theme_highlight_color;
-    background-color: @theme_button_bg;
+    color: @theme_base_color;
+    background-color: @theme_highlight_color;
+    background-color: @theme_highlight_alt;
+}
+
+GtkSwitch.trough:insensitive {
+    background-color: @theme_button_insensitive_bg;
+    color: @theme_button_insensitive_active_bg;
 }
 
 .notebook {
