@@ -1,24 +1,34 @@
-@define-color theme_base_color #002;
+@define-color theme_base_color #000;
 @define-color theme_fg_color #fff;
-@define-color theme_active_color #668;
-@define-color theme_selected_bg_color #eee;
+@define-color theme_active_color #eeeeec;
 
-@define-color theme_highlight_color shade(#4a90d9, 1.05);
+@define-color theme_highlight_color #3465a4;
+@define-color theme_highlight_alt #407cbc;
+@define-color theme_highlight_alt #4983c1;
 
 @define-color theme_internal_bg #555;
 @define-color theme_internal_border shade(@theme_internal_bg, 1.40);
 
 @define-color theme_notebook_bg shade(@theme_active_color, 0.60);
 
-@define-color theme_insensitive_color #555;
-@define-color theme_insensitive_bg #002;
+@define-color theme_insensitive_color #4b4b4b;
+@define-color theme_insensitive_bg #161717;
+@define-color theme_insensitive_border #4b4b4b;
 
-@define-color theme_slider_bg shade(@theme_selected_bg_color, 0.95);
+@define-color theme_slider_bg shade(@theme_active_color, 0.95);
 @define-color theme_slider_border shade(@theme_slider_bg, 0.30);
 
-@define-color theme_button_bg shade(@theme_active_color, 0.50);
+@define-color theme_button_bg #353838;
+@define-color theme_button_fg #eeeeec;
+@define-color theme_button_insensitive_fg #4b4b4b;
+@define-color theme_button_insensitive_bg #161717;
+@define-color theme_button_insensitive_border #4b4b4b;
+@define-color theme_button_insensitive_active_bg #4a4e4e;
+@define-color theme_button_insensitive_active_fg #949b98;
 
-@define-color theme_cursor_color @theme_highlight_color;
+@define-color theme_primary_toolbar #5d5f5f;
+
+@define-color theme_cursor_color @theme_fg_color;
 
 * {
     /* Pidgin */

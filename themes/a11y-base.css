@@ -128,7 +128,7 @@ GtkComboBox:insensitive {
 .button:insensitive:active {
     background-color: @theme_button_insensitive_active_bg;
     border-color: @theme_button_insensitive_active_bg;
-    color: @theme_base_color;
+    color: @theme_button_insensitive_active_fg;
 }
 
 .button:hover {

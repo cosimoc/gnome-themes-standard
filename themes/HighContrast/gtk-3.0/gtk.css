@@ -24,6 +24,7 @@
 @define-color theme_button_insensitive_bg #fafaf9;
 @define-color theme_button_insensitive_border #c1c2c3;
 @define-color theme_button_insensitive_active_bg #cccdcc;
+@define-color theme_button_insensitive_active_fg @theme_base_color;
 
 @define-color theme_primary_toolbar #d3d7cf;
 
