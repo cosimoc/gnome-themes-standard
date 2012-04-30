@@ -2570,9 +2570,24 @@ PanelApplet {
 }
 
 ClockBox,
-.gnome-panel-menu-bar,
+.gnome-panel-menu-bar.menubar,
 PanelApplet > GtkMenuBar.menubar {
     font: bold;
+}
+
+.gnome-panel-menu-bar.menubar .menuitem *:hover,
+PanelApplet > GtkMenuBar.menubar .menuitem *:hover {
+    text-shadow: 0 1px @os_chrome_bg_color;
+}
+
+.gnome-panel-menu-bar.menubar .menu,
+PanelApplet > GtkMenuBar.menubar .menu {
+    font: regular;
+}
+
+.gnome-panel-menu-bar.menubar .menu *:hover,
+PanelApplet > GtkMenuBar.menubar .menu *:hover {
+    text-shadow: none;
 }
 
 .gnome-panel-menu-bar .menuitem:hover,
@@ -2586,7 +2601,6 @@ PanelApplet > GtkMenuBar.menubar .menuitem *:hover {
 .gnome-panel-menu-bar .menuitem *:hover,
 PanelApplet > GtkMenuBar.menubar .menuitem *:hover {
     color: @os_chrome_selected_fg_color;
-    text-shadow: 0 1px @os_chrome_bg_color;
 }
 
 PanelApplet .button,
@@ -2598,9 +2612,10 @@ PanelApplet .button:hover {
     border-radius: 0;
 
     background-image: none;
-    background-color: alpha(@theme_base_color, 0.0);
+    background-color: @os_chrome_bg_color;
 
     color: @os_chrome_fg_color;
+    text-shadow: none;
 }
 
 PanelApplet .button:active:hover,
@@ -2622,15 +2637,13 @@ PanelApplet *:hover:active {
     text-shadow: 0 1px @os_chrome_bg_color;
 }
 
+WnckPager {
+    background-color: lighter(@os_chrome_selected_bg_color);
+}
+
 NaTrayApplet {
     -NaTrayApplet-icon-padding: 12;
     -NaTrayApplet-icon-size: 16;
-}
-
-WnckPager, WnckTasklist {
-    background-color: @os_chrome_selected_bg_color;
-    background-image: none;
-    color: @os_chrome_fg_color;
 }
 
 GsmFailWhaleDialog {
