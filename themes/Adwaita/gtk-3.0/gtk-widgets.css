@@ -704,6 +704,12 @@ GtkScrolledWindow.frame:backdrop {
     border-color: @unfocused_borders;
 }
 
+/* avoid double borders when a viewport is 
+ * packed into a GtkScrolledWindow */
+GtkScrolledWindow GtkViewport.frame {
+    border-style: none;
+}
+
 /***********
  * Buttons *
  ***********/
