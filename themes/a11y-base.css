@@ -266,7 +266,7 @@ GtkComboBox .button {
 .spinbutton .button:hover {
     background-color: @theme_active_color;
     color: @theme_insensitive_bg;
-    border-color: @theme_fg_color;
+    border-color: @theme_active_color;
 }
 
 .spinbutton .button:insensitive {
