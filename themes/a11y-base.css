@@ -69,6 +69,8 @@ GtkCheckButton:selected:focus {
     color: @theme_fg_color;
 }
 
+GtkLabel,
+GtkLabel:insensitive,
 GtkImage,
 GtkImage:insensitive {
     background-color: transparent;
@@ -302,6 +304,10 @@ GtkComboBox .button {
 
 .menuitem {
     color: @theme_fg_color;
+}
+
+.menuitem:insensitive {
+    color: @theme_button_insensitive_fg;
 }
 
 .menubar .menuitem {
@@ -668,6 +674,45 @@ column-header:first-child .button {
 .radio {
     border-width: 1px;
     border-style: solid;
+    border-color: @theme_active_color;
+    color: @theme_active_color;
+
+    background-color: @theme_button_bg;
+}
+
+.check:insensitive,
+.radio:insensitive {
+    border-color: @theme_button_insensitive_border;
+    color: @theme_button_insensitive_fg;
+    background-color: @theme_button_insensitive_bg;
+}
+
+.menuitem.check,
+.menuitem.radio {
+    background-color: transparent;
+    color: transparent;
+    border-color: transparent;
+}
+
+.menuitem.radio:active,
+.menuitem.check:active,
+.menuitem.radio:inconsistent,
+.menuitem.check:inconsistent {
+    color: @theme_active_color;
+}
+
+.menuitem.radio:active:hover,
+.menuitem.check:active:hover,
+.menuitem.radio:inconsistent:hover,
+.menuitem.check:inconsistent:hover {
+    color: @theme_base_color;
+}
+
+.menuitem.radio:active:insensitive,
+.menuitem.check:active:insensitive,
+.menuitem.radio:inconsistent:insensitive,
+.menuitem.check:inconsistent:insensitive {
+    color: @theme_button_insensitive_fg;
 }
 
 .expander row:selected:focus {
