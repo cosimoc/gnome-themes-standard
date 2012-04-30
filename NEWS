@@ -1,3 +1,24 @@
+3.5.1
+=====
+
+Rework HighContrast theme according to new mockups
+Add theming support for OSD style
+Render borders for GtkFrame; remove its padding
+Improve fallback mode theming
+Fix theming for fail whale dialog
+Fix notebook tab background rendering
+Update for GTK master CSS syntax changes
+
+3.4.1
+=====
+
+Fix text shadow on active GtkLinkButton state and Documents selection toolbar
+Fix opaque background for tooltips children
+Fix text spacing in progress bars
+Fix cell renderer progress bar border rendering
+Fix double background in fallback panel menuitem images
+Fix insensitive state for treeview column header buttons
+
 3.4.0
 =====
 
