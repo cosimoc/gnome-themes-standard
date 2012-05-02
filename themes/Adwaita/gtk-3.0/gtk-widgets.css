@@ -931,7 +931,7 @@ GtkComboBox.combobox-entry .button {
 .linked .button:focus:active:first-child,
 .linked .button:insensitive:first-child {
     border-right-width: 0;
-    border-image-width: 3px 0 4px 3;
+    border-image-width: 3px 0 4px 3px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
