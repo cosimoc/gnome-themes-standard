@@ -89,17 +89,10 @@ NautilusQueryEditor.info {
     text-shadow: none;
 }
 
-/* This will make the location entry tall as buttons.
-   Buttons are too tall btw, then it's ugly */
-/*NautilusLocationEntry.entry {
-    -GtkEntry-inner-border: 9;
-}*/
-
 NautilusLocationEntry.entry {
     padding-left: 4px;
     padding-right: 4px;
 }
-
 
 NautilusQueryEditor .button,
 NautilusQueryEditor .button:focus,
@@ -394,15 +387,6 @@ GtkIconView.documents-main-view.check:active {
 }
 
 /* epiphany */
-
-/* EphyToolbar.toolbar {
-    border-bottom: 1 solid @borders;
-}
-
-EphyToolbar.toolbar:backdrop {
-    border-bottom: 1 solid @unfocused_borders;
-}
-*/
 
 EphyToolbar .entry,
 EphyToolbar .entry:focus,
