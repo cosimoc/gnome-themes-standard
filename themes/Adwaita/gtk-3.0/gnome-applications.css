@@ -27,6 +27,10 @@ TerminalWindow GtkNotebook.notebook {
     border-left-width: 0;
 }
 
+#terminal-palette-table GtkColorButton.button {
+    padding: 1px 4px;
+}
+
 /* nautilus */
 .nautilus-canvas-item {
     border-radius: 5px;
