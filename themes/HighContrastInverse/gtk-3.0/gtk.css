@@ -1,32 +1,65 @@
 @define-color theme_base_color #000;
 @define-color theme_fg_color #fff;
 @define-color theme_active_color #eeeeec;
+@define-color theme_border_color @theme_button_bg;
 
 @define-color theme_highlight_color #3465a4;
-@define-color theme_highlight_alt #407cbc;
-@define-color theme_highlight_alt #4983c1;
+@define-color theme_highlight_alt #204a87;
+@define-color theme_highlight_border #729fcf;
 
-@define-color theme_internal_bg #555;
-@define-color theme_internal_border shade(@theme_internal_bg, 1.40);
+@define-color theme_internal_bg #2e3436;
+@define-color theme_internal_border #babdb6;
 
-@define-color theme_notebook_bg shade(@theme_active_color, 0.60);
+@define-color theme_insensitive_color #7d7d7d;
+@define-color theme_insensitive_bg #444542;
+@define-color theme_insensitive_border #7f7f7f;
 
-@define-color theme_insensitive_color #4b4b4b;
-@define-color theme_insensitive_bg #161717;
-@define-color theme_insensitive_border #4b4b4b;
+@define-color theme_slider_bg #b2b6b0;
 
-@define-color theme_slider_bg shade(@theme_active_color, 0.95);
-@define-color theme_slider_border shade(@theme_slider_bg, 0.30);
+@define-color theme_button_bg #555753;
+@define-color theme_button_fg #ffffff;
+@define-color theme_button_active_bg #babdb6;
+@define-color theme_button_active_border @theme_button_fg;
+@define-color theme_button_insensitive_bg #5d5e5b;
+@define-color theme_button_insensitive_fg @theme_insensitive_color;
+@define-color theme_button_insensitive_border @theme_insensitive_border;
+@define-color theme_button_insensitive_active_bg #373836;
+@define-color theme_button_insensitive_active_fg #030303;
+@define-color theme_button_insensitive_active_border #4c4c4c;
+@define-color theme_button_linked_border @theme_button_active_bg;
+@define-color theme_button_linked_insensitive_bg #191a19;
+@define-color theme_button_linked_insensitive_fg @theme_button_insensitive_bg;
 
-@define-color theme_button_bg #353838;
-@define-color theme_button_fg #eeeeec;
-@define-color theme_button_insensitive_fg #4b4b4b;
-@define-color theme_button_insensitive_bg #161717;
-@define-color theme_button_insensitive_border #4b4b4b;
-@define-color theme_button_insensitive_active_bg #4a4e4e;
-@define-color theme_button_insensitive_active_fg #949b98;
+@define-color theme_entry_bg #333333;
 
-@define-color theme_primary_toolbar #5d5f5f;
+@define-color theme_notebook_bg @theme_entry_bg;
+@define-color theme_notebook_border #888a85;
+
+@define-color theme_scale_trough_bg @theme_trough_fg;
+@define-color theme_scale_trough_insensitive_bg @theme_trough_insensitive_border;
+
+@define-color theme_switch_slider_bg @theme_base_color;
+@define-color theme_switch_slider_border @theme_notebook_border;
+@define-color theme_switch_slider_active_bg @theme_fg_color;
+@define-color theme_switch_slider_insensitive_bg @theme_base_color;
+@define-color theme_switch_slider_insensitive_border #292928;
+@define-color theme_switch_slider_active_insensitive_bg @theme_trough_insensitive_fg;
+
+@define-color theme_trough_bg @theme_internal_bg;
+@define-color theme_trough_fg @theme_button_bg;
+@define-color theme_trough_insensitive_bg #0e0f10;
+@define-color theme_trough_insensitive_fg @theme_button_insensitive_active_border;
+@define-color theme_trough_insensitive_border @theme_button_linked_insensitive_bg;
+
+@define-color theme_toolbar_bg @theme_internal_bg;
+@define-color theme_inline_toolbar_button_bg @theme_button_bg;
+@define-color theme_inline_toolbar_button_fg @theme_fg_color;
+@define-color theme_inline_toolbar_button_side #878984;
+
+@define-color theme_check_radio_bg @theme_internal_bg;
+@define-color theme_check_radio_border #81837f;
+
+@define-color theme_view_bg #161819;
 
 @define-color theme_cursor_color @theme_fg_color;
 
