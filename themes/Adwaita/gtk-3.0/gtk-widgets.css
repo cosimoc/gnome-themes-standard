@@ -870,14 +870,6 @@ GtkComboBox.combobox-entry .button {
     box-shadow: inset -1px 0 @unfocused_insensitive_borders;
 }
 
-.linked .button:insensitive:last-child:backdrop,
-.toolbar .button.raised.linked:insensitive:last-child:backdrop,
-.toolbar .raised.linked .button:insensitive:last-child:backdrop,
-.inline-toolbar.toolbar .button:insensitive:last-child:backdrop,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:backdrop {
-    box-shadow: none;
-}
-
 /* remove box shadow from last-child and only-child */
 .linked .button:only-child,
 .inline-toolbar.toolbar .button:only-child,
@@ -964,6 +956,98 @@ GtkComboBox.combobox-entry .button {
     border-left-width: 1px;
     border-image-width: 3px 3px 4px 3px;
     border-radius: 3px;
+}
+
+/* Middle button (vertical) */
+.linked.vertical .entry,
+.linked.vertical .button,
+.linked.vertical .button:active,
+.linked.vertical .button:active:hover,
+.linked.vertical .button:focus,
+.linked.vertical .button:focus:active,
+.linked.vertical .button:insensitive {
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-image-width: 0 3px;
+    border-radius: 0;
+}
+
+/* Top button (vertical) */
+.linked.vertical .entry:first-child,
+.linked.vertical .button:first-child,
+.linked.vertical .button:active:first-child,
+.linked.vertical .button:active:hover:first-child,
+.linked.vertical .button:focus:first-child,
+.linked.vertical .button:focus:active:first-child,
+.linked.vertical .button:insensitive:first-child {
+    border-bottom-width: 0;
+    border-image-width: 3px 3px 0 3px;
+    border-radius: 3px 3px 0 0;
+}
+
+/* Bottom button (vertical) */
+.linked.vertical .entry:last-child,
+.linked.vertical .button:last-child,
+.linked.vertical .button:active:last-child,
+.linked.vertical .button:active:hover:last-child,
+.linked.vertical .button:focus:last-child,
+.linked.vertical .button:focus:active:last-child,
+.linked.vertical .button:insensitive:last-child {
+    border-top-width: 0;
+    border-image-width: 0 3px 4px 3px;
+    border-radius: 0 0 3px 3px;
+}
+
+/* Linked single button (vertical) */
+.linked.vertical .entry:only-child,
+.linked.vertical .button:only-child,
+.linked.vertical .button:active:only-child,
+.linked.vertical .button:active:hover:only-child,
+.linked.vertical .button:focus:only-child,
+.linked.vertical .button:focus:active:only-child,
+.linked.vertical .button:insensitive:only-child {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-image-width: 3px 3px 4px 3px;
+    border-radius: 3px;
+}
+
+/* Linked button shadows (vertical) */
+.linked.vertical .button {
+    box-shadow: inset 0 1px @inset_light_color, inset 0 -1px @inset_dark_color;
+}
+
+.linked.vertical .button:first-child {
+    box-shadow: inset 0 -1px @inset_dark_color;
+}
+
+.linked.vertical .button:last-child {
+    box-shadow: inset 0 -1px @inset_light_color;
+}
+
+.linked.vertical .button:active {
+    box-shadow: inset 0 1px @inset_dark_color, inset 0 -1px @inset_dark_color;
+}
+
+.linked.vertical .button:insensitive {
+    box-shadow: inset 0 -1px @inset_dark_color;
+}
+
+.linked.vertical .button:backdrop {
+    box-shadow: inset 0 -1px @unfocused_borders;
+}
+
+.linked.vertical .button:insensitive:backdrop {
+    box-shadow: inset 0 -1px @unfocused_insensitive_borders;
+}
+
+.linked.vertical .button:only-child,
+.linked.vertical .button:backdrop:last-child,
+.linked.vertical .button:insensitive:last-child,
+.linked.vertical .button:insensitive:backdrop:last-child,
+.linked.vertical .button:backdrop:only-child,
+.linked.vertical .button:backdrop:insensitive:only-child {
+    box-shadow: none;
 }
 
 /* Linked buttons on primary toolbars */
