@@ -268,8 +268,6 @@ GtkTreeView.separator:backdrop,
     color: @theme_selected_fg_color;
 
     /* border-image defined in -assets variant */
-
-    -adwaita-progressbar-pattern: none;
 }
 
 .entry:selected {
@@ -519,24 +517,27 @@ GtkProgressBar {
 .progressbar row:hover,
 .progressbar row:selected,
 .progressbar row:selected:focus {
-    background-image: -gtk-gradient (linear,
+    background-image: linear-gradient(to left top,
+                                      alpha (@progressbar_pattern, 0.25),
+                                      alpha (@progressbar_pattern, 0.25) 25%,
+                                      transparent 25%,
+                                      transparent 50%,
+                                      alpha (@progressbar_pattern, 0.25) 50%,
+                                      alpha (@progressbar_pattern, 0.25) 75%,
+                                      transparent 75%,
+                                      transparent),
+                      -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@progressbar_background_a),
                                      color-stop (0.75, @progressbar_background_b),
                                      to (shade(@progressbar_background_a, 0.85)));
+    background-size: 40px 40px;
 
     border-radius: 3px;
     border-width: 1px;
     border-style: solid;
     border-color: @progressbar_border;
     box-shadow: inset 1px 1px alpha(white, 0.2), inset -1px -1px alpha(white, 0.1);
-
-    -adwaita-progressbar-pattern: -gtk-gradient (linear,
-                                                 left top, right bottom,
-                                                 from (alpha (@progressbar_pattern, 0.00)),
-                                                 color-stop (0.49, alpha (@progressbar_pattern, 0.00)),
-                                                 color-stop (0.50, alpha (@progressbar_pattern, 0.25)),
-                                                 to (alpha (@progressbar_pattern, 0.25)));
 }
 
 .progressbar row:selected,
@@ -545,18 +546,20 @@ GtkProgressBar {
 }
 
 .progressbar.vertical {
-    background-image: -gtk-gradient (linear,
+    background-image: linear-gradient(to right top,
+                                      alpha (@progressbar_pattern, 0.25),
+                                      alpha (@progressbar_pattern, 0.25) 25%,
+                                      transparent 25%,
+                                      transparent 50%,
+                                      alpha (@progressbar_pattern, 0.25) 50%,
+                                      alpha (@progressbar_pattern, 0.25) 75%,
+                                      transparent 75%,
+                                      transparent),
+                      -gtk-gradient (linear,
                                      left top, right top,
                                      from (@progressbar_background_a),
                                      color-stop (0.75, @progressbar_background_b),
                                      to (shade(@progressbar_background_a, 0.85)));
-
-    -adwaita-progressbar-pattern: -gtk-gradient (linear,
-                                                 left bottom, right top,
-                                                 from (alpha (@progressbar_pattern, 0.00)),
-                                                 color-stop (0.49, alpha (@progressbar_pattern, 0.00)),
-                                                 color-stop (0.50, alpha (@progressbar_pattern, 0.25)),
-                                                 to (alpha (@progressbar_pattern, 0.25)));
 }
 
 .progressbar:backdrop,
@@ -565,7 +568,6 @@ GtkProgressBar {
 .progressbar.vertical:backdrop,
 .progressbar.vertical row:backdrop,
 .progressbar.vertical row:selected:backdrop {
-    -adwaita-progressbar-pattern: none;
     background-image: none;
     background-color: @progressbar_unfocused_background;
     border-color: @progressbar_unfocused_border;
@@ -643,14 +645,10 @@ GtkScale.trough:insensitive {
 
 GtkScale.progressbar {
     background-color: @scale_progress_fill;
-
-    -adwaita-progressbar-pattern: none;
 }
 
 GtkScale.progressbar:backdrop {
     background-color: @unfocused_borders;
-
-    -adwaita-progressbar-pattern: none;
 }
 
 GtkScale.mark {
@@ -1935,8 +1933,6 @@ GtkCheckButton:selected:focus {
     border-image: none;
 
     color: @theme_text_color;
-
-    -adwaita-progressbar-pattern: none;
 }
 
 /*******************

@@ -455,28 +455,6 @@ adwaita_engine_render_activity (GtkThemingEngine *engine,
     (engine, cr,
      x, y, width, height);
 
-  if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PROGRESSBAR))
-    {
-      cairo_pattern_t *pattern = NULL;
-
-      gtk_theming_engine_get (engine, state,
-                              "-adwaita-progressbar-pattern", &pattern,
-                              NULL);
-
-      if (pattern != NULL)
-        {
-          cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
-          cairo_scale (cr, 20, 20);
-          cairo_set_source (cr, pattern);
-          cairo_scale (cr, 1.0 / 20, 1.0 / 20);
-
-          cairo_rectangle (cr, x, y, width, height);
-          cairo_fill (cr);
-
-          cairo_pattern_destroy (pattern);
-        }
-    }
-
   cairo_restore (cr);
 }
 
@@ -636,11 +614,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
                                                               "Focus border uses dashes",
                                                               "Focus border uses dashes",
                                                               FALSE, 0));
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_boxed ("progressbar-pattern",
-                                                            "Progressbar pattern",
-                                                            "Progressbar pattern",
-                                                            CAIRO_GOBJECT_TYPE_PATTERN, 0));
 }
 
 static void
