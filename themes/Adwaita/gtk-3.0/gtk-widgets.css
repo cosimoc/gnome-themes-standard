@@ -2186,12 +2186,14 @@ GtkSwitch.slider {
 
     padding: 2px 2px 3px 2px;
 
-    background-image: -gtk-gradient (linear,
+    background-image: url("assets/switch-slider-grip.svg"),
+                      -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@theme_base_color),
                                      to (@switch_slider_color));
 
-    color: shade (@switch_slider_color, 0.95);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .primary-toolbar GtkSwitch.slider {

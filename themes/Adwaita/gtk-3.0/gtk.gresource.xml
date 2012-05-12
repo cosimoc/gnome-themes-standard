@@ -140,6 +140,8 @@
     <file preprocess="to-pixdata">assets/sidebar-radio-selected-dark.svg</file>
     <file preprocess="to-pixdata">assets/sidebar-radio-selected-prelight.svg</file>
     <file preprocess="to-pixdata">assets/sidebar-radio-selected.svg</file>
+    <file preprocess="to-pixdata">assets/switch-slider-grip.svg</file>
+    <file preprocess="to-pixdata">assets/switch-slider-grip-dark.svg</file>
     <file preprocess="to-pixdata">borders/button-border-dark.svg</file>
     <file preprocess="to-pixdata">borders/button-border-focused-dark.svg</file>
     <file preprocess="to-pixdata">borders/button-border-focused.svg</file>

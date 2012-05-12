@@ -76,12 +76,15 @@ GtkScale.trough:insensitive:backdrop { /* not working */
 }
 
 GtkSwitch.slider {
-    background-image: -gtk-gradient (linear,
+    background-image: url("assets/switch-slider-grip-dark.svg"),
+                      -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@theme_bg_color),
                                      to (@switch_slider_color));
 
-    -adwaita-switch-grip-color: shade (@switch_slider_color, 0.9);
+    background-repeat: no-repeat;
+    background-position: center;
+
     border-color: mix (@borders, black, 0.4);
     box-shadow: inset 0 -1px alpha(white, 0.04), 
                 inset 0 1px shade(@theme_bg_color, 1.1),
