@@ -90,11 +90,19 @@ uninstall-local:
 		done; \
 	done
 
-install-data-hook:
-	$(GTK_UPDATE_ICON_CACHE) -q $(DESTDIR)$(themedir)
+gtk_update_icon_cache = $(GTK_UPDATE_ICON_CACHE) -f -t $(themedir)
 
-uninstall-hook:
-	$(GTK_UPDATE_ICON_CACHE) -q -t $(DESTDIR)$(themedir)
+install-data-hook: update-icon-cache
+uninstall-hook: update-icon-cache
+
+update-icon-cache:
+	@-if test -z "$(DESTDIR)"; then \
+		echo "Updating Gtk icon cache."; \
+		$(gtk_update_icon_cache); \
+	else \
+		echo "*** Icon cache not updated.  After (un)install, run this:"; \
+		echo "***   $(gtk_update_icon_cache)"; \
+	fi
 
 EXTRA_DIST = \
 	index.theme.in \
