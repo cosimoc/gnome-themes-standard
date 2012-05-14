@@ -28,11 +28,20 @@ AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
 AM_GLIB_GNU_GETTEXT
 
+AC_ARG_ENABLE([gtk3-engines],
+              AC_HELP_STRING([--disable-gtk3-engines],
+                             [Disable Gtk+ 3.x engines [default=no]]),
+              enable_gtk3=$enableval,
+              enable_gtk3=yes)
+AC_MSG_CHECKING([building gtk3 engines])
+AM_CONDITIONAL(GTK3, test "x$enable_gtk3" = "xyes")
+AC_MSG_RESULT([$enable_gtk3])
 GTK_VERSION_REQUIRED=3.3.14
 
-PKG_CHECK_MODULES([DEPENDENCIES], [gtk+-3.0 >= $GTK_VERSION_REQUIRED librsvg-2.0])
-PKG_CHECK_MODULES([HIGHCONTRAST], [cairo gio-2.0 gdk-pixbuf-2.0 gdk-3.0])
-
+if test "x$enable_gtk3" = "xyes"; then
+  PKG_CHECK_MODULES([DEPENDENCIES], [gtk+-3.0 >= $GTK_VERSION_REQUIRED librsvg-2.0])
+  PKG_CHECK_MODULES([HIGHCONTRAST], [cairo gio-2.0 gdk-pixbuf-2.0 gdk-3.0])
+fi
 AC_SUBST(DEPENDENCIES_CFLAGS)
 AC_SUBST(DEPENDENCIES_LIBS)
 

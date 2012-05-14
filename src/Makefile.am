@@ -1,5 +1,9 @@
 enginedir = $(libdir)/gtk-3.0/$(GTK_VERSION)/theming-engines
-engine_LTLIBRARIES = libadwaita.la
+
+engine_LTLIBRARIES =
+if GTK3
+engine_LTLIBRARIES += libadwaita.la
+endif
 
 assetsdir = $(datadir)/themes/Adwaita/gtk-3.0/assets
 

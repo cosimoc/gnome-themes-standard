@@ -1,4 +1,8 @@
-SUBDIRS = backgrounds cursors gtk-3.0 metacity-1 gtk-2.0
+SUBDIRS = backgrounds cursors metacity-1 gtk-2.0
+
+if GTK3
+SUBDIRS += gtk-3.0
+endif
 
 THEME_NAME=Adwaita
 THEME_IN_FILES=index.theme.in
