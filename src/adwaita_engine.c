@@ -459,63 +459,6 @@ adwaita_engine_render_activity (GtkThemingEngine *engine,
 }
 
 static void
-adwaita_engine_render_handle (GtkThemingEngine *engine,
-                              cairo_t          *cr,
-                              gdouble           x,
-                              gdouble           y,
-                              gdouble           width,
-                              gdouble           height)
-{
-  if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PANE_SEPARATOR))
-    {
-      GdkRGBA fg;
-      GtkStateFlags state;
-      gdouble xx, yy;
-
-      state = gtk_theming_engine_get_state (engine);
-      gtk_theming_engine_get_color (engine, state, &fg);
-
-      GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
-        (engine, cr, x, y, width, height);
-      GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame
-        (engine, cr, x, y, width, height);
-
-      cairo_save (cr);
-      cairo_set_line_width (cr, 2.0);
-      gdk_cairo_set_source_rgba (cr, &fg);
-
-      if (width > height)
-        {
-          for (xx = x + width / 2 - 12; xx <= x + width / 2 + 12; xx += 6)
-            {
-              cairo_arc (cr, xx, y + height / 2.0,
-                         1.0,
-                         0, G_PI * 2.0);
-              cairo_fill (cr);
-            }
-        }
-      else
-        {
-          for (yy = y + height / 2 - 12; yy <= y + height / 2 + 12; yy += 6)
-            {
-              cairo_arc (cr, x + width / 2.0, yy,
-                         1.0,
-                         0, G_PI * 2.0);
-              cairo_fill (cr);
-            }
-        }
-
-      cairo_restore (cr);
-    }
-  else
-    {
-      GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_handle
-        (engine, cr,
-         x, y, width, height);
-    }
-}
-
-static void
 adwaita_engine_class_init (AdwaitaEngineClass *klass)
 {
   GtkThemingEngineClass *engine_class = GTK_THEMING_ENGINE_CLASS (klass);
@@ -527,7 +470,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
   engine_class->render_background = adwaita_engine_render_background;
   engine_class->render_expander = adwaita_engine_render_expander;
   engine_class->render_activity = adwaita_engine_render_activity;
-  engine_class->render_handle = adwaita_engine_render_handle;
 
   gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
                                         g_param_spec_boxed ("focus-border-color",

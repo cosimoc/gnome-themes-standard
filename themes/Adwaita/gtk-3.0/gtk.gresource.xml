@@ -49,6 +49,8 @@
     <file preprocess="to-pixdata">assets/menuitem-radio-checked-insensitive.png</file>
     <file preprocess="to-pixdata">assets/menuitem-radio-checked.png</file>
     <file preprocess="to-pixdata">assets/menuitem-radio-checked-selected.png</file>
+    <file preprocess="to-pixdata">assets/pane-separator-grip.svg</file>
+    <file preprocess="to-pixdata">assets/pane-separator-grip-vertical.svg</file>
     <file preprocess="to-pixdata">assets/radio-checked-alt-dark.png</file>
     <file preprocess="to-pixdata">assets/radio-checked-alt.png</file>
     <file preprocess="to-pixdata">assets/radio-checked-backdrop-dark.png</file>

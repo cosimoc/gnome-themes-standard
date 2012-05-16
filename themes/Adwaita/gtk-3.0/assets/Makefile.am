@@ -47,6 +47,8 @@ EXTRA_DIST = 		\
 	menuitem-radio-checked.png \
 	menuitem-radio-checked-insensitive.png \
 	menuitem-radio-checked-selected.png \
+	pane-separator-grip.svg \
+	pane-separator-grip-vertical.svg \
 	radio-checked.png \
 	radio-checked-alt.png \
 	radio-checked-alt-dark.png \

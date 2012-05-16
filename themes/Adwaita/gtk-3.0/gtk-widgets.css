@@ -224,9 +224,15 @@ GtkTreeView.separator:backdrop,
     color: @theme_text_color;
 }
 
-.pane-separator,
-.pane-separator:hover {
+.pane-separator {
     background-color: @theme_bg_color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("assets/pane-separator-grip.svg");
+}
+
+.pane-separator.vertical {
+    background-image: url("assets/pane-separator-grip-vertical.svg");
 }
 
 .pane-separator:backdrop,
