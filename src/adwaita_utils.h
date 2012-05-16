@@ -37,13 +37,6 @@ enum {
 };
 
 void
-adwaita_trim_allocation_for_scale (GtkThemingEngine *engine,
-                                   gdouble *x,
-                                   gdouble *y,
-                                   gdouble *width,
-                                   gdouble *height);
-
-void
 _cairo_round_rectangle_sides (cairo_t          *cr,
                               gdouble           radius,
                               gdouble           x,

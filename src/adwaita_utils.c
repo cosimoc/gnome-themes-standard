@@ -26,35 +26,6 @@
 #include "adwaita_utils.h"
 
 void
-adwaita_trim_allocation_for_scale (GtkThemingEngine *engine,
-				   gdouble *x,
-				   gdouble *y,
-				   gdouble *width,
-				   gdouble *height)
-{
-  const GtkWidgetPath *path;
-
-  path = gtk_theming_engine_get_path (engine);
-
-  if (gtk_widget_path_is_type (path, GTK_TYPE_SCALE) &&
-      (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_TROUGH) ||
-       gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_PROGRESSBAR)))
-    {
-      /* Render GtkScale trough thinner */
-      if (!gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_VERTICAL))
-        {
-          *y += *height / 2.0 - 2.0;
-          *height = 4;
-        }
-      else
-        {
-          *x += *width / 2.0 - 2.0;
-          *width = 4;
-        }
-    }
-}
-
-void
 _cairo_round_rectangle_sides (cairo_t          *cr,
                               gdouble           radius,
                               gdouble           x,

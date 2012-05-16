@@ -320,40 +320,6 @@ adwaita_engine_render_extension (GtkThemingEngine *engine,
 }
 
 static void
-adwaita_engine_render_frame (GtkThemingEngine *engine,
-                             cairo_t          *cr,
-                             gdouble           x,
-                             gdouble           y,
-                             gdouble           width,
-                             gdouble           height)
-{
-  adwaita_trim_allocation_for_scale (engine,
-                                     &x, &y,
-                                     &width, &height);
-
-  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame
-    (engine, cr, x, y,
-     width, height);
-}
-
-static void
-adwaita_engine_render_background (GtkThemingEngine *engine,
-                                  cairo_t          *cr,
-                                  gdouble           x,
-                                  gdouble           y,
-                                  gdouble           width,
-                                  gdouble           height)
-{
-  adwaita_trim_allocation_for_scale (engine,
-                                     &x, &y,
-                                     &width, &height);
-
-  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
-    (engine, cr, x, y,
-     width, height);
-}
-
-static void
 adwaita_engine_render_expander (GtkThemingEngine *engine,
                                 cairo_t          *cr,
                                 gdouble           x,
@@ -435,30 +401,6 @@ adwaita_engine_render_expander (GtkThemingEngine *engine,
 }
 
 static void
-adwaita_engine_render_activity (GtkThemingEngine *engine,
-                                cairo_t          *cr,
-                                gdouble           x,
-                                gdouble           y,
-                                gdouble           width,
-                                gdouble           height)
-{
-  GtkStateFlags state;
-
-  cairo_save (cr);
-  state = gtk_theming_engine_get_state (engine);
-
-  adwaita_trim_allocation_for_scale (engine,
-                                     &x, &y,
-                                     &width, &height);
-
-  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_activity
-    (engine, cr,
-     x, y, width, height);
-
-  cairo_restore (cr);
-}
-
-static void
 adwaita_engine_class_init (AdwaitaEngineClass *klass)
 {
   GtkThemingEngineClass *engine_class = GTK_THEMING_ENGINE_CLASS (klass);
@@ -466,10 +408,7 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
   engine_class->render_arrow = adwaita_engine_render_arrow;
   engine_class->render_focus = adwaita_engine_render_focus;
   engine_class->render_extension = adwaita_engine_render_extension;
-  engine_class->render_frame = adwaita_engine_render_frame;
-  engine_class->render_background = adwaita_engine_render_background;
   engine_class->render_expander = adwaita_engine_render_expander;
-  engine_class->render_activity = adwaita_engine_render_activity;
 
   gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
                                         g_param_spec_boxed ("focus-border-color",

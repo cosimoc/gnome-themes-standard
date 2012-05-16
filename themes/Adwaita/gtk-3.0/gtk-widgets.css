@@ -623,6 +623,14 @@ GtkScale.slider:insensitive:backdrop {
     /* background-image in -assets variant */
 }
 
+GtkScale.trough {
+    margin: 8px 0;
+}
+
+GtkScale.trough.vertical {
+    margin: 0 8px;
+}
+
 GtkScale.trough,
 GtkScale.trough.highlight,
 GtkScale.trough.vertical,
