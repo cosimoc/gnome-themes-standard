@@ -2511,13 +2511,6 @@ GtkInfoBar .button:active:focus,
 .warning .button:active,
 .warning .button:focus,
 .warning .button:active:focus,
-.question .entry,
-.question .entry:focus,
-.question .button,
-.question .button:insensitive,
-.question .button:active,
-.question .button:focus,
-.question .button:active:focus,
 .error .entry,
 .error .entry:focus,
 .error .button,
@@ -2528,6 +2521,20 @@ GtkInfoBar .button:active:focus,
     border-image: none;
 
     border-color: shade(@borders, 0.9);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.question .entry,
+.question .entry:focus,
+.question .button,
+.question .button:insensitive,
+.question .button:active,
+.question .button:focus,
+.question .button:active:focus {
+    border-image: none;
+
+    border-color: darker(@question_bg_color);
     border-style: solid;
     border-width: 1px;
 }
@@ -2558,7 +2565,6 @@ GtkInfoBar .button:active:backdrop,
     border-style: solid;
     border-width: 1px;
 }
-
 
 .info {
     text-shadow: 0 1px @info_text_shadow;

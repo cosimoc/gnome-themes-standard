@@ -71,28 +71,6 @@ TerminalWindow GtkNotebook.notebook {
     text-shadow: none;
 }
 
-NautilusTrashBar.info,
-NautilusXContentBar.info,
-NautilusSearchBar.info,
-NautilusQueryEditor.info {
-    background-color: @nautilus_cluebar_color;
-    color: @theme_base_color;
-
-    border-color: shade(@nautilus_cluebar_color, 0.85);
-}
-
-.nautilus-cluebar-label {
-    font: bold;
-    color: @theme_base_color;
-    text-shadow: 0 1px alpha(black, 0.15);
-}
-
-.nautilus-cluebar-label:backdrop {
-    font: bold;
-    color: @theme_unfocused_fg_color;
-    text-shadow: none;
-}
-
 NautilusLocationEntry.entry {
     padding-left: 4px;
     padding-right: 4px;
