@@ -130,6 +130,9 @@ GtkLabel:insensitive {
     background-color: @theme_base_color;
     border-color: @borders;
 
+    color: @theme_text_color;
+    text-shadow: 0 1px @button_text_shadow;
+
     border-radius: 3px;
     border-width: 1px;
     border-style: solid;
