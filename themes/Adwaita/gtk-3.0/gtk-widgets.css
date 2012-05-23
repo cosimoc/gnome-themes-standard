@@ -2027,6 +2027,10 @@ GtkCheckButton:selected:focus {
     text-shadow: 0 1px @osd_text_shadow;
 }
 
+GtkOverlay.osd {
+    background-color: transparent;
+}
+
 .osd.toolbar {
     padding: 16px;
     border-style: none;
