@@ -2124,8 +2124,13 @@ GtkOverlay.osd {
                                     to(@osd_button_bg_active_c));
 }
 
+/* used by gnome-settings-daemon's media-keys OSD */
 .osd.trough {
     background-color: @osd_trough_bg;
+}
+
+.osd.progressbar {
+    background-color: @osd_fg;
 }
 
 .osd GtkScale.trough {
@@ -2136,8 +2141,28 @@ GtkOverlay.osd {
     background-color: transparent;
 }
 
-.osd.progressbar {
-    background-color: @osd_fg;
+.osd GtkProgressBar {
+    padding: 0;
+    -GtkProgressBar-xspacing: 0;
+    -GtkProgressBar-yspacing: 3px;
+    -GtkProgressBar-min-horizontal-bar-height: 3px;
+}
+
+.osd GtkProgressBar.trough {
+    padding: 0;
+    border-image: none;
+    border-style: none;
+    border-width: 0;
+    background-image: none;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.osd GtkProgressBar.progressbar {
+    border-style: none;
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+    border-radius: 0;    
 }
 
 /****************
