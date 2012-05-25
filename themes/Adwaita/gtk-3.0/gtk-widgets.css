@@ -2030,14 +2030,120 @@ GtkCheckButton:selected:focus {
     text-shadow: 0 1px @osd_text_shadow;
 }
 
+.osd:backdrop {
+    background-color: @osd_bg_backdrop;
+}
+
 GtkOverlay.osd {
     background-color: transparent;
 }
 
-.osd.toolbar {
-    padding: 16px;
-    border-style: none;
+.osd .button,
+.osd .button:active,
+.osd .button:focus,
+.osd .button:focus:active {
+    border-width: 1px;
+    border-style: solid;
+    border-image: none;
+    border-color: @osd_button_border;
     border-radius: 5px;
+}
+
+.osd .button {
+    padding: 4px;
+
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@osd_button_bg_a),
+                                    color-stop(0.68, @osd_button_bg_b),
+                                    to(@osd_button_bg_c));
+
+    color: @osd_button_fg;
+
+    text-shadow: 0 -1px @osd_button_shadow;
+    icon-shadow: 0 -1px @osd_button_shadow;
+}
+
+.osd .button,
+.osd .button:prelight,
+.osd .button:active {
+    background-color: transparent;
+}
+
+.osd .button:insensitive {
+    background-image: none;
+    background-color: @osd_button_bg_insensitive;
+}
+
+.osd .button:active:insensitive {
+    background-image: none;
+    background-color: @osd_button_bg_insensitive_active;
+}
+
+.osd .button:backdrop {
+    background-image: none;
+    background-color: @osd_button_bg_backdrop;
+}
+
+.osd .button:backdrop:hover,
+.osd .button:backdrop:active:hover {
+    background-image: none;
+    background-color: @osd_button_bg_backdrop_hover;
+}
+
+.osd .button:backdrop:active {
+    background-image: none;
+    background-color: @osd_button_bg_backdrop_active;
+}
+
+.osd .button:backdrop:insensitive,
+.osd .button:backdrop:insensitive:active {
+    background-image: none;
+    background-color: @osd_button_bg_backdrop_insensitive;
+}
+
+.osd .button *:hover {
+    color: @osd_button_fg_hover;
+}
+
+.osd .button *:active
+.osd .button *:hover:active {
+    color: @osd_button_fg_active;
+}
+
+.osd .button *:insensitive,
+.osd .button *:insensitive:active {
+    color: @osd_button_fg_insensitive;
+}
+
+.osd .button *:backdrop,
+.osd .button *:backdrop:insensitive,
+.osd .button *:backdrop:insensitive:active {
+    color: @osd_button_fg_backdrop;
+}
+
+.osd .button *:backdrop:active {
+    color: @osd_button_fg_backdrop_active;
+}
+
+.osd .button:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@osd_button_bg_hover_a),
+                                    color-stop(0.68, @osd_button_bg_hover_b),
+                                    to(@osd_button_bg_hover_c));
+}
+
+.osd .button:active,
+.osd .button:active:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                    from(@osd_button_bg_active_a),
+                                    color-stop(0.68, @osd_button_bg_active_b),
+                                    to(@osd_button_bg_active_c));
+}
+
+.osd.toolbar {
+    padding: 10px;
+    border-style: none;
+    border-radius: 7px;
 
     background-image: -gtk-gradient(linear, left top, left bottom,
                                     from(@osd_toolbar_bg_a),
@@ -2048,48 +2154,38 @@ GtkOverlay.osd {
     -GtkToolbar-button-relief: normal;
 }
 
-.osd .button {
-    padding: 4px;
+.osd.toolbar:backdrop {
+    background-image: none;
+    background-color: @osd_bg_backdrop;
+}
 
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(@osd_button_bg_a),
-                                    color-stop(0.68, @osd_button_bg_b),
-                                    to(@osd_button_bg_c));
+.osd.toolbar .button,
+.osd.toolbar .button:focus {
+    padding: 8px;
     border-width: 1px 0;
-    border-style: solid;
-    border-image: none;
-    border-color: @osd_button_border;
     border-radius: 0;
-
-    color: @osd_button_fg;
-
-    text-shadow: 0 -1px @osd_button_shadow;
-    icon-shadow: 0 -1px @osd_button_shadow;
     box-shadow: inset -1px 0 @osd_button_inset;
 }
 
-.osd .button,
-.osd .button:prelight,
-.osd .button:active {
-    background-color: transparent;
-}
-
-.osd .button:nth-child(first) {
-    border-radius: 4px 0 0 4px;
-    border-left-width: 1px;
+.osd.toolbar .button:first-child {
+    border-radius: 5px 0 0 5px;
+    border-width: 1px 0 1px 1px;
     box-shadow: inset -1px 0 @osd_button_inset;
 }
 
-.osd .button:nth-child(last) {
+.osd.toolbar .button:last-child {
     box-shadow: none;
-    border-radius: 0 4px 4px 0;
-    border-right-width: 1px;
+    border-radius: 0 5px 5px 0;
+    border-width: 1px 1px 1px 0;
 }
 
-.osd GtkToolButton .button,
-.osd .button:only-child {
+.osd.toolbar .button:only-child,
+.osd.toolbar GtkToolButton .button,
+.osd.toolbar GtkToolButton:only-child .button,
+.osd.toolbar GtkToolButton:last-child .button,
+.osd.toolbar GtkToolButton:first-child .button {
     border-width: 1px;
-    border-radius: 4px;
+    border-radius: 5px;
     border-style: solid;
 
     box-shadow: none;
@@ -2097,34 +2193,6 @@ GtkOverlay.osd {
 
 .osd .separator {
     color: shade(@osd_lowlight, 0.80);
-}
-
-.osd .button:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(@osd_button_bg_hover_a),
-                                    color-stop(0.68, @osd_button_bg_hover_b),
-                                    to(@osd_button_bg_hover_c));
-}
-
-.osd .button *:hover {
-    color: shade(@osd_button_fg, 1.20);
-}
-
-.osd .button *:hover:active,
-.osd .button *:active {
-    color: @osd_active_fg;
-}
-
-.osd .button *:insensitive {
-    color: shade(@osd_button_fg, 0.75);
-}
-
-.osd .button:active,
-.osd .button:active:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(@osd_button_bg_active_a),
-                                    color-stop(0.68, @osd_button_bg_active_b),
-                                    to(@osd_button_bg_active_c));
 }
 
 /* used by gnome-settings-daemon's media-keys OSD */
