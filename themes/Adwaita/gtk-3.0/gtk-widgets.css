@@ -1662,9 +1662,8 @@ GtkTreeMenu.menu {
 GtkTreeMenu .menuitem {
     padding: 2px;
 
-    border-style: solid;
-    border-width: 1px 0;
-    border-color: @menu_combobox_border;
+    border-style: none;
+    text-shadow: none;
 }
 
 GtkTreeMenu .menuitem * {
