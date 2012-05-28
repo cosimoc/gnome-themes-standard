@@ -2160,7 +2160,7 @@ GtkOverlay.osd {
 
 .osd.toolbar .button,
 .osd.toolbar .button:focus {
-    padding: 8px;
+    padding: 4px;
     border-width: 1px 0;
     border-radius: 0;
     box-shadow: inset -1px 0 @osd_button_inset;
