@@ -36,22 +36,6 @@ TerminalWindow GtkNotebook.notebook {
     border-radius: 5px;
 }
 
-.nautilus-inactive-pane .view {
-    background-color: @theme_unfocused_base_color;
-}
-
-.nautilus-inactive-pane .view:selected,
-.nautilus-inactive-pane .nautilus-canvas-item:selected {
-    background-color: @theme_unfocused_selected_bg_color;
-    color: @theme_unfocused_selected_fg_color;
-}
-
-.nautilus-inactive-pane .expander.view:selected {
-    background-color: @theme_unfocused_selected_bg_color;
-    color: @internal_element_color;
-    border-color: @internal_element_color;
-}
-
 .nautilus-desktop.nautilus-canvas-item {
     color: @theme_bg_color;
     text-shadow: 1px 1px black;
