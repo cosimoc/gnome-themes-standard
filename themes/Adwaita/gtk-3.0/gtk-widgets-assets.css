@@ -25,6 +25,10 @@
     background-image: url("assets/checkbox-unchecked-insensitive.png");
 }
 
+.check row:insensitive {
+    background-color: transparent;
+}
+
 .check row:selected:insensitive,
 .check row:selected:focus:insensitive {
     background-color: transparent;
@@ -110,6 +114,10 @@
 
 .radio:insensitive {
     background-image: url("assets/radio-unchecked-insensitive.png");
+}
+
+.radio row:insensitive {
+    background-color: transparent;
 }
 
 .radio row:selected:insensitive,
