@@ -2104,7 +2104,7 @@ GtkOverlay.osd {
     color: @osd_button_fg_hover;
 }
 
-.osd .button *:active
+.osd .button *:active,
 .osd .button *:hover:active {
     color: @osd_button_fg_active;
 }
