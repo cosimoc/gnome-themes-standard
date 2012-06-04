@@ -1,3 +1,27 @@
+3.5.2
+=====
+
+Use multiple CSS backgrounds to render
+  - progressbar patterns
+  - switch sliders
+  - pane separator grips
+Improve HighContrast/HighContrastInverse themes to mockups
+Improve support for OSD toolbars/overlays/buttons
+Add support for overlay progressbars, as seen in Web
+Add support for vertically linked buttons
+Add an option to disable building of the GTK3 engine
+Update highcontrast icon theme to latest g-i-t-s content
+Improve separator line colors
+Fix wrong background color of check/radios in treeviews
+Fix uneven padding for toolbar buttons
+
+3.4.2
+=====
+
+Fix gnome-contacts' toolbar separator line
+Fix Nautilus' inactive pane background color
+Don't generate GTK icon cache when DESTDIR is set
+
 3.5.1
 =====
 
