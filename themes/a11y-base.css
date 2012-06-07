@@ -219,7 +219,8 @@ GtkComboBox .button {
     padding: 0 4px;
 }
 
-.combobox-entry .button {
+.combobox-entry .button,
+.toolbar .combobox-entry .button {
     background-color: @theme_entry_bg;
     color: @theme_fg_color;
     border-width: 1px;
