@@ -35,7 +35,6 @@ GtkSwitch.trough:active {
     border-width: 1px 1px 2px 1px;
     border-style: solid;
     border-color: transparent;
-
 }
 
 /* generic button borders */
@@ -45,7 +44,6 @@ GtkSwitch.trough:active {
     border-width: 1px 1px 2px 1px;
     border-style: solid;
     border-color: transparent;
-
 }
 
 /* focused button borders */
@@ -165,7 +163,6 @@ column-header .button:active:focus {
     border-radius: 0;
     border-style: solid;
     border-color: transparent;
-
 }
 
 column-header.button:backdrop,
@@ -214,7 +211,6 @@ column-header:last-child .button:active:focus {
 .button:backdrop,
 GtkComboBox.combobox-entry .entry:backdrop,
 GtkComboBox.combobox-entry .button:backdrop,
-GtkComboBox *:backdrop,
 .entry:backdrop,
 GtkSwitch.trough:backdrop,
 .trough:backdrop {
@@ -239,12 +235,11 @@ GtkSwitch.trough:backdrop,
 .primary-toolbar .raised .button:backdrop,
 .primary-toolbar GtkComboBox.combobox-entry .entry:backdrop,
 .primary-toolbar GtkComboBox.combobox-entry .button:backdrop,
+.primary-toolbar GtkComboBox .button:backdrop,
 .primary-toolbar .entry:backdrop,
 .primary-toolbar GtkSwitch.trough:backdrop,
 .inline-toolbar.toolbar .button:backdrop,
-.inline-toolbar.toolbar .button:backdrop:insensitive,
-.primary-toolbar GtkComboBox *:backdrop,
-.primary-toolbar GtkComboBox *:backdrop:insensitive { 
+.inline-toolbar.toolbar .button:backdrop:insensitive { 
     border-image: url("borders/primary-toolbar-generic-border-unfocused.svg") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
