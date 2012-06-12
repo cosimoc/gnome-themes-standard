@@ -216,104 +216,104 @@
 /*********************
  * GtkScale's slider *
  *********************/
-GtkScale.slider,
-GtkScale.slider.horizontal {
+.scale.slider,
+.scale.slider.horizontal {
     background-image: url("assets/scale-slider-horz.png");
 }
 
-GtkScale.slider:backdrop,
-GtkScale.slider.horizontal:backdrop {
+.scale.slider:backdrop,
+.scale.slider.horizontal:backdrop {
     background-image: url("assets/scale-slider-horz-backdrop.png");
 }
 
-GtkScale.slider:insensitive,
-GtkScale.slider.horizontal:insensitive {
+.scale.slider:insensitive,
+.scale.slider.horizontal:insensitive {
     background-image: url("assets/scale-slider-horz-insensitive.png");
 }
 
-GtkScale.slider:insensitive:backdrop,
-GtkScale.slider.horizontal:insensitive:backdrop {
+.scale.slider:insensitive:backdrop,
+.scale.slider.horizontal:insensitive:backdrop {
     background-image: url("assets/scale-slider-horz-backdrop-insensitive.png");
 }
 
 
-GtkScale.slider.vertical {
+.scale.slider.vertical {
     background-image: url("assets/scale-slider-vert.png");
 }
 
-GtkScale.slider.vertical:backdrop {
+.scale.slider.vertical:backdrop {
     background-image: url("assets/scale-slider-vert-backdrop.png");
 }
 
-GtkScale.slider.vertical:insensitive {
+.scale.slider.vertical:insensitive {
     background-image: url("assets/scale-slider-vert-insensitive.png");
 }
 
-GtkScale.slider.vertical:insensitive:backdrop {
+.scale.slider.vertical:insensitive:backdrop {
     background-image: url("assets/scale-slider-vert-backdrop-insensitive.png");
 }
 
-GtkScale.scale-has-marks-above.slider.horizontal {
+.scale.scale-has-marks-above.slider.horizontal {
     background-image: url("assets/scale-slider-up.png");
 }
 
-GtkScale.scale-has-marks-above.slider.horizontal:insensitive {
+.scale.scale-has-marks-above.slider.horizontal:insensitive {
     background-image: url("assets/scale-slider-up-insensitive.png");
 }
 
-GtkScale.scale-has-marks-above.slider.horizontal:backdrop {
+.scale.scale-has-marks-above.slider.horizontal:backdrop {
     background-image: url("assets/scale-slider-up-backdrop.png");
 }
 
-GtkScale.scale-has-marks-above.slider.horizontal:backdrop:insensitive {
+.scale.scale-has-marks-above.slider.horizontal:backdrop:insensitive {
     background-image: url("assets/scale-slider-up-backdrop-insensitive.png");
 }
 
-GtkScale.scale-has-marks-above.slider.vertical {
+.scale.scale-has-marks-above.slider.vertical {
     background-image: url("assets/scale-slider-left.png");
 }
 
-GtkScale.scale-has-marks-above.slider.vertical:insensitive {
+.scale.scale-has-marks-above.slider.vertical:insensitive {
     background-image: url("assets/scale-slider-left-insensitive.png");
 }
 
-GtkScale.scale-has-marks-above.slider.vertical:backdrop {
+.scale.scale-has-marks-above.slider.vertical:backdrop {
     background-image: url("assets/scale-slider-left-backdrop.png");
 }
 
-GtkScale.scale-has-marks-above.slider.vertical:backdrop:insensitive {
+.scale.scale-has-marks-above.slider.vertical:backdrop:insensitive {
     background-image: url("assets/scale-slider-left-backdrop-insensitive.png");
 }
 
-GtkScale.scale-has-marks-below.slider.horizontal {
+.scale.scale-has-marks-below.slider.horizontal {
     background-image: url("assets/scale-slider-down.png");
 }
 
-GtkScale.scale-has-marks-below.slider.horizontal:insensitive {
+.scale.scale-has-marks-below.slider.horizontal:insensitive {
     background-image: url("assets/scale-slider-down-insensitive.png");
 }
 
-GtkScale.scale-has-marks-below.slider.horizontal:backdrop {
+.scale.scale-has-marks-below.slider.horizontal:backdrop {
     background-image: url("assets/scale-slider-down-backdrop.png");
 }
 
-GtkScale.scale-has-marks-below.slider.horizontal:backdrop:insensitive {
+.scale.scale-has-marks-below.slider.horizontal:backdrop:insensitive {
     background-image: url("assets/scale-slider-down-backdrop-insensitive.png");
 }
 
-GtkScale.scale-has-marks-below.slider.vertical {
+.scale.scale-has-marks-below.slider.vertical {
     background-image: url("assets/scale-slider-right.png");
 }
 
-GtkScale.scale-has-marks-below.slider.vertical:insensitive {
+.scale.scale-has-marks-below.slider.vertical:insensitive {
     background-image: url("assets/scale-slider-right-insensitive.png");
 }
 
-GtkScale.scale-has-marks-below.slider.vertical:backdrop {
+.scale.scale-has-marks-below.slider.vertical:backdrop {
     background-image: url("assets/scale-slider-right-backdrop.png");
 }
 
-GtkScale.scale-has-marks-below.slider.vertical:backdrop:insensitive {
+.scale.scale-has-marks-below.slider.vertical:backdrop:insensitive {
     background-image: url("assets/scale-slider-right-backdrop-insensitive.png");
 }
 

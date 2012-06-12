@@ -213,7 +213,7 @@ GtkComboBox.combobox-entry .button:insensitive:backdrop {
 
 /* Active switch background*/
 GtkSwitch.trough:active,
-GtkScale.progressbar {
+.scale.progressbar {
     background-color: transparent;
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
@@ -231,7 +231,7 @@ GtkSwitch.trough:active:backdrop {
     background-image: none;
 }
 
-GtkScale.progressbar.vertical {
+.scale.progressbar.vertical {
     background-color: transparent;
     background-image: -gtk-gradient (linear,
                                      left top, right top,

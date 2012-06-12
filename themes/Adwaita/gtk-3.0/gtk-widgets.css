@@ -607,17 +607,17 @@ GtkProgressBar.vertical:backdrop,
 /************
  * GtkScale *
  ************/
-GtkScale {
+.scale {
     -GtkScale-slider-length: 16;
     -GtkRange-slider-width: 20;
     -GtkRange-trough-border: 0;
 }
 
-GtkScale.slider,
-GtkScale.slider:hover,
-GtkScale.slider:insensitive,
-GtkScale.slider:backdrop,
-GtkScale.slider:insensitive:backdrop {
+.scale.slider,
+.scale.slider:hover,
+.scale.slider:insensitive,
+.scale.slider:backdrop,
+.scale.slider:insensitive:backdrop {
     border-radius: 0;
     border-style: none;
 
@@ -626,68 +626,68 @@ GtkScale.slider:insensitive:backdrop {
     /* background-image in -assets variant */
 }
 
-GtkScale.trough {
+.scale.trough {
     margin: 8px 0;
 }
 
-GtkScale.trough.vertical {
+.scale.trough.vertical {
     margin: 0 8px;
 }
 
-GtkScale.trough,
-GtkScale.trough.highlight,
-GtkScale.trough.vertical,
-GtkScale.trough:backdrop {
+.scale.trough,
+.scale.trough.highlight,
+.scale.trough.vertical,
+.scale.trough:backdrop {
     border-width: 1px;
     border-image: none;
     border-style: solid;
 }
 
-GtkScale.trough,
-GtkScale.trough.highlight,
-GtkScale.trough.vertical {
+.scale.trough,
+.scale.trough.highlight,
+.scale.trough.vertical {
     border-color: @borders;
 }
 
-GtkScale.trough:backdrop {
+.scale.trough:backdrop {
     border-color: @unfocused_borders;
 }
 
-GtkScale.trough:insensitive {
+.scale.trough:insensitive {
     background-color: @insensitive_bg_color;
     border-color: @insensitive_borders;
     box-shadow: none;
     background-image: none;
 }
 
-GtkScale.progressbar {
+.scale.progressbar {
     background-color: @scale_progress_fill;
 }
 
-GtkScale.progressbar:backdrop {
+.scale.progressbar:backdrop {
     background-color: @unfocused_borders;
 }
 
-GtkScale.mark {
+.scale.mark {
     color: alpha(@theme_fg_color, 0.3);
 }
 
-GtkScale.trough.vertical {
+.scale.trough.vertical {
     box-shadow: inset -1px 0 @theme_bg_color;
 }
 
-GtkScale.trough {
+.scale.trough {
     box-shadow: inset 0 -1px @theme_bg_color;
 }
 
-GtkScale.trough:backdrop {
+.scale.trough:backdrop {
     box-shadow: none;
     border-color: @unfocused_borders;
     background-color: @unfocused_dark_bg;
     background-image: none;
 }
 
-GtkScale.trough:insensitive:backdrop {
+.scale.trough:insensitive:backdrop {
     background-color: @unfocused_insensitive_bg_color;
     border-color: @unfocused_insensitive_borders;
     box-shadow: none;
@@ -2203,7 +2203,7 @@ GtkOverlay.osd {
     background-color: @osd_fg;
 }
 
-.osd GtkScale.trough {
+.osd .scale.trough {
     border-color: @osd_button_border;
     background-image: -gtk-gradient(linear, left top, left bottom,
                                     from(shade(@osd_button_border, 0.70)),
@@ -2266,7 +2266,7 @@ GtkSwitch {
     font: bold condensed 10;
 }
 
-GtkScale.progressbar,
+.scale.progressbar,
 GtkSwitch.trough:active {
     color: @switch_trough_active_color;
 }
