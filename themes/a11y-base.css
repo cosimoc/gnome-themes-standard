@@ -285,7 +285,7 @@ GtkComboBox .button {
 }
 
 .spinbutton .button:focus {
-    border-color: transparent @theme_highlight_color;
+    border-color: @theme_highlight_color;
 }
 
 .spinbutton .button:first-child,
