@@ -290,8 +290,8 @@ GtkIconView.documents-main-view.check:active {
 }
 
 .documents-entry-tag {
-    background-color: @documents_emblem_bg;
-    color: @theme_base_color;
+    background-color: @entry_tag_bg;
+    color: @entry_tag_fg;
 
     border-radius: 4px;
     border-width: 0;
@@ -301,8 +301,8 @@ GtkIconView.documents-main-view.check:active {
 }
 
 .documents-entry-tag:hover {
-    background-color: shade(@documents_emblem_bg, 1.10);
-    color: @theme_base_color;
+    background-color: shade(@entry_tag_bg, 1.10);
+    color: @entry_tag_fg;
 }
 
 .documents-entry-tag.button,
@@ -316,7 +316,7 @@ GtkIconView.documents-main-view.check:active {
 }
 
 .documents-entry-tag.button:hover {
-    color: shade(@documents_emblem_bg, 2.10);
+    color: shade(@entry_tag_bg, 2.10);
 }
 
 .documents-notification {

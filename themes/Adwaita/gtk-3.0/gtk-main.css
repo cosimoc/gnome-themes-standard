@@ -114,6 +114,12 @@
 @define-color inset_light_color alpha(white, 0.45);
 @define-color inset_dark_color alpha(black, 0.07);
 
+/**************
+ * GNOME Apps *
+ **************/
+@define-color entry_tag_bg #3465a4;
+@define-color entry_tag_fg @theme_base_color;
+
 /******
  * WM *
  ******/
