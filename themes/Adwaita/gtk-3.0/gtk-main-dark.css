@@ -118,7 +118,7 @@
  * GNOME Apps *
  **************/
 @define-color entry_tag_bg #888a85;
-@define-color entry_tag_fg #070807;
+@define-color entry_tag_fg black;
 
 /******
  * WM *
