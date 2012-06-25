@@ -1,3 +1,11 @@
+3.5.3
+=====
+
+Fix jumping combobox size between normal and backdrop states
+Fix spinbutton borders, combobox entries and resize grips in HighContrast
+Add support for GdTaggedEntry in the dark theme
+Use .scale and not GtkScale for selectors
+
 3.5.2
 =====
 
