@@ -1,5 +1,12 @@
+
+
 themedir = $(datadir)/themes/Adwaita/gtk-2.0
-theme_DATA = gtkrc \
+theme_DATA = gtkrc
+
+asset_dirs = "Arrows" "Buttons" "Check-Radio" "Entry" "Expanders" \
+	"Handles" "Lines" "Menu-Menubar" "Others" "ProgressBar" \
+	"Range" "Scrollbars" "Shadows" "Spin" "Tabs" "Toolbar"
+asset_data =
 	Arrows/arrow-down-insens.png \
 	Arrows/arrow-down.png \
 	Arrows/arrow-down-prelight.png \
@@ -86,7 +93,21 @@ theme_DATA = gtkrc \
 	Toolbar/toolbutton-pressed.png \
 	Toolbar/toolbutton-toggled.png
 
-EXTRA_DIST = $(theme_DATA)
+install-data-local:
+	for dir in $(asset_dirs); do \
+		for file in `cd $(srcdir)/$$dir && find . -maxdepth 1 \( -name "*.png" \)`; do \
+			$(mkdir_p) $(DESTDIR)$(datadir)/themes/Adwaita/gtk-2.0/$$dir; \
+			$(install_sh_DATA) $(srcdir)/$$dir/$$file $(DESTDIR)$(themedir)/$$dir/$$file; \
+		done; \
+	done
 
+uninstall-local:
+	for dir in $(asset_dirs); do \
+		for file in `cd $(srcdir)/$$dir && find . -maxdepth 1 \( -name "*.png" \)`; do \
+			rm -f $(DESTDIR)$(datadir)/themes/Adwaita/gtk-2.0/$$dir; \
+		done; \
+	done
+
+EXTRA_DIST = $(theme_DATA) $(asset_data)
 
 -include $(top_srcdir)/git.mk
