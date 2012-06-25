@@ -1,8 +1,92 @@
 themedir = $(datadir)/themes/Adwaita/gtk-2.0
-theme_DATA = gtkrc
+theme_DATA = gtkrc \
+	Arrows/arrow-down-insens.png \
+	Arrows/arrow-down.png \
+	Arrows/arrow-down-prelight.png \
+	Arrows/arrow-down-pressed.png \
+	Arrows/arrow-left.png \
+	Arrows/arrow-right.png \
+	Arrows/arrow-right-prelight.png \
+	Arrows/arrow-up.png \
+	Arrows/menu-arrow.png \
+	Arrows/menu-arrow-prelight.png \
+	Buttons/button-default.png \
+	Buttons/button-insensitive.png \
+	Buttons/button-normal.png \
+	Buttons/button-prelight.png \
+	Buttons/button-pressed.png \
+	Check-Radio/check1.png \
+	Check-Radio/check2.png \
+	Check-Radio/menucheck.png \
+	Check-Radio/menucheck_prelight.png \
+	Check-Radio/menuoption.png \
+	Check-Radio/menuoption_prelight.png \
+	Check-Radio/option1.png \
+	Check-Radio/option2.png \
+	Entry/entry.png \
+	Expanders/ani.png \
+	Expanders/minus.png \
+	Expanders/plus.png \
+	Handles/handle-h.png \
+	Handles/handle-v.png \
+	Lines/line-h.png \
+	Lines/line-v.png \
+	Lines/menu_line.png \
+	Menu-Menubar/menubar_button.png \
+	Menu-Menubar/menubar.png \
+	Others/bg.png \
+	Others/focus.png \
+	Others/null.png \
+	Others/ruler.png \
+	Others/tree_header.png \
+	ProgressBar/progressbar.png \
+	ProgressBar/progressbar_v.png \
+	ProgressBar/trough-progressbar.png \
+	Range/slider-horiz.png \
+	Range/slider-horiz-prelight.png \
+	Range/slider-vert.png \
+	Range/slider-vert-prelight.png \
+	Range/trough-horizontal.png \
+	Range/trough-vertical.png \
+	Scrollbars/slider-horiz-active.png \
+	Scrollbars/slider-horiz.png \
+	Scrollbars/slider-vert-active.png \
+        Scrollbars/slider-vert.png \
+	Scrollbars/slider-horiz-insens.png \
+	Scrollbars/slider-horiz-prelight.png \
+	Scrollbars/slider-vert-insens.png \
+	Scrollbars/slider-vert-prelight.png \
+        Scrollbars/trough-scrollbar-horiz.png \
+	Scrollbars/trough-scrollbar-vert.png \
+	Shadows/frame.png \
+	Spin/arrow-down-disable.png \
+	Spin/arrow-down.png \
+	Spin/arrow-down-prelight.png \
+	Spin/arrow-up-disable.png \
+	Spin/arrow-up.png \
+	Spin/arrow-up-prelight.png \
+	Spin/down-background.png \
+	Spin/up-background.png
+	Tabs/notebook-gap-bottom.png \
+	Tabs/notebook-gap-right.png \
+	Tabs/notebook-gap-left.png \
+	Tabs/notebook-gap-top.png \
+	Tabs/notebook.png \
+	Tabs/tab-bottom.png \
+	Tabs/tab-left.png \
+	Tabs/tab-right.png \
+	Tabs/tab-top.png \
+	Tabs/tab-bottom-active.png \
+	Tabs/tab-left-active.png \
+	Tabs/tab-right-active.png \
+	Tabs/tab-top-active.png
+	Toolbar/toolbar.png \
+	Toolbar/toolbutton-normal.png \
+	Toolbar/toolbutton-prelight.png \
+	Toolbar/toolbutton-pressed.png \
+	Toolbar/toolbutton-toggled.png
 
 EXTRA_DIST = $(theme_DATA)
 
 
 -include $(top_srcdir)/git.mk
-
