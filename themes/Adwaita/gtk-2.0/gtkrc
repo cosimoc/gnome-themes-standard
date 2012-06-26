@@ -60,7 +60,7 @@ style "default"
 
 	GtkTreeView::row_ending_details 	= 0
 	GtkTreeView::expander-size		= 12
-	GtkTreeView::vertical-separator		= 1
+	GtkTreeView::vertical-separator		= 4
 	GtkTreeView::horizontal-separator	= 4
 	GtkTreeView::allow-rules		= 1
 
