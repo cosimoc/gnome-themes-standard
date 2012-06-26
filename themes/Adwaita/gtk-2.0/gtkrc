@@ -745,7 +745,7 @@ style "menu_item"
 style "menubar_item"
 {
 	xthickness	= 2
-	ythickness	= 2
+	ythickness	= 3
 	bg[PRELIGHT]	= @selected_fg_color
 	fg[PRELIGHT]	= @text_color
 }
