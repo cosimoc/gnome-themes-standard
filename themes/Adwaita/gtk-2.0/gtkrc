@@ -795,7 +795,7 @@ style "button"
 style "entry"
 {
 	xthickness	= 3
-	ythickness   	= 3
+	ythickness   	= 4
 
         base[ACTIVE] = @base_color
 
@@ -1218,7 +1218,7 @@ style "progressbar"
       function				= BOX
       detail				= "trough"
       file				= "ProgressBar/trough-progressbar.png"
-      border				= { 3, 3, 3, 3 }
+      border				= { 2, 2, 2, 2 }
       stretch				= TRUE
 }
     image
@@ -1227,7 +1227,7 @@ style "progressbar"
       detail				= "bar"
       file				= "ProgressBar/progressbar.png"
       stretch				= TRUE
-      border				= { 3, 3, 3, 3 }
+      border				= { 2, 2, 2, 2 }
       orientation			= HORIZONTAL
     }
     image
@@ -1236,7 +1236,7 @@ style "progressbar"
       detail				= "bar"
       file				= "ProgressBar/progressbar_v.png"
       stretch				= TRUE
-      border				= { 3, 3, 3, 3 }
+      border				= { 2, 2, 2, 2 }
       orientation			= VERTICAL
     }
   }
