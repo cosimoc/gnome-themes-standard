@@ -16,7 +16,8 @@ style "default"
 	GtkWidget::new-tooltip-style	= 1 # Needed?
 	GtkMenuBar::window-dragging	= 1
 	GtkToolbar::window-dragging	= 1
-	GtkToolbar::internal-padding	= 5
+	GtkToolbar::internal-padding	= 4
+        GtkToolButton::icon-spacing     = 4
 
 	GtkSeparatorMenuItem::horizontal-padding = 3
 	GtkSeparatorMenuItem::wide-separators = 1
@@ -46,6 +47,7 @@ style "default"
 	GtkStatusbar::shadow_type	= GTK_SHADOW_NONE
 	GtkSpinButton::shadow_type 	= GTK_SHADOW_NONE
 	GtkMenuBar::shadow-type		= GTK_SHADOW_NONE
+	GtkToolbar::shadow-type		= GTK_SHADOW_NONE
 	GtkMenuBar::internal-padding	= 0	#( every window is misaligned for the sake of menus ):
 	GtkMenu::horizontal-padding	= 0
 	GtkMenu::vertical-padding	= 0
@@ -748,19 +750,6 @@ style "menubar_item"
 	fg[PRELIGHT]	= @text_color
 }
 
-style "toolbar"
-{
-	engine "pixmap"
-	{
-		image
-		{
-			function	= BOX
-			file		= "Toolbar/toolbar.png"
-			stretch		= TRUE
-    		}
- 	}
-}
-
 style "button"
 {
 	xthickness	= 4
@@ -801,48 +790,6 @@ style "button"
      stretch			= TRUE
     }
   }
-}
-
-style "toolbuttons"
-{
-	ythickness	= 1
-	GtkWidget::focus_padding = 2
-
-	engine "pixmap" {
-      
-image
-		{
-			function        		= BOX
-			state				= NORMAL
-			file            		= "Toolbar/toolbutton-normal.png"
-			border          		= { 4, 4, 4, 4 }
-			stretch         		= TRUE
-		}
-image
-		{
-			function        		= BOX
-			state				= PRELIGHT
-			file            		= "Toolbar/toolbutton-prelight.png"
-			border          		= { 4, 4, 4, 4 }
-			stretch         		= TRUE
-		}
-image
-		{
-			function        		= BOX
-			state				= ACTIVE
-			file            		= "Toolbar/toolbutton-pressed.png"
-			border          		= { 4, 4, 4, 4 }
-			stretch         		= TRUE
-		}  
-image
-		{
-			function        		= BOX
-			state				= INSENSITIVE
-			file            		= "Toolbar/toolbutton-normal.png"
-			border          		= { 4, 4, 4, 4 }
-			stretch         		= TRUE
-		}  
-	}
 }
 
 style "entry"
@@ -1117,6 +1064,31 @@ style "notebook"
   }
 }
 
+style "handlebox"
+{
+  engine "pixmap"
+  {
+    image
+    {
+      function                  = BOX
+      file			= "Others/null.png"
+      border			= { 4, 4, 4, 4 }
+      stretch			= TRUE
+      detail                    = "handlebox_bin"
+      shadow                    = IN
+    }
+    image
+    {
+      function                  = BOX
+      file			= "Others/null.png"
+      border			= { 4, 4, 4, 4 }
+      stretch			= TRUE
+      detail                    = "handlebox_bin"
+      shadow                    = OUT
+    }
+  }
+}
+
 style "range"
 {	
   engine "pixmap" 
@@ -1364,14 +1336,8 @@ widget_class "*<GtkMenuBar>*"			style "menubar"
 widget_class "*<GtkMenu>*"			style "menu"
 widget_class "*<GtkMenuItem>*"			style "menu_item"
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*"	style "menubar_item"
-widget_class "*Nautilus*ToolBar*"	style "toolbar"
-widget_class "*HandleBox"		style "toolbar"
-widget_class "*BonoboDockItem"		style "toolbar"
-widget_class "*HandleBox"		style "toolbar"
-widget_class "*<GtkToolbar>"		style "toolbar"
+widget_class "*HandleBox"               style "handlebox"
 widget_class "*.<GtkTreeView>*"		style "treeview"
-widget_class "*Tool*GtkToggleButton"	style "toolbuttons"
-widget_class "*Tool*GtkButton"		style "toolbuttons"
 
 widget_class "*Chrom*Button*"		style "button"
 
