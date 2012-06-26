@@ -12,7 +12,7 @@ style "default"
 	# Style Properties
 
 	GtkScrollbar::activate-slider	= 1
-	GtkWidget::focus-line-width	= 0
+	GtkWidget::focus-line-width	= 1
 	GtkWidget::new-tooltip-style	= 1 # Needed?
 	GtkMenuBar::window-dragging	= 1
 	GtkToolbar::window-dragging	= 1
@@ -328,7 +328,7 @@ style "default"
 	  overlay_stretch		= FALSE
 	}
 
-	#Lines
+	# Lines
 
 	image
 	{
@@ -344,6 +344,17 @@ style "default"
 	  border			= { 0, 0, 0, 0 }
 	  stretch			= TRUE
 	}
+
+	# Focuslines
+
+	image 
+	{
+	function			= FOCUS
+	overlay_file			= "Others/focus.png"
+	overlay_border			= { 1, 1, 1, 1 }
+	overlay_stretch			= TRUE
+	orientation			= HORIZONTAL
+        }
 
 	# Handles
 
