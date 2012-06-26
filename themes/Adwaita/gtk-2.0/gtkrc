@@ -808,7 +808,17 @@ style "entry"
                 state                   = NORMAL
 		shadow			= IN
 		file			= "Entry/entry.png"
-		border			= { 4,4,4,4 }
+		border			= { 2, 2, 3, 3 }
+		stretch			= TRUE
+	}
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+                state                   = INSENSITIVE
+		shadow			= IN
+		file			= "Entry/entry.png"
+		border			= { 2, 2, 2, 2 }
 		stretch			= TRUE
 	}
         image
@@ -817,7 +827,7 @@ style "entry"
 		detail			= "entry"
                 state                   = ACTIVE
 		file			= "Entry/entry-active.png"
-		border			= { 4,4,4,4 }
+		border			= { 2, 2, 3, 3 }
 		stretch			= TRUE
         }
     }
