@@ -26,6 +26,8 @@ style "default"
 	GtkButton::default-border	= { 0, 0, 0, 0 }
 	GtkButton::default-outside_border	= { 0, 0, 0, 0 }
 
+        GtkEntry::state-hint            = 1
+
 	GtkScrollbar::trough-border	= 4
 	GtkRange::trough-border		= 0
 	GtkRange::slider-width		= 7
@@ -848,6 +850,7 @@ style "entry"
 	xthickness	= 3
 	ythickness   	= 3
 
+        base[ACTIVE] = @base_color
 
 	engine "pixmap"
 	{
@@ -855,11 +858,21 @@ style "entry"
 	{
 		function		= SHADOW
 		detail			= "entry"
+                state                   = NORMAL
 		shadow			= IN
 		file			= "Entry/entry.png"
 		border			= { 4,4,4,4 }
 		stretch			= TRUE
 	}
+        image
+        {
+		function		= SHADOW
+		detail			= "entry"
+                state                   = ACTIVE
+		file			= "Entry/entry-active.png"
+		border			= { 4,4,4,4 }
+		stretch			= TRUE
+        }
     }
 }
 
@@ -868,6 +881,8 @@ style "spinbutton"	= "default"
 	xthickness	= 3
 	ythickness	= 3
 	GtkWidget::interior_focus	= 1
+
+        base[ACTIVE] = @base_color
 
 engine "pixmap"
   {

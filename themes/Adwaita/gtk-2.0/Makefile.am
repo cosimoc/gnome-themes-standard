@@ -31,6 +31,7 @@ asset_data =
 	Check-Radio/option1.png \
 	Check-Radio/option2.png \
 	Entry/entry.png \
+	Entry/entry-active.png \
 	Expanders/ani.png \
 	Expanders/minus.png \
 	Expanders/plus.png \
