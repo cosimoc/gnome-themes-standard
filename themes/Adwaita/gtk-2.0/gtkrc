@@ -29,9 +29,9 @@ style "default"
 
         GtkEntry::state-hint            = 1
 
-	GtkScrollbar::trough-border	= 4
+	GtkScrollbar::trough-border	= 0
 	GtkRange::trough-border		= 0
-	GtkRange::slider-width		= 7
+	GtkRange::slider-width		= 13
 	GtkRange::stepper-size		= 0
 
 	GtkScrollbar::has-backward-stepper		= 0  
@@ -444,7 +444,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= NORMAL
       file				= "Scrollbars/slider-horiz.png" 
-      border				= { 4, 4, 2, 2 }
+      border				= { 7, 7, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
 
@@ -454,7 +454,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= ACTIVE
       file				= "Scrollbars/slider-horiz-active.png" 
-      border				= { 4, 4, 2, 2 }
+      border				= { 7, 7, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
 
@@ -464,7 +464,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= PRELIGHT
       file				= "Scrollbars/slider-horiz-prelight.png" 
-      border				= { 4, 4, 2, 2 }
+      border				= { 7, 7, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
 
@@ -474,7 +474,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= INSENSITIVE
       file				= "Scrollbars/slider-horiz-insens.png"
-      border				= { 4, 4, 2, 2 }
+      border				= { 7, 7, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
 
@@ -487,7 +487,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= NORMAL
       file				= "Scrollbars/slider-vert.png" 
-      border				= { 2, 2, 4, 4 }
+      border				= { 5, 5, 7, 7 }
       stretch				= TRUE
       orientation			= VERTICAL
 
@@ -497,7 +497,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= ACTIVE
       file				= "Scrollbars/slider-vert-active.png" 
-      border				= { 2, 2, 4, 4 }
+      border				= { 5, 5, 7, 7 }
       stretch				= TRUE
       orientation			= VERTICAL
 
@@ -507,7 +507,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= PRELIGHT
       file				= "Scrollbars/slider-vert-prelight.png" 
-      border				= { 2, 2, 4, 4 }
+      border				= { 5, 5, 7, 7 }
       stretch				= TRUE
       orientation			= VERTICAL
 
@@ -517,7 +517,7 @@ style "scrollbar"
       function				= SLIDER
       state           			= INSENSITIVE
       file				= "Scrollbars/slider-vert-insens.png"
-      border				= { 2, 2, 4, 4 }
+      border				= { 5, 5, 7, 7 }
       stretch				= TRUE
       orientation			= VERTICAL
 
@@ -550,12 +550,23 @@ style "menubar"
 
 style "menu"
 {
-	xthickness	=0
-	ythickness	=0
+	xthickness	= 0
+	ythickness	= 0
 
 	GtkMenuItem::arrow-scaling	= 0.4
 
 	bg[NORMAL]	= shade (1.08, @bg_color)
+
+	engine "pixmap"	# For menus that use horizontal lines rather than gtkseparator
+	{
+	image
+	{
+	function		= HLINE
+	file			= "Lines/menu_line.png"
+	border			= { 1, 1, 1, 1 }
+	stretch			= TRUE
+	}
+    }
 }
 
 style "menu_item"
