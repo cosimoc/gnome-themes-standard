@@ -349,10 +349,10 @@ style "default"
 
 	image 
 	{
-	function			= FOCUS
-	overlay_file			= "Others/focus.png"
-	overlay_border			= { 3, 3, 3, 3 }
-	overlay_stretch			= TRUE
+	function		= FOCUS
+	file			= "Others/focus.png"
+	border			= { 2, 2, 2, 2 }
+	stretch			= TRUE
         }
 
 	# Handles
