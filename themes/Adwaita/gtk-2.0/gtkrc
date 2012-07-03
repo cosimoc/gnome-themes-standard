@@ -994,7 +994,7 @@ style "notebook"
      function			= EXTENSION
 	state			= ACTIVE
 	file			= "Tabs/tab-left.png"
-	border			= { 10,10,10,10 }
+	border			= { 3,3,3,3 }
 	stretch			= TRUE
 	gap_side			= RIGHT
       }
@@ -1003,7 +1003,7 @@ style "notebook"
      function			= EXTENSION
 	state			= ACTIVE
 	file			= "Tabs/tab-right.png"
-	border			= { 10,10,10,10 }
+	border			= { 3,3,3,3 }
 	stretch			= TRUE
 	gap_side			= LEFT
       }	
@@ -1027,7 +1027,7 @@ style "notebook"
       {
      function			= EXTENSION
 	file			= "Tabs/tab-left-active.png"
-	border			= {  10,10,10,10 }
+	border			= {  3,3,3,3 }
 	stretch			= TRUE
 	gap_side			= RIGHT
       }
@@ -1035,7 +1035,7 @@ style "notebook"
       {
      function			= EXTENSION
 	file			= "Tabs/tab-right-active.png"
-	border			= {  10,10,10,10 }
+	border			= {  3,3,3,3 }
 	stretch			= TRUE
 	gap_side			= LEFT
       }
