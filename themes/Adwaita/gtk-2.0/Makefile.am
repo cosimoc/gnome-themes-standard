@@ -77,10 +77,8 @@ asset_data =
 	Spin/up-background.png \
 	Spin/down-background-disable.png \
 	Spin/up-background-disable.png \
-	Tabs/notebook-gap-bottom.png \
-	Tabs/notebook-gap-right.png \
-	Tabs/notebook-gap-left.png \
-	Tabs/notebook-gap-top.png \
+	Tabs/notebook-gap-horiz.png \
+	Tabs/notebook-gap-vert.png \
 	Tabs/notebook.png \
 	Tabs/tab-bottom.png \
 	Tabs/tab-left.png \

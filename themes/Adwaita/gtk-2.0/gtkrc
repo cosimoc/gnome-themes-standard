@@ -967,7 +967,7 @@ style "notebook"
 {
 
 	xthickness	= 5
-	ythickness	= 5
+	ythickness	= 2
 
   engine "pixmap" 
     {
@@ -1048,8 +1048,8 @@ style "notebook"
 	file				= "Tabs/notebook.png" 
 	border				= { 4, 4, 4, 4 }
 	stretch				= TRUE
-	gap_file			= "Tabs/notebook-gap-top.png"
-	gap_border     			= { 2, 2, 0, 0 }
+	gap_file			= "Tabs/notebook-gap-horiz.png"
+	gap_border     			= { 1, 1, 0, 0 }
 	gap_side			= TOP
       }
     image 
@@ -1058,8 +1058,8 @@ style "notebook"
 	file				= "Tabs/notebook.png"
 	border				= { 4, 4, 4, 4 }
 	stretch				= TRUE
-	gap_file			= "Tabs/notebook-gap-bottom.png"
-	gap_border			= { 2, 2, 0, 0 }
+	gap_file			= "Tabs/notebook-gap-horiz.png"
+	gap_border			= { 1, 1, 0, 0 }
 	gap_side			= BOTTOM
       }
     image 
@@ -1068,8 +1068,8 @@ style "notebook"
 	file				= "Tabs/notebook.png"
 	border				= { 4, 4, 4, 4 }
 	stretch				= TRUE
-	gap_file			= "Tabs/notebook-gap-left.png"
-	gap_border			= { 0, 0, 2, 2 }
+	gap_file			= "Tabs/notebook-gap-vert.png"
+	gap_border			= { 0, 0, 1, 1 }
 	gap_side			= LEFT
       }
     image 
@@ -1078,8 +1078,8 @@ style "notebook"
 	file				= "Tabs/notebook.png" 
 	border				= { 4, 4, 4, 4 }
 	stretch				= TRUE
-	gap_file			= "Tabs/notebook-gap-right.png"
-	gap_border			= { 0, 0, 2, 2 }
+	gap_file			= "Tabs/notebook-gap-vert.png"
+	gap_border			= { 0, 0, 1, 1 }
 	gap_side			= RIGHT
       }
 
