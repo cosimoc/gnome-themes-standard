@@ -911,7 +911,7 @@ engine "pixmap"
       file			= "Spin/up-background.png"
       border			= { 5, 5, 5, 5 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-up.png"
+      overlay_file		= "Spin/arrow-up-prelight.png"
       overlay_stretch		= FALSE
     }
 
