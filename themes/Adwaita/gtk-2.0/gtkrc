@@ -64,6 +64,8 @@ style "default"
 	GtkTreeView::horizontal-separator	= 4
 	GtkTreeView::allow-rules		= 1
 
+        GtkExpander::expander-size              = 11
+
 	# Colors
 
 	bg[NORMAL]		= @bg_color
