@@ -568,6 +568,8 @@ style "menu"
 	GtkMenuItem::arrow-scaling	= 0.4
 
 	bg[NORMAL]	= shade (1.08, @bg_color)
+        bg[INSENSITIVE] = @base_color
+        bg[PRELIGHT]    = @base_color
 
 	engine "pixmap"	# For menus that use horizontal lines rather than gtkseparator
 	{
