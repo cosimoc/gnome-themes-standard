@@ -897,7 +897,7 @@ engine "pixmap"
       function			= BOX
       state 			= INSENSITIVE
       detail			= "spinbutton_up"
-      file			= "Spin/up-background.png"
+      file			= "Spin/up-background-disable.png"
       border			= { 5, 5, 5, 5 }
       stretch			= TRUE
       overlay_file		= "Spin/arrow-up-disable.png"
@@ -943,7 +943,7 @@ engine "pixmap"
       function			= BOX
       state 			= INSENSITIVE
       detail			= "spinbutton_down"
-      file			= "Spin/down-background.png"
+      file			= "Spin/down-background-disable.png"
       border			= { 5, 5, 5, 5 }
       stretch			= TRUE
       overlay_file		= "Spin/arrow-down-disable.png"
