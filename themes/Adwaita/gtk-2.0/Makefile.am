@@ -39,7 +39,7 @@ asset_data =
 	Handles/handle-v.png \
 	Lines/line-h.png \
 	Lines/line-v.png \
-	Lines/menu_line.png \
+	Lines/menu_line_h.png \
 	Menu-Menubar/menubar_button.png \
 	Menu-Menubar/menubar.png \
 	Others/bg.png \

@@ -571,10 +571,10 @@ style "menu"
 	{
 	image
 	{
-	function		= HLINE
-	file			= "Lines/menu_line.png"
-	border			= { 1, 1, 1, 1 }
-	stretch			= TRUE
+	  function			= HLINE
+	  file				= "Lines/menu_line_h.png"
+	  border			= { 0, 0, 0, 0 }
+	  stretch			= TRUE
 	}
     }
 }
@@ -1289,8 +1289,8 @@ style "separator_menu_item"
 		image 
       	{
         	function		= BOX
-		file        		= "Lines/menu_line.png"
-		border      		= { 1, 1, 1, 1 } # Needed for consistency in QGtkStyle
+		file        		= "Lines/menu_line_h.png"
+		border      		= { 0, 0, 1, 0 }
 		stretch         	= TRUE
       	}
     }
