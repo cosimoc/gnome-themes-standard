@@ -59,7 +59,7 @@ style "default"
 	GtkOptionMenu::indicator_spacing	= { 8, 2, 0, 0 }
 
 	GtkTreeView::row_ending_details 	= 0
-	GtkTreeView::expander-size		= 12
+	GtkTreeView::expander-size		= 11
 	GtkTreeView::vertical-separator		= 4
 	GtkTreeView::horizontal-separator	= 4
 	GtkTreeView::allow-rules		= 1
@@ -392,14 +392,14 @@ style "default"
 	{
 		function	= EXPANDER
 		expander_style	= SEMI_EXPANDED
-		file		= "Expanders/ani.png"
+		file		= "Expanders/minus.png"
 	}
 
 	image
 	{
 		function	= EXPANDER
 		expander_style	= SEMI_COLLAPSED
-		file		= "Expanders/ani.png"
+		file		= "Expanders/plus.png"
 	}
 
 	image
