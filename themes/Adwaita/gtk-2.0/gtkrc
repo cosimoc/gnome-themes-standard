@@ -1296,8 +1296,12 @@ style "separator_menu_item"
     }
 }
 
-style "treeview"
+style "treeview_header"
 {
+        ythickness = 1
+
+        fg[NORMAL] = shade(0.45, @bg_color)
+
 	engine "pixmap"
 	{
 	image 
@@ -1411,7 +1415,7 @@ widget_class "*<GtkComboBox>"                  style "combobox"
 widget_class "*<GtkComboBox>*<GtkButton>"       style "combobox_button"
 widget_class "*<GtkComboBox>*<GtkSeparator>"	style "combobox_separator"
 widget_class "*HandleBox"               style "handlebox"
-widget_class "*.<GtkTreeView>*"		style "treeview"
+widget_class "*<GtkTreeView>*<GtkButton>*"      style "treeview_header"
 
 widget_class "*Chrom*Button*"		style "button"
 
