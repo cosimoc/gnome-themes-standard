@@ -1312,16 +1312,36 @@ style "treeview"
 
 style "scrolled_window"
 {
-	engine "pixmap"
+        xthickness      = 1
+        ythickness      = 1
+
+        engine "pixmap"
 	{
-    image
-    {
-       function			= SHADOW
-       file			= "Shadows/frame.png"				
-       border			= { 5, 5, 5, 5 }
-       stretch			= TRUE
-    }
-  }
+        image
+        {
+                function		= SHADOW
+                file			= "Shadows/frame.png"				
+                border			= { 5, 5, 5, 5 }
+                stretch			= TRUE
+        }
+        }
+}
+
+style "frame"
+{
+        xthickness      = 1
+        ythickness      = 1
+
+        engine "pixmap"
+	{
+        image
+        {
+                function		= SHADOW
+                file			= "Shadows/frame.png"				
+                border			= { 1, 1, 1, 1 }
+                stretch			= TRUE
+        }
+        }
 }
 
 style "tooltips"
@@ -1379,6 +1399,7 @@ class "GtkRange"         		style "range"
 class "GtkProgressBar"     		style "progressbar"
 class "GtkSeparatorMenuItem"		style "separator_menu_item"
 class "GtkScrolledWindow"		style "scrolled_window"
+class "GtkFrame"	                style "frame"
 
 class "ChromeGtkFrame" 			style "chrome-gtk-frame"
 
