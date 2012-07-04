@@ -1300,7 +1300,9 @@ style "treeview_header"
 {
         ythickness = 1
 
-        fg[NORMAL] = shade(0.45, @bg_color)
+        fg[NORMAL] = shade(0.55, @bg_color)
+        fg[PRELIGHT] = shade(0.80, @text_color)
+        font_name = "Bold"
 
 	engine "pixmap"
 	{
