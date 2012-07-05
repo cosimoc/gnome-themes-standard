@@ -1354,6 +1354,17 @@ style "frame"
         }
 }
 
+style "toolbar"
+{
+        engine "pixmap"
+	{
+        image
+        {
+                function		= SHADOW
+        }
+        }
+}
+
 style "tooltips"
 {
 	xthickness	= 8
@@ -1410,6 +1421,7 @@ class "GtkProgressBar"     		style "progressbar"
 class "GtkSeparatorMenuItem"		style "separator_menu_item"
 class "GtkScrolledWindow"		style "scrolled_window"
 class "GtkFrame"	                style "frame"
+class "GtkToolbar"	                style "toolbar"
 
 class "ChromeGtkFrame" 			style "chrome-gtk-frame"
 
