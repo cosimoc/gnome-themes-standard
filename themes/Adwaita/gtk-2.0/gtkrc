@@ -353,7 +353,7 @@ style "default"
 	{
 	function		= FOCUS
 	file			= "Others/focus.png"
-	border			= { 3, 3, 3, 3 }
+	border			= { 1, 1, 1, 1 }
 	stretch			= TRUE
         }
 
