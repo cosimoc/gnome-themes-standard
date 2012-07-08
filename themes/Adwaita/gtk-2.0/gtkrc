@@ -883,7 +883,7 @@ engine "pixmap"
       function			= ARROW
     }
 
-    # Spin-Up
+    # Spin-Up LTR
     image
     {
       function			= BOX
@@ -894,6 +894,7 @@ engine "pixmap"
       stretch			= TRUE
       overlay_file		= "Spin/arrow-up.png"
       overlay_stretch		= FALSE
+      direction                 = LTR
     }
     image
     {
@@ -905,6 +906,7 @@ engine "pixmap"
       stretch			= TRUE
       overlay_file		= "Spin/arrow-up-prelight.png"
       overlay_stretch		= FALSE
+      direction                 = LTR
     }
     image
     {
@@ -916,6 +918,7 @@ engine "pixmap"
       stretch			= TRUE
       overlay_file		= "Spin/arrow-up-disable.png"
       overlay_stretch		= FALSE
+      direction                 = LTR
     }
     image
     {
@@ -927,9 +930,60 @@ engine "pixmap"
       stretch			= TRUE
       overlay_file		= "Spin/arrow-up-prelight.png"
       overlay_stretch		= FALSE
+      direction                 = LTR
     }
 
-    # Spin-Down
+    # Spin-Up RTL
+    image
+    {
+      function			= BOX
+      state 			= NORMAL
+      detail			= "spinbutton_up"
+      file			= "Spin/up-background-rtl.png"
+      border			= { 5, 5, 5, 5 }
+      stretch			= TRUE
+      overlay_file		= "Spin/arrow-up.png"
+      overlay_stretch		= FALSE
+      direction                 = RTL
+    }
+    image
+    {
+      function			= BOX
+      state 			= PRELIGHT
+      detail			= "spinbutton_up"
+      file			= "Spin/up-background-rtl.png"
+      border			= { 5, 5, 5, 5 }
+      stretch			= TRUE
+      overlay_file		= "Spin/arrow-up-prelight.png"
+      overlay_stretch		= FALSE
+      direction                 = RTL
+    }
+    image
+    {
+      function			= BOX
+      state 			= INSENSITIVE
+      detail			= "spinbutton_up"
+      file			= "Spin/up-background-disable-rtl.png"
+      border			= { 5, 5, 5, 5 }
+      stretch			= TRUE
+      overlay_file		= "Spin/arrow-up-disable.png"
+      overlay_stretch		= FALSE
+      direction                 = RTL
+    }
+    image
+    {
+      function			= BOX
+      state 			= ACTIVE
+      detail			= "spinbutton_up"
+      file			= "Spin/up-background-rtl.png"
+      border			= { 5, 5, 5, 5 }
+      stretch			= TRUE
+      overlay_file		= "Spin/arrow-up-prelight.png"
+      overlay_stretch		= FALSE
+      direction                 = RTL
+    }
+
+    # Spin-Down LTR
     image
     {
       function			= BOX
@@ -940,6 +994,7 @@ engine "pixmap"
       stretch			= TRUE
       overlay_file		= "Spin/arrow-down.png"
       overlay_stretch		= FALSE
+      direction                 = LTR
     }
     image
     {
@@ -951,6 +1006,7 @@ engine "pixmap"
       stretch			= TRUE
       overlay_file		= "Spin/arrow-down-prelight.png"
       overlay_stretch		= FALSE
+      direction                 = LTR
     }
     image
     {
@@ -962,6 +1018,7 @@ engine "pixmap"
       stretch			= TRUE
       overlay_file		= "Spin/arrow-down-disable.png"
       overlay_stretch		= FALSE
+      direction                 = LTR
     }
     image
     {
@@ -973,6 +1030,57 @@ engine "pixmap"
       stretch			= TRUE
       overlay_file		= "Spin/arrow-down-prelight.png"
       overlay_stretch		= FALSE
+      direction                 = LTR
+    }
+
+    # Spin-Down RTL
+    image
+    {
+      function			= BOX
+      state 			= NORMAL
+      detail			= "spinbutton_down"
+      file			= "Spin/down-background-rtl.png"
+      border			= { 5, 5, 5, 5 }
+      stretch			= TRUE
+      overlay_file		= "Spin/arrow-down.png"
+      overlay_stretch		= FALSE
+      direction                 = RTL
+    }
+    image
+    {
+      function			= BOX
+      state 			= PRELIGHT
+      detail			= "spinbutton_down"
+      file			= "Spin/down-background-rtl.png"
+      border			= { 5, 5, 5, 5 }
+      stretch			= TRUE
+      overlay_file		= "Spin/arrow-down-prelight.png"
+      overlay_stretch		= FALSE
+      direction                 = RTL
+    }
+    image
+    {
+      function			= BOX
+      state 			= INSENSITIVE
+      detail			= "spinbutton_down"
+      file			= "Spin/down-background-disable-rtl.png"
+      border			= { 5, 5, 5, 5 }
+      stretch			= TRUE
+      overlay_file		= "Spin/arrow-down-disable.png"
+      overlay_stretch		= FALSE
+      direction                 = RTL
+    }
+    image
+    {
+      function			= BOX
+      state 			= ACTIVE
+      detail			= "spinbutton_down"
+      file			= "Spin/down-background-rtl.png"
+      border			= { 5, 5, 5, 5 }
+      stretch			= TRUE
+      overlay_file		= "Spin/arrow-down-prelight.png"
+      overlay_stretch		= FALSE
+      direction                 = RTL
     }
   }
 }
