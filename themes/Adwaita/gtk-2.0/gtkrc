@@ -1375,6 +1375,21 @@ style "toolbar"
         }
 }
 
+style "inline_toolbar"
+{
+        GtkToolbar::button-relief       = GTK_RELIEF_NORMAL
+
+        engine "pixmap"
+        {
+        image
+        {
+                function                = BOX
+                file                    = "Toolbar/inline-toolbar.png"
+                stretch                 = TRUE
+        }
+        }
+}
+
 style "tooltips"
 {
 	xthickness	= 8
@@ -1444,6 +1459,7 @@ widget_class "*<GtkComboBox>*<GtkButton>"       style "combobox_button"
 widget_class "*<GtkComboBox>*<GtkSeparator>"	style "combobox_separator"
 widget_class "*HandleBox"               style "handlebox"
 widget_class "*<GtkTreeView>*<GtkButton>*"      style "treeview_header"
+widget_class "*<GtkFileChooserDefault>*<GtkToolbar>" style "inline_toolbar"
 
 widget_class "*Chrom*Button*"		style "button"
 

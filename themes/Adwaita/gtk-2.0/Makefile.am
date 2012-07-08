@@ -5,7 +5,7 @@ theme_DATA = gtkrc
 
 asset_dirs = "Arrows" "Buttons" "Check-Radio" "Entry" "Expanders" \
 	"Handles" "Lines" "Menu-Menubar" "Others" "ProgressBar" \
-	"Range" "Scrollbars" "Shadows" "Spin" "Tabs"
+	"Range" "Scrollbars" "Shadows" "Spin" "Tabs" "Toolbar"
 asset_data =
 	Arrows/arrow-down-insens.png \
 	Arrows/arrow-down.png \
@@ -86,7 +86,9 @@ asset_data =
 	Tabs/tab-bottom-active.png \
 	Tabs/tab-left-active.png \
 	Tabs/tab-right-active.png \
-	Tabs/tab-top-active.png
+	Tabs/tab-top-active.png \
+	Toolbar/inline-toolbar.png
+
 install-data-local:
 	for dir in $(asset_dirs); do \
 		for file in `cd $(srcdir)/$$dir && find . -maxdepth 1 \( -name "*.png" \)`; do \
