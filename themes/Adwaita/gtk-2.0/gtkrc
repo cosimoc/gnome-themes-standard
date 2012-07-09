@@ -842,8 +842,8 @@ style "entry"
 		detail			= "entry"
                 state                   = NORMAL
 		shadow			= IN
-		file			= "Entry/entry.png"
-		border			= { 2, 2, 3, 3 }
+		file			= "Entry/entry-border.png"
+		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
 	}
 	image
@@ -852,8 +852,8 @@ style "entry"
 		detail			= "entry"
                 state                   = INSENSITIVE
 		shadow			= IN
-		file			= "Entry/entry.png"
-		border			= { 2, 2, 2, 2 }
+		file			= "Entry/entry-border-disabled.png"
+		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
 	}
         image
@@ -861,9 +861,36 @@ style "entry"
 		function		= SHADOW
 		detail			= "entry"
                 state                   = ACTIVE
-		file			= "Entry/entry-active.png"
-		border			= { 2, 2, 3, 3 }
+		file			= "Entry/entry-border-active.png"
+		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
+        }
+        image
+        {
+                function                = FLAT_BOX
+                detail                  = "entry_bg"
+                state                   = NORMAL
+                file                    = "Entry/entry-bg.png"
+                border                  = { 0, 0, 0, 0 }
+                stretch                 = TRUE
+        }
+        image
+        {
+                function                = FLAT_BOX
+                detail                  = "entry_bg"
+                state                   = ACTIVE
+                file                    = "Entry/entry-bg.png"
+                border                  = { 0, 0, 0, 0 }
+                stretch                 = TRUE
+        }
+        image
+        {
+                function                = FLAT_BOX
+                detail                  = "entry_bg"
+                state                   = INSENSITIVE
+                file                    = "Entry/entry-bg-disabled.png"
+                border                  = { 0, 0, 0, 0 }
+                stretch                 = TRUE
         }
     }
 }

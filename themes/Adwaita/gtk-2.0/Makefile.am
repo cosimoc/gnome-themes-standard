@@ -30,8 +30,11 @@ asset_data =
 	Check-Radio/menuoption_prelight.png \
 	Check-Radio/option1.png \
 	Check-Radio/option2.png \
-	Entry/entry.png \
-	Entry/entry-active.png \
+	Entry/entry-border.png \
+	Entry/entry-border-active.png \
+	Entry/entry-border-disabled.png \
+	Entry/entry-bg.png \
+	Entry/entry-bg-disabled.png \
 	Expanders/minus.png \
 	Expanders/plus.png \
 	Handles/handle-h.png \
