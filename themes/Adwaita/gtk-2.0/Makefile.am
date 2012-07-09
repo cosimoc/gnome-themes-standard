@@ -29,6 +29,14 @@ asset_data =
 	Check-Radio/menuoption_prelight.png \
 	Check-Radio/option1.png \
 	Check-Radio/option2.png \
+	Entry/combo-entry-border.png \
+	Entry/combo-entry-border-flip.png \
+	Entry/combo-entry-border-active.png \
+	Entry/combo-entry-border-active-flip.png \
+	Entry/combo-entry-border-disabled.png \
+	Entry/combo-entry-border-disabled-flip.png \
+	Entry/combo-entry-button-active.png \
+	Entry/combo-entry-button-active-rtl.png \
 	Entry/entry-border.png \
 	Entry/entry-border-active.png \
 	Entry/entry-border-disabled.png \
