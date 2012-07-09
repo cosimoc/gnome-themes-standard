@@ -18,7 +18,6 @@ asset_data =
 	Arrows/menu-arrow-prelight.png \
 	Buttons/button-default.png \
 	Buttons/button-insensitive.png \
-	Buttons/button-normal.png \
 	Buttons/button-prelight.png \
 	Buttons/button-pressed.png \
 	Check-Radio/check1.png \
