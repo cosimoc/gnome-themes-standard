@@ -1061,10 +1061,12 @@ style "combobox_entry_button"
 style "spinbutton"	= "default"
 {
 	xthickness	= 3
-	ythickness	= 3
+	ythickness	= 4
 	GtkWidget::interior_focus	= 1
 
-        base[ACTIVE] = @base_color
+        base[NORMAL] = shade(1.05, @bg_color)
+        base[ACTIVE] = shade(1.05, @bg_color)
+        base[INSENSITIVE] = shade(1.02, @bg_color)
 
 engine "pixmap"
   {
@@ -1080,9 +1082,9 @@ engine "pixmap"
       state 			= NORMAL
       detail			= "spinbutton_up"
       file			= "Spin/up-background.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-up.png"
+      overlay_file		= "Arrows/arrow-up.png"
       overlay_stretch		= FALSE
       direction                 = LTR
     }
@@ -1092,9 +1094,9 @@ engine "pixmap"
       state 			= PRELIGHT
       detail			= "spinbutton_up"
       file			= "Spin/up-background.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-up-prelight.png"
+      overlay_file		= "Arrows/arrow-up-prelight.png"
       overlay_stretch		= FALSE
       direction                 = LTR
     }
@@ -1104,9 +1106,9 @@ engine "pixmap"
       state 			= INSENSITIVE
       detail			= "spinbutton_up"
       file			= "Spin/up-background-disable.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-up-disable.png"
+      overlay_file		= "Arrows/arrow-up-insens.png"
       overlay_stretch		= FALSE
       direction                 = LTR
     }
@@ -1116,9 +1118,9 @@ engine "pixmap"
       state 			= ACTIVE
       detail			= "spinbutton_up"
       file			= "Spin/up-background.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-up-prelight.png"
+      overlay_file		= "Arrows/arrow-up-prelight.png"
       overlay_stretch		= FALSE
       direction                 = LTR
     }
@@ -1130,9 +1132,9 @@ engine "pixmap"
       state 			= NORMAL
       detail			= "spinbutton_up"
       file			= "Spin/up-background-rtl.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-up.png"
+      overlay_file		= "Arrows/arrow-up.png"
       overlay_stretch		= FALSE
       direction                 = RTL
     }
@@ -1142,9 +1144,9 @@ engine "pixmap"
       state 			= PRELIGHT
       detail			= "spinbutton_up"
       file			= "Spin/up-background-rtl.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-up-prelight.png"
+      overlay_file		= "Arrows/arrow-up-prelight.png"
       overlay_stretch		= FALSE
       direction                 = RTL
     }
@@ -1154,9 +1156,9 @@ engine "pixmap"
       state 			= INSENSITIVE
       detail			= "spinbutton_up"
       file			= "Spin/up-background-disable-rtl.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-up-disable.png"
+      overlay_file		= "Arrows/arrow-up-insens.png"
       overlay_stretch		= FALSE
       direction                 = RTL
     }
@@ -1166,9 +1168,9 @@ engine "pixmap"
       state 			= ACTIVE
       detail			= "spinbutton_up"
       file			= "Spin/up-background-rtl.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-up-prelight.png"
+      overlay_file		= "Arrows/arrow-up-prelight.png"
       overlay_stretch		= FALSE
       direction                 = RTL
     }
@@ -1180,9 +1182,9 @@ engine "pixmap"
       state 			= NORMAL
       detail			= "spinbutton_down"
       file			= "Spin/down-background.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-down.png"
+      overlay_file		= "Arrows/arrow-down.png"
       overlay_stretch		= FALSE
       direction                 = LTR
     }
@@ -1194,7 +1196,7 @@ engine "pixmap"
       file			= "Spin/down-background.png"
       border			= { 5, 5, 5, 5 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-down-prelight.png"
+      overlay_file		= "Arrows/arrow-down-prelight.png"
       overlay_stretch		= FALSE
       direction                 = LTR
     }
@@ -1206,7 +1208,7 @@ engine "pixmap"
       file			= "Spin/down-background-disable.png"
       border			= { 5, 5, 5, 5 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-down-disable.png"
+      overlay_file		= "Arrows/arrow-down-insens.png"
       overlay_stretch		= FALSE
       direction                 = LTR
     }
@@ -1218,7 +1220,7 @@ engine "pixmap"
       file			= "Spin/down-background.png"
       border			= { 5, 5, 5, 5 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-down-prelight.png"
+      overlay_file		= "Arrows/arrow-down-prelight.png"
       overlay_stretch		= FALSE
       direction                 = LTR
     }
@@ -1230,9 +1232,9 @@ engine "pixmap"
       state 			= NORMAL
       detail			= "spinbutton_down"
       file			= "Spin/down-background-rtl.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-down.png"
+      overlay_file		= "Arrows/arrow-down.png"
       overlay_stretch		= FALSE
       direction                 = RTL
     }
@@ -1242,9 +1244,9 @@ engine "pixmap"
       state 			= PRELIGHT
       detail			= "spinbutton_down"
       file			= "Spin/down-background-rtl.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-down-prelight.png"
+      overlay_file		= "Arrows/arrow-down-prelight.png"
       overlay_stretch		= FALSE
       direction                 = RTL
     }
@@ -1254,9 +1256,9 @@ engine "pixmap"
       state 			= INSENSITIVE
       detail			= "spinbutton_down"
       file			= "Spin/down-background-disable-rtl.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-down-disable.png"
+      overlay_file		= "Arrows/arrow-down-insens.png"
       overlay_stretch		= FALSE
       direction                 = RTL
     }
@@ -1266,9 +1268,9 @@ engine "pixmap"
       state 			= ACTIVE
       detail			= "spinbutton_down"
       file			= "Spin/down-background-rtl.png"
-      border			= { 5, 5, 5, 5 }
+      border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-      overlay_file		= "Spin/arrow-down-prelight.png"
+      overlay_file		= "Arrows/arrow-down-prelight.png"
       overlay_stretch		= FALSE
       direction                 = RTL
     }

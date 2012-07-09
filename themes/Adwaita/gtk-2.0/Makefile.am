@@ -75,12 +75,6 @@ asset_data =
         Scrollbars/trough-scrollbar-horiz.png \
 	Scrollbars/trough-scrollbar-vert.png \
 	Shadows/frame.png \
-	Spin/arrow-down-disable.png \
-	Spin/arrow-down.png \
-	Spin/arrow-down-prelight.png \
-	Spin/arrow-up-disable.png \
-	Spin/arrow-up.png \
-	Spin/arrow-up-prelight.png \
 	Spin/down-background.png \
 	Spin/up-background.png \
 	Spin/down-background-disable.png \
