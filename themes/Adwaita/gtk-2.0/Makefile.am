@@ -10,7 +10,6 @@ asset_data =
 	Arrows/arrow-down-insens.png \
 	Arrows/arrow-down.png \
 	Arrows/arrow-down-prelight.png \
-	Arrows/arrow-down-pressed.png \
 	Arrows/arrow-left.png \
 	Arrows/arrow-right.png \
 	Arrows/arrow-right-prelight.png \

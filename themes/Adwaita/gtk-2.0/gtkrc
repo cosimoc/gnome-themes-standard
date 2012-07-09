@@ -271,7 +271,7 @@ style "default"
 	{
 	  function			= ARROW
 	  state			= ACTIVE
-	  overlay_file		= "Arrows/arrow-down-pressed.png"
+	  overlay_file		= "Arrows/arrow-down-prelight.png"
 	  overlay_border		= { 0, 0, 0, 0 }
 	  overlay_stretch		= FALSE
 	  arrow_direction		= DOWN
@@ -893,6 +893,169 @@ style "entry"
                 stretch                 = TRUE
         }
     }
+}
+
+style "combobox_entry"
+{
+	xthickness	= 3
+	ythickness   	= 4
+
+	engine "pixmap"
+	{
+        # LTR version
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+                state                   = NORMAL
+		shadow			= IN
+		file			= "Entry/combo-entry-border.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = LTR
+	}
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+                state                   = INSENSITIVE
+		shadow			= IN
+		file			= "Entry/combo-entry-border-disabled.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = LTR
+	}
+        image
+        {
+		function		= SHADOW
+		detail			= "entry"
+                state                   = ACTIVE
+		file			= "Entry/combo-entry-border-active.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = LTR
+        }
+
+        # RTL version
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+                state                   = NORMAL
+		shadow			= IN
+		file			= "Entry/combo-entry-border-flip.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = RTL
+	}
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+                state                   = INSENSITIVE
+		shadow			= IN
+		file			= "Entry/combo-entry-border-disabled-flip.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = RTL
+	}
+        image
+        {
+		function		= SHADOW
+		detail			= "entry"
+                state                   = ACTIVE
+		file			= "Entry/combo-entry-border-active-flip.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = RTL
+        }
+    }
+}
+
+style "combobox_entry_button"
+{
+        fg[ACTIVE] = @text_color
+
+	engine "pixmap"
+	{
+
+        # LTR version
+	image
+	{
+		function		= BOX
+                state                   = NORMAL
+		file			= "Entry/combo-entry-border-flip.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = LTR
+	}
+	image
+	{
+		function		= BOX
+                state                   = PRELIGHT
+		file			= "Entry/combo-entry-border-flip.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = LTR
+	}
+	image
+	{
+		function		= BOX
+                state                   = INSENSITIVE
+		file			= "Entry/combo-entry-border-disabled-flip.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = LTR
+	}
+        image
+        {
+		function		= BOX
+                state                   = ACTIVE
+		file			= "Entry/combo-entry-button-active.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = LTR
+        }
+
+        # RTL version
+	image
+	{
+		function		= BOX
+                state                   = NORMAL
+		file			= "Entry/combo-entry-border.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = RTL
+	}
+	image
+	{
+		function		= BOX
+                state                   = PRELIGHT
+		file			= "Entry/combo-entry-border.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = RTL
+	}
+	image
+	{
+		function		= BOX
+                state                   = INSENSITIVE
+		file			= "Entry/combo-entry-border-disabled.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = RTL
+	}
+        image
+        {
+		function		= BOX
+                state                   = ACTIVE
+		file			= "Entry/combo-entry-button-active-rtl.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = RTL
+        }
+
+        }
 }
 
 style "spinbutton"	= "default"
@@ -1595,6 +1758,8 @@ widget_class "*<GtkComboBox>*<GtkSeparator>"	style "combobox_separator"
 widget_class "*HandleBox"               style "handlebox"
 widget_class "*<GtkTreeView>*<GtkButton>*"      style "treeview_header"
 widget_class "*<GtkFileChooserDefault>*<GtkToolbar>" style "inline_toolbar"
+widget_class "*<GtkComboBoxEntry>*<GtkEntry>"   style "combobox_entry"
+widget_class "*<GtkComboBoxEntry>*<GtkButton>"  style "combobox_entry_button"
 
 widget_class "*Chrom*Button*"		style "button"
 
