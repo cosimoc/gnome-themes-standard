@@ -1695,6 +1695,7 @@ style "tooltips"
 
 	bg[NORMAL]	= @tooltip_bg_color
 	fg[NORMAL]	= @tooltip_fg_color
+	bg[SELECTED]	= @tooltip_bg_color
 }
 
 # Chromium
