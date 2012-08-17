@@ -943,7 +943,7 @@ style "combobox_entry"
 		detail			= "entry"
                 state                   = NORMAL
 		shadow			= IN
-		file			= "Entry/combo-entry-border-flip.png"
+		file			= "Entry/combo-entry-border-rtl.png"
 		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
                 direction               = RTL
@@ -954,7 +954,7 @@ style "combobox_entry"
 		detail			= "entry"
                 state                   = INSENSITIVE
 		shadow			= IN
-		file			= "Entry/combo-entry-border-disabled-flip.png"
+		file			= "Entry/combo-entry-border-disabled-rtl.png"
 		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
                 direction               = RTL
@@ -964,7 +964,7 @@ style "combobox_entry"
 		function		= SHADOW
 		detail			= "entry"
                 state                   = ACTIVE
-		file			= "Entry/combo-entry-border-active-flip.png"
+		file			= "Entry/combo-entry-border-active-rtl.png"
 		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
                 direction               = RTL
@@ -984,7 +984,7 @@ style "combobox_entry_button"
 	{
 		function		= BOX
                 state                   = NORMAL
-		file			= "Entry/combo-entry-border-flip.png"
+		file			= "Entry/combo-entry-button.png"
 		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
                 direction               = LTR
@@ -993,7 +993,7 @@ style "combobox_entry_button"
 	{
 		function		= BOX
                 state                   = PRELIGHT
-		file			= "Entry/combo-entry-border-flip.png"
+		file			= "Entry/combo-entry-button.png"
 		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
                 direction               = LTR
@@ -1002,7 +1002,7 @@ style "combobox_entry_button"
 	{
 		function		= BOX
                 state                   = INSENSITIVE
-		file			= "Entry/combo-entry-border-disabled-flip.png"
+		file			= "Entry/combo-entry-button-disabled.png"
 		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
                 direction               = LTR
@@ -1022,7 +1022,7 @@ style "combobox_entry_button"
 	{
 		function		= BOX
                 state                   = NORMAL
-		file			= "Entry/combo-entry-border.png"
+		file			= "Entry/combo-entry-button-rtl.png"
 		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
                 direction               = RTL
@@ -1031,7 +1031,7 @@ style "combobox_entry_button"
 	{
 		function		= BOX
                 state                   = PRELIGHT
-		file			= "Entry/combo-entry-border.png"
+		file			= "Entry/combo-entry-button-rtl.png"
 		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
                 direction               = RTL
@@ -1040,7 +1040,7 @@ style "combobox_entry_button"
 	{
 		function		= BOX
                 state                   = INSENSITIVE
-		file			= "Entry/combo-entry-border-disabled.png"
+		file			= "Entry/combo-entry-button-disabled-rtl.png"
 		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
                 direction               = RTL
