@@ -154,19 +154,19 @@ style "default"
 	{
             function        		= CHECK
             recolorable     		= TRUE
-	    	  state 		= ACTIVE
+	    state 		        = ACTIVE
             shadow          		= IN
             overlay_file    		= "Check-Radio/check2.png"
             overlay_stretch 		= FALSE
         }
 	image 
   	{
- 	function        		= CHECK
-   	recolorable     		= TRUE
-       	state 				= INSENSITIVE
-       	shadow          		= IN
-       	overlay_file   			= "Check-Radio/check1.png"
-       	overlay_stretch 		= FALSE
+            function        		= CHECK
+            recolorable     		= TRUE
+            state 		        = INSENSITIVE
+            shadow          		= IN
+            overlay_file		= "Check-Radio/check1.png"
+            overlay_stretch 		= FALSE
 	}
 
 	# Radio Buttons
@@ -240,187 +240,188 @@ style "default"
 
 	image
 	{
-	  function			= ARROW
-	  overlay_file		= "Arrows/arrow-up.png"
-	  overlay_border		= { 0, 0, 0, 0 }
-	  overlay_stretch		= FALSE
-	  arrow_direction		= UP
+            function			= ARROW
+	    overlay_file		= "Arrows/arrow-up.png"
+	    overlay_border		= { 0, 0, 0, 0 }
+	    overlay_stretch		= FALSE
+	    arrow_direction		= UP
 	}
 	image
 	{
-	  function			= ARROW
-	  state			= NORMAL
-	  overlay_file		= "Arrows/arrow-down.png"
-	  overlay_border		= { 0, 0, 0, 0 }
-	  overlay_stretch		= FALSE
-	  arrow_direction		= DOWN
+            function			= ARROW
+	    state			= NORMAL
+	    overlay_file		= "Arrows/arrow-down.png"
+	    overlay_border		= { 0, 0, 0, 0 }
+	    overlay_stretch		= FALSE
+	    arrow_direction		= DOWN
 	}
 	image
 	{
-	  function			= ARROW
-	  state			= PRELIGHT
-	  overlay_file		= "Arrows/arrow-down-prelight.png"
-	  overlay_border		= { 0, 0, 0, 0 }
-	  overlay_stretch		= FALSE
-	  arrow_direction		= DOWN
+	    function			= ARROW
+	    state			= PRELIGHT
+	    overlay_file		= "Arrows/arrow-down-prelight.png"
+	    overlay_border		= { 0, 0, 0, 0 }
+	    overlay_stretch		= FALSE
+	    arrow_direction		= DOWN
 	}
 	image
 	{
-	  function			= ARROW
-	  state			= ACTIVE
-	  overlay_file		= "Arrows/arrow-down-prelight.png"
-	  overlay_border		= { 0, 0, 0, 0 }
-	  overlay_stretch		= FALSE
-	  arrow_direction		= DOWN
-	}
-
-	image
-	{
-	  function			= ARROW
-	  state			= INSENSITIVE
-	  overlay_file		= "Arrows/arrow-down-insens.png"
-	  overlay_border		= { 0, 0, 0, 0 }
-	  overlay_stretch		= FALSE
-	  arrow_direction		= DOWN
+	    function			= ARROW
+	    state			= ACTIVE
+	    overlay_file		= "Arrows/arrow-down-prelight.png"
+	    overlay_border		= { 0, 0, 0, 0 }
+	    overlay_stretch		= FALSE
+	    arrow_direction		= DOWN
 	}
 
 	image
 	{
-	  function			= ARROW
-	  overlay_file		= "Arrows/arrow-left.png"
-	  overlay_border		= { 0, 0, 0, 0 }
-	  overlay_stretch		= FALSE
-	  arrow_direction		= LEFT
+	    function			= ARROW
+	    state			= INSENSITIVE
+	    overlay_file		= "Arrows/arrow-down-insens.png"
+	    overlay_border		= { 0, 0, 0, 0 }
+	    overlay_stretch		= FALSE
+	    arrow_direction		= DOWN
+	}
+
+	image
+	{
+	    function			= ARROW
+	    overlay_file		= "Arrows/arrow-left.png"
+	    overlay_border		= { 0, 0, 0, 0 }
+	    overlay_stretch		= FALSE
+	    arrow_direction		= LEFT
 	}
 	image
 	{
-	  function			= ARROW
-	  overlay_file		= "Arrows/arrow-right.png"
-	  overlay_border		= { 0, 0, 0, 0 }
-	  overlay_stretch		= FALSE
-	  arrow_direction		= RIGHT
+	    function			= ARROW
+	    overlay_file		= "Arrows/arrow-right.png"
+	    overlay_border		= { 0, 0, 0, 0 }
+	    overlay_stretch		= FALSE
+	    arrow_direction		= RIGHT
 	}
 
 	# Option Menu Arrows
 
 	image
 	{
-	  function		= TAB
-	  state			= INSENSITIVE
-	  overlay_file		= "Arrows/arrow-down-insens.png"
-	  overlay_stretch	= FALSE
+	    function                    = TAB
+	    state		        = INSENSITIVE
+	    overlay_file	        = "Arrows/arrow-down-insens.png"
+	    overlay_stretch	        = FALSE
 	}
 	image
 	{
-	  function			= TAB
-	  state				= NORMAL
-	  overlay_file			= "Arrows/arrow-down.png"
-	  overlay_border		= { 0, 0, 0, 0 }
-	  overlay_stretch		= FALSE
+	    function			= TAB
+	    state			= NORMAL
+	    overlay_file		= "Arrows/arrow-down.png"
+	    overlay_border		= { 0, 0, 0, 0 }
+	    overlay_stretch		= FALSE
 	}
 	image
 	{
-	  function			= TAB
-	  state				= PRELIGHT
-	  overlay_file			= "Arrows/arrow-down-prelight.png"
-	  overlay_border		= { 0, 0, 0, 0 }
-	  overlay_stretch		= FALSE
+	    function			= TAB
+	    state			= PRELIGHT
+	    overlay_file		= "Arrows/arrow-down-prelight.png"
+	    overlay_border		= { 0, 0, 0, 0 }
+	    overlay_stretch		= FALSE
 	}
 
 	# Lines
 
 	image
 	{
-	   function			= VLINE
-	   file				= "Lines/line-v.png"
-	   border			= { 0, 0, 0, 0 }
-	   stretch			= TRUE
+	    function			= VLINE
+	    file			= "Lines/line-v.png"
+	    border			= { 0, 0, 0, 0 }
+	    stretch			= TRUE
 	}
 	image
 	{
-	  function			= HLINE
-	  file				= "Lines/line-h.png"
-	  border			= { 0, 0, 0, 0 }
-	  stretch			= TRUE
+	    function			= HLINE
+	    file			= "Lines/line-h.png"
+	    border			= { 0, 0, 0, 0 }
+	    stretch			= TRUE
 	}
 
 	# Focuslines
 
 	image 
 	{
-	function		= FOCUS
-	file			= "Others/focus.png"
-	border			= { 1, 1, 1, 1 }
-	stretch			= TRUE
+	    function                    = FOCUS
+	    file			= "Others/focus.png"
+	    border			= { 1, 1, 1, 1 }
+	    stretch			= TRUE
         }
 
 	# Handles
 
 	image
 	{
-	  function			= HANDLE
-	  overlay_file			= "Handles/handle-h.png"
-	  overlay_stretch		= FALSE
-	  orientation			= HORIZONTAL
+	    function			= HANDLE
+	    overlay_file		= "Handles/handle-h.png"
+	    overlay_stretch		= FALSE
+	    orientation			= HORIZONTAL
 	}
 	image
 	{
-	  function			= HANDLE
-	  overlay_file			= "Handles/handle-v.png"
-	  overlay_stretch		= FALSE
-	  orientation			= VERTICAL
+	    function			= HANDLE
+	    overlay_file		= "Handles/handle-v.png"
+	    overlay_stretch		= FALSE
+	    orientation			= VERTICAL
 	}
 
 	# Expanders
 
 	image
 	{
-		function	= EXPANDER
-		expander_style	= COLLAPSED
-		file		= "Expanders/plus.png"
+	    function                    = EXPANDER
+	    expander_style	        = COLLAPSED
+	    file		        = "Expanders/plus.png"
 	}
 
 	image
 	{
-		function	= EXPANDER
-		expander_style	= EXPANDED
-		file		= "Expanders/minus.png"
+            function            	= EXPANDER
+	    expander_style              = EXPANDED
+	    file                        = "Expanders/minus.png"
 	}
 
 	image
 	{
-		function	= EXPANDER
-		expander_style	= SEMI_EXPANDED
-		file		= "Expanders/minus.png"
+	    function            	= EXPANDER
+	    expander_style	        = SEMI_EXPANDED
+	    file		        = "Expanders/minus.png"
 	}
 
 	image
 	{
-		function	= EXPANDER
-		expander_style	= SEMI_COLLAPSED
-		file		= "Expanders/plus.png"
+	    function            	= EXPANDER
+            expander_style	        = SEMI_COLLAPSED
+            file                        = "Expanders/plus.png"
 	}
 
 	image
 	{
-		function	= RESIZE_GRIP
-		state		= NORMAL
-		detail		= "statusbar"
-		overlay_file	= "Others/null.png"	
-		overlay_border	= { 0,0,0,0 }
-		overlay_stretch	= FALSE
+	    function                    = RESIZE_GRIP
+	    state		        = NORMAL
+	    detail		        = "statusbar"
+	    overlay_file	        = "Others/null.png"	
+	    overlay_border	        = { 0,0,0,0 }
+	    overlay_stretch             = FALSE
 	}
 
 	# Shadows ( this area needs help :P )
 
-    image
-    {
-       function			= SHADOW_GAP
-       file			= "Others/null.png"
-       border			= { 4, 4, 4, 4 }
-       stretch			= TRUE
-    }
-  }
+        image
+        {
+            function			= SHADOW_GAP
+            file			= "Others/null.png"
+            border			= { 4, 4, 4, 4 }
+            stretch			= TRUE
+        }
+  
+        }
 }
 
 style "scrollbar"
@@ -448,7 +449,7 @@ style "scrollbar"
 
 # Sliders
 
-  image 
+    image 
     {
       function				= SLIDER
       state           			= NORMAL
@@ -458,7 +459,7 @@ style "scrollbar"
       orientation			= HORIZONTAL
 
     }
-  image 
+    image 
     {
       function				= SLIDER
       state           			= ACTIVE
@@ -486,12 +487,11 @@ style "scrollbar"
       border				= { 7, 7, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
-
     }
 
 # X Verticals
 
- image 
+    image 
     {
       function				= SLIDER
       state           			= NORMAL
@@ -501,7 +501,7 @@ style "scrollbar"
       orientation			= VERTICAL
 
     }
-   image 
+    image 
     {
       function				= SLIDER
       state           			= ACTIVE
@@ -545,7 +545,7 @@ style "menubar"
 	engine "pixmap"
 	{
 	  image
-	    {
+          {
 	      function		= BOX
 	      recolorable	= TRUE
 	      state		= PRELIGHT
@@ -553,7 +553,7 @@ style "menubar"
 
 	      border		= { 4, 4, 4, 4 }
 	      stretch		= TRUE
-	    }
+	  }
 	}
 }
 
@@ -653,7 +653,7 @@ style "menu_item"
 	{
             function        		= CHECK
             recolorable     		= TRUE
-	    	  state 		= PRELIGHT
+            state                       = PRELIGHT
             shadow          		= IN
             overlay_file    		= "Check-Radio/menucheck_prelight.png"
             overlay_stretch 		= FALSE
@@ -662,19 +662,19 @@ style "menu_item"
 	{
             function        		= CHECK
             recolorable     		= TRUE
-	    	  state 		= ACTIVE
+	    state                       = ACTIVE
             shadow          		= IN
             overlay_file    		= "Check-Radio/menucheck.png"
             overlay_stretch 		= FALSE
         }
 	image 
   	{
- 	function        		= CHECK
-   	recolorable     		= TRUE
-       	state 				= INSENSITIVE
-       	shadow          		= IN
-       	overlay_file   			= "Others/null.png"
-       	overlay_stretch 		= FALSE
+ 	    function        		= CHECK
+   	    recolorable     		= TRUE
+       	    state 			= INSENSITIVE
+       	    shadow          		= IN
+       	    overlay_file   		= "Others/null.png"
+       	    overlay_stretch 		= FALSE
 	}
 
 	# Radio Buttons
@@ -745,10 +745,10 @@ style "menu_item"
         }
 	image 
       	{
-        	function		= SHADOW # This fixes boxy Qt menu items
-		file        		= "Others/null.png"
-		border      		= { 4, 4, 4, 4 }
-		stretch         	= TRUE
+            function                    = SHADOW # This fixes boxy Qt menu items
+	    file        		= "Others/null.png"
+	    border      		= { 4, 4, 4, 4 }
+	    stretch         	        = TRUE
       	}
 
 	# Arrow Buttons
@@ -784,8 +784,8 @@ style "menubar_item"
 
 style "button"
 {
-	xthickness	= 4
-	ythickness	= 4
+  xthickness	= 4
+  ythickness	= 4
 
   engine "pixmap"
   {
@@ -814,20 +814,20 @@ style "button"
       stretch			= TRUE
     }	
     image 
-   {
-     function			= BOX
-     state			= INSENSITIVE
-     file			= "Buttons/button-insensitive.png"
-     border			= { 4, 4, 4, 4 }
-     stretch			= TRUE
+    {
+      function			= BOX
+      state			= INSENSITIVE
+      file			= "Buttons/button-insensitive.png"
+      border			= { 4, 4, 4, 4 }
+      stretch			= TRUE
     }
   }
 }
 
 style "button_nohilight"
 {
-	xthickness	= 4
-	ythickness	= 4
+  xthickness	= 4
+  ythickness	= 4
 
   engine "pixmap"
   {
@@ -857,11 +857,11 @@ style "button_nohilight"
     }
     image
     {
-     function			= BOX
-     state			= INSENSITIVE
-     file			= "Buttons/button-insensitive-nohilight.png"
-     border			= { 4, 4, 4, 4 }
-     stretch			= TRUE
+      function			= BOX
+      state			= INSENSITIVE
+      file			= "Buttons/button-insensitive-nohilight.png"
+      border			= { 4, 4, 4, 4 }
+      stretch			= TRUE
     }
   }
 }
@@ -1099,15 +1099,15 @@ style "combobox_entry_button"
 
 style "spinbutton"	= "default"
 {
-	xthickness	= 3
-	ythickness	= 4
-	GtkWidget::interior_focus	= 1
+  xthickness	= 3
+  ythickness	= 4
+  GtkWidget::interior_focus	= 1
 
-        base[NORMAL] = shade(1.05, @bg_color)
-        base[ACTIVE] = shade(1.05, @bg_color)
-        base[INSENSITIVE] = shade(1.02, @bg_color)
+  base[NORMAL] = shade(1.05, @bg_color)
+  base[ACTIVE] = shade(1.05, @bg_color)
+  base[INSENSITIVE] = shade(1.02, @bg_color)
 
-engine "pixmap"
+  engine "pixmap"
   {
     image
     {
@@ -1319,132 +1319,132 @@ engine "pixmap"
 style "notebook"
 {
 
-	xthickness	= 5
-	ythickness	= 2
+  xthickness	= 5
+  ythickness	= 2
 
   engine "pixmap" 
-    {
+  {
     image 
-      {
-     function			= EXTENSION
+    {
+        function		= EXTENSION
 	state			= ACTIVE
 	file			= "Tabs/tab-bottom.png"
 	border			= { 3,3,3,5 }
 	stretch			= TRUE
-	gap_side			= TOP
-      }
+	gap_side		= TOP
+    }
     image 
-      {
-     function			= EXTENSION
+    {
+        function		= EXTENSION
 	state			= ACTIVE
 	file			= "Tabs/tab-top.png"
 	border			= { 3,3,5,3 }
 	stretch			= TRUE
-	gap_side			= BOTTOM
-      }
+	gap_side		= BOTTOM
+    }
     image 
-      {
-     function			= EXTENSION
+    {
+        function		= EXTENSION
 	state			= ACTIVE
 	file			= "Tabs/tab-left.png"
 	border			= { 3,3,3,3 }
 	stretch			= TRUE
-	gap_side			= RIGHT
-      }
+	gap_side		= RIGHT
+    }
     image 
-      {
-     function			= EXTENSION
+    {
+        function		= EXTENSION
 	state			= ACTIVE
 	file			= "Tabs/tab-right.png"
 	border			= { 3,3,3,3 }
 	stretch			= TRUE
-	gap_side			= LEFT
-      }	
+	gap_side		= LEFT
+    }	
     image 
-      {
-     function			= EXTENSION
+    {
+        function		= EXTENSION
 	file			= "Tabs/tab-top-active.png"
 	border			= { 3,3,3,3 }
 	stretch			= TRUE
-	gap_side			= BOTTOM
-      }
+	gap_side		= BOTTOM
+    }
     image 
-      {
-     function			= EXTENSION
+    {
+        function		= EXTENSION
 	file			= "Tabs/tab-bottom-active.png"
 	border			= { 3,3,3,3 }
 	stretch			= TRUE
-	gap_side			= TOP
-      }
+	gap_side		= TOP
+    }
     image 
-      {
-     function			= EXTENSION
+    {
+        function		= EXTENSION
 	file			= "Tabs/tab-left-active.png"
 	border			= {  3,3,3,3 }
 	stretch			= TRUE
-	gap_side			= RIGHT
-      }
-    image 
-      {
-     function			= EXTENSION
+	gap_side		= RIGHT
+    }
+    image
+    {
+        function		= EXTENSION
 	file			= "Tabs/tab-right-active.png"
 	border			= {  3,3,3,3 }
 	stretch			= TRUE
-	gap_side			= LEFT
-      }
+	gap_side		= LEFT
+    }
 
 # How to draw boxes with a gap on one side (ie the page of a notebook)
 
     image 
-      {
-     function				= BOX_GAP
+    {
+        function			= BOX_GAP
 	file				= "Tabs/notebook.png" 
 	border				= { 4, 4, 4, 4 }
 	stretch				= TRUE
 	gap_file			= "Tabs/notebook-gap-horiz.png"
 	gap_border     			= { 1, 1, 0, 0 }
 	gap_side			= TOP
-      }
+    }
     image 
-      {
-     function				= BOX_GAP
+    {
+        function			= BOX_GAP
 	file				= "Tabs/notebook.png"
 	border				= { 4, 4, 4, 4 }
 	stretch				= TRUE
 	gap_file			= "Tabs/notebook-gap-horiz.png"
 	gap_border			= { 1, 1, 0, 0 }
 	gap_side			= BOTTOM
-      }
+    }
     image 
-      {
-     function				= BOX_GAP
+    {
+        function			= BOX_GAP
 	file				= "Tabs/notebook.png"
 	border				= { 4, 4, 4, 4 }
 	stretch				= TRUE
 	gap_file			= "Tabs/notebook-gap-vert.png"
 	gap_border			= { 0, 0, 1, 1 }
 	gap_side			= LEFT
-      }
+    }
     image 
-      {
-     function				= BOX_GAP
+    {
+        function			= BOX_GAP
 	file				= "Tabs/notebook.png" 
 	border				= { 4, 4, 4, 4 }
 	stretch				= TRUE
 	gap_file			= "Tabs/notebook-gap-vert.png"
 	gap_border			= { 0, 0, 1, 1 }
 	gap_side			= RIGHT
-      }
+    }
 
 # How to draw the box of a notebook when it isnt attached to a tab
 
     image 
-      {
+    {
 	function		= BOX
 	file			= "Tabs/notebook.png"
 	border			= { 4, 4, 4, 4 }
 	stretch			= TRUE
-      }
+    }
   }
 }
 
@@ -1586,15 +1586,15 @@ style "range"
       overlay_stretch			= FALSE
       orientation			= VERTICAL
     }
-	# Function below removes ugly boxes
 
-	image 
-      	{
-        	function		= BOX
-		file        		= "Others/null.png"
-		border      		= { 3, 3, 3, 3 }
-		stretch         	= TRUE
-      	}
+    # Function below removes ugly boxes
+    image 
+    {
+       	function		= BOX
+	file        		= "Others/null.png"
+	border      		= { 3, 3, 3, 3 }
+	stretch         	= TRUE
+    }
 
   }
 }
@@ -1613,7 +1613,7 @@ style "progressbar"
       file				= "ProgressBar/trough-progressbar.png"
       border				= { 2, 2, 2, 2 }
       stretch				= TRUE
-}
+    }
     image
     {
       function				= BOX
@@ -1639,9 +1639,9 @@ style "separator_menu_item"
 {
 	engine "pixmap"
 	{
-		image 
+	image 
       	{
-        	function		= BOX
+                function		= BOX
 		file        		= "Lines/menu_line_h.png"
 		border      		= { 0, 0, 1, 0 }
 		stretch         	= TRUE
@@ -1731,12 +1731,12 @@ style "inline_toolbar"
 
 style "tooltips"
 {
-	xthickness	= 8
-	ythickness	= 4
+    xthickness	= 8
+    ythickness	= 4
 
-	bg[NORMAL]	= @tooltip_bg_color
-	fg[NORMAL]	= @tooltip_fg_color
-	bg[SELECTED]	= @tooltip_bg_color
+    bg[NORMAL]	  = @tooltip_bg_color
+    fg[NORMAL]	  = @tooltip_fg_color
+    bg[SELECTED]  = @tooltip_bg_color
 }
 
 # Chromium
@@ -1764,12 +1764,12 @@ style "null"
 {
 	engine "pixmap"
 	{
-		image
-		{
-			function	= BOX
-			file		= "Others/null.png"
-			stretch		= TRUE
-    		}
+	image
+	{
+	    function	= BOX
+	    file	= "Others/null.png"
+	    stretch	= TRUE
+        }
  	}
 }
 
