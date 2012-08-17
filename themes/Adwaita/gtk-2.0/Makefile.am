@@ -20,6 +20,10 @@ asset_data =
 	Buttons/button-insensitive.png \
 	Buttons/button-prelight.png \
 	Buttons/button-pressed.png \
+	Buttons/button-default-nohilight.png \
+	Buttons/button-insensitive-nohilight.png \
+	Buttons/button-prelight-nohilight.png \
+	Buttons/button-pressed-nohilight.png \
 	Check-Radio/check1.png \
 	Check-Radio/check2.png \
 	Check-Radio/menucheck.png \
