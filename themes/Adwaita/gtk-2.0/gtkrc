@@ -1332,7 +1332,7 @@ style "notebook"
      function			= EXTENSION
 	state			= ACTIVE
 	file			= "Tabs/tab-bottom.png"
-	border			= { 10,10,10,10 }
+	border			= { 3,3,3,5 }
 	stretch			= TRUE
 	gap_side			= TOP
       }
@@ -1341,7 +1341,7 @@ style "notebook"
      function			= EXTENSION
 	state			= ACTIVE
 	file			= "Tabs/tab-top.png"
-	border			= { 10,10,10,10 }
+	border			= { 3,3,5,3 }
 	stretch			= TRUE
 	gap_side			= BOTTOM
       }
@@ -1367,7 +1367,7 @@ style "notebook"
       {
      function			= EXTENSION
 	file			= "Tabs/tab-top-active.png"
-	border			= { 10,10,10,10 }
+	border			= { 3,3,3,3 }
 	stretch			= TRUE
 	gap_side			= BOTTOM
       }
@@ -1375,7 +1375,7 @@ style "notebook"
       {
      function			= EXTENSION
 	file			= "Tabs/tab-bottom-active.png"
-	border			= { 10,10,10,10 }
+	border			= { 3,3,3,3 }
 	stretch			= TRUE
 	gap_side			= TOP
       }
