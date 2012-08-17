@@ -52,9 +52,6 @@ style "default"
 	GtkMenu::horizontal-padding	= 0
 	GtkMenu::vertical-padding	= 0
 
-	GtkNotebook::tab-overlap	= 7
-	GtkNotebook::tab-curvature	= 7
-
 	GtkCheckButton::indicator_spacing	= 3
 	GtkOptionMenu::indicator_spacing	= { 8, 2, 0, 0 }
 
