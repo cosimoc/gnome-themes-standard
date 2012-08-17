@@ -1729,6 +1729,11 @@ style "inline_toolbar"
         }
 }
 
+style "notebook_viewport"
+{
+        bg[NORMAL]   = @base_color
+}
+
 style "tooltips"
 {
     xthickness	= 8
@@ -1804,6 +1809,7 @@ widget_class "*<GtkFileChooserDefault>*<GtkToolbar>*<GtkButton>" style "button_n
 widget_class "*<GtkComboBoxEntry>*<GtkEntry>"   style "combobox_entry"
 widget_class "*<GtkComboBoxEntry>*<GtkButton>"  style "combobox_entry_button"
 widget_class "*<GtkInfoBar>*<GtkButton>"        style "button_nohilight"
+widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>"  style "notebook_viewport"
 
 widget_class "*Chrom*Button*"		style "button"
 
